@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { locales } from "./src/lib/i18n-locales";
 
+// Behind the tenant proxy, request.url carries the internal server identity
+// (localhost:5001); every externally visible redirect must use the public
+// origin derived from the Host header instead.
+const toPublicOrigin = (url: URL, request: NextRequest): URL => {
+  const host = (request.headers.get("host") || "").split(":")[0];
+  if (host) {
+    url.hostname = host;
+    url.protocol = "https";
+    url.port = "";
+  }
+  return url;
+};
+
 type SecurityHeaderOptions = {
   nonce: string;
   csp: string;
@@ -133,7 +146,7 @@ export function middleware(request: NextRequest) {
       rest.length > 1 && rest.endsWith("/") ? rest.slice(0, -1) : rest;
 
     const redirectWithHeaders = (targetPath: string) => {
-      const redirectUrl = new URL(targetPath, request.url);
+      const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
       redirectUrl.search = request.nextUrl.search;
       const response = NextResponse.redirect(redirectUrl, 308);
       response.headers.set("x-pathname", pathname);
@@ -200,7 +213,7 @@ export function middleware(request: NextRequest) {
     if (needsTrailingSlash) {
       // Redirect to trailing slash version to avoid double redirect
       const targetPath = `${pathname}/`;
-      const redirectUrl = new URL(targetPath, request.url);
+      const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
       redirectUrl.search = request.nextUrl.search;
       const response = NextResponse.redirect(redirectUrl, 308);
       applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
@@ -235,7 +248,7 @@ export function middleware(request: NextRequest) {
   if (!targetPath.endsWith("/")) {
     targetPath += "/";
   }
-  const redirectUrl = new URL(targetPath, request.url);
+  const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
   // Preserve query parameters (e.g. ?utm_source=..., ?articles=43)
   redirectUrl.search = request.nextUrl.search;
   // Use 308 permanent redirect for SEO - tells search engines not to index non-locale URLs
