@@ -308,7 +308,7 @@ jobs:
       # ─── Restart server ───
       - name: Restart Node.js server
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        timeout-minutes: 3
+        timeout-minutes: 8
         run: |
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
