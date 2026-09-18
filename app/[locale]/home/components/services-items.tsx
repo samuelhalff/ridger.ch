@@ -5,6 +5,7 @@ import {
   Scales,
   Receipt,
   Vault,
+  Buildings,
 } from "@phosphor-icons/react/dist/ssr";
 
 const calcClass = "h-6 w-6 sm:h-7 sm:w-7";
@@ -52,6 +53,13 @@ const services = [
     href: "/services/digital-vault",
     descriptionKey: "DigitalVault.Description",
     image: "/assets/hero/services/domiciliation-hero.optimized.webp",
+  },
+  {
+    icon: <Buildings {...iconProps} />,
+    titleKey: "RealEstateTransactions.Title",
+    href: "/services/real-estate-transactions",
+    descriptionKey: "RealEstateTransactions.Description",
+    image: "/assets/hero/services/mna-hero.optimized.webp",
   },
 ];
 

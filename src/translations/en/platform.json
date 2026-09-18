@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "eyebrow": "The platform",
+    "title": "A single space to follow all of your affairs",
+    "intro": "The Ridger platform brings your securities, real estate, documents and reporting together in a consolidated view — kept current and readable at any moment.",
+    "illustration": "Illustration — sample data"
+  },
+  "frame": {
+    "browserLabel": "Preview of the Ridger platform"
+  },
+  "sidebar": {
+    "wordmark": "RIDGER",
+    "nav": {
+      "overview": "Overview",
+      "positions": "Positions",
+      "realEstate": "Real estate",
+      "documents": "Documents",
+      "reporting": "Reporting"
+    },
+    "userName": "Famille B.",
+    "userInitials": "FB",
+    "userRole": "Private space",
+    "mobileNavLabel": "Platform sections"
+  },
+  "overview": {
+    "netWorthLabel": "Net worth",
+    "netWorthValue": "CHF 31'842'506",
+    "netWorthDelta": "+2.4% YTD",
+    "periods": ["1M", "6M", "YTD", "1Y", "All"],
+    "chartTitle": "12-month evolution",
+    "chartAria": "Line chart of net worth evolution over twelve months",
+    "allocationTitle": "Allocation",
+    "allocationAria": "Allocation breakdown by asset class",
+    "allocation": [
+      { "label": "Securities", "pct": "54%" },
+      { "label": "Real estate", "pct": "28%" },
+      { "label": "Private equity", "pct": "11%" },
+      { "label": "Cash", "pct": "7%" }
+    ],
+    "activityTitle": "Recent activity",
+    "activity": [
+      { "label": "Dividend — Nestlé SA", "amount": "+CHF 18'240", "date": "12.09.2026", "positive": true },
+      { "label": "Rent — Rue du Rhône 14", "amount": "+CHF 21'500", "date": "05.09.2026", "positive": true },
+      { "label": "Bank fees — Pictet & Cie", "amount": "−CHF 3'860", "date": "01.09.2026", "positive": false },
+      { "label": "Contribution — current account", "amount": "+CHF 150'000", "date": "28.08.2026", "positive": true }
+    ]
+  },
+  "positions": {
+    "columns": {
+      "position": "Position",
+      "quantity": "Quantity",
+      "value": "Value (CHF)",
+      "delta": "Δ YTD"
+    },
+    "trendAria": "Trend sparkline",
+    "groups": [
+      {
+        "custodian": "Pictet & Cie",
+        "subtotal": "CHF 14'236'890",
+        "rows": [
+          { "name": "Roche GS", "qty": "2'450", "value": "612'450", "delta": "+4.1%", "positive": true },
+          { "name": "Nestlé N", "qty": "8'120", "value": "771'400", "delta": "+2.8%", "positive": true }
+        ]
+      },
+      {
+        "custodian": "Lombard Odier",
+        "subtotal": "CHF 9'871'240",
+        "rows": [
+          { "name": "CHF bond 2031", "qty": "—", "value": "1'240'000", "delta": "+0.9%", "positive": true },
+          { "name": "MSCI World ETF", "qty": "3'400", "value": "512'890", "delta": "+6.2%", "positive": true }
+        ]
+      },
+      {
+        "custodian": "UBS",
+        "subtotal": "CHF 4'412'380",
+        "rows": [
+          { "name": "USD money market", "qty": "—", "value": "890'240", "delta": "+1.1%", "positive": true },
+          { "name": "Vontobel structured", "qty": "—", "value": "402'110", "delta": "−1.3%", "positive": false }
+        ]
+      }
+    ]
+  },
+  "realEstate": {
+    "estimatedLabel": "Estimated value",
+    "yieldLabel": "Net yield",
+    "ltvLabel": "LTV",
+    "ltvAria": "Loan-to-value ratio",
+    "cards": [
+      { "address": "Rue du Rhône 14, Geneva", "value": "CHF 4'650'000", "note": "Net yield 3.2%", "ltv": 38 },
+      { "address": "Chemin des Crêts 8, Cologny", "value": "CHF 6'200'000", "note": "Primary residence", "ltv": 22 },
+      { "address": "Chalet Les Arolles, Verbier", "value": "CHF 2'880'000", "note": "Net yield 2.1%", "ltv": 31 }
+    ]
+  },
+  "documents": {
+    "lockAria": "Encrypted document",
+    "footnote": "Encrypted vault — data hosted in Switzerland",
+    "items": [
+      { "name": "Consolidated statement — Q2 2026", "meta": "PDF · 2.1 MB", "date": "30.06.2026" },
+      { "name": "Tax report 2025", "meta": "PDF · 4.8 MB", "date": "15.04.2026" },
+      { "name": "Succession pact — draft", "meta": "PDF · 1.2 MB", "date": "22.03.2026" },
+      { "name": "Household staff accident insurance", "meta": "PDF · 0.8 MB", "date": "10.01.2026" }
+    ]
+  },
+  "reporting": {
+    "reportsTitle": "Reports",
+    "downloadLabel": "Download",
+    "reports": [
+      { "name": "Quarterly report Q2 2026", "date": "30.06.2026" },
+      { "name": "YTD performance report", "date": "12.09.2026" },
+      { "name": "Tax report 2025", "date": "15.04.2026" }
+    ],
+    "feesTitle": "Fee transparency",
+    "fees": [
+      { "label": "Weighted average management fees", "value": "0.65%" },
+      { "label": "Cumulative bank fees", "value": "CHF 41'820" },
+      { "label": "Retrocessions identified and returned", "value": "CHF 12'400" }
+    ],
+    "feesTotal": "Full fee transparency — CHF 248'900 saved since 2024"
+  }
+}

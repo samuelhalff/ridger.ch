@@ -760,7 +760,7 @@ export default async function CookiesPage(
                 )}
               </p>
               <p className="font-semibold">
-                {r("Cookies.Contact.Email", "Email: info@ridger.ch")}
+                {r("Cookies.Contact.Email", "Email: contact@ridger.ch")}
               </p>
               <p>
                 <a

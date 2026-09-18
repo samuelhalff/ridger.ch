@@ -6,6 +6,7 @@ import {
   Scales,
   Receipt,
   Vault,
+  Buildings,
 } from "@phosphor-icons/react/dist/ssr";
 
 const iconProps = {
@@ -19,6 +20,7 @@ const CoordinationIcon = () => <UsersThree {...iconProps} />;
 const GovernanceIcon = () => <Scales {...iconProps} />;
 const TaxAdminIcon = () => <Receipt {...iconProps} />;
 const VaultIcon = () => <Vault {...iconProps} />;
+const RealEstateIcon = () => <Buildings {...iconProps} />;
 
 const ServicesElements = [
   {
@@ -56,6 +58,12 @@ const ServicesElements = [
     descriptionKey: "DigitalVault.Description",
     href: "/services/digital-vault/",
     icon: <VaultIcon />,
+  },
+  {
+    titleKey: "RealEstateTransactions.Title",
+    descriptionKey: "RealEstateTransactions.Description",
+    href: "/services/real-estate-transactions/",
+    icon: <RealEstateIcon />,
   },
 ];
 

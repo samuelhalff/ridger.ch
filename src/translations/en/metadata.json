@@ -29,6 +29,11 @@
       "description": "Request a private consultation with Ridger, a family office in Geneva. Reply within one business day, strict confidentiality.",
       "keywords": "family office geneva contact, private consultation, multi-family office switzerland"
     },
+    "/platform": {
+      "title": "The platform | Ridger",
+      "description": "Discover the Ridger platform: a single, secure space to follow the securities, real estate, documents and reporting of your wealth. Illustration — sample data.",
+      "keywords": "family office platform, wealth reporting, digital vault, wealth monitoring"
+    },
     "/ressources": {
       "title": "Resources | Ridger",
       "description": "Guides and analysis on consolidated reporting, investment oversight, governance and succession for families in Switzerland.",
@@ -68,6 +73,11 @@
       "title": "Swiss digital vault | Ridger",
       "description": "Encrypted digital vault for your family documents, hosted in Switzerland, with controlled sharing and digital-first workflows.",
       "keywords": "digital vault, swiss data residency, secure sharing, family records"
+    },
+    "/services/real-estate-transactions": {
+      "title": "Real estate and transactions | Ridger",
+      "description": "Supervision and administration of family real estate in Geneva: property manager coordination, opportunity sourcing and transaction coordination with notaries and banks.",
+      "keywords": "family real estate geneva, property companies, property manager coordination, real estate transactions, deal sourcing"
     },
     "/legal/privacy": {
       "title": "Privacy policy | Ridger",

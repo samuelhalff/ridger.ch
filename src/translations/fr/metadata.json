@@ -29,6 +29,11 @@
       "description": "Demandez un entretien confidentiel avec Ridger, family office à Genève. Réponse sous un jour ouvré, discrétion stricte.",
       "keywords": "contact family office genève, entretien confidentiel, multi family office suisse"
     },
+    "/platform": {
+      "title": "La plateforme | Ridger",
+      "description": "Découvrez la plateforme Ridger : un espace unique et sécurisé pour suivre titres, immobilier, documents et reporting de votre patrimoine. Illustration — données fictives.",
+      "keywords": "plateforme family office, reporting patrimonial, coffre-fort numérique, suivi de fortune"
+    },
     "/ressources": {
       "title": "Ressources | Ridger",
       "description": "Guides et analyses sur le reporting consolidé, la surveillance des investissements, la gouvernance et la succession pour familles en Suisse.",
@@ -68,6 +73,11 @@
       "title": "Coffre-fort numérique suisse | Ridger",
       "description": "Coffre-fort numérique chiffré pour vos documents familiaux, hébergé en Suisse, avec partage contrôlé et flux de travail numériques.",
       "keywords": "coffre-fort numérique, données en suisse, partage sécurisé, dossiers familiaux"
+    },
+    "/services/real-estate-transactions": {
+      "title": "Immobilier et transactions | Ridger",
+      "description": "Supervision et administration du patrimoine immobilier familial à Genève : coordination des régies, repérage d'opportunités et coordination des transactions avec notaires et banques.",
+      "keywords": "immobilier familial genève, sociétés immobilières, coordination régies, transactions immobilières, repérage d'opportunités"
     },
     "/legal/privacy": {
       "title": "Politique de confidentialité | Ridger",

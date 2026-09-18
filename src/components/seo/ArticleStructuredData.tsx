@@ -50,7 +50,7 @@ export default function ArticleStructuredData({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      email: "info@ridger.ch",
+      email: "contact@ridger.ch",
       availableLanguage: ["fr", "en", "de", "es", "pt"],
     },
   };

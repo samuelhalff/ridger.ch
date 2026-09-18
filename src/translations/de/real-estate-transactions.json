@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Immobilier et transactions",
+    "Description": "La supervision et l'administration de votre patrimoine immobilier, la coordination de vos régies et l'accompagnement de vos acquisitions et cessions, du repérage des opportunités jusqu'à la signature.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Le patrimoine immobilier d'une famille se détient rarement d'une seule manière. Biens en direct, sociétés immobilières, immeubles de rendement : chacun appelle un suivi rigoureux et une information claire.",
+    "Nous assurons la supervision et l'administration de vos actifs immobiliers, et nous coordonnons vos transactions avec vos régies, notaires et banques. Notre rôle est d'organiser, de superviser et de négocier ; la gestion des actifs et les décisions restent les vôtres."
+  ],
+  "Pillars": [
+    {
+      "Title": "Supervision et administration",
+      "Body": "Suivi de vos biens détenus en direct ou via des sociétés immobilières, supervision de la gestion locative et reporting régulier sur les revenus, les charges et l'état de votre parc."
+    },
+    {
+      "Title": "Coordination des régies",
+      "Body": "Interface unique avec vos régies et gérants d'immeubles : cadrage des mandats, suivi des prestations et contrôle des comptes, dans votre intérêt."
+    },
+    {
+      "Title": "Repérage des opportunités",
+      "Body": "Identification et évaluation d'opportunités d'acquisition alignées sur les souhaits de votre famille, avec une lecture indépendante des dossiers et des prix."
+    },
+    {
+      "Title": "Coordination des transactions",
+      "Body": "Orchestration des acquisitions et cessions avec notaires, banques et experts, suivi de la due diligence et appui à la négociation des conditions."
+    }
+  ],
+  "Closing": {
+    "Title": "Des transactions maîtrisées",
+    "Body": "De la première opportunité à la signature, nous coordonnons chaque intervenant et veillons à la cohérence de l'ensemble, discrètement et dans la durée."
+  },
+  "Perimeter": "La conservation, la gestion locative opérationnelle et la gestion des actifs restent assurées par vos régies, gérants et établissements régulés. Ridger assure la supervision, l'administration, la coordination et l'appui à la négociation. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

@@ -395,7 +395,7 @@ export default async function TermsPage(
               <p className="font-semibold">
                 {r("Terms.Contact.CompanyName", "Ridger — Ark Fiduciaire SA")}
               </p>
-              <p>{r("Terms.Contact.Email", "Email: info@ridger.ch")}</p>
+              <p>{r("Terms.Contact.Email", "Email: contact@ridger.ch")}</p>
               <p>
                 <a
                   href="tel:+41225125050"

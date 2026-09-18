@@ -41,6 +41,7 @@ const servicePaths = [
   "/services/governance-succession",
   "/services/tax-administration",
   "/services/digital-vault",
+  "/services/real-estate-transactions",
 ];
 
 type PathEntry = { path: string; date?: string; locales?: Locale[] } | string;

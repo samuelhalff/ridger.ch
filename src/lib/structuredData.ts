@@ -119,7 +119,7 @@ export const arkOrganization = {
   url: "https://ridger.ch",
   logo: "https://ridger.ch/assets/ridger--color.svg",
   telephone: "+41 22 512 50 50",
-  email: "info@ridger.ch",
+  email: "contact@ridger.ch",
   address: {
     streetAddress: "26 Boulevard Georges Favon",
     postalCode: "1204",
@@ -157,7 +157,7 @@ export const arkOrganization = {
     "@type": "ContactPoint",
     contactType: "customer service",
     telephone: "+41 22 512 50 50",
-    email: "info@ridger.ch",
+    email: "contact@ridger.ch",
     availableLanguage: ["fr", "en", "de", "es", "pt"],
   },
 } as const;
@@ -174,6 +174,7 @@ export const arkEntityIds = {
   serviceGovernance: `${arkOrganization.url}/#service-governance-succession`,
   serviceTaxAdmin: `${arkOrganization.url}/#service-tax-administration`,
   serviceVault: `${arkOrganization.url}/#service-digital-vault`,
+  serviceRealEstate: `${arkOrganization.url}/#service-real-estate-transactions`,
 } as const;
 
 function buildAdministrativeAreaGeneva() {
@@ -265,6 +266,17 @@ function buildArkServiceNodes(locale: string) {
       provider: { "@id": arkEntityIds.organization },
       url: `${baseLocaleUrl}${localizePath("/services/digital-vault", locale as Locale)}/`,
     },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceRealEstate,
+      name: fr ? "Immobilier et transactions" : "Real estate and transactions",
+      serviceType: fr
+        ? "Supervision, administration et coordination de transactions immobilières"
+        : "Real estate supervision, administration and transaction coordination",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/real-estate-transactions", locale as Locale)}/`,
+    },
   ] as const;
 }
 
@@ -276,6 +288,7 @@ export function getArkServiceEntityId(
     | "governance-succession"
     | "tax-administration"
     | "digital-vault"
+    | "real-estate-transactions"
     // Legacy keys retained for existing article schema references.
     | "accounting"
     | "odoo"
@@ -293,6 +306,8 @@ export function getArkServiceEntityId(
       return arkEntityIds.serviceTaxAdmin;
     case "digital-vault":
       return arkEntityIds.serviceVault;
+    case "real-estate-transactions":
+      return arkEntityIds.serviceRealEstate;
     case "odoo":
     case "incorporation":
     case "consolidated-reporting":

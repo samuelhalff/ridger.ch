@@ -86,7 +86,7 @@
             "Title": "Informations de Contact",
             "Description": "Pour toute question concernant ces Conditions d'utilisation ou nos services professionnels, veuillez nous contacter :",
             "CompanyName": "Ridger — Ark Fiduciaire SA",
-            "Email": "info@ridger.ch",
+            "Email": "contact@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève",
             "Commitment": "Nous nous engageons à maintenir les plus hauts standards de service professionnel et de satisfaction client."
         },
@@ -109,7 +109,7 @@
             "Content": "Ark Fiduciaire SA, Genève, opérateur de la marque Ridger, agit en tant que responsable du traitement pour les données personnelles collectées et traitées en lien avec nos services.",
             "ContactDetails": "Coordonnées :",
             "CompanyName": "Ridger — Ark Fiduciaire SA",
-            "Email": "info@ridger.ch",
+            "Email": "contact@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève"
         },
         "DataCollection": {
@@ -231,7 +231,7 @@
                 "Title": "Retirer le Consentement",
                 "Description": "Pour le traitement basé sur le consentement"
             },
-            "Exercise": "Pour exercer ces droits, contactez-nous à info@ridger.ch. Nous répondrons dans les 30 jours."
+            "Exercise": "Pour exercer ces droits, contactez-nous à contact@ridger.ch. Nous répondrons dans les 30 jours."
         },
         "InternationalTransfers": {
             "Title": "Transferts Internationaux de Données",
@@ -257,7 +257,7 @@
             "Title": "Nous Contacter",
             "Description": "Si vous avez des questions sur cette Politique de Confidentialité ou souhaitez exercer vos droits, veuillez nous contacter :",
             "CompanyName": "Ridger",
-            "Email": "info@ridger.ch",
+            "Email": "contact@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève"
         }
     },
@@ -426,7 +426,7 @@
             "Title": "Nous Contacter",
             "Description": "Si vous avez des questions sur cette Politique des Cookies ou notre utilisation des cookies, veuillez nous contacter :",
             "CompanyName": "Ridger",
-            "Email": "info@ridger.ch",
+            "Email": "contact@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève"
         }
     }

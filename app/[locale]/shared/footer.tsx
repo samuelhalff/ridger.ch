@@ -132,11 +132,11 @@ const Footer = async ({ locale }: { locale?: string }) => {
           </p>
           <p>
             <a
-              href="mailto:info@ridger.ch"
+              href="mailto:contact@ridger.ch"
               className="text-[#b6542b] hover:underline dark:text-[#f2b294]"
               itemProp="email"
             >
-              info@ridger.ch
+              contact@ridger.ch
             </a>
           </p>
           <p>

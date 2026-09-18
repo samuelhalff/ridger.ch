@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Real estate and transactions",
+    "Description": "The supervision and administration of your real estate, the coordination of your property managers, and support across your acquisitions and disposals, from sourcing opportunities through to signing.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "A family's real estate is rarely held in a single way. Direct holdings, property companies, income buildings: each calls for rigorous oversight and clear information.",
+    "We provide the supervision and administration of your real estate assets, and we coordinate your transactions with your property managers, notaries and banks. Our role is to organise, supervise and negotiate; asset management and decisions remain yours."
+  ],
+  "Pillars": [
+    {
+      "Title": "Supervision and administration",
+      "Body": "Oversight of assets held directly or through property companies, supervision of rental management and regular reporting on income, charges and the condition of your portfolio."
+    },
+    {
+      "Title": "Property manager coordination",
+      "Body": "A single interface with your régies and building managers: framing mandates, tracking services and reviewing accounts, in your interest."
+    },
+    {
+      "Title": "Opportunity sourcing",
+      "Body": "Identifying and evaluating acquisition opportunities aligned with your family's wishes, with an independent reading of files and pricing."
+    },
+    {
+      "Title": "Transaction coordination",
+      "Body": "Orchestrating acquisitions and disposals with notaries, banks and experts, following due diligence and supporting the negotiation of terms."
+    }
+  ],
+  "Closing": {
+    "Title": "Transactions in hand",
+    "Body": "From the first opportunity to signing, we coordinate each party and keep the whole coherent, discreetly and over the long term."
+  },
+  "Perimeter": "Custody, operational rental management and asset management remain with your property managers, agents and regulated institutions. Ridger provides supervision, administration, coordination and negotiation support. Ridger does not manage assets and does not provide investment advice."
+}

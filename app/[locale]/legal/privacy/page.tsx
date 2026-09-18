@@ -552,7 +552,7 @@ export default async function PrivacyPage(
             <p>
               {r(
                 "Privacy.YourRights.Exercise",
-                "To exercise these rights, contact us at info@ridger.ch. We will respond within 30 days."
+                "To exercise these rights, contact us at contact@ridger.ch. We will respond within 30 days."
               )}
             </p>
           </div>
@@ -665,7 +665,7 @@ export default async function PrivacyPage(
                   "26 Boulevard Georges Favon, 1204 Geneva"
                 )}
               </p>
-              <p>{r("Privacy.Contact.Email", "Email: info@ridger.ch")}</p>
+              <p>{r("Privacy.Contact.Email", "Email: contact@ridger.ch")}</p>
               <p>
                 <a
                   href="tel:+41225125050"
