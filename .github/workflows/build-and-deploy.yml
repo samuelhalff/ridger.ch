@@ -342,19 +342,11 @@ jobs:
           # Recovery: supervisor likely dead — run the managed restart script
           # over ssh (session may be throttled; retry with spacing).
           echo "[restart] ⚠ Supervisor respawn did not deliver the new build; invoking managed restart"
-          # The host throttles rapid ssh sessions hard; give the fallback
-          # room to breathe (first ridger deploys depend on it until a
-          # token-bearing process is live and the kill endpoint takes over).
-          for attempt in 1 2 3 4 5; do
-            if OUT=$(sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" "bash /srv/customer/sites/ridger.ch/shared/restart-server.sh" 2>&1); then
-              echo "[restart] managed restart: $OUT"
-              break
-            fi
-            echo "[restart] ssh attempt $attempt failed"
-            [ "$attempt" -lt 5 ] && sleep 60
-          done
-
-          if verify_build 30; then exit 0; fi
+          # No ssh fallback by design: the legacy restart script started an
+          # old-style supervisor that competed with the tenant router's child
+          # for port 5001 (duplicate-spawn flapping, 2026-09-18). The router
+          # respawns the app from current/ after the kill above; if that never
+          # delivers the new build, fail loud instead of making it worse.
           echo "[restart] ❌ Could not confirm build $BUILD_ID live"
           exit 1
 
