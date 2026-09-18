@@ -30,6 +30,42 @@
   "Links": "Links",
   "Articles": [
     {
+      "slug": "family-offices-suisse-panorama-liste-comment-choisir",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-09-17",
+      "references": [
+        {
+          "labelKey": "FINMA — Autorité fédérale de surveillance des marchés financiers",
+          "url": "https://www.finma.ch/fr/"
+        },
+        {
+          "labelKey": "SwissBanking — Association suisse des banquiers",
+          "url": "https://www.swissbanking.ch/fr/"
+        },
+        {
+          "labelKey": "Deloitte — The Family Office Insights Series",
+          "url": "https://www.deloitte.com/ch/en/services/consulting-financial/research/the-family-office-insights-series.html"
+        },
+        {
+          "labelKey": "PwC Suisse — Family Offices",
+          "url": "https://www.pwc.ch/en/services/family-offices.html"
+        }
+      ],
+      "category": "family-office",
+      "tags": [
+        "family office",
+        "suisse",
+        "geneve",
+        "multi family office",
+        "selection",
+        "panorama"
+      ],
+      "title": "Family offices in Switzerland: landscape, list and how to choose",
+      "description": "There is no official list of Swiss family offices. A landscape of the players (SFO, MFO, banks, fiduciaries) and the criteria to build your own shortlist.",
+      "content": "Switzerland hosts one of the highest densities of family offices in the world. Geneva and Zurich are the two historic hubs, supported by the banking centre, institutional stability and a dense ecosystem of lawyers, notaries, fiduciaries and insurers. For a family looking for \"the list\" of Swiss family offices, the first surprise is that no official one exists: the term is not protected and covers very different realities.\n\n## The four kinds of family office in Switzerland\n\n**1. Single family offices (SFOs).** Private structures dedicated to one family, often incorporated as a company or foundation. They appear in no dedicated public register and do not communicate. Estimates run to several hundred in Switzerland, concentrated around Lake Geneva and Zurich.\n\n**2. Independent multi family offices (MFOs).** They pool infrastructure and expertise across several families. Some manage assets and therefore fall under FinIA with FINMA authorisation; others, like Ridger, focus on consolidation, coordination and oversight, without asset management.\n\n**3. Bank family offices.** Private-bank departments offering family office services to their largest clients. Integration is seamless, but independence from the institution's products and fees deserves careful scrutiny.\n\n**4. Extended fiduciaries and law firms.** Established fiduciaries and certain law firms extend their services towards family wealth administration, often with strong tax and administrative competence.\n\n## Why no official list exists\n\nThe commercial register records company names, not business models. FINMA publishes the list of authorised portfolio managers under FinIA, but a pure coordination family office does not necessarily appear there, since it manages no assets. Rankings published by the specialist press rely on voluntary declarations and miss most of a market that is discreet by nature.\n\n## How to build your own shortlist\n\n**Clarify the need.** Consolidation and reporting? Manager oversight? Governance and succession? Day-to-day administration? Few providers excel everywhere.\n\n**Verify independence.** Who remunerates the structure? Retrocessions or bank-group ownership change the nature of the incentives.\n\n**Examine the regulatory perimeter.** A provider that manages must be authorised; a provider that coordinates must say so clearly. Transparency on this point is an excellent test of seriousness.\n\n**Test the reporting.** Ask for a sample consolidated report: coverage of non-bankable assets, fee transparency, performance methodology (TWR).\n\n**Assess the relationship.** A family office is chosen for years. The quality of the first conversation, discretion and precision of answers matter more than any brochure.\n\n## Geneva, Zurich, and the rest of Switzerland\n\nGeneva remains the centre of gravity for French-speaking and trading families; Zurich dominates for German-speaking and industrial families; Zug attracts structures linked to digital assets. The choice of location shapes the available advisor ecosystem more than the intrinsic quality of the family office.\n\nRidger, a digital multi-family office in Geneva, publishes its perimeter precisely: consolidation, oversight and coordination, without asset management. If you are building your shortlist, a confidential conversation is enough to establish within an hour whether our approach fits your situation.\n\n\n## The questions to ask at the first meeting\n\nBefore committing, put the same questions to every candidate on your shortlist, and compare the answers in writing.\n\n- **Perimeter**: what do you do yourselves, what do you delegate to partners, and who bears responsibility for each service?\n- **Remuneration**: what fees, calculated how, and do you receive retrocessions from banks, managers or products?\n- **Consolidation**: how many custodian banks do you cover today, and how do you integrate real estate, private equity and passion assets?\n- **Team and continuity**: who will be our contact, and what happens if they leave?\n- **Data**: where is our data hosted, who accesses it, and under what confidentiality framework?\n- **Exit**: how does a mandate end, and in what format do we retrieve our history?\n\nA serious provider answers these six questions without hedging. Hesitation on remuneration or data location is, in our experience, the most reliable warning signal.\n\n### Références\n- [FINMA — Autorité fédérale de surveillance des marchés financiers](https://www.finma.ch/fr/)\n- [SwissBanking — Association suisse des banquiers](https://www.swissbanking.ch/fr/)\n- [Deloitte — The Family Office Insights Series](https://www.deloitte.com/ch/en/services/consulting-financial/research/the-family-office-insights-series.html)\n- [PwC Suisse — Family Offices](https://www.pwc.ch/en/services/family-offices.html)\n"
+    },
+    {
       "slug": "family-office-digital-agregation-coffre-fort-cybersecurite",
       "author": "Ridger",
       "image": "abstract-background-dark.avif",
@@ -63,6 +99,123 @@
         "cybersecurite",
         "family-office"
       ]
+    },
+    {
+      "slug": "cybersecurite-confidentialite-familles-fortunees-suisse",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-09-12",
+      "category": "reporting",
+      "title": "Cybersecurity and privacy for high-net-worth families in Switzerland",
+      "description": "Spear phishing, social engineering, family identity theft: the cyber threats targeting wealthy families as individuals, and best practices to protect against them.",
+      "tags": [
+        "cybersecurite",
+        "confidentialite",
+        "lpd",
+        "coffre-fort-numerique",
+        "famille"
+      ],
+      "references": [
+        {
+          "labelKey": "Federal Data Protection Commissioner (FDPIC) – FADP",
+          "url": "https://www.edoeb.admin.ch/edoeb/fr/home/datenschutz/recht_und_politik/datenschutzrecht.html"
+        },
+        {
+          "labelKey": "Fedlex – Federal Act on Data Protection (nFADP)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
+        },
+        {
+          "labelKey": "NCSC – National Cyber Security Centre",
+          "url": "https://www.ncsc.admin.ch/ncsc/fr/home.html"
+        },
+        {
+          "labelKey": "FINMA – Operational risks and cybersecurity",
+          "url": "https://www.finma.ch/fr/surveillance/risques-operationnels/"
+        },
+        {
+          "labelKey": "UBS – Digital security for private clients",
+          "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
+        }
+      ],
+      "content": "High-net-worth families are prime targets for targeted cyber attacks. Not because their IT systems are deficient — but because the information that concerns them has high value: names of family members, bank accounts, holding structures, travel schedules, professional relationships, data about minor heirs. This information is often dispersed, sometimes public and constitutes the raw material for sophisticated attacks.\n\nThis article focuses on **threats targeting family members as individuals** — distinct from institutional threats against digital tools and platforms (covered in our article on the digital family office).\n\n## Threats specific to high-net-worth families\n\n### Targeted spear phishing\n\nUnlike mass phishing — bulk distribution of generic fraudulent emails — **spear phishing** is a personalised attack. The attacker collects public information about the target (LinkedIn, local press, commercial register, children's social media) and crafts a convincing message impersonating a trusted contact.\n\nTypical examples:\n- An email purportedly from the usual banker, asking to confirm account information\n- A message appearing to come from a family member abroad, reporting a financial emergency\n- An invitation to a charitable or professional event, containing a malicious link or attachment\n\nThe sophistication of these attacks has increased considerably with artificial intelligence, which can generate messages in the exact language, style and register of the person being impersonated.\n\n### Family identity fraud\n\nData that characterises a family — members' names, dates of birth, addresses, relationships — can be used to impersonate family members with banks, lawyers or other service providers. This fraud is particularly dangerous when it targets minor heirs, whose information is less monitored.\n\n**Protecting the identity of children and young adults** is an often-neglected angle of family cybersecurity. An heir who enters adulthood with a compromised identity may face serious difficulties: credit refusals, fictitious criminal records, accounts fraudulently opened in their name.\n\n### Social engineering against household members\n\nAttackers do not always target the head of the family directly. They sometimes attack more vulnerable members: a spouse unfamiliar with financial transactions, teenage children active on social networks, household staff with access to sensitive information. These indirect vectors can provide information or access that enables the attacker to reach the primary target.\n\n### Compromise of family data\n\nA family's patrimonial structure — who owns what, in which structure, with which mandataries — is high-value information. Its unwanted disclosure can facilitate targeted attacks, extortion attempts, opportunistic litigation or unwanted commercial approaches.\n\nThis information circulates in many documents: contracts, bank correspondence, tax returns, notarial deeds. The question is not only to protect it in IT systems, but to control who has access to it in real life.\n\n## Swiss data residency and the FADP\n\nThe **new Federal Act on Data Protection** (nFADP), which entered into force in September 2023, strengthens individuals' rights over their personal data and the obligations of entities that process it. For a high-net-worth family, this means they can require their Swiss service providers to:\n- Document personal data held\n- Correct or delete inaccurate or unnecessary data\n- Notify in the event of a data breach\n\nA preference for service providers hosting their data **in Switzerland** (or at least in the EU/EEA, subject to GDPR) is a prudent practice, particularly for sensitive patrimonial documents.\n\n## Best practices for high-net-worth families\n\n**For each family member:**\n- Two-factor authentication (2FA) on all critical accounts (email, online banking, cloud storage)\n- Systematic vigilance in the face of urgent requests received by email or instant messaging — verify by direct phone call before taking any action\n- Unique, strong passwords (password manager)\n- Caution on social networks: limit public information about family structure, travel and purchases\n\n**For the family as a whole:**\n- Establish a verification protocol for unusual transfer requests (confirmation call via a secondary channel)\n- Regularly raise awareness among all family members — including younger ones — about social engineering risks\n- Centralise sensitive documents in a secure storage space with managed access rights\n- Define who in the family has access to what information\n\n## The family office's role\n\nThe family office is not a cybersecurity provider. Its role in this area is to:\n\n- Raise awareness among family members of the risks specific to their profile\n- Maintain centralised and secure documentation of sensitive patrimonial information\n- Coordinate with banks and service providers to ensure identity verification protocols are in place\n- Alert clients to unusual contact attempts that are reported to it\n\nCybersecurity is a shared responsibility: tools and protocols are necessary, but the vigilance of individuals remains the first line of defence. To discuss these challenges in the context of your family situation, we invite you to a confidential meeting.\n\n### References\n\n- [FDPIC – FADP](https://www.edoeb.admin.ch/edoeb/fr/home/datenschutz/recht_und_politik/datenschutzrecht.html)\n- [Fedlex – nFADP](https://www.fedlex.admin.ch/eli/cc/2022/491/fr)\n- [NCSC – National Cyber Security Centre](https://www.ncsc.admin.ch/ncsc/fr/home.html)\n- [FINMA – Operational risks](https://www.finma.ch/fr/surveillance/risques-operationnels/)\n- [UBS – Family Office Solutions](https://www.ubs.com/global/en/wealth-management/family-office-solutions.html)"
+    },
+    {
+      "slug": "calendrier-annuel-famille-fortunee-suisse-echeances-fiscales",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-09-05",
+      "category": "fiscalite",
+      "title": "The annual calendar of a wealthy Swiss family",
+      "description": "Tax deadlines, holding meetings, bank reviews and governance rituals: the annual calendar coordinated by the family office for high-net-worth families in Switzerland.",
+      "tags": [
+        "calendrier",
+        "fiscalite",
+        "echeances",
+        "gouvernance",
+        "family-office"
+      ],
+      "references": [
+        {
+          "labelKey": "ESTV – Deadlines for federal direct tax",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/steuererklarung.html"
+        },
+        {
+          "labelKey": "Fedlex – DFTA (instalments and payment deadlines)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
+        },
+        {
+          "labelKey": "SECO – Legal obligations of limited companies",
+          "url": "https://www.seco.admin.ch/seco/fr/home/Standortfoerderung/Unternehmenspolitik.html"
+        },
+        {
+          "labelKey": "EY Switzerland – Tax Calendar Switzerland",
+          "url": "https://www.ey.com/fr_ch/family-enterprise"
+        },
+        {
+          "labelKey": "KPMG Switzerland – Compliance calendar",
+          "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
+        }
+      ],
+      "content": "The patrimonial life of a high-net-worth family in Switzerland follows an annual rhythm structured by tax deadlines, legal obligations and governance rituals. Without a comprehensive calendar view, these deadlines often arrive as emergencies — when they are entirely predictable. The family office plays a central role in organising this calendar.\n\n## First quarter: filings and planning\n\n**January – March** generally concentrates year-end obligations and initial filings.\n\n- **Closing the family holding's accounts**: for a company whose financial year matches the calendar year, the 31 December year-end requires preparation of financial statements in January–February, followed by submission to the statutory auditor.\n- **Collecting tax documents**: annual bank statements, securities valuations as at 31 December, salary certificates for active family members, insurance statements.\n- **Federal direct tax instalments**: provisional instalments are generally paid in March. Calculating them in advance allows adjustment to avoid late-payment interest.\n- **Annual tax planning**: this is the right moment to review with the tax adviser the year's opportunities — deductions, donations, income optimisation.\n\n## Second quarter: general meetings and tax returns\n\n**April – June** is the period for annual legal obligations for companies and individual tax returns.\n\n- **Holding company annual general meeting**: the Code of Obligations requires an AGM within six months of the financial year-end. For a 31 December year-end, the deadline is 30 June. The AGM approves accounts, addresses any dividend distribution and ratifies the board composition if needed.\n- **Cantonal and federal tax return**: deadlines vary by canton, but most set a deadline between end of March and end of July, with extensions available on request. For complex estates, an extension is often necessary.\n- **Other entity meetings**: if the family holds several companies or a foundation, each entity has its own meeting obligations.\n\n## Third quarter: reviews and adjustments\n\n**July – September** is well suited to mid-year reviews.\n\n- **Half-year performance review**: analysis of portfolios managed by each bank, comparison to benchmarks, review of asset allocations against the target strategy.\n- **Review of banking mandates**: verifying that delegated management mandates remain compliant with instructions and that fees are within agreed limits.\n- **Updating the wealth inventory**: refreshing valuations of real estate, passion assets and unlisted interests.\n- **Succession planning review**: if family events have occurred (birth, marriage, divorce, death), this is the moment to verify that succession arrangements remain coherent.\n\n## Fourth quarter: year-end and preparation\n\n**October – December** is the closing and preparation period.\n\n- **Annual family council**: many families hold a plenary meeting at year-end — a family council or informal gathering — to review the patrimonial year, key decisions and objectives for the coming year.\n- **Year-end tax optimisation**: second-pillar buy-ins, third-pillar contributions, realising or deferring capital gains, donations to public-benefit organisations.\n- **Budget preparation**: for families with formalised budget management, the fourth quarter is when family budgets and planned distributions are prepared.\n- **Insurance renewal**: reviewing insurance policies (life, disability, real estate, collections) to ensure coverage remains adequate.\n\n## The family office's role in calendar coordination\n\nThe family office does not substitute for the tax adviser, notary or holding board. Its role is to:\n\n- Maintain a consolidated calendar of all deadlines and obligations\n- Alert relevant parties with sufficient advance notice\n- Coordinate the collection of documents needed for each deadline\n- Ensure that decisions taken at meetings are documented and followed through\n- Prepare family council meetings\n\nA well-maintained calendar is the hallmark of a well-governed estate. To discuss setting up calendar tracking tailored to your situation, we invite you to a confidential meeting.\n\n### References\n\n- [ESTV – Tax return](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/steuererklarung.html)\n- [Fedlex – DFTA](https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr)\n- [SECO – Limited companies](https://www.seco.admin.ch/seco/fr/home/Standortfoerderung/Unternehmenspolitik.html)\n- [EY Switzerland – Family Enterprise](https://www.ey.com/fr_ch/family-enterprise)\n- [KPMG Switzerland – Wealth Management](https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html)"
+    },
+    {
+      "slug": "onboarding-family-office-90-premiers-jours",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-08-25",
+      "category": "family-office",
+      "title": "Onboarding at a family office: the first 90 days",
+      "description": "Wealth inventory, powers of attorney, reporting setup: what the first 90 days of a family office mandate look like and what realistic expectations are.",
+      "tags": [
+        "onboarding",
+        "inventaire",
+        "reporting",
+        "procuration",
+        "family-office"
+      ],
+      "references": [
+        {
+          "labelKey": "FINMA – Due diligence and documentation obligations",
+          "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/"
+        },
+        {
+          "labelKey": "ESTV – Tax obligations and documentation",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen.html"
+        },
+        {
+          "labelKey": "Fedlex – Federal Act on Data Protection (FADP)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
+        },
+        {
+          "labelKey": "PwC Switzerland – Family Office Onboarding",
+          "url": "https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html"
+        },
+        {
+          "labelKey": "EY Switzerland – Family Office best practices",
+          "url": "https://www.ey.com/fr_ch/family-enterprise"
+        }
+      ],
+      "content": "The decision to engage a family office is often carefully considered. What follows is a phase that tends to be underestimated: the **onboarding**, that is, the first weeks and months during which the mandate takes concrete shape. This phase is decisive for the quality of the long-term relationship — and it deserves realistic expectations on both sides.\n\n## Why the first 90 days are critical\n\nThe first 90 days of a family office mandate are the period during which the relationship's foundations are built: knowledge of the wealth, understanding of the family's objectives, implementation of reporting tools and establishment of communication protocols. A poor onboarding phase creates gaps that can take months to correct.\n\nThis period is also when mutual expectations are calibrated. A client expecting a complete report within two weeks will be disappointed if data collection takes a month. A family office that underestimates the complexity of the situation will lose time and credibility.\n\n## Phase 1: the initial wealth inventory (weeks 1–4)\n\nThe first priority is establishing a **complete wealth inventory**: mapping all assets, holding structures, banking mandates and existing advisers.\n\nIn practice this involves:\n- Collecting bank statements, securities account statements and portfolio valuations from each institution\n- Identifying all holding structures (holdings, foundations, trusts, real estate companies)\n- Listing all existing advisers (lawyer, notary, tax adviser, manager) and their scope of mandate\n- Inventorying non-financial assets (real estate, passion assets, unlisted interests)\n- Collecting key legal documents (statutes, succession agreements, wills, marriage contracts)\n\nThis phase often takes longer than anticipated, as families do not always have a centralised picture of their wealth — which is precisely why they have engaged a family office.\n\n## Phase 2: powers of attorney and access (weeks 2–6)\n\nFor the family office to access the information it needs from banks and other parties, **limited powers of attorney for consultation purposes** must be put in place. These authorisations allow the family office to view statements and communicate with institutions — without any ability to transact.\n\nThis point is fundamental: a coordinator's power of attorney differs from that of a mandated manager. It confers no right to dispose of assets.\n\nSome banks have complex onboarding procedures, specific forms and processing times that can extend this phase. Allowing 4 to 8 weeks for full access to be established is realistic.\n\n## Phase 3: reporting setup (weeks 4–10)\n\nOnce data has been collected and access established, the first **wealth summary report** can be produced. This initial report is often the first document that gives the family a consolidated view of all their wealth — sometimes for the very first time.\n\nThe first report is rarely perfect: some valuations are incomplete (unlisted assets, real estate without a recent estimate), some data is missing (management fees not disclosed by a bank), and some structures are still being documented. This is normal — the important thing is to identify gaps and plan to close them.\n\nReporting improves progressively over subsequent months as the database grows and collection processes are refined.\n\n## Phase 4: the launch meeting (end of the first month)\n\nA formal presentation meeting — attended by the relevant family members — allows the initial findings to be validated, any errors corrected and priorities for the coming months established.\n\nThis meeting is also the opportunity to clarify expectations regarding reporting frequency, communication channels and decision-making processes.\n\n## Realistic expectations\n\n- **A complete report takes time**: allow 6 to 12 weeks for a quality first consolidated report.\n- **Not all banks cooperate at the same pace**: some institutions are very responsive; others have bureaucratic procedures.\n- **The inventory reveals surprises**: forgotten assets, dormant structures, under-insured items — the initial inventory often brings discoveries.\n- **Trust builds gradually**: the family office can only advise well as it progressively understands your situation in its full complexity.\n\nRidger accompanies new clients with a structured onboarding process, designed to minimise friction and deliver early tangible value. To discuss this before making a decision, we invite you to a confidential exploratory meeting.\n\n### References\n\n- [FINMA – Due diligence obligations](https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/)\n- [ESTV – Tax documentation](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen.html)\n- [Fedlex – FADP](https://www.fedlex.admin.ch/eli/cc/2022/491/fr)\n- [PwC Switzerland – Family Office](https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html)\n- [EY Switzerland – Family Enterprise](https://www.ey.com/fr_ch/family-enterprise)"
     },
     {
       "slug": "structures-detention-patrimoniale-suisse-holding-fondation-trust",
@@ -105,6 +258,45 @@
       ]
     },
     {
+      "slug": "family-office-reglementation-finma-lsfin-lefin-perimetre",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-08-10",
+      "category": "family-office",
+      "title": "Family office and Swiss regulation: the FINMA/FinSA/FinIA perimeter explained",
+      "description": "When does a family office become subject to FINMA? FinSA, FinIA and the distinction between coordination and asset management: the regulatory framework explained.",
+      "tags": [
+        "finma",
+        "lsfin",
+        "lefin",
+        "reglementation",
+        "family-office"
+      ],
+      "references": [
+        {
+          "labelKey": "Fedlex – Financial Institutions Act (FinIA)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2018/801/fr"
+        },
+        {
+          "labelKey": "Fedlex – Financial Services Act (FinSA)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2019/758/fr"
+        },
+        {
+          "labelKey": "FINMA – Supervision of portfolio managers",
+          "url": "https://www.finma.ch/fr/surveillance/etablissements-financiers/gestionnaires-de-fortune/"
+        },
+        {
+          "labelKey": "OSFIN – Supervisory organisation for portfolio managers",
+          "url": "https://www.osfin.ch/fr/"
+        },
+        {
+          "labelKey": "Deloitte Switzerland – FinSA/FinIA for family offices",
+          "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
+        }
+      ],
+      "content": "Since the entry into force of the Financial Institutions Act (FinIA) and the Financial Services Act (FinSA) on 1 January 2020, Switzerland's regulatory framework for financial service providers has undergone a profound transformation. For family offices, the key question is: at what point does a coordination or advisory activity become an activity subject to FINMA?\n\n## The landscape before 2020\n\nBefore FinIA came into force, Switzerland had a notable feature: **independent asset managers** (IAMs) operated without a specific prudential licence, subject only to anti-money-laundering rules. This permissive regime contrasted with most European legislation.\n\nFinIA ended this situation by introducing a prudential supervision regime for several categories of providers, including portfolio managers within the meaning of the Act.\n\n## Who is subject to FinIA?\n\nFinIA subjects to authorisation and supervision those entities that, on a professional basis:\n- **Manage assets** under management mandates (investment decisions for third parties)\n- **Advise clients** on investments on a professional and regular basis\n\nThe determining criterion is **decision-making authority**: a manager who makes buy and sell decisions on behalf of their clients is managing assets within the meaning of FinIA. They must obtain a FINMA authorisation and affiliate with a **supervisory organisation (SO)** — typically OSFIN or another approved SO.\n\n## The key distinction: coordination vs asset management\n\nA **coordinating family office** — which observes, reports, coordinates service providers and produces analyses, without making investment decisions on behalf of its clients — is not an asset manager within the meaning of FinIA. It does not conduct an activity subject to FINMA.\n\nThis distinction is fundamental and must be clearly reflected in:\n- The mandate agreement (which defines the scope of activity)\n- Communication with banks (the family office does not issue market orders in its own name)\n- Any powers of attorney (limited to consultation, not to disposal)\n\n## What FinSA says\n\nFinSA applies to anyone providing **financial services** — investment advice, asset management, order execution — to clients in Switzerland. It imposes information obligations, client classification and mandate documentation requirements.\n\nA coordinating family office that limits itself to coordination and reporting does not provide financial services within the meaning of FinSA. However, if it formulates specific and personalised investment recommendations — \"buy this security\" — it may be considered an investment adviser and fall within FinSA's scope.\n\nThe boundary between general information and personalised advice is a matter of factual and contextual analysis. Caution is warranted.\n\n## The role of OSFIN\n\n**OSFIN** (Organisme de Surveillance des Institutions Financières) is one of the supervisory organisations approved by FINMA to supervise independent asset managers and trustees subject to FinIA. Supervised managers must affiliate with such an organisation, which conducts regular compliance checks.\n\nA family office that is not an asset manager within the meaning of FinIA is not required to affiliate with an SO. This does not mean the absence of all constraints: anti-money-laundering rules (AMLA), data protection (FDPA) and contractual due diligence obligations remain applicable.\n\n## Coordinating MFOs: a clear framework\n\n**Multi-family offices positioned as pure coordinators** — such as Ridger — operate in a regulatory framework distinct from that of asset managers. Their activity is oriented towards:\n- Wealth reporting and consolidation\n- Coordination of service providers (banks, managers, tax advisers, lawyers)\n- Family governance support\n- Analysis and supervision of mandates entrusted to third-party managers\n\nThis clear positioning is a guarantee for clients: the family office has no conflicts of interest linked to investment decisions and remains aligned with their exclusive interest.\n\nFor any question on the regulatory framework applicable to your situation, consulting a specialist lawyer is recommended. Ridger can direct you to appropriate professionals.\n\n### References\n\n- [Fedlex – FinIA](https://www.fedlex.admin.ch/eli/cc/2018/801/fr)\n- [Fedlex – FinSA](https://www.fedlex.admin.ch/eli/cc/2019/758/fr)\n- [FINMA – Portfolio managers](https://www.finma.ch/fr/surveillance/etablissements-financiers/gestionnaires-de-fortune/)\n- [OSFIN](https://www.osfin.ch/fr/)\n- [Deloitte Switzerland – Family Office](https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html)"
+    },
+    {
       "slug": "planification-successorale-suisse-bases-reserve-hereditaire",
       "author": "Ridger",
       "image": "abstract-background-dark.avif",
@@ -138,6 +330,45 @@
         "suisse",
         "planification"
       ]
+    },
+    {
+      "slug": "normes-reporting-performance-twr-mwr-benchmarks",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-07-28",
+      "category": "reporting",
+      "title": "Performance reporting standards: TWR, MWR and benchmarks — understanding your bank's figures",
+      "description": "Time-Weighted Return, Money-Weighted Return, benchmarks and hidden fees: everything you need to read and compare performance reports from your banks.",
+      "tags": [
+        "performance",
+        "twr",
+        "mwr",
+        "benchmark",
+        "reporting"
+      ],
+      "references": [
+        {
+          "labelKey": "CFA Institute – Global Investment Performance Standards (GIPS)",
+          "url": "https://www.cfainstitute.org/en/ethics-standards/codes/gips-standards"
+        },
+        {
+          "labelKey": "FINMA – Fee transparency (FinSA)",
+          "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/"
+        },
+        {
+          "labelKey": "SNB – Financial market statistics",
+          "url": "https://www.snb.ch/fr/iabout/stat/statrep"
+        },
+        {
+          "labelKey": "PwC Switzerland – Family Office Reporting",
+          "url": "https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html"
+        },
+        {
+          "labelKey": "Pictet – Performance measurement standards",
+          "url": "https://www.pictet.com/ch/fr/wealth-management"
+        }
+      ],
+      "content": "Each bank produces its own performance report, in its own format, with its own calculation assumptions. When a family manages its wealth across several institutions, rigorously comparing these figures is a delicate exercise. This article explains the two most widely used performance measurement methods — TWR and MWR — and provides the keys to interpreting benchmarks and identifying hidden fees.\n\n## Time-Weighted Return (TWR): measuring the manager's performance\n\nThe **Time-Weighted Return** (TWR) measures a portfolio's performance by neutralising the impact of capital flows — contributions and withdrawals — that the manager does not control.\n\nTo calculate TWR, the analysis period is broken into sub-periods delimited by each cash flow. The performance of each sub-period is calculated independently, then sub-period returns are linked geometrically. The result is a return that reflects only the manager's decisions, independently of the timing of investments.\n\n**Why is TWR the standard for comparing managers?** Because it enables comparison of two managers operating over the same period with different cash flows. The CFA Institute's GIPS standards recommend TWR for all performance presentations to clients.\n\n**Simplified example**: you invest CHF 1 million in January. By June the market has risen 5%. You withdraw CHF 500,000. By December the market rises a further 5%. Your TWR is (1.05 × 1.05) − 1 = 10.25%, regardless of your withdrawal.\n\n## Money-Weighted Return (MWR): measuring actual enrichment\n\nThe **Money-Weighted Return** (MWR), also known as the Internal Rate of Return (IRR), measures the investor's performance — that is, the actual growth of your capital, taking into account the timing of your cash flows.\n\nUnlike TWR, MWR is sensitive to when you invest and withdraw capital. If you invested a large sum just before a market decline, your MWR will be lower than the manager's TWR. If you invested ahead of a rally, your MWR will be higher.\n\n**The practical rule**:\n- Use **TWR to evaluate your managers** and compare their performance to a benchmark.\n- Use **MWR to measure your personal enrichment** and understand what you actually earned on your capital.\n\n## Benchmarks: measuring against what?\n\nA performance figure only makes sense relative to a reference point. Choosing the right benchmark is a strategic decision.\n\n**Common benchmarks**:\n- **Equity indices**: Swiss Market Index (SMI), MSCI World, MSCI Emerging Markets\n- **Bond indices**: Swiss Bond Index, Bloomberg Global Aggregate\n- **Mixed benchmarks**: composite reference portfolios (60% equities / 40% bonds)\n- **Absolute benchmarks**: CHF SARON + x%, or inflation + x% — used for absolute-return mandates\n\n**A frequent trap**: comparing a defensive portfolio (60% bonds) to a pure equity index. The apparent underperformance is an illusion — the risk taken is fundamentally different. A relevant benchmark must reflect the risk profile of your mandate.\n\n**Cross-bank comparability**: when comparing the performance of two banks on your wealth, verify that they use the same calculation method (TWR or MWR), the same perimeter (fees included or excluded), the same reference currency and the same benchmark. Without these checks, comparison is unreliable.\n\n## Fees: net performance is the only one that matters\n\nA portfolio's gross performance — before fee deduction — is a misleading indicator. What matters is **net performance**, after all costs have been deducted.\n\nLayers of fees to identify:\n- **Management fees** charged by the manager or bank (often 0.5–1.5% per annum)\n- **Custody fees**\n- **Transaction costs** (commissions on purchases and sales)\n- **Fund TER** (Total Expense Ratio of funds or ETFs held in the portfolio)\n- **Foreign exchange costs** (spreads on transactions in other currencies)\n- **Retrocessions** paid by funds to the manager — normally disclosed under FinSA\n\nA fee difference of 0.5% per annum compounded over 20 years represents a performance differential of approximately 10% for a standard diversified portfolio. This impact is considerable and justifies rigorous analysis.\n\n## How Ridger helps you read your reports\n\nRidger receives each bank's reports and consolidates them into a uniform format, enabling rigorous comparison. This consolidation includes:\n\n- Normalising the calculation method (TWR consistently applied)\n- Decomposing fees by institution and by layer\n- Comparison to a benchmark consistent with the overall risk profile\n- Highlighting material performance differences between managers\n\nThis consolidated reading gives you a clear and independent view of each manager's quality. To learn more, we invite you to a confidential meeting.\n\n### References\n\n- [CFA Institute – GIPS Standards](https://www.cfainstitute.org/en/ethics-standards/codes/gips-standards)\n- [FINMA – Due diligence obligations](https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/)\n- [SNB – Financial statistics](https://www.snb.ch/fr/iabout/stat/statrep)\n- [PwC Switzerland – Family Office](https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html)\n- [Pictet – Wealth Management](https://www.pictet.com/ch/fr/wealth-management)"
     },
     {
       "slug": "charte-gouvernance-familiale-contenu-processus",
@@ -175,6 +406,45 @@
       ]
     },
     {
+      "slug": "travailler-conseillers-existants-family-office-coordinateur",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-07-15",
+      "category": "family-office",
+      "title": "Working with your existing advisers: the role of a coordinating family office",
+      "description": "Lawyer, notary, banker, tax adviser: how a coordinating family office orchestrates existing advisers without replacing them.",
+      "tags": [
+        "coordinateur",
+        "conseillers",
+        "avocat",
+        "banquier",
+        "family-office"
+      ],
+      "references": [
+        {
+          "labelKey": "FINMA – Financial institutions and supervision",
+          "url": "https://www.finma.ch/fr/surveillance/etablissements-financiers/"
+        },
+        {
+          "labelKey": "Fedlex – Financial Services Act (FinSA)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2019/758/fr"
+        },
+        {
+          "labelKey": "Swiss Banking – Quality and advisory standards",
+          "url": "https://www.swissbanking.ch/fr/themes/droit-et-compliance"
+        },
+        {
+          "labelKey": "EY Switzerland – Family Office coordination",
+          "url": "https://www.ey.com/fr_ch/family-enterprise"
+        },
+        {
+          "labelKey": "Deloitte Switzerland – Multi Family Office",
+          "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
+        }
+      ],
+      "content": "A well-established high-net-worth family typically already has a network of advisers: a long-standing lawyer, a notary, one or more private bankers, a tax adviser, perhaps a fiduciary. These relationships are often long-standing, built on personal trust and an in-depth knowledge of the family's situation. The question is therefore not how to replace these advisers, but how to orchestrate them more effectively.\n\n## The coordination problem\n\nSpecialist advisers — however excellent in their own domain — generally work in silos. The tax lawyer does not systematically communicate with the banker. The notary preparing a succession agreement is not necessarily informed of the holding structure currently being modified by the fiduciary. The investment manager does not know about recent real estate commitments that alter the overall risk profile.\n\nIn a complex estate, this fragmentation has a real cost: inconsistent decisions, missed optimisation opportunities, unnoticed risks and duplicated work. **The value added by a coordinator is not knowing better than the specialists in their fields, but seeing the whole and ensuring its coherence.**\n\n## What a coordinating family office does\n\nA family office positioned as a coordinator plays several complementary roles:\n\n### Aggregating information\n\nThe coordinator maintains an up-to-date overview of the family's wealth: all banking positions, all holding structures, all real estate commitments, all insurance policies, all active mandates. This map is the foundation of every well-informed decision.\n\n### Preparing and monitoring mandates\n\nBefore engaging a specialist adviser, the coordinator prepares the brief: wealth context, known constraints, the mission's objective and its articulation with other parties. After delivery, it ensures that the adviser's conclusions are integrated into the overall picture and that agreed actions are effectively implemented.\n\n### Supervising coherence\n\nWhen a decision is made in one area — for example, a restructuring of the family holding — the coordinator identifies the implications for other areas: impact on personal tax returns, on the terms of the succession agreement, on guarantees provided to the bank. It alerts the relevant specialists and coordinates the necessary adjustments.\n\n### Preparing governance bodies\n\nThe coordinator prepares family council meetings, holding annual general meetings and annual reviews with banks. It produces summary documents, formulates key questions and monitors the follow-through on decisions.\n\n## A concrete coordination example\n\nConsider a family contemplating the sale of a majority stake in a family business. The typical stakeholders are numerous: an M&A lawyer, a tax adviser for the transaction structure, the bank for sale financing and post-sale liquidity management, a notary for the deed, a fiduciary for the accounting aspects.\n\nWithout a coordinator, each party delivers its work in parallel and the family — often already under considerable emotional and operational pressure — must ensure coherence between all of them. With a coordinator, that function is assumed: expertise is sequenced correctly, information flows between parties and the family receives a consolidated summary rather than separate opinions to reconcile.\n\n## What the coordinator does not replace\n\nIt is essential to be clear about what the coordinating family office does **not** do:\n\n- It does not provide legal advice under Swiss law — that is the lawyer's role.\n- It does not draft notarial deeds — that is the notary's role.\n- It does not make investment decisions — that is the banker's or mandated manager's role.\n- It does not prepare tax returns — that is the tax adviser's role.\n\nIts value added is orthogonal to these specialisms: it improves their collective effectiveness without claiming to replace them.\n\n## Building the relationship with existing advisers\n\nWhen Ridger is mandated to coordinate an existing network of advisers, the first step is an introductory meeting with each of them. The objective is to clarify roles, establish communication protocols and define areas of responsibility.\n\nExperience shows that high-quality professional advisers generally welcome the introduction of a coordinator: it allows them to focus on their core expertise and to receive better-prepared briefs.\n\nTo discuss the organisation of your adviser network, Ridger invites you to a confidential meeting.\n\n### References\n\n- [FINMA – Financial institutions](https://www.finma.ch/fr/surveillance/etablissements-financiers/)\n- [Fedlex – FinSA](https://www.fedlex.admin.ch/eli/cc/2019/758/fr)\n- [Swiss Banking – Law and compliance](https://www.swissbanking.ch/fr/themes/droit-et-compliance)\n- [EY Switzerland – Family Enterprise](https://www.ey.com/fr_ch/family-enterprise)\n- [Deloitte Switzerland – Family Office](https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html)"
+    },
+    {
       "slug": "choisir-banques-depositaires-suisse-criteres",
       "author": "Ridger",
       "image": "abstract-background-dark.avif",
@@ -208,6 +478,45 @@
         "esisuisse",
         "patrimoine"
       ]
+    },
+    {
+      "slug": "actifs-passion-art-montres-collections-gouvernance",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-07-06",
+      "category": "patrimoine",
+      "title": "Passion assets: art, watches, collections — inventory and governance",
+      "description": "Inventory, insurance, freeports and succession: how to integrate passion assets into family wealth governance.",
+      "tags": [
+        "art",
+        "collections",
+        "ports-francs",
+        "assurance",
+        "inventaire"
+      ],
+      "references": [
+        {
+          "labelKey": "FOCBS – Freeports and bonded warehouses in Switzerland",
+          "url": "https://www.bazg.admin.ch/bazg/fr/home/information-firmen/warenanmeldung/zollfreilager.html"
+        },
+        {
+          "labelKey": "Fedlex – Federal Act on the International Transfer of Cultural Property (CPTA)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/2005/317/fr"
+        },
+        {
+          "labelKey": "ESTV – Wealth tax: movable assets",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/vermoegen.html"
+        },
+        {
+          "labelKey": "Deloitte Switzerland – Family Office & Art",
+          "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
+        },
+        {
+          "labelKey": "UBS – Art banking and private collections",
+          "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
+        }
+      ],
+      "content": "Passion assets — artworks, collectible watches, fine wines, prestige vehicles, musical instruments, jewellery — represent a non-negligible share of the wealth of many high-net-worth families. What these assets have in common is that they are illiquid, difficult to value and often poorly integrated into the overall wealth statement. Sound governance requires a rigorous inventory, adequate insurance coverage and advance succession planning.\n\n## The inventory: an indispensable prerequisite\n\nThe first step in governing passion assets is establishing a **complete, documented inventory**. This task is often neglected because these assets are acquired at different times and are rarely centralised in a single location.\n\nA wealth inventory of passion assets includes:\n- Precise identification of each item (description, artist or maker, date, dimensions, condition)\n- Provenance and authenticity documents (certificates, purchase invoices, expert reports)\n- Current location (home, warehouse, freeport, loan to a museum)\n- Current replacement value, distinct from insurance value and tax value\n- Any encumbrances (pledges, liens)\n\nThis inventory is a living document that must be updated with each acquisition, disposal or change of location.\n\n## Geneva's role and the freeports\n\nGeneva occupies a central position in the global art and collectibles market. **Geneva's freeports** — warehouses under customs supervision where goods can be stored without immediate payment of customs duties and VAT — are used by many collectors to store artworks.\n\nSince the 2016 reforms, transparency requirements have been tightened: freeport operators must identify their clients and maintain a register of goods. For collectors using this infrastructure, rigorous documentation is essential.\n\nSwitzerland has also ratified several international conventions on the illicit traffic in cultural property, and the **Federal Act on the International Transfer of Cultural Property (CPTA)** imposes verification obligations when importing artworks.\n\n## Insurance: appropriate valuation and coverage\n\nPassion assets require specialist insurance, distinct from standard household policies. Key points include:\n\n- **Insured value**: this must reflect the current replacement value, which may differ significantly from the purchase price for assets whose value has changed.\n- **Geographic coverage**: an artwork travelling for an exhibition or a museum loan must be covered during transport and at its temporary location.\n- **Exclusions**: standard policies often exclude gradual deterioration, mechanical damage or defects inherent to the object.\n\nPeriodic expert valuation — every three to five years — is recommended for items of significant value.\n\n## Tax treatment of passion assets in Switzerland\n\nUnder Swiss tax law, passion assets are subject to **wealth tax** at their market value. Capital gains realised on their disposal are in principle tax-exempt for private individuals, provided the collection is not managed in a professional manner. If buying and selling activity takes on a commercial scale, it may be reclassified as independent professional income.\n\n## Succession: anticipating difficulties\n\nPassion assets are among the most delicate to handle in a succession:\n\n- **Illiquidity**: heirs may disagree on the division of an indivisible collection.\n- **Required expertise**: the succession valuation of an art collection requires specialist experts.\n- **Emotional attachment**: passion objects often carry affective value that complicates negotiations between heirs.\n\nPrecise testamentary provisions — specific bequests of principal items, family pre-emption rights over the collection, designation of an expert for valuation — can prevent many disputes.\n\n## Ridger's role\n\nRidger is not an art expert or an insurance specialist for collections. Its role is to **integrate passion assets into the consolidated wealth statement** and ensure documentary governance:\n\n- Maintaining an up-to-date inventory in the reporting system\n- Coordinating with specialist insurers and art experts appointed by the family\n- Integration into succession planning\n- Alerting clients to the tax implications of significant acquisitions or disposals\n\nTo discuss the place of passion assets in your wealth, we invite you to a confidential meeting.\n\n### References\n\n- [FOCBS – Freeports](https://www.bazg.admin.ch/bazg/fr/home/information-firmen/warenanmeldung/zollfreilager.html)\n- [Fedlex – CPTA](https://www.fedlex.admin.ch/eli/cc/2005/317/fr)\n- [ESTV – Wealth tax](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/vermoegen.html)\n- [Deloitte Switzerland – Family Office](https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html)\n- [UBS – Family Office Solutions](https://www.ubs.com/global/en/wealth-management/family-office-solutions.html)"
     },
     {
       "slug": "reporting-consolide-patrimoine-multi-banques",
@@ -280,6 +589,45 @@
       ]
     },
     {
+      "slug": "immobilier-patrimoine-familial-supervision-reporting",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-06-22",
+      "category": "patrimoine",
+      "title": "Real estate in the family estate: supervision and reporting",
+      "description": "Direct ownership or real estate company, rental value and consolidation: how to integrate real estate into family wealth reporting.",
+      "tags": [
+        "immobilier",
+        "valeur-locative",
+        "reporting",
+        "societe-immobiliere",
+        "patrimoine"
+      ],
+      "references": [
+        {
+          "labelKey": "ESTV – Rental value (Eigenmietwert)",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/einkuenfte/eigenmietwert.html"
+        },
+        {
+          "labelKey": "Fedlex – DFTA (income from real estate wealth)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
+        },
+        {
+          "labelKey": "SNB – Real estate market and financial stability",
+          "url": "https://www.snb.ch/fr/publications/research/financial-stability-report"
+        },
+        {
+          "labelKey": "PwC Switzerland – Private real estate tax",
+          "url": "https://www.pwc.ch/fr/services/tax-legal/private-clients.html"
+        },
+        {
+          "labelKey": "KPMG Switzerland – Real Estate & Wealth",
+          "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
+        }
+      ],
+      "content": "Real estate often occupies a central place in the wealth of high-net-worth families in Switzerland: primary residences, secondary properties, rental buildings, interests in real estate companies. Each category follows a distinct tax and accounting logic. Supervising and reporting on these assets is an essential component of a consolidated wealth picture.\n\n## Forms of real estate ownership\n\n### Direct ownership\n\nThe owner holds the property in their own name. This is the most common situation for primary residences and holiday homes. It is straightforward, but its tax implications deserve attention.\n\n**The rental value (Eigenmietwert)** is one of the most distinctive features of Swiss tax law, and is often unfamiliar to foreign residents. For any owner-occupied property, the tax authority imputes a notional income corresponding to the theoretical rental value of that property. This amount — generally set at 60–70% of the market rental value — is added to taxable income. In return, mortgage interest and maintenance costs are deductible.\n\n**Capital gains tax on real estate**: when a property is sold, any gain realised on Swiss real estate is taxed by the cantons, under scales that depend on the length of ownership. The longer the holding period, the lower the rate generally applied.\n\n### Real estate company\n\nFor substantial real estate portfolios or those comprising multiple properties, ownership through a **real estate company** (SA or Sàrl) may be advantageous. The company owns the properties and the family holds the shares.\n\n**Potential advantages**:\n- Asset separation between real estate and personal assets\n- Succession planning facilitated by the transfer of shares rather than properties\n- Possible participation deduction on dividends (under conditions)\n\n**Drawbacks**:\n- Potential economic double taxation (corporate income tax + personal tax on dividends distributed)\n- Structural maintenance costs (accounting, audit, annual general meeting)\n- Specific rules for foreign persons under the Lex Koller\n\n### The Lex Koller\n\nThe **Lex Koller** restricts the direct acquisition of certain Swiss real estate by persons abroad. Commercial properties are in principle exempt; residential and holiday properties are subject to authorisation or canton-specific restrictions. This is particularly important for international families wishing to invest in Swiss real estate.\n\n## Rental value and cantonal real estate taxation\n\n**The rental value of the primary residence is taxed as income**, but the way it is assessed varies considerably from one canton to another, as do the scales applied to wealth tax and real estate capital gains tax. **Maintenance deductions** offer a frequently underused planning lever: each year, and for each property, the taxpayer may choose between deducting **actual costs** and a **flat-rate deduction** (generally 10 to 20% of the rental value, depending on the age of the building). Aligning the timing of renovation works with this choice helps smooth the tax burden over time. For a family holding properties in several cantons, these **cantonal variations** call for a coherent overall view.\n\n## Integration into wealth reporting\n\nReal estate is often the poor relation of wealth reporting: valuations are less frequent than for financial assets, cash flows (rents, charges, works) are diffuse and consolidation with financial assets is rarely carried out rigorously.\n\nWell-structured real estate reporting includes:\n\n- **Periodic valuation** of each property, ideally annual, based on an estimated market value\n- **Net rental income** after charges, maintenance and management fees\n- **Outstanding mortgage balance** and corresponding debt service\n- **Tax value** used to calculate wealth tax\n- **Latent capital gains** relative to acquisition cost\n\nThese elements are consolidated with financial assets to produce a coherent overall wealth statement.\n\nDirectly held real estate occupies a particular place in this consolidation. In the absence of a daily market price, a **periodic valuation by independent appraisal** is the reference practice. Likewise, **mortgages and the loan-to-value ratio (LTV)** are monitored at the level of the overall wealth: it is there that the true debt exposure and the concentration of interest rate maturities become visible.\n\n## Ridger's role\n\nRidger supervises real estate assets within the consolidated wealth reporting framework — it does not handle rental management, tenant relations or works. Its role is to:\n\n- Integrate real estate data into the overall wealth picture\n- Coordinate with property managers, advisers and tax counsel\n- Alert clients to the tax implications of real estate decisions (acquisition, sale, works)\n- Ensure coherence between real estate reporting and other asset classes\n\nTo discuss your real estate wealth in this context, we invite you to a confidential meeting.\n\n### References\n\n- [ESTV – Rental value](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/einkuenfte/eigenmietwert.html)\n- [Fedlex – DFTA](https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr)\n- [SNB – Financial stability](https://www.snb.ch/fr/publications/research/financial-stability-report)\n- [PwC Switzerland – Private Clients](https://www.pwc.ch/fr/services/tax-legal/private-clients.html)\n- [KPMG Switzerland – Wealth Management](https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html)"
+    },
+    {
       "slug": "quand-famille-besoin-family-office-suisse",
       "author": "Ridger",
       "image": "abstract-background-dark.avif",
@@ -315,6 +663,45 @@
       ]
     },
     {
+      "slug": "impatriation-suisse-forfait-fiscal-familles-internationales",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-06-15",
+      "category": "fiscalite",
+      "title": "International families in Switzerland: lump-sum taxation and multi-jurisdiction coordination",
+      "description": "The Swiss lump-sum tax regime (expenditure-based taxation): eligibility conditions, participating cantons and multi-jurisdiction coordination for international families.",
+      "tags": [
+        "forfait-fiscal",
+        "impatriation",
+        "fiscalite",
+        "multi-juridictions",
+        "suisse"
+      ],
+      "references": [
+        {
+          "labelKey": "ESTV – Expenditure-based taxation (art. 14 DFTA)",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/spezialthemen/aufwandbesteuerung.html"
+        },
+        {
+          "labelKey": "Fedlex – DFTA art. 14",
+          "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
+        },
+        {
+          "labelKey": "SIF – Double taxation treaties",
+          "url": "https://www.sif.admin.ch/sif/fr/home/bilateral/steuerabkommen.html"
+        },
+        {
+          "labelKey": "KPMG Switzerland – Private Clients",
+          "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
+        },
+        {
+          "labelKey": "PwC Switzerland – Lump-sum taxation",
+          "url": "https://www.pwc.ch/fr/services/tax-legal/private-clients.html"
+        }
+      ],
+      "content": "Switzerland offers foreign nationals establishing themselves there for the first time — or after an absence of at least ten years — a special tax regime: **expenditure-based taxation**, commonly known as the lump-sum tax. This arrangement, governed by art. 14 of the Federal Direct Tax Act (DFTA), is one of Europe's most attractive regimes for high-net-worth families with no gainful activity in Switzerland.\n\n## What is expenditure-based taxation?\n\nUnlike the ordinary regime, which taxes actual income and wealth, the lump-sum tax imposes a **notional income calculated on the basis of the taxpayer's annual expenditure** and that of their family. This notional income must be at least five times the annual rent or rental value of the occupied property.\n\nSince the 2016 reform, the notional taxable income at federal level cannot be less than **CHF 400,000**. Cantons apply their own minimums — some significantly higher.\n\n**What is included in expenditure**: housing, food, travel, leisure, domestic staff and expenditure for dependent family members. Professional expenses are excluded, as the taxpayer may not engage in gainful activity in Switzerland.\n\n## Eligibility conditions\n\nTo benefit from expenditure-based taxation, the following conditions must be met:\n\n1. **Not holding Swiss nationality** — Swiss citizens are not eligible for this regime.\n2. **Establishing oneself in Switzerland for the first time**, or after an absence of at least ten years.\n3. **Not engaging in gainful activity in Switzerland** — neither as an employee nor as self-employed. Foreign-source income from passive participation (dividends, interest) does not constitute gainful activity.\n4. **Residing in Switzerland** — the taxpayer must have their tax domicile or residence in Switzerland.\n\n## Participating cantons\n\nThe lump-sum tax is available in the large majority of Swiss cantons. The cantons of Zurich, Schaffhausen, Appenzell Ausserrhoden and Basel-Stadt abolished this regime following cantonal referendums in 2009–2012. The most active cantons for attracting high-net-worth families under this regime include **Geneva, Vaud, Valais, Ticino, Graubünden and Lucerne**.\n\nCantonal conditions vary: expenditure minimums, timelines for establishing the lump-sum arrangement and the applicability of double taxation treaties. A cantonal comparison is essential before any domicile decision.\n\n## Multi-jurisdiction coordination: the central challenge\n\nFor an international family, the lump-sum tax is only the first piece of a complex puzzle. Coordination challenges include:\n\n**Double taxation treaties (DTTs)**: Switzerland has concluded over 100 DTTs. For a lump-sum taxpayer to invoke the benefits of a DTT (e.g. reduced withholding tax on foreign dividends), the relevant DTT must expressly authorise application to lump-sum taxpayers. This is not automatic — each treaty must be analysed individually.\n\n**Withholding taxes in countries of origin**: foreign-source income may be subject to withholding taxes in the country of origin. Recovery of those taxes depends on the applicable DTT.\n\n**Residual reporting obligations**: some countries maintain reporting obligations for former residents for several years after departure. Precise monitoring is necessary.\n\n**A dispersed family**: when family members reside in several countries, each individual situation creates distinct tax obligations. Coordinating across national tax regimes requires considerable expertise.\n\n## The family office coordinator's role\n\nIn this context, the family office is not a tax adviser — that role belongs to accredited specialists in each jurisdiction. It is the **orchestrator** that:\n\n- Maintains an up-to-date map of the family's tax obligations in each jurisdiction\n- Coordinates local tax advisers and ensures consistency across positions taken\n- Integrates tax impacts into the consolidated wealth report\n- Anticipates legislative changes that could affect the regime\n\nThe successful relocation of an international family is the result of thorough preparation, a well-founded choice of domicile and continuous coordination. To discuss your situation in full confidence, Ridger invites you to get in touch.\n\n### References\n\n- [ESTV – Expenditure-based taxation](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/spezialthemen/aufwandbesteuerung.html)\n- [Fedlex – DFTA art. 14](https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr)\n- [SIF – Double taxation treaties](https://www.sif.admin.ch/sif/fr/home/bilateral/steuerabkommen.html)\n- [KPMG Switzerland – Wealth Management](https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html)\n- [PwC Switzerland – Private Clients](https://www.pwc.ch/fr/services/tax-legal/private-clients.html)"
+    },
+    {
       "slug": "multi-family-office-vs-banque-privee-differences",
       "author": "Ridger",
       "image": "abstract-background-dark.avif",
@@ -348,6 +735,45 @@
         "conflits-interet",
         "reporting"
       ]
+    },
+    {
+      "slug": "philanthropie-structuree-suisse-fondation-donatrice-zewo",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-06-08",
+      "category": "gouvernance",
+      "title": "Structured philanthropy in Switzerland: donor-advised foundations and tax deductibility",
+      "description": "Donor-advised foundations, the Zewo label and tax deductibility: how to structure your philanthropic commitment in Switzerland.",
+      "tags": [
+        "philanthropie",
+        "fondation",
+        "zewo",
+        "fiscalite",
+        "gouvernance"
+      ],
+      "references": [
+        {
+          "labelKey": "ESTV – Deductibility of donations to public-benefit institutions",
+          "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/abzuege.html"
+        },
+        {
+          "labelKey": "Zewo – Certification of public-benefit organisations",
+          "url": "https://www.zewo.ch/fr/"
+        },
+        {
+          "labelKey": "Fedlex – DFTA art. 33a (donations)",
+          "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
+        },
+        {
+          "labelKey": "EY Switzerland – Philanthropy and wealth planning",
+          "url": "https://www.ey.com/fr_ch/family-enterprise"
+        },
+        {
+          "labelKey": "UBS – Philanthropy and family office",
+          "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
+        }
+      ],
+      "content": "Philanthropy is an increasingly prominent dimension of wealth planning for high-net-worth families in Switzerland. Beyond the generous gesture itself, it can be structured to maximise impact, ensure continuity and optimise tax deductibility. This article presents the two main approaches — direct giving and donor-advised foundations — along with the role of the Zewo label.\n\n## Direct giving or donor-advised foundation: two distinct logics\n\n### Direct giving\n\nThe simplest form of philanthropy is a direct donation to a public-benefit organisation. It is immediate, requires no structural overhead and is tax-deductible within certain limits. Under Swiss law, donations to legal entities that are tax-exempt owing to their public-benefit purpose are deductible up to **20% of net income** for federal direct tax purposes (art. 33a DFTA). Cantons set their own caps, generally close to this federal level.\n\n**Limits of direct giving**: it does not allow long-term planning, strategic orientation of beneficiaries or the creation of a durable family vehicle for philanthropy.\n\n### The donor-advised foundation\n\nA **donor-advised foundation** (*Förderstiftung* in German) is an ordinary foundation under art. 80 et seq. of the Swiss Civil Code, whose purpose is to support public-benefit causes through donations and grants. It receives an initial endowment, invests the capital to generate income and distributes that income — and potentially part of the capital — to beneficiary organisations.\n\n**Key advantages**:\n- **Long-term strategic vision**: the foundation can define clear thematic priorities and maintain them over decades.\n- **Family vehicle**: family members can sit on the foundation board and participate directly in philanthropic decisions, creating a space for transmitting values across generations.\n- **Deductibility of the initial endowment**: the initial contribution to a recognised public-benefit foundation is deductible within the same limits as direct donations.\n- **Tax exemption of the foundation**: a public-benefit foundation is generally exempt from income and capital tax, allowing funds to be invested in a tax-efficient manner.\n\n**Constraints to anticipate**:\n- The foundation requires supervision by the cantonal (or federal) supervisory authority.\n- A minimum endowment is implicitly expected for the structure to be viable — in practice rarely below CHF 500,000.\n- The statutes irrevocably define the foundation's purpose; later amendments are possible but regulated.\n\n## The Zewo label: a quality mark for beneficiaries\n\nWhen a family wishes to make donations to third-party organisations, the question of beneficiary transparency arises. The **Zewo label** is Switzerland's reference certification for public-benefit organisations collecting donations.\n\nA Zewo-certified organisation commits to:\n- Using donations effectively and in accordance with their declared purpose\n- Reporting transparently on its activities and finances\n- Upholding strict ethical standards in communications and fundraising\n\nFor a private donor, the Zewo label is a reliable quality filter. For a donor-advised foundation, it is often an eligibility criterion for the organisations it supports.\n\n## Tax deductibility: the essentials\n\nDonations to tax-exempt organisations are deductible up to 20% of net income for federal direct tax, with varying cantonal limits. Donations in kind — artworks, listed securities — may also benefit from favourable treatment, subject to correct valuation and acceptance by the beneficiary organisation.\n\nFor families endowing a foundation over several years, multi-year giving planning can optimise deductions within legal limits. Coordination with a tax adviser is essential.\n\n## Ridger's role in philanthropic coordination\n\nRidger is not a foundation and does not make philanthropic decisions on behalf of its clients. Its role is to **coordinate and make visible** the philanthropic dimension within the overall wealth reporting framework:\n\n- Integration of philanthropic commitments into the consolidated wealth statement\n- Tracking of annual distributions and their effective tax deductibility\n- Coordination with tax advisers to optimise cantonal and federal deduction limits\n- Support in the preparatory thinking before establishing a donor-advised foundation\n\nStructured philanthropy is an integral component of a coherent wealth strategy. To discuss this in full confidence, we invite you to contact our team.\n\n### References\n\n- [ESTV – Deductibility of donations](https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/abzuege.html)\n- [Zewo – Certification](https://www.zewo.ch/fr/)\n- [Fedlex – DFTA art. 33a](https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr)\n- [EY Switzerland – Family Enterprise](https://www.ey.com/fr_ch/family-enterprise)\n- [UBS – Family Office Solutions](https://www.ubs.com/global/en/wealth-management/family-office-solutions.html)"
     },
     {
       "slug": "multi-family-office-definition-suisse",
