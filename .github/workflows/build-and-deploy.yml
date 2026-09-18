@@ -290,65 +290,22 @@ jobs:
             echo "[deploy] Cleanup completed, keeping last $KEEP releases" >> "$LOG"
           '
 
-      # ─── Restart server ───
-      - name: Restart Node.js server
+      # ─── Wait for router rolling swap (observe-only; see houle router v4) ───
+      - name: Wait for router rolling swap
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        timeout-minutes: 8
+        timeout-minutes: 6
         run: |
-          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
-          USER="${{ secrets.DEPLOY_SSH_USER }}"
-          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
-          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
-
-          # HTTPS-first restart. Observed in production (run 30006…): the ssh
-          # session for the restart step is the 3rd+ of the run and the host's
-          # session throttle kills it — while the supervisor loop happily
-          # respawns node inside the NEW current/ after the kill endpoint
-          # fires. So the normal path uses no ssh at all: kill over HTTPS,
-          # then verify the new BUILD_ID answers. The managed server-side
-          # script (installed to shared/ by the extract step) is only invoked
-          # as recovery if the supervisor itself is gone.
           BUILD_ID=$(cat dist/.next/BUILD_ID)
-          TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
-          # ridger.ch is Cloudflare-proxied: deploy control endpoints must hit
-          # the origin directly (grey-cloud hostname), or CF cache/WAF can
-          # false-green or block the kill endpoint. Set the DEPLOY_ORIGIN_BASE
-          # repo variable to e.g. https://origin.ridger.ch once DNS exists.
-          ORIGIN_BASE="${{ vars.DEPLOY_ORIGIN_BASE }}"
-          [ -z "$ORIGIN_BASE" ] && ORIGIN_BASE="https://ridger.ch"
-          echo "[restart] Expecting build $BUILD_ID (origin: $ORIGIN_BASE)"
-
-          verify_build() {
-            local checks=$1
-            local i live
-            for i in $(seq 1 "$checks"); do
-              live=$(curl -s --max-time 4 "$ORIGIN_BASE/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
-              if [ "$live" = "$BUILD_ID" ]; then
-                echo "[restart] ✅ Build $BUILD_ID confirmed live (check $i)"
-                return 0
-              fi
-              sleep 2
-            done
-            echo "[restart] Live buildId '${live:-none}' != expected '$BUILD_ID'"
-            return 1
-          }
-
-          echo "[restart] Requesting process restart via kill endpoint..."
-          curl --connect-timeout 5 --max-time 20 -X POST "$ORIGIN_BASE/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
-
-          # Supervisor respawn typically brings the new build up in seconds.
-          if verify_build 30; then exit 0; fi
-
-          # Recovery: supervisor likely dead — run the managed restart script
-          # over ssh (session may be throttled; retry with spacing).
-          echo "[restart] ⚠ Supervisor respawn did not deliver the new build; invoking managed restart"
-          # No ssh fallback by design: the legacy restart script started an
-          # old-style supervisor that competed with the tenant router's child
-          # for port 5001 (duplicate-spawn flapping, 2026-09-18). The router
-          # respawns the app from current/ after the kill above; if that never
-          # delivers the new build, fail loud instead of making it worse.
-          echo "[restart] ❌ Could not confirm build $BUILD_ID live"
-          exit 1
+          echo "[deploy] waiting for router to roll to build $BUILD_ID"
+          OK=0
+          for i in $(seq 1 60); do
+            LIVE=$(curl -s --max-time 4 "https://ridger.ch/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+            if [ "$LIVE" = "$BUILD_ID" ]; then
+              echo "[deploy] build $BUILD_ID live (check $i)"; OK=1; break
+            fi
+            sleep 5
+          done
+          [ "$OK" -eq 1 ] || { echo "[deploy] router never rolled — check maintenance flag / router logs"; exit 1; }
 
       # ─── Health check ───
       - name: Health check and warmup
