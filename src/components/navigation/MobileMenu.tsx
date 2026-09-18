@@ -171,26 +171,27 @@ const MobileMenu = ({
                 <span>{navData.labels.ressources}</span>
               </Link>
             </div>
+            {/* Contact: final entry in the private-banking register — a quiet
+                bronze link over a mono email line, separated by a hairline. */}
+            <div className="mt-5 border-t border-border pt-6">
+              <Link
+                href={`${localePrefix}/contact/`}
+                onClick={handleLinkClick}
+                prefetch={false}
+                locale={locale}
+                className="flex items-center px-2 py-2 text-md font-bold text-accent transition-opacity hover:opacity-80"
+              >
+                <span>{navData.labels.contact}</span>
+              </Link>
+              <a
+                href="mailto:contact@ridger.ch"
+                className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+              >
+                contact@ridger.ch
+              </a>
+            </div>
             {/* Footer is server-rendered in layout; omit here to keep client bundle light */}
           </nav>
-        </div>
-        {/* Bottom-anchored primary CTA: solid, high-contrast, always visible. */}
-        <div className="absolute inset-x-0 bottom-0 border-t border-border bg-background/95 px-4 pb-[max(env(safe-area-inset-bottom),1rem)] pt-3 backdrop-blur">
-          <Link
-            href={`${localePrefix}/contact/`}
-            onClick={handleLinkClick}
-            prefetch={false}
-            locale={locale}
-            className="flex w-full items-center justify-center rounded-lg bg-primary py-3.5 text-[15px] font-semibold tracking-[-0.01em] text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            {navData.labels.contact}
-          </Link>
-          <a
-            href="mailto:contact@ridger.ch"
-            className="mt-2.5 block text-center font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground"
-          >
-            contact@ridger.ch
-          </a>
         </div>
       </SheetContent>
     </Sheet>
