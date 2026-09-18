@@ -556,7 +556,15 @@ export async function generateMetadata(props: Params) {
     meta && typeof meta.robots === "object" && meta.robots !== null
       ? (meta.robots as Record<string, unknown>)
       : {};
-  const shouldIndex = locale === "fr" || isGenuineTranslation(locale, params.slug);
+  // PLACEHOLDER_LOCALES (e.g. "de,es,pt") force-noindexes staged locales even
+  // if their article content would otherwise pass the genuine-translation check.
+  const placeholderLocales = (process.env.PLACEHOLDER_LOCALES || "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  const shouldIndex =
+    !placeholderLocales.includes(locale) &&
+    (locale === "fr" || isGenuineTranslation(locale, params.slug));
   return {
     ...meta,
     robots: {

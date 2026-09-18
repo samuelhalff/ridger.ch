@@ -144,6 +144,7 @@ jobs:
           # ConnectTimeout turn stalls into fast failures the loop can retry.
           for attempt in 1 2 3; do
             if sshpass -p "$PASS" rsync -av --partial --checksum --timeout=60 \
+              --rsync-path="mkdir -p /srv/customer/sites/ridger.ch/artifact && rsync" \
               -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=15 -p $PORT" \
               artifact/next-standalone.tar.gz.part \
               "$USER@$HOST:/srv/customer/sites/ridger.ch/artifact/"; then
@@ -208,6 +209,7 @@ jobs:
             set -euo pipefail
             ENV_FILE="/srv/customer/sites/ridger.ch/shared/.env"
             TMP_FILE="/tmp/ridger_env_sync"
+            mkdir -p "$(dirname "$ENV_FILE")"
             printf "%s" "'"$ENV_SYNC_B64"'" | base64 -d > "$TMP_FILE"
             touch "$ENV_FILE"
             while IFS= read -r line; do

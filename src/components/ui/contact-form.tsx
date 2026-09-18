@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useMemo } from "react";
+import { FC, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/src/lib/utils";
 import { getGaClientId, trackEvent } from "@/src/lib/analytics";
 import { Card, CardContent } from "@/src/components/ui/card";
@@ -23,6 +23,64 @@ import { toast, Toaster } from "sonner";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { CaretDown as ChevronDownIcon, CircleNotch } from "@phosphor-icons/react";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
+const TURNSTILE_SRC =
+  "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+      reset: (id?: string) => void;
+    };
+  }
+}
+
+/**
+ * Invisible-first Turnstile: loads the script on mount, renders an
+ * interaction-only widget and exposes the current token. Absent site key
+ * (local dev) the hook is inert and the API skips verification too.
+ */
+const useTurnstile = () => {
+  const [token, setToken] = useState("");
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !containerRef.current) return;
+    let cancelled = false;
+    const renderWidget = () => {
+      if (cancelled || !window.turnstile || !containerRef.current) return;
+      if (widgetIdRef.current !== null) return;
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        appearance: "interaction-only",
+        "refresh-expired": "auto",
+        callback: (t: string) => setToken(t),
+        "expired-callback": () => setToken(""),
+        "error-callback": () => setToken(""),
+      });
+    };
+    if (window.turnstile) {
+      renderWidget();
+    } else {
+      const existing = document.querySelector(`script[src="${TURNSTILE_SRC}"]`);
+      const script = (existing as HTMLScriptElement) || document.createElement("script");
+      if (!existing) {
+        script.src = TURNSTILE_SRC;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+      script.addEventListener("load", renderWidget);
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return { token, containerRef };
+};
 
 // We keep the types and defaults outside the component
 type FormValues = z.infer<ReturnType<typeof createFormSchema>>;
@@ -140,6 +198,7 @@ const ContactForm: FC<ContactFormProps> = ({
     defaultValues,
     mode: "onTouched",
   });
+  const { token: turnstileToken, containerRef: turnstileRef } = useTurnstile();
 
   const formStartTracked = React.useRef(false);
   const handleFormFocus = () => {
@@ -169,6 +228,7 @@ const ContactForm: FC<ContactFormProps> = ({
           pageUrl: window.location.href,
           referrer: document.referrer || "",
           gaClientId: getGaClientId() || "",
+          turnstileToken,
         }),
       });
       if (!res.ok) {
@@ -564,6 +624,7 @@ const ContactForm: FC<ContactFormProps> = ({
                   )}
                 </Button>
               </form>
+              <div ref={turnstileRef} className="min-h-0" aria-hidden="true" />
             </Form>
           </CardContent>
         </Card>

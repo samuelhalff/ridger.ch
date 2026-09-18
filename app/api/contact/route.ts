@@ -55,6 +55,10 @@ const verifyTurnstile = async (token: string): Promise<boolean> => {
 
 const submitFormspark = async (payload: z.infer<typeof contactSchema>) => {
   if (!FORMSPARK_ACTION_URL) {
+    if (process.env.NODE_ENV === "production") {
+      // Never swallow leads on a prod misconfiguration.
+      throw new Error("formspark_unconfigured");
+    }
     if (DEBUG_VALIDATION) {
       console.log("[contact] FORMSPARK_ACTION_URL unset — skipping (dev mode)");
     }
@@ -79,7 +83,33 @@ const submitFormspark = async (payload: z.infer<typeof contactSchema>) => {
   }
 };
 
+// Minimal in-memory IP throttle: the /api matcher bypasses middleware, so the
+// route protects itself. Single-process server (standalone) makes this safe.
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX = 5;
+const rateBuckets = new Map<string, { count: number; resetAt: number }>();
+const isRateLimited = (ip: string): boolean => {
+  const now = Date.now();
+  const bucket = rateBuckets.get(ip);
+  if (!bucket || bucket.resetAt < now) {
+    rateBuckets.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    if (rateBuckets.size > 5000) {
+      for (const [k, v] of rateBuckets) if (v.resetAt < now) rateBuckets.delete(k);
+    }
+    return false;
+  }
+  bucket.count += 1;
+  return bucket.count > RATE_MAX;
+};
+
 export async function POST(request: Request) {
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  }
   let payload: z.infer<typeof contactSchema>;
   try {
     payload = contactSchema.parse(await request.json());
@@ -87,8 +117,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_request" }, { status: 400 });
   }
 
-  // Turnstile verification (skipped when secret key not configured)
-  if (payload.turnstileToken) {
+  // Turnstile verification: when a secret key is configured, a token is
+  // mandatory — otherwise bots could simply omit the field.
+  if (TURNSTILE_SECRET_KEY) {
+    if (!payload.turnstileToken) {
+      return NextResponse.json({ error: "missing_token" }, { status: 403 });
+    }
     const valid = await verifyTurnstile(payload.turnstileToken);
     if (!valid) {
       return NextResponse.json({ error: "invalid_token" }, { status: 403 });

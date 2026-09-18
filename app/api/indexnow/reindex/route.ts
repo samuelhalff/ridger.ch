@@ -7,8 +7,8 @@ export async function POST() {
   // which anyone can already submit via the public IndexNow key.
 
   const base = 'https://ridger.ch';
-  const corePaths = ['/', '/about', '/services', '/ressources', '/contact', '/team'];
-  const servicePaths = ['/services/accounting','/services/taxes','/services/payroll','/services/incorporation','/services/outsourcing','/services/corporate','/services/domiciliation','/services/odoo','/services/family-office','/services/mergers-acquisitions','/services/immigration'];
+  const corePaths = ['/', '/approach', '/platform', '/services', '/ressources', '/contact'];
+  const servicePaths = ['/services/consolidated-reporting','/services/investment-oversight','/services/family-office-coordination','/services/governance-succession','/services/tax-administration','/services/digital-vault','/services/real-estate-transactions'];
   const paths = [...corePaths, ...servicePaths];
   const urls = locales.flatMap((loc) => paths.map((p) => {
     const path = p === '/' ? '' : p;
