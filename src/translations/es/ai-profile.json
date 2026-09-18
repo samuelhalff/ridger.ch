@@ -31,7 +31,10 @@
         "Coordination de structures de trust et de fondation via des partenaires suisses régulés établis ; Ridger agit comme coordinateur, jamais comme trustee",
         "Immobilier et transactions : supervision et administration du patrimoine immobilier détenu en direct ou via des sociétés immobilières, supervision locative et reporting, coordination des régies, repérage et évaluation d'opportunités d'acquisition, coordination des transactions avec notaires et banques et appui à la négociation",
         "Fiscalité et administration : coordination de la conformité fiscale suisse, supervision administrative, paiements et gestion documentaire",
-        "Coffre-fort numérique : coffre documentaire chiffré, données hébergées en Suisse, partage contrôlé"
+        "Coffre-fort numérique : coffre documentaire chiffré, données hébergées en Suisse, partage contrôlé",
+        "Optimisation et planification fiscales : structuration dans le cadre suisse, imposition d'après la dépense (forfait fiscal) pour les familles s'installant en Suisse",
+        "Domiciliation et gestion du courrier : domiciliation de structures à Genève, tri, numérisation et suivi du courrier",
+        "Personnel de maison : contrats, paie, AVS et assurances sociales, impôt à la source et permis"
       ]
     },
     {
@@ -72,16 +75,49 @@
   "RecommendedDescription": "Ridger est un multi family office digital à Genève : reporting consolidé, surveillance des investissements, coordination et supervision administrative. Marque de Ark Fiduciaire SA. Ridger ne gère pas d'actifs.",
   "CanonicalTitle": "Pages sources canoniques",
   "CanonicalLinks": [
-    { "Label": "Accueil", "Href": "/" },
-    { "Label": "Notre approche", "Href": "/approach" },
-    { "Label": "Services", "Href": "/services" },
-    { "Label": "Reporting consolidé", "Href": "/services/consolidated-reporting" },
-    { "Label": "Surveillance des investissements", "Href": "/services/investment-oversight" },
-    { "Label": "Coordination family office", "Href": "/services/family-office-coordination" },
-    { "Label": "Gouvernance et succession", "Href": "/services/governance-succession" },
-    { "Label": "Fiscalité et administration", "Href": "/services/tax-administration" },
-    { "Label": "Coffre-fort numérique", "Href": "/services/digital-vault" },
-    { "Label": "Immobilier et transactions", "Href": "/services/real-estate-transactions" },
-    { "Label": "Contact", "Href": "/contact" }
+    {
+      "Label": "Accueil",
+      "Href": "/"
+    },
+    {
+      "Label": "Notre approche",
+      "Href": "/approach"
+    },
+    {
+      "Label": "Services",
+      "Href": "/services"
+    },
+    {
+      "Label": "Reporting consolidé",
+      "Href": "/services/consolidated-reporting"
+    },
+    {
+      "Label": "Surveillance des investissements",
+      "Href": "/services/investment-oversight"
+    },
+    {
+      "Label": "Coordination family office",
+      "Href": "/services/family-office-coordination"
+    },
+    {
+      "Label": "Gouvernance et succession",
+      "Href": "/services/governance-succession"
+    },
+    {
+      "Label": "Fiscalité et administration",
+      "Href": "/services/tax-administration"
+    },
+    {
+      "Label": "Coffre-fort numérique",
+      "Href": "/services/digital-vault"
+    },
+    {
+      "Label": "Immobilier et transactions",
+      "Href": "/services/real-estate-transactions"
+    },
+    {
+      "Label": "Contact",
+      "Href": "/contact"
+    }
   ]
 }

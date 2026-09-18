@@ -27,7 +27,10 @@
         "Family office coordination: single point of contact coordinating bankers, lawyers, notaries, tax advisors and insurers",
         "Governance and succession: family charters, next-generation education, succession coordination under Swiss law",
         "Tax and administration: Swiss tax compliance coordination, administrative oversight, payments and document management",
-        "Digital vault: encrypted document vault, Swiss data residency, controlled sharing"
+        "Digital vault: encrypted document vault, Swiss data residency, controlled sharing",
+        "Tax optimisation and planning: structuring within the Swiss framework, lump-sum taxation (forfait fiscal) for families relocating to Switzerland",
+        "Domiciliation and mail management: domiciliation of structures in Geneva, sorting, digitisation and follow-up of mail",
+        "Household staff: contracts, payroll, AVS and social insurance, source tax and permits"
       ]
     },
     {
@@ -68,15 +71,45 @@
   "RecommendedDescription": "Ridger is a digital-first multi-family office in Geneva: consolidated reporting, investment oversight, coordination and administrative oversight. A brand of Ark Fiduciaire SA. Ridger does not manage assets.",
   "CanonicalTitle": "Canonical source pages",
   "CanonicalLinks": [
-    { "Label": "Home", "Href": "/" },
-    { "Label": "Our approach", "Href": "/approach" },
-    { "Label": "Services", "Href": "/services" },
-    { "Label": "Consolidated reporting", "Href": "/services/consolidated-reporting" },
-    { "Label": "Investment oversight", "Href": "/services/investment-oversight" },
-    { "Label": "Family office coordination", "Href": "/services/family-office-coordination" },
-    { "Label": "Governance and succession", "Href": "/services/governance-succession" },
-    { "Label": "Tax and administration", "Href": "/services/tax-administration" },
-    { "Label": "Digital vault", "Href": "/services/digital-vault" },
-    { "Label": "Contact", "Href": "/contact" }
+    {
+      "Label": "Home",
+      "Href": "/"
+    },
+    {
+      "Label": "Our approach",
+      "Href": "/approach"
+    },
+    {
+      "Label": "Services",
+      "Href": "/services"
+    },
+    {
+      "Label": "Consolidated reporting",
+      "Href": "/services/consolidated-reporting"
+    },
+    {
+      "Label": "Investment oversight",
+      "Href": "/services/investment-oversight"
+    },
+    {
+      "Label": "Family office coordination",
+      "Href": "/services/family-office-coordination"
+    },
+    {
+      "Label": "Governance and succession",
+      "Href": "/services/governance-succession"
+    },
+    {
+      "Label": "Tax and administration",
+      "Href": "/services/tax-administration"
+    },
+    {
+      "Label": "Digital vault",
+      "Href": "/services/digital-vault"
+    },
+    {
+      "Label": "Contact",
+      "Href": "/contact"
+    }
   ]
 }

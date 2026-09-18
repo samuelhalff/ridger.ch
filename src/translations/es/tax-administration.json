@@ -24,6 +24,18 @@
     {
       "Title": "Gestion documentaire",
       "Body": "Classement, conservation et mise à disposition des documents utiles à vos conseillers."
+    },
+    {
+      "Title": "Optimisation fiscale",
+      "Body": "Planification et optimisation fiscales dans le cadre suisse : structuration des revenus et de la détention, imposition d'après la dépense (forfait fiscal) pour les familles qui s'installent en Suisse, coordination de l'installation avec les autorités cantonales."
+    },
+    {
+      "Title": "Domiciliation et courrier",
+      "Body": "Domiciliation de structures à Genève, réception et gestion du courrier de la famille et de ses entités : tri, numérisation, transmission et suivi des actions requises."
+    },
+    {
+      "Title": "Personnel de maison",
+      "Body": "Administration complète du personnel de maison : contrats, paie, AVS et assurances sociales, impôt à la source et permis, pour un emploi conforme et sans friction."
     }
   ],
   "Closing": {

@@ -24,6 +24,18 @@
     {
       "Title": "Document management",
       "Body": "Filing, retention and provision of the documents your advisors need."
+    },
+    {
+      "Title": "Tax optimisation",
+      "Body": "Tax planning and optimisation within the Swiss framework: structuring of income and holdings, lump-sum taxation (forfait fiscal) for families relocating to Switzerland, and coordination of the arrival with cantonal authorities."
+    },
+    {
+      "Title": "Domiciliation and mail",
+      "Body": "Domiciliation of structures in Geneva, receipt and management of the family's and entities' mail: sorting, digitisation, forwarding and follow-up of required actions."
+    },
+    {
+      "Title": "Household staff",
+      "Body": "Complete administration of household staff: contracts, payroll, AVS and social insurance, source tax and permits, for compliant, frictionless employment."
     }
   ],
   "Closing": {

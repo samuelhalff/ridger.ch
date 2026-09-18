@@ -15,7 +15,9 @@ Ridger provides family office services. The firm supports:
 - Governance and succession: family charters, next-generation education, estate planning, and succession coordination under Swiss law
 - Trust and foundation coordination delivered via established regulated Swiss partners, with Ridger acting as coordinator and never as trustee
 - Real estate and transactions: supervision and administration of family real estate held directly or through property companies, rental oversight and reporting, coordination of property managers, sourcing and evaluation of acquisition opportunities, and coordination of transactions with notaries, banks, and due diligence, with negotiation support
-- Tax and administrative coordination: Swiss tax compliance, payments, cash-flow administration, and document management
+- Tax and administrative coordination: Swiss tax compliance, tax planning and optimisation including lump-sum taxation (forfait fiscal) for families relocating to Switzerland, payments, cash-flow administration, and document management
+- Domiciliation and mail management for the family and its structures in Geneva
+- Household staff administration: contracts, payroll, social insurance, source tax, and permits
 - Digital vault: an encrypted document vault with Swiss data residency and controlled sharing
 
 Execution, custody, and asset management remain with the client's regulated banks and asset managers. Ridger provides consolidation, reporting, coordination, and administrative oversight only.
