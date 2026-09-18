@@ -14,6 +14,12 @@ mkdir -p "$DIST_DIR/.next"
 # Copy the standalone server and minimal node_modules into dist/
 cp -R "$BUILD_DIR/standalone/"* "$DIST_DIR/"
 
+# Tenant entrypoint: the standalone server never sources the linked .env
+# (it once defaulted to :3000 and crash-looped against the houle app).
+# Ship a loader that reads .env, pins PORT=5001 and boots the real server.
+mv "$DIST_DIR/server.js" "$DIST_DIR/server-app.js"
+cp "$ROOT_DIR/scripts/server/tenant-entry.js" "$DIST_DIR/server.js"
+
 # Ensure .next/static resides alongside the server bundle
 mkdir -p "$DIST_DIR/.next"
 cp -R "$BUILD_DIR/static" "$DIST_DIR/.next/"
