@@ -126,7 +126,7 @@ export default async function ServicesPage(
     >
       <StructuredData nonce={nonce} data={[breadcrumbJsonLd, faqJsonLd]} />
       <header>
-        <h1 className="mb-4 max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+        <h1 className="mb-4 max-w-[14ch] text-balance text-5xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
           {(tHome("Services.Title") as string) || "Services"}
         </h1>
         <nav aria-label="Breadcrumb" className="mb-6 mt-2">

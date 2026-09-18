@@ -41,7 +41,7 @@ export default function PageHero({
           className="max-w-5xl"
           eyebrowClassName={eyebrowClassName}
           titleClassName={cn(
-            "max-w-[16ch] text-5xl leading-[0.98] sm:text-6xl lg:text-7xl",
+            "max-w-[16ch] text-5xl leading-[1.08] sm:text-6xl lg:text-7xl",
             titleClassName,
           )}
           descriptionClassName={cn(

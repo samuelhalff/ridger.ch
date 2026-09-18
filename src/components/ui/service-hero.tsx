@@ -56,7 +56,7 @@ const ServiceHero = async ({
             const { title, subtitle } = splitTitle(raw);
             return (
               <>
-                <h1 className="mt-7 max-w-[14ch] text-balance text-5xl font-bold leading-[0.98] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+                <h1 className="mt-7 max-w-[14ch] text-balance text-5xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
                   {tidyTitle(title)}
                 </h1>
                 {subtitle ? (

@@ -60,7 +60,7 @@ export default function SectionHeading({
       <div className="space-y-3">
         <TitleTag
           className={cn(
-            "text-3xl font-semibold tracking-[-0.035em] text-foreground sm:text-4xl lg:text-[2.85rem] lg:leading-[1.05]",
+            "text-3xl font-semibold tracking-[-0.035em] text-foreground sm:text-4xl lg:text-[2.85rem] lg:leading-[1.08]",
             titleClassName,
           )}
         >

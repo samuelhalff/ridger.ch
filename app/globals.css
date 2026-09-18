@@ -128,6 +128,8 @@
     font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
     font-weight: 600;
     letter-spacing: -0.02em;
+    /* Uniform display leading for the sans (serif-era sub-1.0 values collide). */
+    line-height: 1.12;
   }
 
   code,
