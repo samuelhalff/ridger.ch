@@ -54,6 +54,9 @@ export function middleware(request: NextRequest) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.hostname = host.replace(/^www\./, "");
     redirectUrl.protocol = "https";
+    // nextUrl carries the internal server port behind the tenant proxy;
+    // public URLs are always :443.
+    redirectUrl.port = "";
     const response = NextResponse.redirect(redirectUrl, 308);
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
