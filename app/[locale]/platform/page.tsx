@@ -24,16 +24,16 @@ export default async function PlatformPage(props: {
   return (
     <div className="mx-auto w-full max-w-[1240px] px-5 py-10 sm:px-8 sm:py-14">
       <header className="mx-auto mb-10 max-w-[1080px]">
-        <p className="rule-label border-t-0 p-0 text-[#9a7b4f]">
+        <p className="rule-label border-t-0 p-0 text-accent">
           {t("hero.eyebrow") as string}
         </p>
-        <h1 className="font-display mt-4 max-w-[20ch] text-3xl leading-tight text-[#1a1a18] sm:text-4xl md:text-5xl">
+        <h1 className="font-display mt-4 max-w-[20ch] text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
           {t("hero.title") as string}
         </h1>
-        <p className="mt-5 max-w-[62ch] text-base leading-8 text-[#6e6a62] sm:text-lg">
+        <p className="mt-5 max-w-[62ch] text-base leading-8 text-muted-foreground sm:text-lg">
           {t("hero.intro") as string}
         </p>
-        <p className="mt-4 text-xs uppercase tracking-[0.1em] text-[#6e6a62]">
+        <p className="mt-4 text-xs uppercase tracking-[0.1em] text-muted-foreground">
           {t("hero.illustration") as string}
         </p>
       </header>
