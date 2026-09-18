@@ -1,48 +1,32 @@
 {
-    "Accounting": {
-        "Title": "Accounting",
-        "Description": "Comprehensive accounting services, including bookkeeping, financial reporting. We rely on custom AI tools to gain efficiency and make your life easier."
-    },
-    "TaxesCompanyPersonal": {
-        "Title": "Taxes",
-        "Description": "We handle all aspects of tax compliance, including VAT registration, corporate tax filings, and personal income tax declarations."
-    },
-    "PayrollHR": {
-        "Title": "Payroll & HR",
-        "Description": "We manage payroll processing, including salary calculations, payslip generation, and compliance with Swiss social security regulations."
-    },
-    "OutsourcingServices": {
-        "Title": "Outsourcing services",
-        "Description": "We provide outsourcing services for legal, administrative, and accounting tasks, allowing you to focus on your core business activities while we handle the necessary back-office functions."
-    },
-    "MAServices": {
-        "Title": "Mergers & acquisitions",
-        "Description": "Deal advisory for Swiss SMEs including buy-side and sell-side mandates, valuations, due diligence support and post-merger integration planning."
-    },
-    "CorporateServices": {
-        "Title": "Corporate services",
-        "Description": "We offer a range of corporate services, including company formation, compliance management, and corporate governance support to ensure your business operates smoothly."
-    },
-    "ShowMore": "Learn more",
-    "ShowLess": "Show less",
-    "DomiciliationServices": {
-        "Title": "Domiciliation services",
-        "Description": "Domiciliation services provide businesses with a registered address. These services allow companies to establish their official headquarters without needing a physical office at the location."
-    },
-    "Incorporation": {
-        "Title": "Company incorporation",
-        "Description": "We assist with the entire company incorporation process, ensuring compliance with Swiss regulations and providing ongoing support."
-    },
-    "ImmigrationServices": {
-        "Title": "Immigration & permits",
-        "Description": "Support for Swiss residence and work permits, ANobAG cases, coordination with authorities, and administrative onboarding in Geneva and Romandy."
-    },
-    "OdooImplementation": {
-        "Title": "Odoo implementation",
-        "Description": "We are official Odoo partners, providing full implementation and configuration services to ensure your Odoo setup meets Swiss accounting standards."
-    },
-    "FamilyOffice": {
-        "Title": "Family office",
-        "Description": "Family office services focused on governance and administrative coordination for high-net-worth families. Reporting, compliance, payments, succession, no asset management."
-    }
+  "ShowMore": "Show more",
+  "ShowLess": "Show less",
+  "ConsolidatedReporting": {
+    "Title": "Consolidated reporting",
+    "Description": "A single view of your entire wealth — banks, custodians, real estate, private equity, collectible assets. Independent of any bank, with full transparency on performance and fees."
+  },
+  "InvestmentOversight": {
+    "Title": "Investment oversight",
+    "Description": "Monitoring of mandates and managers, consolidated performance, fee and risk reviews, and preparation of your family investment committee. Oversight and coordination — never asset management."
+  },
+  "FamilyOfficeCoordination": {
+    "Title": "Family office coordination",
+    "Description": "A single point of contact orchestrating your bankers, lawyers, notaries, tax advisors and insurers — including discreet special requests for established clients."
+  },
+  "GovernanceSuccession": {
+    "Title": "Governance & succession",
+    "Description": "Family charters, next-generation education, estate planning and succession coordination under Swiss law, with trust and foundation structures via established Swiss partners."
+  },
+  "TaxAdministration": {
+    "Title": "Tax & administration",
+    "Description": "Swiss tax compliance and optimisation — including lump-sum taxation for relocating families — payments, domiciliation, mail management and household staff administration."
+  },
+  "RealEstateTransactions": {
+    "Title": "Real estate & transactions",
+    "Description": "Supervision and reporting of family real estate, sourcing and evaluation of acquisition opportunities, and coordination of transactions with notaries, banks and due diligence."
+  },
+  "DigitalVault": {
+    "Title": "Digital vault",
+    "Description": "An encrypted family document vault with Swiss data residency, structured records and controlled sharing with your advisors."
+  }
 }
