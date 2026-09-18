@@ -103,8 +103,11 @@ const isRateLimited = (ip: string): boolean => {
 };
 
 export async function POST(request: Request) {
+  const forwarded = request.headers.get("x-forwarded-for") || "";
+  // Rightmost XFF entry is appended by our own front; leftmost is spoofable.
+  const parts = forwarded.split(",").filter(Boolean);
   const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    parts[parts.length - 1]?.trim() ||
     request.headers.get("x-real-ip") ||
     "unknown";
   if (isRateLimited(ip)) {
