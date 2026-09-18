@@ -5,16 +5,12 @@ import ContactForm from "@/src/components/ui/contact-form";
 import Services from "@/app/[locale]/home/components/services";
 import About from "@/app/[locale]/home/components/about";
 import FAQ from "@/app/[locale]/home/components/faq";
-import Testimonials from "@/app/[locale]/home/components/testimonials";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import Defer from "@/src/components/Defer";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { buildFAQPage } from "@/src/lib/structuredData";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import type { FAQEntry } from "@/src/lib/structuredData";
-import { CtaBanner } from "@/src/components/ui/surface";
-import { Lightning } from "@phosphor-icons/react/dist/ssr";
-import { TrustSignals } from "@/src/components/seo/TrustBlocks";
 
 export async function generateMetadata(
   props: {
@@ -34,6 +30,8 @@ export async function generateMetadata(
 // Redeploy happens every 48h, so cache the page until next deployment window
 export const revalidate = 172800; // 48 hours
 
+type HowStep = { Title?: string; Body?: string };
+
 export default async function Home(props: { params: Promise<{ locale: string }> }) {
   const params = await props.params;
   const nonce = (await headers()).get("x-nonce") || undefined;
@@ -41,15 +39,12 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
   const activeLocale = isValidLocale(requestedLocale) ? requestedLocale : "fr";
   const t = await getTranslations(activeLocale, "contact");
   const homeT = await getTranslations(activeLocale, "home");
-  const agentT = await getTranslations(activeLocale, "agent");
   const heroTranslations = {
     "Hero.Title": homeT("Hero.Title"),
     "Hero.Description": homeT("Hero.Description"),
     "Hero.CTA": homeT("Hero.CTA"),
     "Hero.SecondaryCTA": homeT("Hero.SecondaryCTA"),
     "Hero.ImageAlt": homeT("Hero.ImageAlt"),
-    "Hero.OdooPartnerBadge": homeT("Hero.OdooPartnerBadge"),
-    "Hero.OdooBadge": homeT("Hero.OdooBadge"),
     "Hero.ScrollHint": homeT("Hero.ScrollHint"),
   };
   const heroFacts = [
@@ -92,11 +87,24 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
     .map((i) => ({ question: faq[`Question${i}`], answer: faq[`Answer${i}`] }));
   const faqJsonLd = buildFAQPage(faqEntries, 8);
 
-  // Choose a stable hero image index per request to avoid hydration mismatch
-  const indexSeed = (nonce || `${Date.now()}`)
-    .split("")
-    .reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-  const heroIndex = indexSeed % 9; // there are 9 service hero images
+  const howSteps = Array.isArray(homeT("How.Steps") as unknown)
+    ? (homeT("How.Steps") as unknown as HowStep[])
+    : [];
+
+  const trustItems = [
+    {
+      title: homeT("Trust.DataResidency.Title") as string,
+      description: homeT("Trust.DataResidency.Description") as string,
+    },
+    {
+      title: homeT("Trust.Secrecy.Title") as string,
+      description: homeT("Trust.Secrecy.Description") as string,
+    },
+    {
+      title: homeT("Trust.Response.Title") as string,
+      description: homeT("Trust.Response.Description") as string,
+    },
+  ];
 
   const contactStrings = {
     title: (t("Title") as string) || "Get in Touch",
@@ -134,89 +142,59 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
     },
   } as const;
 
-  const trustItems = [
-    {
-      title: homeT("Trust.Sofit.Title") as string,
-      description: homeT("Trust.Sofit.Description") as string,
-      featured: true,
-    },
-    {
-      title: homeT("Trust.Odoo.Title") as string,
-      description: homeT("Trust.Odoo.Description") as string,
-      odoo: true,
-    },
-    {
-      title: homeT("Trust.Gaap.Title") as string,
-      description: homeT("Trust.Gaap.Description") as string,
-    },
-  ];
-  const entitySummary =
-    activeLocale === "fr"
-      ? "Ridger est une fiduciaire basée à Genève qui accompagne PME suisses, entrepreneurs, sociétés internationales et familles dans la comptabilité, la fiscalité, les salaires, la domiciliation, l’administration corporate, l’implémentation Odoo et la coordination administrative."
-      : "Ridger is a Geneva-based fiduciary firm supporting Swiss SMEs, entrepreneurs, international companies and families with accounting, tax, payroll, domiciliation, corporate administration, Odoo implementation and administrative coordination.";
-  const entityFacts =
-    activeLocale === "fr"
-      ? [
-          { title: "Genève", description: "26 Boulevard Georges Favon, 1204 Genève" },
-          { title: "SO-FIT", description: "Membre d’un organisme d’autorégulation reconnu pour les activités soumises à la LBA" },
-          { title: "Odoo", description: "Intégration et automatisation des processus comptables et administratifs" },
-          { title: "Expertises", description: "Comptabilité, fiscalité, salaires, corporate, domiciliation et pilotage financier" },
-          { title: "Clients", description: "PME, entrepreneurs, familles et sociétés internationales actives en Suisse" },
-          { title: "Équipe", description: "Des profils comptables, fiscaux, juridiques et digitaux réunis autour de vos dossiers" },
-        ]
-      : [
-          { title: "Geneva", description: "26 Boulevard Georges Favon, 1204 Geneva" },
-          { title: "SO-FIT", description: "Member of a recognized self-regulatory organization for activities subject to AML rules" },
-          { title: "Odoo", description: "Implementation and automation for accounting and administrative workflows" },
-          { title: "Expertise", description: "Accounting, tax, payroll, corporate administration, domiciliation and financial steering" },
-          { title: "Clients", description: "SMEs, entrepreneurs, families and international companies active in Switzerland" },
-          { title: "Team", description: "Accounting, tax, legal and digital profiles working together on your files" },
-        ];
-
   return (
     <div className="mx-auto w-full pb-4">
       <StructuredData nonce={nonce} data={faqJsonLd} />
       <section id="hero">
         <Hero
           locale={activeLocale}
-          heroIndex={heroIndex}
           translations={heroTranslations}
           facts={heroFacts}
         />
       </section>
-      <section
-        id="entity-clarity"
-        className="mx-auto w-full max-w-[1240px] px-5 py-8 sm:px-8 sm:py-10"
-        aria-labelledby="entity-clarity-title"
-      >
-        <div className="grid gap-6 border-b border-border/50 pb-8 md:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)] md:items-start">
-          <div className="space-y-3">
-            <p className="font-mono text-[10px] uppercase leading-5 tracking-[0.14em] text-muted-foreground/70">
-              {activeLocale === "fr" ? "Pourquoi Ridger" : "Why Ridger"}
-            </p>
-            <h2
-              id="entity-clarity-title"
-              className="max-w-[16ch] text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl"
-            >
-              {activeLocale === "fr"
-                ? "Fiduciaire à Genève pour décisions concrètes"
-                : "A Geneva fiduciary firm for practical decisions"}
-            </h2>
-            <p className="max-w-3xl text-base leading-7 text-muted-foreground">
-              {entitySummary}
-            </p>
-          </div>
-          <TrustSignals items={entityFacts} />
-        </div>
+
+      <section id="services">
+        <Services locale={activeLocale} />
       </section>
+
+      {howSteps.length > 0 ? (
+        <section
+          id="how-we-work"
+          className="mx-auto w-full max-w-[1240px] px-5 py-12 sm:px-8 sm:py-16"
+          aria-labelledby="how-we-work-title"
+        >
+          <p className="font-mono text-[10px] uppercase leading-5 tracking-[0.14em] text-muted-foreground/70">
+            {homeT("How.Eyebrow") as string}
+          </p>
+          <h2
+            id="how-we-work-title"
+            className="mt-3 max-w-[20ch] text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl"
+          >
+            {homeT("How.Title") as string}
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {howSteps.map((step, index) => (
+              <div key={index} className="flex flex-col gap-2">
+                <p className="text-[17px] font-semibold tracking-[-0.02em] leading-tight text-foreground">
+                  {step.Title}
+                </p>
+                <p className="text-[13.5px] leading-[1.55] text-muted-foreground">
+                  {step.Body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <section
-        id="affiliations"
+        id="trust"
         className="mx-auto w-full max-w-[1240px] border-y border-border/50 px-5 py-8 sm:px-8 sm:py-10"
-        aria-labelledby="affiliations-title"
+        aria-labelledby="trust-title"
       >
         <div className="grid items-start gap-8 sm:grid-cols-[auto_repeat(3,1fr)] sm:items-center sm:gap-10">
           <p
-            id="affiliations-title"
+            id="trust-title"
             className="font-mono text-[10px] uppercase leading-5 tracking-[0.14em] text-muted-foreground/70 sm:max-w-[100px]"
           >
             {homeT("Trust.Eyebrow") as string}
@@ -224,14 +202,7 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
           <ul className="col-span-3 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
             {trustItems.map((item) => (
               <li key={item.title} className="flex flex-col gap-1.5">
-                <p
-                  className={`text-[17px] font-semibold tracking-[-0.02em] leading-tight ${
-                    item.featured
-                      ? "text-brand-hover dark:text-brand"
-                      : "text-foreground"
-                  }`}
-                  style={item.odoo ? { color: "#714B67" } : undefined}
-                >
+                <p className="text-[17px] font-semibold tracking-[-0.02em] leading-tight text-foreground">
                   {item.title}
                 </p>
                 <p className="text-[13px] leading-[1.55] text-muted-foreground">
@@ -242,32 +213,7 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
           </ul>
         </div>
       </section>
-      <section id="services">
-        <Services locale={activeLocale} />
-      </section>
-      <section
-        id="instant-quote"
-        className="mx-auto w-full max-w-[900px] px-5 py-10 sm:px-8"
-      >
-        <CtaBanner
-          variant="warm"
-          className="rounded-[28px] p-6 sm:p-8"
-          eyebrow={agentT("Title") as string}
-          title={agentT("Lead.Title") as string}
-          description={`${agentT("Subtitle") as string} ${
-            agentT("Intro") as string
-          }`}
-          icon={
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-              <Lightning className="size-4" weight="fill" aria-hidden="true" />
-            </span>
-          }
-          primary={{
-            href: `${localePrefix}/agent/`,
-            label: agentT("Lead.Button") as string,
-          }}
-        />
-      </section>
+
       <section id="about">
         <Defer
           rootMargin="300px"
@@ -286,16 +232,6 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
           placeholder={<div className="h-40 w-full rounded-lg bg-muted/40" />}
         >
           <FAQ />
-        </Defer>
-      </section>
-      <section id="testimonials">
-        <Defer
-          rootMargin="400px"
-          idle={300}
-          maxDelay={1400}
-          placeholder={<div className="h-64 w-full rounded-lg bg-muted/40" />}
-        >
-          <Testimonials />
         </Defer>
       </section>
       <section id="contact" className="px-5 py-10 sm:px-8">

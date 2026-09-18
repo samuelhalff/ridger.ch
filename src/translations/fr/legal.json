@@ -6,15 +6,15 @@
         "Introduction": {
             "Title": "Introduction",
             "Content": {
-                "0": "Bienvenue chez Ridger. Ces Conditions d'utilisation (\"Conditions\") régissent l'utilisation de notre site web et de nos services.",
+                "0": "Bienvenue chez Ridger. Ridger est une marque de Ark Fiduciaire SA, Genève. Ces Conditions d'utilisation (\"Conditions\") régissent l'utilisation de notre site web et de nos services.",
                 "1": "En accédant ou en utilisant nos services, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, vous ne pouvez pas accéder à nos services."
             }
         },
         "Services": {
             "Title": "Nos Services",
             "Content": {
-                "0": "Ridger fournit des services professionnels de comptabilité, de conseil fiscal, de gestion de la paie et de services d'entreprise aux entreprises en Suisse.",
-                "1": "Tous les services sont fournis conformément au droit suisse et aux normes professionnelles de l'Association Suisse des Experts en Audit, Fiscalité et Fiduciaire (EXPERTsuisse)."
+                "0": "Ridger, marque de Ark Fiduciaire SA, fournit des services de family office : reporting consolidé, surveillance des investissements, coordination, gouvernance et succession, coordination fiscale et administrative, et coffre-fort numérique. L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés du client. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+                "1": "Tous les services sont fournis conformément au droit suisse."
             }
         },
         "Responsibilities": {
@@ -80,17 +80,17 @@
                 "1": "Médiation par un service de médiation commerciale suisse reconnu",
                 "2": "Si nécessaire, litige devant les tribunaux suisses compétents"
             },
-            "Jurisdiction": "Le lieu de juridiction est le siège social d'Ridger en Suisse."
+            "Jurisdiction": "Le lieu de juridiction est le siège social de Ark Fiduciaire SA, Genève, Suisse."
         },
         "Contact": {
             "Title": "Informations de Contact",
             "Description": "Pour toute question concernant ces Conditions d'utilisation ou nos services professionnels, veuillez nous contacter :",
-            "CompanyName": "Ridger",
+            "CompanyName": "Ridger — Ark Fiduciaire SA",
             "Email": "info@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève",
             "Commitment": "Nous nous engageons à maintenir les plus hauts standards de service professionnel et de satisfaction client."
         },
-        "SoFitAffiliation": "Ridger est affiliée à l'OAR de",
+        "SoFitAffiliation": "Ark Fiduciaire SA, Genève (opérateur de la marque Ridger), est affiliée à l'OAR de",
         "SoFitAffiliationSuffix": " (organisme d'autorégulation au sens de la LBA/LSFin)."
     },
     "Privacy": {
@@ -100,15 +100,15 @@
         "Introduction": {
             "Title": "Introduction",
             "Content": [
-                "Chez Ridger, nous nous engageons à protéger votre vie privée et vos données personnelles conformément à la Loi Fédérale Suisse sur la Protection des Données (LPD) et aux réglementations UE applicables.",
+                "Chez Ridger, marque de Ark Fiduciaire SA, Genève, nous nous engageons à protéger votre vie privée et vos données personnelles conformément à la Loi Fédérale Suisse sur la Protection des Données (LPD) et aux réglementations UE applicables.",
                 "Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos services."
             ]
         },
         "DataController": {
             "Title": "Responsable du Traitement",
-            "Content": "Ridger agit en tant que responsable du traitement pour les données personnelles collectées et traitées en lien avec nos services professionnels.",
+            "Content": "Ark Fiduciaire SA, Genève, opérateur de la marque Ridger, agit en tant que responsable du traitement pour les données personnelles collectées et traitées en lien avec nos services.",
             "ContactDetails": "Coordonnées :",
-            "CompanyName": "Ridger",
+            "CompanyName": "Ridger — Ark Fiduciaire SA",
             "Email": "info@ridger.ch",
             "Address": "26 Boulevard Georges-Favon, 1204 Genève"
         },

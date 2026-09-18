@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Family office coordination",
+    "Description": "A single point of contact for all your advisors. We coordinate bankers, lawyers, notaries, tax advisors and insurers, and onboard your family's existing ecosystem.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "A well-served family often works with many advisors, spread across several institutions and jurisdictions. Value is lost in the back-and-forth, the duplication and the scattered information.",
+    "We become your single point of contact. We know your files, we speak with your advisors, and we make sure each one has the right information at the right time."
+  ],
+  "Pillars": [
+    {
+      "Title": "Single point of contact",
+      "Body": "One address for your requests, which then mobilises the right people without requiring you to orchestrate it all."
+    },
+    {
+      "Title": "Advisor coordination",
+      "Body": "Connecting and following up among bankers, lawyers, notaries, tax advisors and insurers around your priorities."
+    },
+    {
+      "Title": "Onboarding the existing setup",
+      "Body": "We start from the ecosystem you have already built and integrate it, rather than replacing it."
+    },
+    {
+      "Title": "Follow-up and memory",
+      "Body": "Rigorous tracking of deadlines, decisions and documents, for continuity that lasts over time."
+    }
+  ],
+  "Closing": {
+    "Title": "Your time protected",
+    "Body": "You keep control of decisions. We take on the coordination, the follow-ups and the flow of information among your advisors."
+  },
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+}

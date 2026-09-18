@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Notre approche",
+    "Description": "Ridger est un family office indépendant, aligné sur vos intérêts. Nous coordonnons, consolidons et supervisons, sans jamais gérer vos actifs à la place de vos banques et de vos gérants."
+  },
+  "Sections": [
+    {
+      "Title": "Indépendance",
+      "Body": [
+        "Nous ne sommes ni une banque, ni un gérant. Cette indépendance est la condition d'un regard objectif sur vos relations financières.",
+        "Notre rémunération est transparente et alignée sur votre intérêt. Nous n'avons aucun produit à placer, aucune transaction à provoquer."
+      ]
+    },
+    {
+      "Title": "Méthode",
+      "Body": [
+        "Nous commençons par un audit de votre organisation existante : relations bancaires, mandats, structures et conseillers.",
+        "Nous mettons ensuite en place la consolidation de votre patrimoine, puis un rythme de surveillance et de coordination adapté à vos priorités."
+      ]
+    },
+    {
+      "Title": "Discrétion et sécurité",
+      "Body": [
+        "La confidentialité est au cœur de notre métier. Vos données sont hébergées en Suisse et partagées uniquement avec les personnes que vous désignez.",
+        "Nos flux de travail numériques préservent la traçabilité et le contrôle des accès, à chaque étape."
+      ]
+    },
+    {
+      "Title": "Un interlocuteur unique",
+      "Body": [
+        "Vous disposez d'un point de contact qui connaît vos dossiers et mobilise les bonnes compétences au bon moment.",
+        "Nous répondons dans un délai d'un jour ouvré et gardons la mémoire de vos décisions dans la durée."
+      ]
+    }
+  ],
+  "ArkNote": "Ridger s'appuie sur un groupe fiduciaire genevois établi, gage de rigueur et de continuité :",
+  "CTA": "Demander un entretien confidentiel"
+}

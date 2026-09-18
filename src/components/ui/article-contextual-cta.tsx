@@ -27,7 +27,7 @@ const ArticleContextualCTA = ({
   const localePrefix = locale ? `/${locale}` : "/fr";
 
   const resolvedPrimaryHref = primaryHref || `${localePrefix}/contact/`;
-  const resolvedSecondaryHref = secondaryHref || `${localePrefix}/agent/`;
+  const resolvedSecondaryHref = secondaryHref || `${localePrefix}/contact/`;
 
   return (
     <CtaBanner

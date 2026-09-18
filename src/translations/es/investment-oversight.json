@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Surveillance des investissements",
+    "Description": "Un regard indépendant sur vos mandats et vos gérants. Nous suivons la performance, les frais et le risque de vos relations, et préparons les décisions de votre comité d'investissement familial.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Confier ses avoirs à plusieurs gérants est une pratique saine. Encore faut-il pouvoir comparer leurs résultats sur une base commune et poser les bonnes questions au bon moment.",
+    "Nous assurons une surveillance continue et structurée. Il s'agit d'un rôle de contrôle, non de gestion : les décisions et l'exécution restent chez vos gérants régulés."
+  ],
+  "Pillars": [
+    {
+      "Title": "Suivi des mandats",
+      "Body": "Contrôle du respect des mandats et de la politique d'investissement convenue avec chaque gérant."
+    },
+    {
+      "Title": "Revues consolidées",
+      "Body": "Analyses régulières de performance, de frais et de risque, comparées entre gérants et dans le temps."
+    },
+    {
+      "Title": "Cadrage par indices",
+      "Body": "Mise en perspective des résultats face à des indices de référence pertinents et transparents."
+    },
+    {
+      "Title": "Préparation du comité",
+      "Body": "Dossiers clairs et documentés pour préparer les réunions du comité d'investissement familial et éclairer vos décisions."
+    }
+  ],
+  "Closing": {
+    "Title": "Surveillance, non gestion",
+    "Body": "Notre rôle est d'observer, de comparer et de documenter. Vous conservez le choix de vos gérants et de vos décisions, avec une information complète et impartiale."
+  },
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

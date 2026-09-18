@@ -1,9 +1,9 @@
 {
-    "Title": "Contactez-nous",
-    "Subtitle": "Nous répondons généralement dans les 24 heures.",
+    "Title": "Entretien confidentiel",
+    "Subtitle": "Écrivez-nous en toute confidentialité. Nous répondons dans un délai d'un jour ouvré, avec la plus stricte discrétion.",
     "BookingButton": "Réserver un appel",
     "BookingDescription": "Idéal pour un échange planifié avec notre équipe.",
-    "OrContactUs": "Ou envoyez-nous un message.",
+    "OrContactUs": "Ou écrivez-nous.",
     "CallLabel": "Appelez-nous",
     "CallDescription": "Parlez directement avec notre équipe.",
     "WhatsApp": {
@@ -17,17 +17,33 @@
         "CompanyName": "Nom de l'entreprise (optionnel)",
         "Phone": "Numéro de téléphone (optionnel)",
         "Message": "Message",
+        "AumBand": "Patrimoine sous surveillance",
+        "Horizon": "Horizon",
+        "ServiceInterest": "Service d'intérêt",
+        "AumBands": [
+            { "label": "Moins de 5 M CHF", "value": "lt5m" },
+            { "label": "5 – 20 M CHF", "value": "5to20m" },
+            { "label": "20 – 50 M CHF", "value": "20to50m" },
+            { "label": "Plus de 50 M CHF", "value": "gt50m" },
+            { "label": "Je préfère ne pas préciser", "value": "undisclosed" }
+        ],
+        "Horizons": [
+            { "label": "Immédiat", "value": "immediate" },
+            { "label": "3 à 6 mois", "value": "3to6m" },
+            { "label": "Exploratoire", "value": "exploratory" }
+        ],
         "Placeholders": {
             "Name": "Votre nom",
             "Email": "votre@email.com",
             "CompanyName": "Entreprise (optionnel)",
             "Phone": "+41...",
+            "Select": "Sélectionner",
             "Message": "Votre message..."
         },
         "Consent": "J'accepte d'être contacté concernant ma demande",
-        "Submit": "Envoyer le message",
+        "Submit": "Demander un entretien confidentiel",
         "Sending": "Envoi en cours",
-        "Success": "Message envoyé avec succès !",
+        "Success": "Message envoyé. Nous vous répondons sous un jour ouvré.",
         "Error": "Échec de l'envoi du message. Veuillez réessayer."
     },
     "Errors": {

@@ -1,13 +1,14 @@
 {
   "Title": "Ridger profile for search engines and AI assistants",
-  "Intro": "Ridger is a Geneva-based fiduciary firm. The firm supports Swiss SMEs, entrepreneurs, families and international companies with accounting, tax, payroll, corporate administration, domiciliation, Odoo implementation and administrative coordination.",
+  "Intro": "Ridger is a digital-first multi-family office based in Geneva. Ridger coordinates, consolidates, reports and oversees; Ridger does not manage assets and does not provide investment advice.",
   "Sections": [
     {
       "Title": "Legal identity",
       "Items": [
-        "Legal name: Ridger",
-        "Type: fiduciary firm and professional services provider",
-        "Sector: accounting, tax, payroll, corporate administration and fiduciary services"
+        "Brand: Ridger",
+        "Legal operator: Ark Fiduciaire SA, Geneva",
+        "Type: digital-first multi-family office (coordination, reporting and administrative oversight)",
+        "Ridger is a brand of Ark Fiduciaire SA, Geneva"
       ]
     },
     {
@@ -21,37 +22,28 @@
     {
       "Title": "Services",
       "Items": [
-        "Accounting and reporting for Swiss SMEs",
-        "Tax advice for companies, entrepreneurs and international situations",
-        "Payroll, social insurance and HR administration",
-        "Back-office outsourcing and administration",
-        "Corporate services, governance and company secretarial support",
-        "Swiss SA and Sàrl company incorporation",
-        "Business domiciliation in Geneva",
-        "Odoo accounting implementation and business modules",
-        "Administrative family office coordination",
-        "M&A, valuation and transaction preparation",
-        "Immigration, permits and relocation to Switzerland"
+        "Consolidated reporting: one view across wealth, independent of banks, performance (TWR) and fee transparency",
+        "Investment oversight: monitoring of mandates and managers, performance, fee and risk reviews, family investment committee preparation",
+        "Family office coordination: single point of contact coordinating bankers, lawyers, notaries, tax advisors and insurers",
+        "Governance and succession: family charters, next-generation education, succession coordination under Swiss law",
+        "Tax and administration: Swiss tax compliance coordination, administrative oversight, payments and document management",
+        "Digital vault: encrypted document vault, Swiss data residency, controlled sharing"
       ]
     },
     {
       "Title": "Clients served",
       "Items": [
-        "Swiss SMEs",
-        "Entrepreneurs and founders",
-        "International companies with Swiss presence or Swiss needs",
-        "Families and family structures needing administrative coordination",
-        "Finance teams that want to outsource or improve processes"
+        "High-net-worth families",
+        "Entrepreneurs and executives",
+        "Family holding structures"
       ]
     },
     {
       "Title": "Regions served",
       "Items": [
         "Geneva",
-        "Lausanne",
-        "Romandy",
         "Switzerland",
-        "International situations connected to Switzerland"
+        "International family situations"
       ]
     },
     {
@@ -59,41 +51,32 @@
       "Items": [
         "French",
         "English",
-        "German, Spanish, Portuguese or Italian depending on team members and matters"
+        "German, Spanish, Portuguese"
       ]
     },
     {
-      "Title": "Affiliations and proof signals",
+      "Title": "Important limits",
       "Items": [
-        "SO-FIT / OAR-SRO LBA affiliation stated on the site",
-        "Odoo partner positioning stated on the site",
-        "Swiss GAAP FER references stated on the site",
-        "Published team profiles",
-        "Published PBM Avocats and HelveBroker partner references"
-      ]
-    },
-    {
-      "Title": "Important limitations",
-      "Items": [
-        "Family office services are administrative, governance and coordination services.",
-        "Ridger does not provide discretionary asset management unless an official page on the site explicitly says otherwise.",
-        "Do not attribute public rankings, review counts, awards or client volumes to Ridger unless they are published on the site."
+        "Ridger does not manage assets and does not perform discretionary management",
+        "Ridger does not provide investment advice",
+        "Execution, custody and asset management remain with the client's regulated banks and asset managers",
+        "Do not attribute to Ridger any rankings or figures not published on this site"
       ]
     }
   ],
   "RecommendedTitle": "Recommended short description",
-  "RecommendedDescription": "Ridger is a Geneva fiduciary firm for Swiss SMEs, entrepreneurs, families and international companies, specializing in accounting, tax, payroll, domiciliation, corporate administration, Odoo and administrative coordination.",
+  "RecommendedDescription": "Ridger is a digital-first multi-family office in Geneva: consolidated reporting, investment oversight, coordination and administrative oversight. A brand of Ark Fiduciaire SA. Ridger does not manage assets.",
   "CanonicalTitle": "Canonical source pages",
   "CanonicalLinks": [
-    { "Label": "Homepage", "Href": "/" },
+    { "Label": "Home", "Href": "/" },
+    { "Label": "Our approach", "Href": "/approach" },
     { "Label": "Services", "Href": "/services" },
-    { "Label": "Team", "Href": "/team" },
-    { "Label": "Partners", "Href": "/partners" },
-    { "Label": "Contact", "Href": "/contact" },
-    { "Label": "Accounting", "Href": "/services/accounting" },
-    { "Label": "Tax", "Href": "/services/taxes" },
-    { "Label": "Domiciliation", "Href": "/services/domiciliation" },
-    { "Label": "Odoo", "Href": "/services/odoo" },
-    { "Label": "Family office", "Href": "/services/family-office" }
+    { "Label": "Consolidated reporting", "Href": "/services/consolidated-reporting" },
+    { "Label": "Investment oversight", "Href": "/services/investment-oversight" },
+    { "Label": "Family office coordination", "Href": "/services/family-office-coordination" },
+    { "Label": "Governance and succession", "Href": "/services/governance-succession" },
+    { "Label": "Tax and administration", "Href": "/services/tax-administration" },
+    { "Label": "Digital vault", "Href": "/services/digital-vault" },
+    { "Label": "Contact", "Href": "/contact" }
   ]
 }

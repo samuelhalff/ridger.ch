@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Tax and administration",
+    "Description": "Coordination of your Swiss tax compliance and day-to-day administration. We oversee filings, payments, cash flow and document management for family members and their structures.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "A family and its holding structures generate a constant flow of tax and administrative obligations. Taken individually they are manageable; together they call for rigorous coordination.",
+    "We coordinate this compliance and administration, drawing on the expertise of an established Geneva fiduciary group. You keep the overview, without carrying the load."
+  ],
+  "Pillars": [
+    {
+      "Title": "Swiss tax compliance",
+      "Body": "Coordination of filings and tax obligations for family members and holding structures."
+    },
+    {
+      "Title": "Administrative oversight",
+      "Body": "Tracking of deadlines, formalities and counterparties, for administration with no blind spots."
+    },
+    {
+      "Title": "Payments and cash flow",
+      "Body": "Administration of payments and monitoring of cash flow, with controls and traceability."
+    },
+    {
+      "Title": "Document management",
+      "Body": "Filing, retention and provision of the documents your advisors need."
+    }
+  ],
+  "Closing": {
+    "Title": "Administration under control",
+    "Body": "You keep control and the overview; we take on the administrative execution and the coordination with your tax advisors."
+  },
+  "Perimeter": "Tax and administrative coordination is carried out with your tax and legal advisors. Ridger provides coordination, reporting and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+}

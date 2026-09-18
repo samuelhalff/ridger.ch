@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Digital vault",
+    "Description": "Your family documents, encrypted and structured, hosted in Switzerland. A secure space to keep, organise and share essential records with your advisors, under access rights you control.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "A family's documents — deeds, contracts, statements, decisions — scatter over time across emails, folders and people. Finding them when they are needed becomes a tedious exercise.",
+    "The digital vault brings these records into a single, encrypted space hosted in Switzerland. You decide who sees what, and you keep a record of every access."
+  ],
+  "Pillars": [
+    {
+      "Title": "Encrypted vault",
+      "Body": "An encrypted document space, built for confidentiality and longevity."
+    },
+    {
+      "Title": "Structured records",
+      "Body": "A clear organisation of family records, easy to navigate and keep current."
+    },
+    {
+      "Title": "Swiss data residency",
+      "Body": "Data hosted in Switzerland, aligned with your residency and confidentiality requirements."
+    },
+    {
+      "Title": "Controlled sharing",
+      "Body": "Selective sharing with your advisors, with managed access rights and traceability."
+    }
+  ],
+  "Closing": {
+    "Title": "A lasting document estate",
+    "Body": "Digital-first workflows that save time, without ever compromising on security or discretion."
+  },
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+}

@@ -43,9 +43,9 @@ interface FAQContent {
 }
 
 interface RessourcesLinks {
-  Accounting?: string;
-  Tax?: string;
-  Payroll?: string;
+  Reporting?: string;
+  Oversight?: string;
+  Governance?: string;
 }
 
 interface RessourcesData {
@@ -270,16 +270,16 @@ export default async function RessourcesPage(
           <div className="flex flex-wrap gap-2">
             {[
               {
-                label: links.Accounting || "accounting",
-                href: buildInternalUrl("/services/accounting", locale),
+                label: links.Reporting || "reporting consolidé",
+                href: buildInternalUrl("/services/consolidated-reporting", locale),
               },
               {
-                label: links.Tax || "tax",
-                href: buildInternalUrl("/services/taxes", locale),
+                label: links.Oversight || "surveillance",
+                href: buildInternalUrl("/services/investment-oversight", locale),
               },
               {
-                label: links.Payroll || "payroll",
-                href: buildInternalUrl("/services/payroll", locale),
+                label: links.Governance || "gouvernance",
+                href: buildInternalUrl("/services/governance-succession", locale),
               },
             ].map((item) => (
               <a

@@ -6,14 +6,14 @@
         "Introduction": {
             "Title": "Introduction",
             "Content": {
-                "0": "Welcome to Ridger. These Terms of Service (\"Terms\") govern your use of our website and services.",
+                "0": "Welcome to Ridger. Ridger is a brand of Ark Fiduciaire SA, Geneva. These Terms of Service (\"Terms\") govern your use of our website and services.",
                 "1": "By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services."
             }
         },
         "Services": {
             "Title": "Our Services",
             "Content": {
-                "0": "Ridger provides professional accounting, tax advisory, payroll management, and corporate services to businesses in Switzerland.",
+                "0": "Ridger, a brand of Ark Fiduciaire SA, provides multi-family office services: consolidated reporting, investment oversight, coordination, governance and succession support, tax and administrative coordination, and a digital vault. Execution, custody and asset management remain with the client\u2019s regulated banks and asset managers. Ridger does not manage assets and does not provide investment advice.",
                 "1": "All services are provided in accordance with Swiss law and professional standards of the Swiss Expert Association for Audit, Tax and Fiduciary (EXPERTsuisse)."
             }
         },
@@ -80,7 +80,7 @@
                 "1": "Mediation through a recognized Swiss commercial mediation service",
                 "2": "If necessary, litigation before the competentCookies Swiss courts"
             },
-            "Jurisdiction": "The place of jurisdiction is the registered office of Ridger in Switzerland."
+            "Jurisdiction": "The place of jurisdiction is the registered office of Ark Fiduciaire SA, Geneva, Switzerland."
         },
         "Contact": {
             "Title": "Contact Information",
@@ -90,7 +90,7 @@
             "Address": "26 Boulevard Georges-Favon, 1204 Geneva",
             "Commitment": "We are committed to maintaining the highest standards of professional service and client satisfaction."
         },
-        "SoFitAffiliation": "Ridger is affiliated with the SRO of",
+        "SoFitAffiliation": "Ark Fiduciaire SA, Geneva (operator of the Ridger brand), is affiliated with the SRO of",
         "SoFitAffiliationSuffix": " (self-regulatory body under the Swiss AMLA/FinSA)."
     },
     "Privacy": {
@@ -106,7 +106,7 @@
         },
         "DataController": {
             "Title": "Data Controller",
-            "Content": "Ridger acts as the data controller for personal data collected and processed in connection with our professional services.",
+            "Content": "Ark Fiduciaire SA, Geneva, operator of the Ridger brand, acts as the data controller for personal data collected and processed in connection with our services.",
             "ContactDetails": "Contact details:",
             "CompanyName": "Ridger",
             "Email": "info@ridger.ch",

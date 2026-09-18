@@ -50,7 +50,7 @@ const Hero = ({ locale, heroIndex, translations, facts }: HeroProps) => {
 
           <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
             <Link
-              href={`${localePrefix}/agent/`}
+              href={`${localePrefix}/contact/`}
               className="w-full sm:w-auto"
               locale={locale}
               prefetch={false}
@@ -58,19 +58,6 @@ const Hero = ({ locale, heroIndex, translations, facts }: HeroProps) => {
               <Button
                 size="lg"
                 className="btn-main-cta w-full rounded-full bg-foreground px-6 text-base text-background transition-colors hover:text-white sm:w-auto"
-              >
-                <span>{t("Hero.SecondaryCTA")}</span>
-              </Button>
-            </Link>
-            <Link
-              href={`${localePrefix}/contact/`}
-              className="w-full sm:w-auto"
-              locale={locale}
-            >
-              <Button
-                size="lg"
-                variant="secondary"
-                className="btn-secondary-cta w-full rounded-full px-6 text-base sm:w-auto"
               >
                 <span>{t("Hero.CTA")}</span>
               </Button>

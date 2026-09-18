@@ -60,7 +60,7 @@ const ServiceContactForm = async ({
         locale: activeLocale,
       }}
       secondary={{
-        href: `${localePrefix}/agent/`,
+        href: `${localePrefix}/contact/`,
         label: secondary,
         locale: activeLocale,
       }}

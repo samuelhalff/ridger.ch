@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Consolidated reporting",
+    "Description": "One view across your entire wealth, independent of any bank. We bring your bank accounts, custodians, real estate, private equity holdings and collectibles into clear, regular reporting.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "Your wealth is spread across several banks, managers and jurisdictions. Each statement has its own format, currency and calendar. Consolidated reporting brings these sources into a single, current and verifiable view.",
+    "We produce independent performance and fee reporting. You see what you hold, how it is moving and what it costs, without relying on any single institution's reporting."
+  ],
+  "Pillars": [
+    {
+      "Title": "One view",
+      "Body": "Banks, custodians, real estate, private equity and collectibles brought together in one dashboard, in your reference currency."
+    },
+    {
+      "Title": "Independence",
+      "Body": "Our reporting is independent of any bank. Figures are reconciled against each counterparty's official statements."
+    },
+    {
+      "Title": "Measured performance",
+      "Body": "Time-weighted return (TWR) reporting, comparison against benchmarks and a clear reading of contributions."
+    },
+    {
+      "Title": "Fee transparency",
+      "Body": "Identification and reading of explicit and implicit fees, for a full understanding of what your banking relationships cost."
+    }
+  ],
+  "Closing": {
+    "Title": "Reporting on your rhythm",
+    "Body": "Monthly, quarterly or on demand, your reporting is structured around your priorities and shared securely with the people you designate."
+  },
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+}

@@ -1,21 +1,48 @@
 import type { Locale } from "./i18n-locales";
 
 // Base-to-localized path mapping per locale.
-// Only French is localized for service slugs for now; others fall back to English.
+// Canonical (English) service slugs are the route directory names; each locale
+// map translates them to a locale-specific slug where relevant.
 const frMap: Record<string, string> = {
   "/": "/",
   "/services": "/services",
-  "/services/accounting": "/services/comptabilite",
-  "/services/taxes": "/services/fiscalite",
-  "/services/payroll": "/services/paie",
-  "/services/outsourcing": "/services/externalisation",
-  "/services/mergers-acquisitions": "/services/fusions-acquisitions",
-  "/services/corporate": "/services/services-corporatifs",
-  "/services/domiciliation": "/services/domiciliation",
-  "/services/incorporation": "/services/constitution-entreprise",
-  "/services/immigration": "/services/immigration",
-  "/services/odoo": "/services/odoo",
-  "/services/family-office": "/services/family-office",
+  "/approach": "/approche",
+  "/services/consolidated-reporting": "/services/reporting-consolide",
+  "/services/investment-oversight": "/services/surveillance-investissements",
+  "/services/family-office-coordination": "/services/coordination-family-office",
+  "/services/governance-succession": "/services/gouvernance-succession",
+  "/services/tax-administration": "/services/fiscalite-administration",
+  "/services/digital-vault": "/services/coffre-fort-numerique",
+};
+
+const deMap: Record<string, string> = {
+  "/approach": "/ansatz",
+  "/services/consolidated-reporting": "/services/konsolidiertes-reporting",
+  "/services/investment-oversight": "/services/anlageueberwachung",
+  "/services/family-office-coordination": "/services/family-office-koordination",
+  "/services/governance-succession": "/services/governance-nachfolge",
+  "/services/tax-administration": "/services/steuerverwaltung",
+  "/services/digital-vault": "/services/digitaler-tresor",
+};
+
+const esMap: Record<string, string> = {
+  "/approach": "/enfoque",
+  "/services/consolidated-reporting": "/services/reporting-consolidado",
+  "/services/investment-oversight": "/services/supervision-inversiones",
+  "/services/family-office-coordination": "/services/coordinacion-family-office",
+  "/services/governance-succession": "/services/gobernanza-sucesion",
+  "/services/tax-administration": "/services/administracion-fiscal",
+  "/services/digital-vault": "/services/caja-fuerte-digital",
+};
+
+const ptMap: Record<string, string> = {
+  "/approach": "/abordagem",
+  "/services/consolidated-reporting": "/services/reporting-consolidado",
+  "/services/investment-oversight": "/services/supervisao-investimentos",
+  "/services/family-office-coordination": "/services/coordenacao-family-office",
+  "/services/governance-succession": "/services/governanca-sucessao",
+  "/services/tax-administration": "/services/administracao-fiscal",
+  "/services/digital-vault": "/services/cofre-digital",
 };
 
 const identity = (p: string) => p;
@@ -23,9 +50,9 @@ const identity = (p: string) => p;
 const maps: Record<Locale, (p: string) => string> = {
   en: identity,
   fr: (p: string) => frMap[p] || p,
-  de: identity,
-  es: identity,
-  pt: identity,
+  de: (p: string) => deMap[p] || p,
+  es: (p: string) => esMap[p] || p,
+  pt: (p: string) => ptMap[p] || p,
 };
 
 // Localize a base path (e.g., "/services/accounting") to a locale-specific slug.

@@ -8,13 +8,8 @@ import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import { CookieConsent } from "@/src/components/ClientOnlyDynamic";
 import ConsentAnalytics from "@/src/components/ConsentAnalytics";
-import WhatsAppLink from "@/src/components/ui/whatsapp-link";
 import "./globals.css";
 import { getTranslations, getCurrentLocale } from "@/src/lib/i18n";
-import {
-  WHATSAPP_BADGE_FALLBACK,
-  WHATSAPP_CTA_FALLBACK,
-} from "@/src/lib/whatsapp";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -76,7 +71,6 @@ export default async function RootLayout({
   const currentLocale = await getCurrentLocale();
 
   const tCookie = await getTranslations(currentLocale, "cookie");
-  const tContact = await getTranslations(currentLocale, "contact");
   const cookieLabels = {
     Title: tCookie("Title"),
     Text: tCookie("Text"),
@@ -84,10 +78,6 @@ export default async function RootLayout({
     Accept: tCookie("Accept"),
     Decline: tCookie("Decline"),
     Manage: tCookie("Manage"),
-  } as const;
-  const whatsappLabels = {
-    badge: (tContact("WhatsApp.Badge") as string) || WHATSAPP_BADGE_FALLBACK,
-    cta: (tContact("WhatsApp.Open") as string) || WHATSAPP_CTA_FALLBACK,
   } as const;
 
   const organizationGraphJsonLd = buildOrganizationGraph(currentLocale);
@@ -158,11 +148,6 @@ export default async function RootLayout({
           <ErrorBoundary>
             <div className="text-foreground">
               {children}
-
-              <WhatsAppLink
-                badgeText={whatsappLabels.badge}
-                ctaLabel={whatsappLabels.cta}
-              />
 
               <CookieConsent
                 nonce={nonce}

@@ -65,7 +65,7 @@ export default async function TermsPage(
             <p>
               {r(
                 "Terms.Introduction.Content.0",
-                "Welcome to Ridger. These Terms of Service govern your use of our website and services."
+                "Welcome to Ridger. Ridger is a brand of Ark Fiduciaire SA, Geneva. These Terms of Service govern your use of our website and services."
               )}
             </p>
             <p>
@@ -86,7 +86,7 @@ export default async function TermsPage(
             <p>
               {r(
                 "Terms.Services.Content.0",
-                "Ridger provides professional accounting, tax advisory, payroll management, and corporate services to businesses in Switzerland."
+                "Ridger, a brand of Ark Fiduciaire SA, provides multi-family office services: consolidated reporting, investment oversight, coordination, governance and succession support, tax and administrative coordination, and a digital vault. Execution, custody and asset management remain with the client's regulated banks and asset managers. Ridger does not manage assets and does not provide investment advice."
               )}
             </p>
             <p>
@@ -351,7 +351,7 @@ export default async function TermsPage(
             <p>
               {r(
                 "Terms.GoverningLaw.Jurisdiction",
-                "The place of jurisdiction is the registered office of Ridger in Switzerland."
+                "The place of jurisdiction is the registered office of Ark Fiduciaire SA, Geneva, Switzerland."
               )}
             </p>
           </div>
@@ -362,7 +362,7 @@ export default async function TermsPage(
           <p className="text-xs text-muted-foreground italic">
             {r(
               "Terms.SoFitAffiliation",
-              "Ridger is affiliated with the SRO of"
+              "Ark Fiduciaire SA, Geneva (operator of the Ridger brand), is affiliated with the SRO of"
             )}{" "}
             <a
               href="https://so-fit.ch"
@@ -393,7 +393,7 @@ export default async function TermsPage(
             </p>
             <div className="bg-muted/50 p-6 rounded-lg">
               <p className="font-semibold">
-                {r("Terms.Contact.CompanyName", "Ridger")}
+                {r("Terms.Contact.CompanyName", "Ridger — Ark Fiduciaire SA")}
               </p>
               <p>{r("Terms.Contact.Email", "Email: info@ridger.ch")}</p>
               <p>

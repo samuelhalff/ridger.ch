@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Investment oversight",
+    "Description": "An independent view of your mandates and managers. We monitor the performance, fees and risk of your relationships, and prepare the decisions of your family investment committee.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "Entrusting assets to several managers is sound practice. What it requires is the ability to compare their results on a common basis and to ask the right questions at the right time.",
+    "We provide continuous, structured oversight. This is a monitoring role, not a management one: decisions and execution remain with your regulated managers."
+  ],
+  "Pillars": [
+    {
+      "Title": "Mandate monitoring",
+      "Body": "Monitoring of adherence to each mandate and the investment policy agreed with each manager."
+    },
+    {
+      "Title": "Consolidated reviews",
+      "Body": "Regular reviews of performance, fees and risk, compared across managers and over time."
+    },
+    {
+      "Title": "Benchmark framing",
+      "Body": "Results set against relevant, transparent benchmarks for clear perspective."
+    },
+    {
+      "Title": "Committee preparation",
+      "Body": "Clear, documented briefings to prepare family investment committee meetings and inform your decisions."
+    }
+  ],
+  "Closing": {
+    "Title": "Oversight, not management",
+    "Body": "Our role is to observe, compare and document. You retain the choice of your managers and your decisions, with complete and impartial information."
+  },
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+}

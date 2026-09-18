@@ -1,51 +1,67 @@
 {
-    "Title": "Kontakt aufnehmen",
-    "Subtitle": "Wir antworten normalerweise innerhalb von 24 Stunden.",
-    "BookingButton": "Einen Termin buchen",
-    "BookingDescription": "Ideal für ein geplantes Gespräch mit unserem Team.",
-    "OrContactUs": "Oder senden Sie uns eine Nachricht.",
-    "CallLabel": "Rufen Sie uns an",
-    "CallDescription": "Sprechen Sie direkt mit unserem Team.",
+    "Title": "Entretien confidentiel",
+    "Subtitle": "Écrivez-nous en toute confidentialité. Nous répondons dans un délai d'un jour ouvré, avec la plus stricte discrétion.",
+    "BookingButton": "Réserver un appel",
+    "BookingDescription": "Idéal pour un échange planifié avec notre équipe.",
+    "OrContactUs": "Ou écrivez-nous.",
+    "CallLabel": "Appelez-nous",
+    "CallDescription": "Parlez directement avec notre équipe.",
     "WhatsApp": {
         "Badge": "WhatsApp",
-        "Open": "WhatsApp-Chat mit Ridger öffnen",
-        "Description": "Für kurze Fragen und schnelle Antworten."
+        "Open": "Ouvrir le chat WhatsApp avec Ridger",
+        "Description": "Pour les questions rapides et les réponses rapides."
     },
     "Form": {
-        "Name": "Name",
-        "Email": "E-Mail",
-        "CompanyName": "Firmenname (optional)",
-        "Phone": "Telefonnummer (optional)",
-        "Message": "Nachricht",
+        "Name": "Nom",
+        "Email": "E-mail",
+        "CompanyName": "Nom de l'entreprise (optionnel)",
+        "Phone": "Numéro de téléphone (optionnel)",
+        "Message": "Message",
+        "AumBand": "Patrimoine sous surveillance",
+        "Horizon": "Horizon",
+        "ServiceInterest": "Service d'intérêt",
+        "AumBands": [
+            { "label": "Moins de 5 M CHF", "value": "lt5m" },
+            { "label": "5 – 20 M CHF", "value": "5to20m" },
+            { "label": "20 – 50 M CHF", "value": "20to50m" },
+            { "label": "Plus de 50 M CHF", "value": "gt50m" },
+            { "label": "Je préfère ne pas préciser", "value": "undisclosed" }
+        ],
+        "Horizons": [
+            { "label": "Immédiat", "value": "immediate" },
+            { "label": "3 à 6 mois", "value": "3to6m" },
+            { "label": "Exploratoire", "value": "exploratory" }
+        ],
         "Placeholders": {
-            "Name": "Ihr Name",
-            "Email": "ihre@email.com",
-            "CompanyName": "Firma (optional)",
+            "Name": "Votre nom",
+            "Email": "votre@email.com",
+            "CompanyName": "Entreprise (optionnel)",
             "Phone": "+41...",
-            "Message": "Ihre Nachricht..."
+            "Select": "Sélectionner",
+            "Message": "Votre message..."
         },
-        "Consent": "Ich stimme zu, bezüglich meiner Anfrage kontaktiert zu werden",
-        "Submit": "Nachricht senden",
-        "Sending": "Senden",
-        "Success": "Nachricht erfolgreich gesendet!",
-        "Error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+        "Consent": "J'accepte d'être contacté concernant ma demande",
+        "Submit": "Demander un entretien confidentiel",
+        "Sending": "Envoi en cours",
+        "Success": "Message envoyé. Nous vous répondons sous un jour ouvré.",
+        "Error": "Échec de l'envoi du message. Veuillez réessayer."
     },
     "Errors": {
-        "Required": "Dieses Feld ist erforderlich",
-        "InvalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-        "MaxLength": "Die Nachricht darf 500 Zeichen nicht überschreiten",
-        "Consent": "Sie müssen zustimmen, kontaktiert zu werden"
+        "Required": "Ce champ est obligatoire",
+        "InvalidEmail": "Veuillez saisir une adresse e-mail valide",
+        "MaxLength": "Le message ne peut pas dépasser 500 caractères",
+        "Consent": "Vous devez accepter d'être contacté"
     },
     "Contact": {
         "CompanyName": "Ridger",
         "Email": "Email: info@ridger.ch",
-        "Phone": "Telefon: +41 XX XXX XX XX",
+        "Phone": "Téléphone: +41 XX XXX XX XX",
         "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
-        "Commitment": "Wir verpflichten uns, die höchsten Standards für professionellen Service und Kundenzufriedenheit einzuhalten."
+        "Commitment": "Nous nous engageons à maintenir les normes les plus élevées de service professionnel et de satisfaction client."
     },
-    "MapTitle": "Unser Standort in Genf",
-    "MapDisclaimer": "Die Karte wird von Google Maps bereitgestellt. Laden Sie sie nur, wenn Sie einer möglichen Datenübertragung zustimmen (siehe Datenschutzrichtlinie).",
-    "MapLoadButton": "Interaktive Karte anzeigen",
-    "MapOpenExternal": "In Google Maps öffnen",
-    "MapPrivacyPlaceholder": "Aus Datenschutzgründen wird die Karte nicht automatisch geladen."
+    "MapTitle": "Notre localisation à Genève",
+    "MapDisclaimer": "La carte est fournie par Google Maps. Chargez-la seulement si vous acceptez un éventuel transfert de données (voir notre politique de confidentialité).",
+    "MapLoadButton": "Afficher la carte interactive",
+    "MapOpenExternal": "Ouvrir dans Google Maps",
+    "MapPrivacyPlaceholder": "Pour des raisons de confidentialité, la carte n'est pas chargée automatiquement."
 }

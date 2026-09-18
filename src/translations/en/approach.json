@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Our approach",
+    "Description": "Ridger is an independent family office, aligned with your interests. We coordinate, consolidate and oversee, without ever managing your assets in place of your banks and managers."
+  },
+  "Sections": [
+    {
+      "Title": "Independence",
+      "Body": [
+        "We are neither a bank nor an asset manager. This independence is the condition for an objective view of your financial relationships.",
+        "Our compensation is transparent and aligned with your interest. We have no product to place and no transaction to prompt."
+      ]
+    },
+    {
+      "Title": "Method",
+      "Body": [
+        "We begin with an audit of your existing setup: banking relationships, mandates, structures and advisors.",
+        "We then put in place the consolidation of your wealth, followed by a rhythm of oversight and coordination suited to your priorities."
+      ]
+    },
+    {
+      "Title": "Discretion and security",
+      "Body": [
+        "Confidentiality is at the heart of our work. Your data is hosted in Switzerland and shared only with the people you designate.",
+        "Our digital-first workflows preserve traceability and access control at every step."
+      ]
+    },
+    {
+      "Title": "A single point of contact",
+      "Body": [
+        "You have one point of contact who knows your files and mobilises the right skills at the right time.",
+        "We reply within one business day and keep the memory of your decisions over time."
+      ]
+    }
+  ],
+  "ArkNote": "Ridger is backed by an established Geneva fiduciary group, a mark of rigour and continuity:",
+  "CTA": "Request a confidential consultation"
+}

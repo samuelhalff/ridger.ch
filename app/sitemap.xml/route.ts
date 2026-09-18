@@ -24,6 +24,7 @@ function getPlaceholderLocales(): Set<string> {
 const staticPaths = [
   "/",
   "/ai-profile",
+  "/approach",
   "/services",
   "/ressources",
   "/contact",
@@ -34,17 +35,12 @@ const staticPaths = [
 
 // dynamic routes
 const servicePaths = [
-  "/services/accounting",
-  "/services/taxes",
-  "/services/payroll",
-  "/services/incorporation",
-  "/services/outsourcing",
-  "/services/corporate",
-  "/services/domiciliation",
-  "/services/odoo",
-  "/services/family-office",
-  "/services/mergers-acquisitions",
-  "/services/immigration",
+  "/services/consolidated-reporting",
+  "/services/investment-oversight",
+  "/services/family-office-coordination",
+  "/services/governance-succession",
+  "/services/tax-administration",
+  "/services/digital-vault",
 ];
 
 type PathEntry = { path: string; date?: string; locales?: Locale[] } | string;

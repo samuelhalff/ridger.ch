@@ -114,14 +114,12 @@ export function buildBreadcrumbList(items: BreadcrumbItem[]) {
 
 export const arkOrganization = {
   name: "Ridger",
-  legalName: "Ridger",
-  alternateName: ["Ridger"],
+  legalName: "Ark Fiduciaire SA",
+  alternateName: ["Ridger", "Ridger — Ark Fiduciaire SA"],
   url: "https://ridger.ch",
   logo: "https://ridger.ch/assets/ridger--color.svg",
   telephone: "+41 22 512 50 50",
   email: "info@ridger.ch",
-  taxID: "CHE-193.650.350",
-  uidUrl: "https://www.uid.admin.ch/Detail.aspx?lang=fr&uid_id=CHE-193.650.350",
   address: {
     streetAddress: "26 Boulevard Georges Favon",
     postalCode: "1204",
@@ -138,24 +136,22 @@ export const arkOrganization = {
     closes: "17:30",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
   },
-  sameAs: [
-    "https://www.linkedin.com/company/ridger/",
-    "https://ridger.ch",
-    "https://ridger.ch",
-    "https://maps.google.com/?cid=14946625157719331801",
-  ],
+  // Ridger's own profiles only — never Ark's Maps/UID identifiers, so Google
+  // keeps the two brands as distinct entities (affiliation is expressed via
+  // parentOrganization below, not sameAs equivalence).
+  sameAs: ["https://www.linkedin.com/company/ridger/"],
   languages: ["fr", "en", "de", "es", "pt"],
   knowsAbout: [
-    "Odoo ERP",
-    "Swiss Plan Comptable",
-    "Geneva Cantonal Tax Law",
-    "VAT/TVA Compliance",
-    "LBA/AML Regulations",
-    "Swiss Social Charges",
-    "QR invoicing",
-    "Swissdec payroll workflows",
-    "Company incorporation in Switzerland",
-    "SME accounting and reporting",
+    "Multi-family office",
+    "Consolidated wealth reporting",
+    "Investment oversight",
+    "Family governance",
+    "Succession planning",
+    "Swiss tax compliance coordination",
+    "Administrative oversight",
+    "Swiss data residency",
+    "Time-weighted return reporting",
+    "Fee transparency",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -172,11 +168,12 @@ export const arkEntityIds = {
   website: `${arkOrganization.url}/#website`,
   place: `${arkOrganization.url}/#place-geneva-office`,
   areaGeneva: `${arkOrganization.url}/#area-geneve`,
-  offerIncorporation: `${arkOrganization.url}/#offer-pack-creation-sarl-sa`,
-  offerAccounting: `${arkOrganization.url}/#offer-monthly-accounting-subscription`,
-  serviceAccounting: `${arkOrganization.url}/#service-accounting`,
-  serviceOdoo: `${arkOrganization.url}/#service-odoo`,
-  serviceIncorporation: `${arkOrganization.url}/#service-incorporation`,
+  serviceReporting: `${arkOrganization.url}/#service-consolidated-reporting`,
+  serviceOversight: `${arkOrganization.url}/#service-investment-oversight`,
+  serviceCoordination: `${arkOrganization.url}/#service-family-office-coordination`,
+  serviceGovernance: `${arkOrganization.url}/#service-governance-succession`,
+  serviceTaxAdmin: `${arkOrganization.url}/#service-tax-administration`,
+  serviceVault: `${arkOrganization.url}/#service-digital-vault`,
 } as const;
 
 function buildAdministrativeAreaGeneva() {
@@ -196,147 +193,115 @@ function buildAdministrativeAreaGeneva() {
   } as const;
 }
 
-function buildArkOfferNodes(locale: string) {
-  const incorporationDescription =
-    locale === "fr"
-      ? "Pack de création de société pour Sàrl et SA avec cadrage, coordination notariale et dépôt au registre du commerce."
-      : "Company formation package for Sàrl and SA structures with scoping, notary coordination, and commercial register filing.";
-  const accountingDescription =
-    locale === "fr"
-      ? "Abonnement mensuel de comptabilité pour PME avec tenue comptable, TVA, reporting et coordination digitale."
-      : "Monthly accounting subscription for SMEs with bookkeeping, VAT, reporting, and digital workflow coordination.";
-
-  return [
-    {
-      "@type": "Offer",
-      "@id": arkEntityIds.offerIncorporation,
-      name: locale === "fr" ? "Pack Création Sàrl/SA" : "Pack Creation Sàrl/SA",
-      description: incorporationDescription,
-      price: "2500",
-      priceCurrency: "CHF",
-      category: locale === "fr" ? "Constitution d'entreprise" : "Company incorporation",
-      itemOffered: {
-        "@id": arkEntityIds.serviceIncorporation,
-      },
-      seller: {
-        "@id": arkEntityIds.organization,
-      },
-      url: `${arkOrganization.url}/${locale}${localizePath("/services/incorporation", locale as Locale)}/`,
-    },
-    {
-      "@type": "Offer",
-      "@id": arkEntityIds.offerAccounting,
-      name:
-        locale === "fr"
-          ? "Abonnement mensuel comptabilité"
-          : "Monthly Accounting Subscription",
-      description: accountingDescription,
-      price: "149",
-      priceCurrency: "CHF",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "149",
-        priceCurrency: "CHF",
-        unitText: "month",
-      },
-      category: locale === "fr" ? "Comptabilité PME" : "SME accounting",
-      itemOffered: {
-        "@id": arkEntityIds.serviceAccounting,
-      },
-      seller: {
-        "@id": arkEntityIds.organization,
-      },
-      url: `${arkOrganization.url}/${locale}${localizePath("/services/accounting", locale as Locale)}/`,
-    },
-  ] as const;
-}
-
 function buildArkServiceNodes(locale: string) {
   const baseLocaleUrl = `${arkOrganization.url}/${locale}`;
   const areaServed = [{ "@id": arkEntityIds.areaGeneva }, { "@type": "Country", name: "Switzerland" }];
+  const fr = locale === "fr";
 
   return [
     {
-      "@type": "AccountingService",
-      "@id": arkEntityIds.serviceAccounting,
-      name: locale === "fr" ? "Comptabilité PME" : "SME accounting",
-      serviceType:
-        locale === "fr"
-          ? "Comptabilité, TVA et reporting pour PME"
-          : "Accounting, VAT, and reporting for SMEs",
+      "@type": "FinancialService",
+      "@id": arkEntityIds.serviceReporting,
+      name: fr ? "Reporting consolidé" : "Consolidated reporting",
+      serviceType: fr
+        ? "Reporting patrimonial consolidé indépendant"
+        : "Independent consolidated wealth reporting",
       areaServed,
       provider: { "@id": arkEntityIds.organization },
-      offers: { "@id": arkEntityIds.offerAccounting },
-      url: `${baseLocaleUrl}${localizePath("/services/accounting", locale as Locale)}/`,
+      url: `${baseLocaleUrl}${localizePath("/services/consolidated-reporting", locale as Locale)}/`,
+    },
+    {
+      "@type": "FinancialService",
+      "@id": arkEntityIds.serviceOversight,
+      name: fr ? "Surveillance des investissements" : "Investment oversight",
+      serviceType: fr
+        ? "Surveillance des mandats et des gérants"
+        : "Oversight of mandates and managers",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/investment-oversight", locale as Locale)}/`,
     },
     {
       "@type": "ProfessionalService",
-      "@id": arkEntityIds.serviceOdoo,
-      name: locale === "fr" ? "Expertise Odoo" : "Odoo expertise",
-      serviceType:
-        locale === "fr"
-          ? "Implémentation Odoo pour la comptabilité suisse"
-          : "Odoo implementation for Swiss accounting",
+      "@id": arkEntityIds.serviceCoordination,
+      name: fr ? "Coordination family office" : "Family office coordination",
+      serviceType: fr
+        ? "Coordination des conseillers de la famille"
+        : "Coordination of the family's advisors",
       areaServed,
       provider: { "@id": arkEntityIds.organization },
-      url: `${baseLocaleUrl}${localizePath("/services/odoo", locale as Locale)}/`,
+      url: `${baseLocaleUrl}${localizePath("/services/family-office-coordination", locale as Locale)}/`,
     },
     {
       "@type": "ProfessionalService",
-      "@id": arkEntityIds.serviceIncorporation,
-      name:
-        locale === "fr"
-          ? "Création de société en Suisse"
-          : "Company incorporation in Switzerland",
-      serviceType:
-        locale === "fr"
-          ? "Constitution de Sàrl et SA"
-          : "Sàrl and SA incorporation",
+      "@id": arkEntityIds.serviceGovernance,
+      name: fr ? "Gouvernance et succession" : "Governance and succession",
+      serviceType: fr
+        ? "Gouvernance familiale et planification successorale"
+        : "Family governance and succession planning",
       areaServed,
       provider: { "@id": arkEntityIds.organization },
-      offers: { "@id": arkEntityIds.offerIncorporation },
-      url: `${baseLocaleUrl}${localizePath("/services/incorporation", locale as Locale)}/`,
+      url: `${baseLocaleUrl}${localizePath("/services/governance-succession", locale as Locale)}/`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceTaxAdmin,
+      name: fr ? "Fiscalité et administration" : "Tax and administration",
+      serviceType: fr
+        ? "Coordination fiscale et supervision administrative"
+        : "Tax compliance coordination and administrative oversight",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/tax-administration", locale as Locale)}/`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceVault,
+      name: fr ? "Coffre-fort numérique" : "Digital vault",
+      serviceType: fr
+        ? "Coffre-fort documentaire chiffré, données en Suisse"
+        : "Encrypted document vault with Swiss data residency",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/digital-vault", locale as Locale)}/`,
     },
   ] as const;
 }
 
 export function getArkServiceEntityId(
-  key: "accounting" | "odoo" | "incorporation",
+  key:
+    | "consolidated-reporting"
+    | "investment-oversight"
+    | "family-office-coordination"
+    | "governance-succession"
+    | "tax-administration"
+    | "digital-vault"
+    // Legacy keys retained for existing article schema references.
+    | "accounting"
+    | "odoo"
+    | "incorporation",
 ) {
-  if (key === "odoo") return arkEntityIds.serviceOdoo;
-  if (key === "incorporation") return arkEntityIds.serviceIncorporation;
-  return arkEntityIds.serviceAccounting;
+  switch (key) {
+    case "investment-oversight":
+      return arkEntityIds.serviceOversight;
+    case "family-office-coordination":
+      return arkEntityIds.serviceCoordination;
+    case "governance-succession":
+      return arkEntityIds.serviceGovernance;
+    case "tax-administration":
+    case "accounting":
+      return arkEntityIds.serviceTaxAdmin;
+    case "digital-vault":
+      return arkEntityIds.serviceVault;
+    case "odoo":
+    case "incorporation":
+    case "consolidated-reporting":
+    default:
+      return arkEntityIds.serviceReporting;
+  }
 }
 
 export function buildOrganizationGraph(locale: string = "fr") {
-  const serviceNames =
-    locale === "fr"
-      ? [
-          "Comptabilité",
-          "Fiscalité",
-          "Gestion des salaires",
-          "Domiciliation",
-          "Création de société",
-          "Administration corporate",
-          "Externalisation back-office",
-          "Implémentation Odoo",
-          "Family office administratif",
-          "M&A",
-          "Immigration et permis",
-        ]
-      : [
-          "Accounting",
-          "Tax",
-          "Payroll",
-          "Business domiciliation",
-          "Company incorporation",
-          "Corporate administration",
-          "Back-office outsourcing",
-          "Odoo implementation",
-          "Administrative family office",
-          "M&A",
-          "Immigration and permits",
-        ];
   const serviceNodes = buildArkServiceNodes(locale);
   return {
     "@context": "https://schema.org",
@@ -360,7 +325,7 @@ export function buildOrganizationGraph(locale: string = "fr") {
         },
       },
       {
-        "@type": ["ProfessionalService", "AccountingService"],
+        "@type": ["ProfessionalService", "FinancialService"],
         "@id": arkEntityIds.organization,
         name: arkOrganization.name,
         legalName: arkOrganization.legalName,
@@ -371,12 +336,13 @@ export function buildOrganizationGraph(locale: string = "fr") {
         telephone: arkOrganization.telephone,
         email: arkOrganization.email,
         contactPoint: arkOrganization.contactPoint,
-        taxID: arkOrganization.taxID,
-        identifier: {
-          "@type": "PropertyValue",
-          propertyID: "CHE",
-          value: arkOrganization.taxID,
-          url: arkOrganization.uidUrl,
+        // The UID belongs to the operating company, expressed as its own
+        // entity so Google never merges Ridger with the Ark listing.
+        parentOrganization: {
+          "@type": "Organization",
+          name: "Ark Fiduciaire SA",
+          url: "https://ark-fid.ch",
+          taxID: "CHE-193.650.350",
         },
         foundingLocation: {
           "@id": arkEntityIds.place,
@@ -404,13 +370,12 @@ export function buildOrganizationGraph(locale: string = "fr") {
           { "@type": "Country", name: "Switzerland" },
         ],
         knowsAbout: arkOrganization.knowsAbout,
-        priceRange: "$$",
         sameAs: arkOrganization.sameAs,
         knowsLanguage: arkOrganization.languages,
         description:
           locale === "fr"
-            ? "Ridger est une fiduciaire basée à Genève pour PME suisses, entrepreneurs, familles et sociétés internationales."
-            : "Ridger is a Geneva-based fiduciary firm for Swiss SMEs, entrepreneurs, families and international companies.",
+            ? "Ridger est un multi family office digital basé à Genève : reporting consolidé, surveillance des investissements, coordination et supervision administrative. Ridger ne gère pas d'actifs."
+            : "Ridger is a digital-first multi-family office based in Geneva: consolidated reporting, investment oversight, coordination and administrative oversight. Ridger does not manage assets.",
       },
       {
         "@type": "WebSite",
@@ -421,9 +386,9 @@ export function buildOrganizationGraph(locale: string = "fr") {
         inLanguage: locale,
         about: [
           { "@id": arkEntityIds.organization },
-          { "@id": arkEntityIds.serviceAccounting },
-          { "@id": arkEntityIds.serviceOdoo },
-          { "@id": arkEntityIds.serviceIncorporation },
+          { "@id": arkEntityIds.serviceReporting },
+          { "@id": arkEntityIds.serviceOversight },
+          { "@id": arkEntityIds.serviceCoordination },
         ],
       },
       ...serviceNodes,

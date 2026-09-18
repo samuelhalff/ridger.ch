@@ -56,6 +56,7 @@ export default async function LocaleLayout(
     labels: {
       home: tNavbar("Home"),
       services: tNavbar("Services"),
+      approach: tNavbar("Approach"),
       ressources: tNavbar("Ressources"),
       contact: tNavbar("Contact"),
       mobileNavigation: tNavbar("MobileNavigation"),

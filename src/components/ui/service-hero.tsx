@@ -86,7 +86,7 @@ const ServiceHero = async ({
               </Button>
             </Link>
             <Link
-              href={`${localePrefix}/agent/`}
+              href={`${localePrefix}/contact/`}
               className="w-full sm:w-auto"
               locale={locale}
               prefetch={false}

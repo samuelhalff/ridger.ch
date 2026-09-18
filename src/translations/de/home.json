@@ -1,84 +1,96 @@
 {
     "Meta": {
-        "Title": "Startseite | Ridger",
-        "Description": "Fiduziarische Betreuung in Genf und Lausanne. Buchhaltung, Steuern, Lohnadministration, Domizilierung und ERP-Beratung für Schweizer und internationale Unternehmen."
+        "Title": "Family office à Genève | Ridger",
+        "Description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs."
     },
     "Hero": {
-        "Title": "Treuhanddienste in Genf – Vertrauenspartner für KMU",
-        "Description": "Fiduziarische Unterstützung mit schweizerischer Präzision und digitaler Effizienz für Buchhaltung, Steuern, Lohnwesen und Unternehmensführung von der Gründung bis zur Expansion.",
-        "CTA": "Kontakt aufnehmen",
-        "SecondaryCTA": "Sofortangebot erhalten",
-        "Badge": "Genève · Lausanne",
-        "BadgeTwo": "KI-gestützt",
-        "OdooBadge": "Digitale & ERP-Lösungen",
-        "OdooPartnerBadge": "Offizieller Odoo-Partner",
-        "ImageAlt": "Ridger Fachleute unterstützen Schweizer Unternehmen mit Treuhand-, Buchhaltungs- und Steuerleistungen",
-        "ScrollHint": "Mehr entdecken",
+        "Title": "Un family office nouvelle génération",
+        "Description": "Ridger réunit votre patrimoine dans une vue unique, coordonne vos conseillers et supervise votre administration, avec la discrétion et la rigueur suisses. Nous ne gérons pas vos actifs ; nous veillons sur l'ensemble.",
+        "CTA": "Demander un entretien confidentiel",
+        "SecondaryCTA": "Demander un entretien confidentiel",
+        "Badge": "Genève",
+        "BadgeTwo": "Digital d'abord",
+        "ImageAlt": "Family office à Genève",
+        "ScrollHint": "Découvrir",
         "Facts": {
             "Implantation": {
-                "Label": "// Standort",
-                "Value": "Genf · Lausanne",
-                "Sub": "In der Romandie verankert — für Schweizer KMU und internationale Unternehmen."
+                "Label": "// Indépendance",
+                "Value": "Sans banque",
+                "Sub": "Indépendant de toute banque et de tout gérant, aligné sur vos seuls intérêts."
             },
             "Expertises": {
-                "Label": "// Fachgebiete",
-                "Value": "Buchhaltung · Steuern · HR",
-                "Sub": "Buchhaltung, Steuern, Lohn, Corporate Services, Domizilierung und ERP."
+                "Label": "// Périmètre",
+                "Value": "Vue unique",
+                "Sub": "Reporting consolidé, surveillance, coordination et supervision administrative."
             },
             "Solutions": {
-                "Label": "// Lösungen",
-                "Value": "Odoo · KI",
-                "Sub": "Offizieller Odoo-Partner und digitale Tools für präzise, schnelle Ausführung."
+                "Label": "// Discrétion",
+                "Value": "Suisse",
+                "Sub": "Données hébergées en Suisse, secret professionnel, réponse sous un jour ouvré."
             }
         }
     },
     "Services": {
-        "Eyebrow": "Dienstleistungen",
-        "Title": "Unsere Dienstleistungen",
-        "Subtitle": "Umfassende Treuhand-, Buchhaltungs- und Steuerprogramme für jede Wachstumsphase. Wir kombinieren Expertise auf Abruf, bewährte Schweizer Prozesse und sichere digitale Werkzeuge für KMU, Scale-ups und internationale Gruppen."
+        "Eyebrow": "Nos services",
+        "Title": "Ce dont votre famille a besoin, sous un seul toit.",
+        "Subtitle": ""
     },
     "Trust": {
-        "Eyebrow": "Mitgliedschaften und Rahmen",
-        "Sofit": {
-            "Title": "SO-FIT",
-            "Description": "SRO / OAR-Mitglied nach Schweizer GwG. KYC-Prozesse für sensible Domizilierung, Escrow-Mandate, Zahlungsflüsse und dokumentierte Strukturen."
+        "Eyebrow": "Nos engagements",
+        "DataResidency": {
+            "Title": "Données en Suisse",
+            "Description": "Vos documents et vos données sont hébergés en Suisse, partagés uniquement avec les personnes que vous désignez."
         },
-        "Odoo": {
-            "Title": "Odoo",
-            "Description": "Offizieller Partner für Buchhaltung, Automatisierung und Reporting."
+        "Secrecy": {
+            "Title": "Secret professionnel",
+            "Description": "La confidentialité est au cœur de notre métier, à chaque échange et à chaque étape."
         },
-        "Gaap": {
-            "Title": "Swiss GAAP FER",
-            "Description": "Lesbare, konsistente und prüfbare Abschlüsse."
+        "Response": {
+            "Title": "Réponse sous un jour ouvré",
+            "Description": "Un interlocuteur unique qui connaît vos dossiers et vous répond dans un délai d'un jour ouvré."
         }
     },
+    "How": {
+        "Eyebrow": "Notre façon de travailler",
+        "Title": "Digital d'abord, humain avant tout.",
+        "Steps": [
+            {
+                "Title": "Digital d'abord",
+                "Body": "Une consolidation continue et des flux de travail numériques, pour une information toujours à jour et sécurisée."
+            },
+            {
+                "Title": "Un interlocuteur unique",
+                "Body": "Une seule adresse pour vos demandes, qui mobilise les bonnes compétences au bon moment."
+            },
+            {
+                "Title": "Discrétion suisse",
+                "Body": "La confidentialité et la rigueur d'un métier ancré dans la tradition genevoise."
+            }
+        ]
+    },
     "About": {
-        "Eyebrow": "Über uns",
-        "Title": "Warum Ridger?",
+        "Eyebrow": "Pourquoi Ridger",
+        "Title": "Un regard indépendant sur votre patrimoine",
         "Content": [
-            "Ridger stützt sich auf tiefgreifende lokale Expertise und modernste technologische Werkzeuge, um Unternehmer, Familienunternehmen, NGOs und internationale Gruppen bei der Sicherung ihrer Schweizer Buchhaltung und Compliance zu unterstützen. Wir agieren als integriertes Treuhandteam, das die operativen Realitäten der Romandie versteht und gleichzeitig Stakeholder im Ausland koordiniert.",
-            "Unsere multidisziplinären Spezialisten decken Buchhaltung, Steuern, Lohnwesen, HR-Administration, Governance und Unternehmenssekretariat ab. Sie profitieren von zertifizierten Buchhaltern, Steuerberatern und Beratern, die komplexe Regeln in pragmatische Aktionspläne für Ihre Organisation umwandeln.",
-            "Jedes Mandat beginnt mit einer Analysephase, in der wir Ihre Ziele, internen Prozesse und Risikobereitschaft kartieren. Anschließend entwerfen wir einen evolvierenden Serviceplan, von der Unternehmensgründung und Buchhaltung bis zum konsolidierten Reporting, zur Mehrwertsteuerstrategie oder zur HR-Auslagerung.",
-            "Der Schweizer Regulierungsrahmen entwickelt sich schnell. Wir verfolgen Aktualisierungen der SRO / OAR, der AHV und der Kantone, setzen erforderliche Anpassungen um und dokumentieren die notwendigen Kontrollen, damit Sie auditbereit bleiben. Unsere Kunden verlassen sich darauf, dass wir Fristen antizipieren, Strafen vermeiden und eine einwandfreie Dokumentation aufrechterhalten.",
-            "Technologie steht im Herzen unseres Modells. Durch die Kombination von KI-gestützter Dokumentenverarbeitung und Odoo-ERP-Integrationen verkürzen wir Abschlusszeiten, automatisieren wiederkehrende Abstimmungen und erstellen Dashboards, die Ihre Entscheidungen in Echtzeit steuern, ohne die Datensicherheit zu beeinträchtigen.",
-            "Verankert in Genf und Lausanne koordinieren wir regelmäßig mit Anwälten, Auditoren und Steuerberatern in der Schweiz, Europa und Amerika. Mehrsprachige Unterstützung in Französisch, Englisch, Deutsch, Spanisch und Portugiesisch gewährleistet eine reibungslose Kommunikation für verteilte Teams.",
-            "Unsere Kunden schätzen unsere transparente Preisgestaltung, dedizierten Ansprechpartner und Klarheit der Lieferungen. Sie wissen immer, wer für jede Aufgabe verantwortlich ist, den Status laufender Prozesse und bevorstehende Compliance-Fristen im Kalender.",
-            "Ridger wählen bedeutet, sich mit einer Treuhandfirma zusammenzuschließen, die Schweizer Präzision, innovative Werkzeuge und menschliche Unterstützung verbindet. Wir übernehmen Buchhaltung, Steuern, Lohnwesen und Unternehmensadministration, damit Sie sich auf Strategie, Ihre Kunden und nachhaltiges Wachstum konzentrieren können."
+            "Ridger est un multi family office digital basé à Genève. Nous accompagnons les familles dans la consolidation, la surveillance et la coordination de leur patrimoine, sans jamais gérer leurs actifs à la place de leurs banques et de leurs gérants.",
+            "Notre indépendance est la condition d'un regard objectif. Nous n'avons aucun produit à placer, aucune transaction à provoquer ; notre seule mission est de vous donner une vue claire et de coordonner vos conseillers.",
+            "Nous commençons par un audit de votre organisation existante, puis mettons en place un reporting consolidé et un rythme de surveillance adapté à vos priorités. Vous conservez la main sur les décisions ; nous en assurons la préparation et le suivi.",
+            "La confidentialité et la discrétion guident chacun de nos gestes. Vos données sont hébergées en Suisse et ne sont partagées qu'avec les personnes que vous désignez."
         ],
         "Quality": {
-            "Title": "Schweizer Qualitätsstandards",
-            "Content": "Wir arbeiten nach den Rechnungslegungsgrundsätzen von Swiss GAAP FER, unterhalten robuste interne Kontrollen und dokumentieren jeden Prozess, damit Prüfer und Behörden vollständige und fristgerechte Informationen erhalten. Laufende Schulungen, Vier-Augen-Prinzip und ISO-inspirierte Checklisten sichern die erwartete Präzision und Zuverlässigkeit."
+            "Title": "Transparence sur les frais",
+            "Content": "Nous rendons lisibles les frais explicites et implicites de vos relations bancaires, pour une compréhension complète de ce que coûte votre patrimoine."
         },
         "Innovation": {
-            "Title": "Technologiegetriebene Lösungen",
-            "Content": "Unsere Integration von KI-Tools und modernen ERP-Systemen ermöglicht schnellere und präzisere Services, ohne den persönlichen Kontakt zu verlieren, den Treuhandbeziehungen brauchen. Sichere Portale, automatisierte Workflows und erweiterte Analysen schaffen sofortige Transparenz, ohne Ihre Governance zu stören."
+            "Title": "Une méthode digitale",
+            "Content": "Consolidation continue, coffre-fort numérique et partage contrôlé : nos flux de travail numériques font gagner du temps sans jamais transiger sur la sécurité."
         }
     },
     "FAQ": {
-        "Title": "Häufig gestellte Fragen",
-        "Subtitle": "Schnelle Antworten auf häufige Fragen zu unseren Produkten und Dienstleistungen."
+        "Title": "Questions fréquentes",
+        "Subtitle": "Réponses rapides aux questions courantes sur notre rôle et nos services."
     },
     "Testimonials": {
-        "SectionTitle": "Erfahrungsberichte"
+        "SectionTitle": "Témoignages"
     }
 }

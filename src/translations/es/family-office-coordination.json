@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Coordination family office",
+    "Description": "Un interlocuteur unique pour l'ensemble de vos conseillers. Nous coordonnons banquiers, avocats, notaires, conseillers fiscaux et assureurs, et intégrons l'écosystème existant de votre famille.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Une famille bien accompagnée travaille souvent avec de nombreux conseillers, répartis entre plusieurs établissements et juridictions. La valeur se perd dans les allers-retours, les doublons et les informations dispersées.",
+    "Nous devenons votre point de contact unique. Nous connaissons vos dossiers, nous parlons à vos conseillers et nous veillons à ce que chacun dispose de l'information juste, au bon moment."
+  ],
+  "Pillars": [
+    {
+      "Title": "Point de contact unique",
+      "Body": "Une seule adresse pour vos demandes, qui mobilise ensuite les bons interlocuteurs sans que vous ayez à tout orchestrer."
+    },
+    {
+      "Title": "Coordination des conseillers",
+      "Body": "Mise en relation et suivi entre banquiers, avocats, notaires, conseillers fiscaux et assureurs autour de vos priorités."
+    },
+    {
+      "Title": "Intégration de l'existant",
+      "Body": "Nous partons de l'écosystème que vous avez déjà construit et l'intégrons, sans le remplacer."
+    },
+    {
+      "Title": "Suivi et mémoire",
+      "Body": "Un suivi rigoureux des échéances, décisions et documents, pour une continuité qui traverse le temps."
+    }
+  ],
+  "Closing": {
+    "Title": "Votre temps préservé",
+    "Body": "Vous gardez la main sur les décisions. Nous prenons en charge la coordination, les relances et la circulation de l'information entre vos conseillers."
+  },
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

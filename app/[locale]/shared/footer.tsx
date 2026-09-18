@@ -13,38 +13,33 @@ const footerSections = [
     titleKey: "Services.Title",
     links: [
       {
-        titleKey: "Accounting.Title",
-        href: "/services/accounting/",
+        titleKey: "ConsolidatedReporting.Title",
+        href: "/services/consolidated-reporting/",
         ns: "servicesItems",
       },
       {
-        titleKey: "TaxesCompanyPersonal.Title",
-        href: "/services/taxes/",
+        titleKey: "InvestmentOversight.Title",
+        href: "/services/investment-oversight/",
         ns: "servicesItems",
       },
       {
-        titleKey: "PayrollHR.Title",
-        href: "/services/payroll/",
+        titleKey: "FamilyOfficeCoordination.Title",
+        href: "/services/family-office-coordination/",
         ns: "servicesItems",
       },
       {
-        titleKey: "OutsourcingServices.Title",
-        href: "/services/outsourcing/",
+        titleKey: "GovernanceSuccession.Title",
+        href: "/services/governance-succession/",
         ns: "servicesItems",
       },
       {
-        titleKey: "MAServices.Title",
-        href: "/services/mergers-acquisitions/",
+        titleKey: "TaxAdministration.Title",
+        href: "/services/tax-administration/",
         ns: "servicesItems",
       },
       {
-        titleKey: "CorporateServices.Title",
-        href: "/services/corporate/",
-        ns: "servicesItems",
-      },
-      {
-        titleKey: "OdooImplementation.Title",
-        href: "/services/odoo/",
+        titleKey: "DigitalVault.Title",
+        href: "/services/digital-vault/",
         ns: "servicesItems",
       },
     ],
@@ -52,6 +47,7 @@ const footerSections = [
   {
     titleKey: "Company.Title",
     links: [
+      { titleKey: "Approach", href: "/approach/", ns: "navbar" },
       { titleKey: "Contact", href: "/contact/", ns: "navbar" },
     ],
   },
@@ -231,6 +227,19 @@ const Footer = async ({ locale }: { locale?: string }) => {
         <span className="w-full text-center text-sm text-muted-foreground xs:text-start">
           {tFooter("Ridger")} - {tFooter("Copyright")} -{" "}
           <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
+          <br />
+          <span className="text-xs">
+            {tFooter("ArkAffiliationPrefix")}{" "}
+            <a
+              href="https://ark-fid.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground hover:underline"
+            >
+              Ark Fiduciaire SA
+            </a>
+            , Genève
+          </span>
           <br />
           <span className="text-xs">
             {tFooter("SoFitAffiliationPrefix")}{" "}

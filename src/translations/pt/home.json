@@ -1,84 +1,96 @@
 {
     "Meta": {
-        "Title": "Início | Ridger",
-        "Description": "Aconselhamento fiduciário em Genebra e Lausana. Contabilidade, impostos, folha de pagamento, domiciliação e consultoria ERP para empresas suíças e internacionais."
+        "Title": "Family office à Genève | Ridger",
+        "Description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs."
     },
     "Hero": {
-        "Title": "Serviços Fiduciários em Genebra – Parceiro de Confiança para PMEs",
-        "Description": "Acompanhamento fiduciário com precisão suíça e eficiência digital para gerir contabilidade, fiscalidade, folha de pagamento e governação corporativa desde a criação até à expansão.",
-        "CTA": "Entre em contacto",
-        "SecondaryCTA": "Obtenha um orçamento instantâneo",
-        "Badge": "Fabricado na Suíça",
-        "BadgeTwo": "Potenciado por IA",
-        "OdooBadge": "Soluções digitais e ERP",
-        "OdooPartnerBadge": "Parceiro Odoo oficial",
-        "ImageAlt": "Profissionais da Ridger a prestar serviços fiduciários, contabilísticos e fiscais a empresas suíças",
-        "ScrollHint": "Descobrir mais",
+        "Title": "Un family office nouvelle génération",
+        "Description": "Ridger réunit votre patrimoine dans une vue unique, coordonne vos conseillers et supervise votre administration, avec la discrétion et la rigueur suisses. Nous ne gérons pas vos actifs ; nous veillons sur l'ensemble.",
+        "CTA": "Demander un entretien confidentiel",
+        "SecondaryCTA": "Demander un entretien confidentiel",
+        "Badge": "Genève",
+        "BadgeTwo": "Digital d'abord",
+        "ImageAlt": "Family office à Genève",
+        "ScrollHint": "Découvrir",
         "Facts": {
             "Implantation": {
-                "Label": "// Localização",
-                "Value": "Genebra · Lausanne",
-                "Sub": "Presença na Suíça romanda para PMEs suíças e empresas internacionais."
+                "Label": "// Indépendance",
+                "Value": "Sans banque",
+                "Sub": "Indépendant de toute banque et de tout gérant, aligné sur vos seuls intérêts."
             },
             "Expertises": {
-                "Label": "// Serviços",
-                "Value": "Contab. · Fiscal · RH",
-                "Sub": "Contabilidade, fiscalidade, salários, corporate, domiciliação e ERP."
+                "Label": "// Périmètre",
+                "Value": "Vue unique",
+                "Sub": "Reporting consolidé, surveillance, coordination et supervision administrative."
             },
             "Solutions": {
-                "Label": "// Tecnologia",
-                "Value": "Odoo · IA",
-                "Sub": "Parceiro oficial Odoo e ferramentas digitais para acelerar a execução com precisão."
+                "Label": "// Discrétion",
+                "Value": "Suisse",
+                "Sub": "Données hébergées en Suisse, secret professionnel, réponse sous un jour ouvré."
             }
         }
     },
     "Services": {
-        "Eyebrow": "Serviços",
-        "Title": "Os nossos serviços",
-        "Subtitle": "Programas fiduciários, contabilísticos e fiscais completos para cada etapa de crescimento. Combinamos experiência sob medida, processos suíços comprovados e ferramentas digitais seguras para PME, scale-ups e grupos internacionais."
+        "Eyebrow": "Nos services",
+        "Title": "Ce dont votre famille a besoin, sous un seul toit.",
+        "Subtitle": ""
     },
     "Trust": {
-        "Eyebrow": "Afiliações e enquadramento",
-        "Sofit": {
-            "Title": "SO-FIT",
-            "Description": "Membro OAR / SRO nos termos da LBA suíça. KYC para domiciliação sensível, escrow, fluxos de pagamento e estruturas documentadas."
+        "Eyebrow": "Nos engagements",
+        "DataResidency": {
+            "Title": "Données en Suisse",
+            "Description": "Vos documents et vos données sont hébergés en Suisse, partagés uniquement avec les personnes que vous désignez."
         },
-        "Odoo": {
-            "Title": "Odoo",
-            "Description": "Parceiro oficial para contabilidade, automações e reporting."
+        "Secrecy": {
+            "Title": "Secret professionnel",
+            "Description": "La confidentialité est au cœur de notre métier, à chaque échange et à chaque étape."
         },
-        "Gaap": {
-            "Title": "Swiss GAAP FER",
-            "Description": "Demonstrações financeiras claras, coerentes e auditáveis."
+        "Response": {
+            "Title": "Réponse sous un jour ouvré",
+            "Description": "Un interlocuteur unique qui connaît vos dossiers et vous répond dans un délai d'un jour ouvré."
         }
     },
+    "How": {
+        "Eyebrow": "Notre façon de travailler",
+        "Title": "Digital d'abord, humain avant tout.",
+        "Steps": [
+            {
+                "Title": "Digital d'abord",
+                "Body": "Une consolidation continue et des flux de travail numériques, pour une information toujours à jour et sécurisée."
+            },
+            {
+                "Title": "Un interlocuteur unique",
+                "Body": "Une seule adresse pour vos demandes, qui mobilise les bonnes compétences au bon moment."
+            },
+            {
+                "Title": "Discrétion suisse",
+                "Body": "La confidentialité et la rigueur d'un métier ancré dans la tradition genevoise."
+            }
+        ]
+    },
     "About": {
-        "Eyebrow": "Sobre nós",
-        "Title": "Por que escolher a Ridger?",
+        "Eyebrow": "Pourquoi Ridger",
+        "Title": "Un regard indépendant sur votre patrimoine",
         "Content": [
-            "A Ridger baseia-se numa profunda experiência local e ferramentas tecnológicas de ponta para apoiar empreendedores, empresas familiares, ONGs e grupos internacionais na segurança da sua contabilidade e conformidade suíça. Atuamos como uma equipa fiduciária integrada que compreende as realidades operacionais da Romandie enquanto coordena com as partes interessadas no estrangeiro.",
-            "Os nossos especialistas multidisciplinares cobrem contabilidade, fiscalidade, salários, administração de RH, governação e secretariado corporativo. Beneficia de contabilistas certificados, consultores fiscais e consultores que transformam regras complexas em planos de ação pragmáticos para a sua organização.",
-            "Cada mandato começa com uma fase de análise durante a qual mapeamos os seus objetivos, processos internos e apetite pelo risco. Depois concebemos um plano de serviços evolutivo, desde a formação e manutenção contabilística até ao reporte consolidado, estratégia de IVA ou externalização de RH.",
-            "O quadro regulamentar suíço evolui rapidamente. Seguimos as atualizações dos OAR / SRO, do AVS e dos cantões, implementamos os ajustes necessários e documentamos os controlos necessários para que esteja preparado para uma auditoria. Os nossos clientes contam connosco para antecipar prazos, evitar penalizações e manter uma documentação impecável.",
-            "A tecnologia está no coração do nosso modelo. Combinando processamento documental assistido por IA e integrações ERP Odoo, encurtamos os tempos de fecho, automatizamos reconciliações repetitivas e produzimos dashboards para impulsionar as suas decisões em tempo real, sem comprometer a segurança dos dados.",
-            "Ancorados em Genebra e Lausana, coordenamos regularmente com advogados, auditores e consultores fiscais na Suíça, Europa e América. O apoio multilingue em francês, inglês, alemão, espanhol e português assegura uma comunicação fluida para equipas distribuídas.",
-            "Os nossos clientes apreciam a nossa tarifação transparente, contactos dedicados e clareza dos entregáveis. Sabe sempre a pessoa responsável por cada tarefa, o estado dos processos em curso e as próximas datas limite de conformidade no calendário.",
-            "Escolher a Ridger significa associar-se a uma firma fiduciária que combina precisão suíça, ferramentas inovadoras e apoio humano. Tratamos da contabilidade, fiscalidade, salários e administração empresarial para que possa concentrar-se na estratégia, nos seus clientes e num crescimento sustentável."
+            "Ridger est un multi family office digital basé à Genève. Nous accompagnons les familles dans la consolidation, la surveillance et la coordination de leur patrimoine, sans jamais gérer leurs actifs à la place de leurs banques et de leurs gérants.",
+            "Notre indépendance est la condition d'un regard objectif. Nous n'avons aucun produit à placer, aucune transaction à provoquer ; notre seule mission est de vous donner une vue claire et de coordonner vos conseillers.",
+            "Nous commençons par un audit de votre organisation existante, puis mettons en place un reporting consolidé et un rythme de surveillance adapté à vos priorités. Vous conservez la main sur les décisions ; nous en assurons la préparation et le suivi.",
+            "La confidentialité et la discrétion guident chacun de nos gestes. Vos données sont hébergées en Suisse et ne sont partagées qu'avec les personnes que vous désignez."
         ],
         "Quality": {
-            "Title": "Padrões de qualidade suíços",
-            "Content": "Operamos segundo os princípios contabilísticos Swiss GAAP FER, mantemos controlos internos robustos e documentamos cada processo para que auditores e autoridades recebam informação completa e atempada. Formação contínua, revisões cruzadas e checklists inspiradas em ISO asseguram a precisão e fiabilidade esperadas."
+            "Title": "Transparence sur les frais",
+            "Content": "Nous rendons lisibles les frais explicites et implicites de vos relations bancaires, pour une compréhension complète de ce que coûte votre patrimoine."
         },
         "Innovation": {
-            "Title": "Soluções impulsionadas por tecnologia",
-            "Content": "A integração de ferramentas com IA e sistemas ERP modernos permite-nos prestar serviços mais rápidos e precisos sem perder o contacto humano essencial. Portais seguros, fluxos automatizados e análises avançadas oferecem visibilidade imediata sem perturbar a sua governação."
+            "Title": "Une méthode digitale",
+            "Content": "Consolidation continue, coffre-fort numérique et partage contrôlé : nos flux de travail numériques font gagner du temps sans jamais transiger sur la sécurité."
         }
     },
     "FAQ": {
-        "Title": "Perguntas frequentes",
-        "Subtitle": "Respostas rápidas às perguntas mais comuns sobre os nossos produtos e serviços."
+        "Title": "Questions fréquentes",
+        "Subtitle": "Réponses rapides aux questions courantes sur notre rôle et nos services."
     },
     "Testimonials": {
-        "SectionTitle": "Testemunhos"
+        "SectionTitle": "Témoignages"
     }
 }

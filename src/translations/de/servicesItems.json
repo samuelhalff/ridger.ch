@@ -1,48 +1,28 @@
 {
-    "Accounting": {
-        "Title": "Buchhaltung",
-        "Description": "Umfassende Buchhaltungsdienstleistungen, einschließlich Buchführung und Finanzberichterstattung. Wir setzen auf maßgeschneiderte KI-Tools, um Effizienz zu gewinnen und Ihnen das Leben zu erleichtern."
+    "ConsolidatedReporting": {
+        "Title": "Reporting consolidé",
+        "Description": "Une vue unique de l'ensemble de votre patrimoine — banques, dépositaires, immobilier, private equity, actifs de collection. Indépendant de toute banque, avec transparence sur la performance et les frais."
     },
-    "TaxesCompanyPersonal": {
-        "Title": "Steuern",
-        "Description": "Wir behandeln alle Aspekte der Steuerkonformität, einschließlich Mehrwertsteueranmeldung, Körperschaftssteuererklärungen und Einkommensteuererklärungen für Privatpersonen."
+    "InvestmentOversight": {
+        "Title": "Surveillance des investissements",
+        "Description": "Suivi des mandats et des gérants, revues consolidées de performance, de frais et de risque, cadrage par indices de référence et préparation du comité d'investissement familial. Surveillance, non gestion."
     },
-    "PayrollHR": {
-        "Title": "Lohnbuchhaltung & HR",
-        "Description": "Wir verwalten die Lohnverarbeitung, einschließlich Gehaltsberechnungen, Lohnzettelgenerierung und Einhaltung der schweizerischen Sozialversicherungsvorschriften."
+    "FamilyOfficeCoordination": {
+        "Title": "Coordination family office",
+        "Description": "Un interlocuteur unique qui coordonne banquiers, avocats, notaires, conseillers fiscaux et assureurs, et intègre l'écosystème existant de la famille."
     },
-    "OutsourcingServices": {
-        "Title": "Outsourcing-Dienstleistungen",
-        "Description": "Wir bieten Outsourcing-Dienstleistungen für rechtliche, administrative und buchhalterische Aufgaben und ermöglichen es Ihnen, sich auf Ihre Kerngeschäftstätigkeiten zu konzentrieren, während wir die notwendigen Back-Office-Funktionen übernehmen."
+    "GovernanceSuccession": {
+        "Title": "Gouvernance et succession",
+        "Description": "Chartes de gouvernance familiale, éducation de la nouvelle génération, coordination de la planification successorale en droit civil suisse et conseils de famille."
     },
-    "MAServices": {
-        "Title": "Mergers & Acquisitions",
-        "Description": "Transaktionsberatung für Schweizer KMU mit Buy-Side- und Sell-Side-Mandaten, Bewertungen, Due-Diligence-Unterstützung und Integrationsplanung."
+    "TaxAdministration": {
+        "Title": "Fiscalité et administration",
+        "Description": "Coordination de la conformité fiscale suisse pour les membres de la famille et les structures de détention, supervision administrative, gestion des paiements et de la trésorerie, et gestion documentaire."
     },
-    "ShowMore": "Mehr erfahren",
-    "ShowLess": "Weniger anzeigen",
-    "CorporateServices": {
-        "Title": "Unternehmensdienstleistungen",
-        "Description": "Wir bieten eine Reihe von Unternehmensdienstleistungen, einschließlich Firmengründung, Compliance-Management und Corporate-Governance-Unterstützung, um sicherzustellen, dass Ihr Unternehmen reibungslos funktioniert."
+    "DigitalVault": {
+        "Title": "Coffre-fort numérique",
+        "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
     },
-    "Incorporation": {
-        "Title": "Firmengründung",
-        "Description": "Wir begleiten Sie durch den gesamten Gründungsprozess, sorgen für die Einhaltung der Schweizer Vorschriften und bieten fortlaufende Unterstützung."
-    },
-    "ImmigrationServices": {
-        "Title": "Einwanderung & Bewilligungen",
-        "Description": "Begleitung bei Schweizer Aufenthalts- und Arbeitsbewilligungen, ANobAG-Fällen, Koordination mit Behörden und administrativem Onboarding in Genf und der Romandie."
-    },
-    "DomiciliationServices": {
-        "Title": "Domizilierungsdienstleistungen",
-        "Description": "Domizilierungsdienstleistungen bieten Unternehmen eine registrierte Adresse. Diese Dienstleistungen ermöglichen es Unternehmen, ihren offiziellen Hauptsitz zu etablieren, ohne ein physisches Büro an diesem Standort zu benötigen."
-    },
-    "OdooImplementation": {
-        "Title": "Odoo-Implementierung",
-        "Description": "Wir sind offizielle Odoo-Partner und bieten vollständige Implementierungs- und Konfigurationsdienste, um sicherzustellen, dass Ihre Odoo-Einrichtung den schweizerischen Buchhaltungsstandards entspricht."
-    },
-    "FamilyOffice": {
-        "Title": "Family office",
-        "Description": "Family office mit Fokus auf Governance und administrative Koordination für vermögende Familien. Reporting, Compliance, Zahlungen, Nachfolge, keine Vermögensverwaltung."
-    }
+    "ShowMore": "Découvrir",
+    "ShowLess": "Voir moins"
 }

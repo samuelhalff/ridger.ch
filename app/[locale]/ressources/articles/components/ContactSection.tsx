@@ -41,7 +41,7 @@ const ContactSection = ({
       secondary={
         secondaryButtonText
           ? {
-              href: `${localePrefix}/agent/`,
+              href: `${localePrefix}/contact/`,
               label: secondaryButtonText,
               locale,
             }

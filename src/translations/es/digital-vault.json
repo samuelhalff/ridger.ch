@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Coffre-fort numérique",
+    "Description": "Vos documents familiaux, chiffrés et structurés, hébergés en Suisse. Un espace sécurisé pour conserver, organiser et partager les pièces essentielles avec vos conseillers, selon des droits que vous maîtrisez.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Les documents d'une famille — actes, contrats, relevés, décisions — se dispersent avec le temps entre courriels, dossiers et intervenants. Les retrouver au moment voulu devient un exercice fastidieux.",
+    "Le coffre-fort numérique réunit ces pièces dans un espace unique, chiffré et hébergé en Suisse. Vous décidez qui voit quoi, et vous gardez la trace de chaque accès."
+  ],
+  "Pillars": [
+    {
+      "Title": "Coffre chiffré",
+      "Body": "Un espace documentaire chiffré, pensé pour la confidentialité et la durée."
+    },
+    {
+      "Title": "Dossiers structurés",
+      "Body": "Une organisation claire des dossiers familiaux, facile à parcourir et à tenir à jour."
+    },
+    {
+      "Title": "Données en Suisse",
+      "Body": "Hébergement des données en Suisse, aligné avec vos exigences de résidence et de confidentialité."
+    },
+    {
+      "Title": "Partage contrôlé",
+      "Body": "Partage sélectif avec vos conseillers, avec droits d'accès et traçabilité maîtrisés."
+    }
+  ],
+  "Closing": {
+    "Title": "Un patrimoine documentaire durable",
+    "Body": "Des flux de travail numériques qui font gagner du temps, sans jamais transiger sur la sécurité ni la discrétion."
+  },
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

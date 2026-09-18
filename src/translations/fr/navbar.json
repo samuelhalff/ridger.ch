@@ -1,6 +1,7 @@
 {
     "Home": "Accueil",
     "Services": "Services",
+    "Approach": "Approche",
     "Contact": "Contact",
     "Language": "Langue",
     "Theme": "Thème",
@@ -8,33 +9,6 @@
     "MobileNavigation": "Navigation mobile",
     "CloseMenu": "Fermer le menu",
     "CompanyFooter": "Ridger",
-    "Accounting": {
-        "Title": "Comptabilité"
-    },
-    "TaxesCompanyPersonal": {
-        "Title": "Fiscalité"
-    },
-    "PayrollHR": {
-        "Title": "Paie et RH"
-    },
-    "OutsourcingServices": {
-        "Title": "Externalisation"
-    },
-    "MAServices": {
-        "Title": "Fusions & acquisitions"
-    },
-    "CorporateServices": {
-        "Title": "Services corporatifs"
-    },
-    "Incorporation": {
-        "Title": "Constitution d'entreprise"
-    },
-    "DomiciliationServices": {
-        "Title": "Domiciliation"
-    },
-    "OdooImplementation": {
-        "Title": "Odoo"
-    },
     "Lang": {
         "en": "English",
         "fr": "Français",

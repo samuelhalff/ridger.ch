@@ -1,155 +1,100 @@
 {
   "default": {
-    "/": {
-      "title": "Fiduciary Geneva Lausanne | Accounting & Tax Services",
-      "description": "Professional fiduciary firm in Geneva and Lausanne. Accounting, tax, payroll and corporate services. Contact us for a free quote.",
-      "keywords": "fiduciary geneva, fiduciary lausanne, romandy, accounting, tax"
-    },
-    "title": "Ridger | Fiduciary in Geneva & Lausanne",
-    "description": "Fiduciary firm in Geneva and Lausanne delivering accounting, tax, payroll, corporate administration and domiciliation for Swiss SMEs and international groups.",
-    "keywords": "fiduciary geneva, fiduciary lausanne, romandy, switzerland, accounting, tax, payroll, corporate, domiciliation",
+    "title": "Ridger | Family office in Geneva",
+    "description": "Digital-first multi-family office in Geneva: consolidated reporting, investment oversight, coordination and administrative oversight. No asset management.",
+    "keywords": "multi-family office switzerland, family office geneva, consolidated reporting, family governance, investment oversight",
     "topics": [
-      "fiduciary geneva",
-      "fiduciary lausanne",
-      "swiss accounting",
-      "swiss payroll",
-      "swiss vat"
+      "family office geneva",
+      "multi-family office switzerland",
+      "consolidated reporting",
+      "investment oversight",
+      "family governance"
     ],
     "author": "Ridger",
     "siteName": "Ridger"
   },
   "pages": {
     "/": {
-      "title": "Accounting Firm in Geneva: SME, Tax, Odoo | Ridger",
-      "description": "Geneva fiduciary firm for Swiss SMEs, entrepreneurs, families and international companies: accounting, tax, payroll, domiciliation, corporate and Odoo.",
-      "keywords": "fiduciary geneva, accounting geneva, tax services geneva, company incorporation, SME services"
+      "title": "Family office in Geneva | Ridger",
+      "description": "A new-generation family office in Geneva: consolidated reporting, coordination of your advisors and Swiss discretion. Ridger does not manage assets.",
+      "keywords": "family office geneva, multi-family office switzerland, consolidated reporting, family office coordination"
     },
-    "/about": {
-      "title": "Ridger Geneva – your local fiduciary partner",
-      "description": "Ridger is a trusted fiduciary firm in Geneva, providing accounting, tax and business services tailored to SMEs and individuals.",
-      "keywords": "about ridger, fiduciary geneva, geneva accountants, fiduciary experts"
+    "/approach": {
+      "title": "Our approach | Ridger",
+      "description": "Independence, fee transparency and Swiss discretion. The method of a family office that coordinates, consolidates and oversees your interests.",
+      "keywords": "independent family office geneva, family office approach, fee transparency, swiss discretion"
     },
     "/contact": {
-      "title": "Contact Ridger Geneva | English-Speaking Fiduciary",
-      "description": "Contact Ridger in Geneva and Lausanne for accounting, tax, payroll and incorporation services. English, French and German-speaking advisors.",
-      "keywords": "contact fiduciary geneva, english speaking fiduciary lausanne, geneva accounting services, fiduciary contact, multilingual accountants"
-    },
-    "/team": {
-      "title": "Our Team – Fiduciary Experts | Ridger",
-      "description": "An experienced team in Geneva serving businesses in Switzerland and internationally.",
-      "keywords": "fiduciary team geneva, accounting experts, fiduciary professionals"
-    },
-    "/partners": {
-      "title": "Partners - Ridger",
-      "description": "Discover our partnership opportunities and trusted network in Geneva and internationally.",
-      "keywords": "ridger partners, fiduciary partners geneva"
+      "title": "Private consultation | Ridger",
+      "description": "Request a private consultation with Ridger, a family office in Geneva. Reply within one business day, strict confidentiality.",
+      "keywords": "family office geneva contact, private consultation, multi-family office switzerland"
     },
     "/ressources": {
-      "title": "Fiduciary Resources – Geneva & Lausanne | Ridger",
-      "description": "Guides and articles on accounting, tax and payroll in Switzerland with actionable insights for SMEs and entrepreneurs in Romandy.",
-      "keywords": "fiduciary resources, tax guides geneva, accounting insights, swiss tax regulations, lausanne fiduciary"
-    },
-    "/agent": {
-      "title": "Instant Quote – AI Assistant | Ridger Geneva",
-      "description": "Get an instant quote for accounting, tax, payroll and fiduciary services in Geneva and Lausanne. Our AI assistant gives immediate estimates for your business.",
-      "keywords": "instant quote fiduciary, ai quote assistant, online accounting quote geneva, instant tax estimate, payroll quote switzerland, business services quote lausanne, fiduciary cost estimate"
+      "title": "Resources | Ridger",
+      "description": "Guides and analysis on consolidated reporting, investment oversight, governance and succession for families in Switzerland.",
+      "keywords": "family office resources, consolidated reporting, family governance, swiss succession"
     },
     "/services": {
-      "title": "Accounting, Tax & Payroll in Geneva | Ridger",
-      "description": "Fiduciary services in Geneva for SMEs and entrepreneurs: accounting, tax, payroll, domiciliation, incorporation, corporate administration and Odoo.",
-      "keywords": "fiduciary services geneva, accounting services, tax advisory geneva, SME accounting"
+      "title": "Family office services in Geneva | Ridger",
+      "description": "A family office's services in Geneva: consolidated reporting, investment oversight, coordination, governance, tax administration and a digital vault.",
+      "keywords": "family office services geneva, consolidated reporting, investment oversight, family office coordination"
     },
-    "/services/family-office": {
-      "title": "Administrative Family Office in Switzerland | Ridger",
-      "description": "Administrative family office in Switzerland: coordination, governance, reporting and family administration without discretionary asset management.",
-      "keywords": "family office switzerland, family office romandy, multi family office switzerland, family governance switzerland, family office geneva"
+    "/services/consolidated-reporting": {
+      "title": "Independent consolidated reporting | Ridger",
+      "description": "Independent consolidated reporting in Geneva: banks, custodians, real estate and private equity in one view, with transparency on performance and fees.",
+      "keywords": "consolidated reporting, wealth consolidation, independent reporting, TWR performance, fee transparency"
     },
-    "/services/accounting": {
-      "title": "Accounting in Switzerland for Geneva SMEs | Ridger",
-      "description": "Accounting services in Switzerland from our Geneva team: bookkeeping, VAT, closings, reporting, dashboards and coordination with finance teams for Swiss SMEs.",
-      "keywords": "accounting geneva, fiduciary geneva, SME accounting geneva, chartered accountant geneva, accounting lausanne"
+    "/services/investment-oversight": {
+      "title": "Investment oversight | Ridger",
+      "description": "Investment oversight in Geneva: monitoring of mandates and managers, performance, fee and risk reviews, and family investment committee preparation.",
+      "keywords": "investment oversight, manager monitoring, performance review, family investment committee"
     },
-    "/services/corporate": {
-      "title": "Corporate administration in geneva | Ridger",
-      "description": "Corporate administration and company secretarial in geneva. We support you at every stage, from incorporation to daily management and statutory changes.",
-      "keywords": "corporate administration switzerland, company secretarial switzerland, corporate governance switzerland, company administration geneva, commercial register switzerland"
+    "/services/family-office-coordination": {
+      "title": "Family office coordination | Ridger",
+      "description": "Family office coordination in Geneva: a single point of contact for your family's bankers, lawyers, notaries, tax advisors and insurers.",
+      "keywords": "family office coordination, single point of contact, family office geneva, advisor coordination"
     },
-    "/services/domiciliation": {
-      "title": "Business Domiciliation in Geneva | Ridger",
-      "description": "Business domiciliation in Geneva: registered office address, mail handling, administrative coordination and substance obligations for Swiss companies.",
-      "keywords": "domiciliation geneva, company domiciliation switzerland, registered address geneva, business address lausanne, domiciliation switzerland",
-      "topics": [
-        "domiciliation geneva",
-        "registered office address",
-        "company domiciliation switzerland"
-      ]
+    "/services/governance-succession": {
+      "title": "Governance and succession | Ridger",
+      "description": "Family governance and succession in Geneva: governance charters, next-generation education and succession coordination under Swiss law.",
+      "keywords": "family governance, family charter, swiss succession planning, family council"
     },
-    "/services/odoo": {
-      "title": "Odoo Accounting Firm in Geneva | Ridger",
-      "description": "Geneva accounting firm working directly in your Odoo ERP: Swiss bookkeeping, VAT, QR-bill, payroll, data migration and outsourced accounting in Odoo.",
-      "keywords": "odoo geneva, odoo implementation switzerland, odoo integrator geneva, odoo for swiss SMEs, odoo accounting switzerland"
+    "/services/tax-administration": {
+      "title": "Tax and administration | Ridger",
+      "description": "Coordination of Swiss tax compliance and family administration: filings, payments, cash flow and document management.",
+      "keywords": "swiss tax compliance, family administration, document management, tax coordination geneva"
     },
-    "/services/outsourcing": {
-      "title": "Back-office outsourcing in Romandy | Ridger",
-      "description": "Back-office outsourcing in french-speaking switzerland. We handle your accounting, payroll and administrative management so you can focus on business growth.",
-      "keywords": "back office outsourcing switzerland, accounting outsourcing switzerland, administrative outsourcing, outsourcing geneva, back office switzerland"
-    },
-    "/services/mergers-acquisitions": {
-      "title": "M&a advisory for swiss deals | Ridger",
-      "description": "M&A advisory for swiss deals. Ridger delivers hands-on support across French and German-speaking Switzerland, shaping deal strategy and due diligence.",
-      "keywords": "m&a switzerland, m&a advisory switzerland, company valuation switzerland, due diligence switzerland, SME succession switzerland"
-    },
-    "/services/payroll": {
-      "title": "Swiss Payroll Outsourcing & ANOBAG | Ridger",
-      "description": "Outsource your Swiss payroll: payslips, salary certificates, social insurance, ANOBAG and Swissdec reporting — managed by a Geneva accounting firm.",
-      "keywords": "payroll switzerland, payroll geneva, salary payslip switzerland, payroll management geneva, social contributions switzerland"
-    },
-    "/services/taxes": {
-      "title": "Tax Advice in Geneva for Companies | Ridger",
-      "description": "Tax advice and tax returns in Geneva. Our tax specialists support you in all your tax obligations, from declarations to strategic planning.",
-      "keywords": "tax advice geneva, tax advisor geneva, tax return geneva, swiss tax advisor, expat tax geneva, tax advisor geneva switzerland, tax filing geneva, corporate tax geneva, personal tax geneva, international tax geneva, tax planning services geneva, tax consultant geneva, tax optimization geneva"
-    },
-    "/services/incorporation": {
-      "title": "Company Incorporation in Geneva, SA or Sàrl | Ridger",
-      "description": "Company incorporation in Geneva for SA or Sàrl: structure choice, documents, capital deposit, commercial register, VAT and administrative follow-up.",
-      "keywords": "company incorporation geneva, sàrl formation switzerland, sa company formation, open company geneva, company formation switzerland",
-      "topics": [
-        "start a company geneva",
-        "incorporate sarl switzerland",
-        "register company geneva"
-      ]
-    },
-    "/services/immigration": {
-      "title": "Immigration and work permits in geneva | Ridger",
-      "description": "Immigration and work permits in geneva. We help entrepreneurs, executives and families secure their move to Switzerland with a pragmatic, compliant approach.",
-      "keywords": "swiss immigration, work permit geneva, residence permit switzerland, anobag switzerland, immigration geneva"
+    "/services/digital-vault": {
+      "title": "Swiss digital vault | Ridger",
+      "description": "Encrypted digital vault for your family documents, hosted in Switzerland, with controlled sharing and digital-first workflows.",
+      "keywords": "digital vault, swiss data residency, secure sharing, family records"
     },
     "/legal/privacy": {
-      "title": "Privacy policy - Ridger",
-      "description": "Ridger's privacy policy. Learn how we protect and handle your personal data in compliance with Swiss and EU regulations.",
-      "keywords": "privacy policy, data protection, gdpr compliance, personal data"
+      "title": "Privacy policy | Ridger",
+      "description": "Privacy policy of Ridger, a brand of Ark Fiduciaire SA. How we protect and process your data under Swiss and European requirements.",
+      "keywords": "privacy policy, data protection, personal data, ark fiduciaire"
     },
     "/legal/terms": {
-      "title": "Terms of service - Ridger",
-      "description": "Terms of service and conditions for using Ridger's website and services. Legal terms and conditions.",
-      "keywords": "terms of service, legal terms, conditions of use, service agreement"
+      "title": "Terms of service | Ridger",
+      "description": "Terms of service for the website and services of Ridger, a brand of Ark Fiduciaire SA, Geneva.",
+      "keywords": "terms of service, legal terms, terms of use, ark fiduciaire"
     },
     "/legal/cookies": {
-      "title": "Cookie policy - Ridger",
-      "description": "Information about how Ridger uses cookies and similar technologies on our website for improved user experience.",
-      "keywords": "cookie policy, website cookies, privacy settings, user experience"
+      "title": "Cookie policy | Ridger",
+      "description": "Information on the use of cookies and similar technologies by Ridger on its website.",
+      "keywords": "cookie policy, website cookies, privacy settings"
     },
     "/ai-profile": {
-      "title": "Ridger Profile for AI Assistants",
-      "description": "Factual profile of Ridger: identity, Geneva address, services, regions served, affiliations and family office limitations.",
-      "keywords": "Ridger, Geneva fiduciary profile, AI assistants, accounting Geneva, tax Geneva"
+      "title": "Ridger profile for AI assistants",
+      "description": "Factual profile of Ridger: identity, Geneva address, family office services, regions served, affiliations and limits (no asset management).",
+      "keywords": "Ridger, family office geneva, AI assistants, consolidated reporting, multi-family office"
     }
   },
   "dynamic": {
     "articles": {
-      "titleTemplate": "{articleTitle} - Ridger (Romandy)",
-      "descriptionTemplate": "{articleDescription} | Insights rooted in Romandy with an international outlook.",
-      "keywords": "romandy, geneva, lausanne, tax regulations, accounting insights, fiduciary expertise"
+      "titleTemplate": "{articleTitle} - Ridger",
+      "descriptionTemplate": "{articleDescription} | Perspectives from a Swiss family office.",
+      "keywords": "swiss family office, geneva, consolidated reporting, family governance, succession"
     }
   }
 }

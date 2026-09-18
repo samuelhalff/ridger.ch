@@ -149,7 +149,10 @@ export default async function ContactPage(
       companyName:
         (t("Form.CompanyName") as string) || "Company Name (Optional)",
       phone: (t("Form.Phone") as string) || "Phone Number (Optional)",
-      subject: locale === "fr" ? "Sujet" : "Subject",
+      aumBand: (t("Form.AumBand") as string) || "Patrimoine sous surveillance",
+      horizon: (t("Form.Horizon") as string) || "Horizon",
+      serviceInterest:
+        (t("Form.ServiceInterest") as string) || "Service d'intérêt",
       email: (t("Form.Email") as string) || "Email",
       message: (t("Form.Message") as string) || "Message",
       consent: (t("Form.Consent") as string) || "I consent to being contacted",
@@ -161,7 +164,9 @@ export default async function ContactPage(
       companyName:
         (t("Form.Placeholders.CompanyName") as string) || "Company name",
       phone: (t("Form.Placeholders.Phone") as string) || "Phone number",
-      subject: locale === "fr" ? "Choisir un sujet" : "Choose a subject",
+      select:
+        (t("Form.Placeholders.Select") as string) ||
+        (locale === "fr" ? "Sélectionner" : "Select"),
       email: (t("Form.Placeholders.Email") as string) || "email@example.com",
       message: (t("Form.Placeholders.Message") as string) || "How can we help?",
     },
@@ -177,10 +182,18 @@ export default async function ContactPage(
         (t("Form.Success") as string) || "Thanks! We'll get back to you soon.",
       error: (t("Form.Error") as string) || "Something went wrong.",
     },
-    subjects: services.map((service) => ({
+    serviceInterests: services.map((service) => ({
       label: tServices(service.titleKey) as string,
       value: service.href.replace("/services/", ""),
     })),
+    aumBands: (t("Form.AumBands") as unknown as Array<{
+      label: string;
+      value: string;
+    }>) || [],
+    horizons: (t("Form.Horizons") as unknown as Array<{
+      label: string;
+      value: string;
+    }>) || [],
   } as const;
   return (
     <div className="mx-auto w-full max-w-[1240px] px-5 py-8 sm:px-8 sm:py-10">
@@ -231,8 +244,9 @@ export default async function ContactPage(
             showSubtitle={false}
             strings={{
               ...strings,
-              title: locale === "fr" ? "Écrivez-nous" : strings.orContactUs,
+              title: locale === "fr" ? "Entretien confidentiel" : strings.orContactUs,
             }}
+            locale={locale}
             redirectPath={`${localePrefix}/`}
             cardClassName="rounded-[24px] bg-card shadow-sm"
           />

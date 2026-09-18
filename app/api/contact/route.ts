@@ -21,6 +21,9 @@ const contactSchema = z.object({
   companyName: z.string().trim().max(160).optional().or(z.literal("")),
   phone: z.string().trim().max(80).optional().or(z.literal("")),
   subject: z.string().trim().max(160).optional().or(z.literal("")),
+  aumBand: z.string().trim().max(80).optional().or(z.literal("")),
+  horizon: z.string().trim().max(80).optional().or(z.literal("")),
+  serviceInterest: z.string().trim().max(120).optional().or(z.literal("")),
   pageUrl: z.string().trim().max(600).optional().or(z.literal("")),
   referrer: z.string().trim().max(600).optional().or(z.literal("")),
   gaClientId: z

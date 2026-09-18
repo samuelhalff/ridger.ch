@@ -1,48 +1,28 @@
 {
-    "Accounting": {
-        "Title": "Comptabilité",
-        "Description": "Services comptables complets à Genève et Lausanne, incluant la tenue de livres, les états financiers et les rapports de gestion. Nous appliquons les normes Swiss GAAP FER et IFRS, utilisons des outils IA personnalisés pour automatiser les rapprochements et garantir la précision. Idéal pour PME suisses et entreprises internationales."
+    "ConsolidatedReporting": {
+        "Title": "Reporting consolidé",
+        "Description": "Une vue unique de l'ensemble de votre patrimoine — banques, dépositaires, immobilier, private equity, actifs de collection. Indépendant de toute banque, avec transparence sur la performance et les frais."
     },
-    "TaxesCompanyPersonal": {
-        "Title": "Fiscalité",
-        "Description": "Expertise fiscale complète en Suisse romande pour entreprises et particuliers. Gestion de la TVA suisse, impôt fédéral direct, impôts cantonaux, conventions de double imposition. Optimisation fiscale légale, déclarations fiscales précises et accompagnement lors de contrôles fiscaux. Services pour sociétés et particuliers."
+    "InvestmentOversight": {
+        "Title": "Surveillance des investissements",
+        "Description": "Suivi des mandats et des gérants, revues consolidées de performance, de frais et de risque, cadrage par indices de référence et préparation du comité d'investissement familial. Surveillance, non gestion."
     },
-    "PayrollHR": {
-        "Title": "Paie et RH",
-        "Description": "Traitement de la paie en Suisse conforme aux réglementations AVS/AI/APG/AC. Calcul des salaires, génération de bulletins de paie, gestion des assurances sociales, déclarations fiscales. Administration RH complète incluant contrats de travail, gestion des avantages sociaux et conformité avec la loi sur le travail suisse."
+    "FamilyOfficeCoordination": {
+        "Title": "Coordination family office",
+        "Description": "Un interlocuteur unique qui coordonne banquiers, avocats, notaires, conseillers fiscaux et assureurs, et intègre l'écosystème existant de la famille."
     },
-    "OutsourcingServices": {
-        "Title": "Services d'externalisation",
-        "Description": "Externalisation comptable et administrative pour entreprises en Suisse. Prise en charge complète des fonctions back-office : comptabilité, fiscalité, paie, administration RH. Libérez votre équipe pour se concentrer sur le cœur de métier pendant que nous assurons la conformité et l'efficacité opérationnelle."
+    "GovernanceSuccession": {
+        "Title": "Gouvernance et succession",
+        "Description": "Chartes de gouvernance familiale, éducation de la nouvelle génération, coordination de la planification successorale en droit civil suisse et conseils de famille."
     },
-    "MAServices": {
-        "Title": "Fusions & acquisitions",
-        "Description": "Conseil M&A pour PME suisses : mandats buy-side et sell-side, valorisations indépendantes, coordination de due diligence et préparation post-intégration."
+    "TaxAdministration": {
+        "Title": "Fiscalité et administration",
+        "Description": "Coordination de la conformité fiscale suisse pour les membres de la famille et les structures de détention, supervision administrative, gestion des paiements et de la trésorerie, et gestion documentaire."
+    },
+    "DigitalVault": {
+        "Title": "Coffre-fort numérique",
+        "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
     },
     "ShowMore": "Découvrir",
-    "ShowLess": "Voir moins",
-    "CorporateServices": {
-        "Title": "Services corporatifs",
-        "Description": "Services de gouvernance d'entreprise en Suisse : constitution de sociétés, modifications statutaires, assemblées générales, secrétariat juridique. Gestion des registres légaux, conformité droit suisse des sociétés, support aux administrateurs. Accompagnement pour PME et groupes internationaux."
-    },
-    "Incorporation": {
-        "Title": "Constitution d'entreprise",
-        "Description": "Accompagnement complet pour la création d'entreprise en Suisse. Choix de la forme juridique optimale, rédaction des statuts, immatriculation au registre du commerce, obtention des autorisations nécessaires. Support juridique et administratif pour entrepreneurs suisses et étrangers."
-    },
-    "ImmigrationServices": {
-        "Title": "Immigration & permis",
-        "Description": "Accompagnement pour permis de séjour et de travail en Suisse, dossiers ANobAG, coordination avec les autorités et intégration administrative à Genève et en Suisse romande."
-    },
-    "DomiciliationServices": {
-        "Title": "Services de domiciliation",
-        "Description": "Adresse commerciale prestigieuse à Genève ou Lausanne pour votre entreprise suisse. Gestion du courrier, réception d'appels téléphoniques, services administratifs complets. Solution économique pour PME et start-ups qui n'ont pas besoin de bureaux physiques tout en maintenant une présence professionnelle."
-    },
-    "OdooImplementation": {
-        "Title": "Implémentation Odoo",
-        "Description": "Partenaire officiel Odoo pour la Suisse romande. Implémentation complète d'ERP Odoo adapté aux normes comptables suisses. Configuration modules comptabilité, ventes, achats, inventaire. Formation utilisateurs, support technique continu, intégrations personnalisées pour optimiser vos processus d'affaires."
-    },
-    "FamilyOffice": {
-        "Title": "Family office",
-        "Description": "Services de family office axés sur la gouvernance et la coordination administrative pour familles à fort patrimoine. Reporting, conformité, paiements, succession, sans gestion d'actifs."
-    }
+    "ShowLess": "Voir moins"
 }

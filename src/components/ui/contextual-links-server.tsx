@@ -9,13 +9,9 @@ interface LinkMapping {
 }
 
 const serviceLinkMappings: LinkMapping[] = [
-  { keywords: ["accounting", "comptabilité", "buchhaltung", "contabilidad", "contabilidade"], path: "/services/accounting" },
-  { keywords: ["tax", "taxation", "fiscalité", "steuern", "impuestos", "impostos", "fiscal"], path: "/services/taxes" },
-  { keywords: ["payroll", "paie", "lohn", "nómina", "salários"], path: "/services/payroll" },
-  { keywords: ["incorporation", "company formation", "création d'entreprise", "firmengründung", "creación de empresa", "criação de empresa"], path: "/services/incorporation" },
-  { keywords: ["corporate services", "services corporatifs", "unternehmensdienste", "servicios corporativos", "serviços corporativos"], path: "/services/corporate" },
-  { keywords: ["outsourcing", "externalisation", "auslagerung"], path: "/services/outsourcing" },
-  { keywords: ["domiciliation", "domizilierung", "domiciliación"], path: "/services/domiciliation" },
+  { keywords: ["tax", "taxation", "fiscalité", "steuern", "impuestos", "impostos", "fiscal"], path: "/services/tax-administration" },
+  { keywords: ["reporting", "consolidation", "consolidated reporting", "reporting consolidé"], path: "/services/consolidated-reporting" },
+  { keywords: ["governance", "gouvernance", "succession", "family governance"], path: "/services/governance-succession" },
 ];
 
 interface ContextualLinksProps {

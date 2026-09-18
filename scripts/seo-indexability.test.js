@@ -12,13 +12,12 @@ describe("canonical service URLs", () => {
   it("defines every localized French service slug in the shared path map", () => {
     const source = read("src/lib/paths.ts");
     const expectedMappings = [
-      ['"/services/accounting"', '"/services/comptabilite"'],
-      ['"/services/taxes"', '"/services/fiscalite"'],
-      ['"/services/payroll"', '"/services/paie"'],
-      ['"/services/outsourcing"', '"/services/externalisation"'],
-      ['"/services/mergers-acquisitions"', '"/services/fusions-acquisitions"'],
-      ['"/services/corporate"', '"/services/services-corporatifs"'],
-      ['"/services/incorporation"', '"/services/constitution-entreprise"'],
+      ['"/services/consolidated-reporting"', '"/services/reporting-consolide"'],
+      ['"/services/investment-oversight"', '"/services/surveillance-investissements"'],
+      ['"/services/family-office-coordination"', '"/services/coordination-family-office"'],
+      ['"/services/governance-succession"', '"/services/gouvernance-succession"'],
+      ['"/services/tax-administration"', '"/services/fiscalite-administration"'],
+      ['"/services/digital-vault"', '"/services/coffre-fort-numerique"'],
     ];
 
     for (const [base, localized] of expectedMappings) {
@@ -28,7 +27,7 @@ describe("canonical service URLs", () => {
 
   it("uses the shared localizer for Organization Offer and Service URLs", () => {
     const source = read("src/lib/structuredData.ts");
-    for (const pathName of ["accounting", "incorporation", "odoo"]) {
+    for (const pathName of ["consolidated-reporting", "family-office-coordination"]) {
       assert.match(
         source,
         new RegExp(`localizePath\\(\"/services/${pathName}\", locale as Locale\\)`),
@@ -54,25 +53,23 @@ describe("canonical service URLs", () => {
 });
 
 describe("redirect canonicalization", () => {
-  it("sends every legacy French service slug directly to a slash canonical", async () => {
+  it("rewrites every localized French service slug to its canonical English route", async () => {
     const config = require(path.join(ROOT, "next.config.js"));
-    const redirects = await config.redirects();
-    const legacy = redirects.filter((rule) =>
-      /^\/fr\/services\/(accounting|taxes|payroll|outsourcing|mergers-acquisitions|corporate|incorporation)\/?$/.test(rule.source),
-    );
-
-    assert.equal(legacy.length, 14);
-    for (const rule of legacy) {
-      assert.equal(rule.permanent, true);
-      assert.ok(rule.destination.endsWith("/"), `${rule.source} has a noncanonical target`);
-      assert.equal(
-        redirects.some((candidate) =>
-          candidate.source === rule.destination ||
-          candidate.source === rule.destination.replace(/\/$/, ""),
-        ),
-        false,
-        `${rule.source} creates a redirect chain through ${rule.destination}`,
+    const rewrites = await config.rewrites();
+    const localizedFrSlugs = [
+      "reporting-consolide",
+      "surveillance-investissements",
+      "coordination-family-office",
+      "gouvernance-succession",
+      "fiscalite-administration",
+      "coffre-fort-numerique",
+    ];
+    for (const slug of localizedFrSlugs) {
+      const withSlash = rewrites.find(
+        (rule) => rule.source === `/fr/services/${slug}/`,
       );
+      assert.ok(withSlash, `missing rewrite for /fr/services/${slug}/`);
+      assert.match(withSlash.destination, /^\/fr\/services\/[a-z-]+\/$/);
     }
   });
 

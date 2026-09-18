@@ -402,53 +402,71 @@ const baseConfig = {
     ];
   },
   async rewrites() {
-    // Map localized French slugs to existing English-slug routes for rendering
-    return [
-      {
-        source: "/fr/services/comptabilite",
-        destination: "/fr/services/accounting",
+    // Map localized slugs (per locale) to English-slug routes for rendering.
+    const serviceSlugMap = {
+      fr: {
+        "reporting-consolide": "consolidated-reporting",
+        "surveillance-investissements": "investment-oversight",
+        "coordination-family-office": "family-office-coordination",
+        "gouvernance-succession": "governance-succession",
+        "fiscalite-administration": "tax-administration",
+        "coffre-fort-numerique": "digital-vault",
       },
-      {
-        source: "/fr/services/comptabilite/",
-        destination: "/fr/services/accounting/",
+      de: {
+        "konsolidiertes-reporting": "consolidated-reporting",
+        "anlageueberwachung": "investment-oversight",
+        "family-office-koordination": "family-office-coordination",
+        "governance-nachfolge": "governance-succession",
+        "steuerverwaltung": "tax-administration",
+        "digitaler-tresor": "digital-vault",
       },
-      { source: "/fr/services/fiscalite", destination: "/fr/services/taxes" },
-      { source: "/fr/services/fiscalite/", destination: "/fr/services/taxes/" },
-      { source: "/fr/services/paie", destination: "/fr/services/payroll" },
-      { source: "/fr/services/paie/", destination: "/fr/services/payroll/" },
-      {
-        source: "/fr/services/externalisation",
-        destination: "/fr/services/outsourcing",
+      es: {
+        "reporting-consolidado": "consolidated-reporting",
+        "supervision-inversiones": "investment-oversight",
+        "coordinacion-family-office": "family-office-coordination",
+        "gobernanza-sucesion": "governance-succession",
+        "administracion-fiscal": "tax-administration",
+        "caja-fuerte-digital": "digital-vault",
       },
-      {
-        source: "/fr/services/externalisation/",
-        destination: "/fr/services/outsourcing/",
+      pt: {
+        "reporting-consolidado": "consolidated-reporting",
+        "supervisao-investimentos": "investment-oversight",
+        "coordenacao-family-office": "family-office-coordination",
+        "governanca-sucessao": "governance-succession",
+        "administracao-fiscal": "tax-administration",
+        "cofre-digital": "digital-vault",
       },
-      {
-        source: "/fr/services/fusions-acquisitions",
-        destination: "/fr/services/mergers-acquisitions",
-      },
-      {
-        source: "/fr/services/fusions-acquisitions/",
-        destination: "/fr/services/mergers-acquisitions/",
-      },
-      {
-        source: "/fr/services/services-corporatifs",
-        destination: "/fr/services/corporate",
-      },
-      {
-        source: "/fr/services/services-corporatifs/",
-        destination: "/fr/services/corporate/",
-      },
-      {
-        source: "/fr/services/constitution-entreprise",
-        destination: "/fr/services/incorporation",
-      },
-      {
-        source: "/fr/services/constitution-entreprise/",
-        destination: "/fr/services/incorporation/",
-      },
-    ];
+    };
+    const approachSlugMap = {
+      fr: "approche",
+      de: "ansatz",
+      es: "enfoque",
+      pt: "abordagem",
+    };
+    const rules = [];
+    for (const [locale, slugs] of Object.entries(serviceSlugMap)) {
+      for (const [localized, canonical] of Object.entries(slugs)) {
+        rules.push({
+          source: `/${locale}/services/${localized}`,
+          destination: `/${locale}/services/${canonical}`,
+        });
+        rules.push({
+          source: `/${locale}/services/${localized}/`,
+          destination: `/${locale}/services/${canonical}/`,
+        });
+      }
+    }
+    for (const [locale, localized] of Object.entries(approachSlugMap)) {
+      rules.push({
+        source: `/${locale}/${localized}`,
+        destination: `/${locale}/approach`,
+      });
+      rules.push({
+        source: `/${locale}/${localized}/`,
+        destination: `/${locale}/approach/`,
+      });
+    }
+    return rules;
   },
   async headers() {
     return [

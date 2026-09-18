@@ -154,6 +154,17 @@ const MobileMenu = ({
             />
             <div>
               <Link
+                href={`${localePrefix}/approach/`}
+                onClick={handleLinkClick}
+                prefetch={false}
+                locale={locale}
+                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent transition-colors font-bold"
+              >
+                <span>{navData.labels.approach}</span>
+              </Link>
+            </div>
+            <div>
+              <Link
                 href={`${localePrefix}/ressources/`}
                 onClick={handleLinkClick}
                 prefetch={false}

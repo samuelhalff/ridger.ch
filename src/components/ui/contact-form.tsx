@@ -35,6 +35,9 @@ const defaultValues = {
   companyName: "",
   phone: "",
   subject: "",
+  aumBand: "",
+  horizon: "",
+  serviceInterest: "",
 };
 
 // Build the schema from provided error messages (server-supplied)
@@ -50,6 +53,9 @@ const createFormSchema = (errors: {
     companyName: z.string().optional(),
     phone: z.string().optional(),
     subject: z.string().optional(),
+    aumBand: z.string().optional(),
+    horizon: z.string().optional(),
+    serviceInterest: z.string().optional(),
     message: z
       .string()
       .min(1, { message: errors.required })
@@ -70,6 +76,9 @@ interface ContactFormProps {
       companyName: string;
       phone: string;
       subject?: string;
+      aumBand?: string;
+      horizon?: string;
+      serviceInterest?: string;
       email: string;
       message: string;
       consent: string;
@@ -81,6 +90,7 @@ interface ContactFormProps {
       companyName: string;
       phone: string;
       subject?: string;
+      select?: string;
       email: string;
       message: string;
     };
@@ -95,7 +105,11 @@ interface ContactFormProps {
       error: string;
     };
     subjects?: Array<{ label: string; value: string }>;
+    aumBands?: Array<{ label: string; value: string }>;
+    horizons?: Array<{ label: string; value: string }>;
+    serviceInterests?: Array<{ label: string; value: string }>;
   };
+  locale?: string;
   redirectPath?: string; // locale-aware redirect after success
   /** Additional classes merged into the inner Card element */
   cardClassName?: string;
@@ -105,12 +119,15 @@ const ContactForm: FC<ContactFormProps> = ({
   showTitle = true,
   showSubtitle = true,
   strings,
+  locale,
   redirectPath = "/",
   cardClassName,
 }) => {
   const router = useRouter();
   const [sending, setSending] = React.useState(false);
   const [subjectOpen, setSubjectOpen] = React.useState(false);
+  const [openSelect, setOpenSelect] = React.useState<string | null>(null);
+  const eventLocale = locale || "";
 
   // Memoize schema based on provided error strings
   const formSchema = useMemo(
@@ -128,7 +145,10 @@ const ContactForm: FC<ContactFormProps> = ({
   const handleFormFocus = () => {
     if (formStartTracked.current) return;
     formStartTracked.current = true;
-    trackEvent("contact_form_start", { form_id: "contact" });
+    trackEvent("consultation_form_start", {
+      form_id: "consultation",
+      locale: eventLocale,
+    });
   };
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
@@ -155,7 +175,15 @@ const ContactForm: FC<ContactFormProps> = ({
         errorType = res.status >= 500 ? "http_5xx" : "http_4xx";
         throw new Error("Network response was not ok");
       }
-      trackEvent("generate_lead", { method: "contact_form", form_id: "contact" });
+      const eventParams = {
+        form_id: "consultation",
+        aum_band: data.aumBand || "",
+        service_interest: data.serviceInterest || "",
+        horizon: data.horizon || "",
+        locale: eventLocale,
+      } as const;
+      trackEvent("consultation_form_submit_success", eventParams);
+      trackEvent("generate_lead", { method: "consultation_form", ...eventParams });
       form.reset(defaultValues);
       toast.success(strings.toasts.success, {
         action: { label: "Close", onClick: () => toast.dismiss },
@@ -164,7 +192,11 @@ const ContactForm: FC<ContactFormProps> = ({
         onDismiss: goHome,
       });
     } catch (e) {
-      trackEvent("form_submit_error", { form_id: "contact", error_type: errorType });
+      trackEvent("consultation_form_error", {
+        form_id: "consultation",
+        error_type: errorType,
+        locale: eventLocale,
+      });
       toast.error(strings.toasts.error || "Something went wrong.");
     } finally {
       setSending(false);
@@ -270,6 +302,114 @@ const ContactForm: FC<ContactFormProps> = ({
                     </FormItem>
                   )}
                 />
+                {(
+                  [
+                    {
+                      name: "serviceInterest" as const,
+                      label: strings.labels.serviceInterest,
+                      options: strings.serviceInterests,
+                      event: "service_interest_select",
+                      param: "service_interest",
+                    },
+                    {
+                      name: "aumBand" as const,
+                      label: strings.labels.aumBand,
+                      options: strings.aumBands,
+                      event: "aum_band_select",
+                      param: "aum_band",
+                    },
+                    {
+                      name: "horizon" as const,
+                      label: strings.labels.horizon,
+                      options: strings.horizons,
+                      event: "",
+                      param: "horizon",
+                    },
+                  ] as const
+                )
+                  .filter((sel) => sel.options?.length)
+                  .map((sel) => (
+                    <FormField
+                      key={sel.name}
+                      control={form.control}
+                      name={sel.name}
+                      render={({ field }) => {
+                        const options = sel.options || [];
+                        const selected = options.find(
+                          (o) => o.value === field.value
+                        );
+                        const isOpen = openSelect === sel.name;
+                        return (
+                          <FormItem>
+                            <FormLabel className="form-label">
+                              {sel.label}
+                            </FormLabel>
+                            <FormControl>
+                              <div className="relative">
+                                <button
+                                  type="button"
+                                  disabled={sending}
+                                  aria-haspopup="listbox"
+                                  aria-expanded={isOpen}
+                                  className="flex h-10 w-full items-center justify-between rounded-md bg-surface-warm px-3 py-2 text-left text-sm text-foreground shadow-[inset_0_0_0_1px_rgba(20,16,14,0.06),0_1px_2px_rgba(20,16,14,0.04)] transition-[background-color,box-shadow] hover:bg-surface-warm/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:bg-card dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_1px_2px_rgba(0,0,0,0.22)]"
+                                  onClick={() =>
+                                    setOpenSelect((cur) =>
+                                      cur === sel.name ? null : sel.name
+                                    )
+                                  }
+                                >
+                                  <span
+                                    className={cn(
+                                      "truncate",
+                                      !selected && "text-muted-foreground"
+                                    )}
+                                  >
+                                    {selected?.label ||
+                                      strings.placeholders.select ||
+                                      "—"}
+                                  </span>
+                                  <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground" />
+                                </button>
+                                {isOpen ? (
+                                  <div
+                                    role="listbox"
+                                    className="absolute z-30 mt-2 max-h-72 w-full overflow-auto rounded-xl bg-popover p-1 text-popover-foreground shadow-lg"
+                                  >
+                                    {options.map((option) => (
+                                      <button
+                                        key={option.value}
+                                        type="button"
+                                        role="option"
+                                        aria-selected={field.value === option.value}
+                                        className={cn(
+                                          "flex w-full rounded-lg px-3 py-2 text-left text-sm transition-colors hover:bg-muted",
+                                          field.value === option.value &&
+                                            "bg-brand-soft text-brand-hover dark:bg-brand/15 dark:text-brand"
+                                        )}
+                                        onClick={() => {
+                                          field.onChange(option.value);
+                                          setOpenSelect(null);
+                                          if (sel.event) {
+                                            trackEvent(sel.event, {
+                                              [sel.param]: option.value,
+                                              locale: eventLocale,
+                                            });
+                                          }
+                                        }}
+                                      >
+                                        {option.label}
+                                      </button>
+                                    ))}
+                                  </div>
+                                ) : null}
+                              </div>
+                            </FormControl>
+                            <FormMessage className="place-self-start text-primary-red m-1!" />
+                          </FormItem>
+                        );
+                      }}
+                    />
+                  ))}
                 {strings.subjects?.length ? (
                   <FormField
                     control={form.control}

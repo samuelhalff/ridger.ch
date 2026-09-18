@@ -1,9 +1,9 @@
 {
-    "Title": "Get in touch",
-    "Subtitle": "We usually reply within 24 hours.",
+    "Title": "Private consultation",
+    "Subtitle": "Write to us in confidence. We reply within one business day, with the strictest discretion.",
     "BookingButton": "Book a call",
     "BookingDescription": "Best for a planned discussion with our team.",
-    "OrContactUs": "Or send us a message.",
+    "OrContactUs": "Or write to us.",
     "CallLabel": "Call us",
     "CallDescription": "Speak directly with our team.",
     "WhatsApp": {
@@ -17,17 +17,33 @@
         "CompanyName": "Company name (optional)",
         "Phone": "Phone number (optional)",
         "Message": "Message",
+        "AumBand": "Wealth under oversight",
+        "Horizon": "Horizon",
+        "ServiceInterest": "Service of interest",
+        "AumBands": [
+            { "label": "Under CHF 5M", "value": "lt5m" },
+            { "label": "CHF 5–20M", "value": "5to20m" },
+            { "label": "CHF 20–50M", "value": "20to50m" },
+            { "label": "Over CHF 50M", "value": "gt50m" },
+            { "label": "Prefer not to say", "value": "undisclosed" }
+        ],
+        "Horizons": [
+            { "label": "Immediate", "value": "immediate" },
+            { "label": "3 to 6 months", "value": "3to6m" },
+            { "label": "Exploratory", "value": "exploratory" }
+        ],
         "Placeholders": {
             "Name": "Your name",
             "Email": "your@email.com",
             "CompanyName": "Company (optional)",
             "Phone": "+41...",
+            "Select": "Select",
             "Message": "Your message..."
         },
         "Consent": "I agree to be contacted about my request",
-        "Submit": "Send message",
+        "Submit": "Request a confidential consultation",
         "Sending": "Sending",
-        "Success": "Message sent successfully!",
+        "Success": "Message sent. We will reply within one business day.",
         "Error": "Failed to send message. Please try again."
     },
     "Contact": {

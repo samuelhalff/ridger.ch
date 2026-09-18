@@ -1,133 +1,100 @@
 {
   "default": {
-    "title": "Ridger | Fiduciária em Genebra e Lausana",
-    "description": "Fiduciária em Genebra e Lausana: contabilidade, fiscalidade, folha salarial, administração corporate e domiciliação para PMEs e grupos internacionais.",
-    "keywords": "fiduciária genebra, fiduciária lausana, suíça romanda, contabilidade, impostos, folha salarial, corporate, domiciliação",
+    "title": "Ridger | Family office à Genève",
+    "description": "Multi family office digital à Genève : reporting consolidé, surveillance des investissements, coordination et supervision administrative. Sans gestion d'actifs.",
+    "keywords": "family office suisse, family office genève, multi family office, reporting consolidé, gouvernance familiale",
+    "topics": [
+      "family office genève",
+      "multi family office suisse",
+      "reporting consolidé",
+      "surveillance des investissements",
+      "gouvernance familiale"
+    ],
     "author": "Ridger",
     "siteName": "Ridger"
   },
   "pages": {
     "/": {
-      "title": "Serviços fiduciários Genebra – impostos | Ridger",
-      "description": "Ridger em Genebra oferece serviços fiduciários, contabilidade, impostos, folha de pagamento e constituição de empresas para PMEs e empreendedores.",
-      "keywords": "fiduciário genebra, contabilidade genebra, serviços fiscais genebra, constituição empresa"
+      "title": "Family office à Genève | Ridger",
+      "description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs.",
+      "keywords": "family office genève, multi family office suisse, reporting consolidé, coordination family office"
     },
-    "/about": {
-      "title": "Ridger Genebra – seu parceiro fiduciário local",
-      "description": "Ridger é uma empresa fiduciária confiável em Genebra, oferecendo serviços de contabilidade, impostos e negócios adaptados a PMEs e indivíduos.",
-      "keywords": "sobre Ridger, fiduciário genebra, contadores genebra, especialistas fiduciários"
+    "/approach": {
+      "title": "Notre approche | Ridger",
+      "description": "Indépendance, transparence sur les frais et discrétion suisse. Découvrez la méthode d'un family office qui coordonne, consolide et supervise vos intérêts.",
+      "keywords": "family office indépendant genève, approche family office, transparence frais, discrétion suisse"
     },
     "/contact": {
-      "title": "Contato Ridger Genebra | serviços fiduciários",
-      "description": "Entre em contato com Ridger em Genebra para serviços de contabilidade, impostos, folha de pagamento e constituição de empresas.",
-      "keywords": "contato fiduciário genebra, serviços contábeis genebra, contato fiduciário"
-    },
-    "/team": {
-      "title": "A Nossa Equipa – Especialistas fiduciários | Ridger",
-      "description": "Uma equipa experiente em Genebra e Lausana ao serviço das empresas na Suíça Romanda e internacionalmente.",
-      "keywords": "equipa fiduciária genebra, equipa fiduciária lausana, suíça romanda"
-    },
-    "/partners": {
-      "title": "Parceiros - Ridger",
-      "description": "Descubra as nossas parcerias e rede de confiança na Suíça Romanda e internacionalmente.",
-      "keywords": "parceiros Ridger, suíça romanda, genebra, lausana"
+      "title": "Entretien confidentiel | Ridger",
+      "description": "Demandez un entretien confidentiel avec Ridger, family office à Genève. Réponse sous un jour ouvré, discrétion stricte.",
+      "keywords": "contact family office genève, entretien confidentiel, multi family office suisse"
     },
     "/ressources": {
-      "title": "Recursos fiduciários – Suíça Romanda | Ridger",
-      "description": "Guias e artigos sobre contabilidade, fiscalidade e folha salarial na Suíça Romanda com perspetivas práticas.",
-      "keywords": "recursos fiduciários, suíça romanda, guias fiscais, genebra, lausana"
-    },
-    "/agent": {
-      "title": "Orçamento instantâneo – Assistente IA | Ridger",
-      "description": "Orçamento instantâneo para contabilidade, impostos e folha de pagamento em Genebra. Assistente IA com estimativas imediatas para o seu negócio.",
-      "keywords": "orçamento instantâneo fiduciário, assistente ia cotação, orçamento contabilidade genebra, estimativa impostos suíça, cotação folha pagamento lausana, custos serviços empresariais"
+      "title": "Ressources | Ridger",
+      "description": "Guides et analyses sur le reporting consolidé, la surveillance des investissements, la gouvernance et la succession pour familles en Suisse.",
+      "keywords": "ressources family office, reporting consolidé, gouvernance familiale, succession suisse"
     },
     "/services": {
-      "title": "Serviços fiduciários em Genebra – Ridger",
-      "description": "Explore nossos serviços fiduciários em Genebra: contabilidade, impostos, folha de pagamento, domiciliação e constituição de empresas.",
-      "keywords": "serviços fiduciários genebra, serviços contábeis, consultoria fiscal genebra"
+      "title": "Services family office à Genève | Ridger",
+      "description": "Les services d'un family office à Genève : reporting consolidé, surveillance des investissements, coordination, gouvernance, fiscalité et coffre-fort numérique.",
+      "keywords": "services family office genève, reporting consolidé, surveillance investissements, coordination family office"
     },
-    "/services/family-office": {
-      "title": "Family office administrativo na Suíça | Ridger",
-      "description": "Family office administrativo na Suíça. A Ridger apoia famílias e empreendedores com coordenação de governança, fiscalidade e assuntos jurídicos.",
-      "keywords": "family office suíça, family office suíça francófona, multi family office suíça, governança familiar suíça, family office genebra"
+    "/services/consolidated-reporting": {
+      "title": "Reporting consolidé indépendant | Ridger",
+      "description": "Reporting consolidé indépendant à Genève : banques, dépositaires, immobilier et private equity dans une vue unique, avec transparence sur performance et frais.",
+      "keywords": "reporting consolidé, consolidation patrimoniale, reporting indépendant, performance TWR, transparence des frais"
     },
-    "/services/accounting": {
-      "title": "Contabilidade Genebra e Lausana para PMEs | Ridger",
-      "description": "Contabilidade em Genebra e Lausana para PMEs. Soluções personalizadas para todas as suas necessidades financeiras e contábeis.",
-      "keywords": "contabilidade genebra, fiduciária genebra, contabilidade PMEs genebra, contabilidade lausana, contabilidade suíça"
+    "/services/investment-oversight": {
+      "title": "Surveillance des investissements | Ridger",
+      "description": "Surveillance des investissements à Genève : suivi des mandats et gérants, revues de performance, frais et risque, préparation du comité d'investissement familial.",
+      "keywords": "surveillance investissements, contrôle des gérants, revue de performance, comité d'investissement familial"
     },
-    "/services/corporate": {
-      "title": "Administração corporate em Genebra | Ridger",
-      "description": "Administração corporate e secretaria societária em Genebra. Apoio em todas as fases da vida da sua empresa, da incorporação à gestão diária.",
-      "keywords": "administração corporate suíça, secretaria societária suíça, governança corporativa suíça, administração societária genebra, registo comercial suíça"
+    "/services/family-office-coordination": {
+      "title": "Coordination family office | Ridger",
+      "description": "Coordination family office à Genève : un interlocuteur unique pour banquiers, avocats, notaires, conseillers fiscaux et assureurs de votre famille.",
+      "keywords": "coordination family office, interlocuteur unique, family office genève, coordination des conseillers"
     },
-    "/services/domiciliation": {
-      "title": "Domiciliação de empresas Genebra e Lausana | Ridger",
-      "description": "Domiciliação em Genebra e Lausana. Endereço de escritório registrado, gestão de correspondência e suporte administrativo para a sua empresa.",
-      "keywords": "domiciliação genebra, domiciliação lausana, endereço social genebra, domiciliação suíça, domiciliação empresa genebra"
+    "/services/governance-succession": {
+      "title": "Gouvernance et succession | Ridger",
+      "description": "Gouvernance et succession familiales à Genève : chartes de gouvernance, éducation de la nouvelle génération et coordination successorale en droit suisse.",
+      "keywords": "gouvernance familiale, charte familiale, planification successorale suisse, conseil de famille"
     },
-    "/services/odoo": {
-      "title": "Fiduciária com Odoo em Genebra | Ridger",
-      "description": "Fiduciária de Genebra que trabalha diretamente no seu ERP Odoo: contabilidade suíça, IVA, salários, migração de dados e contabilidade externalizada no Odoo.",
-      "keywords": "odoo genebra, implementação odoo suíça, integrador odoo genebra, odoo para PMEs suíças, odoo contabilidade suíça"
+    "/services/tax-administration": {
+      "title": "Fiscalité et administration | Ridger",
+      "description": "Coordination de la conformité fiscale suisse et de l'administration familiale : déclarations, paiements, trésorerie et gestion documentaire.",
+      "keywords": "conformité fiscale suisse, administration familiale, gestion documentaire, coordination fiscale genève"
     },
-    "/services/outsourcing": {
-      "title": "Outsourcing de back-office na Suíça | Ridger",
-      "description": "Outsourcing de back-office na Suíça. Cuidamos da contabilidade, folha de pagamento e gestão administrativa para que se concentre no seu negócio.",
-      "keywords": "outsourcing back office suíça, outsourcing contábil suíça, outsourcing administrativo, outsourcing genebra, back office suíça"
-    },
-    "/services/mergers-acquisitions": {
-      "title": "Assessoria de m&a para operações na suíça | Ridger",
-      "description": "Assessoria de M&A na Suíça. A Ridger acompanha clientes durante todo o ciclo de uma transação, da estratégia à conclusão do negócio.",
-      "keywords": "m&a suíça, assessoria m&a suíça, avaliação empresa suíça, due diligence suíça, sucessão PMEs suíça"
-    },
-    "/services/payroll": {
-      "title": "Externalização de salários na Suíça | Ridger",
-      "description": "Externalize a sua folha salarial suíça: recibos de salário, certificados, seguros sociais, ANOBAG e Swissdec, geridos por uma fiduciária em Genebra.",
-      "keywords": "folha salarial suíça, payroll genebra, recibo de salário suíça, gestão salarial genebra, contribuições sociais suíça"
-    },
-    "/services/taxes": {
-      "title": "Consultoria fiscal e impostos Genebra | Ridger",
-      "description": "Consultoria fiscal e impostos em Genebra. Apoio em todas as obrigações fiscais, desde declarações até planejamento estratégico.",
-      "keywords": "consultoria fiscal genebra, declaração de impostos genebra, consultor fiscal suíça, iva suíça, impostos expatriados genebra"
-    },
-    "/services/incorporation": {
-      "title": "Constituição de empresas Genebra (Sàrl/SA) | Ridger",
-      "description": "Constituição de empresas em Genebra (Sàrl/SA). Ajudamos a abrir a sua empresa de forma rápida e correta, cuidando de todo o processo de registo.",
-      "keywords": "constituição empresa genebra, constituição sàrl suíça, constituição sa suíça, abrir empresa genebra, constituição empresa suíça"
-    },
-    "/services/immigration": {
-      "title": "Imigração e autorizações em Genebra | Ridger",
-      "description": "Imigração e autorizações de trabalho em genebra. Ajudamos empreendedores, executivos e famílias a instalar-se na Suíça com uma abordagem pragmática e conforme.",
-      "keywords": "imigração suíça, autorização de trabalho genebra, autorização de residência suíça, anobag suíça, imigração genebra"
+    "/services/digital-vault": {
+      "title": "Coffre-fort numérique suisse | Ridger",
+      "description": "Coffre-fort numérique chiffré pour vos documents familiaux, hébergé en Suisse, avec partage contrôlé et flux de travail numériques.",
+      "keywords": "coffre-fort numérique, données en suisse, partage sécurisé, dossiers familiaux"
     },
     "/legal/privacy": {
-      "title": "Política de privacidade - Ridger",
-      "description": "Política de privacidade da Ridger. Saiba como protegemos e tratamos os seus dados pessoais conforme as normas suíças e da UE.",
-      "keywords": "política de privacidade, proteção de dados, conformidade rgpd, dados pessoais"
+      "title": "Politique de confidentialité | Ridger",
+      "description": "Politique de confidentialité de Ridger, marque de Ark Fiduciaire SA. Comment nous protégeons et traitons vos données selon les exigences suisses et européennes.",
+      "keywords": "politique confidentialité, protection données, données personnelles, ark fiduciaire"
     },
     "/legal/terms": {
-      "title": "Termos de serviço - Ridger",
-      "description": "Termos de serviço e condições de uso do site e serviços da Ridger. Termos legais e condições.",
-      "keywords": "termos de serviço, termos legais, condições de uso, acordo de serviço"
+      "title": "Conditions de service | Ridger",
+      "description": "Conditions de service du site et des services de Ridger, marque de Ark Fiduciaire SA, Genève.",
+      "keywords": "conditions service, termes légaux, conditions utilisation, ark fiduciaire"
     },
     "/legal/cookies": {
-      "title": "Política de cookies - Ridger",
-      "description": "Informações sobre como a Ridger utiliza cookies e tecnologias semelhantes no nosso site para uma melhor experiência do utilizador.",
-      "keywords": "política de cookies, cookies do site, definições de privacidade, experiência do utilizador"
+      "title": "Politique des cookies | Ridger",
+      "description": "Informations sur l'utilisation des cookies et technologies similaires par Ridger sur son site web.",
+      "keywords": "politique cookies, cookies site web, paramètres confidentialité"
     },
     "/ai-profile": {
-      "title": "Perfil da Ridger para assistentes de IA",
-      "description": "Perfil factual da Ridger: identidade, endereço em Genebra, serviços, regiões atendidas, afiliações e limitações de family office.",
-      "keywords": "Ridger, Geneva fiduciary profile, AI assistants, accounting Geneva, tax Geneva"
+      "title": "Profil Ridger pour assistants IA",
+      "description": "Profil factuel de Ridger : identité, adresse à Genève, services family office, régions servies, affiliations et limites (aucune gestion d'actifs).",
+      "keywords": "Ridger, family office genève, assistants IA, reporting consolidé, multi family office"
     }
   },
   "dynamic": {
     "articles": {
-      "titleTemplate": "{articleTitle} - Ridger (Suíça Romanda)",
-      "descriptionTemplate": "{articleDescription} | Perspetivas da Suíça Romanda com alcance internacional.",
-      "keywords": "suíça romanda, genebra, lausana, regulamentações fiscais, perspetivas contabilísticas, experiência fiduciária"
+      "titleTemplate": "{articleTitle} - Ridger",
+      "descriptionTemplate": "{articleDescription} | Perspectives d'un family office suisse.",
+      "keywords": "family office suisse, genève, reporting consolidé, gouvernance familiale, succession"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "Hero": {
+    "Title": "Gouvernance et succession",
+    "Description": "Une gouvernance familiale claire, une transmission préparée. Nous accompagnons les chartes familiales, l'éducation de la nouvelle génération et la coordination de la planification successorale en droit suisse.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "La pérennité d'un patrimoine familial tient autant à sa gouvernance qu'à sa performance. Des règles partagées, comprises et respectées valent mieux que des décisions prises dans l'urgence.",
+    "Nous aidons votre famille à poser un cadre durable et à préparer la transmission, en coordination avec vos avocats et notaires, dans le respect du droit civil suisse."
+  ],
+  "Pillars": [
+    {
+      "Title": "Chartes de gouvernance",
+      "Body": "Rédaction et mise en vie de chartes familiales qui définissent principes, rôles et modes de décision."
+    },
+    {
+      "Title": "Nouvelle génération",
+      "Body": "Accompagnement et éducation de la génération suivante, pour une transmission progressive des responsabilités."
+    },
+    {
+      "Title": "Coordination successorale",
+      "Body": "Coordination de la planification successorale avec vos avocats et notaires, dans le cadre du droit civil suisse."
+    },
+    {
+      "Title": "Conseils de famille",
+      "Body": "Préparation et animation des conseils de famille, pour des échanges structurés et documentés."
+    }
+  ],
+  "Closing": {
+    "Title": "Une transmission sereine",
+    "Body": "Un cadre clair réduit les tensions et protège l'unité familiale. Nous en assurons la coordination, discrètement et dans la durée."
+  },
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

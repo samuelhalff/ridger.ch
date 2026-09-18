@@ -1,133 +1,100 @@
 {
   "default": {
-    "title": "Ridger | Treuhand in Genf und Lausanne",
-    "description": "Treuhandkanzlei in Genf und Lausanne: Buchhaltung, Steuern, Lohn, Corporate und Domizilierung für Schweizer KMU, Scale-ups und internationale Gruppen.",
-    "keywords": "treuhand genf, treuhand lausanne, westschweiz, romandie, buchhaltung, steuern, lohn, corporate, domizilierung",
+    "title": "Ridger | Family office à Genève",
+    "description": "Multi family office digital à Genève : reporting consolidé, surveillance des investissements, coordination et supervision administrative. Sans gestion d'actifs.",
+    "keywords": "family office suisse, family office genève, multi family office, reporting consolidé, gouvernance familiale",
+    "topics": [
+      "family office genève",
+      "multi family office suisse",
+      "reporting consolidé",
+      "surveillance des investissements",
+      "gouvernance familiale"
+    ],
     "author": "Ridger",
     "siteName": "Ridger"
   },
   "pages": {
     "/": {
-      "title": "Treuhand Genf – Buchhaltung & Steuern | Ridger",
-      "description": "Ridger in Genf bietet Treuhand-, Buchhaltungs-, Steuer-, Lohn- und Firmengründungsdienste für KMU und Unternehmer.",
-      "keywords": "treuhand genf, buchhaltung genf, steuerberatung genf, firmengründung"
+      "title": "Family office à Genève | Ridger",
+      "description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs.",
+      "keywords": "family office genève, multi family office suisse, reporting consolidé, coordination family office"
     },
-    "/about": {
-      "title": "Ridger Genf – ihr lokaler Treuhand-Partner",
-      "description": "Ridger ist eine Treuhandkanzlei in Genf mit massgeschneiderten Buchhaltungs-, Steuer- und Unternehmensservices für KMU und Einzelpersonen.",
-      "keywords": "über ridger, treuhand genf, genfer buchhalter, treuhandexperten"
+    "/approach": {
+      "title": "Notre approche | Ridger",
+      "description": "Indépendance, transparence sur les frais et discrétion suisse. Découvrez la méthode d'un family office qui coordonne, consolide et supervise vos intérêts.",
+      "keywords": "family office indépendant genève, approche family office, transparence frais, discrétion suisse"
     },
     "/contact": {
-      "title": "Kontakt Ridger Genf | Treuhanddienste",
-      "description": "Nehmen Sie Kontakt mit Ridger in Genf auf für Buchhaltung, Steuern, Lohn und Firmengründung.",
-      "keywords": "kontakt treuhand genf, genfer buchhaltungsdienste, treuhand kontakt"
-    },
-    "/team": {
-      "title": "Unser Team – Treuhand-Experten | Ridger",
-      "description": "Ein erfahrenes Team in Genf und Lausanne, das Unternehmen in der Romandie und international unterstützt.",
-      "keywords": "treuhand team genf, treuhand team lausanne, westschweiz"
-    },
-    "/partners": {
-      "title": "Partner - Ridger",
-      "description": "Entdecken Sie unsere Partnerschaften und unser Netzwerk in der Westschweiz und international.",
-      "keywords": "ridger partner, westschweiz, genf, lausanne"
+      "title": "Entretien confidentiel | Ridger",
+      "description": "Demandez un entretien confidentiel avec Ridger, family office à Genève. Réponse sous un jour ouvré, discrétion stricte.",
+      "keywords": "contact family office genève, entretien confidentiel, multi family office suisse"
     },
     "/ressources": {
-      "title": "Treuhand-Ressourcen – Romandie | Ridger",
-      "description": "Leitfäden und Artikel zu Buchhaltung, Steuern und Lohn in der Romandie mit praxisnahen Einblicken.",
-      "keywords": "treuhand ressourcen, westschweiz, steuerleitfäden, genf, lausanne"
-    },
-    "/agent": {
-      "title": "Sofortangebot – KI-Assistent | Ridger Genf",
-      "description": "Sofortangebot für Buchhaltung, Steuern, Lohn und Treuhandservices in Genf und Lausanne. Unser KI-Assistent liefert Schätzungen für Ihr Unternehmen.",
-      "keywords": "sofortangebot treuhand, ki offerte assistent, online buchhaltung angebot genf, steuer schätzung schweiz, lohn offerte lausanne, firmenservice kosten"
+      "title": "Ressources | Ridger",
+      "description": "Guides et analyses sur le reporting consolidé, la surveillance des investissements, la gouvernance et la succession pour familles en Suisse.",
+      "keywords": "ressources family office, reporting consolidé, gouvernance familiale, succession suisse"
     },
     "/services": {
-      "title": "Treuhanddienste in Genf – Ridger",
-      "description": "Entdecken Sie unsere Treuhanddienste in Genf: Buchhaltung, Steuern, Lohn, Domizilierung und Firmengründung.",
-      "keywords": "treuhanddienste genf, buchhaltungsdienste, steuerberatung genf"
+      "title": "Services family office à Genève | Ridger",
+      "description": "Les services d'un family office à Genève : reporting consolidé, surveillance des investissements, coordination, gouvernance, fiscalité et coffre-fort numérique.",
+      "keywords": "services family office genève, reporting consolidé, surveillance investissements, coordination family office"
     },
-    "/services/family-office": {
-      "title": "Family Office in der Romandie | Ridger",
-      "description": "Family-Office-Administration in der Romandie. Ridger unterstützt Familien und Unternehmer mit Governance, Steuern, Recht und Reporting.",
-      "keywords": "family office schweiz, family office romandie, multi family office schweiz, familien governance schweiz, family office genf"
+    "/services/consolidated-reporting": {
+      "title": "Reporting consolidé indépendant | Ridger",
+      "description": "Reporting consolidé indépendant à Genève : banques, dépositaires, immobilier et private equity dans une vue unique, avec transparence sur performance et frais.",
+      "keywords": "reporting consolidé, consolidation patrimoniale, reporting indépendant, performance TWR, transparence des frais"
     },
-    "/services/accounting": {
-      "title": "Buchhaltung in genf und lausanne für KMU | Ridger",
-      "description": "Buchhaltung in Genf und Lausanne für KMU. Umfassende und personalisierte Lösungen für Ihre finanzielle und buchhalterische Verwaltung.",
-      "keywords": "buchhaltung genf, treuhand genf, KMU buchhaltung genf, buchhalter genf, buchhaltung lausanne"
+    "/services/investment-oversight": {
+      "title": "Surveillance des investissements | Ridger",
+      "description": "Surveillance des investissements à Genève : suivi des mandats et gérants, revues de performance, frais et risque, préparation du comité d'investissement familial.",
+      "keywords": "surveillance investissements, contrôle des gérants, revue de performance, comité d'investissement familial"
     },
-    "/services/corporate": {
-      "title": "Corporate Administration Genf | Ridger",
-      "description": "Corporate Administration und Gesellschaftssekretariat in Genf. Unser Team begleitet Sie von der Gründung bis zur täglichen Verwaltung.",
-      "keywords": "corporate administration schweiz, gesellschaftssekretariat schweiz, corporate governance schweiz, gesellschaftsverwaltung genf, handelsregister schweiz"
+    "/services/family-office-coordination": {
+      "title": "Coordination family office | Ridger",
+      "description": "Coordination family office à Genève : un interlocuteur unique pour banquiers, avocats, notaires, conseillers fiscaux et assureurs de votre famille.",
+      "keywords": "coordination family office, interlocuteur unique, family office genève, coordination des conseillers"
     },
-    "/services/domiciliation": {
-      "title": "Domizilierung in Genf und Lausanne | Ridger",
-      "description": "Domizilierung in Genf und Lausanne. Geschäftsadresse für Ihr Unternehmen mit Postverwaltung und administrativer Unterstützung.",
-      "keywords": "domizilierung genf, domizilierung lausanne, geschäftsadresse genf, domizilierung schweiz, domizilierung firma genf"
+    "/services/governance-succession": {
+      "title": "Gouvernance et succession | Ridger",
+      "description": "Gouvernance et succession familiales à Genève : chartes de gouvernance, éducation de la nouvelle génération et coordination successorale en droit suisse.",
+      "keywords": "gouvernance familiale, charte familiale, planification successorale suisse, conseil de famille"
     },
-    "/services/odoo": {
-      "title": "Odoo-Treuhänder in Genf | Ridger",
-      "description": "Genfer Treuhandbüro, das direkt in Ihrem Odoo-ERP arbeitet: Schweizer Buchhaltung, MWST, QR-Rechnung, Löhne, Migration und ausgelagerte Buchhaltung in Odoo.",
-      "keywords": "odoo genf, odoo implementierung schweiz, odoo integrator genf, odoo für KMU schweiz, odoo buchhaltung schweiz"
+    "/services/tax-administration": {
+      "title": "Fiscalité et administration | Ridger",
+      "description": "Coordination de la conformité fiscale suisse et de l'administration familiale : déclarations, paiements, trésorerie et gestion documentaire.",
+      "keywords": "conformité fiscale suisse, administration familiale, gestion documentaire, coordination fiscale genève"
     },
-    "/services/outsourcing": {
-      "title": "Backoffice-outsourcing in der romandie | Ridger",
-      "description": "Backoffice-Outsourcing in der Romandie. Wir übernehmen Buchhaltung, Lohnabrechnung und Verwaltung, damit Sie sich auf Ihr Kerngeschäft konzentrieren.",
-      "keywords": "backoffice outsourcing schweiz, buchhaltung outsourcing schweiz, administratives outsourcing, outsourcing genf, backoffice schweiz"
-    },
-    "/services/mergers-acquisitions": {
-      "title": "M&a beratung für schweizer transaktionen | Ridger",
-      "description": "M&A-Beratung für Schweizer Transaktionen. Ridger begleitet Mandanten in der Romandie und Deutschschweiz durch den gesamten Transaktionsablauf.",
-      "keywords": "m&a schweiz, m&a beratung schweiz, unternehmensbewertung schweiz, due diligence schweiz, nachfolge KMU schweiz"
-    },
-    "/services/payroll": {
-      "title": "Lohn-Outsourcing Schweiz & ANOBAG | Ridger",
-      "description": "Lagern Sie Ihre Lohnbuchhaltung aus: Lohnabrechnungen, Lohnausweise, Sozialversicherungen, ANOBAG und Swissdec – betreut von einem Treuhandbüro in Genf.",
-      "keywords": "lohnbuchhaltung schweiz, payroll genf, lohnabrechnung schweiz, lohnadministration genf, sozialabgaben schweiz"
-    },
-    "/services/taxes": {
-      "title": "Steuerberatung & Steuererklärungen Genf | Ridger",
-      "description": "Steuerberatung in Genf. Unsere Experten unterstützen Sie bei Ihren Steuerverpflichtungen, von Erklärungen bis zur strategischen Planung.",
-      "keywords": "steuerberatung genf, steuererklärung genf, steuerberater schweiz, mwst schweiz, expat steuern genf"
-    },
-    "/services/incorporation": {
-      "title": "Firmengründung in genf (sàrl/sa) | Ridger",
-      "description": "Firmengründung in Genf (Sàrl/SA). Wir helfen Ihnen, Ihr Unternehmen schnell und korrekt zu gründen – von der Gesellschaftsform bis zur Eintragung.",
-      "keywords": "firmengründung genf, sàrl gründung schweiz, sa gründung schweiz, unternehmen gründen genf, firmengründung schweiz"
-    },
-    "/services/immigration": {
-      "title": "Immigration & Arbeitsbewilligungen Genf | Ridger",
-      "description": "Immigration und Arbeitsbewilligungen in Genf. Wir unterstützen Unternehmer, Führungskräfte und Familien bei der Ansiedlung in der Schweiz.",
-      "keywords": "schweiz immigration, arbeitsbewilligung genf, aufenthaltsbewilligung schweiz, anobag schweiz, immigration genf"
+    "/services/digital-vault": {
+      "title": "Coffre-fort numérique suisse | Ridger",
+      "description": "Coffre-fort numérique chiffré pour vos documents familiaux, hébergé en Suisse, avec partage contrôlé et flux de travail numériques.",
+      "keywords": "coffre-fort numérique, données en suisse, partage sécurisé, dossiers familiaux"
     },
     "/legal/privacy": {
-      "title": "Datenschutzrichtlinie - Ridger",
-      "description": "Unsere Datenschutzrichtlinie: Wie wir personenbezogene Daten gemäss Schweizer und EU-Vorschriften schützen und verarbeiten.",
-      "keywords": "datenschutzrichtlinie, datenschutz, dsgvo konformität, personenbezogene daten"
+      "title": "Politique de confidentialité | Ridger",
+      "description": "Politique de confidentialité de Ridger, marque de Ark Fiduciaire SA. Comment nous protégeons et traitons vos données selon les exigences suisses et européennes.",
+      "keywords": "politique confidentialité, protection données, données personnelles, ark fiduciaire"
     },
     "/legal/terms": {
-      "title": "Nutzungsbedingungen - Ridger",
-      "description": "Nutzungsbedingungen für die Nutzung der Website und Dienstleistungen von Ridger. Rechtliche Bedingungen und Nutzungsvereinbarungen.",
-      "keywords": "nutzungsbedingungen, rechtliche bedingungen, nutzungsvereinbarung, dienstleistungsvertrag"
+      "title": "Conditions de service | Ridger",
+      "description": "Conditions de service du site et des services de Ridger, marque de Ark Fiduciaire SA, Genève.",
+      "keywords": "conditions service, termes légaux, conditions utilisation, ark fiduciaire"
     },
     "/legal/cookies": {
-      "title": "Cookie-Richtlinie - Ridger",
-      "description": "Informationen darüber, wie Ridger Cookies und ähnliche Technologien auf unserer Website für eine verbesserte Benutzererfahrung verwendet.",
-      "keywords": "cookie richtlinie, website cookies, datenschutzeinstellungen, benutzererfahrung"
+      "title": "Politique des cookies | Ridger",
+      "description": "Informations sur l'utilisation des cookies et technologies similaires par Ridger sur son site web.",
+      "keywords": "politique cookies, cookies site web, paramètres confidentialité"
     },
     "/ai-profile": {
-      "title": "Ridger Profil für KI-Assistenten",
-      "description": "Faktenprofil der Ridger: Identität, Genfer Adresse, Dienstleistungen, bediente Regionen, Mitgliedschaften und Family-Office-Einschränkungen.",
-      "keywords": "Ridger, Geneva fiduciary profile, AI assistants, accounting Geneva, tax Geneva"
+      "title": "Profil Ridger pour assistants IA",
+      "description": "Profil factuel de Ridger : identité, adresse à Genève, services family office, régions servies, affiliations et limites (aucune gestion d'actifs).",
+      "keywords": "Ridger, family office genève, assistants IA, reporting consolidé, multi family office"
     }
   },
   "dynamic": {
     "articles": {
-      "titleTemplate": "{articleTitle} - Ridger (Westschweiz)",
-      "descriptionTemplate": "{articleDescription} | Einblicke aus der Westschweiz mit internationaler Perspektive.",
-      "keywords": "westschweiz, genf, lausanne, steuervorschriften, buchhaltungseinblicke, treuhandexpertise"
+      "titleTemplate": "{articleTitle} - Ridger",
+      "descriptionTemplate": "{articleDescription} | Perspectives d'un family office suisse.",
+      "keywords": "family office suisse, genève, reporting consolidé, gouvernance familiale, succession"
     }
   }
 }

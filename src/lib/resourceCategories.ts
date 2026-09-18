@@ -9,6 +9,10 @@ export type ResourceCategoryId =
   | "outsourcing"
   | "ma"
   | "family-office"
+  | "reporting"
+  | "gouvernance"
+  | "patrimoine"
+  | "fiscalite"
   | "incorporation"
   | "immigration"
   | "finance"
@@ -37,6 +41,10 @@ const categoryOrder: ResourceCategoryId[] = [
   "outsourcing",
   "ma",
   "family-office",
+  "reporting",
+  "gouvernance",
+  "patrimoine",
+  "fiscalite",
   "incorporation",
   "immigration",
   "finance",

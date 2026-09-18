@@ -1,15 +1,11 @@
 // Service navigation items for the NavMenu
 import {
-  AirplaneTilt,
-  Bank,
-  Briefcase,
-  Buildings,
-  CrownSimple,
-  FileText,
-  Gear,
-  Handshake,
-  MapPin,
-  Users,
+  ChartLineUp,
+  Eye,
+  UsersThree,
+  Scales,
+  Receipt,
+  Vault,
 } from "@phosphor-icons/react/dist/ssr";
 
 const iconProps = {
@@ -17,83 +13,49 @@ const iconProps = {
   size: 20,
   weight: "regular" as const,
 };
-const FileTextIcon = () => <FileText {...iconProps} />;
-const LandmarkIcon = () => <Bank {...iconProps} />;
-const UsersIcon = () => <Users {...iconProps} />;
-const BriefcaseIcon = () => <Briefcase {...iconProps} />;
-const Building2Icon = () => <Buildings {...iconProps} />;
-const PinIcon = () => <MapPin {...iconProps} />;
-const PlaneIcon = () => <AirplaneTilt {...iconProps} />;
-const SettingsIcon = () => <Gear {...iconProps} />;
-const CrownIcon = () => <CrownSimple {...iconProps} />;
-const HandshakeIcon = () => <Handshake {...iconProps} />;
+const ReportingIcon = () => <ChartLineUp {...iconProps} />;
+const OversightIcon = () => <Eye {...iconProps} />;
+const CoordinationIcon = () => <UsersThree {...iconProps} />;
+const GovernanceIcon = () => <Scales {...iconProps} />;
+const TaxAdminIcon = () => <Receipt {...iconProps} />;
+const VaultIcon = () => <Vault {...iconProps} />;
 
 const ServicesElements = [
   {
-    titleKey: "Accounting.Title",
-    descriptionKey: "Accounting.Description",
-    href: "/services/accounting/",
-    icon: <FileTextIcon />,
+    titleKey: "ConsolidatedReporting.Title",
+    descriptionKey: "ConsolidatedReporting.Description",
+    href: "/services/consolidated-reporting/",
+    icon: <ReportingIcon />,
   },
   {
-    titleKey: "TaxesCompanyPersonal.Title",
-    descriptionKey: "TaxesCompanyPersonal.Description",
-    href: "/services/taxes/",
-    icon: <LandmarkIcon />,
+    titleKey: "InvestmentOversight.Title",
+    descriptionKey: "InvestmentOversight.Description",
+    href: "/services/investment-oversight/",
+    icon: <OversightIcon />,
   },
   {
-    titleKey: "PayrollHR.Title",
-    descriptionKey: "PayrollHR.Description",
-    href: "/services/payroll/",
-    icon: <UsersIcon />,
+    titleKey: "FamilyOfficeCoordination.Title",
+    descriptionKey: "FamilyOfficeCoordination.Description",
+    href: "/services/family-office-coordination/",
+    icon: <CoordinationIcon />,
   },
   {
-    titleKey: "OutsourcingServices.Title",
-    descriptionKey: "OutsourcingServices.Description",
-    href: "/services/outsourcing/",
-    icon: <BriefcaseIcon />,
+    titleKey: "GovernanceSuccession.Title",
+    descriptionKey: "GovernanceSuccession.Description",
+    href: "/services/governance-succession/",
+    icon: <GovernanceIcon />,
   },
   {
-    titleKey: "MAServices.Title",
-    descriptionKey: "MAServices.Description",
-    href: "/services/mergers-acquisitions/",
-    icon: <HandshakeIcon />,
+    titleKey: "TaxAdministration.Title",
+    descriptionKey: "TaxAdministration.Description",
+    href: "/services/tax-administration/",
+    icon: <TaxAdminIcon />,
   },
   {
-    titleKey: "CorporateServices.Title",
-    descriptionKey: "CorporateServices.Description",
-    href: "/services/corporate/",
-    icon: <Building2Icon />,
-  },
-  {
-    titleKey: "Incorporation.Title",
-    descriptionKey: "Incorporation.Description",
-    href: "/services/incorporation/",
-    icon: <Building2Icon />,
-  },
-  {
-    titleKey: "ImmigrationServices.Title",
-    descriptionKey: "ImmigrationServices.Description",
-    href: "/services/immigration/",
-    icon: <PlaneIcon />,
-  },
-  {
-    titleKey: "OdooImplementation.Title",
-    descriptionKey: "OdooImplementation.Description",
-    href: "/services/odoo/",
-    icon: <SettingsIcon />,
-  },
-  {
-    titleKey: "DomiciliationServices.Title",
-    descriptionKey: "DomiciliationServices.Description",
-    href: "/services/domiciliation/",
-    icon: <PinIcon />,
-  },
-  {
-    titleKey: "FamilyOffice.Title",
-    descriptionKey: "FamilyOffice.Description",
-    href: "/services/family-office/",
-    icon: <CrownIcon />,
+    titleKey: "DigitalVault.Title",
+    descriptionKey: "DigitalVault.Description",
+    href: "/services/digital-vault/",
+    icon: <VaultIcon />,
   },
 ];
 

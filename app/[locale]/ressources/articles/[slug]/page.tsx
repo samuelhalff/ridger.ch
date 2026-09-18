@@ -154,13 +154,13 @@ function getArticleStructuredDataContext(
     return {
       schemaType: "TechArticle" as const,
       about: [
-        { "@id": getArkServiceEntityId("odoo") },
-        { "@type": "Thing", name: "Odoo ERP" },
-        { "@type": "Thing", name: "Swiss accounting" },
+        { "@id": getArkServiceEntityId("consolidated-reporting") },
+        { "@type": "Thing", name: "Consolidated reporting" },
+        { "@type": "Thing", name: "Swiss family office" },
       ],
       isPartOf: {
         "@type": "WebPage",
-        "@id": serviceLocaleUrl("/services/odoo"),
+        "@id": serviceLocaleUrl("/services/consolidated-reporting"),
       },
     };
   }
@@ -172,10 +172,10 @@ function getArticleStructuredDataContext(
   ) {
     return {
       schemaType: "BlogPosting" as const,
-      about: [{ "@id": getArkServiceEntityId("accounting") }],
+      about: [{ "@id": getArkServiceEntityId("tax-administration") }],
       isPartOf: {
         "@type": "WebPage",
-        "@id": serviceLocaleUrl("/services/accounting"),
+        "@id": serviceLocaleUrl("/services/tax-administration"),
       },
     };
   }
@@ -183,10 +183,10 @@ function getArticleStructuredDataContext(
   if (article.category === "incorporation" || article.category === "corporate") {
     return {
       schemaType: "BlogPosting" as const,
-      about: [{ "@id": getArkServiceEntityId("incorporation") }],
+      about: [{ "@id": getArkServiceEntityId("governance-succession") }],
       isPartOf: {
         "@type": "WebPage",
-        "@id": serviceLocaleUrl("/services/incorporation"),
+        "@id": serviceLocaleUrl("/services/governance-succession"),
       },
     };
   }

@@ -1,82 +1,94 @@
 {
     "Meta": {
-        "Title": "Home | Ridger",
-        "Description": "Expert fiduciary support in Geneva and Lausanne. Accounting, tax, payroll, domiciliation and ERP advisory that help Swiss and international companies stay compliant and grow confidently."
+        "Title": "Family office in Geneva | Ridger",
+        "Description": "A new-generation family office in Geneva: consolidated reporting, coordination of your advisors and Swiss discretion. Ridger does not manage assets."
     },
     "Hero": {
-        "Title": "Fiduciary services in Geneva – trusted partner for SMEs",
-        "Description": "Expert fiduciary support that blends Swiss precision with digital efficiency, covering accounting, tax, payroll and corporate governance from launch to expansion.",
-        "CTA": "Get in touch",
-        "SecondaryCTA": "Get an instant quote",
-        "Badge": "Genève · Lausanne",
-        "BadgeTwo": "AI powered",
-        "OdooBadge": "Digital & ERP solutions",
-        "OdooPartnerBadge": "Official Odoo partner",
-        "ImageAlt": "Ridger experts providing fiduciary, accounting and tax services for Swiss companies",
-        "ScrollHint": "Discover more",
+        "Title": "A new-generation family office",
+        "Description": "Ridger brings your wealth into one view, coordinates your advisors and oversees your administration, with Swiss discretion and rigour. We do not manage your assets; we watch over the whole.",
+        "CTA": "Request a confidential consultation",
+        "SecondaryCTA": "Request a confidential consultation",
+        "Badge": "Geneva",
+        "BadgeTwo": "Digital-first",
+        "ImageAlt": "Family office in Geneva",
+        "ScrollHint": "Discover",
         "Facts": {
             "Implantation": {
-                "Label": "// Location",
-                "Value": "Geneva · Lausanne",
-                "Sub": "Based in French-speaking Switzerland, serving Swiss SMEs and international companies."
+                "Label": "// Independence",
+                "Value": "Bank-agnostic",
+                "Sub": "Independent of any bank or manager, aligned with your interests alone."
             },
             "Expertises": {
-                "Label": "// Expertise",
-                "Value": "Accounting · Tax · HR",
-                "Sub": "Accounting, taxation, payroll, corporate services, domiciliation and ERP."
+                "Label": "// Scope",
+                "Value": "One view",
+                "Sub": "Consolidated reporting, oversight, coordination and administrative oversight."
             },
             "Solutions": {
-                "Label": "// Technology",
-                "Value": "Odoo · AI",
-                "Sub": "Official Odoo partner and digital tools to accelerate execution without losing precision."
+                "Label": "// Discretion",
+                "Value": "Swiss",
+                "Sub": "Data hosted in Switzerland, professional secrecy, reply within one business day."
             }
         }
     },
     "Services": {
-        "Eyebrow": "Services",
-        "Title": "Our services",
-        "Subtitle": "Comprehensive fiduciary, accounting, and tax programmes tailored to every stage of your business. We combine on-demand expertise, proven Swiss processes, and secure digital tooling to support SMEs, scale-ups, and international groups."
+        "Eyebrow": "Our services",
+        "Title": "What your family needs, under one roof.",
+        "Subtitle": ""
     },
     "Trust": {
-        "Eyebrow": "Affiliations and frameworks",
-        "Sofit": {
-            "Title": "SO-FIT",
-            "Description": "SRO / OAR member under Swiss AMLA. KYC procedures for sensitive domiciliation, escrow mandates, payment flows and documented structures."
+        "Eyebrow": "Our commitments",
+        "DataResidency": {
+            "Title": "Swiss data residency",
+            "Description": "Your documents and data are hosted in Switzerland, shared only with the people you designate."
         },
-        "Odoo": {
-            "Title": "Odoo",
-            "Description": "Official partner for accounting, automation and reporting."
+        "Secrecy": {
+            "Title": "Professional secrecy",
+            "Description": "Confidentiality is at the heart of our work, at every exchange and every step."
         },
-        "Gaap": {
-            "Title": "Swiss GAAP FER",
-            "Description": "Readable, consistent and audit-ready financial statements."
+        "Response": {
+            "Title": "Reply within one business day",
+            "Description": "A single point of contact who knows your files and replies within one business day."
         }
     },
+    "How": {
+        "Eyebrow": "How we work",
+        "Title": "Digital-first, human above all.",
+        "Steps": [
+            {
+                "Title": "Digital-first",
+                "Body": "Continuous consolidation and digital-first workflows, for information that is always current and secure."
+            },
+            {
+                "Title": "A single interlocutor",
+                "Body": "One address for your requests, mobilising the right skills at the right time."
+            },
+            {
+                "Title": "Swiss discretion",
+                "Body": "The confidentiality and rigour of a craft rooted in the Geneva tradition."
+            }
+        ]
+    },
     "About": {
-        "Eyebrow": "About us",
-        "Title": "Why choose Ridger?",
+        "Eyebrow": "Why Ridger",
+        "Title": "An independent view of your wealth",
         "Content": [
-            "Ridger leverages deep local expertise and cutting-edge technological tools to support entrepreneurs, family businesses, NGOs, and international groups in securing their Swiss accounting and compliance. We act as an integrated fiduciary team that understands the operational realities of Romandie while coordinating stakeholders abroad.",
-            "Our multidisciplinary specialists cover accounting, taxation, payroll, HR administration, governance, and corporate secretariat. You benefit from certified accountants, tax advisors, and consultants who transform complex rules into pragmatic action plans for your organization.",
-            "Each mandate begins with an analysis phase during which we map your objectives, internal processes, and risk appetite. We then design an evolving service plan, from company formation and accounting maintenance to consolidated reporting, VAT strategy, or HR outsourcing.",
-            "The Swiss regulatory framework evolves rapidly. We track updates from Swiss authorities, AVS, and cantons, implement required adjustments, and document all controls so you remain audit-ready. Our clients rely on us to anticipate deadlines, avoid penalties, and maintain impeccable documentation.",
-            "Technology is at the heart of our model. By combining AI-assisted document processing and Odoo ERP integrations, we shorten closing times, automate repetitive reconciliations, and produce dashboards to drive your decisions in real time, without compromising data security.",
-            "Anchored in Geneva and Lausanne, we regularly coordinate with lawyers, auditors, and tax advisors in Switzerland, Europe, and the Americas. Multilingual support in French, English, German, Spanish, and Portuguese ensures smooth communication for distributed teams.",
-            "Our clients appreciate our transparent pricing, dedicated contacts, and clarity of deliverables. You always know the person responsible for each task, the status of ongoing processes, and upcoming compliance deadlines on the calendar.",
-            "Choosing Ridger means partnering with a fiduciary firm that combines Swiss precision, innovative tools, and human support. We handle accounting, taxation, payroll, and corporate administration so you can focus on strategy, your clients, and sustainable growth."
+            "Ridger is a digital-first multi-family office based in Geneva. We support families in consolidating, monitoring and coordinating their wealth, without ever managing their assets in place of their banks and managers.",
+            "Our independence is the condition for an objective view. We have no product to place and no transaction to prompt; our only mission is to give you a clear picture and coordinate your advisors.",
+            "We begin with an audit of your existing setup, then put in place consolidated reporting and a rhythm of oversight suited to your priorities. You keep control of decisions; we prepare and follow up on them.",
+            "Confidentiality and discretion guide everything we do. Your data is hosted in Switzerland and shared only with the people you designate."
         ],
         "Quality": {
-            "Title": "Swiss quality standards",
-            "Content": "We operate under Swiss GAAP FER accounting principles, maintain robust internal controls, and document every process so that auditors and regulators receive complete, timely information. Continuous training, cross-reviews, and ISO-inspired checklists guarantee the precision and reliability our clients expect."
+            "Title": "Fee transparency",
+            "Content": "We make the explicit and implicit fees of your banking relationships legible, for a full understanding of what your wealth costs."
         },
         "Innovation": {
-            "Title": "Technology-driven solutions",
-            "Content": "Our integration of AI tools and modern ERP systems allows us to provide faster, more accurate services while maintaining the personal touch that fiduciary relationships require. Secure portals, automated workflows, and advanced analytics deliver instant visibility into your finances without disrupting established governance."
+            "Title": "A digital method",
+            "Content": "Continuous consolidation, a digital vault and controlled sharing: our digital-first workflows save time without ever compromising on security."
         }
     },
     "FAQ": {
         "Title": "Frequently asked questions",
-        "Subtitle": "Quick answers to common questions about our products and services."
+        "Subtitle": "Quick answers to common questions about our role and services."
     },
     "Testimonials": {
         "SectionTitle": "Testimonials"
