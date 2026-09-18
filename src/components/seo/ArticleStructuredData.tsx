@@ -39,7 +39,7 @@ export default function ArticleStructuredData({
     name: "Ridger",
     url: "https://ridger.ch",
     logo: "https://ridger.ch/assets/ridger--color.svg",
-    sameAs: ["https://www.linkedin.com/company/ridger/"],
+    sameAs: ["https://www.linkedin.com/company/ridger-mfo/"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "26 Boulevard Georges Favon",

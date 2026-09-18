@@ -62,7 +62,7 @@ const footerSections = [
       { titleKey: "Ressources", href: "/ressources/", ns: "navbar" },
       {
         titleKey: "Social.LinkedIn",
-        href: "https://www.linkedin.com/company/ridger/",
+        href: "https://www.linkedin.com/company/ridger-mfo/",
         ns: "footer",
       },
     ],

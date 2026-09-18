@@ -139,7 +139,7 @@ export const arkOrganization = {
   // Ridger's own profiles only — never Ark's Maps/UID identifiers, so Google
   // keeps the two brands as distinct entities (affiliation is expressed via
   // parentOrganization below, not sameAs equivalence).
-  sameAs: ["https://www.linkedin.com/company/ridger/"],
+  sameAs: ["https://www.linkedin.com/company/ridger-mfo/"],
   languages: ["fr", "en", "de", "es", "pt"],
   knowsAbout: [
     "Multi-family office",
