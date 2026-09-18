@@ -100,13 +100,6 @@ export default async function RootLayout({
         />
         <link
           rel="preload"
-          href="/fonts/Fraunces-vf-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
           href="/assets/abstract-background-light.avif"
           as="image"
           fetchPriority="high"

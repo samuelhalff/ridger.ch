@@ -124,9 +124,10 @@
   h1,
   h2,
   h3 {
-    font-family: var(--font-fraunces, Georgia, serif);
-    font-weight: 300;
-    font-optical-sizing: auto;
+    /* Trustworthy-minimal: clean sans headings (no display serif). */
+    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   code,
@@ -439,11 +440,11 @@
     line-height: 1.4;
   }
 
-  /* Large serif numeral class for stats sections */
+  /* Large numeral class for stats sections */
   .num-display {
-    font-family: var(--font-fraunces, Georgia, serif);
-    font-weight: 300;
-    font-optical-sizing: auto;
+    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1;
   }
 
@@ -461,10 +462,11 @@
     color: oklch(0.977 0.006 85);
   }
 
-  /* font-display utility: apply Fraunces to any element */
+  /* font-display utility: same clean sans, kept for compatibility */
   .font-display {
-    font-family: var(--font-fraunces, Georgia, serif);
-    font-optical-sizing: auto;
+    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .dark .prose,
