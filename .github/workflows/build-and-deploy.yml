@@ -376,18 +376,25 @@ jobs:
         timeout-minutes: 5
         run: |
           CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
+          # A plain 200 is not proof: with ridger.ch behind the shared
+          # Infomaniak front, a routing mistake serves ANOTHER site's 200
+          # (observed 2026-09-18: houle answered for ridger). Only the
+          # deployed BUILD_ID counts as healthy.
+          BUILD_ID=$(cat dist/.next/BUILD_ID)
+          ORIGIN_BASE="${{ vars.DEPLOY_ORIGIN_BASE }}"
+          [ -z "$ORIGIN_BASE" ] && ORIGIN_BASE="https://ridger.ch"
           ATTEMPTS=40; SLEEP=3; OK=0
           for i in $(seq 1 $ATTEMPTS); do
-            STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://ridger.ch/fr/" || echo "000")
-            if [ "$STATUS" -eq 200 ]; then
-              echo "✅ Health check OK"
+            LIVE=$(curl "${CURL_TIMEOUTS[@]}" -s "$ORIGIN_BASE/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+            if [ "$LIVE" = "$BUILD_ID" ]; then
+              echo "✅ Health check OK (buildId $BUILD_ID)"
               OK=1
               break
             fi
-            echo "Waiting for server... ($i/$ATTEMPTS, got $STATUS)"
+            echo "Waiting for server... ($i/$ATTEMPTS, live buildId '${LIVE:-none}')"
             sleep $SLEEP
           done
-          [ "$OK" -eq 1 ] || { echo "❌ Health check failed"; exit 1; }
+          [ "$OK" -eq 1 ] || { echo "❌ Health check failed — deployed buildId never answered on $ORIGIN_BASE"; exit 1; }
 
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/" "/de/" "/es/" "/pt/"; do
