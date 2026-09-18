@@ -219,7 +219,7 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
         className="mx-auto my-14 w-full max-w-[1240px] px-5 sm:px-8"
         aria-labelledby="platform-title"
       >
-        <div className="rounded-lg bg-brand px-7 py-12 text-background sm:px-12 sm:py-16">
+        <div className="rounded-lg bg-primary px-7 py-12 text-primary-foreground sm:px-12 sm:py-16">
           <p className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70">
             {homeT("Platform.Eyebrow") as string}
           </p>

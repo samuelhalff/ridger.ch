@@ -11,41 +11,41 @@
 
 @layer base {
   :root {
-    /* Ridger design system — light mode (warm paper base) */
+    /* Ridger design system — light mode (white, ark-aligned neutrals) */
     /* background: #faf7f2  oklch(0.977 0.006 85) */
-    --background: 0.977 0.006 85;
+    --background: 1 0 0;
     /* foreground/ink: #1a1a18  oklch(0.22 0.005 100) */
-    --foreground: 0.22 0.005 100;
+    --foreground: 0.145 0 0;
     /* surface/raised: #f1ece3  oklch(0.94 0.012 85) */
-    --card: 0.94 0.012 85;
-    --card-foreground: 0.22 0.005 100;
-    --popover: 0.94 0.012 85;
-    --popover-foreground: 0.22 0.005 100;
-    /* primary = deep pine: #1e3a32  oklch(0.31 0.045 170) */
-    --primary: 0.31 0.045 170;
-    --primary-foreground: 0.977 0.006 85;
-    --secondary: 0.94 0.012 85;
-    --secondary-foreground: 0.22 0.005 100;
+    --card: 0.97 0 0;
+    --card-foreground: 0.145 0 0;
+    --popover: 0.97 0 0;
+    --popover-foreground: 0.145 0 0;
+    /* primary = deep pine: #1e3a32  oklch(0.205 0 0) */
+    --primary: 0.205 0 0;
+    --primary-foreground: 0.985 0 0;
+    --secondary: 0.97 0 0;
+    --secondary-foreground: 0.145 0 0;
     /* muted text: #6e6a62  oklch(0.52 0.012 80) */
-    --muted: 0.94 0.012 85;
-    --muted-foreground: 0.52 0.012 80;
+    --muted: 0.97 0 0;
+    --muted-foreground: 0.52 0 0;
     /* accent-2 (bronze, sparing): #9a7b4f  oklch(0.60 0.07 75) */
     --accent: 0.60 0.07 75;
-    --accent-foreground: 0.22 0.005 100;
+    --accent-foreground: 0.145 0 0;
     --destructive: 0.577 0.245 27.325;
     /* hairline/border: #d9d2c5  oklch(0.855 0.012 80) */
-    --border: 0.855 0.012 80;
-    --input: 0.855 0.012 80;
-    --ring: 0.31 0.045 170;
+    --border: 0.922 0 0;
+    --input: 0.922 0 0;
+    --ring: 0.60 0.07 75;
     --radius: 0.625rem;
     --breakpoint-xl: 1200px;
-    /* brand = deep pine */
-    --brand: 0.31 0.045 170;
-    --brand-hover: 0.27 0.05 170;
-    --brand-soft: 0.92 0.018 170;
-    --brand-on-dark: 0.72 0.06 160;
+    /* brand = bronze */
+    --brand: 0.60 0.07 75;
+    --brand-hover: 0.54 0.075 75;
+    --brand-soft: 0.95 0.02 80;
+    --brand-on-dark: 0.72 0.07 78;
     /* surface-warm = raised card surface */
-    --surface-warm: 0.94 0.012 85;
+    --surface-warm: 0.97 0 0;
   }
 
   /* GPU acceleration: apply selectively to heavy animations only */
@@ -55,34 +55,34 @@
   .dark {
     /* Dark mode: deep ink background, pine surfaces, paper-toned text */
     /* background: #12120f  oklch(0.13 0.004 100) */
-    --background: 0.13 0.004 100;
+    --background: 0.145 0 0;
     /* foreground: paper-toned  oklch(0.92 0.006 85) */
-    --foreground: 0.92 0.006 85;
+    --foreground: 0.985 0 0;
     /* card/surface: pine-shifted dark  oklch(0.21 0.018 170) */
-    --card: 0.21 0.018 170;
-    --card-foreground: 0.92 0.006 85;
-    --popover: 0.21 0.018 170;
-    --popover-foreground: 0.92 0.006 85;
+    --card: 0.205 0 0;
+    --card-foreground: 0.985 0 0;
+    --popover: 0.205 0 0;
+    --popover-foreground: 0.985 0 0;
     /* primary in dark = paper text color */
-    --primary: 0.92 0.006 85;
-    --primary-foreground: 0.13 0.004 100;
-    --secondary: 0.26 0.025 170;
-    --secondary-foreground: 0.92 0.006 85;
-    --muted: 0.26 0.025 170;
-    --muted-foreground: 0.72 0.008 85;
+    --primary: 0.922 0 0;
+    --primary-foreground: 0.205 0 0;
+    --secondary: 0.269 0 0;
+    --secondary-foreground: 0.985 0 0;
+    --muted: 0.269 0 0;
+    --muted-foreground: 0.72 0 0;
     /* accent = lighter bronze in dark */
-    --accent: 0.68 0.065 75;
-    --accent-foreground: 0.13 0.004 100;
+    --accent: 0.70 0.075 78;
+    --accent-foreground: 0.145 0 0;
     --destructive: 0.704 0.191 22.216;
     --border: 1 0 0 / 0.1;
     --input: 1 0 0 / 0.15;
-    --ring: 0.68 0.065 75;
+    --ring: 0.70 0.075 78;
     /* brand in dark = lightened pine for legibility */
-    --brand: 0.55 0.06 165;
-    --brand-hover: 0.62 0.065 165;
-    --brand-soft: 0.21 0.025 170;
-    --brand-on-dark: 0.72 0.06 160;
-    --surface-warm: 0.26 0.025 170;
+    --brand: 0.70 0.075 78;
+    --brand-hover: 0.76 0.075 78;
+    --brand-soft: 0.25 0.02 80;
+    --brand-on-dark: 0.72 0.07 78;
+    --surface-warm: 0.269 0 0;
   }
 
   * {
@@ -385,7 +385,7 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    background: radial-gradient(circle at 50% 0%, oklch(0.31 0.045 170 / 0.06), transparent 30rem);
+    background: radial-gradient(circle at 50% 0%, oklch(0.145 0 0 / 0.04), transparent 30rem);
   }
 
   /* Dark mode: full dark gradient background */
@@ -395,7 +395,7 @@
 
   .dark .agent-page-dim {
     background:
-      radial-gradient(circle at 50% 0%, oklch(0.31 0.045 170 / 0.18), transparent 34rem),
+      radial-gradient(circle at 50% 0%, oklch(0.985 0 0 / 0.06), transparent 34rem),
       #070f0d;
   }
 
@@ -410,7 +410,7 @@
 
   /* Text selection: readable on both themes */
   ::selection {
-    background-color: oklch(0.31 0.045 170 / 0.22);
+    background-color: oklch(0.60 0.07 75 / 0.25);
     color: inherit;
   }
 
@@ -449,7 +449,7 @@
 
   /* Primary CTA: deep pine bg, paper text, no gradient */
   .btn-pine {
-    background-color: oklch(0.31 0.045 170);
+    background-color: oklch(0.205 0 0);
     color: oklch(0.977 0.006 85);
     transition: background-color 200ms ease, color 200ms ease;
     border: none;
@@ -457,7 +457,7 @@
 
   .btn-pine:hover,
   .btn-pine:focus-visible {
-    background-color: oklch(0.27 0.05 170);
+    background-color: oklch(0.269 0 0);
     color: oklch(0.977 0.006 85);
   }
 
