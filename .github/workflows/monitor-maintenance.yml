@@ -19,7 +19,7 @@ jobs:
           if [ -n "$RUNNING" ]; then
             echo "Deploy already running (ID: $RUNNING), skipping"
           else
-            HTML=$(curl -s https://ark-fid.ch)
+            HTML=$(curl -s https://ridger.ch)
             if echo "$HTML" | grep -q "/images/infomaniak.svg"; then
               echo "Maintenance detected and no deploy running, triggering redeploy"
               curl -X POST \

@@ -50,6 +50,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+      # NEXT_PUBLIC_* and PLACEHOLDER_LOCALES are inlined at build time —
+      # they must be present here, not only in the synced server .env.
+      NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+      NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
+      NEXT_PUBLIC_SITE_URL: https://ridger.ch
+      # DE/ES/PT are built but noindexed until their content is reviewed.
+      PLACEHOLDER_LOCALES: de,es,pt
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -139,7 +146,7 @@ jobs:
             if sshpass -p "$PASS" rsync -av --partial --checksum --timeout=60 \
               -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=15 -p $PORT" \
               artifact/next-standalone.tar.gz.part \
-              "$USER@$HOST:/srv/customer/sites/ark-fid.ch/artifact/"; then
+              "$USER@$HOST:/srv/customer/sites/ridger.ch/artifact/"; then
               echo "Upload verified on attempt $attempt (rsync checksum)"
               exit 0
             fi
@@ -154,40 +161,11 @@ jobs:
         env:
           NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
           TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
-          AZURE_AGENT_CHAT_NAME: ${{ secrets.AZURE_AGENT_CHAT_NAME }}
-          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
-          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
-          AZURE_AGENT_CHAT_RESPONSES_API_VERSION: ${{ secrets.AZURE_AGENT_CHAT_RESPONSES_API_VERSION }}
-          AZURE_AGENT_RESPONSES_API_VERSION: ${{ secrets.AZURE_AGENT_RESPONSES_API_VERSION }}
-          MSGRAPH_TENANT_ID: ${{ secrets.MSGRAPH_TENANT_ID }}
-          MSGRAPH_CLIENT_ID: ${{ secrets.MSGRAPH_CLIENT_ID }}
-          MSGRAPH_CLIENT_SECRET: ${{ secrets.MSGRAPH_CLIENT_SECRET }}
-          SP_SITE_HOSTNAME: ${{ secrets.SP_SITE_HOSTNAME }}
-          SP_SITE_PATH: ${{ secrets.SP_SITE_PATH }}
-          SP_LEADS_LIST_NAME: ${{ secrets.SP_LEADS_LIST_NAME }}
-          SP_LEADS_FIELD_TITLE: ${{ secrets.SP_LEADS_FIELD_TITLE }}
-          SP_LEADS_FIELD_EMAIL: ${{ secrets.SP_LEADS_FIELD_EMAIL }}
-          SP_LEADS_FIELD_TOKEN_HASH: ${{ secrets.SP_LEADS_FIELD_TOKEN_HASH }}
-          SP_LEADS_FIELD_TRANSCRIPT: ${{ secrets.SP_LEADS_FIELD_TRANSCRIPT }}
-          SP_LEADS_FIELD_NAME: ${{ secrets.SP_LEADS_FIELD_NAME }}
-          SP_LEADS_FIELD_COMPANY: ${{ secrets.SP_LEADS_FIELD_COMPANY }}
-          SP_LEADS_FIELD_PHONE: ${{ secrets.SP_LEADS_FIELD_PHONE }}
-          SP_LEADS_FIELD_STATUS: ${{ secrets.SP_LEADS_FIELD_STATUS }}
-          SP_LEADS_FIELD_SOURCE: ${{ secrets.SP_LEADS_FIELD_SOURCE }}
-          SP_LEADS_FIELD_SESSION_ID: ${{ secrets.SP_LEADS_FIELD_SESSION_ID }}
-          SP_LEADS_FIELD_PAGE_URL: ${{ secrets.SP_LEADS_FIELD_PAGE_URL }}
-          SP_LEADS_FIELD_REFERRER: ${{ secrets.SP_LEADS_FIELD_REFERRER }}
-          SP_LEADS_FIELD_UTM_SOURCE: ${{ secrets.SP_LEADS_FIELD_UTM_SOURCE }}
-          SP_LEADS_FIELD_UTM_MEDIUM: ${{ secrets.SP_LEADS_FIELD_UTM_MEDIUM }}
-          SP_LEADS_FIELD_UTM_CAMPAIGN: ${{ secrets.SP_LEADS_FIELD_UTM_CAMPAIGN }}
-          SP_LEADS_FIELD_UTM_TERM: ${{ secrets.SP_LEADS_FIELD_UTM_TERM }}
-          SP_LEADS_FIELD_UTM_CONTENT: ${{ secrets.SP_LEADS_FIELD_UTM_CONTENT }}
-          SP_LEADS_FIELD_LAST_MESSAGE_AT: ${{ secrets.SP_LEADS_FIELD_LAST_MESSAGE_AT }}
-          SP_LEADS_FIELD_LAST_USER_MESSAGE: ${{ secrets.SP_LEADS_FIELD_LAST_USER_MESSAGE }}
-          SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE: ${{ secrets.SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE }}
-          SP_LEADS_FIELD_INITIAL_MESSAGE: ${{ secrets.SP_LEADS_FIELD_INITIAL_MESSAGE }}
-          AGENT_LEAD_TOKEN_SECRET: ${{ secrets.AGENT_LEAD_TOKEN_SECRET }}
           FORMSPARK_ACTION_URL: ${{ secrets.FORMSPARK_ACTION_URL }}
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
+          RESTART_SECRET_TOKEN: ${{ secrets.RESTART_SECRET_TOKEN }}
         run: |
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
@@ -199,42 +177,19 @@ jobs:
           keys = [
             "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
             "TURNSTILE_SECRET_KEY",
-            "AZURE_AGENT_CHAT_NAME",
-            "AZURE_AGENT_ENDPOINT",
-            "AZURE_AGENT_API_KEY",
-            "AZURE_AGENT_CHAT_RESPONSES_API_VERSION",
-            "AZURE_AGENT_RESPONSES_API_VERSION",
-            "MSGRAPH_TENANT_ID",
-            "MSGRAPH_CLIENT_ID",
-            "MSGRAPH_CLIENT_SECRET",
-            "SP_SITE_HOSTNAME",
-            "SP_SITE_PATH",
-            "SP_LEADS_LIST_NAME",
-            "SP_LEADS_FIELD_TITLE",
-            "SP_LEADS_FIELD_EMAIL",
-            "SP_LEADS_FIELD_TOKEN_HASH",
-            "SP_LEADS_FIELD_TRANSCRIPT",
-            "SP_LEADS_FIELD_NAME",
-            "SP_LEADS_FIELD_COMPANY",
-            "SP_LEADS_FIELD_PHONE",
-            "SP_LEADS_FIELD_STATUS",
-            "SP_LEADS_FIELD_SOURCE",
-            "SP_LEADS_FIELD_SESSION_ID",
-            "SP_LEADS_FIELD_PAGE_URL",
-            "SP_LEADS_FIELD_REFERRER",
-            "SP_LEADS_FIELD_UTM_SOURCE",
-            "SP_LEADS_FIELD_UTM_MEDIUM",
-            "SP_LEADS_FIELD_UTM_CAMPAIGN",
-            "SP_LEADS_FIELD_UTM_TERM",
-            "SP_LEADS_FIELD_UTM_CONTENT",
-            "SP_LEADS_FIELD_LAST_MESSAGE_AT",
-            "SP_LEADS_FIELD_LAST_USER_MESSAGE",
-            "SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE",
-            "SP_LEADS_FIELD_INITIAL_MESSAGE",
-            "AGENT_LEAD_TOKEN_SECRET",
             "FORMSPARK_ACTION_URL",
+            "NEXT_PUBLIC_GA_ID",
+            "NEXT_PUBLIC_GTM_ID",
+            "INDEXNOW_SECRET",
+            "RESTART_SECRET_TOKEN",
           ]
-          lines = []
+          lines = [
+            # Fixed values: ridger runs on port 5001 (houle.ai holds 5000 on
+            # this host) and keeps DE/ES/PT noindexed until reviewed.
+            "PORT=5001",
+            "NEXT_PUBLIC_SITE_URL=https://ridger.ch",
+            "PLACEHOLDER_LOCALES=de,es,pt",
+          ]
           for key in keys:
             value = os.environ.get(key, "")
             if value:
@@ -251,8 +206,8 @@ jobs:
 
           sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -p "$PORT" "$USER@$HOST" bash -lc '
             set -euo pipefail
-            ENV_FILE="/srv/customer/sites/ark-fid.ch/shared/.env"
-            TMP_FILE="/tmp/arkfid_env_sync"
+            ENV_FILE="/srv/customer/sites/ridger.ch/shared/.env"
+            TMP_FILE="/tmp/ridger_env_sync"
             printf "%s" "'"$ENV_SYNC_B64"'" | base64 -d > "$TMP_FILE"
             touch "$ENV_FILE"
             while IFS= read -r line; do
@@ -287,7 +242,7 @@ jobs:
 
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" bash -lc '
             set -euo pipefail
-            BASE_DIR="/srv/customer/sites/ark-fid.ch"
+            BASE_DIR="/srv/customer/sites/ridger.ch"
             RELEASES_DIR="$BASE_DIR/releases"
             CURRENT_LINK="$BASE_DIR/current"
             ARTIFACT="$BASE_DIR/artifact/next-standalone.tar.gz"
@@ -340,7 +295,7 @@ jobs:
             echo "[deploy] Updated current symlink to $REL_DIR" >> "$LOG"
             echo "[deploy] Release $TS deployed successfully at $(date)" >> "$LOG"
 
-            KEEP=4
+            KEEP=2
             cd "$RELEASES_DIR" || exit 0
             ls -1t | tail -n +$((KEEP+1)) | while read -r rel; do
               [ -d "$rel" ] && [ "$rel" != "$TS" ] && rm -rf "$RELEASES_DIR/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
@@ -368,13 +323,19 @@ jobs:
           # as recovery if the supervisor itself is gone.
           BUILD_ID=$(cat dist/.next/BUILD_ID)
           TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
-          echo "[restart] Expecting build $BUILD_ID"
+          # ridger.ch is Cloudflare-proxied: deploy control endpoints must hit
+          # the origin directly (grey-cloud hostname), or CF cache/WAF can
+          # false-green or block the kill endpoint. Set the DEPLOY_ORIGIN_BASE
+          # repo variable to e.g. https://origin.ridger.ch once DNS exists.
+          ORIGIN_BASE="${{ vars.DEPLOY_ORIGIN_BASE }}"
+          [ -z "$ORIGIN_BASE" ] && ORIGIN_BASE="https://ridger.ch"
+          echo "[restart] Expecting build $BUILD_ID (origin: $ORIGIN_BASE)"
 
           verify_build() {
             local checks=$1
             local i live
             for i in $(seq 1 "$checks"); do
-              live=$(curl -s --max-time 4 "https://ark-fid.ch/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+              live=$(curl -s --max-time 4 "$ORIGIN_BASE/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
               if [ "$live" = "$BUILD_ID" ]; then
                 echo "[restart] ✅ Build $BUILD_ID confirmed live (check $i)"
                 return 0
@@ -386,7 +347,7 @@ jobs:
           }
 
           echo "[restart] Requesting process restart via kill endpoint..."
-          curl --connect-timeout 5 --max-time 20 -X POST "https://ark-fid.ch/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
+          curl --connect-timeout 5 --max-time 20 -X POST "$ORIGIN_BASE/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
 
           # Supervisor respawn typically brings the new build up in seconds.
           if verify_build 30; then exit 0; fi
@@ -395,7 +356,7 @@ jobs:
           # over ssh (session may be throttled; retry with spacing).
           echo "[restart] ⚠ Supervisor respawn did not deliver the new build; invoking managed restart"
           for attempt in 1 2 3; do
-            if OUT=$(sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=15 "$USER@$HOST" "bash /srv/customer/sites/ark-fid.ch/shared/restart-server.sh" 2>&1); then
+            if OUT=$(sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=15 "$USER@$HOST" "bash /srv/customer/sites/ridger.ch/shared/restart-server.sh" 2>&1); then
               echo "[restart] managed restart: $OUT"
               break
             fi
@@ -415,7 +376,7 @@ jobs:
           CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
           ATTEMPTS=40; SLEEP=3; OK=0
           for i in $(seq 1 $ATTEMPTS); do
-            STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://ark-fid.ch/fr/" || echo "000")
+            STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://ridger.ch/fr/" || echo "000")
             if [ "$STATUS" -eq 200 ]; then
               echo "✅ Health check OK"
               OK=1
@@ -428,7 +389,7 @@ jobs:
 
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/" "/de/" "/es/" "/pt/"; do
-            curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ark-fid.ch$path" >/dev/null 2>&1 || true
+            curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ridger.ch$path" >/dev/null 2>&1 || true
           done
 
           echo "[deploy] Warmup next/image cache from locale home pages (non-blocking)"
@@ -438,14 +399,14 @@ jobs:
           }
           BASE_PATHS=("/" "/en/" "/fr/" "/de/" "/es/" "/pt/")
           for path in "${BASE_PATHS[@]}"; do
-            HTML=$(curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ark-fid.ch$path" || true)
+            HTML=$(curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ridger.ch$path" || true)
             collect_images "$HTML"
           done
           sort -u "$TMP" | head -n 40 > "$TMP.list"
           warm_images() {
             local accept="$1"
             while read -r u; do
-              curl "${CURL_TIMEOUTS[@]}" -fsSL -H "Accept: $accept" "https://ark-fid.ch$u" >/dev/null 2>&1 || true
+              curl "${CURL_TIMEOUTS[@]}" -fsSL -H "Accept: $accept" "https://ridger.ch$u" >/dev/null 2>&1 || true
             done < "$TMP.list"
           }
           warm_images "image/webp,*/*"
@@ -458,8 +419,8 @@ jobs:
         continue-on-error: true
         run: |
           echo "Checking sitemap format..."
-          curl --connect-timeout 5 --max-time 20 -s "https://ark-fid.ch/sitemap.xml" | head -50
-          if curl --connect-timeout 5 --max-time 20 -s "https://ark-fid.ch/sitemap.xml" | grep -m 1 -E '<loc>https://[^<]+/</loc>'; then
+          curl --connect-timeout 5 --max-time 20 -s "https://ridger.ch/sitemap.xml" | head -50
+          if curl --connect-timeout 5 --max-time 20 -s "https://ridger.ch/sitemap.xml" | grep -m 1 -E '<loc>https://[^<]+/</loc>'; then
             echo "✅ Sitemap URLs have trailing slashes"
           else
             echo "Notice: Sitemap URLs may be missing trailing slashes"

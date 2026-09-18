@@ -12,7 +12,10 @@ set -u
 BASE="/srv/customer/sites/ridger.ch"
 PIDFILE="$BASE/shared/supervisor.pid"
 LOG="$BASE/deploy.restart.log"
-PORT=3000
+# ridger.ch binds 5001 on this host (houle.ai holds 5000); the node process
+# itself reads PORT from shared/.env via load-env.js — this value is only for
+# the port-free/answer checks below and must match it.
+PORT=5001
 
 log() { echo "[restart] $(date '+%F %T') $*" >> "$LOG"; }
 log "begin (pid $$)"

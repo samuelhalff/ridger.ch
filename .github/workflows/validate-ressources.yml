@@ -100,11 +100,11 @@ jobs:
           timeout -k 30s 3m bash <<'EOF'
           echo "🏥 Checking site health..."
           for locale in fr en de es pt; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ark-fid.ch/${locale}/")
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ridger.ch/${locale}/")
             if [ "$STATUS" = "200" ]; then echo "✅ ${locale}: OK"
             else echo "::warning::❌ ${locale}: HTTP $STATUS"; fi
           done
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ark-fid.ch/fr/ressources/")
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ridger.ch/fr/ressources/")
           if [ "$STATUS" = "200" ]; then echo "✅ Resources: OK"
           else echo "::warning::❌ Resources: HTTP $STATUS"; fi
           EOF

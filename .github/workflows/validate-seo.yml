@@ -28,4 +28,4 @@ jobs:
 
       - name: Ping sitemap (non-blocking)
         continue-on-error: true
-        run: node scripts/ping-sitemaps.js --url https://ark-fid.ch --path /sitemap.xml
+        run: node scripts/ping-sitemaps.js --url https://ridger.ch --path /sitemap.xml
