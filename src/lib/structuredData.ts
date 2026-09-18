@@ -337,7 +337,6 @@ export function buildOrganizationGraph(locale: string = "fr") {
           "M&A",
           "Immigration and permits",
         ];
-  const offerNodes = buildArkOfferNodes(locale);
   const serviceNodes = buildArkServiceNodes(locale);
   return {
     "@context": "https://schema.org",
@@ -412,24 +411,6 @@ export function buildOrganizationGraph(locale: string = "fr") {
           locale === "fr"
             ? "Ridger est une fiduciaire basée à Genève pour PME suisses, entrepreneurs, familles et sociétés internationales."
             : "Ridger is a Geneva-based fiduciary firm for Swiss SMEs, entrepreneurs, families and international companies.",
-        makesOffer: offerNodes.map((offer) => ({
-          "@id": offer["@id"] as string,
-        })),
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name:
-            locale === "fr"
-              ? "Services fiduciaires Ridger"
-              : "Ridger services",
-          itemListElement: serviceNames.map((name) => ({
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name,
-              provider: { "@id": arkEntityIds.organization },
-            },
-          })),
-        },
       },
       {
         "@type": "WebSite",
@@ -445,7 +426,6 @@ export function buildOrganizationGraph(locale: string = "fr") {
           { "@id": arkEntityIds.serviceIncorporation },
         ],
       },
-      ...offerNodes,
       ...serviceNodes,
     ],
   } as const;

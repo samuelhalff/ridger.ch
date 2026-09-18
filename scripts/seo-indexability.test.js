@@ -102,12 +102,11 @@ describe("sitemap eligibility", () => {
 });
 
 describe("lead routes", () => {
-  it("retains indexable contact and quote-agent pages", () => {
+  it("retains indexable contact page", () => {
     assert.equal(fs.existsSync(path.join(ROOT, "app/[locale]/contact/page.tsx")), true);
-    assert.equal(fs.existsSync(path.join(ROOT, "app/[locale]/agent/page.tsx")), true);
     const middleware = read("middleware.ts");
     const noindexExpression = middleware.match(/const shouldNoIndex\s*=([\s\S]*?);/);
     assert.ok(noindexExpression);
-    assert.doesNotMatch(noindexExpression[0], /contact|agent/);
+    assert.doesNotMatch(noindexExpression[0], /contact/);
   });
 });

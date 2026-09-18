@@ -2,7 +2,7 @@
 import { Providers } from "@/src/components/providers";
 import { Metadata, Viewport } from "next";
 import { buildOrganizationGraph } from "@/src/lib/structuredData";
-import { inter } from "./fonts";
+import { inter, fraunces, instrumentSans, ibmPlexMono } from "./fonts";
 import { headers } from "next/headers";
 import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
@@ -96,21 +96,21 @@ export default async function RootLayout({
     <html
       suppressHydrationWarning
       lang={currentLocale}
-      className={inter.variable}
+      className={`${inter.variable} ${fraunces.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <meta httpEquiv="Accept-CH" content="Sec-CH-Prefers-Color-Scheme" />
         <link
           rel="preload"
-          href="/assets/fonts/Inter-Regular.woff2"
+          href="/fonts/InstrumentSans-vf-latin.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/assets/fonts/Inter-SemiBold.woff2"
+          href="/fonts/Fraunces-vf-latin.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -129,7 +129,7 @@ export default async function RootLayout({
         />
       </head>
 
-      <body className={inter.className}>
+      <body className={instrumentSans.className}>
         {/* ✅ expose nonce to client so dynamic scripts can reuse it */}
         <script
           nonce={nonce}
@@ -173,7 +173,7 @@ export default async function RootLayout({
               <Defer rootMargin="0px" idle={200} placeholder={null}>
                 <ConsentAnalytics
                   gaId={gaId}
-                  gtmId="GTM-P6QT792D"
+                  gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
                   nonce={nonce}
                 />
               </Defer>

@@ -72,7 +72,7 @@ const Taxes = async (props: { params: Promise<{ locale: string }> }) => {
     provider: {
       name: "Ridger",
       url: baseUrl,
-      logo: `${baseUrl}/assets/arkfid--color.svg`,
+      logo: `${baseUrl}/assets/ridger--color.svg`,
     },
   });
   const faqJsonLd = buildFAQPage(internationalTaxFaq.entries);

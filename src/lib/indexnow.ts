@@ -53,7 +53,7 @@ export async function submitToIndexNow(urls: string[]) {
       return false;
     }
   });
-  const indexNowKey = "ebd95385d7154f45ba37d076b4efd008"; // Hosted at https://ridger.ch/ebd95385d7154f45ba37d076b4efd008.txt
+  const indexNowKey = "e57f7dcbb1864357b0e1f44d443c63f2"; // Hosted at https://ridger.ch/e57f7dcbb1864357b0e1f44d443c63f2.txt
 
   console.log(
     "[Search Indexing] Notifying search engines about",

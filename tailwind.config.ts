@@ -73,6 +73,11 @@ module.exports = {
       screens: {
         xs: "480px",
       },
+      fontFamily: {
+        sans: ["var(--font-instrument-sans)", "system-ui", "-apple-system", "sans-serif"],
+        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        mono: ["var(--font-ibm-plex-mono)", "ui-monospace", "monospace"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

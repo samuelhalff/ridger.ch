@@ -15,7 +15,7 @@ export default function DeferredNonCriticalStyles({
     if (isDev) {
       const markDev = "non-critical-dev";
       const existing = document.querySelectorAll(
-        `link[data-arkfid-style="${markDev}"]`
+        `link[data-ridger-style="${markDev}"]`
       );
       let found = false;
       existing.forEach((node) => {
@@ -34,14 +34,14 @@ export default function DeferredNonCriticalStyles({
       const sheet = document.createElement("link");
       sheet.rel = "stylesheet";
       sheet.href = `${href}?dev=${Date.now()}`;
-      sheet.setAttribute("data-arkfid-style", markDev);
+      sheet.setAttribute("data-ridger-style", markDev);
       document.head.appendChild(sheet);
       return () => {
         sheet.remove();
       };
     }
     const mark = "non-critical";
-    const selector = `link[data-arkfid-style="${mark}"]`;
+    const selector = `link[data-ridger-style="${mark}"]`;
     const existingLinks = document.querySelectorAll(selector);
     let alreadyLoaded = false;
 
@@ -66,7 +66,7 @@ export default function DeferredNonCriticalStyles({
     preload.as = "style";
     preload.href = href;
     preload.crossOrigin = "anonymous";
-    preload.setAttribute("data-arkfid-style", mark);
+    preload.setAttribute("data-ridger-style", mark);
 
     preload.onload = () => {
       const sheet = document.createElement("link");
@@ -74,7 +74,7 @@ export default function DeferredNonCriticalStyles({
       sheet.href = href;
       sheet.media = "print";
       sheet.crossOrigin = preload.crossOrigin;
-      sheet.setAttribute("data-arkfid-style", mark);
+      sheet.setAttribute("data-ridger-style", mark);
       sheet.onload = () => {
         sheet.media = "all";
       };
@@ -86,7 +86,7 @@ export default function DeferredNonCriticalStyles({
       fallback.rel = "stylesheet";
       fallback.href = href;
       fallback.crossOrigin = preload.crossOrigin;
-      fallback.setAttribute("data-arkfid-style", mark);
+      fallback.setAttribute("data-ridger-style", mark);
       document.head.appendChild(fallback);
     };
 

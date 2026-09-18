@@ -5,60 +5,47 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant light (&:is(.light *));
 
-@font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/Inter-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* Fonts are loaded via next/font/local in app/fonts.ts — no @font-face needed here */
 
 /* Tailwind already generates hover:brightness-[1.15] via safelist */
 
 @layer base {
   :root {
-    --font-inter: 'Inter';
-    --background: 1 0 0;
-    --foreground: 0.145 0 0;
-    --card: 0.94 0.009 75;
-    --card-foreground: 0.145 0 0;
-    --popover: 1 0 0;
-    --popover-foreground: 0.145 0 0;
-    --primary: 0.205 0 0;
-    --primary-foreground: 0.985 0 0;
-    --secondary: 0.97 0 0;
-    --secondary-foreground: 0.205 0 0;
-    --muted: 0.97 0 0;
-    --muted-foreground: 0.42 0 0;
-    --accent: 0.658 0.122 47.5;
-    --accent-foreground: 0.205 0 0;
+    /* Ridger design system — light mode (warm paper base) */
+    /* background: #faf7f2  oklch(0.977 0.006 85) */
+    --background: 0.977 0.006 85;
+    /* foreground/ink: #1a1a18  oklch(0.22 0.005 100) */
+    --foreground: 0.22 0.005 100;
+    /* surface/raised: #f1ece3  oklch(0.94 0.012 85) */
+    --card: 0.94 0.012 85;
+    --card-foreground: 0.22 0.005 100;
+    --popover: 0.94 0.012 85;
+    --popover-foreground: 0.22 0.005 100;
+    /* primary = deep pine: #1e3a32  oklch(0.31 0.045 170) */
+    --primary: 0.31 0.045 170;
+    --primary-foreground: 0.977 0.006 85;
+    --secondary: 0.94 0.012 85;
+    --secondary-foreground: 0.22 0.005 100;
+    /* muted text: #6e6a62  oklch(0.52 0.012 80) */
+    --muted: 0.94 0.012 85;
+    --muted-foreground: 0.52 0.012 80;
+    /* accent-2 (bronze, sparing): #9a7b4f  oklch(0.60 0.07 75) */
+    --accent: 0.60 0.07 75;
+    --accent-foreground: 0.22 0.005 100;
     --destructive: 0.577 0.245 27.325;
-    --border: 0.922 0 0;
-    --input: 0.922 0 0;
-    --ring: 0.658 0.122 47.5;
+    /* hairline/border: #d9d2c5  oklch(0.855 0.012 80) */
+    --border: 0.855 0.012 80;
+    --input: 0.855 0.012 80;
+    --ring: 0.31 0.045 170;
     --radius: 0.625rem;
     --breakpoint-xl: 1200px;
-    --brand: 0.658 0.122 47.5;
-    --brand-hover: 0.553 0.116 44;
-    --brand-soft: 0.928 0.022 58;
-    --brand-on-dark: 0.738 0.099 50;
-    --surface-warm: 0.928 0.012 68;
+    /* brand = deep pine */
+    --brand: 0.31 0.045 170;
+    --brand-hover: 0.27 0.05 170;
+    --brand-soft: 0.92 0.018 170;
+    --brand-on-dark: 0.72 0.06 160;
+    /* surface-warm = raised card surface */
+    --surface-warm: 0.94 0.012 85;
   }
 
   /* GPU acceleration: apply selectively to heavy animations only */
@@ -66,29 +53,36 @@
   /* Apply will-change only to specific elements that benefit from it */
 
   .dark {
-    --background: 0.145 0 0;
-    --foreground: 0.985 0 0;
-    --card: 0.205 0 0;
-    --card-foreground: 0.985 0 0;
-    --popover: 0.205 0 0;
-    --popover-foreground: 0.985 0 0;
-    --primary: 0.922 0 0;
-    --primary-foreground: 0.205 0 0;
-    --secondary: 0.269 0 0;
-    --secondary-foreground: 0.985 0 0;
-    --muted: 0.269 0 0;
-    --muted-foreground: 0.82 0 0;
-    --accent: 0.738 0.099 50;
-    --accent-foreground: 0.985 0 0;
+    /* Dark mode: deep ink background, pine surfaces, paper-toned text */
+    /* background: #12120f  oklch(0.13 0.004 100) */
+    --background: 0.13 0.004 100;
+    /* foreground: paper-toned  oklch(0.92 0.006 85) */
+    --foreground: 0.92 0.006 85;
+    /* card/surface: pine-shifted dark  oklch(0.21 0.018 170) */
+    --card: 0.21 0.018 170;
+    --card-foreground: 0.92 0.006 85;
+    --popover: 0.21 0.018 170;
+    --popover-foreground: 0.92 0.006 85;
+    /* primary in dark = paper text color */
+    --primary: 0.92 0.006 85;
+    --primary-foreground: 0.13 0.004 100;
+    --secondary: 0.26 0.025 170;
+    --secondary-foreground: 0.92 0.006 85;
+    --muted: 0.26 0.025 170;
+    --muted-foreground: 0.72 0.008 85;
+    /* accent = lighter bronze in dark */
+    --accent: 0.68 0.065 75;
+    --accent-foreground: 0.13 0.004 100;
     --destructive: 0.704 0.191 22.216;
     --border: 1 0 0 / 0.1;
     --input: 1 0 0 / 0.15;
-    --ring: 0.738 0.099 50;
-    --brand: 0.738 0.099 50;
-    --brand-hover: 0.85 0.085 55;
-    --brand-soft: 0.31 0.045 50;
-    --brand-on-dark: 0.738 0.099 50;
-    --surface-warm: 0.245 0.008 70;
+    --ring: 0.68 0.065 75;
+    /* brand in dark = lightened pine for legibility */
+    --brand: 0.55 0.06 165;
+    --brand-hover: 0.62 0.065 165;
+    --brand-soft: 0.21 0.025 170;
+    --brand-on-dark: 0.72 0.06 160;
+    --surface-warm: 0.26 0.025 170;
   }
 
   * {
@@ -101,7 +95,7 @@
     margin: 0;
     min-height: 100vh;
     font-family: var(
-      --font-inter,
+      --font-instrument-sans,
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
@@ -125,6 +119,21 @@
     overflow-wrap: break-word;
     text-wrap: balance;
     min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-fraunces, Georgia, serif);
+    font-weight: 300;
+    font-optical-sizing: auto;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-ibm-plex-mono, ui-monospace, monospace);
   }
 
   img {
@@ -370,24 +379,24 @@
     position: relative;
   }
 
-  /* Light mode: subtle warm glow only */
+  /* Light mode: subtle warm pine glow only */
   .agent-page-dim {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    background: radial-gradient(circle at 50% 0%, oklch(0.738 0.099 50 / 0.06), transparent 30rem);
+    background: radial-gradient(circle at 50% 0%, oklch(0.31 0.045 170 / 0.06), transparent 30rem);
   }
 
   /* Dark mode: full dark gradient background */
   .dark .agent-page {
-    background: #070707;
+    background: #070f0d;
   }
 
   .dark .agent-page-dim {
     background:
-      radial-gradient(circle at 50% 0%, rgb(221 126 42 / 0.12), transparent 34rem),
-      #070707;
+      radial-gradient(circle at 50% 0%, oklch(0.31 0.045 170 / 0.18), transparent 34rem),
+      #070f0d;
   }
 
   .agent-page-content {
@@ -401,7 +410,7 @@
 
   /* Text selection: readable on both themes */
   ::selection {
-    background-color: oklch(0.738 0.099 50 / 0.28);
+    background-color: oklch(0.31 0.045 170 / 0.22);
     color: inherit;
   }
 
@@ -413,6 +422,49 @@
     --tw-prose-counters: oklch(0.40 0 0);
     --tw-prose-bullets: oklch(0.40 0 0);
     --tw-prose-captions: oklch(0.40 0 0);
+  }
+
+  /* === Ridger signature utilities === */
+
+  /* Rule label: IBM Plex Mono, small-caps style, with hairline top rule */
+  .rule-label {
+    font-family: var(--font-ibm-plex-mono, ui-monospace, monospace);
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding-top: 0.625rem;
+    border-top: 1px solid oklch(var(--border));
+    color: oklch(var(--muted-foreground));
+    line-height: 1.4;
+  }
+
+  /* Large serif numeral class for stats sections */
+  .num-display {
+    font-family: var(--font-fraunces, Georgia, serif);
+    font-weight: 300;
+    font-optical-sizing: auto;
+    line-height: 1;
+  }
+
+  /* Primary CTA: deep pine bg, paper text, no gradient */
+  .btn-pine {
+    background-color: oklch(0.31 0.045 170);
+    color: oklch(0.977 0.006 85);
+    transition: background-color 200ms ease, color 200ms ease;
+    border: none;
+  }
+
+  .btn-pine:hover,
+  .btn-pine:focus-visible {
+    background-color: oklch(0.27 0.05 170);
+    color: oklch(0.977 0.006 85);
+  }
+
+  /* font-display utility: apply Fraunces to any element */
+  .font-display {
+    font-family: var(--font-fraunces, Georgia, serif);
+    font-optical-sizing: auto;
   }
 
   .dark .prose,
