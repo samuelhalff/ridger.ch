@@ -1,0 +1,22 @@
+name: Recycle ridger process
+# Fixed-purpose: frees port 5001 so the supervising router respawns the app
+# from current/ with a freshly loaded shared/.env. bash -lc wrapping is
+# required on this host (ContainerSSH runs plain exec channels dead).
+on:
+  workflow_dispatch:
+
+jobs:
+  recycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Install sshpass
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
+      - name: Recycle
+        env:
+          SSHPASS: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+          sshpass -e ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" bash -lc '"fuser -k 5001/tcp 2>/dev/null; echo recycled; sleep 3; fuser 5001/tcp 2>/dev/null && echo port-rebound || echo port-free-waiting-respawn"'
