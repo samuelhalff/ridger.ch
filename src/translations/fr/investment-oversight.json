@@ -6,12 +6,20 @@
   },
   "Intro": [
     "Confier ses avoirs à plusieurs gérants est une pratique saine. Encore faut-il pouvoir comparer leurs résultats sur une base commune et poser les bonnes questions au bon moment.",
-    "Nous assurons une surveillance continue et structurée. Il s'agit d'un rôle de contrôle, non de gestion : les décisions et l'exécution restent chez vos gérants régulés."
+    "Nous assurons une surveillance continue et structurée, et nous rapportons les résultats du portefeuille dans le format et selon les souhaits de votre famille. Il s'agit d'un rôle de contrôle et de coordination, non de gestion : les décisions et l'exécution restent chez vos gérants régulés."
   ],
   "Pillars": [
     {
+      "Title": "Reporting du portefeuille",
+      "Body": "Reporting patrimonial et de performance pour la famille, avec des résultats présentés dans le format et selon les souhaits convenus, sur une base commune à l'ensemble de vos relations."
+    },
+    {
       "Title": "Suivi des mandats",
       "Body": "Contrôle du respect des mandats et de la politique d'investissement convenue avec chaque gérant."
+    },
+    {
+      "Title": "Supervision des gérants",
+      "Body": "Supervision et coordination de l'activité des gérants. La gestion est assurée par des partenaires suisses régulés proches ; Ridger coordonne, supervise et les tient responsables."
     },
     {
       "Title": "Revues consolidées",
@@ -20,6 +28,10 @@
     {
       "Title": "Cadrage par indices",
       "Body": "Mise en perspective des résultats face à des indices de référence pertinents et transparents."
+    },
+    {
+      "Title": "Coordination et négociation",
+      "Body": "Coordination des investissements et négociation des conditions et des frais avec les banques et les gérants, dans votre intérêt."
     },
     {
       "Title": "Préparation du comité",

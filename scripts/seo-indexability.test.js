@@ -18,6 +18,7 @@ describe("canonical service URLs", () => {
       ['"/services/governance-succession"', '"/services/gouvernance-succession"'],
       ['"/services/tax-administration"', '"/services/fiscalite-administration"'],
       ['"/services/digital-vault"', '"/services/coffre-fort-numerique"'],
+      ['"/services/real-estate-transactions"', '"/services/immobilier-transactions"'],
     ];
 
     for (const [base, localized] of expectedMappings) {
@@ -63,6 +64,7 @@ describe("redirect canonicalization", () => {
       "gouvernance-succession",
       "fiscalite-administration",
       "coffre-fort-numerique",
+      "immobilier-transactions",
     ];
     for (const slug of localizedFrSlugs) {
       const withSlash = rewrites.find(

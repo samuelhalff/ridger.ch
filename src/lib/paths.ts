@@ -13,6 +13,7 @@ const frMap: Record<string, string> = {
   "/services/governance-succession": "/services/gouvernance-succession",
   "/services/tax-administration": "/services/fiscalite-administration",
   "/services/digital-vault": "/services/coffre-fort-numerique",
+  "/services/real-estate-transactions": "/services/immobilier-transactions",
 };
 
 const deMap: Record<string, string> = {
@@ -23,6 +24,7 @@ const deMap: Record<string, string> = {
   "/services/governance-succession": "/services/governance-nachfolge",
   "/services/tax-administration": "/services/steuerverwaltung",
   "/services/digital-vault": "/services/digitaler-tresor",
+  "/services/real-estate-transactions": "/services/immobilien-transaktionen",
 };
 
 const esMap: Record<string, string> = {
@@ -33,6 +35,7 @@ const esMap: Record<string, string> = {
   "/services/governance-succession": "/services/gobernanza-sucesion",
   "/services/tax-administration": "/services/administracion-fiscal",
   "/services/digital-vault": "/services/caja-fuerte-digital",
+  "/services/real-estate-transactions": "/services/inmobiliario-transacciones",
 };
 
 const ptMap: Record<string, string> = {
@@ -43,6 +46,7 @@ const ptMap: Record<string, string> = {
   "/services/governance-succession": "/services/governanca-sucessao",
   "/services/tax-administration": "/services/administracao-fiscal",
   "/services/digital-vault": "/services/cofre-digital",
+  "/services/real-estate-transactions": "/services/imobiliario-transacoes",
 };
 
 const identity = (p: string) => p;

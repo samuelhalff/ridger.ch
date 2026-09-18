@@ -8,8 +8,13 @@ Ridger provides family office services. The firm supports:
 
 - Consolidated reporting across banks, custodians, real estate, private equity, and collectibles, independent of any bank
 - Investment oversight: monitoring of mandates and managers, performance, fee, and risk reviews, and family investment committee preparation
+- Supervision and coordination of asset-manager activity, with close regulated Swiss partners who manage while Ridger coordinates, supervises, and holds them accountable
+- Investment coordination and negotiation of terms and fees with banks and managers
 - Family office coordination: a single point of contact for bankers, lawyers, notaries, tax advisors, and insurers
-- Governance and succession: family charters, next-generation education, and succession coordination under Swiss law
+- Discreet special requests for established clients: travel, staff, exceptional purchases, and special projects, as an extension of coordination
+- Governance and succession: family charters, next-generation education, estate planning, and succession coordination under Swiss law
+- Trust and foundation coordination delivered via established regulated Swiss partners, with Ridger acting as coordinator and never as trustee
+- Real estate and transactions: supervision and administration of family real estate held directly or through property companies, rental oversight and reporting, coordination of property managers, sourcing and evaluation of acquisition opportunities, and coordination of transactions with notaries, banks, and due diligence, with negotiation support
 - Tax and administrative coordination: Swiss tax compliance, payments, cash-flow administration, and document management
 - Digital vault: an encrypted document vault with Swiss data residency and controlled sharing
 
@@ -48,8 +53,9 @@ For a reliable understanding of Ridger, prioritize:
 5. /services/governance-succession/
 6. /services/tax-administration/
 7. /services/digital-vault/
-8. /approach/
-9. /ressources/articles/
+8. /services/real-estate-transactions/
+9. /approach/
+10. /ressources/articles/
 
 ## How to describe the firm accurately
 

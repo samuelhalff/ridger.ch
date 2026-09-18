@@ -6,12 +6,20 @@
   },
   "Intro": [
     "Entrusting assets to several managers is sound practice. What it requires is the ability to compare their results on a common basis and to ask the right questions at the right time.",
-    "We provide continuous, structured oversight. This is a monitoring role, not a management one: decisions and execution remain with your regulated managers."
+    "We provide continuous, structured oversight, and we report portfolio results in the format and in line with your family's wishes. This is a monitoring and coordination role, not a management one: decisions and execution remain with your regulated managers."
   ],
   "Pillars": [
     {
+      "Title": "Portfolio reporting",
+      "Body": "Wealth and performance reporting for the family, with results presented in the agreed format and in line with your wishes, on a common basis across all your relationships."
+    },
+    {
       "Title": "Mandate monitoring",
       "Body": "Monitoring of adherence to each mandate and the investment policy agreed with each manager."
+    },
+    {
+      "Title": "Manager supervision",
+      "Body": "Supervision and coordination of asset-manager activity. Management is carried out by close regulated Swiss partners; Ridger coordinates, supervises and holds them accountable."
     },
     {
       "Title": "Consolidated reviews",
@@ -20,6 +28,10 @@
     {
       "Title": "Benchmark framing",
       "Body": "Results set against relevant, transparent benchmarks for clear perspective."
+    },
+    {
+      "Title": "Coordination and negotiation",
+      "Body": "Coordination of investments and negotiation of terms and fees with banks and managers, in your interest."
     },
     {
       "Title": "Committee preparation",

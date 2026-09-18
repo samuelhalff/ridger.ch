@@ -42,6 +42,11 @@ const footerSections = [
         href: "/services/digital-vault/",
         ns: "servicesItems",
       },
+      {
+        titleKey: "RealEstateTransactions.Title",
+        href: "/services/real-estate-transactions/",
+        ns: "servicesItems",
+      },
     ],
   },
   {

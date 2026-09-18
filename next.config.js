@@ -411,6 +411,7 @@ const baseConfig = {
         "gouvernance-succession": "governance-succession",
         "fiscalite-administration": "tax-administration",
         "coffre-fort-numerique": "digital-vault",
+        "immobilier-transactions": "real-estate-transactions",
       },
       de: {
         "konsolidiertes-reporting": "consolidated-reporting",
@@ -419,6 +420,7 @@ const baseConfig = {
         "governance-nachfolge": "governance-succession",
         "steuerverwaltung": "tax-administration",
         "digitaler-tresor": "digital-vault",
+        "immobilien-transaktionen": "real-estate-transactions",
       },
       es: {
         "reporting-consolidado": "consolidated-reporting",
@@ -427,6 +429,7 @@ const baseConfig = {
         "gobernanza-sucesion": "governance-succession",
         "administracion-fiscal": "tax-administration",
         "caja-fuerte-digital": "digital-vault",
+        "inmobiliario-transacciones": "real-estate-transactions",
       },
       pt: {
         "reporting-consolidado": "consolidated-reporting",
@@ -435,6 +438,7 @@ const baseConfig = {
         "governanca-sucessao": "governance-succession",
         "administracao-fiscal": "tax-administration",
         "cofre-digital": "digital-vault",
+        "imobiliario-transacoes": "real-estate-transactions",
       },
     };
     const approachSlugMap = {

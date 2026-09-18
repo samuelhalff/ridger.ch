@@ -24,8 +24,12 @@
       "Items": [
         "Reporting consolidé : vue unique du patrimoine, indépendante des banques, performance (TWR) et transparence des frais",
         "Surveillance des investissements : suivi des mandats et gérants, revues de performance, frais et risque, préparation du comité d'investissement familial",
+        "Supervision de l'activité des gérants : Ridger travaille avec des partenaires suisses régulés qui gèrent, tandis que Ridger coordonne, supervise et les tient responsables ; négociation des conditions et des frais avec les banques et les gérants",
         "Coordination family office : interlocuteur unique coordonnant banquiers, avocats, notaires, conseillers fiscaux et assureurs",
-        "Gouvernance et succession : chartes familiales, éducation de la nouvelle génération, coordination successorale en droit suisse",
+        "Demandes particulières discrètes pour les clients établis : voyages, personnel, achats exceptionnels et projets spéciaux, en prolongement de la coordination",
+        "Gouvernance et succession : chartes familiales, éducation de la nouvelle génération, planification successorale et coordination successorale en droit suisse",
+        "Coordination de structures de trust et de fondation via des partenaires suisses régulés établis ; Ridger agit comme coordinateur, jamais comme trustee",
+        "Immobilier et transactions : supervision et administration du patrimoine immobilier détenu en direct ou via des sociétés immobilières, supervision locative et reporting, coordination des régies, repérage et évaluation d'opportunités d'acquisition, coordination des transactions avec notaires et banques et appui à la négociation",
         "Fiscalité et administration : coordination de la conformité fiscale suisse, supervision administrative, paiements et gestion documentaire",
         "Coffre-fort numérique : coffre documentaire chiffré, données hébergées en Suisse, partage contrôlé"
       ]
@@ -77,6 +81,7 @@
     { "Label": "Gouvernance et succession", "Href": "/services/governance-succession" },
     { "Label": "Fiscalité et administration", "Href": "/services/tax-administration" },
     { "Label": "Coffre-fort numérique", "Href": "/services/digital-vault" },
+    { "Label": "Immobilier et transactions", "Href": "/services/real-estate-transactions" },
     { "Label": "Contact", "Href": "/contact" }
   ]
 }
