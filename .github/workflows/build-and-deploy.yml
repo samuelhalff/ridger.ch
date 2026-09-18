@@ -173,8 +173,8 @@ jobs:
           PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
           PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
 
-          ENV_SYNC_B64=$(python - <<'PY'
-          import os, base64
+          python - <<'PY'
+          import os
           keys = [
             "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
             "TURNSTILE_SECRET_KEY",
@@ -185,8 +185,6 @@ jobs:
             "RESTART_SECRET_TOKEN",
           ]
           lines = [
-            # Fixed values: ridger runs on port 5001 (houle.ai holds 5000 on
-            # this host) and keeps DE/ES/PT noindexed until reviewed.
             "PORT=5001",
             "NEXT_PUBLIC_SITE_URL=https://ridger.ch",
             "PLACEHOLDER_LOCALES=de,es,pt",
@@ -195,36 +193,19 @@ jobs:
             value = os.environ.get(key, "")
             if value:
               lines.append(f"{key}={value}")
-          payload = "\n".join(lines).encode()
-          print(base64.b64encode(payload).decode())
+          with open("env_sync_file", "w") as fh:
+            fh.write("\n".join(lines) + "\n")
+          print(f"[deploy] env file built with {len(lines)} entries")
           PY
-          )
 
-          if [ -z "$ENV_SYNC_B64" ]; then
-            echo "[deploy] No env values to sync."
-            exit 0
-          fi
-
-          sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -p "$PORT" "$USER@$HOST" bash -lc '
-            set -euo pipefail
-            ENV_FILE="/srv/customer/sites/ridger.ch/shared/.env"
-            TMP_FILE="/tmp/ridger_env_sync"
-            mkdir -p "$(dirname "$ENV_FILE")"
-            printf "%s" "'"$ENV_SYNC_B64"'" | base64 -d > "$TMP_FILE"
-            touch "$ENV_FILE"
-            while IFS= read -r line; do
-              [ -z "$line" ] && continue
-              key=${line%%=*}
-              val=${line#*=}
-              esc=$(printf "%s" "$val" | sed -e "s/[\\\\&|]/\\\\\\\\&/g")
-              if grep -q "^${key}=" "$ENV_FILE"; then
-                sed -i "s|^${key}=.*|${key}=${esc}|" "$ENV_FILE"
-              else
-                printf "%s\n" "${key}=${val}" >> "$ENV_FILE"
-              fi
-            done < "$TMP_FILE"
-            rm -f "$TMP_FILE"
-          '
+          # SFTP, not ssh-exec: exec channels on this host have failed silently
+          # (ContainerSSH wedge, 2026-09-18), leaving secrets out of the runtime
+          # env while the step looked green. SFTP is a distinct channel.
+          sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" <<'SFTP'
+          put env_sync_file /srv/customer/sites/ridger.ch/shared/.env
+          SFTP
+          rm -f env_sync_file
+          echo "[deploy] shared/.env written via sftp"
 
       # ─── Extract, symlink and cleanup ───
       - name: Extract, symlink and cleanup releases
