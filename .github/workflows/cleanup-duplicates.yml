@@ -1,0 +1,67 @@
+name: Cleanup duplicate tenant processes
+# One-shot: legacy restart paths spawned duplicate site entrypoints that fight
+# for ports and flap the watchdog. Keeps the OLDEST router (panel-started) and
+# the newest app children; kills supervisor loops and younger duplicates.
+on:
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Install sshpass
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
+      - name: Cleanup
+        env:
+          SSHPASS: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+          sshpass -e ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" bash -lc '
+            set +e
+            echo "== before =="
+            ps -o pid,ppid,etimes,args | grep -E "node|while true" | grep -v grep
+            # 1. kill all supervisor loop shells (they respawn duplicates forever)
+            for pid in $(pgrep -f "while true; do cd"); do kill "$pid" 2>/dev/null && echo "killed loop $pid"; done
+            sleep 1
+            # 2. routers: node server.js with cwd in houle current — keep oldest
+            keep=""
+            for pid in $(pgrep -fx "node server.js"); do
+              cwd=$(readlink /proc/$pid/cwd 2>/dev/null)
+              case "$cwd" in */houle.ai/*) 
+                et=$(ps -o etimes= -p "$pid" | tr -d " ")
+                if [ -z "$keep" ] || [ "$et" -gt "$keepet" ]; then
+                  [ -n "$keep" ] && kill "$keep" 2>/dev/null && echo "killed younger router $keep"
+                  keep=$pid; keepet=$et
+                else
+                  kill "$pid" 2>/dev/null && echo "killed younger router $pid"
+                fi ;;
+              esac
+            done
+            echo "kept router: ${keep:-none}"
+            # 3. orphan houle app children (server-app.js) not parented to kept router
+            for pid in $(pgrep -f "server-app.js"); do
+              ppid=$(ps -o ppid= -p "$pid" | tr -d " ")
+              [ "$ppid" != "$keep" ] && kill "$pid" 2>/dev/null && echo "killed orphan app $pid (ppid $ppid)"
+            done
+            # 4. duplicate ridger apps: keep newest (respawned by kept router)
+            newest=""; newet=999999999
+            for pid in $(pgrep -fx "node server.js"); do
+              cwd=$(readlink /proc/$pid/cwd 2>/dev/null)
+              case "$cwd" in */ridger.ch/*)
+                et=$(ps -o etimes= -p "$pid" | tr -d " ")
+                if [ "$et" -lt "$newet" ]; then newest=$pid; newet=$et; fi ;;
+              esac
+            done
+            for pid in $(pgrep -fx "node server.js"); do
+              cwd=$(readlink /proc/$pid/cwd 2>/dev/null)
+              case "$cwd" in */ridger.ch/*)
+                [ "$pid" != "$newest" ] && kill "$pid" 2>/dev/null && echo "killed duplicate ridger $pid" ;;
+              esac
+            done
+            sleep 2
+            echo "== after =="
+            ps -o pid,ppid,etimes,args | grep -E "node|while true" | grep -v grep
+          '
