@@ -14,7 +14,6 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/src/lib/utils";
-import { MessageIcon } from "@/src/components/icons/MessageIcon";
 import type { NavData } from "@/src/components/navigation/types";
 import { List, X } from "@phosphor-icons/react";
 
@@ -122,19 +121,6 @@ const MobileMenu = ({
             <Suspense fallback={null}>
               <LangSwitchMobile onLocaleChange={handleLinkClick} />
             </Suspense>
-            <div className="mt-3 mb-3">
-              <Link
-                href={`${localePrefix}/contact/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                locale={locale}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent/30 py-3 text-center text-lg font-semibold shadow-sm transition-colors hover:bg-accent/40"
-                style={{ letterSpacing: 0.5 }}
-              >
-                <MessageIcon size={20} className="opacity-80" />
-                <span>{navData.labels.contact}</span>
-              </Link>
-            </div>
             <div>
               <Link
                 href={`${localePrefix}/`}
@@ -187,6 +173,24 @@ const MobileMenu = ({
             </div>
             {/* Footer is server-rendered in layout; omit here to keep client bundle light */}
           </nav>
+        </div>
+        {/* Bottom-anchored primary CTA: solid, high-contrast, always visible. */}
+        <div className="absolute inset-x-0 bottom-0 border-t border-border bg-background/95 px-4 pb-[max(env(safe-area-inset-bottom),1rem)] pt-3 backdrop-blur">
+          <Link
+            href={`${localePrefix}/contact/`}
+            onClick={handleLinkClick}
+            prefetch={false}
+            locale={locale}
+            className="flex w-full items-center justify-center rounded-lg bg-primary py-3.5 text-[15px] font-semibold tracking-[-0.01em] text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            {navData.labels.contact}
+          </Link>
+          <a
+            href="mailto:contact@ridger.ch"
+            className="mt-2.5 block text-center font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground"
+          >
+            contact@ridger.ch
+          </a>
         </div>
       </SheetContent>
     </Sheet>
