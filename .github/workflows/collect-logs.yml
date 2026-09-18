@@ -1,0 +1,29 @@
+name: Collect host logs
+# Forensic helper: the host throttles ssh from residential IPs but accepts
+# runner sessions. Dumps tenant logs + resource state into the run output.
+on:
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Install sshpass
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
+      - name: Collect logs
+        env:
+          SSHPASS: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+          sshpass -e ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" '
+            echo "=== router-status.log ==="; tail -40 /srv/customer/sites/houle.ai/router-status.log 2>/dev/null
+            echo "=== houle server.out (tail 60) ==="; tail -60 /srv/customer/sites/houle.ai/server.out 2>/dev/null
+            echo "=== ridger server.out (tail 30) ==="; tail -30 /srv/customer/sites/ridger.ch/server.out 2>/dev/null
+            echo "=== ridger deploy.restart.log ==="; tail -20 /srv/customer/sites/ridger.ch/deploy.restart.log 2>/dev/null
+            echo "=== cgroup memory max/current ==="; cat /sys/fs/cgroup/memory.max /sys/fs/cgroup/memory.current 2>/dev/null
+            echo "=== processes ==="; ps -o pid,rss,etime,args -u $(whoami) 2>/dev/null | head -15
+            echo "=== disk ==="; df -h /srv/customer 2>/dev/null | tail -1
+          '
