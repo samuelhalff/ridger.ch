@@ -1,24 +1,25 @@
 {
-    "Home": "Startseite",
-    "Services": "Dienstleistungen",
-    "Approach": "Ansatz",
-    "Contact": "Kontakt",
-    "Language": "Sprache",
-    "Theme": "Design",
-    "Ressources": "Ressourcen",
-    "MobileNavigation": "Mobile Navigation",
-    "CloseMenu": "Menü schließen",
-    "CompanyFooter": "Ridger",
-    "Lang": {
-        "en": "English",
-        "fr": "Français",
-        "de": "Deutsch",
-        "es": "Español",
-        "pt": "Português"
-    },
-    "Themes": {
-        "Light": "Hell",
-        "Dark": "Dunkel",
-        "System": "System"
-    }
+  "Home": "Startseite",
+  "Services": "Dienstleistungen",
+  "Approach": "Ansatz",
+  "Platform": "Die Plattform",
+  "Contact": "Kontakt",
+  "Language": "Sprache",
+  "Theme": "Design",
+  "Ressources": "Ressourcen",
+  "MobileNavigation": "Mobile Navigation",
+  "CloseMenu": "Menü schließen",
+  "CompanyFooter": "Ridger",
+  "Lang": {
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "Themes": {
+    "Light": "Hell",
+    "Dark": "Dunkel",
+    "System": "System"
+  }
 }

@@ -1,24 +1,25 @@
 {
-    "Home": "Início",
-    "Services": "Serviços",
-    "Approach": "Abordagem",
-    "Contact": "Contacto",
-    "Language": "Idioma",
-    "Theme": "Tema",
-    "Ressources": "Recursos",
-    "MobileNavigation": "Navegação móvel",
-    "CloseMenu": "Fechar menu",
-    "CompanyFooter": "Ridger",
-    "Lang": {
-        "en": "English",
-        "fr": "Français",
-        "de": "Deutsch",
-        "es": "Español",
-        "pt": "Português"
-    },
-    "Themes": {
-        "Light": "Claro",
-        "Dark": "Escuro",
-        "System": "Sistema"
-    }
+  "Home": "Início",
+  "Services": "Serviços",
+  "Approach": "Abordagem",
+  "Platform": "A plataforma",
+  "Contact": "Contacto",
+  "Language": "Idioma",
+  "Theme": "Tema",
+  "Ressources": "Recursos",
+  "MobileNavigation": "Navegação móvel",
+  "CloseMenu": "Fechar menu",
+  "CompanyFooter": "Ridger",
+  "Lang": {
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "Themes": {
+    "Light": "Claro",
+    "Dark": "Escuro",
+    "System": "Sistema"
+  }
 }

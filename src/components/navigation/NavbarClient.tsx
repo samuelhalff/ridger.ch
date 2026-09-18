@@ -123,6 +123,21 @@ export default function NavbarClient({
                 </li>
                 <li>
                   <Link
+                    href={`${localePrefix}/platform/`}
+                    prefetch={false}
+                    locale={locale}
+                    aria-current={
+                      isSection(`${localePrefix}/platform`) ? "page" : undefined
+                    }
+                    className={`${linkBase} ${
+                      isSection(`${localePrefix}/platform`) ? activeClasses : ""
+                    }`}
+                  >
+                    {navData.labels.platform}
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={`${localePrefix}/ressources/`}
                     prefetch={false}
                     locale={locale}

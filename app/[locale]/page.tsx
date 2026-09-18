@@ -214,6 +214,33 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
         </div>
       </section>
 
+      <section
+        id="platform"
+        className="mx-auto my-14 w-full max-w-[1240px] px-5 sm:px-8"
+        aria-labelledby="platform-title"
+      >
+        <div className="rounded-lg bg-brand px-7 py-12 text-background sm:px-12 sm:py-16">
+          <p className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70">
+            {homeT("Platform.Eyebrow") as string}
+          </p>
+          <h2
+            id="platform-title"
+            className="font-display mt-3 max-w-[560px] text-[28px] font-light leading-[1.15] tracking-[-0.01em] sm:text-[34px]"
+          >
+            {homeT("Platform.Title") as string}
+          </h2>
+          <p className="mt-4 max-w-[520px] text-[14.5px] leading-[1.6] opacity-80">
+            {homeT("Platform.Body") as string}
+          </p>
+          <a
+            href={`${localePrefix}/platform/`}
+            className="mt-7 inline-block border-b border-current pb-0.5 font-mono text-[12px] uppercase tracking-[0.1em] transition-opacity hover:opacity-70"
+          >
+            {homeT("Platform.CTA") as string}
+          </a>
+        </div>
+      </section>
+
       <section id="about">
         <Defer
           rootMargin="300px"

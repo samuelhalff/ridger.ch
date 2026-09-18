@@ -1,24 +1,25 @@
 {
-    "Home": "Home",
-    "Services": "Services",
-    "Approach": "Approach",
-    "Contact": "Contact",
-    "Language": "Language",
-    "Theme": "Theme",
-    "Ressources": "Resources",
-    "MobileNavigation": "Mobile navigation",
-    "CloseMenu": "Close menu",
-    "CompanyFooter": "Ridger",
-    "Lang": {
-        "en": "English",
-        "fr": "Français",
-        "de": "Deutsch",
-        "es": "Español",
-        "pt": "Português"
-    },
-    "Themes": {
-        "Light": "Light",
-        "Dark": "Dark",
-        "System": "System"
-    }
+  "Home": "Home",
+  "Services": "Services",
+  "Approach": "Approach",
+  "Platform": "Platform",
+  "Contact": "Contact",
+  "Language": "Language",
+  "Theme": "Theme",
+  "Ressources": "Resources",
+  "MobileNavigation": "Mobile navigation",
+  "CloseMenu": "Close menu",
+  "CompanyFooter": "Ridger",
+  "Lang": {
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "Themes": {
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
+  }
 }

@@ -25,6 +25,7 @@ const staticPaths = [
   "/",
   "/ai-profile",
   "/approach",
+  "/platform",
   "/services",
   "/ressources",
   "/contact",

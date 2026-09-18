@@ -1,96 +1,102 @@
 {
-    "Meta": {
-        "Title": "Family office in Geneva | Ridger",
-        "Description": "A new-generation family office in Geneva: consolidated reporting, coordination of your advisors and Swiss discretion. Ridger does not manage assets."
-    },
-    "Hero": {
-        "Title": "A new-generation family office",
-        "Description": "Ridger brings your wealth into one view, coordinates your advisors and oversees your administration, with Swiss discretion and rigour. We do not manage your assets; we watch over the whole.",
-        "CTA": "Request a confidential consultation",
-        "SecondaryCTA": "Request a confidential consultation",
-        "Badge": "Geneva",
-        "BadgeTwo": "Digital-first",
-        "ImageAlt": "Family office in Geneva",
-        "ScrollHint": "Discover",
-        "Facts": {
-            "Implantation": {
-                "Label": "// Independence",
-                "Value": "Bank-agnostic",
-                "Sub": "Independent of any bank or manager, aligned with your interests alone."
-            },
-            "Expertises": {
-                "Label": "// Scope",
-                "Value": "One view",
-                "Sub": "Consolidated reporting, oversight, coordination and administrative oversight."
-            },
-            "Solutions": {
-                "Label": "// Discretion",
-                "Value": "Swiss",
-                "Sub": "Data hosted in Switzerland, professional secrecy, reply within one business day."
-            }
-        }
-    },
-    "Services": {
-        "Eyebrow": "Our services",
-        "Title": "What your family needs, under one roof.",
-        "Subtitle": ""
-    },
-    "Trust": {
-        "Eyebrow": "Our commitments",
-        "DataResidency": {
-            "Title": "Swiss data residency",
-            "Description": "Your documents and data are hosted in Switzerland, shared only with the people you designate."
-        },
-        "Secrecy": {
-            "Title": "Professional secrecy",
-            "Description": "Confidentiality is at the heart of our work, at every exchange and every step."
-        },
-        "Response": {
-            "Title": "Reply within one business day",
-            "Description": "A single point of contact who knows your files and replies within one business day."
-        }
-    },
-    "How": {
-        "Eyebrow": "How we work",
-        "Title": "Digital-first, human above all.",
-        "Steps": [
-            {
-                "Title": "Digital-first",
-                "Body": "Continuous consolidation and digital-first workflows, for information that is always current and secure."
-            },
-            {
-                "Title": "A single interlocutor",
-                "Body": "One address for your requests, mobilising the right skills at the right time."
-            },
-            {
-                "Title": "Swiss discretion",
-                "Body": "The confidentiality and rigour of a craft rooted in the Geneva tradition."
-            }
-        ]
-    },
-    "About": {
-        "Eyebrow": "Why Ridger",
-        "Title": "An independent view of your wealth",
-        "Content": [
-            "Ridger is a digital-first multi-family office based in Geneva. We support families in consolidating, monitoring and coordinating their wealth, without ever managing their assets in place of their banks and managers.",
-            "Our independence is the condition for an objective view. We have no product to place and no transaction to prompt; our only mission is to give you a clear picture and coordinate your advisors.",
-            "We begin with an audit of your existing setup, then put in place consolidated reporting and a rhythm of oversight suited to your priorities. You keep control of decisions; we prepare and follow up on them.",
-            "Confidentiality and discretion guide everything we do. Your data is hosted in Switzerland and shared only with the people you designate."
-        ],
-        "Quality": {
-            "Title": "Fee transparency",
-            "Content": "We make the explicit and implicit fees of your banking relationships legible, for a full understanding of what your wealth costs."
-        },
-        "Innovation": {
-            "Title": "A digital method",
-            "Content": "Continuous consolidation, a digital vault and controlled sharing: our digital-first workflows save time without ever compromising on security."
-        }
-    },
-    "FAQ": {
-        "Title": "Frequently asked questions",
-        "Subtitle": "Quick answers to common questions about our role and services."
-    },
-    "Testimonials": {
-        "SectionTitle": "Testimonials"
+  "Meta": {
+    "Title": "Family office in Geneva | Ridger",
+    "Description": "A new-generation family office in Geneva: consolidated reporting, coordination of your advisors and Swiss discretion. Ridger does not manage assets."
+  },
+  "Hero": {
+    "Title": "A new-generation family office",
+    "Description": "Ridger brings your wealth into one view, coordinates your advisors and oversees your administration, with Swiss discretion and rigour. We do not manage your assets; we watch over the whole.",
+    "CTA": "Request a confidential consultation",
+    "SecondaryCTA": "Request a confidential consultation",
+    "Badge": "Geneva",
+    "BadgeTwo": "Digital-first",
+    "ImageAlt": "Family office in Geneva",
+    "ScrollHint": "Discover",
+    "Facts": {
+      "Implantation": {
+        "Label": "// Independence",
+        "Value": "Bank-agnostic",
+        "Sub": "Independent of any bank or manager, aligned with your interests alone."
+      },
+      "Expertises": {
+        "Label": "// Scope",
+        "Value": "One view",
+        "Sub": "Consolidated reporting, oversight, coordination and administrative oversight."
+      },
+      "Solutions": {
+        "Label": "// Discretion",
+        "Value": "Swiss",
+        "Sub": "Data hosted in Switzerland, professional secrecy, reply within one business day."
+      }
     }
+  },
+  "Services": {
+    "Eyebrow": "Our services",
+    "Title": "What your family needs, under one roof.",
+    "Subtitle": ""
+  },
+  "Trust": {
+    "Eyebrow": "Our commitments",
+    "DataResidency": {
+      "Title": "Swiss data residency",
+      "Description": "Your documents and data are hosted in Switzerland, shared only with the people you designate."
+    },
+    "Secrecy": {
+      "Title": "Professional secrecy",
+      "Description": "Confidentiality is at the heart of our work, at every exchange and every step."
+    },
+    "Response": {
+      "Title": "Reply within one business day",
+      "Description": "A single point of contact who knows your files and replies within one business day."
+    }
+  },
+  "How": {
+    "Eyebrow": "How we work",
+    "Title": "Digital-first, human above all.",
+    "Steps": [
+      {
+        "Title": "Digital-first",
+        "Body": "Continuous consolidation and digital-first workflows, for information that is always current and secure."
+      },
+      {
+        "Title": "A single interlocutor",
+        "Body": "One address for your requests, mobilising the right skills at the right time."
+      },
+      {
+        "Title": "Swiss discretion",
+        "Body": "The confidentiality and rigour of a craft rooted in the Geneva tradition."
+      }
+    ]
+  },
+  "About": {
+    "Eyebrow": "Why Ridger",
+    "Title": "An independent view of your wealth",
+    "Content": [
+      "Ridger is a digital-first multi-family office based in Geneva. We support families in consolidating, monitoring and coordinating their wealth, without ever managing their assets in place of their banks and managers.",
+      "Our independence is the condition for an objective view. We have no product to place and no transaction to prompt; our only mission is to give you a clear picture and coordinate your advisors.",
+      "We begin with an audit of your existing setup, then put in place consolidated reporting and a rhythm of oversight suited to your priorities. You keep control of decisions; we prepare and follow up on them.",
+      "Confidentiality and discretion guide everything we do. Your data is hosted in Switzerland and shared only with the people you designate."
+    ],
+    "Quality": {
+      "Title": "Fee transparency",
+      "Content": "We make the explicit and implicit fees of your banking relationships legible, for a full understanding of what your wealth costs."
+    },
+    "Innovation": {
+      "Title": "A digital method",
+      "Content": "Continuous consolidation, a digital vault and controlled sharing: our digital-first workflows save time without ever compromising on security."
+    }
+  },
+  "FAQ": {
+    "Title": "Frequently asked questions",
+    "Subtitle": "Quick answers to common questions about our role and services."
+  },
+  "Testimonials": {
+    "SectionTitle": "Testimonials"
+  },
+  "Platform": {
+    "Eyebrow": "The platform",
+    "Title": "All your affairs, in one place",
+    "Body": "Consolidated wealth, positions by bank, real estate, documents and reports: your family follows everything from one secure space, hosted in Switzerland, continuously updated.",
+    "CTA": "Explore the platform"
+  }
 }
