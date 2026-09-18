@@ -1,0 +1,100 @@
+{
+  "ImageAlt": "Vue aérienne d'une forêt luxuriante rejoignant un lac suisse turquoise",
+  "Hero": {
+    "Badge": "Externalisation",
+    "BadgeTwo": "Experts BPO",
+    "Title": "Externalisation back-office en Suisse romande",
+    "Description": "Ridger offre des solutions d'externalisation pour vos tâches comptables, de paie et administratives. Concentrez-vous sur votre cœur de métier pendant que nous nous occupons du reste avec expertise et confidentialité.",
+    "CTA": "Optimiser mon organisation",
+    "SecondaryCTA": "Rencontrer l'Équipe"
+  },
+  "Presentation": {
+    "Title": "Externalisation administrative et comptable pour PME",
+    "Subtitle": "Déléguer, se concentrer, grandir",
+    "Intro": [
+      "Auprès d'une fiduciaire, vous pouvez externaliser l'ensemble de votre back-office : tenue de la comptabilité, gestion des salaires et des assurances sociales, facturation, TVA et suivi administratif. L'intérêt est double : accéder à des compétences spécialisées sans recruter, et transformer des coûts fixes en un service ajusté à votre volume réel d'activité.",
+      "Depuis Genève, Ridger accompagne PME, indépendants et filiales de groupes à Genève, Lausanne, dans le canton de Vaud et dans toute la Suisse romande, avec des solutions flexibles qui assurent efficacité et contrôle des coûts.",
+      "Nous définissons des SLA simples et partageons un point mensuel pour que vous sachiez ce qui est fait."
+    ],
+    "ServicesTitle": "Nos Services d'Externalisation",
+    "Services": [
+      "Externalisation Comptable : Gestion complète de votre tenue de livres et rapports financiers",
+      "Externalisation de la Paie : Services complets de traitement de paie et administration RH",
+      "Gestion Administrative : Prise en charge complète de toutes vos tâches administratives",
+      "Optimisation des Processus : Rationalisation et amélioration de vos processus d'affaires pour l'efficacité"
+    ],
+    "StrengthsTitle": "Nos forces pour vos besoins d'externalisation",
+    "Strengths": [
+      {
+        "Title": "Expertise et fiabilité",
+        "Desc": "Notre équipe garantit des services de haute qualité et une confidentialité stricte."
+      },
+      {
+        "Title": "Contrôle des coûts",
+        "Desc": "L'externalisation vous permet d'optimiser vos coûts et de bénéficier de solutions évolutives."
+      },
+      {
+        "Title": "Flexibilité et évolutivité",
+        "Desc": "Nos services s'adaptent à vos besoins et à l'évolution de votre entreprise."
+      },
+      {
+        "Title": "Focus sur votre cœur de métier",
+        "Desc": "Déléguez les tâches administratives et concentrez-vous sur l'essentiel : votre croissance."
+      }
+    ],
+    "LongFormTitle": "Externaliser le back-office sans perdre le contrôle",
+    "LongFormSections": [
+      {
+        "Title": "Pour qui",
+        "Body": [
+          "PME, entrepreneurs et filiales qui veulent déléguer comptabilité, paie, facturation, classement ou administration sans créer une équipe interne complète.",
+          "Le service convient lorsque la charge administrative détourne les dirigeants de l’activité principale."
+        ]
+      },
+      {
+        "Title": "Périmètre possible",
+        "Body": [
+          "Comptabilité courante, factures fournisseurs, notes de frais, paie, relances, documents administratifs, reporting et coordination avec partenaires externes.",
+          "Le périmètre est documenté pour éviter les zones grises entre vos équipes et Ridger."
+        ]
+      },
+      {
+        "Title": "Externalisation de la paie à Genève, Lausanne et en Suisse romande",
+        "Body": [
+          "Confier votre paie à une fiduciaire couvre tout le cycle salarial : préparation des bulletins de salaire mensuels, déclarations aux assurances sociales (AVS, LPP, LAA, allocations familiales), gestion de l'impôt à la source, établissement des certificats de salaire annuels et transmissions électroniques via un logiciel certifié Swissdec. Nous gérons aussi les entrées et sorties de collaborateurs, les attestations employeur et la correspondance avec les caisses de compensation.",
+          "Cette formule s'adresse aux PME qui ne veulent pas immobiliser une fonction paie interne, aux scale-ups dont l'effectif évolue rapidement et aux groupes internationaux qui cherchent un partenaire local maîtrisant les particularités suisses, y compris l'emploi de frontaliers.",
+          "Externaliser la paie protège la confidentialité des rémunérations vis-à-vis des équipes internes, garantit une conformité durable face à des règles sociales et fiscales qui évoluent chaque année, et assure la continuité du traitement en cas d'absence ou de départ : vos collaborateurs sont payés à temps, chaque mois, sans interruption.",
+          "Notre équipe paie intervient depuis notre bureau de Genève et sert des employeurs établis à Lausanne, dans le canton de Vaud et ailleurs en Suisse romande, à distance via des canaux sécurisés ou lors de rendez-vous sur site selon vos besoins."
+        ]
+      },
+      {
+        "Title": "Externaliser sa comptabilité en Suisse romande",
+        "Body": [
+          "L'externalisation comptable comprend la saisie et la tenue des livres, le traitement des factures fournisseurs et des notes de frais, les rapprochements bancaires, les décomptes TVA, les clôtures mensuelles ou trimestrielles et la préparation des états financiers annuels selon le Code des obligations.",
+          "Nous travaillons en priorité sur Odoo, dont Ridger est spécialiste : numérisation des pièces, reconnaissance automatique des factures, flux bancaires connectés et tableaux de bord consultables en temps réel. Si vous utilisez déjà un autre outil, nous pouvons intervenir directement dans votre environnement existant.",
+          "La transition suit des étapes claires : analyse de l'existant, reprise des soldes et de l'historique, paramétrage du plan comptable, définition des flux de documents, puis une courte période de fonctionnement en parallèle avant la bascule complète. Vous restez propriétaire de vos données et y accédez à tout moment.",
+          "Résultat : une comptabilité à jour, des chiffres fiables pour piloter votre activité et un interlocuteur unique qui coordonne, si nécessaire, avec votre organe de révision, votre banque ou l'administration fiscale."
+        ]
+      },
+      {
+        "Title": "Organisation",
+        "Body": [
+          "Nous définissons les canaux, délais, validations, formats de reporting et règles d’escalade dès le début du mandat.",
+          "Les routines sont simples, répétables et adaptées au volume réel plutôt qu’à un modèle théorique."
+        ]
+      },
+      {
+        "Title": "Coûts, devis et pilotage",
+        "Body": [
+          "Les coûts dépendent du volume de transactions, du nombre d’interlocuteurs, des outils, de la fréquence de reporting et du niveau de coordination.",
+          "Pour obtenir une estimation immédiate et sans engagement, utilisez notre devis instantané en ligne ou contactez-nous pour un échange sur votre situation ; nous précisons ensuite le périmètre et le tarif dans une proposition écrite.",
+          "Vous gardez la visibilité sur les tâches traitées, les points bloquants et les décisions nécessaires."
+        ]
+      }
+    ],
+    "PayrollCrossLink": {
+      "Text": "Vous cherchez avant tout à externaliser vos salaires ?",
+      "LinkLabel": "Découvrez notre service de gestion des salaires."
+    }
+  }
+}

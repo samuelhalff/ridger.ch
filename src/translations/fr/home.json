@@ -1,0 +1,90 @@
+{
+    "Meta": {
+        "Title": "Accueil | Ridger",
+        "Description": "Soutien fiduciaire expert à Genève et Lausanne. Comptabilité, fiscalité, salaires, domiciliation et accompagnement ERP pour aider les entreprises suisses et internationales à rester conformes et à croître sereinement."
+    },
+    "Hero": {
+        "Title": "Comptabilité, fiscalité, tranquillité.",
+        "Description": "Une fiduciaire genevoise complète, exécutée avec précision suisse et la vitesse des outils numériques modernes pour accompagner PME, entrepreneurs et familles.",
+        "CTA": "Contactez-nous",
+        "SecondaryCTA": "Obtenez un devis instantané",
+        "Badge": "Genève · Lausanne",
+        "BadgeTwo": "Assisté par l'IA",
+        "OdooBadge": "Solutions digitales & ERP",
+        "OdooPartnerBadge": "Partenaire Odoo officiel",
+        "ImageAlt": "Experts d'Ridger en accompagnement comptable, fiscal et fiduciaire pour entreprises suisses",
+        "ScrollHint": "Découvrir plus",
+        "Facts": {
+            "Implantation": {
+                "Label": "// Implantation",
+                "Value": "Genève · Lausanne",
+                "Sub": "Présence en Suisse romande pour les PME suisses et entreprises internationales."
+            },
+            "Expertises": {
+                "Label": "// Expertises",
+                "Value": "Compta · Tax · RH",
+                "Sub": "Comptabilité, fiscalité, salaires, corporate, domiciliation et ERP."
+            },
+            "Solutions": {
+                "Label": "// Solutions",
+                "Value": "Odoo · IA",
+                "Sub": "Partenaire Odoo officiel et outils numériques pour accélérer l'exécution sans perdre en précision."
+            }
+        }
+    },
+    "Services": {
+        "Eyebrow": "Nos services",
+        "Title": "Nos services",
+        "Subtitle": ""
+    },
+    "Trust": {
+        "Eyebrow": "Affiliations et cadres",
+        "Sofit": {
+            "Title": "SO-FIT",
+            "Description": "Membre OAR / SRO LBA. Procédures KYC pour domiciliation sensible, tiers séquestre (escrow), flux de paiement et structures documentées."
+        },
+        "Odoo": {
+            "Title": "Odoo",
+            "Description": "Partenaire officiel pour comptabilité, automatisations et reporting."
+        },
+        "Gaap": {
+            "Title": "Swiss GAAP FER",
+            "Description": "États financiers lisibles, cohérents et auditables."
+        }
+    },
+    "About": {
+        "Eyebrow": "À propos",
+        "Title": "Pourquoi choisir Ridger ?",
+        "Content": [
+            "Ridger s'appuie sur une expertise locale profonde et des outils technologiques de pointe pour accompagner entrepreneurs, entreprises familiales, ONG et groupes internationaux dans la sécurisation de leur comptabilité et conformité suisse. Nous agissons comme une équipe fiduciaire intégrée qui comprend les réalités opérationnelles de la Romandie tout en coordonnant les parties prenantes à l'étranger.",
+            "Nos spécialistes pluridisciplinaires couvrent comptabilité, fiscalité, salaires, administration RH, gouvernance et secrétariat d'entreprise. Vous bénéficiez de comptables brevetés, fiscalistes et consultants qui transforment les règles complexes en plans d'action pragmatiques pour votre organisation.",
+            "Chaque mandat débute par une phase d'analyse durant laquelle nous cartographions vos objectifs, processus internes et appétence au risque. Nous concevons ensuite un plan de services évolutif, de la constitution et tenue comptable au reporting consolidé, à la stratégie TVA ou à l'externalisation RH.",
+            "Le cadre réglementaire suisse évolue rapidement. Nous suivons les mises à jour des OAR / SRO, de l'AVS et des cantons, mettons en œuvre les ajustements requis et documentons les contrôles nécessaires afin que vous restiez prêt pour un audit. Nos clients comptent sur nous pour anticiper les échéances, éviter les pénalités et maintenir une documentation irréprochable.",
+            "La technologie est au cœur de notre modèle. En combinant traitement documentaire assisté par IA et intégrations ERP Odoo, nous raccourcissons les délais de clôture, automatisons les rapprochements répétitifs et produisons des tableaux de bord pour piloter vos décisions en temps réel, sans compromis sur la sécurité des données.",
+            "Ancrés à Genève et Lausanne, nous coordonnons régulièrement avec avocats, auditeurs et fiscalistes en Suisse, en Europe et sur le continent américain. Un accompagnement multilingue en français, anglais, allemand, espagnol et portugais assure une communication fluide pour les équipes distribuées.",
+            "Nos clients apprécient notre tarification transparente, nos interlocuteurs dédiés et la clarté de nos livrables. Vous connaissez toujours le responsable de chaque tâche, l'état des démarches en cours et les prochaines échéances de conformité au calendrier.",
+            "Choisir Ridger, c'est s'associer à une fiduciaire qui conjugue précision suisse, outils innovants et accompagnement humain. Nous prenons en charge comptabilité, fiscalité, salaires et administration d'entreprise pour que vous puissiez vous concentrer sur la stratégie, vos clients et une croissance durable.",
+            "Notre expertise en comptabilité suisse couvre la tenue de livres, les états financiers, les rapports de gestion et la préparation aux audits. Nous maîtrisons les normes Swiss GAAP FER et IFRS pour garantir des états financiers précis et conformes aux exigences légales.",
+            "En matière de fiscalité suisse, nous optimisons votre charge fiscale tout en assurant la conformité avec la loi. Cela inclut la TVA suisse, l'impôt fédéral direct, les impôts cantonaux et communaux, ainsi que les conventions de double imposition pour les entreprises internationales.",
+            "Nos services de paie et RH en Suisse incluent le traitement des salaires, les déclarations sociales AVS/AI/APG/AC, la gestion des assurances et des avantages sociaux. Nous assurons la conformité avec la loi sur le travail et les conventions collectives de travail.",
+            "Pour la domiciliation d'entreprise en Suisse, nous fournissons une adresse commerciale prestigieuse à Genève ou Lausanne, la gestion du courrier et des appels téléphoniques, ainsi que tous les services administratifs requis par la loi suisse.",
+            "Notre accompagnement ERP avec Odoo comprend l'implémentation, la personnalisation, la formation et le support technique. Nous intégrons vos processus comptables, de gestion et opérationnels dans une plateforme unifiée pour améliorer l'efficacité et la visibilité.",
+            "Les services de corporate governance incluent la constitution de sociétés, les modifications statutaires, les assemblées générales, la tenue des registres légaux et le secrétariat juridique. Nous assurons la conformité avec le droit suisse des sociétés."
+        ],
+        "Quality": {
+            "Title": "Normes de qualité suisse",
+            "Content": "Nous appliquons les principes comptables Swiss GAAP FER, maintenons des contrôles internes robustes et documentons chaque processus afin que auditeurs et autorités disposent d'informations complètes et ponctuelles. Formation continue, revues croisées et check-lists inspirées ISO garantissent la précision et la fiabilité attendues."
+        },
+        "Innovation": {
+            "Title": "Solutions technologiques",
+            "Content": "Notre intégration d'outils d'IA et de systèmes ERP modernes nous permet de fournir des services plus rapides et précis tout en préservant le lien humain indispensable. Portails sécurisés, workflows automatisés et analyses avancées offrent une visibilité instantanée sans perturber votre gouvernance."
+        }
+    },
+    "FAQ": {
+        "Title": "Questions fréquemment posées",
+        "Subtitle": "Réponses rapides aux questions courantes sur nos produits et services."
+    },
+    "Testimonials": {
+        "SectionTitle": "Témoignages"
+    }
+}

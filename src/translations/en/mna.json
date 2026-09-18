@@ -1,0 +1,80 @@
+{
+  "ImageAlt": "Autumn reflections on Lake Blausee in the Bernese Oberland",
+  "Hero": {
+    "Badge": "Swiss mid-market",
+    "BadgeTwo": "Deal specialists",
+    "Title": "M&A advisory for Swiss deals",
+    "Description": "We guide Swiss founders, family businesses and investors through buy-side and sell-side transactions with disciplined process management, valuation expertise and post-deal integration support.",
+    "CTA": "Schedule a call"
+  },
+  "Presentation": {
+    "Title": "Swiss M&A: buy-side, sell-side and valuation",
+    "Subtitle": "Preparing, negotiating and closing transactions with confidence",
+    "Intro": [
+      "Ridger delivers hands-on M&A advisory across French and German speaking Switzerland. We shape deal strategy, prepare financial models, coordinate due diligence and lead negotiations so you can stay focused on the business.",
+      "Our team covers the key searches people use when planning a deal — Swiss M&A advisory, company valuation, buy-side due diligence, sell-side preparation, private equity exits and succession planning. We translate that demand into a clear roadmap tailored to your objectives.",
+      "We leverage transaction data, market comparables and management insights to secure terms that reflect the true value of your company while protecting founder interests."
+    ],
+    "PartnerNote": "For legal structuring, SPA drafting and regulatory filings we work hand in hand with our trusted law firm partners.",
+    "PartnerLinkLabel": "Meet our partners",
+    "ServicesTitle": "Transaction services",
+    "Services": [
+      "Buy-side and sell-side mandates, including target screening and process management",
+      "Financial modelling, scenario planning and independent company valuation",
+      "Vendor and buy-side due diligence coordination across finance, tax and HR streams",
+      "Deal negotiation support covering letters of intent, SPA terms and closing checklists",
+      "Post-merger integration planning with a focus on finance, payroll and reporting setups",
+      "Succession and carve-out projects for Swiss SMEs seeking a smooth handover"
+    ],
+    "StrengthsTitle": "Why work with Ridger",
+    "Strengths": [
+      {
+        "Title": "Local mid-market focus",
+        "Desc": "We understand how Swiss owners, cantonal authorities and domestic lenders approach M&A so we can anticipate issues early."
+      },
+      {
+        "Title": "Integrated specialists",
+        "Desc": "Accounting, tax and payroll experts join the project team so operational risks and earn-out mechanics stay under control."
+      },
+      {
+        "Title": "Regulatory awareness",
+        "Desc": "Experience with SRO expectations, SECO approvals and cross-border data sharing keeps transactions compliant."
+      },
+      {
+        "Title": "Pragmatic reporting",
+        "Desc": "We deliver concise memos, data room trackers and negotiation briefs so decision makers stay aligned throughout the process."
+      }
+    ],
+    "LongFormTitle": "M&A, valuation and transaction preparation",
+    "LongFormSections": [
+      {
+        "Title": "Who we support",
+        "Body": [
+          "Entrepreneurs, SMEs, investors and groups preparing an acquisition, sale, succession or structured financing round.",
+          "We help when figures, governance and documentation need to be ready for demanding discussions."
+        ]
+      },
+      {
+        "Title": "What we produce",
+        "Body": [
+          "Financial models, valuation analyses, vendor preparation, due diligence coordination, data rooms, transaction reporting and integration plans.",
+          "Deliverables are designed to help management decide, negotiate and document decisions."
+        ]
+      },
+      {
+        "Title": "Process",
+        "Body": [
+          "We clarify objectives, timeline, scope, available information, sensitive points and stakeholders.",
+          "The engagement moves through diagnosis, preparation, execution, negotiation, closing and post-transaction follow-up where needed."
+        ]
+      },
+      {
+        "Title": "Cost drivers",
+        "Body": [
+          "Costs depend on deal size, data quality, number of parties, due diligence depth and legal or tax coordination.",
+          "Specialized partners are involved when the matter goes beyond normal fiduciary or financial scope."
+        ]
+      }
+    ]
+  }
+}

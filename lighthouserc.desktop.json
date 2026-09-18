@@ -1,0 +1,20 @@
+{
+    "ci": {
+        "collect": {
+            "numberOfRuns": 1,
+            "url": [
+                "https://ark-fid.ch/en/",
+                "https://ark-fid.ch/fr/",
+                "https://ark-fid.ch/de/",
+                "https://ark-fid.ch/es/",
+                "https://ark-fid.ch/pt/"
+            ],
+            "settings": {
+                "preset": "desktop"
+            }
+        },
+        "upload": {
+            "target": "temporary-public-storage"
+        }
+    }
+}

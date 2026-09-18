@@ -1,0 +1,40 @@
+node_modules
+.next
+next-env.d.ts
+dist
+next-standalone.tar.gz
+# Backups of .next created during local builds
+.next.bak.*
+*.txt
+!app/llms.txt/
+!app/llms.txt/route.ts
+!public/robots.txt
+!public/ebd95385d7154f45ba37d076b4efd008.txt
+.env*
+!.env.example
+.env.backup
+*.env.backup
+*.env.*.bak
+*.env.*.backup
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+id_rsa
+id_ed25519
+id_rsa.pub
+id_ed25519.pub
+# TypeScript incremental build info (do not commit)
+*.tsbuildinfo
+litellm_config.yaml
+.DS_Store
+.vscode
+.idea
+dev.log
+quick-deploy.tar.gz
+*.out
+.server_pid*
+scripts/seo-suggest-latest.json
+tmp/

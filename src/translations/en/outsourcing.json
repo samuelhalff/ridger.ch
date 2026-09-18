@@ -1,0 +1,100 @@
+{
+  "ImageAlt": "Aerial view of lush forest meeting turquoise Swiss lake",
+  "Hero": {
+    "Badge": "Outsourcing",
+    "BadgeTwo": "BPO experts",
+    "Title": "Back-office outsourcing in french-speaking switzerland",
+    "Description": "Ridger offers outsourcing solutions for your accounting, payroll, and administrative tasks. Focus on your core business while we handle the rest with expertise and confidentiality.",
+    "CTA": "Streamline my operations",
+    "SecondaryCTA": "Meet the team"
+  },
+  "Presentation": {
+    "Title": "Administrative and finance outsourcing for SMEs",
+    "Subtitle": "Delegate, focus, grow",
+    "Intro": [
+      "With a fiduciary you can outsource your entire back office: bookkeeping and accounting, payroll and social insurance administration, invoicing, VAT and day-to-day admin. The benefit is twofold: you gain specialised expertise without hiring, and you turn fixed overhead into a service that scales with your actual activity.",
+      "From Geneva, Ridger supports SMEs, entrepreneurs and group subsidiaries in Geneva, Lausanne, the canton of Vaud and across French-speaking Switzerland, with flexible solutions that keep efficiency high and costs under control.",
+      "We set simple SLAs and send a monthly status so you always know what is done."
+    ],
+    "ServicesTitle": "Our outsourcing services",
+    "Services": [
+      "Accounting outsourcing: complete management of your bookkeeping and financial reporting",
+      "Payroll outsourcing: full payroll processing and HR administration services",
+      "Administrative management: comprehensive handling of all your administrative tasks",
+      "Process optimization: streamlining and improving your business processes for efficiency"
+    ],
+    "StrengthsTitle": "Our strengths for your outsourcing needs",
+    "Strengths": [
+      {
+        "Title": "Expertise and reliability",
+        "Desc": "Our team guarantees high-quality services and strict confidentiality."
+      },
+      {
+        "Title": "Cost control",
+        "Desc": "Outsourcing allows you to optimize your costs and benefit from scalable solutions."
+      },
+      {
+        "Title": "Flexibility and scalability",
+        "Desc": "Our services adapt to your needs and the evolution of your business."
+      },
+      {
+        "Title": "Focus on your core business",
+        "Desc": "Delegate administrative tasks and focus on what matters most: your growth."
+      }
+    ],
+    "LongFormTitle": "Outsourcing back-office work without losing control",
+    "LongFormSections": [
+      {
+        "Title": "Who it is for",
+        "Body": [
+          "SMEs, entrepreneurs and subsidiaries that want to delegate accounting, payroll, invoicing, filing or administration without building a full internal team.",
+          "The service fits when administrative load pulls management away from the core business."
+        ]
+      },
+      {
+        "Title": "Possible scope",
+        "Body": [
+          "Current accounting, supplier invoices, expenses, payroll, reminders, administrative documents, reporting and coordination with external partners.",
+          "The scope is documented to avoid grey areas between your team and Ridger."
+        ]
+      },
+      {
+        "Title": "Payroll outsourcing in Switzerland: Geneva, Lausanne and Romandy",
+        "Body": [
+          "Payroll outsourcing with a fiduciary covers the full salary cycle: monthly payslips, social insurance declarations (AVS/OASI, LPP/BVG occupational pensions, LAA/UVG accident insurance, family allowances), withholding tax administration, annual salary certificates and electronic filings through Swissdec-certified software. We also handle employee arrivals and departures, employer attestations and correspondence with the compensation funds.",
+          "This model suits SMEs that do not want to build an internal payroll function, scale-ups whose headcount changes quickly, and international groups looking for a local partner who masters Swiss specifics, including cross-border workers.",
+          "Outsourcing payroll keeps salary data confidential from internal teams, secures lasting compliance with social and tax rules that change every year, and guarantees continuity of processing during absences or departures: your employees are paid accurately and on time, every month.",
+          "Our payroll team operates from our Geneva office and serves employers based in Lausanne, throughout the canton of Vaud and elsewhere in French-speaking Switzerland, working remotely through secure channels or on site when needed."
+        ]
+      },
+      {
+        "Title": "Accounting outsourcing in Geneva and French-speaking Switzerland",
+        "Body": [
+          "Accounting outsourcing includes bookkeeping and data entry, supplier invoice and expense processing, bank reconciliations, VAT returns, monthly or quarterly closings and the preparation of annual financial statements under the Swiss Code of Obligations.",
+          "We work primarily on Odoo, where Ridger is a recognised specialist: digitised documents, automated invoice recognition, connected bank feeds and dashboards you can consult in real time. If you already use another tool, we can work directly in your existing environment.",
+          "The transition follows clear steps: review of the current setup, takeover of balances and history, chart of accounts configuration, definition of document flows, then a short parallel run before the full handover. You remain the owner of your data and can access it at any time.",
+          "The result: up-to-date books, reliable figures to steer your business and a single point of contact who coordinates with your auditor, your bank or the tax administration whenever needed."
+        ]
+      },
+      {
+        "Title": "Operating model",
+        "Body": [
+          "We define channels, deadlines, approvals, reporting formats and escalation rules from the start.",
+          "Routines are simple, repeatable and adapted to real volume rather than a theoretical model."
+        ]
+      },
+      {
+        "Title": "Costs, quotes and control",
+        "Body": [
+          "Costs depend on transaction volume, number of contacts, tools, reporting frequency and coordination depth.",
+          "For an immediate, no-obligation estimate, use our instant online quote or contact us to discuss your situation; we then confirm the scope and fee in a written proposal.",
+          "You keep visibility on processed tasks, blockers and decisions required."
+        ]
+      }
+    ],
+    "PayrollCrossLink": {
+      "Text": "Looking specifically to outsource your payroll?",
+      "LinkLabel": "See our Swiss payroll service."
+    }
+  }
+}

@@ -1,0 +1,433 @@
+{
+    "Terms": {
+        "Title": "Términos de Servicio",
+        "Subtitle": "Nuestros términos de servicio",
+        "LastUpdated": "Última actualización",
+        "Introduction": {
+            "Title": "Introducción",
+            "Content": {
+                "0": "Bienvenido a Ridger. Estos Términos de Servicio (\"Términos\") rigen el uso de nuestro sitio web y servicios.",
+                "1": "Al acceder o utilizar nuestros servicios, acepta estar sujeto a estos Términos. Si no está de acuerdo con alguna parte de estos términos, no puede acceder a nuestros servicios."
+            }
+        },
+        "Services": {
+            "Title": "Nuestros Servicios",
+            "Content": {
+                "0": "Ridger proporciona servicios profesionales de contabilidad, asesoría fiscal, gestión de nóminas y servicios corporativos a empresas en Suiza.",
+                "1": "Todos los servicios se proporcionan de acuerdo con la ley suiza y los estándares profesionales de la Asociación Suiza de Expertos en Auditoría, Impuestos y Fiduciaria (EXPERTsuisse)."
+            }
+        },
+        "Responsibilities": {
+            "Title": "Responsabilidades del Cliente",
+            "Content": {
+                "0": "Los clientes deben proporcionar información precisa, completa y oportuna necesaria para la prestación de nuestros servicios.",
+                "1": "Los clientes son responsables de mantener la confidencialidad de sus credenciales de inicio de sesión y de todas las actividades bajo su cuenta.",
+                "2": "Los clientes deben cumplir con todas las leyes y regulaciones aplicables en sus operaciones comerciales."
+            }
+        },
+        "ProfessionalStandards": {
+            "Title": "Estándares Profesionales y Confidencialidad",
+            "Content": {
+                "0": "Mantenemos estricta confidencialidad con respecto a toda la información del cliente de acuerdo con las leyes suizas de secreto profesional y la Ley Federal de Protección de Datos (FADP).",
+                "1": "Nuestros servicios son proporcionados por profesionales calificados que se adhieren a los más altos estándares de ética y competencia según lo requerido por las asociaciones profesionales suizas.",
+                "2": "Implementamos medidas técnicas y organizacionales apropiadas para proteger sus datos personales e información comercial contra acceso no autorizado, alteración, divulgación o destrucción."
+            }
+        },
+        "Fees": {
+            "Title": "Tarifas y Términos de Pago",
+            "Intro": "Las tarifas de servicio se establecen basándose en:",
+            "Factors": {
+                "0": "Complejidad y alcance de los servicios requeridos",
+                "1": "Tiempo y recursos asignados a su compromiso",
+                "2": "Tarifas de mercado para servicios profesionales similares",
+                "3": "Términos específicos descritos en su acuerdo de servicio"
+            },
+            "PaymentTerms": "Los términos de pago son típicamente 30 días desde la fecha de factura a menos que se acuerde lo contrario. El pago tardío puede resultar en cargos por intereses y suspensión de servicios. Todas las tarifas están sujetas al IVA suizo aplicable."
+        },
+        "Liability": {
+            "Title": "Limitación de Responsabilidad",
+            "Overview": "Nuestra responsabilidad está limitada al máximo permitido bajo la ley suiza. Mantenemos seguro de indemnización profesional según lo requerido por nuestras asociaciones profesionales.",
+            "ExclusionsIntro": "No seremos responsables por:",
+            "Exclusions": {
+                "0": "Daños consecuenciales, indirectos o especiales",
+                "1": "Pérdida de ganancias u oportunidades comerciales",
+                "2": "Daños que surjan del fallo del cliente en proporcionar información precisa",
+                "3": "Eventos de fuerza mayor más allá de nuestro control razonable"
+            },
+            "Cap": "Nuestra responsabilidad total no excederá las tarifas pagadas por el servicio específico que da lugar al reclamo."
+        },
+        "Termination": {
+            "Title": "Terminación",
+            "General": "Cualquier parte puede terminar este acuerdo con 30 días de aviso por escrito. La terminación inmediata puede ocurrir en casos de:",
+            "Immediate": {
+                "0": "Violación material de estos Términos",
+                "1": "No pago de tarifas",
+                "2": "Circunstancias que comprometerían nuestra independencia profesional"
+            },
+            "UponTermination": "Tras la terminación, nosotros:",
+            "Actions": {
+                "0": "Completaremos el trabajo en progreso (sujeto al pago)",
+                "1": "Devolveremos documentos y datos del cliente",
+                "2": "Proporcionaremos asistencia razonable en la transición a nuevos proveedores de servicios",
+                "3": "Continuaremos manteniendo obligaciones de confidencialidad"
+            }
+        },
+        "GoverningLaw": {
+            "Title": "Ley Aplicable",
+            "Description": "Estos Términos se rigen por la ley suiza. Cualquier disputa que surja de estos Términos o nuestra relación profesional se resolverá a través de:",
+            "Resolution": {
+                "0": "Negociaciones de buena fe entre las partes",
+                "1": "Mediación a través de un servicio de mediación comercial suizo reconocido",
+                "2": "Si es necesario, litigio ante los tribunales suizos competentes"
+            },
+            "Jurisdiction": "El lugar de jurisdicción es la oficina registrada de Ridger en Suiza."
+        },
+        "Contact": {
+            "Title": "Información de Contacto",
+            "Description": "Para preguntas sobre estos Términos de Servicio o nuestros servicios profesionales, por favor contáctenos:",
+            "CompanyName": "Ridger",
+            "Email": "info@ridger.ch",
+            "Address": "26 Boulevard Georges-Favon, 1204 Ginebra",
+            "Commitment": "Estamos comprometidos a mantener los más altos estándares de servicio profesional y satisfacción del cliente."
+        },
+        "SoFitAffiliation": "Ridger está afiliada al OAR de",
+        "SoFitAffiliationSuffix": " (organismo de autorregulación en el sentido de la LBA/LSFin suiza)."
+    },
+    "Privacy": {
+        "Title": "Política de Privacidad",
+        "LastUpdated": "Última actualización",
+        "Subtitle": "Protección de Datos y Aviso de Privacidad",
+        "Introduction": {
+            "Title": "Introducción",
+            "Content": [
+                "En Ridger, estamos comprometidos a proteger su privacidad y datos personales de acuerdo con la Ley Federal Suiza de Protección de Datos (FADP) y las regulaciones de la UE aplicables.",
+                "Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información cuando utiliza nuestros servicios."
+            ]
+        },
+        "DataController": {
+            "Title": "Controlador de Datos",
+            "Content": "Ridger actúa como el controlador de datos para los datos personales recopilados y procesados en conexión con nuestros servicios profesionales.",
+            "ContactDetails": "Detalles de contacto:",
+            "CompanyName": "Ridger",
+            "Email": "info@ridger.ch",
+            "Address": "26 Boulevard Georges-Favon, 1204 Ginebra"
+        },
+        "DataCollection": {
+            "Title": "Datos que Recopilamos",
+            "ProfessionalData": {
+                "Title": "Datos de Servicios Profesionales:",
+                "Items": [
+                    "Información de identificación personal (nombre, dirección, fecha de nacimiento)",
+                    "Información de contacto (correo electrónico, teléfono, dirección comercial)",
+                    "Información financiera (detalles bancarios, ingresos, gastos, activos)",
+                    "Números de impuestos y seguridad social",
+                    "Información de empleo y negocio",
+                    "Documentación legal y de cumplimiento"
+                ]
+            },
+            "WebsiteData": {
+                "Title": "Datos del Sitio Web:",
+                "Items": [
+                    "Información técnica (dirección IP, tipo de navegador, información del dispositivo)",
+                    "Datos de uso (páginas visitadas, tiempo transcurrido, fuentes de referencia)",
+                    "Cookies y tecnologías de seguimiento similares",
+                    "Envíos de formularios de contacto y comunicaciones",
+                    "Contenido del chat de IA y datos de contacto (correo, nombre, empresa, teléfono) guardados en nuestro sistema de gestión de leads (Microsoft 365/SharePoint) para responder a su solicitud"
+                ]
+            }
+        },
+        "LegalBasis": {
+            "Title": "Base Legal para el Procesamiento",
+            "Description": "Procesamos sus datos personales basándonos en las siguientes bases legales:",
+            "Grounds": [
+                "Ejecución de contrato: Para proporcionar servicios profesionales de contabilidad y asesoría",
+                "Cumplimiento legal: Para cumplir con los requisitos regulatorios y de reporte suizos",
+                "Intereses legítimos: Para operaciones comerciales, prevención de fraude y mejora de servicios",
+                "Consentimiento: Para comunicaciones de marketing y cookies no esenciales (donde se requiera)",
+                "Intereses vitales: Para proteger sus intereses vitales o los de otros en situaciones de emergencia"
+            ]
+        },
+        "DataUse": {
+            "Title": "Cómo Utilizamos Sus Datos",
+            "ServiceDelivery": {
+                "Title": "Entrega de Servicios:",
+                "Items": [
+                    "Proporcionar servicios de contabilidad, impuestos, nóminas y asesoría",
+                    "Preparar estados financieros e informes",
+                    "Gestionar obligaciones de cumplimiento",
+                    "Comunicar sobre sus servicios y cuenta",
+                    "Responder solicitudes del asistente de IA, registrar la conversación y preparar presupuestos de seguimiento"
+                ]
+            },
+            "BusinessOperations": {
+                "Title": "Operaciones Comerciales:",
+                "Items": [
+                    "Gestión de relaciones con clientes",
+                    "Aseguramiento de calidad y desarrollo profesional",
+                    "Gestión de riesgos y prevención de fraude",
+                    "Cumplimiento legal y regulatorio",
+                    "Continuidad del negocio y recuperación ante desastres"
+                ]
+            }
+        },
+        "DataSharing": {
+            "Title": "Compartir Datos",
+            "Description": "Podemos compartir sus datos personales con:",
+            "Recipients": [
+                "Autoridades fiscales suizas y organismos reguladores (según se requiera legalmente)",
+                "Bancos e instituciones financieras (para procesamiento de pagos)",
+                "Proveedores de servicios profesionales (auditores, asesoría legal, soporte de TI)",
+                "Odoo SA y socios certificados (para servicios ERP)",
+                "Proveedores de servicios en la nube con salvaguardas apropiadas, incluido Microsoft 365/SharePoint para la gestión de leads"
+            ],
+            "NoSelling": "No vendemos datos personales a terceros. Todo el compartir se realiza con acuerdos de confidencialidad apropiados y medidas de protección de datos en su lugar."
+        },
+        "DataSecurity": {
+            "Title": "Seguridad de Datos",
+            "Description": "Implementamos medidas de seguridad integrales que incluyen:",
+            "Measures": [
+                "Encriptación de datos en tránsito y en reposo",
+                "Autenticación multifactor y controles de acceso",
+                "Evaluaciones y actualizaciones regulares de seguridad",
+                "Capacitación del personal en protección de datos",
+                "Procedimientos seguros de respaldo y recuperación ante desastres"
+            ],
+            "Retention": {
+                "Title": "Retención de Datos:",
+                "Professional": "Registros de servicios profesionales: Según se requiere por la ley suiza (típicamente 10 años)",
+                "Financial": "Registros financieros y fiscales: Según lo exigido por los requisitos regulatorios",
+                "Website": "Datos del sitio web: Por la duración necesaria para cumplir los propósitos establecidos",
+                "Marketing": "Datos de marketing: Hasta que se retire el consentimiento o los datos ya no sean necesarios"
+            }
+        },
+        "YourRights": {
+            "Title": "Sus Derechos",
+            "Description": "Bajo la ley suiza de protección de datos, usted tiene derecho a:",
+            "Access": {
+                "Title": "Acceso",
+                "Description": "Solicitar información sobre datos personales que tenemos sobre usted"
+            },
+            "Rectification": {
+                "Title": "Rectificación",
+                "Description": "Corregir datos personales inexactos o incompletos"
+            },
+            "Erasure": {
+                "Title": "Borrado",
+                "Description": "Solicitar la eliminación de datos personales (sujeto a obligaciones legales)"
+            },
+            "Restriction": {
+                "Title": "Restricción",
+                "Description": "Limitar el procesamiento en ciertas circunstancias"
+            },
+            "Portability": {
+                "Title": "Portabilidad de Datos",
+                "Description": "Recibir sus datos en un formato estructurado y legible por máquina"
+            },
+            "Object": {
+                "Title": "Objeción",
+                "Description": "Objetar al procesamiento basado en intereses legítimos"
+            },
+            "WithdrawConsent": {
+                "Title": "Retirar Consentimiento",
+                "Description": "Para procesamiento basado en consentimiento"
+            },
+            "Exercise": "Para ejercer estos derechos, contáctenos en info@ridger.ch. Responderemos dentro de 30 días."
+        },
+        "InternationalTransfers": {
+            "Title": "Transferencias Internacionales de Datos",
+            "Description": "Podemos transferir datos personales fuera de Suiza a:",
+            "Destinations": {
+                "0": "Países de la UE/EEE con protección de datos adecuada",
+                "1": "Países con decisiones de adecuación de las autoridades suizas",
+                "2": "Terceros países con salvaguardas apropiadas (cláusulas contractuales estándar)"
+            },
+            "Safeguards": "Todas las transferencias internacionales se realizan con salvaguardas legales apropiadas para asegurar que sus datos permanezcan protegidos según los estándares suizos."
+        },
+        "PolicyChanges": {
+            "Title": "Cambios a Esta Política",
+            "Description": "Podemos actualizar esta Política de Privacidad para reflejar cambios en nuestras prácticas, servicios o requisitos legales. Los cambios materiales serán comunicados a través de:",
+            "Communication": {
+                "0": "Notificación por correo electrónico a clientes registrados",
+                "1": "Aviso prominente en nuestro sitio web",
+                "2": "Comunicación directa durante interacciones de servicio"
+            },
+            "Effectiveness": "La política actualizada será efectiva desde la fecha especificada en la versión revisada."
+        },
+        "Contact": {
+            "Title": "Contáctenos",
+            "Description": "Si tiene preguntas sobre esta Política de Privacidad o desea ejercer sus derechos, por favor contáctenos:",
+            "CompanyName": "Ridger",
+            "Email": "info@ridger.ch",
+            "Address": "26 Boulevard Georges-Favon, 1204 Ginebra"
+        }
+    },
+    "Cookies": {
+        "Title": "Política de Cookies",
+        "LastUpdated": "Última actualización",
+        "Subtitle": "Información sobre nuestro uso de cookies y tecnologías de seguimiento",
+        "Introduction": {
+            "Title": "Introducción",
+            "Content": [
+                "Esta Política de Cookies explica cómo Ridger utiliza cookies y tecnologías de seguimiento similares en nuestro sitio web. Proporciona información sobre qué son las cookies, cómo las utilizamos y sus opciones con respecto a su uso.",
+                "Al utilizar nuestro sitio web, consiente al uso de cookies de acuerdo con esta política y nuestra Política de Privacidad."
+            ]
+        },
+        "WhatAreCookies": {
+            "Title": "¿Qué son las Cookies?",
+            "Description": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (computadora, tableta o móvil) cuando visita un sitio web. Permiten al sitio web reconocer su dispositivo y almacenar información sobre sus preferencias o acciones pasadas.",
+            "CookiesContain": "Las cookies típicamente contienen:",
+            "Contents": [
+                "El nombre del servidor que colocó la cookie",
+                "Un identificador en forma de número único",
+                "Una fecha de vencimiento (algunas cookies solo duran la duración de su sesión)"
+            ]
+        },
+        "Types": {
+            "Title": "Tipos de Cookies que Utilizamos",
+            "Essential": {
+                "Title": "1. Cookies Esenciales",
+                "Description": "Estas cookies son necesarias para que el sitio web funcione correctamente y no se pueden desactivar.",
+                "Purpose": "Propósito:",
+                "Items": [
+                    "Navegación del sitio web y funcionalidad básica",
+                    "Seguridad y autenticación",
+                    "Preferencias de idioma y accesibilidad",
+                    "Envío de formularios y gestión de sesiones"
+                ]
+            },
+            "Analytics": {
+                "Title": "2. Cookies de Análisis",
+                "Description": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima.",
+                "Purpose": "Propósito:",
+                "Items": [
+                    "Análisis del tráfico del sitio web",
+                    "Monitoreo del rendimiento de la página",
+                    "Patrones de comportamiento del usuario",
+                    "Optimización y mejora del sitio web"
+                ],
+                "Providers": "Proveedores: Google Analytics, herramientas de análisis internas"
+            },
+            "Functional": {
+                "Title": "3. Cookies Funcionales",
+                "Description": "Estas cookies habilitan funcionalidad mejorada y características de personalización.",
+                "Purpose": "Propósito:",
+                "Items": [
+                    "Recordar preferencias de idioma y tema",
+                    "Guardar datos de formulario y progreso",
+                    "Personalizar contenido y diseño",
+                    "Proporcionar funcionalidad de chat en vivo"
+                ]
+            },
+            "Marketing": {
+                "Title": "4. Cookies de Marketing",
+                "Description": "Estas cookies rastrean visitantes a través de sitios web para mostrar anuncios relevantes y atractivos.",
+                "Purpose": "Propósito:",
+                "Items": [
+                    "Publicidad dirigida",
+                    "Medición de la efectividad del anuncio",
+                    "Campañas de retargeting",
+                    "Integración de redes sociales"
+                ],
+                "Providers": "Proveedores: Google Ads, LinkedIn, Facebook"
+            }
+        },
+        "ThirdParty": {
+            "Title": "Cookies de Terceros",
+            "Description": "Nuestro sitio web puede incluir contenido o servicios de terceros que establecen sus propias cookies. Estos incluyen:",
+            "TableHeaders": {
+                "Provider": "Proveedor",
+                "Purpose": "Propósito",
+                "PrivacyPolicy": "Política de Privacidad"
+            },
+            "Providers": {
+                "GoogleAnalytics": "Google Analytics",
+                "GoogleMaps": "Google Maps",
+                "LinkedIn": "LinkedIn"
+            },
+            "Purposes": {
+                "Analytics": "Análisis y rendimiento del sitio web",
+                "Maps": "Servicios de ubicación y mapas",
+                "Professional": "Redes profesionales y publicidad"
+            }
+        },
+        "Duration": {
+            "Title": "Duración de las Cookies",
+            "Description": "Las cookies se clasifican por duración de la siguiente manera:",
+            "Types": [
+                "Cookies de Sesión: Cookies temporales que se eliminan cuando cierra su navegador",
+                "Cookies Persistentes: Permanecen en su dispositivo por un período establecido o hasta que se eliminen manualmente"
+            ],
+            "Lifespans": {
+                "Title": "Duraciones Típicas de Cookies:",
+                "Items": [
+                    "Cookies esenciales: Duración de la sesión o hasta 1 año",
+                    "Cookies de análisis: Máximo 2 años",
+                    "Cookies funcionales: Máximo 1 año",
+                    "Cookies de marketing: 30 días a 2 años"
+                ]
+            }
+        },
+        "Management": {
+            "Title": "Gestión de Cookies",
+            "ConsentBanner": {
+                "Title": "Banner de Consentimiento de Cookies",
+                "Description": "Cuando visita nuestro sitio web por primera vez, verá un banner de consentimiento de cookies con dos opciones:",
+                "Options": [
+                    "\"Todo\" - Aceptar todas las cookies incluyendo análisis, publicidad y personalización",
+                    "\"Esencial\" - Aceptar solo cookies funcionales esenciales, rechazando análisis y publicidad"
+                ],
+                "ChangePreferences": "Puede cambiar sus preferencias en cualquier momento utilizando el botón de configuración de cookies que aparece en el sitio web."
+            },
+            "BrowserSettings": {
+                "Title": "Configuraciones del Navegador",
+                "Description": "También puede controlar las cookies a través de las configuraciones de su navegador. La mayoría de los navegadores le permiten:",
+                "Options": [
+                    "Ver y eliminar cookies",
+                    "Bloquear cookies de sitios web específicos",
+                    "Bloquear cookies de terceros",
+                    "Borrar todas las cookies cuando cierre el navegador"
+                ],
+                "Instructions": "Instrucciones específicas del navegador:",
+                "ChromeLink": "Administrar cookies en Chrome",
+                "FirefoxLink": "Administrar cookies en Firefox",
+                "SafariLink": "Administrar cookies en Safari",
+                "IELink": "Administrar cookies en Internet Explorer"
+            },
+            "DisablingImpact": {
+                "Title": "Impacto de Desactivar Cookies",
+                "Description": "Tenga en cuenta que desactivar ciertas cookies puede afectar su experiencia en nuestro sitio web:",
+                "Effects": [
+                    "Cookies esenciales: El sitio web puede no funcionar correctamente",
+                    "Cookies de análisis: No podemos mejorar nuestro sitio web basado en datos de uso",
+                    "Cookies funcionales: Las características de personalización se desactivarán",
+                    "Cookies de marketing: Puede ver anuncios menos relevantes"
+                ]
+            }
+        },
+        "DoNotTrack": {
+            "Title": "Señales de No Rastrear",
+            "Description": "Algunos navegadores incluyen una característica \"No Rastrear\" que le permite decirle a los sitios web que no desea ser rastreado. Actualmente, no hay un estándar aceptado para cómo los sitios web deben responder a las señales de No Rastrear.",
+            "Response": "Respetamos sus opciones de privacidad y estamos monitoreando desarrollos en esta área para implementar respuestas apropiadas a las señales de No Rastrear cuando se establezcan estándares de la industria."
+        },
+        "Updates": {
+            "Title": "Actualizaciones a Esta Política",
+            "Description": "Podemos actualizar esta Política de Cookies de vez en cuando para reflejar cambios en tecnología, ley o nuestras prácticas. Cuando hagamos cambios significativos, nosotros:",
+            "Actions": {
+                "0": "Actualizaremos la fecha \"Última actualización\" en la parte superior de esta página",
+                "1": "Notificaremos a los usuarios a través de nuestro banner del sitio web o correo electrónico (para cambios significativos)",
+                "2": "Solicitaremos consentimiento renovado donde lo requiera la ley"
+            }
+        },
+        "Retention": {
+            "Title": "Retención de Datos",
+            "Description": "Retenemos los datos de cookies por un período limitado necesario para los fines descritos en esta política."
+        },
+        "Contact": {
+            "Title": "Contáctenos",
+            "Description": "Si tiene alguna pregunta sobre esta Política de Cookies o nuestro uso de cookies, por favor contáctenos:",
+            "CompanyName": "Ridger",
+            "Email": "info@ridger.ch",
+            "Address": "26 Boulevard Georges-Favon, 1204 Ginebra"
+        }
+    }
+}

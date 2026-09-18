@@ -1,0 +1,100 @@
+{
+    "ImageAlt": "Luftaufnahme eines üppigen Waldes an einem türkisfarbenen Schweizer See",
+    "Hero": {
+        "Badge": "Outsourcing",
+        "BadgeTwo": "BPO-Experten",
+        "Title": "Backoffice-outsourcing in der romandie",
+        "Description": "Ridger bietet Outsourcing-Lösungen für Ihre Buchhaltungs-, Lohn- und Verwaltungsaufgaben. Konzentrieren Sie sich auf Ihr Kerngeschäft, während wir den Rest mit Expertise und Vertraulichkeit handhaben.",
+        "CTA": "Abläufe optimieren",
+        "SecondaryCTA": "Team kennenlernen"
+    },
+    "Presentation": {
+        "Title": "Administratives und finanzielles outsourcing für KMU",
+        "Subtitle": "Delegieren, fokussieren, wachsen",
+        "Intro": [
+            "An eine Treuhandgesellschaft können Sie Ihr gesamtes Backoffice auslagern: Buchhaltung, Lohnadministration und Sozialversicherungen, Fakturierung, Mehrwertsteuer und tägliche Administration. Der Nutzen ist doppelt: Sie erhalten spezialisiertes Know-how ohne Rekrutierung und verwandeln Fixkosten in eine Dienstleistung, die sich Ihrem tatsächlichen Volumen anpasst.",
+            "Von Genf aus begleitet Ridger KMU, Selbstständige und Tochtergesellschaften in Genf, Lausanne, im Kanton Waadt und in der gesamten Romandie – mit flexiblen Lösungen für Effizienz und Kostenkontrolle.",
+            "Wir vereinbaren einfache SLAs und senden einen monatlichen Status, damit Sie wissen, was erledigt ist."
+        ],
+        "ServicesTitle": "Unsere Outsourcing-Dienstleistungen",
+        "Services": [
+            "Buchhaltungs-Outsourcing: Vollständige Verwaltung Ihrer Buchführung und Finanzberichterstattung",
+            "Lohnbuchhaltungs-Outsourcing: Vollständige Lohnverarbeitung und HR-Verwaltungsdienstleistungen",
+            "Verwaltungsmanagement: Umfassende Abwicklung aller Ihrer Verwaltungsaufgaben",
+            "Prozessoptimierung: Rationalisierung und Verbesserung Ihrer Geschäftsprozesse für Effizienz"
+        ],
+        "StrengthsTitle": "Unsere Stärken für Ihre Outsourcing-Bedürfnisse",
+        "Strengths": [
+            {
+                "Title": "Expertise und Zuverlässigkeit",
+                "Desc": "Unser Team garantiert hochwertige Dienstleistungen und strenge Vertraulichkeit."
+            },
+            {
+                "Title": "Kostenkontrolle",
+                "Desc": "Outsourcing ermöglicht es Ihnen, Ihre Kosten zu optimieren und von skalierbaren Lösungen zu profitieren."
+            },
+            {
+                "Title": "Flexibilität und Skalierbarkeit",
+                "Desc": "Unsere Dienstleistungen passen sich Ihren Bedürfnissen und der Entwicklung Ihres Unternehmens an."
+            },
+            {
+                "Title": "Fokus auf Ihr Kerngeschäft",
+                "Desc": "Delegieren Sie Verwaltungsaufgaben und konzentrieren Sie sich auf das Wichtigste: Ihr Wachstum."
+            }
+        ],
+        "LongFormTitle": "Backoffice auslagern, ohne die Kontrolle zu verlieren",
+        "LongFormSections": [
+            {
+                "Title": "Für wen",
+                "Body": [
+                    "KMU, Unternehmer und Tochtergesellschaften, die Buchhaltung, Lohn, Fakturierung, Ablage oder Administration delegieren möchten, ohne ein vollständiges internes Team aufzubauen.",
+                    "Das Angebot passt, wenn die administrative Last die Geschäftsleitung vom Kerngeschäft abhält."
+                ]
+            },
+            {
+                "Title": "Möglicher Umfang",
+                "Body": [
+                    "Laufende Buchhaltung, Lieferantenrechnungen, Spesen, Lohnabrechnung, Mahnwesen, administrative Dokumente, Reporting und Koordination mit externen Partnern.",
+                    "Der Umfang wird dokumentiert, um Grauzonen zwischen Ihrem Team und Ridger zu vermeiden."
+                ]
+            },
+            {
+                "Title": "Lohn-Outsourcing in Genf, Lausanne und der Romandie",
+                "Body": [
+                    "Die Auslagerung der Lohnbuchhaltung an eine Treuhandgesellschaft deckt den gesamten Lohnzyklus ab: monatliche Lohnabrechnungen, Deklarationen an die Sozialversicherungen (AHV, BVG, UVG, Familienzulagen), Verwaltung der Quellensteuer, jährliche Lohnausweise und elektronische Übermittlungen über Swissdec-zertifizierte Software. Wir übernehmen auch Ein- und Austritte von Mitarbeitenden, Arbeitgeberbescheinigungen und die Korrespondenz mit den Ausgleichskassen.",
+                    "Dieses Modell eignet sich für KMU, die keine interne Lohnfunktion aufbauen wollen, für Scale-ups mit schnell wachsendem Personalbestand und für internationale Gruppen, die einen lokalen Partner mit Schweizer Fachwissen suchen, einschliesslich der Beschäftigung von Grenzgängern.",
+                    "Die Lohnauslagerung schützt die Vertraulichkeit der Gehälter gegenüber internen Teams, sichert dauerhafte Compliance bei sich jährlich ändernden Sozial- und Steuervorschriften und garantiert die Kontinuität der Verarbeitung bei Abwesenheiten oder Austritten: Ihre Mitarbeitenden werden jeden Monat pünktlich und korrekt bezahlt.",
+                    "Unser Lohnteam arbeitet von unserem Büro in Genf aus und betreut Arbeitgeber in Lausanne, im ganzen Kanton Waadt und in der übrigen Romandie – remote über sichere Kanäle oder bei Bedarf vor Ort."
+                ]
+            },
+            {
+                "Title": "Buchhaltung in der Romandie auslagern",
+                "Body": [
+                    "Das Buchhaltungs-Outsourcing umfasst die Erfassung und Führung der Bücher, die Verarbeitung von Lieferantenrechnungen und Spesen, Bankabstimmungen, Mehrwertsteuerabrechnungen, monatliche oder vierteljährliche Abschlüsse sowie die Erstellung des Jahresabschlusses nach Schweizer Obligationenrecht.",
+                    "Wir arbeiten vorrangig mit Odoo, worauf Ridger spezialisiert ist: digitalisierte Belege, automatische Rechnungserkennung, angebundene Bankfeeds und Dashboards in Echtzeit. Nutzen Sie bereits ein anderes Tool, arbeiten wir direkt in Ihrer bestehenden Umgebung.",
+                    "Die Umstellung folgt klaren Schritten: Analyse des Ist-Zustands, Übernahme von Salden und Historie, Einrichtung des Kontenplans, Definition der Dokumentenflüsse und eine kurze Parallelphase vor der vollständigen Übergabe. Ihre Daten bleiben Ihr Eigentum und sind jederzeit zugänglich.",
+                    "Das Ergebnis: eine aktuelle Buchhaltung, verlässliche Zahlen zur Steuerung Ihres Unternehmens und ein einziger Ansprechpartner, der bei Bedarf mit Revisionsstelle, Bank oder Steuerverwaltung koordiniert."
+                ]
+            },
+            {
+                "Title": "Organisation",
+                "Body": [
+                    "Wir definieren Kanäle, Fristen, Freigaben, Reporting-Formate und Eskalationsregeln von Beginn des Mandats an.",
+                    "Die Routinen sind einfach, wiederholbar und am realen Volumen ausgerichtet statt an einem theoretischen Modell."
+                ]
+            },
+            {
+                "Title": "Kosten, Offerte und Steuerung",
+                "Body": [
+                    "Die Kosten hängen vom Transaktionsvolumen, der Anzahl Ansprechpartner, den Tools, der Reporting-Frequenz und dem Koordinationsaufwand ab.",
+                    "Für eine sofortige, unverbindliche Schätzung nutzen Sie unsere Online-Sofortofferte oder kontaktieren Sie uns für ein Gespräch über Ihre Situation; Umfang und Honorar bestätigen wir anschliessend in einem schriftlichen Angebot.",
+                    "Sie behalten den Überblick über erledigte Aufgaben, offene Punkte und anstehende Entscheidungen."
+                ]
+            }
+        ],
+        "PayrollCrossLink": {
+            "Text": "Möchten Sie vor allem Ihre Lohnbuchhaltung auslagern?",
+            "LinkLabel": "Entdecken Sie unseren Payroll-Service."
+        }
+    }
+}

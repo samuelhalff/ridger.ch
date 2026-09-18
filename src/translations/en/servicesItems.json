@@ -1,0 +1,48 @@
+{
+    "Accounting": {
+        "Title": "Accounting",
+        "Description": "Comprehensive accounting services, including bookkeeping, financial reporting. We rely on custom AI tools to gain efficiency and make your life easier."
+    },
+    "TaxesCompanyPersonal": {
+        "Title": "Taxes",
+        "Description": "We handle all aspects of tax compliance, including VAT registration, corporate tax filings, and personal income tax declarations."
+    },
+    "PayrollHR": {
+        "Title": "Payroll & HR",
+        "Description": "We manage payroll processing, including salary calculations, payslip generation, and compliance with Swiss social security regulations."
+    },
+    "OutsourcingServices": {
+        "Title": "Outsourcing services",
+        "Description": "We provide outsourcing services for legal, administrative, and accounting tasks, allowing you to focus on your core business activities while we handle the necessary back-office functions."
+    },
+    "MAServices": {
+        "Title": "Mergers & acquisitions",
+        "Description": "Deal advisory for Swiss SMEs including buy-side and sell-side mandates, valuations, due diligence support and post-merger integration planning."
+    },
+    "CorporateServices": {
+        "Title": "Corporate services",
+        "Description": "We offer a range of corporate services, including company formation, compliance management, and corporate governance support to ensure your business operates smoothly."
+    },
+    "ShowMore": "Learn more",
+    "ShowLess": "Show less",
+    "DomiciliationServices": {
+        "Title": "Domiciliation services",
+        "Description": "Domiciliation services provide businesses with a registered address. These services allow companies to establish their official headquarters without needing a physical office at the location."
+    },
+    "Incorporation": {
+        "Title": "Company incorporation",
+        "Description": "We assist with the entire company incorporation process, ensuring compliance with Swiss regulations and providing ongoing support."
+    },
+    "ImmigrationServices": {
+        "Title": "Immigration & permits",
+        "Description": "Support for Swiss residence and work permits, ANobAG cases, coordination with authorities, and administrative onboarding in Geneva and Romandy."
+    },
+    "OdooImplementation": {
+        "Title": "Odoo implementation",
+        "Description": "We are official Odoo partners, providing full implementation and configuration services to ensure your Odoo setup meets Swiss accounting standards."
+    },
+    "FamilyOffice": {
+        "Title": "Family office",
+        "Description": "Family office services focused on governance and administrative coordination for high-net-worth families. Reporting, compliance, payments, succession, no asset management."
+    }
+}

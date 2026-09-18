@@ -1,0 +1,35 @@
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /*/opengraph-image
+Disallow: /*/opengraph-image/
+Disallow: /*/twitter-image
+Disallow: /*/twitter-image/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /*/opengraph-image
+Disallow: /*/opengraph-image/
+Disallow: /*/twitter-image
+Disallow: /*/twitter-image/
+
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /*/opengraph-image
+Disallow: /*/opengraph-image/
+Disallow: /*/twitter-image
+Disallow: /*/twitter-image/
+
+Sitemap: https://ridger.ch/sitemap.xml

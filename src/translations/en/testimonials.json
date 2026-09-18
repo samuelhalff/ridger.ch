@@ -1,0 +1,63 @@
+{
+    "Eyebrow": "Client reviews",
+    "SectionTitle": "What our clients say",
+    "Subtitle": "Our clients' trust is our greatest reward",
+    "RatingBadge": "Rated 5 stars by clients",
+    "Anonymous": "Anonymous",
+    "List": [
+        {
+            "name": "Julien Roques",
+            "company": "Florissant 1928 Sàrl",
+            "service": "Odoo & ERP",
+            "testimonial": "Ark was very responsive and helped us set up our accounting on Odoo within a few days."
+        },
+        {
+            "name": "Antoine Fortis",
+            "company": "Pargo Sàrl",
+            "service": "Accounting",
+            "testimonial": "I wanted to be autonomous while having occasional support for my accounting and payroll; at Ark I could count on a competent and dynamic team."
+        },
+        {
+            "name": "Armands Bush",
+            "company": "Austrenis Capital SA",
+            "service": "Accounting",
+            "testimonial": "We rely on Ark for all our accounting, payroll and taxation. The Ark team is always available and responsive. We can fully focus on our business and be confident that these tasks are managed perfectly."
+        },
+        {
+            "name": "Pierre Saouter",
+            "company": "Principles Analytics Sàrl",
+            "service": "Accounting & Tax",
+            "testimonial": "Ark handles our accounting and tax matters with remarkable professionalism. Their expertise gives us complete peace of mind, allowing us to focus entirely on growing our business."
+        },
+        {
+            "service": "Accounting",
+            "rating": 5,
+            "testimonial": "Our accounting is now perfectly structured thanks to Ark. Monthly closings are delivered on time and the quality of reports enables us to make informed decisions."
+        },
+        {
+            "service": "Payroll & HR",
+            "rating": 5,
+            "testimonial": "Managing our payroll has become effortless. Accurate pay slips, compliant social declarations, and always-available support to answer our questions."
+        },
+        {
+            "service": "Tax",
+            "rating": 5,
+            "testimonial": "Thanks to their tax expertise, we have optimized our situation while remaining fully compliant. Professional and reassuring support throughout."
+        },
+        {
+            "service": "M&A",
+            "rating": 5,
+            "testimonial": "The team supported us throughout our acquisition. Rigorous due diligence, precise valuation and strategic advice that made all the difference."
+        },
+        {
+            "service": "Family Office",
+            "rating": 5,
+            "testimonial": "A tailored approach to managing our family wealth. Discretion, expertise and personalized follow-up that meets all our expectations."
+        },
+        {
+            "service": "Odoo & ERP",
+            "rating": 5,
+            "testimonial": "Implementing Odoo has transformed the way we work. Automated processes, centralized data and real-time visibility into our business."
+        }
+    ]
+}

@@ -1,0 +1,212 @@
+{
+  "ImageAlt": "Vieille ville de Zurich et lac au lever du soleil, Suisse",
+  "Hero": {
+    "Badge": "Genève · Lausanne",
+    "BadgeTwo": "Assisté par l'IA",
+    "ReadMore": "Lire plus",
+    "Title": "Comptabilité à Genève et Lausanne pour PME",
+    "Description": "Nous offrons des services de comptabilité avec une technologie de pointe pour vous aider à gérer vos finances efficacement. Notre équipe assure la conformité avec les réglementations suisses tout en vous fournissant les outils pour prendre des décisions éclairées.",
+    "CTA": "Nous contacter",
+    "SecondaryCTA": "Rencontrer l'équipe",
+    "OdooPartnerBadge": "Partenaire Odoo officiel"
+  },
+  "Presentation": {
+    "Title": "Comptabilité suisse et reporting financier pour PME",
+    "Subtitle": "Une offre à 360°",
+    "Intro": [
+      "Nous nous consacrons à fournir des solutions complètes et personnalisées, conçues pour aborder chaque facette de vos besoins financiers et comptables avec précision et perspicacité.",
+      "Au-delà des chiffres, nous offrons des conseils stratégiques pour soutenir votre croissance, naviguer les défis, et saisir les opportunités du marché avec discernement. Nous sommes votre partenaire stratégique engagé dans le succès de votre entreprise.",
+      "Nous travaillons avec vos outils ou mettons en place des tableaux de bord simples pour que vous voyiez toujours l’essentiel."
+    ],
+    "List": [
+      "Comptabilité générale",
+      "Comptabilité analytique",
+      "Tâches périodiques",
+      "Tableaux de bord",
+      "Services sur mesure"
+    ],
+    "General": {
+      "Title": "Comptabilité générale",
+      "Desc": "Chez Ridger, nous maîtrisons tous les aspects de la comptabilité générale, du grand livre aux états financiers, en passant par la comptabilité de gestion. Nos professionnels s'assurent que chaque livre de comptes est tenu à jour, précis et conforme aux normes et réglementations de l'industrie.",
+      "List": [
+        "Plan comptable personnalisé",
+        "Gestion des comptes fournisseurs et clients",
+        "Gestion des paiements",
+        "Gestion de trésorerie"
+      ]
+    },
+    "Analytic": {
+      "Title": "Comptabilité analytique",
+      "Desc": "La comptabilité analytique est un outil puissant pour comprendre où et comment vous générez des profits, ainsi que pour identifier les domaines qui nécessitent une attention particulière. Nos experts d'Ridger vous aideront à mettre en place et analyser un système de comptabilité analytique efficace, vous permettant de prendre des décisions commerciales plus éclairées."
+    },
+    "Periodic": {
+      "Title": "Tâches périodiques",
+      "Desc": "Profitez de la tranquillité d'esprit avec notre expertise dans la préparation des déclarations périodiques pour toutes vos obligations, notamment :",
+      "List": [
+        "Clôture intermédiaire et/ou annuelle",
+        "TVA semestrielle ou trimestrielle",
+        "Assurances sociales",
+        "Déclaration fiscale",
+        "Assemblées générales ordinaires et extraordinaires",
+        "Conseil d'administration"
+      ],
+      "Followup": "Notre équipe dédiée vous accompagne à chaque étape, assurant une gestion transparente et optimisée de vos déclarations, afin que vous puissiez vous concentrer sur votre cœur de métier."
+    },
+    "Dashboards": {
+      "Title": "Tableaux de bord",
+      "Desc": "Optimisez la visibilité et le contrôle de vos finances avec nos solutions innovantes de tableaux de bord comptables. Les tableaux de bord fournissent un résumé clair et accessible de vos données financières, permettant une prise de décision éclairée et stratégique. Profitez d'une gestion simplifiée avec des tableaux de bord intuitifs adaptés à vos besoins spécifiques. Avec une interface conviviale et des analyses précises, nos solutions assurent un suivi efficace de votre santé financière."
+    },
+    "Custom": {
+      "Title": "Une offre complète et personnalisée"
+    },
+    "Services": [
+      "Comptabilité Générale : Gestion complète de votre plan comptable et transactions financières",
+      "Reporting Financier : Préparation d'états financiers complets et rapports de gestion",
+      "Comptabilité Analytique : Analyse détaillée des coûts et suivi de rentabilité par projet ou département",
+      "Tableaux de Bord Personnalisés : Analyses financières en temps réel et surveillance KPI adaptées à votre entreprise"
+    ],
+    "ServicesTitle": "Nos services de comptabilité",
+    "CustomServicesList": [
+      {
+        "Icon": "Users",
+        "Title": "Experts",
+        "Desc": "Ridger s'appuie sur une équipe de comptables expérimentés et certifiés et de spécialistes fiscaux, maîtrisant les réglementations locales et internationales. Cette expertise assure des comptes précis et conformes, garantissant une gestion fiable et harmonieuse."
+      },
+      {
+        "Icon": "Clock",
+        "Title": "Gain de temps et efficacité",
+        "Desc": "En externalisant la comptabilité à Ridger, les entreprises peuvent se concentrer sur leur cœur de métier. Nos services font gagner du temps et améliorent l'efficacité opérationnelle en prenant en charge la gestion financière complète."
+      },
+      {
+        "Icon": "Settings",
+        "Title": "Solutions personnalisées",
+        "Desc": "Ridger offre des services comptables sur mesure, adaptés aux besoins spécifiques de chaque client. Que vous soyez une petite entreprise, une grande société, une ONG, ou une filiale, nous adaptons nos services pour répondre à vos attentes, offrant des solutions flexibles."
+      },
+      {
+        "Icon": "Laptop",
+        "Title": "Technologie avancée et gestion en temps réel",
+        "Desc": "Nous utilisons les dernières technologies et logiciels comptables pour assurer une gestion optimale. Ces outils permettent une gestion précise et rapide des données financières, ainsi qu'un accès facile et sécurisé aux informations en temps réel."
+      },
+      {
+        "Icon": "MessageSquare",
+        "Title": "Conseil",
+        "Desc": "Chez Ridger, nous ne nous limitons pas à la tenue de livres. Nous offrons également un accompagnement comptable de qualité. Nos experts vous aident à structurer vos finances, planifier vos impôts, et gérer votre flux de trésorerie, tout en identifiant les opportunités d'amélioration."
+      }
+    ],
+    "CommonQuestions": {
+      "Title": "Questions fréquentes sur les services de comptabilité en Suisse",
+      "Questions": [
+        {
+          "Question": "Quels services de tenue de livres proposez-vous pour les petites entreprises à Genève ?",
+          "Answer": "Nous proposons des services complets de tenue de livres adaptés aux petites entreprises genevoises incluant l'enregistrement quotidien des transactions, la gestion des comptes fournisseurs et clients, le rapprochement bancaire, le suivi des dépenses et la maintenance du plan comptable. Nos services couvrent le traitement des factures et la gestion des paiements, le suivi des flux de trésorerie et la préparation de rapports de gestion mensuels ou trimestriels. Nous assurons la conformité avec les normes comptables suisses et les exigences cantonales tout en fournissant un accès en temps réel à vos données financières via des tableaux de bord sécurisés. Pour les PME genevoises, nous coordonnons également avec vos obligations fiscales, préparons la documentation pour les auditeurs et maintenons des dossiers organisés respectant les exigences légales suisses en matière de conservation et d'accessibilité des documents."
+        },
+        {
+          "Question": "Comment fonctionne le reporting financier pour les PME en Suisse ?",
+          "Answer": "Le reporting financier pour les PME suisses comprend la préparation des états financiers annuels statutaires composés du bilan, du compte de résultat et des annexes aux comptes. Selon la taille de votre entreprise, vous pouvez avoir besoin d'une comptabilité simplifiée ou complète selon Swiss GAAP. Nous préparons des rapports de gestion mensuels ou trimestriels montrant les indicateurs clés de performance, l'analyse des flux de trésorerie, les mesures de rentabilité et l'analyse des écarts budgétaires adaptés aux besoins de votre entreprise. Le reporting de fin d'année inclut la préparation des états financiers pour les assemblées générales annuelles, la coordination avec les auditeurs externes si nécessaire, et l'assurance de la conformité avec les obligations de dépôt au registre du commerce. Nos rapports fournissent des informations claires sur la performance de votre entreprise, soutenant les décisions stratégiques tout en répondant à toutes les exigences légales et réglementaires suisses pour le reporting financier des PME."
+        },
+        {
+          "Question": "Pouvez-vous aider à intégrer la comptabilité Odoo pour mon entreprise genevoise ?",
+          "Answer": "Oui, en tant que partenaires officiels Odoo, nous sommes spécialisés dans l'implémentation et la gestion de solutions comptables Odoo pour les entreprises genevoises. Nous configurons le module comptable d'Odoo selon les normes suisses incluant le plan comptable suisse (PME ou spécifique à l'entreprise), la gestion de la TVA avec les taux et déclarations suisses, les capacités multi-devises et l'intégration avec la banque suisse (formats pain.001/camt.053). Nos services incluent la configuration et la mise en place initiales, la migration des données depuis les systèmes existants, la formation des utilisateurs pour votre équipe, le support continu et l'optimisation, et la gestion des exigences spécifiques suisses comme la facturation QR et l'intégration de la paie Swissdec. Odoo fournit des rapports puissants en temps réel, des flux de travail automatisés et une intégration transparente avec d'autres fonctions commerciales. Nous assurons que votre comptabilité Odoo est entièrement conforme aux réglementations suisses tout en offrant la flexibilité et les informations dont les entreprises genevoises modernes ont besoin."
+        },
+        {
+          "Question": "Comment mettez-vous en place la comptabilité analytique pour suivre la rentabilité des projets ?",
+          "Answer": "Nous implémentons des systèmes de comptabilité analytique qui suivent les revenus et les coûts par projet, département, ligne de produits ou toute dimension pertinente pour votre entreprise. La mise en place implique la définition des dimensions analytiques (centres de coûts, centres de profit, projets), l'établissement de structures de codage pour l'allocation des transactions, la configuration des hiérarchies de reporting et la formation de votre équipe sur les méthodes d'allocation appropriées. Notre comptabilité analytique capture les coûts directs, alloue les dépenses indirectes en utilisant des inducteurs appropriés, suit le temps et la consommation de ressources par projet, et génère des rapports de rentabilité montrant les marges de contribution et les coûts complets. Cela permet des décisions basées sur les données concernant la tarification, l'allocation des ressources et l'orientation commerciale. Pour les cabinets de services professionnels genevois, nous créons des analyses sophistiquées suivant le temps facturable vs non facturable, la rentabilité client et la performance des lignes de services avec des tableaux de bord en temps réel pour les décisions de gestion."
+        },
+        {
+          "Question": "Qu'implique la mise en place d'une comptabilité appropriée pour une nouvelle startup genevoise ?",
+          "Answer": "La mise en place comptable pour une nouvelle startup implique l'établissement de systèmes et processus fondamentaux pour la gestion financière. Nous créons un plan comptable personnalisé reflétant votre modèle d'affaires, configurons un logiciel comptable (Odoo ou alternatives) avec des fonctionnalités de conformité suisse, établissons des flux de travail de classement et d'approbation des documents, mettons en place des connexions de comptes bancaires pour l'importation automatisée des transactions, et implémentons des systèmes de gestion des factures et des dépenses. Nous configurons la gestion de la TVA si inscrit, établissons des protocoles pour les reçus et la documentation, créons des modèles de reporting financier pour les rapports au conseil et aux investisseurs, et fournissons une formation aux fondateurs sur la gestion financière de base. Pour les startups financées par des investisseurs, nous implémentons le suivi pour les exigences de reporting aux investisseurs, la surveillance du taux de combustion et la réalisation des jalons. Cette fondation assure que votre startup genevoise dispose d'une infrastructure comptable professionnelle dès le début, soutenant la croissance tout en maintenant la conformité avec les réglementations suisses."
+        },
+        {
+          "Question": "Fournissez-vous des services comptables pour les organisations à but non lucratif en Suisse ?",
+          "Answer": "Oui, nous fournissons une comptabilité spécialisée pour les organisations à but non lucratif suisses incluant les fondations, associations et entités d'utilité publique. La comptabilité à but non lucratif nécessite une expertise spécifique en comptabilité par fonds, gestion des subventions, suivi des fonds affectés vs non affectés, et conformité avec le droit suisse des fondations. Nos services incluent le maintien d'une comptabilité séparée pour différents fonds et projets, la préparation d'états financiers selon Swiss GAAP FER 21 (la norme pour les organisations à but non lucratif), la gestion des exigences de reporting aux donateurs, la gestion de la conformité et de la documentation des subventions, la préparation des rapports annuels pour les autorités de surveillance des fondations, et l'assurance de la conformité au statut d'exonération fiscale. Nous comprenons les exigences de surveillance des fondations genevoises et préparons la documentation pour la surveillance cantonale. Pour les ONG internationales basées à Genève, nous coordonnons la consolidation et le reporting financiers multi-pays. Notre expertise à but non lucratif assure que votre organisation maintient la transparence, la responsabilité et la conformité tout en se concentrant sur la réalisation de sa mission."
+        }
+      ]
+    },
+    "WhoThisIsFor": {
+      "Title": "Qui bénéficie de nos services de comptabilité ?",
+      "Description": "Nos services de comptabilité sont conçus pour les entreprises et organisations recherchant une gestion financière professionnelle, la conformité réglementaire et des informations stratégiques à partir de leurs données financières.",
+      "TargetClients": [
+        "Startups et PME en croissance nécessitant une infrastructure comptable évolutive avec une technologie moderne",
+        "Entreprises internationales établissant des filiales genevoises nécessitant une expertise Swiss GAAP",
+        "Cabinets de services professionnels suivant la rentabilité des projets via des systèmes de comptabilité analytique",
+        "Entreprises de e-commerce et de commerce de détail gérant une comptabilité complexe d'inventaire et de revenus multi-canaux",
+        "Organisations à but non lucratif et fondations nécessitant une comptabilité par fonds spécialisée et des rapports de conformité"
+      ]
+    },
+    "ProcessTimeline": {
+      "Title": "Comment fonctionne notre processus d'engagement comptable",
+      "Description": "Nous fournissons des services comptables structurés avec des processus clairs, des livrables réguliers et un support continu pour garantir que vos registres financiers sont précis, conformes et utiles à la décision.",
+      "Steps": [
+        {
+          "Title": "Évaluation initiale et configuration du système (Semaines 1-2)",
+          "Description": "Nous commençons par un examen complet de votre situation comptable actuelle, des registres existants, des systèmes logiciels et des processus commerciaux. Notre équipe évalue votre structure de plan comptable, évalue les capacités du logiciel comptable et la conformité suisse, examine les volumes et la complexité des transactions, et identifie tout problème historique nécessitant une correction. Nous documentons vos besoins de reporting pour la direction, les autorités fiscales, les banques et les investisseurs. Sur la base de cette évaluation, nous développons un plan comptable personnalisé incluant la sélection ou l'optimisation du logiciel (souvent Odoo pour nos clients), la conception du plan comptable aligné sur votre modèle d'affaires et vos besoins de reporting, la configuration du flux de travail pour le traitement des transactions, et l'intégration avec les systèmes bancaires et de paiement. Nous établissons des protocoles sécurisés d'échange de données, configurons les contrôles d'accès des utilisateurs et créons un calendrier pour la transition vers notre gestion comptable."
+        },
+        {
+          "Title": "Migration et nettoyage des données historiques (Semaines 2-4)",
+          "Description": "Pour les entreprises transitant vers nos services, nous migrons et validons les données comptables historiques pour assurer la continuité et un reporting comparatif précis. Cela implique l'extraction des données des systèmes précédents ou des feuilles de calcul, la validation des soldes d'ouverture par rapport aux états financiers de la période précédente, le rapprochement des comptes bancaires et des principaux postes du bilan, la correction de toute erreur ou incohérence identifiée, et l'importation de données propres dans votre système comptable. Nous préparons une documentation de rapprochement détaillée soutenant tous les montants du bilan, assurant que les pistes d'audit sont complètes. Pour les nouvelles startups, nous établissons des écritures d'ouverture reflétant le capital-actions, le financement initial et les coûts de constitution. Ce nettoyage approfondi fournit une base solide pour la comptabilité continue, prévient les complications futures et garantit que vos états financiers sont fiables dès le premier jour de notre engagement."
+        },
+        {
+          "Title": "Traitement mensuel des transactions et reporting (Mensuel continu)",
+          "Description": "Nos services comptables mensuels de base garantissent que vos livres sont actuels, précis et utiles à la décision. Chaque mois, nous collectons la documentation justificative pour toutes les transactions via des portails sécurisés ou des systèmes intégrés, enregistrons les revenus des factures et autres sources avec les principes de reconnaissance appropriés, traitons les dépenses et les factures fournisseurs avec le codage approprié, effectuons des rapprochements bancaires confirmant que toutes les transactions sont capturées, enregistrons les écritures de paie à partir du traitement des salaires, calculons et enregistrons les obligations TVA, et effectuons les écritures d'ajustement et de régularisation nécessaires. Nous préparons des états financiers mensuels incluant le bilan, le compte de résultat et l'analyse des flux de trésorerie, ainsi que des rapports de gestion personnalisés montrant les indicateurs clés de performance, les écarts budgétaires et les résultats de la comptabilité analytique. Vous recevez ces rapports avant le 15 du mois suivant, avec des réunions d'examen pour discuter de la performance, des tendances et de tout problème nécessitant une attention."
+        },
+        {
+          "Title": "Processus de clôture trimestrielle et annuelle (Trimestriel/Annuel)",
+          "Description": "Au-delà du traitement mensuel, nous gérons des tâches comptables trimestrielles et annuelles plus intensives. Les activités trimestrielles incluent des examens et rapprochements complets des comptes du bilan, des calculs et mises à jour de l'amortissement des immobilisations, l'analyse des charges payées d'avance et des régularisations, l'examen des provisions pour créances douteuses et garanties, l'évaluation des stocks si applicable, et la préparation de dossiers de gestion trimestriels. La clôture annuelle implique des procédures détaillées de fin d'année incluant la vérification complète des actifs et les tests de dépréciation, les calculs d'impôts différés, la préparation complète des états financiers avec annexes, la coordination avec les auditeurs externes fournissant les tableaux et explications demandés, la préparation des documents pour les assemblées générales annuelles, et les dépôts au registre du commerce selon les exigences. Nous assurons que vos états financiers annuels sont entièrement conformes aux Swiss GAAP tout en présentant clairement la performance de votre entreprise aux parties prenantes incluant les actionnaires, les membres du conseil, les banques et les autorités fiscales."
+        },
+        {
+          "Title": "Coordination fiscale et conseil stratégique (Continu)",
+          "Description": "Nos services comptables s'intègrent de manière transparente avec la conformité fiscale et le conseil financier stratégique. Tout au long de l'année, nous maintenons une conscience des implications fiscales de vos transactions, coordonnons avec notre équipe fiscale sur les déclarations TVA, la planification de l'impôt sur le revenu des sociétés et les opportunités d'optimisation fiscale de fin d'année. Nous préparons la documentation fiscale basée sur la comptabilité incluant les rapprochements entre le revenu comptable et fiscal, les tableaux d'amortissement pour les déclarations fiscales et la documentation justificative pour les déductions. Au-delà de la conformité, nous fournissons des conseils comptables stratégiques sur les décisions commerciales incluant l'analyse des opportunités d'investissement, les stratégies de tarification basées sur les structures de coûts, les prévisions et la gestion des flux de trésorerie, et les recommandations d'amélioration de la performance. Notre approche intégrée garantit que votre comptabilité ne sert pas seulement les besoins de conformité mais soutient activement la croissance et la rentabilité de l'entreprise grâce à des informations financières opportunes et précises et des conseils stratégiques tirant parti de notre compréhension complète de votre entreprise et du marché genevois."
+        }
+      ]
+    },
+    "UseCases": {
+      "Title": "Comment nos services de comptabilité soutiennent le succès commercial",
+      "Description": "Exemples réels montrant comment notre expertise comptable a aidé les entreprises de Genève et Lausanne à améliorer la gestion financière, la conformité et la prise de décision.",
+      "Cases": [
+        {
+          "Title": "Startup technologique implémentant la comptabilité Odoo pour passer du seed à la Série A",
+          "Description": "Une startup SaaS genevoise avec cinq employés a obtenu un financement seed et avait besoin d'établir des systèmes comptables professionnels pour soutenir une croissance rapide et satisfaire les exigences de reporting des investisseurs. Défi : Les fondateurs utilisaient des feuilles de calcul basiques qui ne pouvaient pas évoluer, manquaient de visibilité financière en temps réel, avaient besoin de capacités multi-devises pour les clients internationaux, et nécessitaient un reporting robuste pour les réunions du conseil et les mises à jour des investisseurs. Notre solution : Nous avons implémenté la comptabilité Odoo configurée selon les normes suisses, intégrée avec leurs comptes bancaires et processeurs de paiement pour l'importation automatisée des transactions, établi des politiques de reconnaissance des revenus conformes aux modèles d'abonnement, créé des tableaux de bord personnalisés montrant les revenus récurrents mensuels (MRR), les coûts d'acquisition client, le taux de combustion et la piste. Nous avons fourni des dossiers financiers mensuels répondant aux attentes des investisseurs et formé l'équipe financière sur l'utilisation du système. Résultat : La startup a atteint une visibilité financière en temps réel soutenant une prise de décision plus rapide, réduit le temps de clôture mensuel de 10 jours à 3 jours, levé avec succès une Série A avec des finances bien organisées impressionnant la due diligence, et étendu à 30 employés avec des systèmes comptables soutenant la croissance continue sans nécessiter de personnel financier supplémentaire."
+        },
+        {
+          "Title": "Cabinet de services professionnels implémentant la comptabilité analytique pour le suivi de la rentabilité des projets",
+          "Description": "Un cabinet de conseil en management genevois avec 15 consultants facturait les clients sur une base de projet mais manquait de visibilité sur la rentabilité individuelle des projets, rendant difficiles les décisions de tarification et d'allocation des ressources. Défi : Le cabinet ne pouvait pas déterminer quels projets ou clients étaient les plus rentables, n'avait aucun moyen systématique de suivre les coûts de temps par rapport aux revenus des projets, avait du mal à tarifer les nouveaux engagements, et ne pouvait pas identifier les activités non rentables consommant des ressources. Notre solution : Nous avons implémenté une comptabilité analytique complète suivant tous les revenus et coûts par projet, client et ligne de services. Nous avons intégré leur système de suivi du temps avec la comptabilité pour allouer les coûts de main-d'œuvre avec précision, établi des méthodologies pour allouer les coûts indirects (administration, développement commercial, formation) aux projets, et créé des tableaux de bord de rentabilité montrant la marge de contribution et la rentabilité à coût complet pour chaque engagement. Nous avons développé des rapports fournissant des informations sur la rentabilité client, l'utilisation des consultants et la performance des lignes de services. Résultat : Le cabinet a identifié que 20% des projets généraient 70% des profits tandis que d'autres détruisaient de la valeur, ajusté les modèles de tarification augmentant les marges moyennes des projets de 15%, réaffecté les ressources des lignes de services à faible marge vers celles à forte marge, et amélioré l'utilisation des consultants de 65% à 78% de temps facturable. La rentabilité annuelle a augmenté de 25% grâce à l'optimisation des ressources et de la tarification basée sur les données rendue possible par une comptabilité analytique appropriée."
+        },
+        {
+          "Title": "Fondation à but non lucratif assurant la conformité avec les exigences de surveillance des fondations genevoises",
+          "Description": "Une fondation humanitaire internationale basée à Genève gérait plusieurs fonds de subventions affectés et devait assurer la transparence financière pour les donateurs, la conformité avec le droit suisse des fondations et le reporting approprié aux autorités de surveillance cantonales genevoises. Défi : La comptabilité précédente de la fondation ne séparait pas clairement les fonds affectés et non affectés, la documentation de conformité des subventions était inadéquate pour les audits des donateurs, les états financiers ne suivaient pas les normes Swiss GAAP FER 21 pour les organisations à but non lucratif, et le reporting aux autorités de surveillance était incomplet. Notre solution : Nous avons restructuré leur comptabilité en implémentant une comptabilité par fonds appropriée avec un suivi séparé pour chaque subvention affectée, établi des processus pour documenter la conformité des subventions et les dépenses éligibles, préparé des états financiers selon Swiss GAAP FER 21 avec les divulgations requises, créé des rapports financiers spécifiques aux donateurs répondant aux exigences uniques de chaque bailleur de fonds, et préparé des rapports annuels complets pour la surveillance des fondations genevoises. Nous avons implémenté des contrôles assurant que les fonds affectés étaient dépensés uniquement aux fins désignées. Résultat : La fondation a atteint la pleine conformité avec le droit suisse des fondations et les exigences de surveillance, passé les audits des donateurs sans réserve pour la première fois en trois ans, amélioré les relations avec les principaux bailleurs de fonds grâce à un reporting transparent, obtenu avec succès deux nouvelles grandes subventions basées sur une solide réputation de gestion financière, et reçu les félicitations des autorités cantonales genevoises pour une gouvernance et une transparence financières exemplaires."
+        }
+      ]
+    },
+    "LongFormTitle": "Approche, livrables et points de vigilance en comptabilité",
+    "LongFormSections": [
+      {
+        "Title": "Qui nous accompagnons",
+        "Body": [
+          "PME suisses, entrepreneurs, filiales étrangères et équipes finance qui ont besoin d’une comptabilité fiable à Genève ou en Suisse romande.",
+          "Nous intervenons lorsque les écritures, la TVA, les bouclements ou le reporting doivent devenir plus lisibles et plus réguliers."
+        ]
+      },
+      {
+        "Title": "Ce que nous prenons en charge",
+        "Body": [
+          "Tenue comptable, TVA, bouclements mensuels ou annuels, reporting de gestion, tableaux de bord et coordination avec banques, réviseurs ou conseils.",
+          "Nous structurons le plan comptable, les justificatifs et les routines de validation pour réduire les écarts et accélérer les décisions."
+        ]
+      },
+      {
+        "Title": "Processus et livrables",
+        "Body": [
+          "Le mandat commence par un diagnostic des volumes, outils, délais et obligations. Nous définissons ensuite un calendrier, les responsabilités et le format des livrables.",
+          "Les livrables peuvent inclure balances, comptes annuels, reporting périodique, dossiers TVA, notes de contrôle et recommandations de processus."
+        ]
+      },
+      {
+        "Title": "Coûts et continuité",
+        "Body": [
+          "Les coûts dépendent du volume d’écritures, du nombre d’entités, du niveau de reporting, des outils utilisés et du besoin de coordination externe.",
+          "Lorsque l’activité évolue, nous adaptons le dispositif sans changer inutilement les habitudes qui fonctionnent déjà."
+        ]
+      }
+    ]
+  }
+}

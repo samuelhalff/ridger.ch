@@ -1,0 +1,58 @@
+{
+  "Accounting": {
+    "Title": "Accounting",
+    "Description": "Comprehensive accounting services, including bookkeeping, financial reporting. We rely on custom AI tools to gain efficiency and make your life easier."
+  },
+  "TaxesCompanyPersonal": {
+    "Title": "Taxes - Company and Personal",
+    "Description": "We handle all aspects of tax compliance, including VAT registration, corporate tax filings, and personal income tax declarations."
+  },
+  "PayrollHR": {
+    "Title": "Payroll & HR",
+    "Description": "We manage payroll processing, including salary calculations, payslip generation, and compliance with Swiss social security regulations."
+  },
+  "OutsourcingServices": {
+    "Title": "Outsourcing services",
+    "Description": "We provide outsourcing services for legal, administrative, and accounting tasks, allowing you to focus on your core business activities while we handle the necessary back-office functions."
+  },
+  "CorporateServices": {
+    "Title": "Corporate services",
+    "Description": "We offer a range of corporate services, including company formation, compliance management, and corporate governance support to ensure your business operates smoothly."
+  },
+  "IncorporationServices": {
+    "Title": "Incorporation services",
+    "Description": "We assist you in the incorporation of your company, including selecting the legal form, drafting incorporation documents, and filing with the relevant authorities."
+  },
+  "ImmigrationServices": {
+    "Title": "Immigration & permits",
+    "Description": "Support for Swiss residence and work permits, ANobAG cases, and coordination with cantonal authorities."
+  },
+  "DomiciliationServices": {
+    "Title": "Domiciliation services",
+    "Description": "Domiciliation services provide businesses with a registered address. These services allow companies to establish their official headquarters without needing a physical office at the location."
+  },
+  "OdooImplementation": {
+    "Title": "Odoo implementation",
+    "Description": "We are official Odoo partners, providing full implementation and configuration services to ensure your Odoo setup meets Swiss accounting standards."
+  },
+  "ExpertBanner": {
+    "Title": "Speak to one of our experts",
+    "Description": "Need a quick opinion or a clear quote? Our team replies fast and keeps it simple.",
+    "PrimaryCTA": "Speak to an expert",
+    "SecondaryCTA": "Get an instant quote"
+  },
+  "ScrollHint": "Discover more",
+  "InlineContact": {
+    "Title": "Contact us",
+    "Description": "Tell us about your needs and our team will respond with a tailored proposal.",
+    "PrimaryCTA": "Contact us",
+    "SecondaryCTA": "Instant quote",
+    "TrustLine": ""
+  },
+  "GoogleReviews": {
+    "Rating": "5.0",
+    "Count": "30+",
+    "Label": "Google Reviews",
+    "CTA": "See our reviews"
+  }
+}

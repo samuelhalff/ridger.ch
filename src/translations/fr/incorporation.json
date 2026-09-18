@@ -1,0 +1,137 @@
+{
+  "ImageAlt": "Château de Spiez sur le lac de Thoune avec montagnes, Suisse",
+  "Presentation": {
+    "Title": "Constitution de société en Suisse romande",
+    "Subtitle": "Création rapide et conforme pour votre société",
+    "Intro": [
+      "Nous vous aidons à constituer votre entreprise rapidement et correctement. Choisissez un type de société, fournissez les documents requis, et nous nous occupons de l'enregistrement, des formalités et de la conformité.",
+      "Nous aidons à l’ouverture du compte bancaire, au dépôt du capital et à l’inscription TVA, avec un calendrier clair."
+    ],
+    "StrengthsTitle": "Pourquoi choisir notre service de constitution",
+    "Strengths": [
+      {
+        "Title": "Expertise en création",
+        "Desc": "Conseils expérimentés sur le choix de la forme juridique, les étapes d'enregistrement et la documentation."
+      },
+      {
+        "Title": "Connaissance locale",
+        "Desc": "Compréhension approfondie des exigences légales, fiscales et réglementaires suisses."
+      },
+      {
+        "Title": "Efficacité et rapidité",
+        "Desc": "Processus rationalisés pour réduire les délais et lancer votre activité rapidement."
+      },
+      {
+        "Title": "Accompagnement complet",
+        "Desc": "De la première consultation aux services post-constitution, nous vous accompagnons à chaque étape."
+      },
+      {
+        "Title": "Conformité réglementaire",
+        "Desc": "Votre nouvelle société respecte toutes les exigences légales et fiscales dès le premier jour."
+      },
+      {
+        "Title": "Support après constitution",
+        "Desc": "Adresse enregistrée, services de mandataire et assistance continue pour les déclarations."
+      }
+    ],
+    "ServicesTitle": "Services de constitution",
+    "Services": [
+      "Enregistrement et création d'entreprise",
+      "Préparation et dépôt des documents de constitution",
+      "Conseils sur le choix de la forme juridique et la structuration",
+      "Conseil en conformité réglementaire",
+      "Assistance à l'ouverture de comptes bancaires professionnels",
+      "Support continu en conformité et reporting",
+      "Services d'administration et d'actionnariat",
+      "Adresse enregistrée et services de mandataire",
+      "Enregistrement fiscal et mise en conformité"
+    ],
+    "CommonQuestions": {
+      "Title": "Questions fréquentes sur la constitution d'entreprise en Suisse",
+      "Questions": [
+        {
+          "Question": "SA ou Sàrl : quelle forme juridique choisir pour mon entreprise en Suisse ?",
+          "Answer": "Le choix entre SA (Société Anonyme) et Sàrl (Société à responsabilité limitée) dépend de plusieurs facteurs. La SA nécessite un capital minimum de CHF 100'000 (CHF 50'000 libérés), facilite le transfert d'actions, garantit l'anonymat des actionnaires et convient aux entreprises recherchant des investissements externes ou une cotation en bourse. La Sàrl exige CHF 20'000 de capital minimum (entièrement libéré), présente des exigences administratives simplifiées, des coûts de constitution réduits, et convient parfaitement aux entreprises familiales ou PME avec une structure d'actionnariat stable. Nous analysons votre plan d'affaires, votre stratégie de financement, votre structure de propriété et vos objectifs de croissance pour recommander la forme juridique optimale, en tenant compte de vos besoins immédiats et de la flexibilité nécessaire à long terme pour votre entreprise genevoise ou lausannoise."
+        },
+        {
+          "Question": "Quels sont les exigences de capital minimum et les coûts pour créer une société en Suisse en 2026 ?",
+          "Answer": "Les exigences de capital minimum en 2026 restent de CHF 20'000 pour la Sàrl (entièrement libéré à la constitution) et CHF 100'000 pour la SA (minimum CHF 50'000 libéré). Les coûts totaux de constitution varient généralement entre CHF 2'500 et CHF 5'000 incluant : frais du registre du commerce (environ CHF 600), frais d'authentification notariale (CHF 1'500-2'500 selon la complexité), frais de publication dans la Feuille Officielle Suisse du Commerce (CHF 300-500), nos services de conseil et de constitution, et les inscriptions fiscales initiales. Les coûts additionnels comprennent les services de domiciliation si nécessaire, l'assistance à l'ouverture du compte bancaire et les livres sociaux. Pour les fondateurs étrangers, la légalisation des documents peut ajouter CHF 200-400. Nous fournissons des estimations détaillées sans frais cachés, vous permettant de budgétiser précisément votre constitution d'entreprise suisse."
+        },
+        {
+          "Question": "Quel est le calendrier complet pour la création d'une société à Genève du début à la fin ?",
+          "Answer": "La constitution complète d'une société à Genève prend généralement 3 à 6 semaines de la consultation initiale au statut opérationnel. Semaine 1 : consultation initiale, choix de la forme juridique, vérification de disponibilité du nom et préparation des documents. Semaines 2-3 : dépôt du capital sur compte bloqué (nécessite les documents de la société), authentification notariale des documents de constitution incluant les statuts et nominations des administrateurs. Semaines 3-4 : dépôt au registre du commerce et traitement (généralement 5-10 jours ouvrables). Semaines 4-5 : réception de la confirmation d'inscription, ouverture du compte bancaire opérationnel, transfert du capital depuis le compte bloqué. Semaines 5-6 : inscription TVA si nécessaire, inscriptions aux assurances sociales et mise en place opérationnelle. Des variations de délai surviennent avec des structures d'actionnariat complexes, des fondateurs étrangers nécessitant une légalisation des documents, ou des retards dans l'ouverture du compte bancaire. Nous coordonnons toutes les étapes et vous tenons informé tout au long du processus pour assurer la constitution la plus rapide possible."
+        },
+        {
+          "Question": "Les étrangers peuvent-ils créer une société en Suisse et quelles sont les exigences particulières ?",
+          "Answer": "Oui, les étrangers peuvent créer des sociétés en Suisse, mais les exigences varient selon le statut de résidence et la nationalité. Les citoyens UE/AELE bénéficient de procédures simplifiées similaires aux ressortissants suisses. Les citoyens non-UE font face à des exigences supplémentaires : au moins un administrateur doit être résident suisse ou UE/AELE avec autorisation de travail suisse, sauf si la société obtient une dispense rarement accordée. La propriété des actions est illimitée pour les SA et Sàrl. Les documents requis incluent des pièces d'identité apostillées, une preuve d'adresse, et potentiellement des lettres de référence bancaire. Les permis de travail pour les administrateurs étrangers relèvent de questions d'immigration distinctes traitées par les autorités cantonales. Nous conseillons sur la structure optimale pour les entrepreneurs étrangers, fournissons des services d'administrateur prête-nom si nécessaire, coordonnons avec les conseillers en immigration pour les permis de résidence, et assurons la conformité avec les réglementations suisses sur la propriété et le contrôle."
+        }
+      ]
+    },
+    "LongFormTitle": "Créer une SA ou une Sàrl avec un cadre clair",
+    "LongFormSections": [
+      {
+        "Title": "Pour qui",
+        "Body": [
+          "Entrepreneurs, fondateurs, investisseurs et sociétés étrangères qui veulent constituer une SA ou une Sàrl en Suisse.",
+          "Nous aidons à choisir une structure compatible avec le capital, la gouvernance, la fiscalité et les besoins opérationnels."
+        ]
+      },
+      {
+        "Title": "Ce que nous préparons",
+        "Body": [
+          "Choix de forme juridique, coordination des documents, dépôt du capital, registre du commerce, TVA, assurances sociales et premières routines administratives.",
+          "Nous signalons les points qui doivent être validés avec notaire, banque, avocat ou administration selon le dossier."
+        ]
+      },
+      {
+        "Title": "Étapes",
+        "Body": [
+          "Le processus commence par le cadrage de l’activité, des actionnaires ou associés, de la signature, du siège et des rôles de gouvernance.",
+          "Après l’inscription, nous aidons à mettre en place comptabilité, salaires, contrats administratifs et calendrier d’obligations."
+        ]
+      },
+      {
+        "Title": "Coûts et délais",
+        "Body": [
+          "Les coûts et délais dépendent de la forme choisie, du nombre de fondateurs, de la banque, du notaire, des permis et des besoins de domiciliation.",
+          "Nous privilégions une liste de pièces courte et vérifiable pour éviter les retards au registre du commerce."
+        ]
+      },
+      {
+        "Title": "Intentions de recherche",
+        "Body": [
+          "La création d’une société à Genève attire de nombreux entrepreneurs, qu’il s’agisse de lancer une sàrl ou une société anonyme. Les recherches portent souvent sur les étapes à suivre, les documents nécessaires et les délais d’inscription au registre du commerce. Les futurs dirigeants souhaitent comprendre les démarches administratives pour ouvrir leur entreprise en toute conformité avec la législation suisse. Ils recherchent aussi des conseils pratiques pour choisir la forme juridique la plus adaptée à leur projet.",
+          "Le coût de création d’une société à Genève est une préoccupation fréquente. Les utilisateurs cherchent à connaître les frais liés à l’inscription, les honoraires de notaire, ainsi que les coûts administratifs. Ils souhaitent également anticiper les dépenses récurrentes, comme la gestion comptable ou les obligations fiscales. Comprendre le budget à prévoir pour chaque étape du processus de constitution est essentiel pour bien planifier le lancement de leur activité.",
+          "Les démarches administratives pour créer une entreprise en Suisse romande suscitent de nombreuses questions. Les entrepreneurs veulent savoir comment préparer un dossier complet, quelles sont les pièces justificatives à fournir et comment se déroule l’immatriculation. Ils s’intéressent aussi aux délais de traitement et aux éventuelles spécificités cantonales, notamment à Genève. Un accompagnement personnalisé est souvent recherché pour éviter les erreurs et gagner du temps.",
+          "Les conseils juridiques et l’accompagnement administratif sont très demandés lors de la création d’une société. Les porteurs de projet souhaitent être guidés dans le choix du statut, la rédaction des statuts et la compréhension des obligations légales. Ils recherchent un partenaire de confiance pour sécuriser chaque étape, de la constitution à l’inscription au registre du commerce. Un service sur mesure permet de démarrer son activité en toute sérénité, en bénéficiant d’un appui professionnel et humain."
+        ]
+      }
+    ],
+    "UseCases": {
+      "Title": "Histoires de réussite réelles de constitution depuis notre cabinet genevois",
+      "Description": "Découvrez comment nous avons aidé divers clients à créer et structurer avec succès leurs sociétés suisses, en naviguant la complexité avec expertise et efficacité.",
+      "Cases": [
+        {
+          "Title": "Entrepreneur français établissant une présence de conseil suisse avec optimisation transfrontalière",
+          "Description": "Un consultant en management français expérimenté souhaitait établir une entité suisse pour servir des clients internationaux tout en maintenant sa résidence française. Défi : Le client devait déterminer la structure optimale (Sàrl vs SA), naviguer les exigences de fondateur étranger sans résidence suisse, comprendre les implications fiscales en France et en Suisse, et établir des relations bancaires en tant qu'administrateur étranger. Notre solution : Nous avons recommandé une structure Sàrl pour la simplicité et l'efficacité des coûts, en tirant parti de la convention fiscale France-Suisse pour un traitement fiscal optimal. Nous avons fourni des services de domiciliation à Genève, coordonné avec un administrateur prête-nom résident suisse pour répondre aux exigences réglementaires tout en maintenant le contrôle du client, et facilité les relations bancaires avec des banques genevoises francophones familières avec les professionnels transfrontaliers. Résultat : Le client a constitué sa société avec succès en 4 semaines, établi une gouvernance d'entreprise conforme, réalisé une structuration fiscale optimale bénéficiant des taux fédéraux et cantonaux suisses tout en gérant les obligations fiscales françaises, et sécurisé une base solide pour servir des clients internationaux de conseil à haute valeur ajoutée avec la crédibilité suisse."
+        },
+        {
+          "Title": "Entrepreneur digital créant une Sàrl de conseil pour une activité indépendante de la localisation",
+          "Description": "Un nomade digital fournissant des services de marketing en ligne à des clients internationaux souhaitait formaliser son activité avec une constitution suisse tout en maintenant la flexibilité pour voyager mondialement. Défi : L'entrepreneur manquait de résidence fixe suisse, nécessitait un fardeau administratif minimal compatible avec son mode de vie de voyage, requérait des services bancaires multi-devises pour les clients internationaux, et voulait une résidence fiscale légitime pour son entreprise. Notre solution : Nous avons structuré une Sàrl avec l'entrepreneur comme unique propriétaire et administrateur, établi des services de domiciliation virtuelle avec réexpédition du courrier, mis en place des services bancaires en ligne avec de solides capacités de paiement internationales, et implémenté des systèmes comptables basés sur le cloud accessibles mondialement. Nous avons assuré la conformité avec les exigences de substance suisse tout en maximisant la flexibilité opérationnelle. Résultat : L'entrepreneur a établi sa Sàrl suisse avec succès en 5 semaines, obtenu des références commerciales suisses améliorant la crédibilité auprès des clients internationaux, maintenu une conformité totale grâce à notre support continu de domiciliation et de comptabilité, et réalisé une augmentation de 30% du chiffre d'affaires en six mois grâce à la réputation commerciale suisse et à la structure professionnelle."
+        },
+        {
+          "Title": "Entreprise familiale passant de la structure Sàrl à SA pour la croissance et la succession",
+          "Description": "Une entreprise genevoise d'import-export prospère exploitée sous forme de Sàrl depuis 15 ans nécessitait une restructuration pour faciliter la planification de la succession familiale et potentiellement attirer des investisseurs externes. Défi : La famille souhaitait passer de Sàrl à SA sans perturber les opérations, clarifier la propriété et le contrôle parmi trois frères et sœurs et la prochaine génération, créer des mécanismes de liquidité pour les membres de la famille souhaitant sortir, et positionner l'entreprise pour un éventuel partenariat avec private equity. Notre solution : Nous avons exécuté une transformation de Sàrl à SA via les processus du registre du commerce, augmenté le capital à CHF 500'000 reflétant la valeur de l'entreprise, implémenté des conventions d'actionnaires traitant de la gouvernance familiale et des restrictions de transfert, établi une structure de conseil claire séparant la propriété de la gestion, et créé des classes d'actions fournissant le contrôle du vote aux membres actifs de la famille tout en permettant une participation financière passive. Résultat : L'entreprise s'est transformée en SA avec succès en 8 semaines, a réalisé un cadre de succession clair satisfaisant tous les membres de la famille, a établi une gouvernance professionnelle attirant l'intérêt préliminaire de deux sociétés de private equity, maintenu la continuité opérationnelle tout au long de la transformation, et positionné l'entreprise pour une croissance future avec des structures de capital et de propriété flexibles répondant aux besoins de la famille et des investisseurs."
+        }
+      ]
+    }
+  },
+  "Hero": {
+    "Badge": "Excellence suisse",
+    "BadgeTwo": "Experts en entreprise",
+    "Title": "Création de société à Genève (sàrl, sa)",
+    "Description": "Conseils experts pour une création et un enregistrement d'entreprise sans souci en Suisse.",
+    "CTA": "Lancer ma création",
+    "SecondaryCTA": "En savoir plus"
+  }
+}

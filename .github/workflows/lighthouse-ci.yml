@@ -1,0 +1,55 @@
+name: Lighthouse CI (production)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "src/**"
+      - "public/**"
+      - "next.config.js"
+      - "lighthouserc.*.json"
+
+jobs:
+  lhci:
+    if: false # Disabled - Lighthouse CI no longer needed
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Build (standalone)
+        env:
+          BUILD_SOURCEMAPS: "false"
+          NODE_OPTIONS: --max_old_space_size=2048
+        run: npm run build
+
+      - name: Run Lighthouse (mobile)
+        run: npx --yes @lhci/cli collect --config=lighthouserc.mobile.json
+
+      - name: Upload Lighthouse (mobile)
+        run: npx --yes @lhci/cli upload --target=temporary-public-storage
+
+      - name: Run Lighthouse (desktop)
+        run: npx --yes @lhci/cli collect --config=lighthouserc.desktop.json
+
+      - name: Upload Lighthouse (desktop)
+        run: npx --yes @lhci/cli upload --target=temporary-public-storage
+
+      - name: Upload LHCI artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: lhci-results
+          path: .lighthouseci
+          retention-days: 7
+          if-no-files-found: ignore

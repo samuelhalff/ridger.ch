@@ -1,0 +1,77 @@
+{
+  "ImageAlt": "Matterhorn peak at sunrise with alpine skyline, Switzerland",
+  "Hero": {
+    "Badge": "Genève · Lausanne",
+    "BadgeTwo": "Trusted partner",
+    "Title": "Corporate administration and company secretarial in geneva",
+    "Description": "Ridger provides comprehensive corporate administration services, ensuring your company is compliant, well-structured, and ready for growth. We handle all administrative, legal, and regulatory aspects so you can focus on your business.",
+    "CTA": "Simplify corporate admin",
+    "SecondaryCTA": "Meet the team"
+  },
+  "Presentation": {
+    "Title": "Swiss corporate administration and governance",
+    "Subtitle": "A solid foundation for your business",
+    "Intro": [
+      "Our team supports you in all stages of your company's life: from incorporation to daily management, including statutory changes and liquidations.",
+      "We ensure compliance with Swiss regulations and offer strategic advice for optimal governance.",
+      "We document decisions, keep registers current and prepare clean minutes so audits run smoothly."
+    ],
+    "ServicesTitle": "Our corporate services",
+    "Services": [
+      "Company incorporation: complete assistance with setting up your Swiss company",
+      "Statutory changes: professional handling of all corporate structure modifications",
+      "Board meetings: organization and documentation of board and general meetings",
+      "Corporate housekeeping: ongoing compliance and administrative management"
+    ],
+    "StrengthsTitle": "Our strengths for your corporate needs",
+    "Strengths": [
+      {
+        "Title": "Expertise in Swiss law",
+        "Desc": "Our specialists master the legal and regulatory framework, ensuring your company is always compliant."
+      },
+      {
+        "Title": "Personalized support",
+        "Desc": "A dedicated contact person accompanies you at every stage, offering tailored solutions for your business."
+      },
+      {
+        "Title": "Administrative efficiency",
+        "Desc": "We take care of all administrative formalities, allowing you to focus on your core business."
+      },
+      {
+        "Title": "Strategic advice",
+        "Desc": "Benefit from our experience to optimize your company's structure and governance."
+      }
+    ],
+    "LongFormTitle": "Corporate administration and day-to-day governance",
+    "LongFormSections": [
+      {
+        "Title": "Who we support",
+        "Body": [
+          "Swiss companies, holdings, subsidiaries and entrepreneurs that need to keep registers, decisions and corporate obligations up to date.",
+          "We help with director changes, meetings, registers, signing rights and straightforward restructurings."
+        ]
+      },
+      {
+        "Title": "What we maintain",
+        "Body": [
+          "Corporate secretarial support, register keeping, decision preparation, signature coordination, obligation tracking and liaison with notaries or lawyers.",
+          "Documents are organized so they can be retrieved quickly during an audit, transaction or bank review."
+        ]
+      },
+      {
+        "Title": "Method",
+        "Body": [
+          "We create a calendar for recurring decisions, legal deadlines and required approvals.",
+          "Each action identifies the owner, expected document, deadline and evidence of decision."
+        ]
+      },
+      {
+        "Title": "Limits and cost drivers",
+        "Body": [
+          "Costs vary with the number of entities, frequency of changes, documents to prepare and third parties to coordinate.",
+          "When a topic requires specific legal advice, we coordinate with the relevant advisors instead of treating it as a formality."
+        ]
+      }
+    ]
+  }
+}

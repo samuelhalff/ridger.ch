@@ -1,0 +1,39 @@
+{
+    "Services": {
+        "Title": "Services"
+    },
+    "Company": {
+        "Title": "Entreprise",
+        "AboutUs": "À propos",
+        "Careers": "Carrières",
+        "Press": "Presse",
+        "News": "Actualités",
+        "MediaKit": "Kit média",
+        "Contact": "Contact"
+    },
+    "Resources": {
+        "Title": "Ressources",
+        "Blog": "Blog",
+        "Newsletter": "Newsletter",
+        "Events": "Événements",
+        "HelpCentre": "Centre d'aide",
+        "Tutorials": "Tutoriels",
+        "Support": "Support"
+    },
+    "Social": {
+        "Title": "Social",
+        "LinkedIn": "LinkedIn"
+    },
+    "Legal": {
+        "Title": "Légal",
+        "Terms": "Conditions",
+        "Privacy": "Confidentialité",
+        "Cookies": "Cookies",
+        "Licenses": "Licences",
+        "Settings": "Paramètres",
+        "Contact": "Contact"
+    },
+    "Copyright": "Tous droits réservés",
+    "Ridger": "Ridger",
+    "SoFitAffiliationPrefix": "Affilié à l'OAR de"
+}

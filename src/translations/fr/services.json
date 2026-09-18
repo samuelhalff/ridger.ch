@@ -1,0 +1,58 @@
+{
+  "Accounting": {
+    "Title": "Comptabilité",
+    "Description": "Services comptables complets, y compris tenue de livres et rapports financiers. Nous nous appuyons sur des outils d'IA personnalisés pour gagner en efficacité et vous faciliter la vie."
+  },
+  "TaxesCompanyPersonal": {
+    "Title": "Fiscalité - Entreprise et Personnel",
+    "Description": "Nous gérons tous les aspects de la conformité fiscale, y compris l'enregistrement TVA, les déclarations d'impôts sur les sociétés et les déclarations d'impôt sur le revenu personnel."
+  },
+  "PayrollHR": {
+    "Title": "Paie et RH",
+    "Description": "Nous gérons le traitement de la paie, y compris les calculs de salaire, la génération de bulletins de paie et la conformité avec les réglementations de sécurité sociale suisse."
+  },
+  "OutsourcingServices": {
+    "Title": "Services d'Externalisation",
+    "Description": "Nous fournissons des services d'externalisation pour les tâches juridiques, administratives et comptables, vous permettant de vous concentrer sur vos activités commerciales principales pendant que nous gérons les fonctions de back-office nécessaires."
+  },
+  "CorporateServices": {
+    "Title": "Services d'entreprise",
+    "Description": "Nous offrons une gamme de services d'entreprise, y compris la formation d'entreprise, la gestion de la conformité et le soutien à la gouvernance d'entreprise pour assurer le bon fonctionnement de votre entreprise."
+  },
+  "IncorporationServices": {
+    "Title": "Services de constitution",
+    "Description": "Nous vous assistons dans la constitution de votre entreprise, y compris le choix de la forme juridique, la rédaction des documents de constitution et le dépôt auprès des autorités compétentes."
+  },
+  "ImmigrationServices": {
+    "Title": "Immigration et permis",
+    "Description": "Accompagnement pour permis de séjour et de travail en Suisse, dossiers ANobAG et coordination des démarches avec les autorités cantonales."
+  },
+  "DomiciliationServices": {
+    "Title": "Services de domiciliation",
+    "Description": "Les services de domiciliation fournissent aux entreprises une adresse enregistrée. Ces services permettent aux entreprises d'établir leur siège social officiel sans avoir besoin d'un bureau physique à cet endroit."
+  },
+  "OdooImplementation": {
+    "Title": "Implémentation Odoo",
+    "Description": "Nous sommes des partenaires officiels d'Odoo, fournissant des services complets d'implémentation et de configuration pour garantir que votre configuration Odoo répond aux normes comptables suisses."
+  },
+  "ExpertBanner": {
+    "Title": "Parler à un de nos experts",
+    "Description": "Besoin d'un avis rapide ou d'un devis clair ? Notre équipe répond vite et va droit au but.",
+    "PrimaryCTA": "Parler à un expert",
+    "SecondaryCTA": "Obtenez un devis instantané"
+  },
+  "ScrollHint": "Découvrir plus",
+  "InlineContact": {
+    "Title": "Nous contacter",
+    "Description": "Décrivez-nous votre besoin et notre équipe vous répondra avec une proposition adaptée.",
+    "PrimaryCTA": "Nous contacter",
+    "SecondaryCTA": "Devis instantané",
+    "TrustLine": ""
+  },
+  "GoogleReviews": {
+    "Rating": "5.0",
+    "Count": "30+",
+    "Label": "avis Google",
+    "CTA": "Voir nos avis"
+  }
+}

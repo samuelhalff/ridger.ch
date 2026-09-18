@@ -1,0 +1,12 @@
+{
+  "env": {
+    "targets": {
+      "chrome": "90",
+      "firefox": "88",
+      "safari": "14",
+      "edge": "90"
+    },
+    "coreJs": "3",
+    "mode": "usage"
+  }
+}

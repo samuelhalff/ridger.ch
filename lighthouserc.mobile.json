@@ -1,0 +1,27 @@
+{
+    "ci": {
+        "collect": {
+            "numberOfRuns": 1,
+            "url": [
+                "https://ark-fid.ch/en/",
+                "https://ark-fid.ch/fr/",
+                "https://ark-fid.ch/de/",
+                "https://ark-fid.ch/es/",
+                "https://ark-fid.ch/pt/"
+            ],
+            "settings": {
+                "formFactor": "mobile",
+                "screenEmulation": {
+                    "mobile": true,
+                    "width": 360,
+                    "height": 640,
+                    "deviceScaleFactor": 2,
+                    "disabled": false
+                }
+            }
+        },
+        "upload": {
+            "target": "temporary-public-storage"
+        }
+    }
+}

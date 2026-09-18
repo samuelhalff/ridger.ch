@@ -1,0 +1,103 @@
+{
+  "ImageAlt": "Bergkamm über den Wolken in den Schweizer Alpen",
+  "Hero": {
+    "Badge": "Domizilierung",
+    "BadgeTwo": "Schweizer Adresse",
+    "Title": "Firmendomizil in Genf",
+    "Description": "Ridger bietet Domizilierungsdienstleistungen für Ihr Unternehmen in der Schweiz. Profitieren Sie von einer prestigeträchtigen Adresse und umfassender administrativer Unterstützung für Ihr Geschäft. Unser Büro befindet sich in Genf; wir betreuen auch Unternehmen mit Tätigkeit in Lausanne und im Kanton Waadt.",
+    "CTA": "Schweizer Adresse sichern",
+    "SecondaryCTA": "Team kennenlernen"
+  },
+  "Presentation": {
+    "Title": "Domizilierung und postverwaltung in der schweiz",
+    "Subtitle": "Ein strategischer Standort für Ihr Unternehmen",
+    "Intro": [
+      "Ein Firmendomizil in Genf bedeutet, den rechtlichen Sitz Ihrer Gesellschaft an einer anerkannten Geschäftsadresse zu begründen, ohne eigene Büroräume mieten zu müssen. Es umfasst die im Handelsregister eingetragene Sitzadresse, den Empfang, das Einscannen und die Weiterleitung der Post sowie administrative Unterstützung im Alltag.",
+      "Ridger domiziliert Ihre Gesellschaft am 26 Boulevard Georges Favon, im Herzen des Genfer Geschäftsviertels: eine Geschäftsadresse, die bei Kunden, Banken und Behörden Vertrauen schafft.",
+      "Unsere Dienstleistungen stellen sicher, dass Ihr Unternehmen die schweizerischen Anforderungen erfüllt und von einem professionellen Auftritt profitiert.",
+      "Post wird am selben Tag digitalisiert und nach Wunsch weitergeleitet, mit einer einfachen Monatsübersicht.",
+      "Als Treuhänder gehen wir über die reine Adresse hinaus: Buchhaltung, Steuern, Löhne und Administration können bei einem einzigen Ansprechpartner gebündelt werden."
+    ],
+    "ServicesTitle": "Unsere Domizilierungsdienstleistungen",
+    "Services": [
+      "Geschäftssitz: Professionelle geschäftsadresse an einem prestigeträchtigen schweizerischen Standort",
+      "Postverwaltung: Vollständige bearbeitung und weiterleitung Ihrer gesamten Geschäftskorrespondenz",
+      "Administrative unterstützung: Vollständige administrative hilfe für alle Ihre Geschäftsbedürfnisse",
+      "Besprechungsräume: Professionelle besprechungsräume verfügbar zur Miete bei Bedarf"
+    ],
+    "StrengthsTitle": "Unsere Stärken für Ihre Domizilierungsbedürfnisse",
+    "Strengths": [
+      {
+        "Title": "Prestigeträchtige Adresse",
+        "Desc": "Profitieren Sie von einer anerkannten Adresse in der Schweiz für Ihr Unternehmen."
+      },
+      {
+        "Title": "Administrative Unterstützung",
+        "Desc": "Wir verwalten Ihre Post und bieten alle notwendige administrative Hilfe."
+      },
+      {
+        "Title": "Compliance und Sicherheit",
+        "Desc": "Wir stellen sicher, dass Ihr Unternehmen alle rechtlichen Anforderungen für die Domizilierung erfüllt."
+      },
+      {
+        "Title": "Flexibilität und Dienstleistungen",
+        "Desc": "Wir bieten zusätzliche Dienstleistungen wie Besprechungsraumvermietung und Unterstützung bei der Unternehmensgründung."
+      }
+    ],
+    "LongFormTitle": "Firmendomizil, Post und Substanzanforderungen",
+    "LongFormSections": [
+      {
+        "Title": "Für wen",
+        "Body": [
+          "Schweizer Gesellschaften, Unternehmer und ausländische Gruppen, die einen Sitz in der Schweiz mit zuverlässiger administrativer Betreuung benötigen: eine Neugründung, eine Tochtergesellschaft oder Zweigniederlassung einer internationalen Gruppe oder ein Selbständiger, der Privat- und Geschäftsadresse trennen möchte.",
+          "Das Firmendomizil muss mit der tatsächlichen Tätigkeit, der Governance und den Substanzanforderungen im Einklang stehen. Wir sprechen dies offen an, bevor wir ein Mandat annehmen, um spätere Schwierigkeiten mit Banken oder Behörden zu vermeiden."
+        ]
+      },
+      {
+        "Title": "Was wir bereitstellen",
+        "Body": [
+          "Eine Sitzadresse im Zentrum von Genf, die für das Handelsregister erforderliche Domizilbestätigung, Postempfang und -nachverfolgung, administrative Koordination, Erinnerungen an wichtige Fristen und die direkte Anbindung an unsere übrigen Treuhanddienstleistungen.",
+          "Bei Bedarf koordinieren wir Gründung, Buchhaltung, Steuern, Mehrwertsteuer oder die Register der domizilierten Gesellschaft und stellen Besprechungsräume für Ihre Termine in Genf zur Verfügung."
+        ]
+      },
+      {
+        "Title": "Was kostet ein Firmendomizil in Genf?",
+        "Body": [
+          "Der Preis einer Domizilierung hängt zunächst vom Leistungsumfang ab: einfache Sitzadresse oder Komplettservice mit Postempfang, Digitalisierung und Weiterleitung, administrativer Unterstützung und Zugang zu Besprechungsräumen.",
+          "Weitere Faktoren beeinflussen den Tarif: das zu bearbeitende Postvolumen, die Komplexität der Struktur, das von Banken und Behörden erwartete Mass an Substanz sowie ergänzende Treuhanddienstleistungen wie Buchführung oder Steuererklärungen.",
+          "Statt eines Standardpakets mit versteckten Zuschlägen erstellen wir eine transparente, auf Ihre Situation zugeschnittene Offerte. Nutzen Sie unsere Sofortofferte auf der Seite /agent oder kontaktieren Sie uns, um innerhalb eines Arbeitstages ein detailliertes Angebot zu erhalten."
+        ]
+      },
+      {
+        "Title": "Begleitung in Lausanne und im Kanton Waadt",
+        "Body": [
+          "Unser Büro befindet sich in Genf, und wir begleiten auch Unternehmen, die in Lausanne und im ganzen Kanton Waadt tätig sind: Domizilierung in Genf für Geschäftsführer mit Wohnsitz anderswo in der Westschweiz, Sitzverlegungen von einem Kanton in einen anderen oder die Koordination mit Ihren lokalen Partnern.",
+          "Für viele Dienstleistungsunternehmen ist eine Sitzadresse in Genf kombiniert mit ortsunabhängiger Postverwaltung eine effiziente Alternative zur Büromiete. Wir helfen Ihnen, die für Ihre Tätigkeit und Ihre Pflichten passende Lösung zu wählen."
+        ]
+      },
+      {
+        "Title": "Ablauf",
+        "Body": [
+          "Wir prüfen Identität, Struktur, Tätigkeit, wirtschaftlich Berechtigte und Postbedürfnisse, bevor wir den Rahmen des Mandats bestätigen, wie es die schweizerische Regulierung verlangt.",
+          "Nach Unterzeichnung des Domizilvertrags stellen wir die für das Handelsregister erforderliche Bestätigung aus. Die Betreuung folgt danach einfachen Regeln: wer was erhält, in welcher Frist, und wie Entscheidungen dokumentiert werden."
+        ]
+      },
+      {
+        "Title": "Grenzen",
+        "Body": [
+          "Die Domizilierung ersetzt keine operative Präsenz, wenn die Situation echte wirtschaftliche Substanz verlangt, etwa bei bestimmten regulierten Tätigkeiten oder besonderen steuerlichen Anforderungen.",
+          "Die Kosten hängen vom Postvolumen, den administrativen Anfragen, der Komplexität der Struktur und den verbundenen Dienstleistungen ab; wir weisen sie vor jeder Verpflichtung in der Offerte aus."
+        ]
+      },
+      {
+        "Title": "Häufige Fragen",
+        "Body": [
+          "Was muss ein Domizilvertrag enthalten? Mindestens die Parteien, die als Sitz zur Verfügung gestellte Adresse, die eingeschlossenen Leistungen (Postempfang, Digitalisierung und Weiterleitung, administrative Optionen), die Laufzeit, die Kündigungsmodalitäten und die finanziellen Bedingungen. Er hält zudem die Informationen fest, die der Domizilgeber kennen muss, insbesondere die Identität der wirtschaftlich Berechtigten.",
+          "Welche Substanzanforderungen gelten? Das schweizerische Recht verlangt, dass die Gesellschaft durch mindestens eine in der Schweiz wohnhafte Person vertreten werden kann, etwa ein Verwaltungsratsmitglied oder einen Direktor (Art. 718 OR für die Aktiengesellschaft). Darüber hinaus prüfen Banken und Behörden die tatsächliche Tätigkeit: Ein Firmendomizil darf nie dazu dienen, eine fiktive Präsenz zu schaffen.",
+          "Wie schnell ist das Domizil eingerichtet? Sobald die Identifikationsdokumente und Gesellschaftsinformationen vorliegen, dauert die Einrichtung in der Regel wenige Arbeitstage, Bestätigung inbegriffen. Bei einer Neugründung koordinieren wir die Domizilierung mit der Gründung, damit die Adresse ab dem Handelsregistereintrag verfügbar ist.",
+          "Was ist der Unterschied zwischen Domizilierung und Büromiete? Die Domizilierung bietet eine rechtliche Sitzadresse und Postverwaltung ohne festen Arbeitsplatz; Besprechungsräume stehen auf Anfrage bereit. Eine Büromiete ist angezeigt, wenn Ihr Team täglich physisch präsent sein muss — beide Lösungen lassen sich mit dem Wachstum kombinieren."
+        ]
+      }
+    ]
+  }
+}

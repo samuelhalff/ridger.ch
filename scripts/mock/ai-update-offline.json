@@ -1,0 +1,95 @@
+{
+  "draft": {
+    "newFile": {
+      "filename": "checklist-teletravail-frontaliers-2025.pdf",
+      "title": "Checklist télétravail des frontaliers 2025 – OFAS",
+      "description": "Checklist officielle OFAS pour appliquer les nouvelles règles de télétravail transfrontalier dès 2025 entre la Suisse et la France, avec rappels sociaux et fiscaux.",
+      "date": "2025-09-19",
+      "source_url": "https://www.bsv.admin.ch/dam/bsv/fr/dokumente/sozialversicherungen/internationales/merkblaetter/homeoffice-international-fr.pdf.download.pdf"
+    },
+    "newArticle": {
+      "slug": "teletravail-frontaliers-2025-paie-geneve",
+      "title": "Télétravail frontalier 2025 : obligations de paie à Genève",
+      "description": "Point d'étape sur les nouvelles règles sociales et fiscales qui s'appliquent aux frontaliers en télétravail dès 2025 à Genève, avec actions concrètes pour les responsables paie.",
+      "content": "Depuis le 1er juillet 2025, l'accord Suisse–France sur le télétravail fixe un seuil de 49% de travail à distance avant tout impact sur l'affiliation sociale. Les équipes paie genevoises doivent pourtant revoir leurs procédures dès l'automne pour éviter des écarts de contribution.\n\nImpacts immédiats pour la paie :\n- la confirmation mensuelle des jours télétravaillés devient indispensable pour chaque frontalier ;\n- les justificatifs signés par l'employé et validés par la hiérarchie doivent être archivés six ans ;\n- la communication avec les caisses AVS et les assureurs LAA doit être documentée quand le seuil de 49% est atteint ;\n- les ajustements d'impôt à la source doivent suivre le guide cantonal mis à jour en septembre 2025.\n\nCe qu'il faut planifier avant décembre 2025 :\n1. mettre à jour les conventions de télétravail et rappeler les règles de déclaration ;\n2. synchroniser paie, RH et fiscalité pour déclencher un audit automatique dès 40% de télétravail ;\n3. vérifier la compatibilité des systèmes (Odoo, Abacus, ProConcept) avec le rapport OFAS ;\n4. informer les dirigeants sur les sanctions en cas de non-respect et proposer un calendrier de contrôles trimestriels.\n\nÀ Genève, l'administration fiscale cantonale accompagne les entreprises avec des sessions mensuelles. Réservez une veille réglementaire continue : les partenaires français annoncent déjà une révision pour 2026.\n\nMots-clés tendances septembre 2025 : télétravail frontalier suisse france, paie geneve 2025, accord télétravail 49 pourcent, audit social frontalier, suivi jours télétravail, conformité ofas télétravail, télétravail geneve entreprises.",
+      "author": "Ridger",
+      "date": "2025-09-19",
+      "references": [
+        {
+          "labelKey": "Accord télétravail Suisse France 2025",
+          "url": "https://www.admin.ch/gov/fr/accueil/documentation/communiques.msg-id-99538.html"
+        },
+        {
+          "labelKey": "Guide télétravail OFAS 2025",
+          "url": "https://www.bsv.admin.ch/dam/bsv/fr/dokumente/sozialversicherungen/internationales/merkblaetter/homeoffice-international-fr.pdf.download.pdf"
+        }
+      ]
+    },
+    "newLabels": {
+      "Accord télétravail Suisse France 2025": "Accord Suisse–France sur le télétravail transfrontalier (2025)",
+      "Guide télétravail OFAS 2025": "Guide OFAS 2025 sur le télétravail transfrontalier"
+    }
+  },
+  "translations": {
+    "en": {
+      "File": {
+        "title": "Cross-border telework checklist 2025 – OFAS",
+        "description": "Official OFAS checklist covering the 2025 cross-border telework rules between Switzerland and France, with social security and tax reminders."
+      },
+      "Article": {
+        "title": "Cross-border telework 2025: payroll duties in Geneva",
+        "description": "Update on payroll and tax obligations for cross-border employees working from home in 2025, plus immediate actions for Geneva payroll leads.",
+        "content": "Since 1 July 2025 the Swiss–French telework agreement keeps social security in Switzerland up to 49% remote work. Payroll managers in Geneva need revised controls before year-end to avoid contribution gaps.\n\nDirect effects on payroll:\n- monthly confirmation of remote days for each cross-border employee becomes mandatory;\n- signed declarations must be stored for six years with manager validation;\n- communication with AVS and accident insurers must be documented once the 49% threshold is reached;\n- withholding tax adjustments must follow the September 2025 cantonal update.\n\nPlan before December 2025:\n1. refresh telework policies and remind employees of declaration rules;\n2. align payroll, HR and tax teams so an automatic audit starts at 40% remote work;\n3. check that tools (Odoo, Abacus, ProConcept) can export the OFAS report;\n4. brief leadership on penalties and roll out quarterly compliance reviews.\n\nGeneva's tax authority now runs monthly briefing sessions. Keep regulatory monitoring active: French authorities already announced a 2026 review.\n\nTrending keywords September 2025: swiss french telework agreement, geneva payroll telework, cross-border telework compliance, OFAS telework guide, payroll audit frontier workers."
+      },
+      "labels": {
+        "Accord télétravail Suisse France 2025": "Swiss–French telework agreement 2025",
+        "Guide télétravail OFAS 2025": "OFAS 2025 cross-border telework guide"
+      }
+    },
+    "de": {
+      "File": {
+        "title": "Checkliste Grenzgänger Homeoffice 2025 – OFAS",
+        "description": "Offizielle OFAS-Checkliste zu den Homeoffice-Regeln 2025 zwischen der Schweiz und Frankreich mit Hinweisen zu Sozialversicherung und Steuern."
+      },
+      "Article": {
+        "title": "Grenzgänger Homeoffice 2025: Lohnpflichten in Genf",
+        "description": "Überblick über die neuen Lohn- und Steuerpflichten für Grenzgänger im Homeoffice 2025 sowie Sofortmassnahmen für Genfer Payroll-Teams.",
+        "content": "Seit dem 1. Juli 2025 gilt das Schweizerisch-Französische Homeoffice-Abkommen: Bis 49% Arbeit im Homeoffice bleibt die Sozialversicherung in der Schweiz. Genfer Payroll-Verantwortliche müssen Prozesse bis Ende Jahr anpassen, um Beitragslücken zu vermeiden.\n\nDirekte Auswirkungen auf die Lohnabrechnung:\n- monatliche Bestätigung der Homeoffice-Tage für jede Grenzgängerin und jeden Grenzgänger;\n- unterschriebene Erklärungen sind sechs Jahre archiviert und durch die Führung bestätigt;\n- Kommunikation mit AVS-Stellen und Unfallversicherern wird dokumentiert, sobald 49% erreicht sind;\n- Quellensteuer-Korrekturen folgen dem kantonalen Update von September 2025.\n\nMassnahmen bis Dezember 2025:\n1. Homeoffice-Vereinbarungen aktualisieren und Meldepflichten erläutern;\n2. Payroll, HR und Steuern koordinieren, damit ab 40% Homeoffice ein Audit ausgelöst wird;\n3. Prüfen, ob Odoo, Abacus oder ProConcept den OFAS-Report liefern;\n4. Geschäftsleitung über Sanktionen informieren und vierteljährliche Kontrollen planen.\n\nDie Steuerverwaltung Genf bietet dazu monatliche Sessions an. Behalten Sie regulatorische Updates im Blick: Frankreich plant bereits eine Revision für 2026.\n\nTrend-Keywords September 2025: Homeoffice Grenzgänger Schweiz Frankreich, Payroll Genf 2025, Compliance Homeoffice 49 Prozent, OFAS Homeoffice Leitfaden, Payroll Audit Grenzgänger."
+      },
+      "labels": {
+        "Accord télétravail Suisse France 2025": "Homeoffice-Abkommen Schweiz–Frankreich 2025",
+        "Guide télétravail OFAS 2025": "OFAS-Leitfaden 2025 Homeoffice"
+      }
+    },
+    "es": {
+      "File": {
+        "title": "Checklist teletrabajo transfronterizo 2025 – OFAS",
+        "description": "Lista oficial de OFAS sobre las reglas de teletrabajo transfronterizo 2025 entre Suiza y Francia, con recordatorios sociales y fiscales."
+      },
+      "Article": {
+        "title": "Teletrabajo fronterizo 2025: obligaciones de nómina en Ginebra",
+        "description": "Resumen de las nuevas obligaciones sociales y fiscales para teletrabajadores fronterizos en 2025 y acciones inmediatas para los equipos de nómina en Ginebra.",
+        "content": "Desde el 1 de julio de 2025 el acuerdo suizo-francés mantiene la afiliación suiza hasta el 49% de teletrabajo. Los responsables de nómina en Ginebra deben ajustar procesos antes de fin de año para evitar diferencias de cotización.\n\nEfectos directos en nómina:\n- confirmación mensual de los días de teletrabajo para cada fronterizo;\n- declaraciones firmadas archivadas durante seis años con validación del responsable;\n- documentar el contacto con cajas AVS y aseguradoras de accidentes al alcanzar el 49%;\n- actualizar la retención de impuestos según la guía cantonal de septiembre 2025.\n\nPlan de acción antes de diciembre 2025:\n1. actualizar acuerdos de teletrabajo y recordar las reglas de declaración;\n2. coordinar nómina, RRHH y fiscalidad para activar una auditoría automática a partir del 40%;\n3. comprobar que Odoo, Abacus y ProConcept generan el informe OFAS;\n4. informar a la dirección sobre sanciones y fijar revisiones trimestrales.\n\nLa administración fiscal de Ginebra organiza sesiones mensuales de apoyo. Mantenga una vigilancia normativa: Francia ya anuncia una revisión para 2026.\n\nPalabras clave en tendencia septiembre 2025: teletrabajo fronterizo suiza francia, nómina ginebra 2025, cumplimiento teletrabajo 49 por ciento, guía OFAS teletrabajo, auditoría nómina fronterizos."
+      },
+      "labels": {
+        "Accord télétravail Suisse France 2025": "Acuerdo de teletrabajo Suiza–Francia 2025",
+        "Guide télétravail OFAS 2025": "Guía OFAS 2025 sobre teletrabajo transfronterizo"
+      }
+    },
+    "pt": {
+      "File": {
+        "title": "Checklist teletrabalho transfronteiriço 2025 – OFAS",
+        "description": "Lista oficial da OFAS com as regras de teletrabalho transfronteiriço 2025 entre a Suíça e a França, com lembretes sociais e fiscais."
+      },
+      "Article": {
+        "title": "Teletrabalho fronteiriço 2025: obrigações de folha em Genebra",
+        "description": "Panorama das novas obrigações sociais e fiscais para colaboradores fronteiriços em teletrabalho e medidas imediatas para as equipas de folha em Genebra.",
+        "content": "Desde 1.º de julho de 2025 o acordo suíço-francês mantém a afiliação suíça até 49% de teletrabalho. As equipas de folha em Genebra precisam de ajustar processos antes do fim do ano para evitar lacunas de contribuição.\n\nEfeitos diretos na folha:\n- confirmação mensal dos dias de teletrabalho para cada fronteiriço;\n- declarações assinadas arquivadas por seis anos com validação da chefia;\n- documentação do contacto com as caixas AVS e seguradoras de acidentes quando o limite de 49% for alcançado;\n- ajustes do imposto na fonte segundo a atualização cantonal de setembro de 2025.\n\nPlano até dezembro de 2025:\n1. atualizar os acordos de teletrabalho e recordar as regras de declaração;\n2. alinhar folha, RH e fiscal para iniciar uma auditoria automática a partir de 40% de teletrabalho;\n3. confirmar que Odoo, Abacus e ProConcept geram o relatório OFAS;\n4. informar a direção sobre penalidades e implementar revisões trimestrais de conformidade.\n\nA administração fiscal de Genebra oferece sessões mensais de acompanhamento. Mantenha uma vigilância regulatória: as autoridades francesas já anunciam revisão para 2026.\n\nPalavras-chave em alta setembro 2025: teletrabalho fronteiriço suíça frança, folha geneva 2025, conformidade teletrabalho 49 por cento, guia OFAS teletrabalho, auditoria folha fronteiriços."
+      },
+      "labels": {
+        "Accord télétravail Suisse France 2025": "Acordo de teletrabalho Suíça–França 2025",
+        "Guide télétravail OFAS 2025": "Guia OFAS 2025 sobre teletrabalho transfronteiriço"
+      }
+    }
+  }
+}

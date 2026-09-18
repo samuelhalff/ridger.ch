@@ -1,0 +1,63 @@
+{
+    "Eyebrow": "Avis de nos clients",
+    "SectionTitle": "Ce que disent nos clients",
+    "Subtitle": "La confiance de nos clients est notre plus grande récompense",
+    "RatingBadge": "Noté 5 étoiles par nos clients",
+    "Anonymous": "Anonyme",
+    "List": [
+        {
+            "name": "Julien Roques",
+            "company": "Florissant 1928 Sàrl",
+            "service": "Odoo & ERP",
+            "testimonial": "Ark s'est montrée très disponible et nous a permis en quelques jours de mettre en place notre comptabilité sur Odoo."
+        },
+        {
+            "name": "Antoine Fortis",
+            "company": "Pargo Sàrl",
+            "service": "Comptabilité",
+            "testimonial": "Je souhaitais être autonome tout en ayant un support ponctuel pour ma comptabilité et mes salaires; chez Ark j'ai pu compter sur une équipe compétente et dynamique."
+        },
+        {
+            "name": "Armands Bush",
+            "company": "Austrenis Capital SA",
+            "service": "Comptabilité",
+            "testimonial": "Nous nous reposons sur Ark pour l'ensemble de notre comptabilité, salaires et notre fiscalité. L'équipe de Ark est toujours disponible et réactive. Nous pouvons nous concentrer pleinement sur notre activité et être confiants que ces tâches sont gérées parfaitement."
+        },
+        {
+            "name": "Pierre Saouter",
+            "company": "Principles Analytics Sàrl",
+            "service": "Comptabilité & Fiscalité",
+            "testimonial": "Ark gère notre comptabilité et nos affaires fiscales avec un professionnalisme remarquable. Leur expertise nous donne une tranquillité d'esprit totale, nous permettant de nous concentrer entièrement sur le développement de notre activité."
+        },
+        {
+            "service": "Comptabilité",
+            "rating": 5,
+            "testimonial": "Notre comptabilité est désormais parfaitement structurée grâce à Ark. Les clôtures mensuelles sont livrées dans les délais et la qualité des rapports nous permet de prendre des décisions éclairées."
+        },
+        {
+            "service": "Salaires & RH",
+            "rating": 5,
+            "testimonial": "La gestion de notre paie est devenue un jeu d'enfant. Fiches de salaire précises, déclarations sociales conformes, et un support toujours disponible pour répondre à nos questions."
+        },
+        {
+            "service": "Fiscalité",
+            "rating": 5,
+            "testimonial": "Grâce à leur expertise fiscale, nous avons optimisé notre situation tout en restant parfaitement conformes. Un accompagnement professionnel et rassurant."
+        },
+        {
+            "service": "Fusions & Acquisitions",
+            "rating": 5,
+            "testimonial": "L'équipe nous a accompagnés tout au long de notre acquisition. Due diligence rigoureuse, valorisation précise et conseils stratégiques qui ont fait la différence."
+        },
+        {
+            "service": "Family Office",
+            "rating": 5,
+            "testimonial": "Une approche sur mesure pour la gestion de notre patrimoine familial. Discrétion, expertise et un suivi personnalisé qui répond à toutes nos attentes."
+        },
+        {
+            "service": "Odoo & ERP",
+            "rating": 5,
+            "testimonial": "L'implémentation d'Odoo a transformé notre façon de travailler. Processus automatisés, données centralisées et une visibilité en temps réel sur notre activité."
+        }
+    ]
+}

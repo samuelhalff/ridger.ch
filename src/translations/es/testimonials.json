@@ -1,0 +1,63 @@
+{
+    "Eyebrow": "Opiniones de clientes",
+    "SectionTitle": "Lo que dicen nuestros clientes",
+    "Subtitle": "La confianza de nuestros clientes es nuestra mayor recompensa",
+    "RatingBadge": "Valorado con 5 estrellas por clientes",
+    "Anonymous": "Anónimo",
+    "List": [
+        {
+            "name": "Julien Roques",
+            "company": "Florissant 1928 Sàrl",
+            "service": "Odoo y ERP",
+            "testimonial": "Ark fue muy receptivo y nos ayudó a configurar nuestra contabilidad en Odoo en pocos días."
+        },
+        {
+            "name": "Antoine Fortis",
+            "company": "Pargo Sàrl",
+            "service": "Contabilidad",
+            "testimonial": "Quería ser autónomo mientras tenía soporte puntual para mi contabilidad y nóminas; en Ark pude contar con un equipo competente y dinámico."
+        },
+        {
+            "name": "Armands Bush",
+            "company": "Austrenis Capital SA",
+            "service": "Contabilidad",
+            "testimonial": "Confiamos en Ark para toda nuestra contabilidad, nóminas y fiscalidad. El equipo de Ark siempre está disponible y es reactivo. Podemos concentrarnos plenamente en nuestra actividad y estar seguros de que estas tareas se gestionan perfectamente."
+        },
+        {
+            "name": "Pierre Saouter",
+            "company": "Principles Analytics Sàrl",
+            "service": "Contabilidad y Fiscalidad",
+            "testimonial": "Ark gestiona nuestra contabilidad y asuntos fiscales con un profesionalismo notable. Su experiencia nos da total tranquilidad, permitiéndonos concentrarnos completamente en hacer crecer nuestro negocio."
+        },
+        {
+            "service": "Contabilidad",
+            "rating": 5,
+            "testimonial": "Nuestra contabilidad ahora está perfectamente estructurada gracias a Ark. Los cierres mensuales se entregan a tiempo y la calidad de los informes nos permite tomar decisiones informadas."
+        },
+        {
+            "service": "Nóminas y RRHH",
+            "rating": 5,
+            "testimonial": "Gestionar nuestra nómina se ha vuelto muy sencillo. Nóminas precisas, declaraciones sociales conformes y un soporte siempre disponible para responder a nuestras preguntas."
+        },
+        {
+            "service": "Fiscalidad",
+            "rating": 5,
+            "testimonial": "Gracias a su experiencia fiscal, hemos optimizado nuestra situación mientras permanecemos totalmente conformes. Un apoyo profesional y tranquilizador."
+        },
+        {
+            "service": "M&A",
+            "rating": 5,
+            "testimonial": "El equipo nos acompañó durante toda nuestra adquisición. Due diligence rigurosa, valoración precisa y consejos estratégicos que marcaron la diferencia."
+        },
+        {
+            "service": "Family Office",
+            "rating": 5,
+            "testimonial": "Un enfoque personalizado para la gestión de nuestro patrimonio familiar. Discreción, experiencia y un seguimiento personalizado que cumple todas nuestras expectativas."
+        },
+        {
+            "service": "Odoo y ERP",
+            "rating": 5,
+            "testimonial": "La implementación de Odoo ha transformado nuestra forma de trabajar. Procesos automatizados, datos centralizados y visibilidad en tiempo real de nuestro negocio."
+        }
+    ]
+}

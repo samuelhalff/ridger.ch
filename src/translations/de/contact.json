@@ -1,0 +1,51 @@
+{
+    "Title": "Kontakt aufnehmen",
+    "Subtitle": "Wir antworten normalerweise innerhalb von 24 Stunden.",
+    "BookingButton": "Einen Termin buchen",
+    "BookingDescription": "Ideal für ein geplantes Gespräch mit unserem Team.",
+    "OrContactUs": "Oder senden Sie uns eine Nachricht.",
+    "CallLabel": "Rufen Sie uns an",
+    "CallDescription": "Sprechen Sie direkt mit unserem Team.",
+    "WhatsApp": {
+        "Badge": "WhatsApp",
+        "Open": "WhatsApp-Chat mit Ridger öffnen",
+        "Description": "Für kurze Fragen und schnelle Antworten."
+    },
+    "Form": {
+        "Name": "Name",
+        "Email": "E-Mail",
+        "CompanyName": "Firmenname (optional)",
+        "Phone": "Telefonnummer (optional)",
+        "Message": "Nachricht",
+        "Placeholders": {
+            "Name": "Ihr Name",
+            "Email": "ihre@email.com",
+            "CompanyName": "Firma (optional)",
+            "Phone": "+41...",
+            "Message": "Ihre Nachricht..."
+        },
+        "Consent": "Ich stimme zu, bezüglich meiner Anfrage kontaktiert zu werden",
+        "Submit": "Nachricht senden",
+        "Sending": "Senden",
+        "Success": "Nachricht erfolgreich gesendet!",
+        "Error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+    },
+    "Errors": {
+        "Required": "Dieses Feld ist erforderlich",
+        "InvalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "MaxLength": "Die Nachricht darf 500 Zeichen nicht überschreiten",
+        "Consent": "Sie müssen zustimmen, kontaktiert zu werden"
+    },
+    "Contact": {
+        "CompanyName": "Ridger",
+        "Email": "Email: info@ridger.ch",
+        "Phone": "Telefon: +41 XX XXX XX XX",
+        "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
+        "Commitment": "Wir verpflichten uns, die höchsten Standards für professionellen Service und Kundenzufriedenheit einzuhalten."
+    },
+    "MapTitle": "Unser Standort in Genf",
+    "MapDisclaimer": "Die Karte wird von Google Maps bereitgestellt. Laden Sie sie nur, wenn Sie einer möglichen Datenübertragung zustimmen (siehe Datenschutzrichtlinie).",
+    "MapLoadButton": "Interaktive Karte anzeigen",
+    "MapOpenExternal": "In Google Maps öffnen",
+    "MapPrivacyPlaceholder": "Aus Datenschutzgründen wird die Karte nicht automatisch geladen."
+}

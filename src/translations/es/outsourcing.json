@@ -1,0 +1,100 @@
+{
+    "ImageAlt": "Vista aérea de bosque frondoso junto a lago suizo turquesa",
+    "Hero": {
+        "Badge": "Externalización",
+        "BadgeTwo": "Expertos BPO",
+        "Title": "Externalización de back-office en suiza francófona",
+        "Description": "Ridger ofrece soluciones de externalización para sus tareas contables, de nómina y administrativas. Enfóquese en su negocio principal mientras nosotros manejamos el resto con experiencia y confidencialidad.",
+        "CTA": "Optimizar mis procesos",
+        "SecondaryCTA": "Conocer al Equipo"
+    },
+    "Presentation": {
+        "Title": "Externalización administrativa y contable para PYMES",
+        "Subtitle": "Delegar, enfocar, crecer",
+        "Intro": [
+            "En una fiduciaria puede externalizar todo su back-office: contabilidad, gestión de nóminas y seguros sociales, facturación, IVA y administración diaria. La ventaja es doble: accede a competencias especializadas sin contratar y convierte costes fijos en un servicio ajustado a su volumen real de actividad.",
+            "Desde Ginebra, Ridger acompaña a PYMES, independientes y filiales de grupos en Ginebra, Lausana, el cantón de Vaud y toda la Suiza francófona, con soluciones flexibles que garantizan eficiencia y control de costes.",
+            "Definimos SLAs sencillos y enviamos un estado mensual para que sepa qué se hizo."
+        ],
+        "ServicesTitle": "Nuestros Servicios de Externalización",
+        "Services": [
+            "Externalización Contable: Gestión completa de su contabilidad e informes financieros",
+            "Externalización de Nómina: Servicios completos de procesamiento de nómina y administración de RRHH",
+            "Gestión Administrativa: Manejo integral de todas sus tareas administrativas",
+            "Optimización de Procesos: Racionalización y mejora de sus procesos comerciales para eficiencia"
+        ],
+        "StrengthsTitle": "Nuestras fortalezas para sus necesidades de externalización",
+        "Strengths": [
+            {
+                "Title": "Experiencia y confiabilidad",
+                "Desc": "Nuestro equipo garantiza servicios de alta calidad y estricta confidencialidad."
+            },
+            {
+                "Title": "Control de costos",
+                "Desc": "La externalización le permite optimizar sus costos y beneficiarse de soluciones escalables."
+            },
+            {
+                "Title": "Flexibilidad y escalabilidad",
+                "Desc": "Nuestros servicios se adaptan a sus necesidades y la evolución de su negocio."
+            },
+            {
+                "Title": "Enfoque en su negocio principal",
+                "Desc": "Delegue tareas administrativas y enfóquese en lo que más importa: su crecimiento."
+            }
+        ],
+        "LongFormTitle": "Externalizar el back-office sin perder el control",
+        "LongFormSections": [
+            {
+                "Title": "Para quién",
+                "Body": [
+                    "PYMES, emprendedores y filiales que quieren delegar contabilidad, nómina, facturación, archivo o administración sin crear un equipo interno completo.",
+                    "El servicio encaja cuando la carga administrativa aparta a la dirección de la actividad principal."
+                ]
+            },
+            {
+                "Title": "Alcance posible",
+                "Body": [
+                    "Contabilidad corriente, facturas de proveedores, gastos, nómina, recordatorios de pago, documentos administrativos, reporting y coordinación con socios externos.",
+                    "El alcance se documenta para evitar zonas grises entre su equipo y Ridger."
+                ]
+            },
+            {
+                "Title": "Externalización de nóminas en Ginebra, Lausana y la Suiza francófona",
+                "Body": [
+                    "Confiar su nómina a una fiduciaria cubre todo el ciclo salarial: recibos de salario mensuales, declaraciones a los seguros sociales (AVS, LPP, LAA, asignaciones familiares), gestión del impuesto en la fuente, certificados de salario anuales y transmisiones electrónicas mediante software certificado Swissdec. También gestionamos las altas y bajas de empleados, los certificados del empleador y la correspondencia con las cajas de compensación.",
+                    "Esta fórmula se dirige a PYMES que no quieren inmovilizar una función de nómina interna, a scale-ups cuya plantilla evoluciona rápido y a grupos internacionales que buscan un socio local que domine las especificidades suizas, incluidos los trabajadores fronterizos.",
+                    "Externalizar la nómina protege la confidencialidad de las remuneraciones frente a los equipos internos, garantiza una conformidad duradera ante normas sociales y fiscales que cambian cada año y asegura la continuidad del procesamiento en caso de ausencia o salida: sus empleados cobran puntualmente, cada mes.",
+                    "Nuestro equipo de nóminas trabaja desde nuestra oficina de Ginebra y atiende a empleadores establecidos en Lausana, en el cantón de Vaud y en el resto de la Suiza francófona, a distancia mediante canales seguros o en sus instalaciones según sus necesidades."
+                ]
+            },
+            {
+                "Title": "Externalizar la contabilidad en la Suiza francófona",
+                "Body": [
+                    "La externalización contable comprende el registro y la teneduría de libros, el procesamiento de facturas de proveedores y gastos, las conciliaciones bancarias, las declaraciones de IVA, los cierres mensuales o trimestrales y la preparación de los estados financieros anuales según el Código de Obligaciones suizo.",
+                    "Trabajamos prioritariamente con Odoo, del que Ridger es especialista: documentos digitalizados, reconocimiento automático de facturas, flujos bancarios conectados y paneles consultables en tiempo real. Si ya utiliza otra herramienta, podemos intervenir directamente en su entorno actual.",
+                    "La transición sigue etapas claras: análisis de la situación actual, recuperación de saldos e histórico, configuración del plan contable, definición de los flujos de documentos y un breve periodo de funcionamiento en paralelo antes del traspaso completo. Usted sigue siendo propietario de sus datos y accede a ellos en todo momento.",
+                    "El resultado: una contabilidad al día, cifras fiables para pilotar su actividad y un interlocutor único que coordina, si es necesario, con su auditor, su banco o la administración fiscal."
+                ]
+            },
+            {
+                "Title": "Organización",
+                "Body": [
+                    "Definimos canales, plazos, validaciones, formatos de reporting y reglas de escalado desde el inicio del mandato.",
+                    "Las rutinas son simples, repetibles y adaptadas al volumen real en lugar de a un modelo teórico."
+                ]
+            },
+            {
+                "Title": "Costes, presupuesto y seguimiento",
+                "Body": [
+                    "Los costes dependen del volumen de transacciones, del número de interlocutores, de las herramientas, de la frecuencia de reporting y del nivel de coordinación.",
+                    "Para obtener una estimación inmediata y sin compromiso, utilice nuestro presupuesto instantáneo en línea o contáctenos para hablar de su situación; después confirmamos el alcance y la tarifa en una propuesta escrita.",
+                    "Usted mantiene la visibilidad sobre las tareas tratadas, los puntos bloqueantes y las decisiones necesarias."
+                ]
+            }
+        ],
+        "PayrollCrossLink": {
+            "Text": "¿Busca sobre todo externalizar sus nóminas?",
+            "LinkLabel": "Descubra nuestro servicio de nóminas."
+        }
+    }
+}

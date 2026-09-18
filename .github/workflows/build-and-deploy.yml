@@ -1,0 +1,480 @@
+name: Build and Deploy (SSH)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "src/**"
+      - "public/**"
+      - "tailwind.config.*"
+      - "postcss.config.*"
+      - "next.config.js"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - ".github/workflows/build-and-deploy.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "src/**"
+      - "public/**"
+      - "tailwind.config.*"
+      - "postcss.config.*"
+      - "next.config.js"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - ".github/workflows/build-and-deploy.yml"
+  workflow_dispatch:
+
+# PR builds get their own concurrency group (cancellable) so they never queue
+# behind or delay a production deploy; production runs stay serialized and
+# uncancellable (killing a run mid-extract/symlink/restart is unsafe).
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('build-pr-{0}', github.event.pull_request.number) || 'production-deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: init.defaultBranch
+  GIT_CONFIG_VALUE_0: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      # No standalone tsc: `next build` type-checks (typescript.ignoreBuildErrors
+      # is not set), so a separate pass duplicated ~9s of work.
+      # Only the plain-JS guardrails tests run here: test:unit uses .ts test
+      # files via Node type-stripping, which needs Node >=22 (CI is Node 20).
+      - name: Fast safety checks (article guardrails)
+        run: npm run test:guardrails
+
+      - name: Check malformed internal markdown links (blocking)
+        run: node scripts/fix-article-internal-links.js --check
+
+      - name: Validate Turnstile config
+        run: |
+          if [ -z "${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}" ]; then
+            echo "Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY in GitHub Secrets"
+            exit 1
+          fi
+
+      - name: Restore Next.js build cache
+        uses: actions/cache@v5
+        with:
+          path: .next/cache
+          # github.sha in the key makes every run save its warmed cache (an
+          # exact-key hit never re-saves, which froze the cache at the first
+          # build after each lock/config change); restore-keys still pulls
+          # the latest compatible entry.
+          key: next-cache-${{ runner.os }}-${{ hashFiles('**/package-lock.json', 'next.config.js', 'tsconfig.json') }}-${{ github.sha }}
+          restore-keys: |
+            next-cache-${{ runner.os }}-${{ hashFiles('**/package-lock.json', 'next.config.js', 'tsconfig.json') }}-
+            next-cache-${{ runner.os }}-
+
+      - name: Build
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: npm run build
+
+      - name: Prepare artifact
+        run: bash scripts/prepare-artifact.sh
+
+      - name: Archive artifact
+        run: tar -czf next-standalone.tar.gz -C dist .
+
+      # ─── Deploy (same job: skips a second runner, checkout, apt-get and
+      # the GitHub artifact upload/download round-trip on the critical path;
+      # the artifact is retained at the end, after production is healthy) ───
+
+      - name: Install deploy tools
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
+
+      - name: Prepare partial artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: mkdir -p artifact && cp next-standalone.tar.gz artifact/next-standalone.tar.gz.part
+
+      - name: Upload release to server
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          # Transient SSH drops ("broken pipe") have killed single-attempt
+          # uploads mid-transfer. Retry up to 3 times; --partial keeps the
+          # interrupted destination file so retries resume via delta-sync
+          # instead of resending the whole artifact; --checksum makes rsync
+          # compare full content (never the size+mtime quick skip), so a
+          # successful exit is an end-to-end integrity guarantee within the
+          # same connection (this host throttles rapid follow-up ssh
+          # sessions, so no separate hash round-trip). --timeout and
+          # ConnectTimeout turn stalls into fast failures the loop can retry.
+          for attempt in 1 2 3; do
+            if sshpass -p "$PASS" rsync -av --partial --checksum --timeout=60 \
+              -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=15 -p $PORT" \
+              artifact/next-standalone.tar.gz.part \
+              "$USER@$HOST:/srv/customer/sites/ark-fid.ch/artifact/"; then
+              echo "Upload verified on attempt $attempt (rsync checksum)"
+              exit 0
+            fi
+            echo "Upload attempt $attempt failed"
+            [ "$attempt" -lt 3 ] && sleep $((attempt * 15))
+          done
+          echo "Upload failed after 3 attempts"
+          exit 1
+
+      - name: Sync shared env (secrets -> prod)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          AZURE_AGENT_CHAT_NAME: ${{ secrets.AZURE_AGENT_CHAT_NAME }}
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
+          AZURE_AGENT_CHAT_RESPONSES_API_VERSION: ${{ secrets.AZURE_AGENT_CHAT_RESPONSES_API_VERSION }}
+          AZURE_AGENT_RESPONSES_API_VERSION: ${{ secrets.AZURE_AGENT_RESPONSES_API_VERSION }}
+          MSGRAPH_TENANT_ID: ${{ secrets.MSGRAPH_TENANT_ID }}
+          MSGRAPH_CLIENT_ID: ${{ secrets.MSGRAPH_CLIENT_ID }}
+          MSGRAPH_CLIENT_SECRET: ${{ secrets.MSGRAPH_CLIENT_SECRET }}
+          SP_SITE_HOSTNAME: ${{ secrets.SP_SITE_HOSTNAME }}
+          SP_SITE_PATH: ${{ secrets.SP_SITE_PATH }}
+          SP_LEADS_LIST_NAME: ${{ secrets.SP_LEADS_LIST_NAME }}
+          SP_LEADS_FIELD_TITLE: ${{ secrets.SP_LEADS_FIELD_TITLE }}
+          SP_LEADS_FIELD_EMAIL: ${{ secrets.SP_LEADS_FIELD_EMAIL }}
+          SP_LEADS_FIELD_TOKEN_HASH: ${{ secrets.SP_LEADS_FIELD_TOKEN_HASH }}
+          SP_LEADS_FIELD_TRANSCRIPT: ${{ secrets.SP_LEADS_FIELD_TRANSCRIPT }}
+          SP_LEADS_FIELD_NAME: ${{ secrets.SP_LEADS_FIELD_NAME }}
+          SP_LEADS_FIELD_COMPANY: ${{ secrets.SP_LEADS_FIELD_COMPANY }}
+          SP_LEADS_FIELD_PHONE: ${{ secrets.SP_LEADS_FIELD_PHONE }}
+          SP_LEADS_FIELD_STATUS: ${{ secrets.SP_LEADS_FIELD_STATUS }}
+          SP_LEADS_FIELD_SOURCE: ${{ secrets.SP_LEADS_FIELD_SOURCE }}
+          SP_LEADS_FIELD_SESSION_ID: ${{ secrets.SP_LEADS_FIELD_SESSION_ID }}
+          SP_LEADS_FIELD_PAGE_URL: ${{ secrets.SP_LEADS_FIELD_PAGE_URL }}
+          SP_LEADS_FIELD_REFERRER: ${{ secrets.SP_LEADS_FIELD_REFERRER }}
+          SP_LEADS_FIELD_UTM_SOURCE: ${{ secrets.SP_LEADS_FIELD_UTM_SOURCE }}
+          SP_LEADS_FIELD_UTM_MEDIUM: ${{ secrets.SP_LEADS_FIELD_UTM_MEDIUM }}
+          SP_LEADS_FIELD_UTM_CAMPAIGN: ${{ secrets.SP_LEADS_FIELD_UTM_CAMPAIGN }}
+          SP_LEADS_FIELD_UTM_TERM: ${{ secrets.SP_LEADS_FIELD_UTM_TERM }}
+          SP_LEADS_FIELD_UTM_CONTENT: ${{ secrets.SP_LEADS_FIELD_UTM_CONTENT }}
+          SP_LEADS_FIELD_LAST_MESSAGE_AT: ${{ secrets.SP_LEADS_FIELD_LAST_MESSAGE_AT }}
+          SP_LEADS_FIELD_LAST_USER_MESSAGE: ${{ secrets.SP_LEADS_FIELD_LAST_USER_MESSAGE }}
+          SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE: ${{ secrets.SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE }}
+          SP_LEADS_FIELD_INITIAL_MESSAGE: ${{ secrets.SP_LEADS_FIELD_INITIAL_MESSAGE }}
+          AGENT_LEAD_TOKEN_SECRET: ${{ secrets.AGENT_LEAD_TOKEN_SECRET }}
+          FORMSPARK_ACTION_URL: ${{ secrets.FORMSPARK_ACTION_URL }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          ENV_SYNC_B64=$(python - <<'PY'
+          import os, base64
+          keys = [
+            "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
+            "TURNSTILE_SECRET_KEY",
+            "AZURE_AGENT_CHAT_NAME",
+            "AZURE_AGENT_ENDPOINT",
+            "AZURE_AGENT_API_KEY",
+            "AZURE_AGENT_CHAT_RESPONSES_API_VERSION",
+            "AZURE_AGENT_RESPONSES_API_VERSION",
+            "MSGRAPH_TENANT_ID",
+            "MSGRAPH_CLIENT_ID",
+            "MSGRAPH_CLIENT_SECRET",
+            "SP_SITE_HOSTNAME",
+            "SP_SITE_PATH",
+            "SP_LEADS_LIST_NAME",
+            "SP_LEADS_FIELD_TITLE",
+            "SP_LEADS_FIELD_EMAIL",
+            "SP_LEADS_FIELD_TOKEN_HASH",
+            "SP_LEADS_FIELD_TRANSCRIPT",
+            "SP_LEADS_FIELD_NAME",
+            "SP_LEADS_FIELD_COMPANY",
+            "SP_LEADS_FIELD_PHONE",
+            "SP_LEADS_FIELD_STATUS",
+            "SP_LEADS_FIELD_SOURCE",
+            "SP_LEADS_FIELD_SESSION_ID",
+            "SP_LEADS_FIELD_PAGE_URL",
+            "SP_LEADS_FIELD_REFERRER",
+            "SP_LEADS_FIELD_UTM_SOURCE",
+            "SP_LEADS_FIELD_UTM_MEDIUM",
+            "SP_LEADS_FIELD_UTM_CAMPAIGN",
+            "SP_LEADS_FIELD_UTM_TERM",
+            "SP_LEADS_FIELD_UTM_CONTENT",
+            "SP_LEADS_FIELD_LAST_MESSAGE_AT",
+            "SP_LEADS_FIELD_LAST_USER_MESSAGE",
+            "SP_LEADS_FIELD_LAST_ASSISTANT_MESSAGE",
+            "SP_LEADS_FIELD_INITIAL_MESSAGE",
+            "AGENT_LEAD_TOKEN_SECRET",
+            "FORMSPARK_ACTION_URL",
+          ]
+          lines = []
+          for key in keys:
+            value = os.environ.get(key, "")
+            if value:
+              lines.append(f"{key}={value}")
+          payload = "\n".join(lines).encode()
+          print(base64.b64encode(payload).decode())
+          PY
+          )
+
+          if [ -z "$ENV_SYNC_B64" ]; then
+            echo "[deploy] No env values to sync."
+            exit 0
+          fi
+
+          sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -p "$PORT" "$USER@$HOST" bash -lc '
+            set -euo pipefail
+            ENV_FILE="/srv/customer/sites/ark-fid.ch/shared/.env"
+            TMP_FILE="/tmp/arkfid_env_sync"
+            printf "%s" "'"$ENV_SYNC_B64"'" | base64 -d > "$TMP_FILE"
+            touch "$ENV_FILE"
+            while IFS= read -r line; do
+              [ -z "$line" ] && continue
+              key=${line%%=*}
+              val=${line#*=}
+              esc=$(printf "%s" "$val" | sed -e "s/[\\\\&|]/\\\\\\\\&/g")
+              if grep -q "^${key}=" "$ENV_FILE"; then
+                sed -i "s|^${key}=.*|${key}=${esc}|" "$ENV_FILE"
+              else
+                printf "%s\n" "${key}=${val}" >> "$ENV_FILE"
+              fi
+            done < "$TMP_FILE"
+            rm -f "$TMP_FILE"
+          '
+
+      # ─── Extract, symlink and cleanup ───
+      - name: Extract, symlink and cleanup releases
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          echo "[deploy] Testing SSH connectivity to $HOST:$PORT as $USER"
+          if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
+            echo "[deploy] SSH probe successful"
+          else
+            echo "[deploy] SSH probe failed (this is normal for some server configurations); proceeding with deployment"
+          fi
+
+          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" bash -lc '
+            set -euo pipefail
+            BASE_DIR="/srv/customer/sites/ark-fid.ch"
+            RELEASES_DIR="$BASE_DIR/releases"
+            CURRENT_LINK="$BASE_DIR/current"
+            ARTIFACT="$BASE_DIR/artifact/next-standalone.tar.gz"
+            PART="$BASE_DIR/artifact/next-standalone.tar.gz.part"
+            TS=$(date +%Y%m%d%H%M%S)
+            REL_DIR="$RELEASES_DIR/$TS"
+            STAGE_DIR="$RELEASES_DIR/.staging-$TS"
+            LOG="$BASE_DIR/deploy.extract.log"
+
+            echo "[deploy] Starting deployment at $(date)" >> "$LOG"
+            echo "[deploy] Release timestamp: $TS" >> "$LOG"
+            echo "[deploy] Target directory: $REL_DIR" >> "$LOG"
+
+            # Stage inside releases/ (same filesystem): the final promotion
+            # is a single atomic mv, and extraction happens in one pass
+            # instead of copy + gunzip + tar (three reads of a 60MB file).
+            mkdir -p "$RELEASES_DIR" "$STAGE_DIR"
+            echo "[deploy] Created directories" >> "$LOG"
+
+            [ -f "$PART" ] && mv "$PART" "$ARTIFACT" && echo "[deploy] Moved partial artifact to final location" >> "$LOG"
+
+            echo "[deploy] Extracting artifact..." >> "$LOG"
+            # Explicit guard: the ssh argument-flattening means `set -euo
+            # pipefail` above does not reliably govern this body, and a
+            # truncated artifact must never be promoted to a release.
+            tar -xzf "$ARTIFACT" --no-same-owner --no-same-permissions -C "$STAGE_DIR" || { echo "[deploy] ERROR: artifact is corrupt or unextractable" >> "$LOG"; rm -rf "$STAGE_DIR"; exit 1; }
+            echo "[deploy] Artifact extracted successfully" >> "$LOG"
+
+            for f in server.js .next/BUILD_ID .next/static; do
+              [ -e "$STAGE_DIR/$f" ] || { echo "[deploy] ERROR: Missing required file: $f" >> "$LOG"; rm -rf "$STAGE_DIR"; exit 1; }
+            done
+            echo "[deploy] All required files present" >> "$LOG"
+
+            mv "$STAGE_DIR" "$REL_DIR" || { echo "[deploy] ERROR: release promotion failed" >> "$LOG"; rm -rf "$STAGE_DIR"; exit 1; }
+            echo "[deploy] Moved to releases directory: $REL_DIR" >> "$LOG"
+
+            mkdir -p "$BASE_DIR/shared"
+            if [ -f "$BASE_DIR/shared/.env" ]; then
+              ln -sfn "$BASE_DIR/shared/.env" "$REL_DIR/.env"
+              echo "[deploy] Linked .env file" >> "$LOG"
+            fi
+
+            if [ -f "$REL_DIR/restart-server.sh" ]; then
+              cp "$REL_DIR/restart-server.sh" "$BASE_DIR/shared/restart-server.sh" && chmod +x "$BASE_DIR/shared/restart-server.sh"
+              echo "[deploy] Installed restart-server.sh to shared/" >> "$LOG"
+            fi
+
+            ln -sfn "$REL_DIR" "$CURRENT_LINK"
+            echo "$TS" > "$BASE_DIR/last_release_ts"
+            echo "[deploy] Updated current symlink to $REL_DIR" >> "$LOG"
+            echo "[deploy] Release $TS deployed successfully at $(date)" >> "$LOG"
+
+            KEEP=4
+            cd "$RELEASES_DIR" || exit 0
+            ls -1t | tail -n +$((KEEP+1)) | while read -r rel; do
+              [ -d "$rel" ] && [ "$rel" != "$TS" ] && rm -rf "$RELEASES_DIR/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
+            done
+            echo "[deploy] Cleanup completed, keeping last $KEEP releases" >> "$LOG"
+          '
+
+      # ─── Restart server ───
+      - name: Restart Node.js server
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        timeout-minutes: 3
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          # HTTPS-first restart. Observed in production (run 30006…): the ssh
+          # session for the restart step is the 3rd+ of the run and the host's
+          # session throttle kills it — while the supervisor loop happily
+          # respawns node inside the NEW current/ after the kill endpoint
+          # fires. So the normal path uses no ssh at all: kill over HTTPS,
+          # then verify the new BUILD_ID answers. The managed server-side
+          # script (installed to shared/ by the extract step) is only invoked
+          # as recovery if the supervisor itself is gone.
+          BUILD_ID=$(cat dist/.next/BUILD_ID)
+          TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
+          echo "[restart] Expecting build $BUILD_ID"
+
+          verify_build() {
+            local checks=$1
+            local i live
+            for i in $(seq 1 "$checks"); do
+              live=$(curl -s --max-time 4 "https://ark-fid.ch/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+              if [ "$live" = "$BUILD_ID" ]; then
+                echo "[restart] ✅ Build $BUILD_ID confirmed live (check $i)"
+                return 0
+              fi
+              sleep 2
+            done
+            echo "[restart] Live buildId '${live:-none}' != expected '$BUILD_ID'"
+            return 1
+          }
+
+          echo "[restart] Requesting process restart via kill endpoint..."
+          curl --connect-timeout 5 --max-time 20 -X POST "https://ark-fid.ch/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
+
+          # Supervisor respawn typically brings the new build up in seconds.
+          if verify_build 30; then exit 0; fi
+
+          # Recovery: supervisor likely dead — run the managed restart script
+          # over ssh (session may be throttled; retry with spacing).
+          echo "[restart] ⚠ Supervisor respawn did not deliver the new build; invoking managed restart"
+          for attempt in 1 2 3; do
+            if OUT=$(sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=15 "$USER@$HOST" "bash /srv/customer/sites/ark-fid.ch/shared/restart-server.sh" 2>&1); then
+              echo "[restart] managed restart: $OUT"
+              break
+            fi
+            echo "[restart] ssh attempt $attempt failed"
+            [ "$attempt" -lt 3 ] && sleep 20
+          done
+
+          if verify_build 30; then exit 0; fi
+          echo "[restart] ❌ Could not confirm build $BUILD_ID live"
+          exit 1
+
+      # ─── Health check ───
+      - name: Health check and warmup
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        timeout-minutes: 5
+        run: |
+          CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
+          ATTEMPTS=40; SLEEP=3; OK=0
+          for i in $(seq 1 $ATTEMPTS); do
+            STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://ark-fid.ch/fr/" || echo "000")
+            if [ "$STATUS" -eq 200 ]; then
+              echo "✅ Health check OK"
+              OK=1
+              break
+            fi
+            echo "Waiting for server... ($i/$ATTEMPTS, got $STATUS)"
+            sleep $SLEEP
+          done
+          [ "$OK" -eq 1 ] || { echo "❌ Health check failed"; exit 1; }
+
+          echo "[deploy] Warming up paths..."
+          for path in "/" "/en/" "/fr/" "/de/" "/es/" "/pt/"; do
+            curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ark-fid.ch$path" >/dev/null 2>&1 || true
+          done
+
+          echo "[deploy] Warmup next/image cache from locale home pages (non-blocking)"
+          TMP=$(mktemp)
+          collect_images() {
+            echo "$1" | grep -Eo '/_next/image/\?url=[^" ]+' | sed 's/&amp;/\&/g' >> "$TMP"
+          }
+          BASE_PATHS=("/" "/en/" "/fr/" "/de/" "/es/" "/pt/")
+          for path in "${BASE_PATHS[@]}"; do
+            HTML=$(curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ark-fid.ch$path" || true)
+            collect_images "$HTML"
+          done
+          sort -u "$TMP" | head -n 40 > "$TMP.list"
+          warm_images() {
+            local accept="$1"
+            while read -r u; do
+              curl "${CURL_TIMEOUTS[@]}" -fsSL -H "Accept: $accept" "https://ark-fid.ch$u" >/dev/null 2>&1 || true
+            done < "$TMP.list"
+          }
+          warm_images "image/webp,*/*"
+          rm -f "$TMP.list"
+          rm -f "$TMP"
+
+          echo "[deploy] Deployment completed successfully"
+
+      - name: Validate live sitemap (non-blocking)
+        continue-on-error: true
+        run: |
+          echo "Checking sitemap format..."
+          curl --connect-timeout 5 --max-time 20 -s "https://ark-fid.ch/sitemap.xml" | head -50
+          if curl --connect-timeout 5 --max-time 20 -s "https://ark-fid.ch/sitemap.xml" | grep -m 1 -E '<loc>https://[^<]+/</loc>'; then
+            echo "✅ Sitemap URLs have trailing slashes"
+          else
+            echo "Notice: Sitemap URLs may be missing trailing slashes"
+          fi
+
+      # Retained for manual/emergency access (nothing downloads it in CI:
+      # the merged job deploys the local tarball directly). Runs last so the
+      # upload cost is off the push→live critical path; always() keeps it
+      # available for debugging failed deploys too.
+      - name: Retain deployable artifact
+        if: always() && hashFiles('next-standalone.tar.gz') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: next-standalone
+          path: next-standalone.tar.gz
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error

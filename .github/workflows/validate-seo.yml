@@ -1,0 +1,31 @@
+name: Validate SEO & sitemap
+
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'src/**'
+      - 'scripts/validate-seo.js'
+      - 'scripts/ping-sitemaps.js'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+
+      - name: Validate SEO (non-blocking)
+        continue-on-error: true
+        run: node scripts/validate-seo.js
+
+      - name: Ping sitemap (non-blocking)
+        continue-on-error: true
+        run: node scripts/ping-sitemaps.js --url https://ark-fid.ch --path /sitemap.xml

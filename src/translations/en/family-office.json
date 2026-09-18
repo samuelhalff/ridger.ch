@@ -1,0 +1,83 @@
+{
+  "ImageAlt": "Swiss Alps landscape with family estate, Switzerland",
+  "Hero": {
+    "Badge": "Swiss excellence",
+    "BadgeTwo": "Family legacy",
+    "Title": "Family office administration in french-speaking switzerland",
+    "Description": "Family office support for high-net-worth families and entrepreneurs: governance, administrative coordination, consolidated reporting and philanthropy projects from Switzerland.",
+    "CTA": "Secure your legacy",
+    "SecondaryCTA": "Learn more"
+  },
+  "Breadcrumb": {
+    "Label": "Family office"
+  },
+  "Presentation": {
+    "Title": "Administrative family office and family governance",
+    "Subtitle": "An administrative and governance partner, no asset management",
+    "Intro": [
+      "Ridger supports families and entrepreneurs who need a Swiss coordination desk for governance, tax, legal and reporting.",
+      "We do not provide asset management: our role is administrative and coordination with banks, external asset managers, lawyers and tax advisers, using secure workflows."
+    ],
+    "HighlightsTitle": "What sets our family office apart",
+    "Highlights": [
+      {
+        "Title": "Independent coordination",
+        "Desc": "Administrative oversight of banks and providers, without investment advice."
+      },
+      {
+        "Title": "360° coordination",
+        "Desc": "One lead contact handles administration, tax, legal, reporting and lifestyle requests."
+      },
+      {
+        "Title": "Governance & succession",
+        "Desc": "Family charters, shareholder agreements, next-gen programmes and succession planning."
+      },
+      {
+        "Title": "Philanthropy & impact",
+        "Desc": "Foundation setup and administration, donation tracking and impact reporting."
+      }
+    ],
+    "ServicesTitle": "Flagship family office services",
+    "Services": [
+      "Ownership structure review · consolidated holdings and cash-flow dashboards",
+      "Cross-border tax and legal coordination · liaison with Swiss and international advisers",
+      "Family governance facilitation · charters, councils and education workshops",
+      "Administrative support & payments · payment preparation, documentation, case follow-up",
+      "Philanthropy and lifestyle administration · foundations, art, property and concierge oversight"
+    ],
+    "CalloutTitle": "Secure your family legacy from Switzerland",
+    "CalloutText": "Schedule a confidential strategy session with our Geneva or Lausanne team to map your priorities and define a governance roadmap.",
+    "CalloutCTA": "Speak with a family office advisor",
+    "LongFormTitle": "Administrative coordination for families and family structures",
+    "LongFormSections": [
+      {
+        "Title": "Who we support",
+        "Body": [
+          "Families, entrepreneurs and family structures needing an administrative coordination point in Switzerland or Romandy.",
+          "The service covers governance, documentation, reporting, tax follow-up and coordination of advisors."
+        ]
+      },
+      {
+        "Title": "What we coordinate",
+        "Body": [
+          "Decision calendars, governance documents, administrative summaries, tax follow-up, and coordination with banks, external managers, lawyers and notaries.",
+          "We help make information usable without replacing specialists in their own fields."
+        ]
+      },
+      {
+        "Title": "Essential limitation",
+        "Body": [
+          "Ridger does not provide discretionary asset management in this context.",
+          "Investment decisions, management mandates and financial recommendations remain with the relevant banks, external managers or authorized advisors."
+        ]
+      },
+      {
+        "Title": "Cost drivers and continuity",
+        "Body": [
+          "Costs depend on the number of entities, advisors, countries, meetings, reports and documents to coordinate.",
+          "The value is continuity: organized files, traceable decisions and clearly allocated responsibilities."
+        ]
+      }
+    ]
+  }
+}

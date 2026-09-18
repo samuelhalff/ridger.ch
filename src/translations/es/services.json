@@ -1,0 +1,58 @@
+{
+  "Accounting": {
+    "Title": "Contabilidad",
+    "Description": "Servicios contables integrales, incluyendo teneduría de libros y reportes financieros. Confiamos en herramientas de IA personalizadas para ganar eficiencia y hacer su vida más fácil."
+  },
+  "TaxesCompanyPersonal": {
+    "Title": "Impuestos - Empresarial y Personal",
+    "Description": "Manejamos todos los aspectos del cumplimiento fiscal, incluyendo registro de IVA, declaraciones de impuestos corporativos y declaraciones de impuesto sobre la renta personal."
+  },
+  "PayrollHR": {
+    "Title": "Nómina y RRHH",
+    "Description": "Gestionamos el procesamiento de nóminas, incluyendo cálculos salariales, generación de recibos de pago y cumplimiento con las regulaciones de seguridad social suiza."
+  },
+  "OutsourcingServices": {
+    "Title": "Servicios de Outsourcing",
+    "Description": "Proporcionamos servicios de outsourcing para tareas legales, administrativas y contables, permitiéndole concentrarse en sus actividades comerciales principales mientras nosotros manejamos las funciones de back-office necesarias."
+  },
+  "CorporateServices": {
+    "Title": "Servicios corporativos",
+    "Description": "Ofrecemos una gama de servicios corporativos, incluyendo formación de empresas, gestión de cumplimiento y soporte de gobierno corporativo para asegurar que su negocio opere sin problemas."
+  },
+  "IncorporationServices": {
+    "Title": "Servicios de constitución",
+    "Description": "Le asistimos en la constitución de su empresa, incluyendo la selección de la forma legal, la redacción de documentos de constitución y la presentación ante las autoridades pertinentes."
+  },
+  "ImmigrationServices": {
+    "Title": "Inmigración y permisos",
+    "Description": "Apoyo para permisos de residencia y trabajo en Suiza, casos ANobAG y coordinación con autoridades cantonales."
+  },
+  "DomiciliationServices": {
+    "Title": "Servicios de domiciliación",
+    "Description": "Los servicios de domiciliación proporcionan a las empresas una dirección registrada. Estos servicios permiten a las empresas establecer su sede oficial sin necesidad de una oficina física en la ubicación."
+  },
+  "OdooImplementation": {
+    "Title": "Implementación Odoo",
+    "Description": "Somos socios oficiales de Odoo, proporcionando servicios completos de implementación y configuración para asegurar que su configuración de Odoo cumpla con los estándares contables suizos."
+  },
+  "ExpertBanner": {
+    "Title": "Hable con uno de nuestros expertos",
+    "Description": "¿Necesita una opinión rápida o un presupuesto claro? Nuestro equipo responde rápido y con claridad.",
+    "PrimaryCTA": "Hablar con un experto",
+    "SecondaryCTA": "Obtenga un presupuesto instantáneo"
+  },
+  "ScrollHint": "Descubrir más",
+  "InlineContact": {
+    "Title": "Contactar",
+    "Description": "Descríbanos su necesidad y nuestro equipo responderá con una propuesta adaptada.",
+    "PrimaryCTA": "Contactar",
+    "SecondaryCTA": "Presupuesto instantáneo",
+    "TrustLine": ""
+  },
+  "GoogleReviews": {
+    "Rating": "5.0",
+    "Count": "30+",
+    "Label": "reseñas de Google",
+    "CTA": "Ver nuestras reseñas"
+  }
+}

@@ -1,0 +1,84 @@
+{
+    "Meta": {
+        "Title": "Início | Ridger",
+        "Description": "Aconselhamento fiduciário em Genebra e Lausana. Contabilidade, impostos, folha de pagamento, domiciliação e consultoria ERP para empresas suíças e internacionais."
+    },
+    "Hero": {
+        "Title": "Serviços Fiduciários em Genebra – Parceiro de Confiança para PMEs",
+        "Description": "Acompanhamento fiduciário com precisão suíça e eficiência digital para gerir contabilidade, fiscalidade, folha de pagamento e governação corporativa desde a criação até à expansão.",
+        "CTA": "Entre em contacto",
+        "SecondaryCTA": "Obtenha um orçamento instantâneo",
+        "Badge": "Fabricado na Suíça",
+        "BadgeTwo": "Potenciado por IA",
+        "OdooBadge": "Soluções digitais e ERP",
+        "OdooPartnerBadge": "Parceiro Odoo oficial",
+        "ImageAlt": "Profissionais da Ridger a prestar serviços fiduciários, contabilísticos e fiscais a empresas suíças",
+        "ScrollHint": "Descobrir mais",
+        "Facts": {
+            "Implantation": {
+                "Label": "// Localização",
+                "Value": "Genebra · Lausanne",
+                "Sub": "Presença na Suíça romanda para PMEs suíças e empresas internacionais."
+            },
+            "Expertises": {
+                "Label": "// Serviços",
+                "Value": "Contab. · Fiscal · RH",
+                "Sub": "Contabilidade, fiscalidade, salários, corporate, domiciliação e ERP."
+            },
+            "Solutions": {
+                "Label": "// Tecnologia",
+                "Value": "Odoo · IA",
+                "Sub": "Parceiro oficial Odoo e ferramentas digitais para acelerar a execução com precisão."
+            }
+        }
+    },
+    "Services": {
+        "Eyebrow": "Serviços",
+        "Title": "Os nossos serviços",
+        "Subtitle": "Programas fiduciários, contabilísticos e fiscais completos para cada etapa de crescimento. Combinamos experiência sob medida, processos suíços comprovados e ferramentas digitais seguras para PME, scale-ups e grupos internacionais."
+    },
+    "Trust": {
+        "Eyebrow": "Afiliações e enquadramento",
+        "Sofit": {
+            "Title": "SO-FIT",
+            "Description": "Membro OAR / SRO nos termos da LBA suíça. KYC para domiciliação sensível, escrow, fluxos de pagamento e estruturas documentadas."
+        },
+        "Odoo": {
+            "Title": "Odoo",
+            "Description": "Parceiro oficial para contabilidade, automações e reporting."
+        },
+        "Gaap": {
+            "Title": "Swiss GAAP FER",
+            "Description": "Demonstrações financeiras claras, coerentes e auditáveis."
+        }
+    },
+    "About": {
+        "Eyebrow": "Sobre nós",
+        "Title": "Por que escolher a Ridger?",
+        "Content": [
+            "A Ridger baseia-se numa profunda experiência local e ferramentas tecnológicas de ponta para apoiar empreendedores, empresas familiares, ONGs e grupos internacionais na segurança da sua contabilidade e conformidade suíça. Atuamos como uma equipa fiduciária integrada que compreende as realidades operacionais da Romandie enquanto coordena com as partes interessadas no estrangeiro.",
+            "Os nossos especialistas multidisciplinares cobrem contabilidade, fiscalidade, salários, administração de RH, governação e secretariado corporativo. Beneficia de contabilistas certificados, consultores fiscais e consultores que transformam regras complexas em planos de ação pragmáticos para a sua organização.",
+            "Cada mandato começa com uma fase de análise durante a qual mapeamos os seus objetivos, processos internos e apetite pelo risco. Depois concebemos um plano de serviços evolutivo, desde a formação e manutenção contabilística até ao reporte consolidado, estratégia de IVA ou externalização de RH.",
+            "O quadro regulamentar suíço evolui rapidamente. Seguimos as atualizações dos OAR / SRO, do AVS e dos cantões, implementamos os ajustes necessários e documentamos os controlos necessários para que esteja preparado para uma auditoria. Os nossos clientes contam connosco para antecipar prazos, evitar penalizações e manter uma documentação impecável.",
+            "A tecnologia está no coração do nosso modelo. Combinando processamento documental assistido por IA e integrações ERP Odoo, encurtamos os tempos de fecho, automatizamos reconciliações repetitivas e produzimos dashboards para impulsionar as suas decisões em tempo real, sem comprometer a segurança dos dados.",
+            "Ancorados em Genebra e Lausana, coordenamos regularmente com advogados, auditores e consultores fiscais na Suíça, Europa e América. O apoio multilingue em francês, inglês, alemão, espanhol e português assegura uma comunicação fluida para equipas distribuídas.",
+            "Os nossos clientes apreciam a nossa tarifação transparente, contactos dedicados e clareza dos entregáveis. Sabe sempre a pessoa responsável por cada tarefa, o estado dos processos em curso e as próximas datas limite de conformidade no calendário.",
+            "Escolher a Ridger significa associar-se a uma firma fiduciária que combina precisão suíça, ferramentas inovadoras e apoio humano. Tratamos da contabilidade, fiscalidade, salários e administração empresarial para que possa concentrar-se na estratégia, nos seus clientes e num crescimento sustentável."
+        ],
+        "Quality": {
+            "Title": "Padrões de qualidade suíços",
+            "Content": "Operamos segundo os princípios contabilísticos Swiss GAAP FER, mantemos controlos internos robustos e documentamos cada processo para que auditores e autoridades recebam informação completa e atempada. Formação contínua, revisões cruzadas e checklists inspiradas em ISO asseguram a precisão e fiabilidade esperadas."
+        },
+        "Innovation": {
+            "Title": "Soluções impulsionadas por tecnologia",
+            "Content": "A integração de ferramentas com IA e sistemas ERP modernos permite-nos prestar serviços mais rápidos e precisos sem perder o contacto humano essencial. Portais seguros, fluxos automatizados e análises avançadas oferecem visibilidade imediata sem perturbar a sua governação."
+        }
+    },
+    "FAQ": {
+        "Title": "Perguntas frequentes",
+        "Subtitle": "Respostas rápidas às perguntas mais comuns sobre os nossos produtos e serviços."
+    },
+    "Testimonials": {
+        "SectionTitle": "Testemunhos"
+    }
+}

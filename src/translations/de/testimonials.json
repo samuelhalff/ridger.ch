@@ -1,0 +1,63 @@
+{
+    "Eyebrow": "Kundenstimmen",
+    "SectionTitle": "Was unsere Kunden sagen",
+    "Subtitle": "Das Vertrauen unserer Kunden ist unsere grösste Belohnung",
+    "RatingBadge": "Mit 5 Sternen von Kunden bewertet",
+    "Anonymous": "Anonym",
+    "List": [
+        {
+            "name": "Julien Roques",
+            "company": "Florissant 1928 Sàrl",
+            "service": "Odoo & ERP",
+            "testimonial": "Ark war sehr verfügbar und hat uns in wenigen Tagen geholfen, unsere Buchhaltung auf Odoo einzurichten."
+        },
+        {
+            "name": "Antoine Fortis",
+            "company": "Pargo Sàrl",
+            "service": "Buchhaltung",
+            "testimonial": "Ich wollte autonom sein und gleichzeitig punktuelle Unterstützung für meine Buchhaltung und Lohnabrechnung haben; bei Ark konnte ich auf ein kompetentes und dynamisches Team zählen."
+        },
+        {
+            "name": "Armands Bush",
+            "company": "Austrenis Capital SA",
+            "service": "Buchhaltung",
+            "testimonial": "Wir verlassen uns auf Ark für unsere gesamte Buchhaltung, Lohnabrechnung und Steuern. Das Ark-Team ist immer verfügbar und reaktionsschnell. Wir können uns voll auf unser Geschäft konzentrieren und darauf vertrauen, dass diese Aufgaben perfekt erledigt werden."
+        },
+        {
+            "name": "Pierre Saouter",
+            "company": "Principles Analytics Sàrl",
+            "service": "Buchhaltung & Steuern",
+            "testimonial": "Ark kümmert sich mit bemerkenswerter Professionalität um unsere Buchhaltung und Steuerangelegenheiten. Ihre Expertise gibt uns vollkommene Ruhe, sodass wir uns ganz auf das Wachstum unseres Unternehmens konzentrieren können."
+        },
+        {
+            "service": "Buchhaltung",
+            "rating": 5,
+            "testimonial": "Unsere Buchhaltung ist dank Ark jetzt perfekt strukturiert. Monatsabschlüsse werden pünktlich geliefert und die Qualität der Berichte ermöglicht es uns, fundierte Entscheidungen zu treffen."
+        },
+        {
+            "service": "Lohnbuchhaltung & HR",
+            "rating": 5,
+            "testimonial": "Die Verwaltung unserer Lohnbuchhaltung ist mühelos geworden. Präzise Gehaltsabrechnungen, konforme Sozialversicherungsmeldungen und stets verfügbarer Support."
+        },
+        {
+            "service": "Steuern",
+            "rating": 5,
+            "testimonial": "Dank ihrer Steuerexpertise haben wir unsere Situation optimiert und bleiben dabei vollständig konform. Professionelle und beruhigende Unterstützung."
+        },
+        {
+            "service": "M&A",
+            "rating": 5,
+            "testimonial": "Das Team hat uns während unserer gesamten Akquisition begleitet. Gründliche Due Diligence, präzise Bewertung und strategische Beratung, die den Unterschied gemacht haben."
+        },
+        {
+            "service": "Family Office",
+            "rating": 5,
+            "testimonial": "Ein massgeschneiderter Ansatz für die Verwaltung unseres Familienvermögens. Diskretion, Expertise und persönliche Betreuung, die alle unsere Erwartungen erfüllt."
+        },
+        {
+            "service": "Odoo & ERP",
+            "rating": 5,
+            "testimonial": "Die Implementierung von Odoo hat unsere Arbeitsweise transformiert. Automatisierte Prozesse, zentralisierte Daten und Echtzeit-Einblick in unser Geschäft."
+        }
+    ]
+}

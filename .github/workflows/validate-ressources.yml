@@ -1,0 +1,110 @@
+name: Validate Resources (every 3 weeks)
+
+on:
+  schedule:
+    - cron: "0 6 1,22 * *" # ~every 3 weeks (1st and 22nd of each month)
+  workflow_dispatch:
+
+concurrency:
+  group: validate-ressources
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Check SEO suggest drift
+        continue-on-error: true
+        timeout-minutes: 5
+        run: timeout -k 30s 5m node scripts/check-seo-suggest-drift.js
+
+      - name: Update service SEO from suggestions
+        continue-on-error: true
+        timeout-minutes: 8
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT || 'https://pbmch8303697696.cognitiveservices.azure.com/' }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: "2024-05-01-preview"
+          AZURE_OPENAI_DEPLOYMENT: "gpt-4.1"
+          SEO_SUGGEST_DRIFT_RATIO: ${{ vars.SEO_SUGGEST_DRIFT_RATIO || '0.4' }}
+          SEO_SUGGEST_MAX_UPDATES: ${{ vars.SEO_SUGGEST_MAX_UPDATES || '6' }}
+        run: timeout -k 30s 8m node scripts/ai-update-service-seo.js --apply
+
+      - name: Refresh SEO suggest baseline
+        run: |
+          if [ -f scripts/seo-suggest-latest.json ]; then
+            cp scripts/seo-suggest-latest.json scripts/seo-suggest-baseline.json
+            echo "✅ SEO baseline refreshed"
+          else
+            echo "⚠️ seo-suggest-latest.json not found"
+          fi
+
+      - name: Validate article translations
+        continue-on-error: true
+        env:
+          REQUIRE_TRANSLATIONS: "1"
+        run: node scripts/validate-article-translations.js
+
+      - name: Validate latest article guardrails
+        run: node scripts/validate-latest-article-guardrails.js
+
+      - name: Clean up bad article references
+        continue-on-error: true
+        timeout-minutes: 5
+        run: timeout -k 30s 5m node scripts/clean-bad-article-refs.js --all-locales --timeout-ms 1200 --max-refs 25 || echo "⚠️ Reference cleanup had issues"
+
+      - name: Validate curated reference source policy
+        timeout-minutes: 5
+        run: timeout -k 30s 5m npm run validate:reference-sources
+
+      - name: Check resource links
+        continue-on-error: true
+        timeout-minutes: 8
+        run: timeout -k 30s 8m node scripts/check-ressources-links.js --all-locales || echo "⚠️ Some references missing"
+
+      - name: Commit fixes (if any)
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "src/translations/**/*.json" "scripts/seo-suggest-baseline.json" || true
+          if git diff --cached --quiet; then
+            echo "No fixes to commit"
+          else
+            git commit -m "chore(ressources): periodic validation cleanup" --author="samuelhalff <660062+samuelhalff@users.noreply.github.com>"
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; exit 1; }
+            git push
+          fi
+
+      - name: Health check
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          timeout -k 30s 3m bash <<'EOF'
+          echo "🏥 Checking site health..."
+          for locale in fr en de es pt; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ark-fid.ch/${locale}/")
+            if [ "$STATUS" = "200" ]; then echo "✅ ${locale}: OK"
+            else echo "::warning::❌ ${locale}: HTTP $STATUS"; fi
+          done
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://ark-fid.ch/fr/ressources/")
+          if [ "$STATUS" = "200" ]; then echo "✅ Resources: OK"
+          else echo "::warning::❌ Resources: HTTP $STATUS"; fi
+          EOF

@@ -1,0 +1,173 @@
+{
+  "ImageAlt": "Spiez Castle on Lake Thun with mountains, Switzerland",
+  "Hero": {
+    "Badge": "Swiss excellence",
+    "BadgeTwo": "Business experts",
+    "Title": "Company incorporation in geneva (sàrl/sa)",
+    "Description": "Expert guidance for seamless company formation and registration in Switzerland.",
+    "CTA": "Start my incorporation",
+    "SecondaryCTA": "Learn more"
+  },
+  "Presentation": {
+    "Title": "Company formation in french-speaking switzerland",
+    "Subtitle": "Fast, compliant company formation for your business",
+    "Intro": [
+      "We help you incorporate your business quickly and correctly. Choose a company type, submit required documents, and we'll handle registration, filings, and compliance.",
+      "We support bank account opening, capital deposit and VAT registration, with a clear timeline."
+    ],
+    "StrengthsTitle": "Why choose our incorporation services",
+    "Strengths": [
+      {
+        "Title": "Formation expertise",
+        "Desc": "Experienced guidance on entity selection, registration steps and documentation."
+      },
+      {
+        "Title": "Local knowledge",
+        "Desc": "In-depth understanding of Swiss legal, tax and regulatory requirements."
+      },
+      {
+        "Title": "Efficiency & speed",
+        "Desc": "Streamlined processes to minimize delays and get your business up and running fast."
+      },
+      {
+        "Title": "Comprehensive support",
+        "Desc": "From initial consultation to post-incorporation services, we’re with you every step."
+      },
+      {
+        "Title": "Regulatory compliance",
+        "Desc": "Ensure your new company meets all local legal and tax requirements from day one."
+      },
+      {
+        "Title": "Post-incorporation support",
+        "Desc": "Registered office, nominee services and ongoing reporting assistance."
+      }
+    ],
+    "ServicesTitle": "Incorporation services",
+    "Services": [
+      "Company registration and formation",
+      "Preparation and filing of incorporation documents",
+      "Legal entity selection and structuring advice",
+      "Regulatory compliance consulting",
+      "Assistance with opening corporate bank accounts",
+      "Ongoing compliance and reporting support",
+      "Directorship and shareholder services",
+      "Registered office and nominee services",
+      "Tax registration and compliance onboarding"
+    ],
+    "CommonQuestions": {
+      "Title": "Frequently asked questions about company incorporation in Switzerland",
+      "Questions": [
+        {
+          "Question": "SA vs Sàrl: which legal form should I choose for my business in Switzerland?",
+          "Answer": "The choice between SA (Société Anonyme/stock corporation) and Sàrl (Société à responsabilité limitée/limited liability company) depends on several factors. SA requires minimum capital of CHF 100,000 (CHF 50,000 paid-in), offers easier share transfers, provides anonymity for shareholders, and is preferred for businesses seeking external investment or public listing. Sàrl requires CHF 20,000 minimum capital (fully paid), has simpler administrative requirements, lower incorporation costs, and is ideal for family businesses or SMEs with stable ownership. We analyze your business plan, funding strategy, ownership structure, and growth objectives to recommend the optimal legal form, considering both immediate needs and long-term flexibility for your Geneva or Lausanne venture."
+        },
+        {
+          "Question": "What are the minimum capital requirements and costs for incorporating a company in Switzerland in 2026?",
+          "Answer": "Minimum capital requirements in 2026 remain CHF 20,000 for Sàrl (fully paid at formation) and CHF 100,000 for SA (minimum CHF 50,000 paid-in). Total incorporation costs typically range from CHF 2,500 to CHF 5,000 including: commercial register fees (approximately CHF 600), notary authentication fees (CHF 1,500-2,500 depending on complexity), publication costs in Swiss Official Gazette of Commerce (CHF 300-500), our advisory and formation services, and initial tax registrations. Additional costs include registered office services if needed, bank account opening support, and corporate books. For foreign founders, identity legalization may add CHF 200-400. We provide detailed cost estimates upfront with no hidden fees, helping you budget accurately for your Swiss company formation."
+        },
+        {
+          "Question": "What is the complete timeline for company formation in Geneva from start to finish?",
+          "Answer": "Complete company formation in Geneva typically takes 3-6 weeks from initial consultation to operational status. Week 1: Initial consultation, legal form selection, name reservation check, and document preparation. Week 2-3: Capital deposit in blocked account (requires company documents), notarial authentication of formation documents including articles of association and board appointments. Week 3-4: Commercial register filing and processing (usually 5-10 business days). Week 4-5: Receive company registration confirmation, open operational bank account, transfer capital from blocked account. Week 5-6: VAT registration if required, social insurance registrations, and operational setup. Timeline variations occur with complex shareholder structures, foreign founders requiring document legalization, or bank account opening delays. We coordinate all steps, manage notary appointments, handle authority communications, and keep you informed throughout the process to ensure the fastest possible formation."
+        },
+        {
+          "Question": "Can foreigners establish a company in Switzerland and what are the special requirements?",
+          "Answer": "Yes, foreigners can establish companies in Switzerland, but requirements vary by residency status and nationality. EU/EFTA citizens have simplified procedures similar to Swiss nationals. Non-EU citizens face additional requirements: at least one director must be a Swiss or EU/EFTA resident with Swiss work authorization, unless the company obtains a rarely-granted exemption. Share ownership is unrestricted for both SA and Sàrl. Document requirements include apostilled identity documents, proof of address, and potentially bank reference letters. Work permits for foreign directors are separate immigration matters handled by cantonal authorities. We advise on optimal structure for foreign entrepreneurs, provide nominee director services when necessary, coordinate with immigration advisors for residence permits, and ensure compliance with Swiss ownership and control regulations while establishing your Geneva or Lausanne business presence."
+        },
+        {
+          "Question": "What is included in notary fees and what happens during notary authentication?",
+          "Answer": "Notary fees for company incorporation in Geneva typically range from CHF 1,500 to CHF 2,500, covering authentication of formation documents, verification of founder identities, confirmation of capital contributions, and official registration of the company's existence. During the notary appointment, founders must appear personally (or via authenticated power of attorney), present original identity documents, confirm the articles of association, appoint initial directors/administrators, and sign formation deeds. The notary verifies legal compliance, explains founder obligations, and ensures all parties understand their commitments. For foreign founders, documents may require sworn translations. The notary then files authenticated documents with the commercial register. We coordinate notary appointments, prepare all required documents in advance, arrange sworn translations, provide power of attorney services if needed, and accompany you to ensure smooth authentication."
+        },
+        {
+          "Question": "What post-incorporation registrations are required (VAT, social insurance, tax)?",
+          "Answer": "After commercial register entry, several mandatory registrations activate your company's operations. VAT registration with the Federal Tax Administration is required if projected annual turnover exceeds CHF 100,000, taking 2-4 weeks for approval. Social insurance registrations include AVS/AI/APG compensation office enrollment (mandatory even without employees, for director salaries), family allowance fund registration, and accident insurance for employees. Cantonal and communal tax registration occurs automatically based on commercial register notification, but requires submitting initial declarations. Bank account opening, while not a legal registration, is practically necessary and may take 2-6 weeks depending on bank and founder profiles. We manage all post-incorporation registrations, coordinate timing to minimize gaps in operational readiness, ensure you meet all compliance obligations from day one, and establish proper accounting and reporting systems for your new Geneva or Lausanne company."
+        }
+      ]
+    },
+    "WhoThisIsFor": {
+      "Title": "Who benefits from our incorporation services?",
+      "Description": "Our company formation services are designed for entrepreneurs and businesses seeking efficient, compliant establishment in Switzerland's dynamic business environment.",
+      "TargetClients": [
+        "International entrepreneurs establishing their first Swiss company in Geneva or Lausanne",
+        "Foreign companies creating Swiss subsidiaries for European market access and operations",
+        "Startups and founders navigating legal form selection and initial compliance requirements",
+        "Existing businesses restructuring or transitioning from sole proprietorship to corporate form",
+        "Family offices and holding structures seeking optimal Swiss entity setup and governance"
+      ]
+    },
+    "ProcessTimeline": {
+      "Title": "Our step-by-step company incorporation process",
+      "Description": "We guide you through every stage of Swiss company formation with transparent timelines and comprehensive support from consultation to operational launch.",
+      "Steps": [
+        {
+          "Title": "Initial consultation and structure planning (Week 1)",
+          "Description": "We begin with a comprehensive consultation to understand your business objectives, ownership structure, and operational plans. Our team analyzes whether SA or Sàrl is optimal for your situation, considering capital requirements, ownership flexibility, governance needs, and future growth plans. We discuss shareholder/partner composition, director appointments, registered office options, and initial capitalization strategies. For foreign founders, we assess residency requirements and potential nominee solutions. We verify your proposed company name against commercial register databases to ensure availability and trademark compliance. This session concludes with a clear incorporation roadmap, timeline, detailed cost breakdown, and preliminary articles of association draft tailored to your specific needs and Swiss regulatory requirements."
+        },
+        {
+          "Title": "Document preparation and capital deposit (Weeks 1-2)",
+          "Description": "Our legal team prepares comprehensive formation documents including articles of association customized to your governance preferences, shareholder agreements if multiple owners, board or management appointment resolutions, and all required declarations for the commercial register. We coordinate opening a blocked capital deposit account with a Swiss bank, which requires preliminary formation documents and founder identification. You transfer the required minimum capital (CHF 20,000 for Sàrl or minimum CHF 50,000 for SA) to this account, which remains blocked until commercial register entry. For foreign founders, we arrange document legalization or apostille certification, sworn translations of identity documents and bank references, and any additional documentation required by Swiss authorities. We schedule the notary appointment and ensure all parties are prepared."
+        },
+        {
+          "Title": "Notarial authentication and commercial register filing (Weeks 2-4)",
+          "Description": "Founders attend the notary appointment where official formation deeds are authenticated. The notary verifies identities, confirms capital contribution, authenticates articles of association, and validates board or management appointments. We coordinate this appointment, provide translation services if needed, and ensure smooth execution. Following authentication, the notary or our team files the formation documents with the Geneva or Vaud commercial register along with required forms, capital deposit confirmation, and fee payment. The commercial register reviews submissions for legal compliance, which typically takes 5-10 business days. Once approved, your company receives official registration with a unique commercial register number (CHE), becoming a legal entity. We monitor the registration process and notify you immediately upon confirmation, providing official registration excerpts."
+        },
+        {
+          "Title": "Bank account opening and capital release (Weeks 3-5)",
+          "Description": "With commercial register confirmation, we coordinate opening your operational company bank account. Swiss banks require extensive documentation including commercial register extract, authenticated formation documents, beneficial owner declarations, business plan, and director identification. Banking relationships in Switzerland involve careful due diligence, sometimes requiring in-person meetings with relationship managers. We leverage our banking relationships to facilitate introductions and smooth account opening. Once approved, we arrange transfer of capital from the blocked formation account to your operational account, completing the capitalization process. For companies requiring multi-currency accounts, international payment capabilities, or online banking platforms, we ensure your banking setup matches operational needs. This stage may vary significantly in duration depending on founder profiles and bank selection."
+        },
+        {
+          "Title": "Regulatory registrations and operational setup (Weeks 4-6)",
+          "Description": "We handle all mandatory post-incorporation registrations to activate your company's operations. This includes VAT registration with the Federal Tax Administration if your projected turnover exceeds CHF 100,000, enrollment with the cantonal AVS compensation office for social insurance obligations even if no employees initially, accident insurance setup, and family allowance fund registration. We register your company with Geneva or Vaud cantonal and communal tax authorities, ensuring proper establishment for annual tax declarations. If employing staff immediately, we establish payroll systems and withholding tax accounts. We set up accounting infrastructure, prepare corporate books and minute books, establish filing systems for regulatory compliance, and provide guidance on statutory requirements including annual general meetings, financial statements, and commercial register update obligations. Your company is now fully operational and compliant."
+        }
+      ]
+    },
+    "UseCases": {
+      "Title": "Real incorporation success stories from our Geneva practice",
+      "Description": "See how we've helped diverse clients successfully establish and structure their Swiss companies, navigating complexity with expertise and efficiency.",
+      "Cases": [
+        {
+          "Title": "French entrepreneur establishing Swiss consulting presence with cross-border optimization",
+          "Description": "An experienced French management consultant wanted to establish a Swiss entity to serve international clients while maintaining French residency. Challenge: The client needed to determine optimal structure (Sàrl vs SA), navigate foreign founder requirements without Swiss residency, understand tax implications in both France and Switzerland, and establish banking relationships as a foreign director. Our solution: We recommended a Sàrl structure for simplicity and cost-efficiency, leveraging the France-Switzerland tax treaty for optimal tax treatment. We provided registered office services in Geneva, coordinated with a Swiss-resident nominee director to meet regulatory requirements while maintaining client control, and facilitated banking relationships with French-speaking Geneva banks familiar with cross-border professionals. Outcome: The client successfully incorporated within 4 weeks, established compliant corporate governance, achieved optimal tax structuring benefiting from Swiss federal and cantonal rates while managing French tax obligations, and secured a solid foundation for serving high-value international consulting clients with Swiss credibility."
+        },
+        {
+          "Title": "Digital entrepreneur creating consulting Sàrl for location-independent business",
+          "Description": "A digital nomad providing online marketing services to international clients wanted to formalize their business with Swiss incorporation while maintaining flexibility for global travel. Challenge: The entrepreneur lacked fixed Swiss residency, needed minimum administration burden compatible with travel lifestyle, required multi-currency banking for international clients, and wanted legitimate tax residency for their business. Our solution: We structured a Sàrl with the entrepreneur as sole owner and director, established virtual registered office services with mail forwarding, set up online banking with strong international payment capabilities, and implemented cloud-based accounting systems accessible worldwide. We ensured compliance with Swiss substance requirements while maximizing operational flexibility. Outcome: The entrepreneur successfully established their Swiss Sàrl within 5 weeks, obtained Swiss business credentials enhancing credibility with international clients, maintained full compliance through our ongoing registered office and accounting support, and achieved 30% revenue increase within six months due to Swiss business reputation and professional structure."
+        },
+        {
+          "Title": "Family business transitioning from Sàrl to SA structure for growth and succession",
+          "Description": "A successful Geneva import-export business operated as a Sàrl for 15 years but needed restructuring to facilitate family succession planning and potentially attract external investors. Challenge: The family wanted to transition from Sàrl to SA without disrupting operations, clarify ownership and control among three siblings and next generation, create liquidity mechanisms for family members wanting to exit, and position the business for potential private equity partnership. Our solution: We executed a transformation from Sàrl to SA through commercial register processes, increased capital to CHF 500,000 reflecting company value, implemented shareholder agreements addressing family governance and transfer restrictions, established clear board structure separating ownership from management, and created classes of shares providing voting control to active family members while allowing passive financial participation. Outcome: The business successfully transformed to SA within 8 weeks, achieved clear succession framework satisfying all family members, established professional governance attracting preliminary interest from two private equity firms, maintained operational continuity throughout the transformation, and positioned the company for future growth with flexible capital and ownership structures meeting both family and investor needs."
+        }
+      ]
+    },
+    "LongFormTitle": "Creating a Swiss SA or Sàrl with a clear framework",
+    "LongFormSections": [
+      {
+        "Title": "Who it is for",
+        "Body": [
+          "Entrepreneurs, founders, investors and foreign companies that want to incorporate a Swiss SA or Sàrl.",
+          "We help choose a structure compatible with capital, governance, tax and operating needs."
+        ]
+      },
+      {
+        "Title": "What we prepare",
+        "Body": [
+          "Legal form choice, document coordination, capital deposit, commercial register, VAT, social insurance and first administrative routines.",
+          "We flag points that need validation with a notary, bank, lawyer or authority depending on the matter."
+        ]
+      },
+      {
+        "Title": "Steps",
+        "Body": [
+          "The process starts by framing the activity, shareholders or quotaholders, signing rights, registered office and governance roles.",
+          "After registration, we help set up accounting, payroll, administrative contracts and an obligation calendar."
+        ]
+      },
+      {
+        "Title": "Costs and timing",
+        "Body": [
+          "Costs and timing depend on the legal form, number of founders, bank, notary, permits and domiciliation needs.",
+          "We use a short and verifiable document list to avoid delays at the commercial register."
+        ]
+      }
+    ]
+  }
+}

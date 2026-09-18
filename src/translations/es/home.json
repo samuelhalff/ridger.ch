@@ -1,0 +1,84 @@
+{
+    "Meta": {
+        "Title": "Inicio | Ridger",
+        "Description": "Asesoramiento fiduciario en Ginebra y Lausana. Contabilidad, fiscalidad, nóminas, domiciliación y consultoría ERP para empresas suizas e internacionales."
+    },
+    "Hero": {
+        "Title": "Servicios Fiduciarios en Ginebra – Socio de Confianza para PYMES",
+        "Description": "Acompañamiento fiduciario con precisión suiza y eficiencia digital para gestionar contabilidad, impuestos, nóminas y gobierno corporativo desde la creación hasta la expansión.",
+        "CTA": "Ponerse en contacto",
+        "SecondaryCTA": "Obtenga un presupuesto instantáneo",
+        "Badge": "Genève · Lausanne",
+        "BadgeTwo": "Impulsado por IA",
+        "OdooBadge": "Soluciones digitales y ERP",
+        "OdooPartnerBadge": "Partner oficial de Odoo",
+        "ImageAlt": "Profesionales de Ridger que ofrecen servicios fiduciarios, contables y fiscales a empresas suizas",
+        "ScrollHint": "Descubrir más",
+        "Facts": {
+            "Implantation": {
+                "Label": "// Ubicación",
+                "Value": "Ginebra · Lausana",
+                "Sub": "Presencia en la Suiza francófona para pymes suizas y empresas internacionales."
+            },
+            "Expertises": {
+                "Label": "// Servicios",
+                "Value": "Contab. · Fiscal · RRHH",
+                "Sub": "Contabilidad, fiscalidad, nóminas, corporate, domiciliación y ERP."
+            },
+            "Solutions": {
+                "Label": "// Tecnología",
+                "Value": "Odoo · IA",
+                "Sub": "Socio oficial de Odoo y herramientas digitales para acelerar la ejecución con precisión."
+            }
+        }
+    },
+    "Services": {
+        "Eyebrow": "Servicios",
+        "Title": "Nuestros servicios",
+        "Subtitle": "Programas fiduciarios, contables y fiscales completos para cada etapa de crecimiento. Combinamos experiencia a demanda, procesos suizos probados y herramientas digitales seguras para PYMES, scale-ups y grupos internacionales."
+    },
+    "Trust": {
+        "Eyebrow": "Afiliaciones y marcos",
+        "Sofit": {
+            "Title": "SO-FIT",
+            "Description": "Miembro OAR / SRO bajo la LBA suiza. KYC para domiciliación sensible, escrow, flujos de pago y estructuras documentadas."
+        },
+        "Odoo": {
+            "Title": "Odoo",
+            "Description": "Partner oficial para contabilidad, automatizaciones y reporting."
+        },
+        "Gaap": {
+            "Title": "Swiss GAAP FER",
+            "Description": "Estados financieros claros, coherentes y auditables."
+        }
+    },
+    "About": {
+        "Eyebrow": "Acerca de",
+        "Title": "¿Por qué elegir Ridger?",
+        "Content": [
+            "Ridger se basa en una profunda experiencia local y herramientas tecnológicas de vanguardia para apoyar a emprendedores, empresas familiares, ONG y grupos internacionales en la seguridad de su contabilidad y cumplimiento suizo. Actuamos como un equipo fiduciario integrado que comprende las realidades operativas de la Romandía mientras coordina con las partes interesadas en el extranjero.",
+            "Nuestros especialistas multidisciplinarios cubren contabilidad, fiscalidad, nóminas, administración de RR. HH., gobernanza y secretaría corporativa. Usted se beneficia de contadores certificados, asesores fiscales y consultores que transforman reglas complejas en planes de acción pragmáticos para su organización.",
+            "Cada mandato comienza con una fase de análisis durante la cual mapeamos sus objetivos, procesos internos y apetito por el riesgo. Luego diseñamos un plan de servicios evolutivo, desde la formación y mantenimiento contable hasta el reporte consolidado, estrategia de IVA o externalización de RR. HH.",
+            "El marco regulatorio suizo evoluciona rápidamente. Seguimos las actualizaciones de los OAR / SRO, del AVS y de los cantones, implementamos los ajustes requeridos y documentamos los controles necesarios para que esté preparado para una auditoría. Nuestros clientes confían en nosotros para anticipar plazos, evitar penalizaciones y mantener una documentación impecable.",
+            "La tecnología está en el corazón de nuestro modelo. Combinando procesamiento documental asistido por IA e integraciones ERP de Odoo, acortamos los tiempos de cierre, automatizamos conciliaciones repetitivas y producimos paneles para impulsar sus decisiones en tiempo real, sin comprometer la seguridad de los datos.",
+            "Anclados en Ginebra y Lausana, coordinamos regularmente con abogados, auditores y asesores fiscales en Suiza, Europa y América. El soporte multilingüe en francés, inglés, alemán, español y portugués asegura una comunicación fluida para equipos distribuidos.",
+            "Nuestros clientes aprecian nuestra tarificación transparente, contactos dedicados y claridad de los entregables. Siempre sabe la persona responsable de cada tarea, el estado de los procesos en curso y las próximas fechas límite de cumplimiento en el calendario.",
+            "Elegir Ridger significa asociarse con una firma fiduciaria que combina precisión suiza, herramientas innovadoras y apoyo humano. Nos encargamos de la contabilidad, fiscalidad, nóminas y administración corporativa para que pueda concentrarse en la estrategia, sus clientes y un crecimiento sostenible."
+        ],
+        "Quality": {
+            "Title": "Estándares suizos de calidad",
+            "Content": "Trabajamos bajo los principios contables Swiss GAAP FER, mantenemos controles internos robustos y documentamos cada proceso para que auditores y autoridades dispongan de información completa y puntual. Formación continua, revisiones cruzadas y checklists inspiradas en ISO garantizan la precisión y fiabilidad esperadas."
+        },
+        "Innovation": {
+            "Title": "Soluciones impulsadas por tecnología",
+            "Content": "Integrar herramientas con IA y sistemas ERP modernos nos permite ofrecer servicios más rápidos y precisos sin perder el trato personal que exige la relación fiduciaria. Portales seguros, flujos automatizados y analítica avanzada brindan visibilidad instantánea sin alterar su gobernanza."
+        }
+    },
+    "FAQ": {
+        "Title": "Preguntas frecuentes",
+        "Subtitle": "Respuestas rápidas a preguntas comunes sobre nuestros productos y servicios."
+    },
+    "Testimonials": {
+        "SectionTitle": "Testimonios"
+    }
+}

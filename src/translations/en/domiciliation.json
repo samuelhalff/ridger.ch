@@ -1,0 +1,103 @@
+{
+  "ImageAlt": "Mountain ridge emerging above clouds in the Swiss Alps",
+  "Hero": {
+    "Badge": "Domiciliation",
+    "BadgeTwo": "Swiss address",
+    "Title": "Business domiciliation in Geneva",
+    "Description": "Ridger offers domiciliation services for your company in Switzerland. Benefit from a prestigious address and comprehensive administrative support for your business. Our office is in Geneva; we also support companies active in Lausanne and the canton of Vaud.",
+    "CTA": "Secure a Swiss address",
+    "SecondaryCTA": "Meet the team"
+  },
+  "Presentation": {
+    "Title": "Commercial domiciliation and mail handling in switzerland",
+    "Subtitle": "A strategic location for your business",
+    "Intro": [
+      "Company domiciliation in Geneva means establishing your company's registered office at a recognised business address, without renting your own premises. It covers the registered office address entered in the commercial register, mail reception, scanning and forwarding, and day-to-day administrative support.",
+      "Ridger domiciles your company at 26 Boulevard Georges Favon, in the heart of Geneva's business district: a business address in Geneva that inspires confidence among clients, banks and authorities.",
+      "Our services ensure your company stays compliant with Swiss requirements and benefits from a professional image.",
+      "Mail is scanned the same day and forwarded as you prefer, with a simple monthly summary.",
+      "As a fiduciary, we go beyond the address itself: accounting, tax, payroll and administration can all be handled by a single point of contact."
+    ],
+    "ServicesTitle": "Our domiciliation services",
+    "Services": [
+      "Registered office: professional business address in a prestigious Swiss location",
+      "Mail management: complete handling and forwarding of all your business correspondence",
+      "Administrative support: full administrative assistance for all your business needs",
+      "Meeting rooms: professional meeting spaces available for rent when needed"
+    ],
+    "StrengthsTitle": "Our strengths for your domiciliation needs",
+    "Strengths": [
+      {
+        "Title": "Prestigious address",
+        "Desc": "Benefit from a recognized address in Switzerland for your company."
+      },
+      {
+        "Title": "Administrative support",
+        "Desc": "We handle your mail and provide all necessary administrative assistance."
+      },
+      {
+        "Title": "Compliance and security",
+        "Desc": "We ensure your company meets all legal requirements for domiciliation."
+      },
+      {
+        "Title": "Flexibility and services",
+        "Desc": "We offer additional services such as meeting room rental and company incorporation support."
+      }
+    ],
+    "LongFormTitle": "Registered office, mail and substance requirements",
+    "LongFormSections": [
+      {
+        "Title": "Who it is for",
+        "Body": [
+          "Swiss companies, entrepreneurs and foreign groups that need a registered office in Switzerland with reliable administrative follow-up: a new incorporation, a subsidiary or branch of an international group, or an independent professional who wants to keep a private address separate from a business one.",
+          "Domiciliation must remain consistent with the company's real activity, its governance and substance obligations. We discuss this openly before accepting a mandate, to avoid later difficulties with banks or authorities."
+        ]
+      },
+      {
+        "Title": "What we provide",
+        "Body": [
+          "A registered office address in central Geneva, the domiciliation attestation required by the commercial register, mail reception and follow-up, administrative coordination, reminders of important deadlines and a direct link to our other fiduciary services.",
+          "Where needed, we coordinate incorporation, accounting, tax, VAT or the registers linked to the domiciled company, and make meeting rooms available for your appointments in Geneva."
+        ]
+      },
+      {
+        "Title": "How much does business domiciliation cost in Geneva?",
+        "Body": [
+          "The price of domiciliation depends first on the services included: a simple registered office address, or a full service with mail reception, scanning and forwarding, administrative support and access to meeting rooms.",
+          "Other factors influence the fee: the volume of mail to handle, the complexity of the structure, the level of substance expected by banks and authorities, and any related fiduciary services such as bookkeeping or tax filings.",
+          "Rather than advertising a standard package that hides extra charges, we prepare a transparent quote adapted to your situation. Use our instant online quote on the /agent page or contact us to receive a detailed offer within one business day."
+        ]
+      },
+      {
+        "Title": "Serving Lausanne and the canton of Vaud",
+        "Body": [
+          "Our office is located in Geneva, and we also support companies active in Lausanne and across the canton of Vaud: Geneva domiciliation for directors based elsewhere in French-speaking Switzerland, transfers of registered office from one canton to another, or coordination with your local partners.",
+          "For many service companies, a registered office in Geneva combined with remote mail handling is an efficient alternative to renting offices. We help you choose the solution best suited to your activity and obligations."
+        ]
+      },
+      {
+        "Title": "Process",
+        "Body": [
+          "We verify identity, structure, activity, beneficial owners and mail-handling needs before confirming the scope of the mandate, as required by Swiss regulations.",
+          "Once the domiciliation agreement is signed, we issue the attestation needed for the commercial register. Follow-up then relies on simple rules: who receives what, within which timeframe, and how decisions are documented."
+        ]
+      },
+      {
+        "Title": "Limitations",
+        "Body": [
+          "Domiciliation does not replace an operational presence when the situation requires real economic substance, for example for certain regulated activities or specific tax requirements.",
+          "Costs depend on mail volume, administrative requests, the complexity of the structure and the associated services; we set them out in the quote before any commitment."
+        ]
+      },
+      {
+        "Title": "Frequently asked questions",
+        "Body": [
+          "What must a domiciliation agreement contain? At a minimum, it identifies the parties, the address made available as registered office, the services included (mail reception, scanning and forwarding, administrative options), the duration, the termination terms and the fees. It also records the information the domiciliation provider must know, in particular the identity of the beneficial owners.",
+          "What are the substance requirements? Swiss law requires that the company can be represented by at least one person domiciled in Switzerland, such as a board member or a director (art. 718 of the Swiss Code of Obligations for companies limited by shares). Beyond that, banks and authorities look at the reality of the activity: a registered office in Switzerland must never be used to create a fictitious presence.",
+          "How quickly can the setup be completed? Once the identification documents and company information are gathered, setup generally takes a few business days, attestation included. For a new incorporation, we coordinate domiciliation with the formation so the address is available as soon as the company is entered in the commercial register.",
+          "What is the difference between domiciliation and renting offices? Domiciliation provides a legal registered address and mail handling without a permanent workstation; meeting rooms remain available on demand. Renting offices makes sense when your team needs a daily physical presence, and the two solutions can be combined as the business grows."
+        ]
+      }
+    ]
+  }
+}

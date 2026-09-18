@@ -1,0 +1,82 @@
+{
+  "ImageAlt": "Train rouge traversant un viaduc alpin en hiver, Suisse",
+  "Hero": {
+    "Badge": "Implémentation Odoo",
+    "BadgeTwo": "Digitalisation & ERP",
+    "Title": "Intégrateur Odoo à Genève : implémentation pour PME suisses",
+    "Description": "Ridger, fiduciaire et intégrateur Odoo à Genève, vous accompagne dans l'intégration, la personnalisation et l'évolution de votre solution Odoo. Optimisez vos processus, automatisez les tâches et gérez votre entreprise avec un ERP complet et évolutif.",
+    "CTA": "Accélérer mon projet Odoo",
+    "SecondaryCTA": "Rencontrer l'Équipe",
+    "OdooPartnerBadge": "Partenaire Odoo officiel"
+  },
+  "Presentation": {
+    "Title": "Odoo suisse: implémentation et modules métiers",
+    "Subtitle": "L'ERP complet et évolutif, intégré par votre fiduciaire",
+    "Intro": [
+      "Odoo est une solution ERP modulaire et flexible, idéale pour digitaliser et optimiser la gestion de votre entreprise. Ridger, fiduciaire et intégrateur Odoo à Genève, vous accompagne dans l'intégration, la personnalisation et l'évolution de votre système Odoo.",
+      "Nous analysons vos besoins, configurons les bons modules et formons vos équipes pour assurer une adoption rapide et efficace. Notre support technique garantit la continuité et la sécurité de votre environnement Odoo.",
+      "Vos équipes restent autonomes : automatiser les tâches répétitives, extraire automatiquement les données des factures et reçus, et créer des rapports simples sans informatique."
+    ],
+    "ServicesTitle": "Nos Services Odoo",
+    "Services": [
+      "Implémentation Odoo : Déploiement et configuration complète d'Odoo adaptée à vos besoins d'entreprise",
+      "Automatisation des Processus : Rationalisation de vos flux de travail avec des tâches administratives et opérationnelles automatisées",
+      "Migration des Données : Transfert fluide de vos données existantes vers le nouveau système Odoo",
+      "Formation et Support : Formation complète des utilisateurs et assistance technique continue"
+    ],
+    "StrengthsTitle": "Nos forces pour votre transformation digitale",
+    "Strengths": [
+      {
+        "Title": "Intégration Odoo sur mesure",
+        "Desc": "Déploiement, configuration et personnalisation de la solution Odoo pour répondre précisément aux besoins de votre entreprise. Nous assurons une transition en douceur et un accompagnement complet."
+      },
+      {
+        "Title": "Automatisation des processus",
+        "Desc": "Optimisation de vos flux de travail grâce à l'automatisation des tâches administratives, comptables, commerciales ou RH via Odoo."
+      },
+      {
+        "Title": "Formation et accompagnement",
+        "Desc": "Accompagnement de vos équipes à chaque étape : formation, assistance technique et support continu pour assurer le succès de votre projet Odoo."
+      },
+      {
+        "Title": "Sécurité et conformité",
+        "Desc": "Mise en place de solutions sécurisées, respectant les normes de confidentialité et de conformité en vigueur en Suisse."
+      },
+      {
+        "Title": "Conseil et évolution",
+        "Desc": "Nos experts vous conseillent sur l'évolution de votre système d'information et l'intégration de nouveaux modules Odoo au fur et à mesure de la croissance de votre entreprise."
+      }
+    ],
+    "LongFormTitle": "Implémentation Odoo orientée comptabilité suisse",
+    "LongFormSections": [
+      {
+        "Title": "Pour qui",
+        "Body": [
+          "PME suisses, scale-ups, groupes et équipes finance qui veulent utiliser Odoo pour fiabiliser la comptabilité, les ventes, les achats et le reporting.",
+          "Le projet est utile lorsque les outils actuels créent des doubles saisies, des exports fragiles ou une visibilité insuffisante."
+        ]
+      },
+      {
+        "Title": "Ce que nous configurons",
+        "Body": [
+          "Cadrage des flux, plan comptable suisse, TVA, QR-facture, modules comptables et métiers, migration de données, droits utilisateurs, tableaux de bord et formation.",
+          "Nous évitons de surconfigurer: chaque module doit répondre à un besoin opérationnel ou réglementaire clair."
+        ]
+      },
+      {
+        "Title": "Méthode projet",
+        "Body": [
+          "Nous commençons par cartographier les processus, prioriser les écarts et définir un périmètre testable avant la mise en production.",
+          "Les livrables incluent backlog, configuration, contrôles de migration, supports de formation et liste des points à suivre après lancement."
+        ]
+      },
+      {
+        "Title": "Facteurs de coût",
+        "Body": [
+          "Les coûts dépendent du nombre de modules, des intégrations, de la qualité des données, des règles TVA, du reporting attendu et du niveau d’accompagnement.",
+          "Ridger intervient comme partenaire Odoo avec une lecture comptable et fiduciaire suisse."
+        ]
+      }
+    ]
+  }
+}

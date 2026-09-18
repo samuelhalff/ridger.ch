@@ -1,0 +1,162 @@
+{
+  "ImageAlt": "Historic blue tram on snowy tracks under clear winter sky, Switzerland",
+  "Hero": {
+    "Badge": "Payroll services",
+    "BadgeTwo": "AI powered",
+    "Title": "Swiss payroll outsourcing and salary administration",
+    "Description": "Ridger manages your payroll and HR administration with precision and confidentiality. We ensure compliance with Swiss labor law and provide support for all your HR needs, including ANOBAG payroll for foreign employers without a Swiss entity.",
+    "CTA": "Get payroll guidance",
+    "SecondaryCTA": "Meet the team"
+  },
+  "Presentation": {
+    "Title": "Swiss payroll and social contributions for employers",
+    "Subtitle": "Your employees, our priority",
+    "Intro": [
+      "We take care of all payroll and HR administrative tasks, from salary calculations to social insurance declarations.",
+      "Our experts ensure compliance and provide advice for optimal HR management.",
+      "We deliver swissdec-ready outputs and clear payslips, with a monthly checklist for HR."
+    ],
+    "ServicesTitle": "Our payroll & HR services",
+    "Services": [
+      "Payroll processing: complete salary calculations, social insurance deductions, and payment management",
+      "HR administration: employee record management, contract preparation, and administrative support",
+      "Social insurance: registration, declarations, and compliance with Swiss social security systems",
+      "Employment law: advisory services on Swiss labor law and regulatory compliance",
+      "ANOBAG payroll: salary and social insurance administration for foreign employers without a Swiss entity (AVS agreements, statements, compliance)"
+    ],
+    "StrengthsTitle": "Our strengths for your HR needs",
+    "Strengths": [
+      {
+        "Title": "Confidentiality and security",
+        "Desc": "We guarantee the confidentiality of your data and compliance with all legal requirements."
+      },
+      {
+        "Title": "Expertise in Swiss labor law",
+        "Desc": "Our specialists master the legal framework and ensure your HR management is always compliant."
+      },
+      {
+        "Title": "Personalized support",
+        "Desc": "A dedicated contact person accompanies you and your employees at every stage."
+      },
+      {
+        "Title": "Administrative efficiency",
+        "Desc": "We take care of all administrative formalities, allowing you to focus on your core business."
+      }
+    ],
+    "CommonQuestions": {
+      "Title": "Frequently asked questions about payroll and HR services in Switzerland",
+      "Questions": [
+        {
+          "Question": "What are the costs of outsourcing payroll for a startup in Switzerland?",
+          "Answer": "Payroll outsourcing costs in Switzerland typically range from CHF 80 to CHF 150 per employee per month, depending on complexity and number of employees. For startups with 5-10 employees, expect monthly fees between CHF 400-1,000 including salary processing, social insurance declarations, and payslip generation. Additional services like annual salary certificates, employee onboarding, and contract preparation may incur extra charges. We offer transparent pricing with no hidden fees, providing startups with predictable costs while eliminating the need for expensive in-house payroll staff and software. Our scalable solutions grow with your business, reducing per-employee costs as your team expands."
+        },
+        {
+          "Question": "What social insurance requirements must Swiss employers comply with (AVS, LPP, LAA)?",
+          "Answer": "Swiss employers must manage multiple mandatory social insurance contributions: AVS (old-age and survivors insurance) at approximately 10.6% split between employer and employee, LPP (occupational pension) required for salaries above CHF 22,050 annually with contributions varying by age and plan, LAA (accident insurance) covering occupational and non-occupational accidents with rates depending on industry risk, APG (income compensation), and family allowance contributions varying by canton. Geneva employers also pay solidarity contributions and other cantonal levies. We handle all calculations, registrations with compensation offices, monthly reporting, and ensure correct contribution rates as regulations change. Our systems automatically generate compliant salary breakdowns and maintain audit-ready documentation."
+        },
+        {
+          "Question": "How does Swissdec compliance work and what are electronic payslip delivery requirements?",
+          "Answer": "Swissdec is the Swiss standard for electronic data exchange between payroll software and social insurance institutions, tax authorities, and accident insurers. Compliance requires using certified payroll software that generates standardized XML files for quarterly and annual salary declarations. Electronic payslip delivery is increasingly common, requiring secure employee portals or encrypted email distribution with audit trails. We use Swissdec-certified systems ensuring all your salary declarations are transmitted electronically, reducing processing time and errors. Employees receive professional electronic payslips through secure channels, with archived copies available for mortgage applications, visa renewals, and other official purposes. Our platform provides 24/7 employee access to current and historical payslips, certificates, and tax documents."
+        },
+        {
+          "Question": "How do you handle payroll for cross-border workers commuting from France to Switzerland?",
+          "Answer": "Cross-border workers (frontaliers) from France working in Geneva face special regulations including withholding tax at source, specific social insurance exemptions under bilateral agreements, and coordinated healthcare requirements. Employers must register for cross-border worker withholding tax, apply correct rates based on residence and family situation, submit monthly declarations to Geneva tax authorities, and issue annual attestations for French tax declarations. Social insurance follows workplace country rules, meaning Swiss contributions apply despite French residency. We manage all cross-border payroll complexities including tax withholding calculations, attestation preparation, coordination with French social security where needed, and ensuring compliance with both Swiss and applicable French documentation requirements for your frontalier employees."
+        },
+        {
+          "Question": "What's involved in payroll for part-time employees and freelance contractors?",
+          "Answer": "Part-time employees in Switzerland require the same payroll processing as full-time staff, with proportional social insurance contributions and benefits. Social insurance thresholds still apply: AVS contributions are mandatory from the first franc, while LPP (occupational pension) only applies if annual salary exceeds CHF 22,050. Freelance contractors (independent workers) typically invoice your company directly and manage their own social insurance as self-employed, but misclassification risks exist. Swiss authorities scrutinize employment relationships carefully, examining control, exclusivity, and economic dependence. We help structure employment correctly, process payroll for part-time staff with accurate hourly or percentage-based calculations, advise on contractor versus employee classification, and ensure you avoid penalties from social insurance authorities for incorrect worker categorization."
+        },
+        {
+          "Question": "How do you prepare year-end salary certificates (certificat de salaire) for employees?",
+          "Answer": "Year-end salary certificates are mandatory documents in Switzerland, required by January 31st following the tax year, detailing all compensation, social insurance contributions, expense allowances, and benefits for tax declaration purposes. These certificates must follow strict cantonal formats, accurately reflect gross and net earnings, show all deductions, and include employer attestations. Geneva and Vaud have specific format requirements. We prepare comprehensive salary certificates for all your employees automatically from payroll data, ensuring accuracy and compliance with cantonal standards. Certificates are delivered electronically and in print, with employee explanations for common questions. We maintain secure archives for seven years and can regenerate certificates for employees who lose originals or need copies for mortgages, visa applications, or family allowance claims."
+        }
+      ]
+    },
+    "WhoThisIsFor": {
+      "Title": "Who benefits from our payroll and HR services?",
+      "Description": "Our payroll services are designed for businesses of all sizes that want to ensure accurate, compliant, and efficient salary processing while focusing on their core operations.",
+      "TargetClients": [
+        "Tech startups scaling from 5 to 50 employees needing reliable payroll infrastructure",
+        "Retail and hospitality businesses managing seasonal workforce fluctuations and hourly employees",
+        "International companies establishing subsidiaries in Geneva with cross-border workers from France",
+        "Professional services firms requiring complex payroll with variable bonuses and commission structures",
+        "SMEs without dedicated HR staff seeking comprehensive payroll and social insurance management"
+      ]
+    },
+    "ProcessTimeline": {
+      "Title": "How our payroll processing works",
+      "Description": "We provide comprehensive monthly payroll services with consistent timelines and clear deliverables, ensuring your employees are paid accurately and on time.",
+      "Steps": [
+        {
+          "Title": "Initial setup and employee onboarding (Week 1-2)",
+          "Description": "We begin by configuring your payroll system with company details, salary structures, and benefit plans. For each employee, we collect necessary information including contracts, social insurance numbers, bank details, withholding tax status, and pension plan enrollment. We register your company with relevant social insurance institutions (AVS/LPP/LAA) and tax authorities if not already done. Our team sets up individual employee profiles in our Swissdec-certified payroll software, configures recurring salary components, allowances, and deductions. We establish secure data exchange protocols, set up electronic payslip delivery, and provide employees with portal access. This foundation ensures smooth monthly processing from day one."
+        },
+        {
+          "Title": "Monthly data collection (20th-25th of each month)",
+          "Description": "Before each payroll run, we collect variable data for the period: attendance records, overtime hours, sick leave, vacation days taken, bonuses, expense reimbursements, and any salary changes. For hourly employees, we receive validated timesheets. You submit this information through our secure portal, email, or integrated time-tracking systems. Our team validates submitted data for completeness and flags anomalies or missing information. We confirm bank holidays, verify social insurance rate changes, and ensure all regulatory updates are incorporated. This collection window allows adequate time for processing while maintaining salary payment schedules. For cross-border workers, we verify continued residence status and withholding tax changes."
+        },
+        {
+          "Title": "Payroll calculation and validation (26th-28th of each month)",
+          "Description": "Our payroll specialists process salary calculations using validated data and current rates. The system computes gross salaries, applies all social insurance deductions (AVS, LPP, LAA, APG, family allowances), calculates withholding taxes for applicable employees, processes expense reimbursements, and determines net amounts. We perform multi-level quality checks including comparing current results with previous months, validating unusual changes, verifying social insurance calculations, and ensuring compliance with employment contracts. You receive a summary report showing total payroll costs, employer contributions, and individual salary breakdowns. Once you approve the final calculation, we prepare payment files and generate professional payslips for electronic distribution."
+        },
+        {
+          "Title": "Salary payment and employee communication (Last business day of month)",
+          "Description": "We execute salary payments by transmitting approved payment files to your bank for processing, ensuring employees receive salaries on the agreed date. Electronic payslips are distributed through our secure employee portal with email notifications. Each payslip clearly shows gross salary, all deductions with explanations, employer contributions, net payment, and year-to-date totals. Employees can access current and historical payslips anytime for personal records, loan applications, or official purposes. Our team remains available throughout payment day to handle employee questions about deductions, social insurance, withholding tax, or payslip details. We maintain complete confidentiality while providing responsive support."
+        },
+        {
+          "Title": "Reporting and compliance submissions (Ongoing)",
+          "Description": "Beyond monthly salary processing, we handle all mandatory reporting: monthly withholding tax declarations for Geneva/Vaud authorities, quarterly social insurance reports via Swissdec to AVS/LPP/LAA institutions, annual salary certificate preparation by January 31st for all employees, and year-end reconciliations with social insurance providers. We maintain organized digital and physical archives meeting Swiss legal requirements for seven-year retention. Monthly HR checklists highlight upcoming regulatory deadlines, contract renewals, probation period endings, and benefit enrollment windows. We proactively inform you of legislative changes affecting payroll, social insurance rate updates, or withholding tax adjustments, implementing necessary modifications to maintain continuous compliance."
+        }
+      ]
+    },
+    "UseCases": {
+      "Title": "How we help businesses with payroll and HR administration",
+      "Description": "Real examples demonstrating how our payroll services have helped Geneva and Lausanne region companies efficiently manage their workforce administration.",
+      "Cases": [
+        {
+          "Title": "Tech startup scaling from 5 to 25 employees in 18 months",
+          "Description": "A software development startup in Geneva's tech hub began with five founders handling payroll manually using spreadsheets. As they secured Series A funding and began aggressive hiring, payroll complexity overwhelmed their resources. Challenge: Managing rapid growth with frequent new hires, diverse salary structures including equity compensation, international recruitment bringing cross-border workers, and ensuring compliance while scaling. Our solution: We implemented comprehensive payroll processing with streamlined onboarding workflows, configured equity and bonus calculations, established separate processes for Swiss and frontalier employees, and provided real-time reporting on total employment costs for investor reporting. Outcome: The startup scaled to 25 employees without hiring dedicated payroll staff, reduced administrative overhead by 15 hours per month, eliminated payroll errors causing employee dissatisfaction, and maintained perfect compliance through two years of rapid growth. Founders could focus on product development and fundraising rather than payroll administration."
+        },
+        {
+          "Title": "Retail business managing seasonal workforce fluctuations",
+          "Description": "A Geneva retail chain with four locations employed 20 permanent staff and up to 40 seasonal workers during peak shopping periods (holiday season, summer sales). Challenge: Fluctuating headcount made payroll costs unpredictable, high turnover required frequent onboarding and offboarding, hourly employees with varying schedules complicated calculations, and seasonal contracts required special handling for short-term social insurance. Our solution: We implemented flexible payroll processing accommodating headcount changes, created streamlined onboarding for seasonal employees with digital document collection, integrated timesheet systems for accurate hourly calculations, and established processes for short-term contract social insurance requirements. Outcome: The retailer reduced seasonal employee onboarding time from 3 days to 4 hours, achieved accurate variable payroll costs for budgeting, eliminated payslip errors from manual timesheet transcription, and ensured compliance with Swiss temporary employment regulations. Per-employee payroll costs decreased 35% compared to previous payroll provider."
+        },
+        {
+          "Title": "International company establishing Geneva subsidiary with mixed workforce",
+          "Description": "A UK-based professional services firm opened a Geneva office with a team of 12 employees: eight local Swiss residents, three cross-border workers from neighboring France, and one UK expatriate on assignment. Challenge: Different tax and social insurance treatments for each employee category, understanding Swiss employment law requirements coming from UK HR practices, coordinating with UK headquarters for group reporting, and ensuring compliance for the UK expatriate's split contracts and social security. Our solution: We configured segregated payroll streams for Swiss residents, frontaliers with withholding tax, and the UK expatriate with A1 social security certificate. We educated UK HR on Swiss labor law differences, established reporting formats compatible with their global systems, and coordinated with their UK payroll provider for the expatriate's home country obligations. Outcome: The Geneva subsidiary achieved full Swiss payroll compliance from day one, avoided costly misclassification penalties, provided clear reporting to UK headquarters, and established scalable processes supporting regional expansion into Zurich and Basel with 30 additional employees over two years."
+        }
+      ]
+    },
+    "LongFormTitle": "Practical Swiss payroll operations",
+    "LongFormSections": [
+      {
+        "Title": "Who we support",
+        "Body": [
+          "Swiss employers, growing SMEs, international subsidiaries and HR teams that want reliable payroll and social insurance administration.",
+          "The service also suits companies hiring their first employees in Switzerland."
+        ]
+      },
+      {
+        "Title": "What we manage",
+        "Body": [
+          "Salary calculations, payslips, social charges, salary certificates, insurance notifications, absences, allowances and HR coordination.",
+          "We account for cantonal specifics, permits, work rates and cross-border situations when the matter requires it."
+        ]
+      },
+      {
+        "Title": "Monthly process",
+        "Body": [
+          "We define a variable collection date, change control, client validation and clear transmission of payments or accounting entries.",
+          "Deliverables are structured so management, employees and accounting can understand them."
+        ]
+      },
+      {
+        "Title": "Control points",
+        "Body": [
+          "Costs depend on employee count, change frequency, insurance setup, permits and analytical reporting needs.",
+          "Confidentiality and regularity come first: sensitive data is limited to the necessary contacts."
+        ]
+      }
+    ]
+  }
+}

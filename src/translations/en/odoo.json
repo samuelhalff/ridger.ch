@@ -1,0 +1,82 @@
+{
+  "ImageAlt": "Red train crossing a high alpine viaduct in winter, Switzerland",
+  "Hero": {
+    "Badge": "Odoo implementation",
+    "BadgeTwo": "Digitalisation & ERP",
+    "Title": "Odoo integrator in Geneva: implementation for Swiss SMEs",
+    "Description": "Ridger, fiduciary and Odoo integrator in Geneva, supports you in the integration, customization, and evolution of your Odoo solution. Optimize your processes, automate tasks, and manage your business with a complete and scalable ERP.",
+    "CTA": "Accelerate my Odoo project",
+    "SecondaryCTA": "Meet the team",
+    "OdooPartnerBadge": "Official Odoo partner"
+  },
+  "Presentation": {
+    "Title": "Odoo in switzerland: implementation and business modules",
+    "Subtitle": "A complete and scalable ERP, implemented by your fiduciary",
+    "Intro": [
+      "Odoo is a modular and flexible ERP solution, ideal for digitizing and optimizing your business management. Ridger, fiduciary and Odoo integrator in Geneva, supports you in the integration, customization, and evolution of your Odoo system.",
+      "We analyze your needs, configure the right modules, and train your teams to ensure rapid and effective adoption. Our technical support ensures the continuity and security of your Odoo environment.",
+      "Your team stays autonomous: automate routine tasks, extract data from invoices and receipts automatically, and build simple reports without IT."
+    ],
+    "ServicesTitle": "Our Odoo services",
+    "Services": [
+      "Odoo implementation: complete deployment and configuration of Odoo tailored to your business needs",
+      "Process automation: streamlining your workflows with automated administrative and operational tasks",
+      "Data migration: seamless transfer of your existing data to the new Odoo system",
+      "Training & support: comprehensive user training and ongoing technical assistance"
+    ],
+    "StrengthsTitle": "Our strengths for your digital transformation",
+    "Strengths": [
+      {
+        "Title": "Tailored Odoo integration",
+        "Desc": "Deployment, configuration, and customization of the Odoo solution to precisely meet your business needs. We ensure a smooth transition and comprehensive support."
+      },
+      {
+        "Title": "Process automation",
+        "Desc": "Optimization of your workflows through the automation of administrative, accounting, sales, or HR tasks via Odoo."
+      },
+      {
+        "Title": "Training and support",
+        "Desc": "Support for your teams at every stage: training, technical assistance, and ongoing support to ensure the success of your Odoo project."
+      },
+      {
+        "Title": "Security and compliance",
+        "Desc": "Implementation of secure solutions, meeting the confidentiality and compliance standards in force in Switzerland."
+      },
+      {
+        "Title": "Consulting and evolution",
+        "Desc": "Our experts advise you on the evolution of your information system and the integration of new Odoo modules as your business grows."
+      }
+    ],
+    "LongFormTitle": "Odoo implementation focused on Swiss accounting",
+    "LongFormSections": [
+      {
+        "Title": "Who it is for",
+        "Body": [
+          "Swiss SMEs, scale-ups, groups and finance teams that want to use Odoo for accounting, sales, purchasing and reporting.",
+          "The project is useful when current tools create duplicate entry, fragile exports or weak visibility."
+        ]
+      },
+      {
+        "Title": "What we configure",
+        "Body": [
+          "Process scoping, Swiss chart of accounts, VAT, QR invoicing, accounting and business modules, data migration, user rights, dashboards and training.",
+          "We avoid over-configuration: each module must answer a clear operational or regulatory need."
+        ]
+      },
+      {
+        "Title": "Project method",
+        "Body": [
+          "We start by mapping processes, prioritizing gaps and defining a testable scope before go-live.",
+          "Deliverables include backlog, configuration, migration controls, training materials and post-launch follow-up points."
+        ]
+      },
+      {
+        "Title": "Cost drivers",
+        "Body": [
+          "Costs depend on module count, integrations, data quality, VAT rules, expected reporting and support level.",
+          "Ridger acts as an Odoo partner with Swiss accounting and fiduciary context."
+        ]
+      }
+    ]
+  }
+}

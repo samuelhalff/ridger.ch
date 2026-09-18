@@ -1,0 +1,100 @@
+{
+    "ImageAlt": "Vista aérea de floresta densa junto a lago suíço turquesa",
+    "Hero": {
+        "Badge": "Terceirização",
+        "BadgeTwo": "Especialistas BPO",
+        "Title": "Outsourcing de back-office na suíça francófona",
+        "Description": "A Ridger oferece soluções de terceirização para suas tarefas contábeis, de folha de pagamento e administrativas. Concentre-se no seu negócio principal enquanto cuidamos do resto com expertise e confidencialidade.",
+        "CTA": "Otimizar operações",
+        "SecondaryCTA": "Conhecer a Equipe"
+    },
+    "Presentation": {
+        "Title": "Outsourcing administrativo e contábil para PMEs",
+        "Subtitle": "Delegar, focar, crescer",
+        "Intro": [
+            "Junto de uma fiduciária pode externalizar todo o seu back-office: contabilidade, gestão de salários e seguros sociais, faturação, IVA e administração diária. A vantagem é dupla: acede a competências especializadas sem recrutar e transforma custos fixos num serviço ajustado ao seu volume real de atividade.",
+            "A partir de Genebra, a Ridger acompanha PMEs, independentes e filiais de grupos em Genebra, Lausana, no cantão de Vaud e em toda a Suíça francófona, com soluções flexíveis que garantem eficiência e controlo de custos.",
+            "Definimos SLAs simples e enviamos um status mensal para que você saiba o que foi feito."
+        ],
+        "ServicesTitle": "Nossos Serviços de Terceirização",
+        "Services": [
+            "Terceirização Contábil: Gestão completa da sua escrituração e relatórios financeiros",
+            "Terceirização de Folha de Pagamento: Serviços completos de processamento de folha e administração de RH",
+            "Gestão Administrativa: Manuseio abrangente de todas suas tarefas administrativas",
+            "Otimização de Processos: Racionalização e melhoria dos seus processos comerciais para eficiência"
+        ],
+        "StrengthsTitle": "Nossos pontos fortes para suas necessidades de terceirização",
+        "Strengths": [
+            {
+                "Title": "Expertise e confiabilidade",
+                "Desc": "Nossa equipe garante serviços de alta qualidade e confidencialidade rigorosa."
+            },
+            {
+                "Title": "Controle de custos",
+                "Desc": "A terceirização permite otimizar seus custos e se beneficiar de soluções escaláveis."
+            },
+            {
+                "Title": "Flexibilidade e escalabilidade",
+                "Desc": "Nossos serviços se adaptam às suas necessidades e à evolução do seu negócio."
+            },
+            {
+                "Title": "Foco no seu negócio principal",
+                "Desc": "Delegue tarefas administrativas e concentre-se no que mais importa: seu crescimento."
+            }
+        ],
+        "LongFormTitle": "Externalizar o back-office sem perder o controlo",
+        "LongFormSections": [
+            {
+                "Title": "Para quem",
+                "Body": [
+                    "PMEs, empreendedores e filiais que querem delegar contabilidade, salários, faturação, arquivo ou administração sem criar uma equipa interna completa.",
+                    "O serviço adequa-se quando a carga administrativa afasta a direção da atividade principal."
+                ]
+            },
+            {
+                "Title": "Âmbito possível",
+                "Body": [
+                    "Contabilidade corrente, faturas de fornecedores, despesas, salários, cobranças, documentos administrativos, reporting e coordenação com parceiros externos.",
+                    "O âmbito é documentado para evitar zonas cinzentas entre a sua equipa e a Ridger."
+                ]
+            },
+            {
+                "Title": "Externalização de salários em Genebra, Lausana e na Suíça francófona",
+                "Body": [
+                    "Confiar os salários a uma fiduciária cobre todo o ciclo salarial: folhas de salário mensais, declarações aos seguros sociais (AVS, LPP, LAA, abonos de família), gestão do imposto na fonte, certificados de salário anuais e transmissões eletrónicas através de software certificado Swissdec. Tratamos também das entradas e saídas de colaboradores, dos atestados de empregador e da correspondência com as caixas de compensação.",
+                    "Esta fórmula destina-se a PMEs que não querem imobilizar uma função salarial interna, a scale-ups cujo efetivo evolui rapidamente e a grupos internacionais que procuram um parceiro local que domine as especificidades suíças, incluindo os trabalhadores fronteiriços.",
+                    "Externalizar os salários protege a confidencialidade das remunerações face às equipas internas, garante conformidade duradoura perante regras sociais e fiscais que mudam todos os anos e assegura a continuidade do processamento em caso de ausência ou saída: os seus colaboradores são pagos a tempo, todos os meses.",
+                    "A nossa equipa de salários trabalha a partir do nosso escritório de Genebra e serve empregadores estabelecidos em Lausana, no cantão de Vaud e no resto da Suíça francófona, à distância através de canais seguros ou presencialmente conforme as suas necessidades."
+                ]
+            },
+            {
+                "Title": "Externalizar a contabilidade na Suíça francófona",
+                "Body": [
+                    "A externalização contabilística inclui o lançamento e a manutenção dos livros, o processamento de faturas de fornecedores e despesas, as reconciliações bancárias, as declarações de IVA, os fechos mensais ou trimestrais e a preparação das demonstrações financeiras anuais segundo o Código das Obrigações suíço.",
+                    "Trabalhamos prioritariamente com Odoo, do qual a Ridger é especialista: documentos digitalizados, reconhecimento automático de faturas, fluxos bancários ligados e painéis consultáveis em tempo real. Se já utiliza outra ferramenta, podemos intervir diretamente no seu ambiente atual.",
+                    "A transição segue etapas claras: análise da situação atual, retoma dos saldos e do histórico, parametrização do plano de contas, definição dos fluxos de documentos e um curto período de funcionamento em paralelo antes da passagem completa. Continua proprietário dos seus dados e acede-lhes a qualquer momento.",
+                    "O resultado: uma contabilidade em dia, números fiáveis para pilotar a sua atividade e um interlocutor único que coordena, se necessário, com o seu auditor, o seu banco ou a administração fiscal."
+                ]
+            },
+            {
+                "Title": "Organização",
+                "Body": [
+                    "Definimos canais, prazos, validações, formatos de reporting e regras de escalada desde o início do mandato.",
+                    "As rotinas são simples, repetíveis e adaptadas ao volume real em vez de um modelo teórico."
+                ]
+            },
+            {
+                "Title": "Custos, orçamento e acompanhamento",
+                "Body": [
+                    "Os custos dependem do volume de transações, do número de interlocutores, das ferramentas, da frequência de reporting e do nível de coordenação.",
+                    "Para obter uma estimativa imediata e sem compromisso, utilize o nosso orçamento instantâneo online ou contacte-nos para uma conversa sobre a sua situação; confirmamos depois o âmbito e o honorário numa proposta escrita.",
+                    "Mantém a visibilidade sobre as tarefas tratadas, os pontos bloqueantes e as decisões necessárias."
+                ]
+            }
+        ],
+        "PayrollCrossLink": {
+            "Text": "Procura sobretudo externalizar os seus salários?",
+            "LinkLabel": "Conheça o nosso serviço de folha salarial."
+        }
+    }
+}

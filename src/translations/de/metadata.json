@@ -1,0 +1,133 @@
+{
+  "default": {
+    "title": "Ridger | Treuhand in Genf und Lausanne",
+    "description": "Treuhandkanzlei in Genf und Lausanne: Buchhaltung, Steuern, Lohn, Corporate und Domizilierung für Schweizer KMU, Scale-ups und internationale Gruppen.",
+    "keywords": "treuhand genf, treuhand lausanne, westschweiz, romandie, buchhaltung, steuern, lohn, corporate, domizilierung",
+    "author": "Ridger",
+    "siteName": "Ridger"
+  },
+  "pages": {
+    "/": {
+      "title": "Treuhand Genf – Buchhaltung & Steuern | Ridger",
+      "description": "Ridger in Genf bietet Treuhand-, Buchhaltungs-, Steuer-, Lohn- und Firmengründungsdienste für KMU und Unternehmer.",
+      "keywords": "treuhand genf, buchhaltung genf, steuerberatung genf, firmengründung"
+    },
+    "/about": {
+      "title": "Ridger Genf – ihr lokaler Treuhand-Partner",
+      "description": "Ridger ist eine Treuhandkanzlei in Genf mit massgeschneiderten Buchhaltungs-, Steuer- und Unternehmensservices für KMU und Einzelpersonen.",
+      "keywords": "über ridger, treuhand genf, genfer buchhalter, treuhandexperten"
+    },
+    "/contact": {
+      "title": "Kontakt Ridger Genf | Treuhanddienste",
+      "description": "Nehmen Sie Kontakt mit Ridger in Genf auf für Buchhaltung, Steuern, Lohn und Firmengründung.",
+      "keywords": "kontakt treuhand genf, genfer buchhaltungsdienste, treuhand kontakt"
+    },
+    "/team": {
+      "title": "Unser Team – Treuhand-Experten | Ridger",
+      "description": "Ein erfahrenes Team in Genf und Lausanne, das Unternehmen in der Romandie und international unterstützt.",
+      "keywords": "treuhand team genf, treuhand team lausanne, westschweiz"
+    },
+    "/partners": {
+      "title": "Partner - Ridger",
+      "description": "Entdecken Sie unsere Partnerschaften und unser Netzwerk in der Westschweiz und international.",
+      "keywords": "ridger partner, westschweiz, genf, lausanne"
+    },
+    "/ressources": {
+      "title": "Treuhand-Ressourcen – Romandie | Ridger",
+      "description": "Leitfäden und Artikel zu Buchhaltung, Steuern und Lohn in der Romandie mit praxisnahen Einblicken.",
+      "keywords": "treuhand ressourcen, westschweiz, steuerleitfäden, genf, lausanne"
+    },
+    "/agent": {
+      "title": "Sofortangebot – KI-Assistent | Ridger Genf",
+      "description": "Sofortangebot für Buchhaltung, Steuern, Lohn und Treuhandservices in Genf und Lausanne. Unser KI-Assistent liefert Schätzungen für Ihr Unternehmen.",
+      "keywords": "sofortangebot treuhand, ki offerte assistent, online buchhaltung angebot genf, steuer schätzung schweiz, lohn offerte lausanne, firmenservice kosten"
+    },
+    "/services": {
+      "title": "Treuhanddienste in Genf – Ridger",
+      "description": "Entdecken Sie unsere Treuhanddienste in Genf: Buchhaltung, Steuern, Lohn, Domizilierung und Firmengründung.",
+      "keywords": "treuhanddienste genf, buchhaltungsdienste, steuerberatung genf"
+    },
+    "/services/family-office": {
+      "title": "Family Office in der Romandie | Ridger",
+      "description": "Family-Office-Administration in der Romandie. Ridger unterstützt Familien und Unternehmer mit Governance, Steuern, Recht und Reporting.",
+      "keywords": "family office schweiz, family office romandie, multi family office schweiz, familien governance schweiz, family office genf"
+    },
+    "/services/accounting": {
+      "title": "Buchhaltung in genf und lausanne für KMU | Ridger",
+      "description": "Buchhaltung in Genf und Lausanne für KMU. Umfassende und personalisierte Lösungen für Ihre finanzielle und buchhalterische Verwaltung.",
+      "keywords": "buchhaltung genf, treuhand genf, KMU buchhaltung genf, buchhalter genf, buchhaltung lausanne"
+    },
+    "/services/corporate": {
+      "title": "Corporate Administration Genf | Ridger",
+      "description": "Corporate Administration und Gesellschaftssekretariat in Genf. Unser Team begleitet Sie von der Gründung bis zur täglichen Verwaltung.",
+      "keywords": "corporate administration schweiz, gesellschaftssekretariat schweiz, corporate governance schweiz, gesellschaftsverwaltung genf, handelsregister schweiz"
+    },
+    "/services/domiciliation": {
+      "title": "Domizilierung in Genf und Lausanne | Ridger",
+      "description": "Domizilierung in Genf und Lausanne. Geschäftsadresse für Ihr Unternehmen mit Postverwaltung und administrativer Unterstützung.",
+      "keywords": "domizilierung genf, domizilierung lausanne, geschäftsadresse genf, domizilierung schweiz, domizilierung firma genf"
+    },
+    "/services/odoo": {
+      "title": "Odoo-Treuhänder in Genf | Ridger",
+      "description": "Genfer Treuhandbüro, das direkt in Ihrem Odoo-ERP arbeitet: Schweizer Buchhaltung, MWST, QR-Rechnung, Löhne, Migration und ausgelagerte Buchhaltung in Odoo.",
+      "keywords": "odoo genf, odoo implementierung schweiz, odoo integrator genf, odoo für KMU schweiz, odoo buchhaltung schweiz"
+    },
+    "/services/outsourcing": {
+      "title": "Backoffice-outsourcing in der romandie | Ridger",
+      "description": "Backoffice-Outsourcing in der Romandie. Wir übernehmen Buchhaltung, Lohnabrechnung und Verwaltung, damit Sie sich auf Ihr Kerngeschäft konzentrieren.",
+      "keywords": "backoffice outsourcing schweiz, buchhaltung outsourcing schweiz, administratives outsourcing, outsourcing genf, backoffice schweiz"
+    },
+    "/services/mergers-acquisitions": {
+      "title": "M&a beratung für schweizer transaktionen | Ridger",
+      "description": "M&A-Beratung für Schweizer Transaktionen. Ridger begleitet Mandanten in der Romandie und Deutschschweiz durch den gesamten Transaktionsablauf.",
+      "keywords": "m&a schweiz, m&a beratung schweiz, unternehmensbewertung schweiz, due diligence schweiz, nachfolge KMU schweiz"
+    },
+    "/services/payroll": {
+      "title": "Lohn-Outsourcing Schweiz & ANOBAG | Ridger",
+      "description": "Lagern Sie Ihre Lohnbuchhaltung aus: Lohnabrechnungen, Lohnausweise, Sozialversicherungen, ANOBAG und Swissdec – betreut von einem Treuhandbüro in Genf.",
+      "keywords": "lohnbuchhaltung schweiz, payroll genf, lohnabrechnung schweiz, lohnadministration genf, sozialabgaben schweiz"
+    },
+    "/services/taxes": {
+      "title": "Steuerberatung & Steuererklärungen Genf | Ridger",
+      "description": "Steuerberatung in Genf. Unsere Experten unterstützen Sie bei Ihren Steuerverpflichtungen, von Erklärungen bis zur strategischen Planung.",
+      "keywords": "steuerberatung genf, steuererklärung genf, steuerberater schweiz, mwst schweiz, expat steuern genf"
+    },
+    "/services/incorporation": {
+      "title": "Firmengründung in genf (sàrl/sa) | Ridger",
+      "description": "Firmengründung in Genf (Sàrl/SA). Wir helfen Ihnen, Ihr Unternehmen schnell und korrekt zu gründen – von der Gesellschaftsform bis zur Eintragung.",
+      "keywords": "firmengründung genf, sàrl gründung schweiz, sa gründung schweiz, unternehmen gründen genf, firmengründung schweiz"
+    },
+    "/services/immigration": {
+      "title": "Immigration & Arbeitsbewilligungen Genf | Ridger",
+      "description": "Immigration und Arbeitsbewilligungen in Genf. Wir unterstützen Unternehmer, Führungskräfte und Familien bei der Ansiedlung in der Schweiz.",
+      "keywords": "schweiz immigration, arbeitsbewilligung genf, aufenthaltsbewilligung schweiz, anobag schweiz, immigration genf"
+    },
+    "/legal/privacy": {
+      "title": "Datenschutzrichtlinie - Ridger",
+      "description": "Unsere Datenschutzrichtlinie: Wie wir personenbezogene Daten gemäss Schweizer und EU-Vorschriften schützen und verarbeiten.",
+      "keywords": "datenschutzrichtlinie, datenschutz, dsgvo konformität, personenbezogene daten"
+    },
+    "/legal/terms": {
+      "title": "Nutzungsbedingungen - Ridger",
+      "description": "Nutzungsbedingungen für die Nutzung der Website und Dienstleistungen von Ridger. Rechtliche Bedingungen und Nutzungsvereinbarungen.",
+      "keywords": "nutzungsbedingungen, rechtliche bedingungen, nutzungsvereinbarung, dienstleistungsvertrag"
+    },
+    "/legal/cookies": {
+      "title": "Cookie-Richtlinie - Ridger",
+      "description": "Informationen darüber, wie Ridger Cookies und ähnliche Technologien auf unserer Website für eine verbesserte Benutzererfahrung verwendet.",
+      "keywords": "cookie richtlinie, website cookies, datenschutzeinstellungen, benutzererfahrung"
+    },
+    "/ai-profile": {
+      "title": "Ridger Profil für KI-Assistenten",
+      "description": "Faktenprofil der Ridger: Identität, Genfer Adresse, Dienstleistungen, bediente Regionen, Mitgliedschaften und Family-Office-Einschränkungen.",
+      "keywords": "Ridger, Geneva fiduciary profile, AI assistants, accounting Geneva, tax Geneva"
+    }
+  },
+  "dynamic": {
+    "articles": {
+      "titleTemplate": "{articleTitle} - Ridger (Westschweiz)",
+      "descriptionTemplate": "{articleDescription} | Einblicke aus der Westschweiz mit internationaler Perspektive.",
+      "keywords": "westschweiz, genf, lausanne, steuervorschriften, buchhaltungseinblicke, treuhandexpertise"
+    }
+  }
+}

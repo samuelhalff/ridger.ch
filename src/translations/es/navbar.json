@@ -1,0 +1,22 @@
+{
+    "Home": "Inicio",
+    "Services": "Servicios",
+    "Contact": "Contacto",
+    "Language": "Idioma",
+    "Theme": "Tema",
+    "Ressources": "Recursos",
+    "MobileNavigation": "Navegación móvil",
+    "CloseMenu": "Cerrar menú",
+    "CompanyFooter": "Ridger",
+    "Accounting": {"Title": "Contabilidad"},
+    "TaxesCompanyPersonal": {"Title": "Impuestos"},
+    "PayrollHR": {"Title": "Nómina y RR.HH."},
+    "OutsourcingServices": {"Title": "Outsourcing"},
+    "MAServices": {"Title": "Fusiones y adquisiciones"},
+    "CorporateServices": {"Title": "Servicios corporativos"},
+    "Incorporation": {"Title": "Constitución de empresas"},
+    "DomiciliationServices": {"Title": "Domiciliación"},
+    "OdooImplementation": {"Title": "Odoo"},
+    "Lang": {"en": "English", "fr": "Français", "de": "Deutsch", "es": "Español", "pt": "Português"},
+    "Themes": {"Light": "Claro", "Dark": "Oscuro", "System": "Sistema"}
+}

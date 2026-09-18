@@ -1,0 +1,48 @@
+{
+    "Accounting": {
+        "Title": "Contabilidade",
+        "Description": "Serviços contábeis abrangentes, incluindo escrituração e relatórios financeiros. Utilizamos ferramentas de IA personalizadas para ganhar eficiência e facilitar sua vida."
+    },
+    "TaxesCompanyPersonal": {
+        "Title": "Impostos",
+        "Description": "Cuidamos de todos os aspectos da conformidade fiscal, incluindo registro de IVA, declarações de impostos corporativos e declarações de imposto de renda pessoal."
+    },
+    "PayrollHR": {
+        "Title": "Folha de pagamento e RH",
+        "Description": "Gerenciamos o processamento da folha de pagamento, incluindo cálculos salariais, geração de holerites e conformidade com as regulamentações suíças de seguridade social."
+    },
+    "OutsourcingServices": {
+        "Title": "Serviços de terceirização",
+        "Description": "Fornecemos serviços de terceirização para tarefas legais, administrativas e contábeis, permitindo que você se concentre em suas atividades comerciais principais enquanto cuidamos das funções de back-office necessárias."
+    },
+    "MAServices": {
+        "Title": "Fusões e aquisições",
+        "Description": "Consultoria M&A para PME suíças com mandatos buy-side e sell-side, avaliações independentes, suporte em due diligence e planejamento de integração pós-negócio."
+    },
+    "ShowMore": "Saber mais",
+    "ShowLess": "Ver menos",
+    "CorporateServices": {
+        "Title": "Serviços corporativos",
+        "Description": "Oferecemos uma gama de serviços corporativos, incluindo formação de empresas, gestão de conformidade e suporte de governança corporativa para garantir que seu negócio opere sem problemas."
+    },
+    "Incorporation": {
+        "Title": "Constituição de empresa",
+        "Description": "Ajudamos em todo o processo de constituição de empresa, garantindo conformidade com as normas suíças e suporte contínuo."
+    },
+    "ImmigrationServices": {
+        "Title": "Imigração e autorizações",
+        "Description": "Apoio para autorizações de residência e trabalho na Suíça, casos ANobAG, coordenação com autoridades e onboarding administrativo em Genebra e na Suíça francófona."
+    },
+    "DomiciliationServices": {
+        "Title": "Serviços de domiciliação",
+        "Description": "Os serviços de domiciliação fornecem às empresas um endereço registrado. Esses serviços permitem que as empresas estabeleçam sua sede oficial sem precisar de um escritório físico no local."
+    },
+    "OdooImplementation": {
+        "Title": "Implementação de Odoo",
+        "Description": "Somos parceiros oficiais da Odoo, fornecendo serviços completos de implementação e configuração para garantir que sua configuração Odoo atenda aos padrões contábeis suíços."
+    },
+    "FamilyOffice": {
+        "Title": "Family office",
+        "Description": "Serviços de family office focados em governança e coordenação administrativa para famílias de alto património. Reporting, compliance, pagamentos, sucessão, sem gestão de ativos."
+    }
+}

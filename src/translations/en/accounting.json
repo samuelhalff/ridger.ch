@@ -1,0 +1,241 @@
+{
+  "ImageAlt": "Zurich old town and Lake Zurich at sunrise, Switzerland",
+  "Hero": {
+    "Badge": "Genève · Lausanne",
+    "BadgeTwo": "AI powered",
+    "ReadMore": "Read more",
+    "Title": "Accounting in geneva and lausanne for SMEs",
+    "Description": "We offer accounting services along with state-of-the art technology to help you manage your finances efficiently. Our team ensures compliance with Swiss regulations while providing you with the tools to make informed decisions.",
+    "CTA": "Contact us",
+    "SecondaryCTA": "Meet the Team",
+    "OdooPartnerBadge": "Official Odoo partner"
+  },
+  "Presentation": {
+    "Title": "Swiss accounting and financial reporting for SMEs",
+    "Subtitle": "A 360° offering",
+    "Intro": [
+      "We are dedicated to providing comprehensive and personalized solutions, designed to address every facet of your financial and accounting needs with precision and insight.",
+      "Beyond the numbers, we offer strategic advice to support your growth, navigate challenges, and seize market opportunities with discernment. We are your strategic partner committed to your business success.",
+      "We work with your tools or set up simple dashboards so you and your team always see the numbers that matter."
+    ],
+    "List": [
+      "General accounting",
+      "Analytical accounting",
+      "Periodic tasks",
+      "Dashboards",
+      "Tailored services"
+    ],
+    "General": {
+      "Title": "General accounting",
+      "Desc": "At Ridger, we master all aspects of general accounting, from the general ledger to financial statements, including management accounting. Our professionals ensure that every account book is kept up to date, accurate, and compliant with industry standards and regulations.",
+      "List": [
+        "Custom chart of accounts",
+        "Accounts payable and receivable management",
+        "Payment management",
+        "Cash management"
+      ]
+    },
+    "Analytic": {
+      "Title": "Analytical accounting",
+      "Desc": "Analytical accounting is a powerful tool to understand where and how you generate profits, as well as to identify areas that require special attention. Our experts at Ridger will help you set up and analyze an effective analytical accounting system, enabling you to make more informed business decisions."
+    },
+    "Periodic": {
+      "Title": "Periodic tasks",
+      "Desc": "Enjoy peace of mind with our expertise in preparing periodic statements for all your obligations, including:",
+      "List": [
+        "Interim and/or annual closing",
+        "Semi-annual or quarterly VAT",
+        "Social insurance",
+        "Tax declaration",
+        "Ordinary and extraordinary general meetings",
+        "Board of directors"
+      ],
+      "Followup": "Our dedicated team supports you at every step, ensuring transparent and optimized management of your statements, so you can focus on your core business."
+    },
+    "Dashboards": {
+      "Title": "Dashboards",
+      "Desc": "Optimize the visibility and control of your finances with our innovative accounting dashboard solutions. Dashboards provide a clear and accessible summary of your financial data, enabling informed and strategic decision-making. Enjoy simplified management with intuitive dashboards tailored to your specific needs. With a user-friendly interface and precise analytics, our solutions ensure effective monitoring of your financial health."
+    },
+    "Custom": {
+      "Title": "A full and personalized offer"
+    },
+    "ServicesTitle": "Our Accounting Services",
+    "Services": [
+      "General Accounting: Complete management of your chart of accounts and financial transactions",
+      "Financial Reporting: Preparation of comprehensive financial statements and management reports",
+      "Analytical Accounting: Detailed cost analysis and profitability tracking by project or department",
+      "Custom Dashboards: Real-time financial analytics and KPI monitoring tailored to your business"
+    ],
+    "CustomServicesList": [
+      {
+        "Icon": "Users",
+        "Title": "Experts",
+        "Desc": "Ridger relies on a team of experienced and certified accountants and tax specialists, mastering local and international regulations. This expertise ensures accurate and compliant accounts, guaranteeing reliable and harmonious management."
+      },
+      {
+        "Icon": "Clock",
+        "Title": "Time saving and efficiency",
+        "Desc": "By outsourcing accounting to Ridger, companies can focus on their core business. Our services save time and improve operational efficiency by taking care of complete financial management."
+      },
+      {
+        "Icon": "Settings",
+        "Title": "Custom solutions",
+        "Desc": "Ridger offers tailor-made accounting services, adapted to the specific needs of each client. Whether you are a small business, a large company, an NGO, or a subsidiary, we adapt our services to meet your expectations, offering flexible solutions."
+      },
+      {
+        "Icon": "Laptop",
+        "Title": "Advanced technology and real-time management",
+        "Desc": "We use the latest accounting technologies and software to ensure optimal management. These tools enable precise and fast management of financial data, as well as easy and secure real-time access to information."
+      },
+      {
+        "Icon": "MessageSquare",
+        "Title": "Consulting",
+        "Desc": "At Ridger, we do not limit ourselves to bookkeeping. We also offer quality accounting support. Our experts help you structure your finances, plan your taxes, and manage your cash flow, while identifying opportunities for improvement."
+      }
+    ],
+    "CommonQuestions": {
+      "Title": "Frequently asked questions about accounting services in Switzerland",
+      "Questions": [
+        {
+          "Question": "What bookkeeping services do you provide for small businesses in Geneva?",
+          "Answer": "We provide comprehensive bookkeeping services tailored to Geneva small businesses including daily transaction recording, accounts payable and receivable management, bank reconciliation, expense tracking, and chart of accounts maintenance. Our services cover invoice processing and payment management, cash flow monitoring, and preparation of monthly or quarterly management reports. We ensure compliance with Swiss accounting standards and cantonal requirements while providing real-time access to your financial data through secure dashboards. For Geneva SMEs, we also coordinate with your tax obligations, prepare documentation for auditors, and maintain organized records meeting Swiss legal requirements for document retention and accessibility."
+        },
+        {
+          "Question": "How does financial reporting work for SMEs in Switzerland?",
+          "Answer": "Financial reporting for Swiss SMEs includes preparation of statutory annual financial statements comprising balance sheet, income statement, and notes to accounts. Depending on your company size, you may need simplified or full accounting under Swiss GAAP. We prepare monthly or quarterly management reports showing key performance indicators, cash flow analysis, profitability metrics, and budget variance analysis tailored to your business needs. Year-end reporting includes preparation of financial statements for annual general meetings, coordination with external auditors if required, and ensuring compliance with commercial register filing obligations. Our reports provide clear insights into your business performance, supporting strategic decisions while meeting all Swiss legal and regulatory requirements for SME financial reporting."
+        },
+        {
+          "Question": "Can you help integrate Odoo accounting for my Geneva business?",
+          "Answer": "Yes, as official Odoo partners, we specialize in implementing and managing Odoo accounting solutions for Geneva businesses. We configure Odoo's accounting module to Swiss standards including Swiss chart of accounts (KMU or company-specific), VAT management with Swiss rates and reporting, multi-currency capabilities, and integration with Swiss banking (pain.001/camt.053 formats). Our services include initial setup and configuration, data migration from existing systems, user training for your team, ongoing support and optimization, and management of Swiss-specific requirements like QR invoicing and Swissdec payroll integration. Odoo provides powerful real-time reporting, automated workflows, and seamless integration with other business functions. We ensure your Odoo accounting fully complies with Swiss regulations while providing the flexibility and insights modern Geneva businesses need."
+        },
+        {
+          "Question": "How do you set up analytical accounting for tracking project profitability?",
+          "Answer": "We implement analytical accounting systems that track revenues and costs by project, department, product line, or any dimension relevant to your business. Setup involves defining analytical dimensions (cost centers, profit centers, projects), establishing coding structures for transaction allocation, configuring reporting hierarchies, and training your team on proper allocation methods. Our analytical accounting captures direct costs, allocates indirect expenses using appropriate drivers, tracks time and resource consumption by project, and generates profitability reports showing contribution margins and fully loaded costs. This enables data-driven decisions about pricing, resource allocation, and business focus. For Geneva professional services firms, we create sophisticated analytics tracking billable vs non-billable time, client profitability, and service line performance with real-time dashboards for management decisions."
+        },
+        {
+          "Question": "What's involved in setting up proper accounting for a new Geneva startup?",
+          "Answer": "New startup accounting setup involves establishing foundational systems and processes for financial management. We create a customized chart of accounts reflecting your business model, configure accounting software (Odoo or alternatives) with Swiss compliance features, establish document filing and approval workflows, set up bank account connections for automated transaction import, and implement invoice and expense management systems. We configure VAT handling if registered, establish protocols for receipts and documentation, create financial reporting templates for board and investor reporting, and provide training for founders on basic financial management. For venture-backed startups, we implement tracking for investor reporting requirements, burn rate monitoring, and milestone achievement. This foundation ensures your Geneva startup has professional accounting infrastructure from inception, supporting growth while maintaining compliance with Swiss regulations."
+        },
+        {
+          "Question": "Do you provide accounting services for non-profit organizations in Switzerland?",
+          "Answer": "Yes, we provide specialized accounting for Swiss non-profit organizations including foundations, associations, and public benefit entities. Non-profit accounting requires specific expertise in fund accounting, grant management, restricted vs unrestricted fund tracking, and compliance with Swiss foundation law. Our services include maintaining separate accounting for different funds and projects, preparing financial statements according to Swiss GAAP FER 21 (the standard for non-profits), handling donor reporting requirements, managing grant compliance and documentation, preparing annual reports for foundation supervision authorities, and ensuring tax-exempt status compliance. We understand Geneva's foundation oversight requirements and prepare documentation for cantonal supervision. For international NGOs based in Geneva, we coordinate multi-country financial consolidation and reporting. Our non-profit expertise ensures your organization maintains transparency, accountability, and compliance while focusing on mission delivery."
+        },
+        {
+          "Question": "Do you provide accounting services outside Geneva?",
+          "Answer": "Yes. Bookkeeping, VAT and closings are handled remotely through Odoo and standard Swiss banking interfaces, so we serve companies in any canton; deliverables meet the requirements of each cantonal authority."
+        },
+        {
+          "Question": "Can you take over accounting mid-year from another fiduciary?",
+          "Answer": "Yes. We review the opening balances, reconcile VAT and social-insurance positions, and document any corrections before continuing the books — a fixed-scope onboarding, agreed in advance."
+        }
+      ]
+    },
+    "WhoThisIsFor": {
+      "Title": "Who benefits from our accounting services?",
+      "Description": "Our accounting services are designed for businesses and organizations seeking professional financial management, regulatory compliance, and strategic insights from their financial data.",
+      "TargetClients": [
+        "Startups and growing SMEs needing scalable accounting infrastructure with modern technology",
+        "International companies establishing Geneva subsidiaries requiring Swiss GAAP expertise",
+        "Professional services firms tracking project profitability through analytical accounting systems",
+        "E-commerce and retail businesses managing complex inventory and multi-channel revenue accounting",
+        "Non-profit organizations and foundations requiring specialized fund accounting and compliance reporting"
+      ]
+    },
+    "ProcessTimeline": {
+      "Title": "How our accounting engagement process works",
+      "Description": "We provide structured accounting services with clear processes, regular deliverables, and ongoing support to ensure your financial records are accurate, compliant, and decision-useful.",
+      "Steps": [
+        {
+          "Title": "Initial assessment and system setup (Weeks 1-2)",
+          "Description": "We begin with a comprehensive review of your current accounting situation, existing records, software systems, and business processes. Our team assesses your chart of accounts structure, evaluates accounting software capabilities and Swiss compliance, reviews transaction volumes and complexity, and identifies any historical issues requiring correction. We document your reporting needs for management, tax authorities, banks, and investors. Based on this assessment, we develop a customized accounting plan including software selection or optimization (often Odoo for our clients), chart of accounts design aligned with your business model and reporting needs, workflow configuration for transaction processing, and integration with banking and payment systems. We establish secure data exchange protocols, set up user access controls, and create a timeline for transitioning to our accounting management."
+        },
+        {
+          "Title": "Historical data migration and cleanup (Weeks 2-4)",
+          "Description": "For businesses transitioning to our services, we migrate and validate historical accounting data to ensure continuity and accurate comparative reporting. This involves extracting data from previous systems or spreadsheets, validating opening balances against prior period financial statements, reconciling bank accounts and key balance sheet items, correcting any identified errors or inconsistencies, and importing clean data into your accounting system. We prepare detailed reconciliation documentation supporting all balance sheet amounts, ensuring audit trails are complete. For new startups, we establish opening entries reflecting share capital, initial funding, and formation costs. This thorough cleanup provides a solid foundation for ongoing accounting, prevents future complications, and ensures your financial statements are reliable from day one of our engagement."
+        },
+        {
+          "Title": "Monthly transaction processing and reporting (Ongoing monthly)",
+          "Description": "Our core monthly accounting services ensure your books are current, accurate, and decision-useful. Each month, we collect supporting documentation for all transactions via secure portals or integrated systems, record revenue from invoices and other sources with proper recognition principles, process expenses and supplier invoices with appropriate coding, perform bank reconciliations confirming all transactions are captured, post payroll entries from salary processing, calculate and record VAT obligations, and make necessary adjusting and accrual entries. We prepare monthly financial statements including balance sheet, income statement, and cash flow analysis, along with customized management reports showing key performance indicators, budget variances, and analytical accounting results. You receive these reports by the 15th of the following month, with review meetings to discuss performance, trends, and any issues requiring attention."
+        },
+        {
+          "Title": "Quarterly and annual closing processes (Quarterly/Annual)",
+          "Description": "Beyond monthly processing, we handle more intensive quarterly and annual accounting tasks. Quarterly activities include comprehensive balance sheet account reviews and reconciliations, fixed asset depreciation calculations and updates, prepayment and accrual analysis, provision reviews for doubtful debts and warranties, inventory valuation if applicable, and preparation of quarterly management packages. Annual closing involves detailed year-end procedures including complete asset verification and impairment testing, deferred tax calculations, comprehensive financial statement preparation with notes, coordination with external auditors providing requested schedules and explanations, preparation of documents for annual general meetings, and commercial register filings as required. We ensure your annual financial statements fully comply with Swiss GAAP while presenting your business performance clearly to stakeholders including shareholders, board members, banks, and tax authorities."
+        },
+        {
+          "Title": "Tax coordination and strategic advisory (Ongoing)",
+          "Description": "Our accounting services integrate seamlessly with tax compliance and strategic financial advisory. Throughout the year, we maintain awareness of tax implications from your transactions, coordinate with our tax team on VAT declarations, corporate income tax planning, and year-end tax optimization opportunities. We prepare accounting-based tax documentation including reconciliations between book and tax income, depreciation schedules for tax filings, and supporting documentation for deductions. Beyond compliance, we provide strategic accounting advice on business decisions including analysis of investment opportunities, pricing strategies based on cost structures, cash flow forecasting and management, and performance improvement recommendations. Our integrated approach ensures your accounting serves not just compliance needs but actively supports business growth and profitability through timely, accurate financial insights and strategic guidance leveraging our comprehensive understanding of your business and the Geneva market."
+        }
+      ]
+    },
+    "UseCases": {
+      "Title": "How our accounting services support business success",
+      "Description": "Real examples showing how our accounting expertise has helped Geneva and Lausanne businesses improve financial management, compliance, and decision-making.",
+      "Cases": [
+        {
+          "Title": "Tech startup implementing Odoo accounting for scaling from seed to Series A",
+          "Description": "A Geneva-based SaaS startup with five employees secured seed funding and needed to establish professional accounting systems to support rapid growth and satisfy investor reporting requirements. Challenge: The founders used basic spreadsheets that couldn't scale, lacked real-time financial visibility, needed multi-currency capabilities for international customers, and required robust reporting for board meetings and investor updates. Our solution: We implemented Odoo accounting configured to Swiss standards, integrated with their bank accounts and payment processors for automated transaction import, established revenue recognition policies compliant with subscription business models, created custom dashboards showing monthly recurring revenue (MRR), customer acquisition costs, burn rate, and runway. We provided monthly financial packages meeting investor expectations and trained the finance team on system usage. Outcome: The startup achieved real-time financial visibility supporting faster decision-making, reduced monthly closing time from 10 days to 3 days, successfully raised Series A with well-organized financials impressing due diligence, and scaled to 30 employees with accounting systems supporting continued growth without requiring additional finance staff."
+        },
+        {
+          "Title": "Professional services firm implementing analytical accounting for project profitability tracking",
+          "Description": "A Geneva management consulting firm with 15 consultants billed clients on project basis but lacked visibility into individual project profitability, making pricing and resource allocation decisions difficult. Challenge: The firm couldn't determine which projects or clients were most profitable, had no systematic way to track time costs against project revenue, struggled with pricing new engagements, and couldn't identify unprofitable activities consuming resources. Our solution: We implemented comprehensive analytical accounting tracking all revenues and costs by project, client, and service line. We integrated their time tracking system with accounting to allocate labor costs accurately, established methodologies for allocating indirect costs (administration, business development, training) to projects, and created profitability dashboards showing contribution margin and full-cost profitability for each engagement. We developed reporting providing insights into client profitability, consultant utilization, and service line performance. Outcome: The firm identified that 20% of projects generated 70% of profits while others destroyed value, adjusted pricing models increasing average project margins by 15%, reallocated resources from low-margin to high-margin service lines, and improved consultant utilization from 65% to 78% billable time. Annual profitability increased 25% through data-driven resource and pricing optimization enabled by proper analytical accounting."
+        },
+        {
+          "Title": "Non-profit foundation ensuring compliance with Geneva foundation oversight requirements",
+          "Description": "An international humanitarian foundation based in Geneva managed multiple restricted grant funds and needed to ensure financial transparency for donors, compliance with Swiss foundation law, and proper reporting to Geneva cantonal supervision authorities. Challenge: The foundation's previous accounting didn't clearly separate restricted and unrestricted funds, grant compliance documentation was inadequate for donor audits, financial statements didn't follow Swiss GAAP FER 21 standards for non-profits, and reporting to oversight authorities was incomplete. Our solution: We restructured their accounting implementing proper fund accounting with separate tracking for each restricted grant, established processes for documenting grant compliance and eligible expenses, prepared financial statements according to Swiss GAAP FER 21 with required disclosures, created donor-specific financial reports meeting each funder's unique requirements, and prepared comprehensive annual reports for Geneva foundation supervision. We implemented controls ensuring restricted funds were spent only on designated purposes. Outcome: The foundation achieved full compliance with Swiss foundation law and supervision requirements, passed donor audits without qualification for the first time in three years, improved relationships with major funders through transparent reporting, successfully applied for two large new grants based on strong financial management reputation, and received commendation from Geneva cantonal authorities for exemplary financial governance and transparency."
+        }
+      ]
+    },
+    "LongFormTitle": "Accounting approach, deliverables and control points",
+    "LongFormSections": [
+      {
+        "Title": "Who we support",
+        "Body": [
+          "Swiss SMEs, entrepreneurs, foreign subsidiaries and finance teams that need reliable accounting in Geneva or Romandy.",
+          "We step in when bookkeeping, VAT, closings or reporting need to become clearer, more regular and easier to use."
+        ]
+      },
+      {
+        "Title": "What we handle",
+        "Body": [
+          "Bookkeeping, VAT, monthly or annual closings, management reporting, dashboards and coordination with banks, auditors or advisors.",
+          "We structure the chart of accounts, supporting documents and approval routines to reduce gaps and speed up decisions."
+        ]
+      },
+      {
+        "Title": "Process and deliverables",
+        "Body": [
+          "The engagement starts with a review of volumes, tools, deadlines and obligations. We then define a calendar, responsibilities and deliverable formats.",
+          "Deliverables may include trial balances, annual accounts, periodic reporting, VAT files, control notes and process recommendations."
+        ]
+      },
+      {
+        "Title": "Cost drivers and continuity",
+        "Body": [
+          "Costs depend on transaction volume, number of entities, reporting depth, tools used and the need for external coordination.",
+          "When the business changes, we adjust the setup without replacing habits that already work."
+        ]
+      },
+      {
+        "Title": "Accounting services across Switzerland",
+        "Body": [
+          "While our team is based in Geneva, we provide accounting services to companies across Switzerland: bookkeeping, VAT returns, payroll coordination, closings and reporting are handled remotely through Odoo and standard Swiss banking and tax interfaces.",
+          "English-speaking founders and foreign-owned subsidiaries work with us in English, with deliverables that satisfy Swiss requirements in any canton."
+        ]
+      },
+      {
+        "Title": "Swiss accounting standards and obligations",
+        "Body": [
+          "Swiss bookkeeping follows the Code of Obligations (art. 957 ff. CO): companies above CHF 500,000 revenue keep full double-entry accounts, prepare annual financial statements and retain records for ten years.",
+          "We keep your chart of accounts aligned with the Swiss SME standard, handle VAT returns on the effective or net-tax-rate method, and prepare statements that satisfy your auditor, your bank and the tax administration."
+        ]
+      },
+      {
+        "Title": "English-speaking accounting support",
+        "Body": [
+          "Founders and finance teams work with us entirely in English: monthly closings, management reports and board packs are delivered in English while filings stay compliant in the languages required by each authority.",
+          "This matters for foreign-owned subsidiaries and international founders in Geneva — deadlines and Swiss specifics (withholding tax, VAT, social insurance) are explained without translation overhead."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "ImageAlt": "Vue aérienne d'un col routier sinueux en montagne, Suisse",
+  "Hero": {
+    "Badge": "Services fiscaux",
+    "BadgeTwo": "Assisté par IA",
+    "Title": "Conseil fiscal et déclarations d'impôts à Genève",
+    "Description": "Ridger offre des services fiscaux experts pour les particuliers et les entreprises. Nous optimisons votre situation fiscale, assurons la conformité et fournissons des conseils stratégiques pour toutes vos obligations fiscales en Suisse.",
+    "CTA": "Optimiser mes impôts",
+    "SecondaryCTA": "Rencontrer l'équipe"
+  },
+  "Presentation": {
+    "Title": "Fiscalité suisse et déclarations pour PME et expatriés",
+    "Subtitle": "Expertise et conformité",
+    "Intro": [
+      "Nos spécialistes fiscaux vous accompagnent dans toutes vos obligations fiscales, des déclarations à la planification stratégique.",
+      "Nous assurons la conformité avec le droit fiscal suisse et vous aidons à optimiser votre situation fiscale.",
+      "Nous tenons un calendrier d’échéances, préparons des rulings si besoin et gérons les contrôles sereinement."
+    ],
+    "StrengthsTitle": "Nos forces pour vos besoins fiscaux",
+    "Strengths": [
+      {
+        "Title": "Expertise complète",
+        "Desc": "Notre équipe couvre tous les domaines de la fiscalité suisse, assurant un support complet et fiable."
+      },
+      {
+        "Title": "Conseil personnalisé",
+        "Desc": "Nous analysons votre situation pour offrir des solutions sur mesure et optimiser votre charge fiscale."
+      },
+      {
+        "Title": "Conformité et sécurité",
+        "Desc": "Nous garantissons la conformité avec toutes les obligations légales et sécurisons votre situation fiscale."
+      },
+      {
+        "Title": "Représentation et négociation",
+        "Desc": "Nous vous représentons auprès des autorités fiscales et négocions en votre nom quand nécessaire."
+      }
+    ],
+    "ServicesTitle": "Nos Services Fiscaux",
+    "Services": [
+      "Déclarations Fiscales : Préparation et dépôt complets de déclarations fiscales individuelles et corporatives",
+      "Planification Fiscale : Planification stratégique pour optimiser votre charge fiscale et assurer la conformité",
+      "Gestion TVA : Services complets d'inscription, déclaration et conformité TVA",
+      "Représentation Fiscale : Représentation professionnelle auprès des autorités fiscales et négociations"
+    ],
+    "CommonQuestions": {
+      "Title": "Questions fréquentes sur la fiscalité en Suisse",
+      "Questions": [
+        {
+          "Question": "Quand dois-je m'inscrire à la TVA à Genève et quelles sont les conditions requises ?",
+          "Answer": "Les entreprises doivent s'inscrire à la TVA en Suisse lorsque le chiffre d'affaires annuel dépasse CHF 100'000. L'inscription implique la soumission de formulaires à l'Administration fédérale des contributions, la fourniture de documents d'entreprise et la mise en place de déclarations TVA trimestrielles ou semestrielles. Nous vous guidons tout au long du processus, assurant la conformité avec les exigences cantonales genevoises et vous aidant à comprendre les déductions de l'impôt préalable, les taux de TVA et les obligations de déclaration électronique via le portail SwissDeclaration."
+        },
+        {
+          "Question": "Quels sont les délais de déclaration fiscale pour les particuliers et les entreprises en Suisse ?",
+          "Answer": "Les déclarations fiscales des particuliers à Genève sont généralement dues au 31 mars suivant l'année fiscale, avec des prolongations possibles jusqu'en septembre ou novembre. Les déclarations fiscales des entreprises dépendent de la fin de votre exercice fiscal et sont généralement dues dans les six mois. Le non-respect des délais peut entraîner des pénalités et des taxations d'office. Nous maintenons un calendrier complet pour toutes vos obligations fiscales, incluant les acomptes, les déclarations d'impôt à la source et les décomptes TVA, vous assurant de ne jamais manquer une échéance critique."
+        },
+        {
+          "Question": "Comment optimiser ma situation fiscale en tant que PME en Suisse ?",
+          "Answer": "L'optimisation fiscale pour les PME implique une planification stratégique dans plusieurs domaines : choix de la structure juridique optimale (Sàrl vs SA), maximisation des charges d'exploitation déductibles, timing des investissements et des amortissements, cotisations de prévoyance pour les dirigeants et employés, et utilisation des incitations fiscales cantonales. Genève et Vaud offrent des avantages spécifiques pour certaines industries. Nous analysons votre situation complète, incluant la fiscalité personnelle et d'entreprise, pour développer des stratégies sur mesure qui minimisent légalement votre charge fiscale tout en maintenant une conformité totale avec les réglementations fédérales et cantonales suisses."
+        },
+        {
+          "Question": "Comment les conventions de double imposition affectent-elles les entreprises internationales en Suisse ?",
+          "Answer": "La Suisse a signé plus de 100 conventions de double imposition protégeant les entreprises contre une double taxation sur les mêmes revenus. Ces conventions déterminent quel pays a les droits d'imposition principaux en fonction de facteurs comme la résidence, l'établissement stable et la source de revenu. Pour les clients internationaux opérant à Genève, nous analysons les dispositions des conventions, déterminons votre statut de résidence fiscale, gérons les demandes d'allègement conventionnel et coordonnons avec les conseillers fiscaux étrangers. Cela assure un positionnement fiscal optimal tout en gérant les obligations de conformité transfrontalières dans toutes les juridictions pertinentes."
+        },
+        {
+          "Question": "À quoi dois-je m'attendre lors d'un contrôle fiscal à Genève ou dans le canton de Vaud ?",
+          "Answer": "Les contrôles fiscaux dans les cantons suisses sont des processus professionnels où les autorités vérifient l'exactitude de vos déclarations. Ils demandent généralement une documentation détaillée incluant les registres comptables, contrats, factures et correspondance. Les contrôles peuvent être aléatoires ou déclenchés par des incohérences. Nous préparons des dossiers de documentation complets, vous représentons dans toutes les communications avec les autorités fiscales, expliquons les traitements comptables techniques et négocions des règlements si nécessaire. Notre expérience avec les administrations fiscales de Genève et Lausanne aide à assurer que les contrôles se déroulent sans heurts avec une perturbation minimale de l'entreprise et des résultats optimaux."
+        },
+        {
+          "Question": "Quelles sont les obligations d'impôt à la source pour les entreprises employant des travailleurs étrangers ?",
+          "Answer": "Les employeurs doivent prélever l'impôt à la source pour les employés étrangers sans permis C ou les citoyens suisses/UE sans autorisation d'établissement. Les taux varient selon le canton, le niveau de revenu et la situation familiale. À Genève, les déclarations mensuelles d'impôt à la source sont obligatoires, avec des réconciliations annuelles requises. Nous calculons les montants de retenue corrects, préparons les soumissions mensuelles, gérons les ajustements de taux pour les situations changeantes, gérons les certificats annuels et coordonnons avec les déclarations d'assurances sociales. Cela assure la conformité avec le droit du travail et fiscal suisse tout en évitant les pénalités pour retenue incorrecte ou soumissions tardives."
+        }
+      ]
+    },
+    "WhoThisIsFor": {
+      "Title": "Qui bénéficie de nos services de fiscalité ?",
+      "Description": "Nos services fiscaux sont conçus pour les entreprises et particuliers naviguant les complexités de la fiscalité fédérale et cantonale suisse. Que vous établissiez votre première entreprise ou gériez des opérations internationales, nous fournissons des conseils experts.",
+      "TargetClients": [
+        "Startups nécessitant des conseils sur l'inscription TVA et la conformité fiscale initiale à Genève",
+        "PME recherchant des stratégies d'optimisation fiscale pour réduire leur charge fiscale suisse globale",
+        "Entreprises internationales gérant la fiscalité transfrontalière et les demandes d'allègement conventionnel",
+        "Expatriés et travailleurs étrangers naviguant les obligations fiscales individuelles et l'impôt à la source",
+        "Entreprises e-commerce gérant la conformité TVA en Suisse et dans l'Union européenne"
+      ]
+    },
+    "ProcessTimeline": {
+      "Title": "Comment fonctionne notre processus de conseil fiscal",
+      "Description": "Nous suivons une approche structurée pour assurer votre conformité et optimisation fiscales, de l'analyse initiale au support continu.",
+      "Steps": [
+        {
+          "Title": "Consultation initiale et analyse de situation fiscale (Semaine 1)",
+          "Description": "Nous commençons par un examen complet de votre situation fiscale actuelle, incluant les obligations individuelles et d'entreprise. Notre équipe examine votre structure d'entreprise, flux de revenus, déclarations fiscales existantes, et identifie les problèmes de conformité immédiats ou opportunités. Cette évaluation initiale couvre la fiscalité fédérale, cantonale et communale à Genève et Lausanne, les obligations TVA, les impôts à la source et toute considération fiscale internationale. Nous fournissons une feuille de route claire de vos obligations fiscales et des stratégies d'optimisation potentielles adaptées à vos circonstances spécifiques."
+        },
+        {
+          "Title": "Développement de stratégie fiscale et planification (Semaines 2-3)",
+          "Description": "Sur la base de notre analyse, nous développons une stratégie fiscale complète alignée avec vos objectifs d'entreprise. Cela inclut la détermination de la structure juridique optimale, le timing des revenus et dépenses, la planification de la prévoyance, les stratégies d'investissement et l'utilisation des déductions disponibles et incitations cantonales. Pour les clients internationaux, nous coordonnons avec les conseillers fiscaux étrangers pour assurer l'efficacité fiscale globale. Nous présentons nos recommandations dans un plan d'action clair avec les économies fiscales projetées, les exigences de conformité et les étapes de mise en œuvre pour l'année fiscale actuelle et futures."
+        },
+        {
+          "Title": "Mise en œuvre et inscriptions (Semaines 3-5)",
+          "Description": "Nous exécutons la stratégie fiscale approuvée en gérant toutes les inscriptions et dépôts nécessaires. Cela inclut l'inscription TVA auprès de l'Administration fédérale des contributions, la mise en place de comptes d'impôt à la source pour les employés, l'inscription aux impôts cantonaux et communaux, et l'établissement de calendriers de déclaration. Nous configurons nos systèmes pour suivre vos échéances, mettons en place l'accès au dépôt numérique et préparons des modèles pour les soumissions continues. Pour les scénarios de restructuration, nous gérons les communications avec les autorités fiscales et assurons des transitions fluides avec un impact fiscal minimal et une documentation complète."
+        },
+        {
+          "Title": "Conformité continue et dépôts (Mensuel/Trimestriel/Annuel)",
+          "Description": "Nous gérons toutes les obligations fiscales récurrentes selon les calendriers réglementaires suisses. Cela inclut la préparation et le dépôt des décomptes TVA trimestriellement ou semestriellement, la soumission des déclarations mensuelles d'impôt à la source, les paiements d'acomptes fiscaux, et la préparation des déclarations fiscales annuelles d'entreprise et individuelles. Notre équipe surveille les changements législatifs affectant votre position fiscale, identifie proactivement des opportunités d'optimisation supplémentaires et maintient des registres organisés pour les contrôles potentiels. Vous recevez des mises à jour régulières sur votre position fiscale, les échéances à venir et toute action requise pour maintenir la conformité."
+        },
+        {
+          "Title": "Support lors de contrôles et représentation auprès des autorités (Si nécessaire)",
+          "Description": "Lorsque les autorités fiscales initient des contrôles ou soulèvent des questions sur vos dépôts, nous fournissons un support complet. Nous préparons une documentation détaillée, répondons aux demandes d'information, expliquons les traitements comptables et positions fiscales, et vous représentons lors des réunions avec les fonctionnaires fiscaux genevois ou vaudois. Notre expérience avec les autorités fiscales suisses aide à naviguer les contrôles efficacement, défendre des positions fiscales légitimes et négocier des résolutions favorables lorsque des litiges surviennent. Nous gérons toutes les communications, protégeons vos intérêts et travaillons à résoudre les questions rapidement tout en maintenant des relations positives avec les administrations fiscales."
+        }
+      ]
+    },
+    "UseCases": {
+      "Title": "Comment nous aidons les entreprises avec la fiscalité",
+      "Description": "Exemples réels de la façon dont notre expertise fiscale a aidé les entreprises de la région genevoise et lausannoise à optimiser leurs positions fiscales tout en maintenant une conformité totale.",
+      "Cases": [
+        {
+          "Title": "Consultant international naviguant la résidence fiscale et les obligations suisses",
+          "Description": "Un consultant en gestion français s'installant à Genève avait besoin de conseils sur la résidence fiscale suisse, les exemptions d'impôt à la source et la fiscalité des revenus transfrontaliers. Défi : Le client travaillait avec des clients suisses et internationaux, créant des problèmes complexes de source et une potentielle double imposition. Notre solution : Nous avons analysé leur statut de résidence selon le droit suisse et la convention fiscale France-Suisse, structuré leur entité de conseil comme une Sàrl, géré l'inscription TVA et coordonné avec leur conseiller fiscal français pour éliminer la double imposition. Résultat : Le client a obtenu une résidence fiscale claire, réduit son taux d'imposition global de 18% par rapport aux projections initiales, et établi des processus conformes de déclaration TVA trimestrielle et fiscale annuelle avec support continu."
+        },
+        {
+          "Title": "Startup e-commerce gérant la TVA en Suisse et dans l'Union européenne",
+          "Description": "Une startup de vente en ligne basée à Genève vendant à des clients suisses et UE faisait face à des exigences complexes de conformité TVA dans plusieurs juridictions. Défi : Différents seuils, taux et exigences d'inscription TVA en Suisse versus pays UE, plus mécanismes d'autoliquidation et règles de vente à distance. Notre solution : Nous avons inscrit l'entreprise à la TVA suisse, évalué les seuils de vente à distance UE, mis en place des systèmes de facturation appropriés pour les transactions B2B et B2C, et établi des procédures de déclaration TVA trimestrielles pour la Suisse avec documentation UE appropriée. Résultat : La startup a atteint une conformité TVA complète, évité les pénalités d'un traitement TVA incorrect, automatisé leurs systèmes de calcul TVA, et reçu des conseils clairs sur quand l'inscription UE serait nécessaire lors de la croissance des ventes. La croissance des revenus a continué sans obstacles de conformité."
+        },
+        {
+          "Title": "Société holding optimisant les avantages fiscaux cantonaux en Suisse",
+          "Description": "Une société holding familiale avec des filiales dans plusieurs pays voulait se relocaliser en Suisse pour bénéficier de la réduction pour participations et optimiser sa structure fiscale internationale. Défi : Naviguer les différences fiscales cantonales, comprendre les exigences d'allègement pour participations, gérer les impôts à la source sur dividendes, et assurer la conformité avec les dispositions anti-abus des conventions. Notre solution : Nous avons comparé les traitements fiscaux entre les cantons de Genève, Vaud et Zoug, structuré la relocalisation pour maximiser les avantages de la réduction pour participations, géré tous les processus d'inscription et de ruling, et établi des structures de paiement de dividendes et redevances fiscalement efficientes. Résultat : La société holding a obtenu une réduction de 65% du taux d'imposition effectif sur les dividendes de filiales étrangères, obtenu des rulings fiscaux favorables des autorités genevoises, assuré l'accès aux conventions pour tous les investissements, et établi des processus de conformité continue pour les déclarations annuelles et exigences de substance."
+        }
+      ]
+    },
+    "LongFormTitle": "Approche fiscale pour sociétés et entrepreneurs",
+    "LongFormSections": [
+      {
+        "Title": "Qui nous accompagnons",
+        "Body": [
+          "Sociétés suisses, entrepreneurs, dirigeants, familles et groupes internationaux ayant des obligations fiscales à Genève ou en Suisse.",
+          "Nous intervenons lorsque les déclarations, la TVA, les retenues, les rulings ou les enjeux transfrontaliers demandent une coordination claire."
+        ]
+      },
+      {
+        "Title": "Ce que nous traitons",
+        "Body": [
+          "Préparation de déclarations, analyse TVA, fiscalité d’entreprise, fiscalité personnelle liée à l’activité, planification et échanges avec les administrations.",
+          "Nous relions les positions fiscales aux chiffres comptables afin que les décisions restent documentées et défendables."
+        ]
+      },
+      {
+        "Title": "Méthode de travail",
+        "Body": [
+          "Nous clarifions les faits, les délais, les pièces nécessaires et les options possibles avant de recommander une position.",
+          "Chaque étape laisse une trace exploitable: hypothèses, risques, justificatifs, décisions et prochaines échéances."
+        ]
+      },
+      {
+        "Title": "Facteurs de coût",
+        "Body": [
+          "Les coûts varient selon le nombre de juridictions, les entités concernées, la complexité TVA, les questions internationales et le niveau de documentation requis.",
+          "Les sujets sensibles sont cadrés tôt pour éviter des allers-retours coûteux avec les administrations."
+        ]
+      }
+    ]
+  }
+}

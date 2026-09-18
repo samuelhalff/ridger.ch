@@ -1,0 +1,67 @@
+name: Check All Article Links (Twice Monthly)
+
+on:
+  schedule:
+    - cron: "0 6 1,15 * *" # 1st and 15th of each month at 06:00 UTC (~every 2 weeks)
+  workflow_dispatch:
+
+jobs:
+  repair-links:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # needed to commit repaired references
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Repair all article references
+        run: |
+          echo "🔧 Repairing article references across all locales..."
+          echo "  - Redirected URLs are updated to their final destination"
+          echo "  - Dead links (404/410) are removed"
+          echo "  - Articles below the minimum reference count are topped up with verified fallbacks"
+          node scripts/repair-article-refs.js --all-locales
+
+      - name: Validate repaired references (non-blocking)
+        continue-on-error: true
+        run: npm run validate:article-refs -- --no-fail
+
+      - name: Commit repaired references
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "src/translations/**/*.json" || true
+          if git diff --cached --quiet; then
+            echo "✅ No reference changes to commit."
+          else
+            git commit -m "fix(refs): biweekly link repair — update redirects, remove dead links, add fallbacks" \
+              --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; exit 1; }
+            git push
+            echo "✅ Repaired references committed and pushed."
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 🔗 Biweekly Link Repair Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### What Happened" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔀 Redirected URLs updated to their permanent destination" >> $GITHUB_STEP_SUMMARY
+          echo "- 🗑️  Dead links (404/410) removed" >> $GITHUB_STEP_SUMMARY
+          echo "- ➕ Articles with too few references topped up with verified official sources" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check the commit diff to see what was changed." >> $GITHUB_STEP_SUMMARY
+

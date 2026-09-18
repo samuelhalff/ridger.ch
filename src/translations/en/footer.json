@@ -1,0 +1,39 @@
+{
+    "Services": {
+        "Title": "Services"
+    },
+    "Company": {
+        "Title": "Company",
+        "AboutUs": "About us",
+        "Careers": "Careers",
+        "Press": "Press",
+        "News": "News",
+        "MediaKit": "Media kit",
+        "Contact": "Contact"
+    },
+    "Resources": {
+        "Title": "Resources",
+        "Blog": "Blog",
+        "Newsletter": "Newsletter",
+        "Events": "Events",
+        "HelpCentre": "Help centre",
+        "Tutorials": "Tutorials",
+        "Support": "Support"
+    },
+    "Social": {
+        "Title": "Social",
+        "LinkedIn": "LinkedIn"
+    },
+    "Legal": {
+        "Title": "Legal",
+        "Terms": "Terms",
+        "Privacy": "Privacy",
+        "Cookies": "Cookies",
+        "Licenses": "Licenses",
+        "Settings": "Settings",
+        "Contact": "Contact"
+    },
+    "Copyright": "All rights reserved",
+    "Ridger": "Ridger",
+    "SoFitAffiliationPrefix": "Affiliated with the SRO of"
+}

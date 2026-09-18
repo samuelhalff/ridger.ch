@@ -1,0 +1,51 @@
+{
+    "Title": "Entre em contacto",
+    "Subtitle": "Normalmente respondemos dentro de 24 horas.",
+    "BookingButton": "Marcar uma chamada",
+    "BookingDescription": "Ideal para uma conversa planeada com a nossa equipa.",
+    "OrContactUs": "Ou envie-nos uma mensagem.",
+    "CallLabel": "Ligue-nos",
+    "CallDescription": "Fale diretamente com a nossa equipa.",
+    "WhatsApp": {
+        "Badge": "WhatsApp",
+        "Open": "Abrir conversa no WhatsApp com Ridger",
+        "Description": "Para perguntas rápidas e respostas rápidas."
+    },
+    "Form": {
+        "Name": "Nome",
+        "Email": "Email",
+        "CompanyName": "Nome da empresa (opcional)",
+        "Phone": "Número de telefone (opcional)",
+        "Message": "Mensagem",
+        "Placeholders": {
+            "Name": "Seu nome",
+            "Email": "seu@email.com",
+            "CompanyName": "Empresa (opcional)",
+            "Phone": "+41...",
+            "Message": "Sua mensagem..."
+        },
+        "Consent": "Concordo em ser contactado sobre o meu pedido",
+        "Submit": "Enviar mensagem",
+        "Sending": "Enviando",
+        "Success": "Mensagem enviada com sucesso!",
+        "Error": "Falha ao enviar mensagem. Tente novamente."
+    },
+    "Errors": {
+        "Required": "Este campo é obrigatório",
+        "InvalidEmail": "Por favor, insira um endereço de email válido",
+        "MaxLength": "A mensagem não pode exceder 500 caracteres",
+        "Consent": "Deve concordar em ser contactado"
+    },
+    "Contact": {
+        "CompanyName": "Ridger",
+        "Email": "Email: info@ridger.ch",
+        "Phone": "Telefone: +41 XX XXX XX XX",
+        "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
+        "Commitment": "Estamos comprometidos em manter os mais altos padrões de serviço profissional e satisfação do cliente."
+    },
+    "MapTitle": "Nossa localização em Genebra",
+    "MapDisclaimer": "O mapa é fornecido pelo Google Maps. Carregue-o apenas se concordar com a possível transferência de dados (veja nossa política de privacidade).",
+    "MapLoadButton": "Exibir mapa interativo",
+    "MapOpenExternal": "Abrir no Google Maps",
+    "MapPrivacyPlaceholder": "Por motivos de privacidade, o mapa não é carregado automaticamente."
+}

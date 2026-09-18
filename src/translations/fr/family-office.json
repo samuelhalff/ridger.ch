@@ -1,0 +1,83 @@
+{
+  "ImageAlt": "Paysage des Alpes suisses avec propriété familiale, Suisse",
+  "Hero": {
+    "Badge": "Excellence suisse",
+    "BadgeTwo": "Patrimoine familial",
+    "Title": "Family office administratif en Suisse romande",
+    "Description": "Family office pour familles et entrepreneurs à fort patrimoine : gouvernance, coordination administrative, reporting consolidé et projets philanthropiques depuis la Suisse.",
+    "CTA": "Sécurisez votre héritage",
+    "SecondaryCTA": "En savoir plus"
+  },
+  "Breadcrumb": {
+    "Label": "Family office"
+  },
+  "Presentation": {
+    "Title": "Family office administratif et gouvernance familiale",
+    "Subtitle": "Un partenaire administratif et de gouvernance, sans gestion d'actifs",
+    "Intro": [
+      "Ridger accompagne les familles et entrepreneurs qui souhaitent un point de coordination en Suisse pour la gouvernance, la fiscalité, le juridique et le reporting.",
+      "Nous ne proposons pas de gestion d'actifs : notre rôle est administratif et de coordination avec les banques, gérants externes, juristes et fiscalistes, avec des workflows sécurisés."
+    ],
+    "HighlightsTitle": "Nos atouts en family office",
+    "Highlights": [
+      {
+        "Title": "Coordination indépendante",
+        "Desc": "Pilotage administratif des banques et prestataires, sans conseil en investissement."
+      },
+      {
+        "Title": "Coordination 360°",
+        "Desc": "Un interlocuteur unique gère administration, fiscalité, juridique, reporting et demandes lifestyle."
+      },
+      {
+        "Title": "Gouvernance & succession",
+        "Desc": "Chartes familiales, pactes d'actionnaires, programmes nextgen et planification successorale."
+      },
+      {
+        "Title": "Philanthropie & impact",
+        "Desc": "Création et administration de fondations, suivi des dons et reporting d'impact."
+      }
+    ],
+    "ServicesTitle": "Services phares de family office",
+    "Services": [
+      "Structuration patrimoniale · consolidation des participations et tableaux de flux",
+      "Coordination fiscale & juridique internationale · interface avec conseillers suisses et étrangers",
+      "Gouvernance familiale · chartes, conseils de famille, programmes éducatifs",
+      "Support administratif & paiements · préparation des virements, documentation, suivi des dossiers",
+      "Administration philanthropique & lifestyle · fondations, art, immobilier, conciergerie"
+    ],
+    "CalloutTitle": "Construisons votre feuille de route patrimoniale",
+    "CalloutText": "Planifions un entretien confidentiel à Genève ou Lausanne pour aligner vos priorités et définir une gouvernance adaptée à votre famille.",
+    "CalloutCTA": "Parler à un conseiller family office",
+    "LongFormTitle": "Coordination administrative pour familles et structures patrimoniales",
+    "LongFormSections": [
+      {
+        "Title": "Pour qui",
+        "Body": [
+          "Familles, entrepreneurs et structures familiales qui ont besoin d’un point de coordination administratif en Suisse romande.",
+          "Le service porte sur la gouvernance, la documentation, le reporting, la fiscalité et la coordination des intervenants."
+        ]
+      },
+      {
+        "Title": "Ce que nous coordonnons",
+        "Body": [
+          "Calendriers de décisions, documents de gouvernance, synthèses administratives, suivi fiscal, coordination avec banques, gérants externes, avocats et notaires.",
+          "Nous aidons à rendre les informations exploitables sans remplacer les spécialistes mandatés sur leurs domaines respectifs."
+        ]
+      },
+      {
+        "Title": "Limite essentielle",
+        "Body": [
+          "Ridger ne fournit pas de gestion discrétionnaire d’actifs dans ce cadre.",
+          "Les décisions d’investissement, mandats de gestion et recommandations financières restent du ressort des banques, gérants ou conseillers autorisés concernés."
+        ]
+      },
+      {
+        "Title": "Coûts et continuité",
+        "Body": [
+          "Les coûts dépendent du nombre d’entités, d’intervenants, de pays, de réunions, de reportings et de documents à coordonner.",
+          "La valeur du mandat tient à la continuité: dossiers rangés, décisions traçables et responsabilités clairement réparties."
+        ]
+      }
+    ]
+  }
+}

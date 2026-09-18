@@ -1,0 +1,133 @@
+{
+  "default": {
+    "title": "Ridger | Fiduciaria en Ginebra y Lausana",
+    "description": "Fiduciaria en Ginebra y Lausana: contabilidad, impuestos, nóminas, administración corporativa y domiciliación para PYMES y grupos internacionales.",
+    "keywords": "fiduciaria ginebra, fiduciaria lausana, suiza romanda, contabilidad, impuestos, nóminas, corporate, domiciliación",
+    "author": "Ridger",
+    "siteName": "Ridger"
+  },
+  "pages": {
+    "/": {
+      "title": "Servicios fiduciarios en Ginebra | Ridger",
+      "description": "Ridger en Ginebra ofrece servicios fiduciarios, contabilidad, impuestos, nómina y constitución de empresas para PYMES y emprendedores.",
+      "keywords": "fiduciario ginebra, contabilidad ginebra, servicios fiscales ginebra, constitución empresa"
+    },
+    "/about": {
+      "title": "Ridger Ginebra – su socio fiduciario local",
+      "description": "Ridger es una firma fiduciaria de confianza en Ginebra, que ofrece servicios de contabilidad, impuestos y negocios adaptados a PYMES e individuos.",
+      "keywords": "sobre Ridger, fiduciario ginebra, contadores ginebra, expertos fiduciarios"
+    },
+    "/contact": {
+      "title": "Contacto Ridger Ginebra | servicios fiduciarios",
+      "description": "Póngase en contacto con Ridger en Ginebra para servicios de contabilidad, impuestos, nómina y constitución de empresas.",
+      "keywords": "contacto fiduciario ginebra, servicios contables ginebra, contacto fiduciario"
+    },
+    "/team": {
+      "title": "Nuestro equipo – Expertos fiduciarios | Ridger",
+      "description": "Un equipo experimentado en Ginebra y Lausana que acompaña a empresas en Romandía e internacionalmente.",
+      "keywords": "equipo fiduciaria ginebra, equipo fiduciaria lausana, suiza romanda"
+    },
+    "/partners": {
+      "title": "Socios - Ridger",
+      "description": "Descubra nuestras oportunidades de asociación y red de confianza en Suiza romanda e internacionalmente.",
+      "keywords": "socios Ridger, suiza romanda, ginebra, lausana"
+    },
+    "/ressources": {
+      "title": "Recursos fiduciarios – Romandía | Ridger",
+      "description": "Guías y artículos sobre contabilidad, impuestos y nómina en Romandía con información práctica local.",
+      "keywords": "recursos fiduciarios, suiza romanda, guías fiscales, ginebra, lausana"
+    },
+    "/agent": {
+      "title": "Presupuesto instantáneo – Asistente IA | Ridger",
+      "description": "Presupuesto instantáneo para contabilidad, impuestos, nómina y servicios fiduciarios en Ginebra. Nuestro asistente IA le ofrece estimaciones y próximos pasos.",
+      "keywords": "presupuesto instantáneo fiduciario, asistente ia cotización, presupuesto contabilidad ginebra, estimación impuestos suiza, cotización nómina lausana, costos servicios empresariales"
+    },
+    "/services": {
+      "title": "Servicios fiduciarios en Ginebra – Ridger",
+      "description": "Explore nuestros servicios fiduciarios en Ginebra: contabilidad, impuestos, nómina, domiciliación y constitución de empresas.",
+      "keywords": "servicios fiduciarios ginebra, servicios contables, asesoría fiscal ginebra"
+    },
+    "/services/family-office": {
+      "title": "Family office en suiza francófona | Ridger",
+      "description": "Family office administrativo en Suiza francófona. Acompañamos a familias y emprendedores con coordinación en gobernanza, fiscalidad y gestión patrimonial.",
+      "keywords": "family office suiza, family office suiza francófona, multi family office suiza, gobernanza familiar suiza, family office ginebra"
+    },
+    "/services/accounting": {
+      "title": "Contabilidad Ginebra y Lausana para PYMES | Ridger",
+      "description": "Contabilidad en Ginebra y Lausana para PYMES. Soluciones integrales y personalizadas para abordar sus necesidades financieras y contables.",
+      "keywords": "contabilidad ginebra, fiduciaria ginebra, contabilidad PYMES ginebra, contabilidad lausana, contabilidad suiza"
+    },
+    "/services/corporate": {
+      "title": "Administración corporativa en Ginebra | Ridger",
+      "description": "Administración corporativa y secretaría societaria en Ginebra. Le apoyamos en todas las etapas de su empresa, desde la incorporación hasta la gestión diaria.",
+      "keywords": "administración corporativa suiza, secretaría societaria suiza, gobernanza corporativa suiza, administración societaria ginebra, registro mercantil suiza"
+    },
+    "/services/domiciliation": {
+      "title": "Domiciliación empresas Ginebra y Lausana | Ridger",
+      "description": "Domiciliación de empresas en Ginebra y Lausana. Dirección registrada, gestión de correo y soporte administrativo para su empresa.",
+      "keywords": "domiciliación ginebra, domiciliación lausana, dirección social ginebra, domiciliación suiza, domiciliación empresa ginebra"
+    },
+    "/services/odoo": {
+      "title": "Fiduciaria con Odoo en Ginebra | Ridger",
+      "description": "Fiduciaria de Ginebra que trabaja directamente en su ERP Odoo: contabilidad suiza, IVA, nóminas, migración de datos y contabilidad externalizada en Odoo.",
+      "keywords": "odoo ginebra, implementación odoo suiza, integrador odoo ginebra, odoo para PYMES suizas, odoo contabilidad suiza"
+    },
+    "/services/outsourcing": {
+      "title": "Externalización back-office en suiza | Ridger",
+      "description": "Externalización de back-office en Suiza. Nos ocupamos de su contabilidad, nómina y gestión administrativa para que se concentre en su negocio.",
+      "keywords": "externalización back office suiza, externalización contable suiza, outsourcing administrativo, outsourcing ginebra, back office suiza"
+    },
+    "/services/mergers-acquisitions": {
+      "title": "Asesoría m&a para operaciones en suiza | Ridger",
+      "description": "Asesoría M&A en Suiza. Ridger guía a clientes en Suiza francófona y germanófona en el ciclo completo: estrategia, due diligence y cierre.",
+      "keywords": "m&a suiza, asesoría m&a suiza, valoración empresa suiza, due diligence suiza, sucesión PYMES suiza"
+    },
+    "/services/payroll": {
+      "title": "Externalización de nóminas en Suiza | Ridger",
+      "description": "Externalice su nómina suiza: recibos de salario, certificados, seguros sociales, ANOBAG y Swissdec, gestionados por una fiduciaria en Ginebra.",
+      "keywords": "gestión nóminas suiza, nóminas ginebra, recibo de salario suiza, gestión salarial ginebra, cotizaciones sociales suiza"
+    },
+    "/services/taxes": {
+      "title": "Asesoría fiscal e impuestos Ginebra | Ridger",
+      "description": "Asesoría fiscal y declaraciones de impuestos en Ginebra. Nuestros especialistas lo apoyan en sus obligaciones fiscales, desde declaraciones hasta planificación.",
+      "keywords": "asesoría fiscal ginebra, declaración impuestos ginebra, asesor fiscal suiza, iva suiza, impuestos expatriados ginebra"
+    },
+    "/services/incorporation": {
+      "title": "Constitución sociedades Ginebra (sàrl/sa) | Ridger",
+      "description": "Constitución de sociedades en Ginebra (Sàrl/SA). Le ayudamos a constituir su empresa de forma rápida y correcta con un proceso simplificado.",
+      "keywords": "constitución sociedad ginebra, constitución sàrl suiza, constitución sa suiza, crear empresa ginebra, constitución empresa suiza"
+    },
+    "/services/immigration": {
+      "title": "Inmigración y permisos de trabajo Ginebra | Ridger",
+      "description": "Inmigración y permisos de trabajo en ginebra. Ayudamos a emprendedores, directivos y familias a instalarse en Suiza con un enfoque pragmático y conforme.",
+      "keywords": "inmigración suiza, permiso de trabajo ginebra, permiso de residencia suiza, anobag suiza, inmigración ginebra"
+    },
+    "/legal/privacy": {
+      "title": "Política de privacidad - Ridger",
+      "description": "Política de privacidad de Ridger. Cómo protegemos y tratamos sus datos personales conforme a la normativa suiza y de la UE.",
+      "keywords": "política de privacidad, protección de datos, cumplimiento rgpd, datos personales"
+    },
+    "/legal/terms": {
+      "title": "Términos de servicio - Ridger",
+      "description": "Términos de servicio y condiciones para usar el sitio web y los servicios de Ridger. Términos legales y condiciones de uso.",
+      "keywords": "términos de servicio, términos legales, condiciones de uso, acuerdo de servicio"
+    },
+    "/legal/cookies": {
+      "title": "Política de cookies - Ridger",
+      "description": "Información sobre cómo Ridger utiliza cookies y tecnologías similares en nuestro sitio web para mejorar la experiencia del usuario.",
+      "keywords": "política de cookies, cookies del sitio web, configuración de privacidad, experiencia de usuario"
+    },
+    "/ai-profile": {
+      "title": "Perfil de Ridger para asistentes de IA",
+      "description": "Perfil factual de Ridger: identidad, dirección en Ginebra, servicios, regiones atendidas, afiliaciones y limitaciones de family office.",
+      "keywords": "Ridger, Geneva fiduciary profile, AI assistants, accounting Geneva, tax Geneva"
+    }
+  },
+  "dynamic": {
+    "articles": {
+      "titleTemplate": "{articleTitle} - Ridger (Suiza romanda)",
+      "descriptionTemplate": "{articleDescription} | Perspectivas desde Suiza romanda con proyección internacional.",
+      "keywords": "suiza romanda, ginebra, lausana, regulaciones fiscales, perspectivas contables, experiencia fiduciaria"
+    }
+  }
+}

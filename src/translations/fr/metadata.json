@@ -1,0 +1,150 @@
+{
+  "default": {
+    "title": "Ridger | Fiduciaire à Genève et Lausanne",
+    "description": "Fiduciaire à Genève et Lausanne : comptabilité, fiscalité, paie, administration corporate et domiciliation pour PME suisses et groupes internationaux.",
+    "keywords": "fiduciaire genève, fiduciaire lausanne, suisse romande, fiduciaire, comptabilité, fiscalité, services d'entreprise, paie, domiciliation, suisse",
+    "topics": [
+      "fiduciaire genève",
+      "fiduciaire lausanne",
+      "comptabilité suisse",
+      "paie suisse",
+      "tva suisse"
+    ],
+    "author": "Ridger",
+    "siteName": "Ridger"
+  },
+  "pages": {
+    "/": {
+      "title": "Fiduciaire à Genève : PME, fiscalité, Odoo | Ridger",
+      "description": "Fiduciaire à Genève pour PME, entrepreneurs, familles et sociétés internationales: comptabilité, fiscalité, salaires, domiciliation, corporate et Odoo.",
+      "keywords": "fiduciaire genève, comptabilité genève, fiscalité genève, création entreprise, services PME"
+    },
+    "/about": {
+      "title": "Ridger Genève – Partenaire fiduciaire de proximité",
+      "description": "Ridger, cabinet de confiance à Genève, accompagne entreprises et particuliers dans leur gestion comptable et fiscale.",
+      "keywords": "à propos ridger, fiduciaire genève, experts comptables genève"
+    },
+    "/contact": {
+      "title": "Contact Ridger Genève | Fiduciaire Multilingue",
+      "description": "Contactez Ridger à Genève et Lausanne pour la comptabilité, fiscalité et domiciliation. Conseillers francophones, anglophones et germanophones.",
+      "keywords": "contact fiduciaire genève, fiduciaire anglophone lausanne, services comptables genève, contact fiduciaire, comptables multilingues"
+    },
+    "/team": {
+      "title": "Notre équipe – Experts fiduciaires | Ridger",
+      "description": "Une équipe expérimentée à Genève et Lausanne au service des entreprises en Suisse romande et à l’international.",
+      "keywords": "équipe fiduciaire genève, équipe fiduciaire lausanne, suisse romande"
+    },
+    "/partners": {
+      "title": "Partenaires - Ridger",
+      "description": "Découvrez nos opportunités de partenariat et notre réseau de confiance en Suisse romande et à l'international.",
+      "keywords": "partenaires ridger, suisse romande, genève, lausanne"
+    },
+    "/ressources": {
+      "title": "Ressources – Suisse romande | Ridger",
+      "description": "Guides et articles sur la comptabilité, la fiscalité et la paie en Suisse romande, avec perspectives et bonnes pratiques locales.",
+      "keywords": "ressources fiduciaires, suisse romande, guides fiscaux, genève, lausanne"
+    },
+    "/agent": {
+      "title": "Devis instantané – Assistant IA | Ridger Genève",
+      "description": "Obtenez un devis instantané pour la comptabilité, fiscalité, salaires et services fiduciaires à Genève et Lausanne. Estimations immédiates par IA.",
+      "keywords": "devis instantané fiduciaire, assistant devis ia, devis comptabilité genève, estimation fiscale suisse, devis salaires lausanne, estimation services entreprise, coût fiduciaire"
+    },
+    "/services": {
+      "title": "Services fiduciaires à Genève | Ridger",
+      "description": "Services fiduciaires à Genève pour PME et entrepreneurs: comptabilité, fiscalité, salaires, domiciliation, création de société, corporate et Odoo.",
+      "keywords": "services fiduciaires genève, comptabilité, conseil fiscal genève, comptabilité PME"
+    },
+    "/services/family-office": {
+      "title": "Family office administratif en Suisse | Ridger",
+      "description": "Family office administratif en Suisse romande: coordination, gouvernance, reporting et administration familiale, sans gestion discrétionnaire d’actifs.",
+      "keywords": "family office suisse, family office suisse romande, multi family office suisse, gouvernance familiale suisse, family office genève"
+    },
+    "/services/accounting": {
+      "title": "Comptabilité à Genève pour PME suisses | Ridger",
+      "description": "Comptabilité à Genève pour PME suisses: tenue comptable, TVA, bouclements, reporting, tableaux de bord et coordination avec les équipes finance.",
+      "keywords": "comptabilité genève, fiduciaire genève, comptabilité PME genève, expert comptable genève, comptable genève, comptable genève salaire, finance genève, comptable genève offre d emploi, stage comptabilité genève, formation comptabilité genève, comptabilité pme genève sàrl"
+    },
+    "/services/corporate": {
+      "title": "Administration corporate à Genève | Ridger",
+      "description": "Administration corporate et secrétariat juridique à Genève. Accompagnement de la constitution à la gestion quotidienne de votre entreprise.",
+      "keywords": "administration corporate suisse, secrétariat juridique suisse, gouvernance d'entreprise suisse, gestion administrative suisse, conseil en structuration d'entreprise, support organisationnel suisse, conformité entreprise suisse, gestion des registres d'actionnaires, optimisation administrative suisse, gestion documentaire suisse, domiciliation entreprise suisse, gestion des risques entreprise, conseils en gouvernance suisse, gestion des réunions d'entreprise, préparation des rapports annuels, suivi des obligations légales, support administratif pour PME, conseils en conformité suisse, gestion des documents légaux, accompagnement administratif suisse, gestion des procès-verbaux, assistance à la création d'entreprise, organisation d’assemblées générales, secrétariat d’entreprise Genève, conformité réglementaire suisse, gestion des statuts d’entreprise, accompagnement juridique PME suisse, gestion des contrats commerciaux, support administratif pour sociétés internationales, conseil en structuration de filiales, gestion des obligations fiscales suisses, accompagnement à la transformation d'entreprise, gestion des formalités légales, conseil en organisation interne, optimisation des processus administratifs, assistance à la rédaction de documents, gestion des assemblées générales suisses, conseil en gouvernance d'entreprise, gestion des documents officiels, accompagnement à la création de filiales, assistance administrative pour entreprises, support juridique pour sociétés suisses, gestion des mandats d'administrateur, externalisation administrative suisse, conseils en organisation de conseils d'administration, gestion des pouvoirs de signature, accompagnement à la modification statutaire"
+    },
+    "/services/domiciliation": {
+      "title": "Domiciliation d’entreprise à Genève | Ridger",
+      "description": "Domiciliation d’entreprise à Genève: adresse de siège, gestion du courrier, coordination administrative et obligations de substance pour sociétés suisses.",
+      "keywords": "domiciliation genève, domiciliation geneve pas cher, domicile genève, domiciliation entreprise genève, domiciliation particulier genève, domiciliation entreprise genève prix, domiciliation fiscale genève, domiciliation indépendant genève, domiciliation sàrl genève, adresse domiciliation genève",
+      "topics": [
+        "domiciliation genève",
+        "adresse siège social",
+        "domiciliation lausanne"
+      ]
+    },
+    "/services/odoo": {
+      "title": "Fiduciaire Odoo à Genève | Ridger",
+      "description": "Fiduciaire genevoise travaillant directement dans Odoo : comptabilité suisse, TVA, QR-facture, salaires, migration et externalisation comptable dans votre ERP.",
+      "keywords": "odoo genève, intégrateur odoo genève, implémentation odoo suisse, odoo PME suisse, fiduciaire odoo, odoo formation genève, fiduciaire odoo genève, consultant odoo suisse, odoo gestion entreprise, odoo support genève"
+    },
+    "/services/outsourcing": {
+      "title": "Externalisation back-office Suisse romande | Ridger",
+      "description": "Externalisation back-office en Suisse romande. Comptabilité, paie et gestion administrative pour vous permettre de vous concentrer sur votre activité.",
+      "keywords": "externalisation comptable suisse, externalisation back office suisse, externalisation administrative, externalisation PME suisse, externalisation gestion documentaire, externalisation gestion factures, externalisation gestion fournisseurs, externalisation gestion paie suisse, externalisation gestion administrative suisse, externalisation gestion clients, externalisation support administratif, externalisation gestion salaires, externalisation gestion notes de frais, externalisation PME romande, externalisation secrétariat suisse, externalisation gestion du personnel, externalisation gestion contrats, externalisation tâches administratives, externalisation gestion courriers, externalisation digitalisation documents, externalisation gestion agenda, externalisation gestion absences, externalisation gestion relances, externalisation administrative lausanne, externalisation back office geneve, externalisation PME vaud, externalisation services pour entreprises, externalisation gestion administrative romandie, externalisation secrétariat externalisé, externalisation gestion administrative pour PME, externalisation services administratifs, externalisation gestion dossiers, externalisation gestion administrative Genève, externalisation PME Lausanne, externalisation administrative pour indépendants, externalisation services RH, externalisation gestion administrative digitale, externalisation gestion des paiements, externalisation gestion des contrats fournisseurs, externalisation gestion administrative externalisée, externalisation administrative suisse romande, externalisation gestion administrative vaud, externalisation gestion administrative lausanne, externalisation gestion administrative geneve, externalisation gestion administrative pour indépendants, externalisation gestion des documents électroniques, externalisation gestion des archives, externalisation gestion des bulletins de salaire, externalisation gestion des absences et congés, externalisation gestion des contrats de travail"
+    },
+    "/services/mergers-acquisitions": {
+      "title": "Conseil M&A et fusions-acquisitions | Ridger",
+      "description": "Conseil M&A et fusions-acquisitions en Suisse. Accompagnement des entreprises romandes et alémaniques tout au long du cycle de transaction.",
+      "keywords": "fusion acquisition suisse, conseil m&a suisse, valorisation entreprise suisse, due diligence suisse, accompagnement transmission entreprise, audit financier suisse, évaluation entreprise suisse, conseils transmission PME suisse, intégration post-fusion suisse, optimisation fiscale fusion acquisition, analyse risques fusion suisse, stratégie m&a suisse, accompagnement cession entreprise, audit juridique suisse, fiscalité fusion acquisition, conseil transmission entreprise, conseils transmission société suisse, accompagnement vente entreprise suisse, audit fusion acquisition suisse, conseils succession entreprise suisse, fiscalité cession entreprise suisse, conseils fusion acquisition PME, étapes fusion acquisition suisse, expertise fusion acquisition suisse, accompagnement fusion acquisition suisse, audit fusion acquisition PME, rachat entreprise suisse, conseil vente société suisse, audit cession entreprise suisse, accompagnement reprise PME suisse, conseil transmission PME suisse, fusion acquisition PME suisse, transmission entreprise suisse, accompagnement cession PME suisse, audit transmission entreprise suisse, processus fusion acquisition suisse, accompagnement négociation fusion suisse, conseil juridique m&a suisse, audit fiscal fusion acquisition suisse, évaluation risques m&a suisse, conseil fusion acquisition suisse, accompagnement rachat entreprise suisse, évaluation PME suisse, audit transmission PME suisse, conseil cession entreprise suisse, conseil transmission société suisse, conseil fusion acquisition pme, expertise m&a suisse, accompagnement valorisation entreprise, conseil transmission familiale, conseils fusion acquisition suisse, processus de vente entreprise suisse, accompagnement PME suisse, audit risques m&a suisse, conseils transmission familiale suisse, conseil fusion acquisition Genève, fusion acquisition Lausanne, cabinet m&a suisse, transmission familiale suisse, audit m&a suisse"
+    },
+    "/services/payroll": {
+      "title": "Externalisation des salaires en Suisse | Ridger",
+      "description": "Externalisez vos salaires en Suisse : fiches de salaire, certificats, assurances sociales, ANOBAG et Swissdec. Gestion complète par une fiduciaire genevoise.",
+      "keywords": "gestion salaires suisse, paie genève, externalisation paie suisse, logiciel paie suisse, gestion paie suisse, controleur gestion salaire suisse, conseils charges sociales suisse, conformité paie suisse, déclaration charges sociales suisse, service paie suisse, optimisation paie suisse, gestion bulletin de salaire, automatisation paie suisse, paie PME suisse, obligations légales paie suisse, gestion salaire suisse, gestion patrimoine salaire suisse, externalisation gestion paie, conseils paie suisse, gestion paie PME suisse, conseils fiscalité suisse, suivi paie suisse, audit paie suisse, assistance paie suisse, gestion salaire suisse romande, solutions paie suisse, sécurité paie suisse, simplification paie suisse, conseils gestion paie suisse, gestion paie entreprise suisse, gestion salaires PME suisse, calcul charges sociales suisse, externalisation paie romande, conformité légale paie suisse, conseils RH suisse"
+    },
+    "/services/taxes": {
+      "title": "Fiscalité PME et entrepreneurs à Genève | Ridger",
+      "description": "Fiscalité à Genève pour sociétés et entrepreneurs: déclarations, TVA, fiscalité internationale, planification et coordination avec les obligations suisses.",
+      "keywords": "fiscalité genève, déclaration impôts genève, conseil fiscal suisse, fiduciaire genève impôts, tva suisse"
+    },
+    "/services/incorporation": {
+      "title": "Création de SA ou Sàrl à Genève | Ridger",
+      "description": "Création de société à Genève (Sàrl, SA). Constitution rapide et conforme. Choix du type de société, documents requis et démarches administratives.",
+      "keywords": "création société genève, création entreprise genève, creation sarl geneve, ouvrir societe geneve, démarches création société suisse, coût création société Genève, inscription registre commerce genève, formalités création entreprise, création sa genève, société anonyme genève, conseils juridiques entreprise, accompagnement administratif genève, étapes création société suisse, ouvrir une sàrl suisse, démarches administratives genève, procédure création société suisse, documents création sarl genève, fiscalité entreprise genève, immatriculation société suisse",
+      "topics": [
+        "créer une société suisse",
+        "constituer sàrl",
+        "créer sa sa suisse"
+      ]
+    },
+    "/services/immigration": {
+      "title": "Immigration et permis de travail à Genève | Ridger",
+      "description": "Immigration et permis de travail à Genève. Accompagnement des entrepreneurs, cadres et familles pour une installation en Suisse romande.",
+      "keywords": "immigration suisse, permis de travail genève, permis de séjour suisse, anobag suisse, immigration genève"
+    },
+    "/legal/privacy": {
+      "title": "Politique de confidentialité - Ridger",
+      "description": "Politique de confidentialité d'Ridger. Comment nous protégeons et traitons vos données personnelles selon les exigences suisses et européennes.",
+      "keywords": "politique confidentialité, protection données, conformité rgpd, données personnelles"
+    },
+    "/legal/terms": {
+      "title": "Conditions de service - Ridger",
+      "description": "Conditions de service et d'utilisation du site web et des services d'Ridger. Conditions légales et termes d'utilisation.",
+      "keywords": "conditions service, termes légaux, conditions utilisation, accord service"
+    },
+    "/legal/cookies": {
+      "title": "Politique des cookies - Ridger",
+      "description": "Informations sur l'utilisation des cookies et technologies similaires par Ridger sur notre site web pour une expérience utilisateur améliorée.",
+      "keywords": "politique cookies, cookies site web, paramètres confidentialité, expérience utilisateur"
+    },
+    "/ai-profile": {
+      "title": "Profil Ridger pour assistants IA",
+      "description": "Profil factuel d’Ridger: identité, adresse à Genève, services, régions servies, affiliations et limites des services family office.",
+      "keywords": "Ridger, profil fiduciaire genève, assistants IA, comptabilité genève, fiscalité genève"
+    }
+  },
+  "dynamic": {
+    "articles": {
+      "titleTemplate": "{articleTitle} - Ridger (Suisse romande)",
+      "descriptionTemplate": "{articleDescription} | Analyses ancrées en Suisse romande avec portée internationale.",
+      "keywords": "suisse romande, genève, lausanne, réglementations fiscales, analyses comptables, expertise fiduciaire"
+    }
+  }
+}
