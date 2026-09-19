@@ -292,6 +292,10 @@ jobs:
 
       # ─── Wait for router rolling swap (observe-only; see houle router v4) ───
       - name: Wait for router rolling swap
+        # Warn-only: the release is on disk and the router rolls it in
+        # (sometimes beyond this window after a respawn). Live/latest drift
+        # is watched by the scheduled monitor instead of blocking deploys.
+        continue-on-error: true
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         timeout-minutes: 6
         run: |
