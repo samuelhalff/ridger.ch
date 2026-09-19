@@ -1,32 +1,32 @@
 {
-    "ConsolidatedReporting": {
-        "Title": "Reporting consolidé",
-        "Description": "Une vue unique de l'ensemble de votre patrimoine — banques, dépositaires, immobilier, private equity, actifs de collection. Indépendant de toute banque, avec transparence sur la performance et les frais."
-    },
-    "InvestmentOversight": {
-        "Title": "Surveillance des investissements",
-        "Description": "Suivi des mandats et des gérants, revues consolidées de performance, de frais et de risque, cadrage par indices de référence et préparation du comité d'investissement familial. Surveillance, non gestion."
-    },
-    "FamilyOfficeCoordination": {
-        "Title": "Coordination family office",
-        "Description": "Un interlocuteur unique qui coordonne banquiers, avocats, notaires, conseillers fiscaux et assureurs, et intègre l'écosystème existant de la famille."
-    },
-    "GovernanceSuccession": {
-        "Title": "Gouvernance et succession",
-        "Description": "Chartes de gouvernance familiale, éducation de la nouvelle génération, coordination de la planification successorale en droit civil suisse et conseils de famille."
-    },
-    "TaxAdministration": {
-        "Title": "Fiscalité et administration",
-        "Description": "Coordination de la conformité fiscale suisse pour les membres de la famille et les structures de détention, supervision administrative, gestion des paiements et de la trésorerie, et gestion documentaire."
-    },
-    "DigitalVault": {
-        "Title": "Coffre-fort numérique",
-        "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
-    },
-    "RealEstateTransactions": {
-        "Title": "Immobilier et transactions",
-        "Description": "Supervision et administration du patrimoine immobilier détenu en direct ou via des sociétés immobilières, coordination des régies et reporting locatif, repérage d'opportunités et coordination des transactions avec notaires et banques, appui à la négociation."
-    },
-    "ShowMore": "Découvrir",
-    "ShowLess": "Voir moins"
+  "ConsolidatedReporting": {
+    "Title": "Reporting consolidé",
+    "Description": "Une vue unique de l'ensemble de votre patrimoine — banques, dépositaires, immobilier, private equity, actifs de collection. Indépendant de toute banque, avec transparence sur la performance et les frais."
+  },
+  "InvestmentOversight": {
+    "Title": "Surveillance des investissements",
+    "Description": "Suivi des mandats et des gérants, revues consolidées de performance, de frais et de risque, cadrage par indices de référence et préparation du comité d'investissement familial. Surveillance, non gestion."
+  },
+  "FamilyOfficeCoordination": {
+    "Title": "Coordination family office",
+    "Description": "Un interlocuteur unique orchestrant banquiers, avocats, notaires, fiscalistes et assureurs — jusqu’à l’intendance de vos maisons et les demandes particulières."
+  },
+  "GovernanceSuccession": {
+    "Title": "Gouvernance et succession",
+    "Description": "Chartes de gouvernance familiale, éducation de la nouvelle génération, coordination de la planification successorale en droit civil suisse et conseils de famille."
+  },
+  "TaxAdministration": {
+    "Title": "Fiscalité et administration",
+    "Description": "Coordination de la conformité fiscale suisse pour les membres de la famille et les structures de détention, supervision administrative, gestion des paiements et de la trésorerie, et gestion documentaire."
+  },
+  "DigitalVault": {
+    "Title": "Coffre-fort numérique",
+    "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
+  },
+  "RealEstateTransactions": {
+    "Title": "Immobilier et transactions",
+    "Description": "Gestion immobilière et administration de vos biens, recherche et évaluation d’opportunités, coordination des transactions avec notaires, banques et due diligence."
+  },
+  "ShowMore": "Découvrir",
+  "ShowLess": "Voir moins"
 }
