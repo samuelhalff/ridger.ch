@@ -1,67 +1,91 @@
 {
-    "Title": "Private consultation",
-    "Subtitle": "Write to us in confidence. We reply within one business day, with the strictest discretion.",
-    "BookingButton": "Book a call",
-    "BookingDescription": "Best for a planned discussion with our team.",
-    "OrContactUs": "Or write to us.",
-    "CallLabel": "Call us",
-    "CallDescription": "Speak directly with our team.",
-    "WhatsApp": {
-        "Badge": "WhatsApp",
-        "Open": "Open WhatsApp chat with Ridger",
-        "Description": "Quick questions, quick replies."
+  "Title": "Private consultation",
+  "Subtitle": "Write to us in confidence. We reply within one business day, with the strictest discretion.",
+  "BookingButton": "Book a call",
+  "BookingDescription": "Best for a planned discussion with our team.",
+  "OrContactUs": "Write to us",
+  "CallLabel": "Call us",
+  "CallDescription": "Speak directly with our team.",
+  "WhatsApp": {
+    "Badge": "WhatsApp",
+    "Open": "Open WhatsApp chat with Ridger",
+    "Description": "Quick questions, quick replies."
+  },
+  "Form": {
+    "Name": "Name",
+    "Email": "Email",
+    "CompanyName": "Company name (optional)",
+    "Phone": "Phone number (optional)",
+    "Message": "Message",
+    "AumBand": "Wealth under oversight",
+    "Horizon": "Horizon",
+    "ServiceInterest": "Service of interest",
+    "AumBands": [
+      {
+        "label": "Under CHF 5M",
+        "value": "lt5m"
+      },
+      {
+        "label": "CHF 5–20M",
+        "value": "5to20m"
+      },
+      {
+        "label": "CHF 20–50M",
+        "value": "20to50m"
+      },
+      {
+        "label": "Over CHF 50M",
+        "value": "gt50m"
+      },
+      {
+        "label": "Prefer not to say",
+        "value": "undisclosed"
+      }
+    ],
+    "Horizons": [
+      {
+        "label": "Immediate",
+        "value": "immediate"
+      },
+      {
+        "label": "3 to 6 months",
+        "value": "3to6m"
+      },
+      {
+        "label": "Exploratory",
+        "value": "exploratory"
+      }
+    ],
+    "Placeholders": {
+      "Name": "Your name",
+      "Email": "your@email.com",
+      "CompanyName": "Company (optional)",
+      "Phone": "+41...",
+      "Select": "Select",
+      "Message": "Your message..."
     },
-    "Form": {
-        "Name": "Name",
-        "Email": "Email",
-        "CompanyName": "Company name (optional)",
-        "Phone": "Phone number (optional)",
-        "Message": "Message",
-        "AumBand": "Wealth under oversight",
-        "Horizon": "Horizon",
-        "ServiceInterest": "Service of interest",
-        "AumBands": [
-            { "label": "Under CHF 5M", "value": "lt5m" },
-            { "label": "CHF 5–20M", "value": "5to20m" },
-            { "label": "CHF 20–50M", "value": "20to50m" },
-            { "label": "Over CHF 50M", "value": "gt50m" },
-            { "label": "Prefer not to say", "value": "undisclosed" }
-        ],
-        "Horizons": [
-            { "label": "Immediate", "value": "immediate" },
-            { "label": "3 to 6 months", "value": "3to6m" },
-            { "label": "Exploratory", "value": "exploratory" }
-        ],
-        "Placeholders": {
-            "Name": "Your name",
-            "Email": "your@email.com",
-            "CompanyName": "Company (optional)",
-            "Phone": "+41...",
-            "Select": "Select",
-            "Message": "Your message..."
-        },
-        "Consent": "I agree to be contacted about my request",
-        "Submit": "Request a confidential consultation",
-        "Sending": "Sending",
-        "Success": "Message sent. We will reply within one business day.",
-        "Error": "Failed to send message. Please try again."
-    },
-    "Contact": {
-        "CompanyName": "Ridger",
-        "Email": "Email: contact@ridger.ch",
-        "Phone": "Phone: +41 XX XXX XX XX",
-        "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
-        "Commitment": "We are committed to maintaining the highest standards of professional service and client satisfaction."
-    },
-    "Errors": {
-        "Required": "This field is required",
-        "InvalidEmail": "Please enter a valid email address",
-        "MaxLength": "Message cannot exceed 500 characters",
-        "Consent": "You must agree to be contacted"
-    },
-    "MapTitle": "Our location in Geneva",
-    "MapDisclaimer": "The map is provided by Google Maps. Load it only if you agree to possible data transfer (see our privacy policy).",
-    "MapLoadButton": "Display interactive map",
-    "MapOpenExternal": "Open in Google Maps",
-    "MapPrivacyPlaceholder": "For privacy reasons, the map is not loaded automatically."
+    "Consent": "I agree to be contacted about my request",
+    "Submit": "Request a confidential consultation",
+    "Sending": "Sending",
+    "Success": "Message sent. We will reply within one business day.",
+    "Error": "Failed to send message. Please try again."
+  },
+  "Contact": {
+    "CompanyName": "Ridger",
+    "Email": "Email: contact@ridger.ch",
+    "Phone": "Phone: +41 XX XXX XX XX",
+    "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
+    "Commitment": "We are committed to maintaining the highest standards of professional service and client satisfaction."
+  },
+  "Errors": {
+    "Required": "This field is required",
+    "InvalidEmail": "Please enter a valid email address",
+    "MaxLength": "Message cannot exceed 500 characters",
+    "Consent": "You must agree to be contacted"
+  },
+  "MapTitle": "Our location in Geneva",
+  "MapDisclaimer": "The map is provided by Google Maps. Load it only if you agree to possible data transfer (see our privacy policy).",
+  "MapLoadButton": "Display interactive map",
+  "MapOpenExternal": "Open in Google Maps",
+  "MapPrivacyPlaceholder": "For privacy reasons, the map is not loaded automatically."
 }

@@ -244,7 +244,7 @@ export default async function ContactPage(
             showSubtitle={false}
             strings={{
               ...strings,
-              title: locale === "fr" ? "Entretien confidentiel" : strings.orContactUs,
+              title: strings.orContactUs,
             }}
             locale={locale}
             redirectPath={`${localePrefix}/`}
