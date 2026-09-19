@@ -17,7 +17,7 @@ Ridger provides family office services. The firm supports:
 - Real estate and transactions: supervision and administration of family real estate held directly or through property companies, rental oversight and reporting, coordination of property managers, sourcing and evaluation of acquisition opportunities, and coordination of transactions with notaries, banks, and due diligence, with negotiation support
 - Tax and administrative coordination: Swiss tax compliance, tax planning and optimisation including lump-sum taxation (forfait fiscal) for families relocating to Switzerland, payments, cash-flow administration, and document management
 - Domiciliation and mail management for the family and its structures in Geneva
-- Household staff administration: contracts, payroll, social insurance, source tax, and permits
+- Payroll management for all the family's employer roles — household staff, employees of holdings and structures, and family-office staff: contracts, Swissdec payroll, social insurance, source tax, and permits
 - Household management: day-to-day stewardship of residences — staff, suppliers, maintenance, bills and budgets
 - Property management: administrative management of family real estate — leases, rents, charges, works, and steering of managing agents
 - Digital vault: an encrypted document vault with Swiss data residency and controlled sharing
