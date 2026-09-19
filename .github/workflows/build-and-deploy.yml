@@ -282,7 +282,7 @@ jobs:
             echo "[deploy] Updated current symlink to $REL_DIR" >> "$LOG"
             echo "[deploy] Release $TS deployed successfully at $(date)" >> "$LOG"
 
-            KEEP=2
+            KEEP=3
             cd "$RELEASES_DIR" || exit 0
             ls -1t | tail -n +$((KEEP+1)) | while read -r rel; do
               [ -d "$rel" ] && [ "$rel" != "$TS" ] && rm -rf "$RELEASES_DIR/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
