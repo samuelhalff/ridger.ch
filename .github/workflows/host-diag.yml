@@ -1,0 +1,28 @@
+name: Host diagnostics
+on:
+  workflow_dispatch:
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Install sshpass
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
+      - name: Diagnose
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" bash -lc '
+            set +e
+            echo "== node =="; node -v; which node
+            echo "== procs =="; ps -o pid,etimes,rss,args | grep -E "node" | grep -v grep | head -10
+            echo "== inside probes =="
+            curl -s --max-time 3 "http://127.0.0.1:5001/api/health/?d=in" | head -c 120; echo
+            curl -s --max-time 3 "http://127.0.0.1:5010/api/health/?d=in" | head -c 120; echo
+            curl -s --max-time 3 -H "Host: ridger.ch" "http://127.0.0.1:3000/api/health/?d=in" | head -c 120; echo
+            echo "== cgroup =="; cat /sys/fs/cgroup/memory.max /sys/fs/cgroup/memory.current
+          '
