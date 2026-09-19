@@ -10,7 +10,7 @@
     "predev": "node scripts/lint-translations.js || true",
     "prebuild": "node scripts/validate-translations.js",
     "build": "next build",
-    "start": "PORT=${PORT:-5000} node -r ./scripts/load-env.js .next/standalone/server.js",
+    "start": "PORT=${PORT:-3000} node server.js",
     "prod": "npm run build && mkdir -p .next/standalone/.next/static && cp -R .next/static/* .next/standalone/.next/static/ 2>/dev/null || true && mkdir -p .next/standalone/public && cp -R public/* .next/standalone/public/ 2>/dev/null || true && mkdir -p .next/standalone/src && cp -R src/translations .next/standalone/src/ 2>/dev/null || true && PORT=${PORT:-5000} node -r ./scripts/load-env.js .next/standalone/server.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
