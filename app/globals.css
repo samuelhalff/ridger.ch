@@ -5,7 +5,30 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant light (&:is(.light *));
 
-/* Fonts are loaded via next/font/local in app/fonts.ts — no @font-face needed here */
+/* Self-hosted @font-face on stable /fonts/ paths (middleware-excluded) so the
+   preload URL matches exactly and the hero never flashes a fallback font. */
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-vf-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-500-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* Tailwind already generates hover:brightness-[1.15] via safelist */
 
@@ -96,6 +119,7 @@
     min-height: 100vh;
     font-family: var(
       --font-instrument-sans,
+      "Instrument Sans",
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
@@ -125,7 +149,7 @@
   h2,
   h3 {
     /* Trustworthy-minimal: clean sans headings (no display serif). */
-    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-family: var(--font-instrument-sans, "Instrument Sans", system-ui, -apple-system, sans-serif);
     font-weight: 600;
     letter-spacing: -0.02em;
     /* Uniform display leading for the sans (serif-era sub-1.0 values collide). */
@@ -444,7 +468,7 @@
 
   /* Large numeral class for stats sections */
   .num-display {
-    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-family: var(--font-instrument-sans, "Instrument Sans", system-ui, -apple-system, sans-serif);
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1;
@@ -466,7 +490,7 @@
 
   /* font-display utility: same clean sans, kept for compatibility */
   .font-display {
-    font-family: var(--font-instrument-sans, ui-sans-serif, system-ui, sans-serif);
+    font-family: var(--font-instrument-sans, "Instrument Sans", system-ui, -apple-system, sans-serif);
     font-weight: 600;
     letter-spacing: -0.02em;
   }

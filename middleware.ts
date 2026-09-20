@@ -289,6 +289,6 @@ export const config = {
   // Skip only internal/static paths that should not be internationalized
   // Allow `ressources` and other content routes to be redirected to /<locale>/...
   matcher: [
-    "/((?!_next|api|assets|\\.well-known|favicon.ico|favicon.png|favicon.svg|apple-touch-icon.png|site.webmanifest|manifest.webmanifest|robots.txt|sitemap|sitemap.xml|sitemap_index.xml|browserconfig.xml|BingSiteAuth.xml|.*.txt).*)",
+    "/((?!_next|api|assets|fonts|\\.well-known|favicon.ico|favicon.png|favicon.svg|apple-touch-icon.png|site.webmanifest|manifest.webmanifest|robots.txt|sitemap|sitemap.xml|sitemap_index.xml|browserconfig.xml|BingSiteAuth.xml|.*.txt).*)",
   ],
 };
