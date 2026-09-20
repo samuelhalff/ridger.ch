@@ -26,6 +26,8 @@ export const instrumentSans = localFont({
   display: "swap",
   preload: true,
   weight: "400 700",
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
+  adjustFontFallback: false,
 });
 
 // IBM Plex Mono — mono for labels, figures, nav labels
