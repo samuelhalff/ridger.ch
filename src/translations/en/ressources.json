@@ -1,4 +1,15 @@
 {
+  "Categories": {
+    "all": "All",
+    "family-office": "Family office",
+    "reporting": "Reporting",
+    "fiscalite": "Tax",
+    "patrimoine": "Wealth",
+    "gouvernance": "Governance",
+    "emploi-domestique": "Household employment",
+    "vie-pratique": "Practical living",
+    "travaux-intendance": "Works & upkeep"
+  },
   "IntroTitle": "Resources – Family office & wealth in Switzerland",
   "IntroShort": "Resources",
   "ArticlesShort": "Articles",
@@ -809,6 +820,41 @@
         "suisse",
         "gouvernance"
       ]
+    },
+    {
+      "slug": "employer-personnel-maison-geneve-obligations",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-09-20",
+      "references": [
+        {
+          "labelKey": "ge.ch — Employer du personnel de maison",
+          "url": "https://www.ge.ch/employer-du-personnel-maison"
+        },
+        {
+          "labelKey": "ge.ch — Conditions et obligations à respecter",
+          "url": "https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter"
+        },
+        {
+          "labelKey": "ge.ch — Les CTT en vigueur à Genève",
+          "url": "https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve"
+        },
+        {
+          "labelKey": "ge.ch — Déclarer son personnel de maison aux impôts",
+          "url": "https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots"
+        }
+      ],
+      "category": "emploi-domestique",
+      "tags": [
+        "personnel de maison",
+        "geneve",
+        "ctt-edom",
+        "obligations employeur",
+        "assurances sociales"
+      ],
+      "title": "Employing household staff in Geneva: a guide to your obligations",
+      "description": "Hiring a home helper, nanny or gardener in Geneva makes you a full-fledged employer. An overview of the obligations: the CTT-EDom, minimum wage, social insurance and declarations.",
+      "content": "Hiring a cleaner, a nanny, a gardener or a private driver turns your household into an employer in the full sense of Swiss labour law. This shift often takes people by surprise: you think you are giving someone work, and in fact you become the debtor of a salary, of contributions and of a series of administrative formalities. In Geneva, the framework is precise and well documented. Mastering it in advance spares you back-payment demands, disputes and any exposure to undeclared work. It is the same rigour a family office applies to a portfolio, carried over into your domestic life.\n\n## A mandatory standard employment contract: the CTT-EDom\n\nThe canton of Geneva governs domestic employment through a standard employment contract dedicated to the domestic economy (CTT-EDom). It applies to anyone employed in a private household — cleaner, childminder, carer for an elderly or disabled relative, gardener, cook, driver. This contract sets, among other things, minimum gross wages that vary with qualification and experience, along with the reference full-time working hours. These amounts are revised regularly: rather than quoting a figure that will age, consult the [official grid of CTTs in force](https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve) and the [Conditions and obligations](https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter) page.\n\nOne essential point: the CTT-EDom minimum wage applies regardless of the level of employment — even for a few hours a week and even for occasional work. There is no threshold below which you would be exempt. The salary must also be paid by the last day of the month worked.\n\n## The written contract and working conditions\n\nEven though an oral agreement is legally binding, a written contract protects both parties. It states the role, the activity rate, the gross hourly or monthly wage, working hours, holidays, public holidays and notice periods. The CTT-EDom is a minimum floor: you may offer more, never less. For some years the canton has also required loss-of-earnings insurance in the event of illness, the premium of which is shared between employer and employee; here again, the official page describes the applicable scheme.\n\n## Social insurance: mandatory affiliation\n\nFrom the very first franc of salary, your employee must be declared to the social insurance schemes: AVS, AI, APG, unemployment insurance, family allowances, accident insurance (LAA) and, above a certain income threshold, occupational pension (LPP). As the employer, you withhold the employee's share from the salary and pay the whole amount — including the employer's share — to your compensation fund. Rates and thresholds are set at federal level and detailed in the official leaflets; we devote a separate article to this, but bear in mind that none of these schemes is optional for regular domestic employment.\n\n## Withholding tax, depending on the permit\n\nIf your employee is not a Swiss national and does not hold a settlement permit (permit C), their salary is in principle subject to withholding tax, which you must deduct and remit to the cantonal tax administration. An employee holding a permit C, on the other hand, is not taxed at source: they are taxed on an ordinary basis like any resident taxpayer. For other statuses, you are the debtor of the taxable benefit: it is up to you to withhold the tax. The canton offers a simplified procedure via the compensation fund, which deducts and remits the tax once a year, or a classic monthly settlement that takes family circumstances into account. The details and scales are set out on the [Declaring household staff for tax](https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots) page.\n\n## The work permit\n\nEmploying a foreign national assumes they hold a valid residence and work authorisation. Checking this is no mere formality: hiring without a permit exposes the employer to sanctions and amounts to undeclared work, which the canton actively combats in private households as elsewhere.\n\n## The salary certificate and keeping records\n\nEach year you draw up a salary certificate summarising the pay awarded and the deductions made; your employee uses this document for their own tax situation and, where relevant, for any withholding-tax corrections. Keeping payslips, contribution statements and proof of payment is not an optional precaution: it is what protects you in the event of a compensation-fund audit or a disagreement with your employee. Keeping records steadily, month after month, costs far less energy than reconstructing them retrospectively under the pressure of a back-payment demand.\n\n## Multiple employers and part-time work\n\nMany households share the same helper with other homes, or employ someone only a few hours a week. This changes nothing about the principle: each employer affiliates and declares the portion of salary it pays, independently of the others. Part-time work is never a grey area. It is precisely in these fragmented set-ups that affiliations are most often forgotten, resulting in contribution gaps for the employee and a risk for the employer.\n\n## Bringing order to all of this\n\nNone of these obligations is insurmountable, but their accumulation — contract, multiple affiliations, contribution statements, salary certificate, withholding tax — consumes time and attention that are not yours to spare. We coordinate these steps with the same method applied to the most demanding wealth files: framing the contract, correct affiliations, monitoring deadlines, a single point of contact. [Let's discuss your situation](/en/services/tax-administration/).\n\nThe amounts and scales cited point to the canton's official pages, which are indexed annually: the linked page prevails, and we verified them on 2026-09-20.\n\n---\n### References\n- [ge.ch — Employing household staff](https://www.ge.ch/employer-du-personnel-maison)\n- [ge.ch — Conditions and obligations to respect](https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter)\n- [ge.ch — CTTs in force in Geneva](https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve)\n- [ge.ch — Declaring household staff for tax](https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots)\n"
     }
   ]
 }

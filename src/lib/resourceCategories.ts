@@ -17,6 +17,9 @@ export type ResourceCategoryId =
   | "immigration"
   | "finance"
   | "regulatory"
+  | "emploi-domestique"
+  | "vie-pratique"
+  | "travaux-intendance"
   | "general";
 
 export type ResourceCategoryLabels = Partial<
@@ -49,6 +52,11 @@ const categoryOrder: ResourceCategoryId[] = [
   "immigration",
   "finance",
   "regulatory",
+  // Accessible-services categories: placed AFTER the wealth categories so they
+  // sit lower in the /ressources hub order and never dominate the surface.
+  "emploi-domestique",
+  "vie-pratique",
+  "travaux-intendance",
   "general",
 ];
 

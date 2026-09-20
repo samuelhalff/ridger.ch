@@ -1,4 +1,15 @@
 {
+  "Categories": {
+    "all": "Todos",
+    "family-office": "Family office",
+    "reporting": "Reporting",
+    "fiscalite": "Fiscalidad",
+    "patrimoine": "Patrimonio",
+    "gouvernance": "Gobernanza",
+    "emploi-domestique": "Empleo doméstico",
+    "vie-pratique": "Vida práctica",
+    "travaux-intendance": "Obras y mantenimiento"
+  },
   "IntroTitle": "Recursos – Family office & patrimonio en Suiza",
   "IntroShort": "Ressources",
   "ArticlesShort": "Articles",
@@ -809,6 +820,41 @@
         "suisse",
         "gouvernance"
       ]
+    },
+    {
+      "slug": "employer-personnel-maison-geneve-obligations",
+      "author": "Ridger",
+      "image": "abstract-background-dark.avif",
+      "date": "2026-09-20",
+      "references": [
+        {
+          "labelKey": "ge.ch — Employer du personnel de maison",
+          "url": "https://www.ge.ch/employer-du-personnel-maison"
+        },
+        {
+          "labelKey": "ge.ch — Conditions et obligations à respecter",
+          "url": "https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter"
+        },
+        {
+          "labelKey": "ge.ch — Les CTT en vigueur à Genève",
+          "url": "https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve"
+        },
+        {
+          "labelKey": "ge.ch — Déclarer son personnel de maison aux impôts",
+          "url": "https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots"
+        }
+      ],
+      "category": "emploi-domestique",
+      "tags": [
+        "personnel de maison",
+        "geneve",
+        "ctt-edom",
+        "obligations employeur",
+        "assurances sociales"
+      ],
+      "title": "Employer du personnel de maison à Genève : le guide des obligations",
+      "description": "Engager une aide à domicile, une nounou ou un jardinier à Genève fait de vous un employeur à part entière. Panorama des obligations : CTT-EDom, salaire minimum, assurances sociales et déclarations.",
+      "content": "Engager une aide ménagère, une nounou, un jardinier ou un chauffeur privé transforme votre foyer en employeur au sens plein du droit du travail suisse. Cette bascule surprend souvent : on pense rendre service à quelqu'un, on devient en réalité débiteur d'un salaire, de cotisations et d'une série de démarches administratives. À Genève, le cadre est précis et documenté. Le maîtriser en amont vous évite les rappels de cotisations, les litiges et l'exposition au travail au noir. C'est la même rigueur qu'un family office applique à un portefeuille, transposée à votre vie domestique.\n\n## Un contrat-type de travail impératif : le CTT-EDom\n\nLe canton de Genève encadre l'emploi domestique par un contrat-type de travail dédié à l'économie domestique (CTT-EDom). Il s'applique à toute personne employée dans un ménage privé — femme ou homme de ménage, garde d'enfants, personne accompagnant un proche âgé ou en situation de handicap, jardinier, cuisinier, chauffeur. Ce contrat fixe notamment des salaires minimaux bruts qui varient selon la qualification et l'expérience, ainsi que la durée du travail de référence à plein temps. Ces montants sont revus régulièrement : plutôt que de retenir un chiffre qui vieillira, consultez la [grille officielle des CTT en vigueur](https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve) et la page [Conditions et obligations à respecter](https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter).\n\nUn point essentiel : le salaire minimum du CTT-EDom s'applique quel que soit le taux d'occupation, même pour quelques heures par semaine et même pour un engagement ponctuel. Il n'existe pas de seuil en dessous duquel vous seriez dispensé de le respecter. Le salaire doit par ailleurs être versé au plus tard le dernier jour du mois travaillé.\n\n## Le contrat écrit et les conditions de travail\n\nMême si un accord oral engage juridiquement, un contrat écrit protège les deux parties. Il précise la fonction, le taux d'activité, le salaire horaire ou mensuel brut, les horaires, les vacances, les jours fériés et les délais de congé. Le CTT-EDom sert de socle minimal : vous pouvez offrir mieux, jamais moins. Depuis quelques années, le canton impose également une assurance perte de gain en cas de maladie, dont la prime est partagée entre employeur et employé ; là encore, la page officielle décrit le dispositif applicable.\n\n## Les assurances sociales : une affiliation obligatoire\n\nDès le premier franc de salaire, votre employé doit être annoncé aux assurances sociales : AVS, AI, APG, assurance-chômage, allocations familiales, assurance-accidents (LAA) et, au-delà d'un certain seuil de revenu, la prévoyance professionnelle (LPP). En tant qu'employeur, vous retenez la part salariale sur le salaire et versez l'ensemble — part employeur comprise — à votre caisse de compensation. Les taux et les seuils sont fixés au niveau fédéral et détaillés dans les mémentos officiels ; nous consacrons à ce sujet un article dédié, mais retenez qu'aucune de ces assurances n'est facultative pour un emploi domestique régulier.\n\n## L'impôt à la source, selon le permis\n\nSi votre employé n'est pas de nationalité suisse et ne dispose pas d'un permis d'établissement (permis C), son salaire est en principe soumis à l'impôt à la source, que vous devez prélever et reverser à l'administration fiscale cantonale. Un employé titulaire d'un permis C, en revanche, n'est pas imposé à la source : il est taxé de manière ordinaire comme un contribuable domicilié. Pour les autres statuts, vous êtes le débiteur de la prestation imposable : c'est à vous de retenir l'impôt. Le canton propose une procédure simplifiée via la caisse de compensation, qui prélève et reverse l'impôt une fois par an, ou un décompte mensuel classique tenant compte de la situation familiale. Les modalités et barèmes figurent sur la page [Déclarer son personnel de maison aux impôts](https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots).\n\n## Le permis de travail\n\nEmployer une personne étrangère suppose qu'elle dispose d'une autorisation de séjour et de travail valable. Vérifier ce point n'est pas une formalité : engager sans titre expose l'employeur à des sanctions et relève du travail au noir, que le canton combat activement dans les ménages privés comme ailleurs.\n\n## Le certificat de salaire et la tenue des décomptes\n\nChaque année, vous établissez un certificat de salaire récapitulant la rémunération versée et les retenues opérées ; ce document sert à votre employé pour sa propre situation fiscale et, le cas échéant, aux corrections d'impôt à la source. Conserver les fiches de paie, les décomptes de cotisations et les preuves de versement n'est pas une précaution accessoire : c'est ce qui vous protège en cas de contrôle de la caisse de compensation ou de désaccord avec votre employé. Une tenue régulière, mois après mois, coûte infiniment moins d'énergie qu'une reconstitution rétrospective sous la pression d'un rappel.\n\n## Le cas de plusieurs employeurs et du temps partiel\n\nBeaucoup de ménages partagent une même aide avec d'autres foyers, ou n'emploient que quelques heures par semaine. Cela ne change rien au principe : chaque employeur affilie et déclare la part de salaire qu'il verse, indépendamment des autres. Un temps partiel n'est jamais une zone grise. C'est précisément dans ces configurations fragmentées que les affiliations sont le plus souvent oubliées, avec à la clé des lacunes de cotisations pour l'employé et un risque pour l'employeur.\n\n## Mettre de l'ordre dans tout cela\n\nRien dans ces obligations n'est insurmontable, mais leur accumulation — contrat, affiliations multiples, décomptes de cotisations, certificat de salaire, impôt à la source — consomme un temps et une attention qui ne sont pas les vôtres. Nous coordonnons ces démarches avec la même méthode que celle appliquée aux dossiers patrimoniaux les plus exigeants : cadrage du contrat, affiliations correctes, suivi des échéances, interlocuteur unique. [Discutons de votre situation](/fr/services/fiscalite-administration/).\n\nLes montants et barèmes cités renvoient aux pages officielles du canton, indexées annuellement : la page liée fait foi, et nous les avons vérifiés le 2026-09-20.\n\n---\n### Références\n- [ge.ch — Employer du personnel de maison](https://www.ge.ch/employer-du-personnel-maison)\n- [ge.ch — Conditions et obligations à respecter](https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter)\n- [ge.ch — Les CTT en vigueur à Genève](https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve)\n- [ge.ch — Déclarer son personnel de maison aux impôts](https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots)\n"
     }
   ]
 }
