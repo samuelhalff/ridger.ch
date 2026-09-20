@@ -56,8 +56,8 @@
     },
     "/services/family-office-coordination": {
       "title": "Family office coordination | Ridger",
-      "description": "Family office coordination in Geneva: a single point of contact for your family's bankers, lawyers, notaries, tax advisors and insurers.",
-      "keywords": "family office coordination, single point of contact, family office geneva, advisor coordination"
+      "description": "Coordination in Geneva: a single point of contact for your advisors and providers — bankers, lawyers, notaries, insurers, tradespeople — and the stewardship of your residences.",
+      "keywords": "family office coordination geneva, single point of contact, household management, provider coordination, administrative concierge, residence management"
     },
     "/services/governance-succession": {
       "title": "Governance and succession | Ridger",
@@ -66,8 +66,8 @@
     },
     "/services/tax-administration": {
       "title": "Tax and administration | Ridger",
-      "description": "Coordination of Swiss tax compliance and family administration: filings, payments, cash flow and document management.",
-      "keywords": "swiss tax compliance, family administration, document management, tax coordination geneva"
+      "description": "Tax, administration and payroll in Geneva: Swiss tax compliance and optimisation, household-staff payroll (AVS, LPP, source tax), domiciliation and mail management.",
+      "keywords": "swiss tax compliance, tax optimisation, lump-sum taxation, household staff payroll, declare domestic employee geneva, AVS social charges, domiciliation, mail management, family administration"
     },
     "/services/digital-vault": {
       "title": "Swiss digital vault | Ridger",
@@ -76,8 +76,8 @@
     },
     "/services/real-estate-transactions": {
       "title": "Real estate and transactions | Ridger",
-      "description": "Supervision and administration of family real estate in Geneva: property manager coordination, opportunity sourcing and transaction coordination with notaries and banks.",
-      "keywords": "family real estate geneva, property companies, property manager coordination, real estate transactions, deal sourcing"
+      "description": "Real estate in Geneva: management and administration of your properties, rental management, renovation and works coordination, opportunity sourcing and transactions with notaries and banks.",
+      "keywords": "property management geneva, rental property management, renovation works coordination, contractor coordination, managing agents, real estate transactions, property administration"
     },
     "/legal/privacy": {
       "title": "Privacy policy | Ridger",
