@@ -39,16 +39,20 @@ const Services = async ({
             ) : null}
           </Reveal>
         )}
-        <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-6 lg:auto-rows-[minmax(180px,auto)]">
           {services.map((service, index) => {
             const headingId = `service-card-${service.titleKey.replace(
               /\./g,
               "-",
             )}`;
             const serviceHref = buildInternalUrl(service.href, currentLocale);
-            const isHero = false;
+            const isHero = index === 0;
             const isHighlighted = false;
-            const spanClass = "";
+            const spanClass = isHero
+              ? "lg:col-span-3 lg:row-span-2"
+              : isHighlighted
+                ? "lg:col-span-3"
+                : "lg:col-span-2";
             const surfaceClass = isHero
               ? "bg-[#1f1b19] text-white dark:bg-surface-warm dark:text-foreground"
               : isHighlighted
@@ -101,7 +105,7 @@ const Services = async ({
                       id={headingId}
                       className={`text-balance font-semibold leading-[1.08] tracking-tight ${
                         isHero
-                          ? "max-w-[16ch] text-3xl sm:text-4xl"
+                          ? "max-w-[16ch] text-xl sm:text-2xl lg:text-4xl"
                           : "text-xl sm:text-2xl"
                       }`}
                     >
