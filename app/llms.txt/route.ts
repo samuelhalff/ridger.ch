@@ -11,6 +11,7 @@ Ridger provides family office services. The firm supports:
 - Supervision and coordination of asset-manager activity, with close regulated Swiss partners who manage while Ridger coordinates, supervises, and holds them accountable
 - Investment coordination and negotiation of terms and fees with banks and managers
 - Family office coordination: a single point of contact for bankers, lawyers, notaries, tax advisors, and insurers
+- Relocation and permit coordination: arrival in Switzerland, permit formalities (B, C, G, L), registration with authorities, schools, banks and insurers — coordinated with authorities and lawyers, not legal immigration advice
 - Discreet special requests for established clients: travel, staff, exceptional purchases, and special projects, as an extension of coordination
 - Governance and succession: family charters, next-generation education, estate planning, and succession coordination under Swiss law
 - Trust and foundation coordination delivered via established regulated Swiss partners, with Ridger acting as coordinator and never as trustee
