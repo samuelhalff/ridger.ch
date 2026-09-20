@@ -2,7 +2,6 @@
 import { Providers } from "@/src/components/providers";
 import { Metadata, Viewport } from "next";
 import { buildOrganizationGraph } from "@/src/lib/structuredData";
-import { instrumentSans, ibmPlexMono } from "./fonts";
 import { headers } from "next/headers";
 import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
@@ -96,7 +95,6 @@ export default async function RootLayout({
     <html
       suppressHydrationWarning
       lang={currentLocale}
-      className={`${instrumentSans.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <link rel="preload" href="/fonts/InstrumentSans-vf-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -116,7 +114,7 @@ export default async function RootLayout({
         />
       </head>
 
-      <body className={instrumentSans.className}>
+      <body>
         {/* ✅ expose nonce to client so dynamic scripts can reuse it */}
         <script
           nonce={nonce}
