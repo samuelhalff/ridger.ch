@@ -39,21 +39,16 @@ const Services = async ({
             ) : null}
           </Reveal>
         )}
-        <div className="mt-8 grid w-full grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 md:grid-cols-4 lg:grid-cols-6 lg:auto-rows-[minmax(180px,auto)]">
+        <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const headingId = `service-card-${service.titleKey.replace(
               /\./g,
               "-",
             )}`;
             const serviceHref = buildInternalUrl(service.href, currentLocale);
-            const isHero = index === 0;
-            const isHighlighted =
-              service.titleKey === "OdooImplementation.Title";
-            const spanClass = isHero
-              ? "sm:col-span-2 md:col-span-4 lg:col-span-3 lg:row-span-2"
-              : isHighlighted
-                ? "sm:col-span-2 md:col-span-4 lg:col-span-3"
-                : "sm:col-span-1 md:col-span-2 lg:col-span-2";
+            const isHero = false;
+            const isHighlighted = false;
+            const spanClass = "";
             const surfaceClass = isHero
               ? "bg-[#1f1b19] text-white dark:bg-surface-warm dark:text-foreground"
               : isHighlighted
