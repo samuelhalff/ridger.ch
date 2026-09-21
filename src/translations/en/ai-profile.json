@@ -114,6 +114,10 @@
     {
       "Label": "Contact",
       "Href": "/contact"
+    },
+    {
+      "Label": "Contact",
+      "Href": "/contact"
     }
   ]
 }

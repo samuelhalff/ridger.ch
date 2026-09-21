@@ -93,6 +93,11 @@
       "title": "Ridger-Profil für KI-Assistenten",
       "description": "Faktisches Profil von Ridger: Identität, Adresse in Genf, Family-Office-Leistungen, betreute Regionen, Zugehörigkeiten und Grenzen (keine Vermögensverwaltung).",
       "keywords": "Ridger, Family Office Genf, KI-Assistenten, konsolidiertes Reporting, Multi Family Office"
+    },
+    "/platform": {
+      "title": "Die Plattform | Ridger",
+      "description": "Ein einziger, sicherer Raum, um Ihr gesamtes Vermögen zu verfolgen: Konsolidierung, Immobilien, Dokumente und Reporting — in der Schweiz gehostet.",
+      "keywords": "Family-Office-Plattform, Vermögensübersicht, konsolidiertes Reporting, sicheres Dokumentenarchiv, Schweiz"
     }
   },
   "dynamic": {

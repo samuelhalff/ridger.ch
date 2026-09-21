@@ -121,3 +121,56 @@ function validateTranslations() {
 
 // Run validation
 validateTranslations();
+
+// ─────────────────────────────────────────────────────────────────────────
+// Full structural key-parity on ACTIVE namespaces (added 2026-09-21).
+// The curated-key check above only covers a subset; this catches ANY key
+// present in the FR canonical but missing from another locale (the cause of
+// blank/fallback labels), for the namespaces ridger actually renders. Legacy
+// ark service files (accounting, corporate, …) are excluded — unused, uneven.
+// ─────────────────────────────────────────────────────────────────────────
+(function fullParity() {
+  const ACTIVE = new Set([
+    "navbar", "footer", "home", "faq", "approach", "contact", "platform",
+    "cookie", "privacy", "legal", "servicesItems", "ai-profile", "metadata",
+    "services", "ressources",
+    "consolidated-reporting", "investment-oversight", "family-office-coordination",
+    "governance-succession", "tax-administration", "digital-vault",
+    "real-estate-transactions",
+  ]);
+  const CANON = "fr";
+  const flat = (v, p = "", out = {}) => {
+    if (v && typeof v === "object" && !Array.isArray(v)) {
+      for (const k of Object.keys(v)) flat(v[k], p ? `${p}.${k}` : k, out);
+    } else if (Array.isArray(v)) {
+      v.forEach((x, i) => flat(x, `${p}[${i}]`, out));
+    } else { out[p] = v; }
+    return out;
+  };
+  const read = (loc, ns) => {
+    const fp = path.join(TRANSLATIONS_DIR, loc, `${ns}.json`);
+    return fs.existsSync(fp) ? JSON.parse(fs.readFileSync(fp, "utf-8")) : null;
+  };
+  let problems = 0;
+  for (const ns of ACTIVE) {
+    const canon = read(CANON, ns);
+    if (!canon) continue;
+    const flatCanon = flat(canon);
+    for (const loc of LOCALES) {
+      if (loc === CANON) continue;
+      const t = read(loc, ns);
+      if (!t) { console.error(`❌ parity: ${loc}/${ns}.json missing`); problems++; continue; }
+      const ft = flat(t);
+      const missing = Object.keys(flatCanon).filter((k) => !(k in ft));
+      if (missing.length) {
+        console.error(`❌ parity: ${loc}/${ns}.json missing ${missing.length} key(s): ${missing.slice(0, 6).join(", ")}${missing.length > 6 ? " …" : ""}`);
+        problems += missing.length;
+      }
+    }
+  }
+  if (problems) {
+    console.error(`\n❌ Structural parity failed: ${problems} missing key(s) across active namespaces.`);
+    process.exit(1);
+  }
+  console.log("✅ Full structural key-parity: all active namespaces complete across all locales");
+})();
