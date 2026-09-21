@@ -42,12 +42,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon.ico?v=r2", sizes: "any" },
+      { url: "/favicon-48.png?v=r2", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96.png?v=r2", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.png?v=r2", sizes: "180x180", type: "image/png" },
     ],
-    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/favicon.png?v=r2", sizes: "180x180", type: "image/png" }],
   },
   other: {},
 };
