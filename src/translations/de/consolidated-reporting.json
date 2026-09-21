@@ -1,34 +1,34 @@
 {
   "Hero": {
-    "Title": "Reporting consolidé",
-    "Description": "Une vue unique de l'ensemble de votre patrimoine, indépendante de toute banque. Nous rassemblons vos comptes bancaires, dépositaires, actifs immobiliers, participations en private equity et actifs de collection dans un reporting clair et régulier.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Konsolidiertes Reporting",
+    "Description": "Eine einzige Sicht auf Ihr gesamtes Vermögen, unabhängig von jeder Bank. Wir führen Ihre Bankkonten, Depotstellen, Immobilienwerte, Private-Equity-Beteiligungen und Sammlerwerte in einem klaren und regelmässigen Reporting zusammen.",
+    "CTA": "Vertrauliches Gespräch anfragen"
   },
   "Intro": [
-    "Votre patrimoine est réparti entre plusieurs banques, gérants et juridictions. Chaque relevé suit son propre format, sa propre devise et son propre calendrier. Le reporting consolidé réunit ces sources en une seule lecture, tenue à jour et vérifiable.",
-    "Nous produisons des relevés indépendants de performance et de frais. Vous voyez ce que vous détenez, comment cela évolue et ce que cela coûte, sans dépendre du reporting d'un seul établissement."
+    "Ihr Vermögen verteilt sich auf mehrere Banken, Vermögensverwalter und Rechtsordnungen. Jeder Auszug folgt seinem eigenen Format, seiner eigenen Währung und seinem eigenen Rhythmus. Das konsolidierte Reporting fasst diese Quellen zu einer einzigen, aktuellen und überprüfbaren Lesart zusammen.",
+    "Wir erstellen bankenunabhängige Performance- und Kostenauswertungen. Sie sehen, was Sie halten, wie es sich entwickelt und was es kostet, ohne vom Reporting eines einzelnen Instituts abhängig zu sein."
   ],
   "Pillars": [
     {
-      "Title": "Une vue unique",
-      "Body": "Banques, dépositaires, immobilier, private equity et actifs de collection réunis dans un même tableau de bord, en devise de référence."
+      "Title": "Eine einzige Sicht",
+      "Body": "Banken, Depotstellen, Immobilien, Private Equity und Sammlerwerte vereint in einem Dashboard, in der Referenzwährung."
     },
     {
-      "Title": "Indépendance",
-      "Body": "Notre reporting est indépendant de toute banque. Les chiffres sont recoupés avec les relevés officiels de chaque contrepartie."
+      "Title": "Unabhängigkeit",
+      "Body": "Unser Reporting ist unabhängig von jeder Bank. Die Zahlen werden mit den offiziellen Auszügen jeder Gegenpartei abgeglichen."
     },
     {
-      "Title": "Performance mesurée",
-      "Body": "Calcul de performance pondérée par le temps (TWR), comparaison à des indices de référence et lecture claire des contributions."
+      "Title": "Gemessene Performance",
+      "Body": "Berechnung der zeitgewichteten Rendite (TWR), Vergleich mit Referenzindizes und klare Lesart der Beiträge."
     },
     {
-      "Title": "Transparence des frais",
-      "Body": "Recensement et lecture des frais explicites et implicites, pour une compréhension complète du coût de vos relations bancaires."
+      "Title": "Kostentransparenz",
+      "Body": "Erfassung und Lesart der expliziten und impliziten Kosten für ein vollständiges Verständnis dessen, was Ihre Bankbeziehungen kosten."
     }
   ],
   "Closing": {
-    "Title": "Un reporting à votre rythme",
-    "Body": "Mensuel, trimestriel ou à la demande, votre reporting est structuré selon vos priorités et partagé de façon sécurisée avec les personnes que vous désignez."
+    "Title": "Ein Reporting in Ihrem Rhythmus",
+    "Body": "Monatlich, quartalsweise oder auf Anfrage: Ihr Reporting wird nach Ihren Prioritäten strukturiert und sicher mit den von Ihnen benannten Personen geteilt."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
 }

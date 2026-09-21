@@ -1,38 +1,38 @@
 {
   "Hero": {
-    "Title": "Notre approche",
-    "Description": "Ridger est un family office indépendant, aligné sur vos intérêts. Nous coordonnons, consolidons et supervisons, sans jamais gérer vos actifs à la place de vos banques et de vos gérants."
+    "Title": "Unser Ansatz",
+    "Description": "Ridger ist ein unabhängiges Family Office, das auf Ihre Interessen ausgerichtet ist. Wir koordinieren, konsolidieren und überwachen, ohne jemals Ihre Vermögenswerte anstelle Ihrer Banken und Vermögensverwalter zu verwalten."
   },
   "Sections": [
     {
-      "Title": "Indépendance",
+      "Title": "Unabhängigkeit",
       "Body": [
-        "Nous ne sommes ni une banque, ni un gérant. Cette indépendance est la condition d'un regard objectif sur vos relations financières.",
-        "Notre rémunération est transparente et alignée sur votre intérêt. Nous n'avons aucun produit à placer, aucune transaction à provoquer."
+        "Wir sind weder eine Bank noch ein Vermögensverwalter. Diese Unabhängigkeit ist die Voraussetzung für einen objektiven Blick auf Ihre Finanzbeziehungen.",
+        "Unsere Vergütung ist transparent und auf Ihr Interesse ausgerichtet. Wir haben kein Produkt zu platzieren und keine Transaktion herbeizuführen."
       ]
     },
     {
-      "Title": "Méthode",
+      "Title": "Methode",
       "Body": [
-        "Nous commençons par un audit de votre organisation existante : relations bancaires, mandats, structures et conseillers.",
-        "Nous mettons ensuite en place la consolidation de votre patrimoine, puis un rythme de surveillance et de coordination adapté à vos priorités."
+        "Wir beginnen mit einer Bestandsaufnahme Ihrer bestehenden Organisation: Bankbeziehungen, Mandate, Strukturen und Berater.",
+        "Anschliessend richten wir die Konsolidierung Ihres Vermögens ein und danach einen Rhythmus der Überwachung und Koordination, der auf Ihre Prioritäten abgestimmt ist."
       ]
     },
     {
-      "Title": "Discrétion et sécurité",
+      "Title": "Diskretion und Sicherheit",
       "Body": [
-        "La confidentialité est au cœur de notre métier. Vos données sont hébergées en Suisse et partagées uniquement avec les personnes que vous désignez.",
-        "Nos flux de travail numériques préservent la traçabilité et le contrôle des accès, à chaque étape."
+        "Vertraulichkeit steht im Zentrum unserer Tätigkeit. Ihre Daten werden in der Schweiz gehostet und ausschliesslich mit den von Ihnen benannten Personen geteilt.",
+        "Unsere digitalen Arbeitsabläufe wahren die Nachvollziehbarkeit und die Zugriffskontrolle in jedem Schritt."
       ]
     },
     {
-      "Title": "Un interlocuteur unique",
+      "Title": "Ein einziger Ansprechpartner",
       "Body": [
-        "Vous disposez d'un point de contact qui connaît vos dossiers et mobilise les bonnes compétences au bon moment.",
-        "Nous répondons dans un délai d'un jour ouvré et gardons la mémoire de vos décisions dans la durée."
+        "Sie verfügen über eine zentrale Anlaufstelle, die Ihre Dossiers kennt und die richtigen Kompetenzen zum richtigen Zeitpunkt mobilisiert.",
+        "Wir antworten innerhalb eines Werktags und bewahren das Gedächtnis Ihrer Entscheidungen über die Zeit."
       ]
     }
   ],
-  "ArkNote": "Ridger s'appuie sur un groupe fiduciaire genevois établi, gage de rigueur et de continuité :",
-  "CTA": "Demander un entretien confidentiel"
+  "ArkNote": "Ridger stützt sich auf eine etablierte Genfer Treuhandgruppe, ein Garant für Sorgfalt und Kontinuität:",
+  "CTA": "Vertrauliches Gespräch anfragen"
 }

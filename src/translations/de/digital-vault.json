@@ -1,34 +1,34 @@
 {
   "Hero": {
-    "Title": "Coffre-fort numérique",
-    "Description": "Vos documents familiaux, chiffrés et structurés, hébergés en Suisse. Un espace sécurisé pour conserver, organiser et partager les pièces essentielles avec vos conseillers, selon des droits que vous maîtrisez.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Digitaler Tresor",
+    "Description": "Ihre Familiendokumente, verschlüsselt und strukturiert, in der Schweiz gehostet. Ein sicherer Raum, um die wesentlichen Unterlagen aufzubewahren, zu ordnen und mit Ihren Beratern zu teilen, nach Rechten, die Sie kontrollieren.",
+    "CTA": "Vertrauliches Gespräch anfragen"
   },
   "Intro": [
-    "Les documents d'une famille — actes, contrats, relevés, décisions — se dispersent avec le temps entre courriels, dossiers et intervenants. Les retrouver au moment voulu devient un exercice fastidieux.",
-    "Le coffre-fort numérique réunit ces pièces dans un espace unique, chiffré et hébergé en Suisse. Vous décidez qui voit quoi, et vous gardez la trace de chaque accès."
+    "Die Dokumente einer Familie — Urkunden, Verträge, Auszüge, Beschlüsse — verstreuen sich mit der Zeit über E-Mails, Ordner und Beteiligte. Sie im richtigen Moment wiederzufinden, wird zu einer mühsamen Übung.",
+    "Der digitale Tresor vereint diese Unterlagen in einem einzigen, verschlüsselten und in der Schweiz gehosteten Raum. Sie entscheiden, wer was sieht, und behalten die Spur jedes Zugriffs."
   ],
   "Pillars": [
     {
-      "Title": "Coffre chiffré",
-      "Body": "Un espace documentaire chiffré, pensé pour la confidentialité et la durée."
+      "Title": "Verschlüsselter Tresor",
+      "Body": "Ein verschlüsselter Dokumentenraum, konzipiert für Vertraulichkeit und Beständigkeit."
     },
     {
-      "Title": "Dossiers structurés",
-      "Body": "Une organisation claire des dossiers familiaux, facile à parcourir et à tenir à jour."
+      "Title": "Strukturierte Dossiers",
+      "Body": "Eine klare Organisation der Familiendossiers, leicht zu durchsuchen und aktuell zu halten."
     },
     {
-      "Title": "Données en Suisse",
-      "Body": "Hébergement des données en Suisse, aligné avec vos exigences de résidence et de confidentialité."
+      "Title": "Daten in der Schweiz",
+      "Body": "Datenhosting in der Schweiz, im Einklang mit Ihren Anforderungen an Standort und Vertraulichkeit."
     },
     {
-      "Title": "Partage contrôlé",
-      "Body": "Partage sélectif avec vos conseillers, avec droits d'accès et traçabilité maîtrisés."
+      "Title": "Kontrollierte Freigabe",
+      "Body": "Selektive Freigabe an Ihre Berater, mit kontrollierten Zugriffsrechten und Nachvollziehbarkeit."
     }
   ],
   "Closing": {
-    "Title": "Un patrimoine documentaire durable",
-    "Body": "Des flux de travail numériques qui font gagner du temps, sans jamais transiger sur la sécurité ni la discrétion."
+    "Title": "Ein beständiges Dokumentenvermögen",
+    "Body": "Digitale Arbeitsabläufe, die Zeit sparen, ohne jemals Kompromisse bei Sicherheit oder Diskretion einzugehen."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
 }

@@ -1,46 +1,46 @@
 {
   "Hero": {
-    "Title": "Surveillance des investissements",
-    "Description": "Un regard indépendant sur vos mandats et vos gérants. Nous suivons la performance, les frais et le risque de vos relations, et préparons les décisions de votre comité d'investissement familial.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Anlageüberwachung",
+    "Description": "Ein unabhängiger Blick auf Ihre Mandate und Vermögensverwalter. Wir überwachen Performance, Kosten und Risiko Ihrer Beziehungen und bereiten die Entscheidungen Ihres Familien-Anlageausschusses vor.",
+    "CTA": "Vertrauliches Gespräch anfragen"
   },
   "Intro": [
-    "Confier ses avoirs à plusieurs gérants est une pratique saine. Encore faut-il pouvoir comparer leurs résultats sur une base commune et poser les bonnes questions au bon moment.",
-    "Nous assurons une surveillance continue et structurée, et nous rapportons les résultats du portefeuille dans le format et selon les souhaits de votre famille. Il s'agit d'un rôle de contrôle et de coordination, non de gestion : les décisions et l'exécution restent chez vos gérants régulés."
+    "Sein Vermögen mehreren Verwaltern anzuvertrauen, ist eine gesunde Praxis. Man muss ihre Ergebnisse jedoch auf einer gemeinsamen Grundlage vergleichen und die richtigen Fragen zum richtigen Zeitpunkt stellen können.",
+    "Wir gewährleisten eine kontinuierliche und strukturierte Überwachung und berichten die Portfolioergebnisse im Format und nach den Wünschen Ihrer Familie. Es handelt sich um eine Kontroll- und Koordinationsrolle, nicht um Verwaltung: Entscheidungen und Ausführung verbleiben bei Ihren regulierten Vermögensverwaltern."
   ],
   "Pillars": [
     {
-      "Title": "Reporting du portefeuille",
-      "Body": "Reporting patrimonial et de performance pour la famille, avec des résultats présentés dans le format et selon les souhaits convenus, sur une base commune à l'ensemble de vos relations."
+      "Title": "Portfolio-Reporting",
+      "Body": "Vermögens- und Performance-Reporting für die Familie, mit Ergebnissen im vereinbarten Format und nach den vereinbarten Wünschen, auf einer für all Ihre Beziehungen gemeinsamen Grundlage."
     },
     {
-      "Title": "Suivi des mandats",
-      "Body": "Contrôle du respect des mandats et de la politique d'investissement convenue avec chaque gérant."
+      "Title": "Mandatsüberwachung",
+      "Body": "Kontrolle der Einhaltung der Mandate und der mit jedem Vermögensverwalter vereinbarten Anlagepolitik."
     },
     {
-      "Title": "Supervision des gérants",
-      "Body": "Supervision et coordination de l'activité des gérants. La gestion est assurée par des partenaires suisses régulés proches ; Ridger coordonne, supervise et les tient responsables."
+      "Title": "Aufsicht über die Verwalter",
+      "Body": "Aufsicht und Koordination der Tätigkeit der Vermögensverwalter. Die Verwaltung erfolgt durch nahestehende, regulierte Schweizer Partner; Ridger koordiniert, überwacht und zieht sie zur Rechenschaft."
     },
     {
-      "Title": "Revues consolidées",
-      "Body": "Analyses régulières de performance, de frais et de risque, comparées entre gérants et dans le temps."
+      "Title": "Konsolidierte Auswertungen",
+      "Body": "Regelmässige Analysen von Performance, Kosten und Risiko, im Vergleich zwischen den Verwaltern und im Zeitverlauf."
     },
     {
-      "Title": "Cadrage par indices",
-      "Body": "Mise en perspective des résultats face à des indices de référence pertinents et transparents."
+      "Title": "Einordnung anhand von Indizes",
+      "Body": "Einordnung der Ergebnisse anhand relevanter und transparenter Referenzindizes."
     },
     {
-      "Title": "Coordination et négociation",
-      "Body": "Coordination des investissements et négociation des conditions et des frais avec les banques et les gérants, dans votre intérêt."
+      "Title": "Koordination und Verhandlung",
+      "Body": "Koordination der Anlagen und Verhandlung der Konditionen und Kosten mit den Banken und Vermögensverwaltern, in Ihrem Interesse."
     },
     {
-      "Title": "Préparation du comité",
-      "Body": "Dossiers clairs et documentés pour préparer les réunions du comité d'investissement familial et éclairer vos décisions."
+      "Title": "Vorbereitung des Ausschusses",
+      "Body": "Klare und dokumentierte Dossiers zur Vorbereitung der Sitzungen des Familien-Anlageausschusses und zur Fundierung Ihrer Entscheidungen."
     }
   ],
   "Closing": {
-    "Title": "Surveillance, non gestion",
-    "Body": "Notre rôle est d'observer, de comparer et de documenter. Vous conservez le choix de vos gérants et de vos décisions, avec une information complète et impartiale."
+    "Title": "Überwachung, nicht Verwaltung",
+    "Body": "Unsere Aufgabe ist es, zu beobachten, zu vergleichen und zu dokumentieren. Sie behalten die Wahl Ihrer Verwalter und Ihrer Entscheidungen, mit vollständiger und unparteiischer Information."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
 }

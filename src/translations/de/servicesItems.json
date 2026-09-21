@@ -1,32 +1,32 @@
 {
   "ConsolidatedReporting": {
-    "Title": "Reporting consolidé",
-    "Description": "Une vue unique de l'ensemble de votre patrimoine — banques, dépositaires, immobilier, private equity, actifs de collection. Indépendant de toute banque, avec transparence sur la performance et les frais."
+    "Title": "Konsolidiertes Reporting",
+    "Description": "Eine einzige Sicht auf Ihr gesamtes Vermögen — Banken, Depotstellen, Immobilien, Private Equity, Sammlerwerte. Unabhängig von jeder Bank, mit Transparenz über Performance und Kosten."
   },
   "InvestmentOversight": {
-    "Title": "Surveillance des investissements",
-    "Description": "Suivi des mandats et des gérants, revues consolidées de performance, de frais et de risque, cadrage par indices de référence et préparation du comité d'investissement familial. Surveillance, non gestion."
+    "Title": "Anlageüberwachung",
+    "Description": "Überwachung der Mandate und Vermögensverwalter, konsolidierte Auswertungen von Performance, Kosten und Risiko, Einordnung anhand von Referenzindizes und Vorbereitung des Familien-Anlageausschusses. Überwachung, nicht Verwaltung."
   },
   "FamilyOfficeCoordination": {
-    "Title": "Coordination family office",
-    "Description": "Un interlocuteur unique orchestrant banquiers, avocats, notaires, fiscalistes et assureurs — jusqu’à l’intendance de vos maisons et les demandes particulières."
+    "Title": "Family-Office-Koordination",
+    "Description": "Ein einziger Ansprechpartner, der Banker, Anwälte, Notare, Steuerberater und Versicherer orchestriert — bis hin zur Verwaltung Ihrer Häuser und besonderen Anliegen."
   },
   "GovernanceSuccession": {
-    "Title": "Gouvernance et succession",
-    "Description": "Chartes de gouvernance familiale, éducation de la nouvelle génération, coordination de la planification successorale en droit civil suisse et conseils de famille."
+    "Title": "Governance und Nachfolge",
+    "Description": "Chartas zur Familien-Governance, Ausbildung der nächsten Generation, Koordination der Nachlassplanung nach schweizerischem Zivilrecht und Familienräte."
   },
   "TaxAdministration": {
-    "Title": "Fiscalité et administration",
-    "Description": "Conformité et optimisation fiscales suisses — y compris l’imposition d’après la dépense — paie de vos employés et personnel de maison, domiciliation, courrier et administration."
+    "Title": "Steuern und Administration",
+    "Description": "Schweizerische Steuer-Compliance und -Optimierung — einschliesslich der Aufwandbesteuerung — Lohnabrechnung für Ihre Angestellten und Ihr Hauspersonal, Domizilierung, Postbearbeitung und Administration."
   },
   "DigitalVault": {
-    "Title": "Coffre-fort numérique",
-    "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
+    "Title": "Digitaler Tresor",
+    "Description": "Verschlüsselter Dokumententresor, strukturierte Familiendossiers, Datenhosting in der Schweiz, kontrollierte Freigabe an Ihre Berater und digitale Arbeitsabläufe."
   },
   "RealEstateTransactions": {
-    "Title": "Immobilier et transactions",
-    "Description": "Gestion immobilière et administration de vos biens, recherche et évaluation d’opportunités, coordination des transactions avec notaires, banques et due diligence."
+    "Title": "Immobilien und Transaktionen",
+    "Description": "Immobilienverwaltung und Bewirtschaftung Ihrer Objekte, Suche und Bewertung von Gelegenheiten, Koordination der Transaktionen mit Notaren, Banken und Due Diligence."
   },
-  "ShowMore": "Découvrir",
-  "ShowLess": "Voir moins"
+  "ShowMore": "Entdecken",
+  "ShowLess": "Weniger anzeigen"
 }
