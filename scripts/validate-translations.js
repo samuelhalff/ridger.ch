@@ -174,3 +174,43 @@ validateTranslations();
   }
   console.log("✅ Full structural key-parity: all active namespaces complete across all locales");
 })();
+
+// ─────────────────────────────────────────────────────────────────────────
+// Value-drift WARNING (added 2026-09-21, non-fatal): flags de/es/pt values
+// that are identical to the FR canonical AND look like French prose — i.e.
+// keys that exist but were never translated. Heuristic (French stopwords),
+// so it warns rather than fails; excludes numbers, URLs, brand/proper nouns.
+// ─────────────────────────────────────────────────────────────────────────
+(function valueDrift() {
+  const ACTIVE = [
+    "navbar", "footer", "home", "faq", "approach", "contact", "platform",
+    "legal", "servicesItems", "ai-profile", "metadata", "ressources",
+    "consolidated-reporting", "investment-oversight", "family-office-coordination",
+    "governance-succession", "tax-administration", "digital-vault",
+    "real-estate-transactions",
+  ];
+  const FR = /\b(vous|votre|vos|nous|notre|nos|dans|avec|pour|sans|leur|ainsi|selon|chaque|entre|aux|qui|que|sont|plus|toute|jusqu|met à|à votre)\b/i;
+  const flat = (v, p = "", out = {}) => {
+    if (v && typeof v === "object" && !Array.isArray(v)) for (const k of Object.keys(v)) flat(v[k], p ? `${p}.${k}` : k, out);
+    else if (Array.isArray(v)) v.forEach((x, i) => flat(x, `${p}[${i}]`, out));
+    else out[p] = v;
+    return out;
+  };
+  const read = (loc, ns) => { const fp = path.join(TRANSLATIONS_DIR, loc, `${ns}.json`); return fs.existsSync(fp) ? JSON.parse(fs.readFileSync(fp, "utf-8")) : null; };
+  let warn = 0;
+  for (const ns of ACTIVE) {
+    const fr = read("fr", ns); if (!fr) continue;
+    const ff = flat(fr);
+    for (const loc of ["de", "es", "pt"]) {
+      const t = read(loc, ns); if (!t) continue;
+      const tf = flat(t);
+      const bad = Object.keys(ff).filter((k) => {
+        const v = ff[k];
+        return typeof v === "string" && v.length > 15 && tf[k] === v &&
+          !k.toLowerCase().includes("labelkey") && !/\.(url|href)$/i.test(k) && (v.match(FR) || []).length >= 2;
+      });
+      if (bad.length) { console.warn(`⚠ value-drift: ${loc}/${ns}.json — ${bad.length} still-French value(s): ${bad.slice(0, 4).join(", ")}`); warn += bad.length; }
+    }
+  }
+  if (warn === 0) console.log("✅ No untranslated French values detected in active namespaces");
+})();

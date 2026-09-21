@@ -47,11 +47,11 @@
       "date": "2026-09-17",
       "references": [
         {
-          "labelKey": "FINMA — Autorité fédérale de surveillance des marchés financiers",
+          "labelKey": "FINMA — Autoridade Federal de Supervisão dos Mercados Financeiros",
           "url": "https://www.finma.ch/fr/"
         },
         {
-          "labelKey": "SwissBanking — Association suisse des banquiers",
+          "labelKey": "SwissBanking — Associação Suíça de Banqueiros",
           "url": "https://www.swissbanking.ch/fr/"
         },
         {
@@ -59,7 +59,7 @@
           "url": "https://www.deloitte.com/ch/en/services/consulting-financial/research/the-family-office-insights-series.html"
         },
         {
-          "labelKey": "PwC Suisse — Family Offices",
+          "labelKey": "PwC Suíça — Family Offices",
           "url": "https://www.pwc.ch/en/services/family-offices.html"
         }
       ],
@@ -83,19 +83,19 @@
       "date": "2026-09-15",
       "references": [
         {
-          "labelKey": "FINMA – Cybersécurité et risques opérationnels",
+          "labelKey": "FINMA – Cibersegurança e riscos operacionais",
           "url": "https://www.finma.ch/fr/surveillance/risques-operationnels/"
         },
         {
-          "labelKey": "Préposé fédéral à la protection des données (PFPDT) – LPD",
+          "labelKey": "Comissário Federal de Proteção de Dados (PFPDT) – LPD",
           "url": "https://www.edoeb.admin.ch/edoeb/fr/home/datenschutz/recht_und_politik/datenschutzrecht.html"
         },
         {
-          "labelKey": "SNB – Stabilité financière et innovation",
+          "labelKey": "SNB – Estabilidade financeira e inovação",
           "url": "https://www.snb.ch/fr/publications/research/financial-stability-report"
         },
         {
-          "labelKey": "Deloitte – Digital Family Office",
+          "labelKey": "Deloitte – Family Office Digital",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         }
       ],
@@ -128,23 +128,23 @@
       ],
       "references": [
         {
-          "labelKey": "Préposé fédéral à la protection des données (PFPDT) – LPD",
+          "labelKey": "Comissário Federal de Proteção de Dados (PFPDT) – LPD",
           "url": "https://www.edoeb.admin.ch/edoeb/fr/home/datenschutz/recht_und_politik/datenschutzrecht.html"
         },
         {
-          "labelKey": "Fedlex – Loi fédérale sur la protection des données (nLPD)",
+          "labelKey": "Fedlex – Lei Federal de Proteção de Dados (nLPD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
         },
         {
-          "labelKey": "OFCS – Centre national pour la cybersécurité (NCSC)",
+          "labelKey": "OFCS – Centro Nacional de Cibersegurança (NCSC)",
           "url": "https://www.ncsc.admin.ch/ncsc/fr/home.html"
         },
         {
-          "labelKey": "FINMA – Risques opérationnels et cybersécurité",
+          "labelKey": "FINMA – Riscos operacionais e cibersegurança",
           "url": "https://www.finma.ch/fr/surveillance/risques-operationnels/"
         },
         {
-          "labelKey": "UBS – Sécurité numérique pour clients privés",
+          "labelKey": "UBS – Segurança digital para clientes privados",
           "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
         }
       ],
@@ -167,23 +167,23 @@
       ],
       "references": [
         {
-          "labelKey": "ESTV – Délais et échéances de l'impôt fédéral direct",
+          "labelKey": "AFC – Prazos e vencimentos do imposto federal direto",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/steuererklarung.html"
         },
         {
-          "labelKey": "Fedlex – LIFD (acomptes et délais de paiement)",
+          "labelKey": "Fedlex – LIFD (pagamentos antecipados e prazos)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "SECO – Obligations légales des sociétés anonymes",
+          "labelKey": "SECO – Obrigações legais das sociedades anónimas",
           "url": "https://www.seco.admin.ch/seco/fr/home/Standortfoerderung/Unternehmenspolitik.html"
         },
         {
-          "labelKey": "EY Suisse – Tax Calendar Switzerland",
+          "labelKey": "EY Suíça – Calendário Fiscal Suíça",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         },
         {
-          "labelKey": "KPMG Suisse – Compliance calendar",
+          "labelKey": "KPMG Suíça – Calendário de conformidade regulatória",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         }
       ],
@@ -206,23 +206,23 @@
       ],
       "references": [
         {
-          "labelKey": "FINMA – Obligations de diligence et documentation",
+          "labelKey": "FINMA – Obrigações de diligência e documentação",
           "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/"
         },
         {
-          "labelKey": "ESTV – Obligations déclaratives et documentation fiscale",
+          "labelKey": "AFC – Obrigações declarativas e documentação fiscal",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen.html"
         },
         {
-          "labelKey": "Fedlex – Loi sur la protection des données (LPD)",
+          "labelKey": "Fedlex – Lei de Proteção de Dados (LPD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
         },
         {
-          "labelKey": "PwC Suisse – Family Office Onboarding",
+          "labelKey": "PwC Suíça – Onboarding de Family Offices",
           "url": "https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html"
         },
         {
-          "labelKey": "EY Suisse – Family Office best practices",
+          "labelKey": "EY Suíça – Boas práticas para Family Offices",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         }
       ],
@@ -235,23 +235,23 @@
       "date": "2026-08-18",
       "references": [
         {
-          "labelKey": "Fedlex – Loi sur les fondations (CC art. 80 ss)",
+          "labelKey": "Fedlex – Direito de fundações (CC art. 80 ss.)",
           "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
         },
         {
-          "labelKey": "ESTV – Fiscalité des sociétés holding",
+          "labelKey": "AFC – Fiscalidade das sociedades holding",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/juristische-personen.html"
         },
         {
-          "labelKey": "FINMA – Reconnaissance des trusts étrangers",
+          "labelKey": "FINMA – Reconhecimento de trusts estrangeiros",
           "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/"
         },
         {
-          "labelKey": "PwC Suisse – Structures patrimoniales",
+          "labelKey": "PwC Suíça – Estruturas patrimoniais",
           "url": "https://www.pwc.ch/fr/services/tax-legal/private-clients.html"
         },
         {
-          "labelKey": "Fedlex – Convention de La Haye sur les trusts (RS 0.221.371)",
+          "labelKey": "Fedlex – Convenção de Haia sobre trusts (RS 0.221.371)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1994/2693_2693_2693/fr"
         }
       ],
@@ -285,23 +285,23 @@
       ],
       "references": [
         {
-          "labelKey": "Fedlex – Loi sur les établissements financiers (LEFin)",
+          "labelKey": "Fedlex – Lei de Instituições Financeiras (LEFin)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2018/801/fr"
         },
         {
-          "labelKey": "Fedlex – Loi sur les services financiers (LSFin)",
+          "labelKey": "Fedlex – Lei de Serviços Financeiros (LSFin)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2019/758/fr"
         },
         {
-          "labelKey": "FINMA – Surveillance des gestionnaires de fortune",
+          "labelKey": "FINMA – Supervisão de gestores de patrimônio",
           "url": "https://www.finma.ch/fr/surveillance/etablissements-financiers/gestionnaires-de-fortune/"
         },
         {
-          "labelKey": "OSFIN – Organisme de surveillance des gestionnaires de fortune",
+          "labelKey": "OSFIN – Organismo de supervisão de gestores de patrimônio",
           "url": "https://www.osfin.ch/fr/"
         },
         {
-          "labelKey": "Deloitte Suisse – LSFin/LEFin pour les family offices",
+          "labelKey": "Deloitte Suíça – LSFin/LEFin para family offices",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         }
       ],
@@ -314,19 +314,19 @@
       "date": "2026-08-01",
       "references": [
         {
-          "labelKey": "Fedlex – Code civil suisse, Livre III : Successions",
+          "labelKey": "Fedlex – Código Civil suíço, Livro III: Sucessões",
           "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
         },
         {
-          "labelKey": "Conférence suisse des impôts – Impôt sur les successions",
+          "labelKey": "Conferência Fiscal Suíça (SSK) – Imposto sobre heranças",
           "url": "https://www.steuerkonferenz.ch/fr/dokumentation/themen/erbschaftsteuer.html"
         },
         {
-          "labelKey": "Office fédéral de la justice – Droit successoral",
+          "labelKey": "Escritório Federal de Justiça (OFJ) – Direito sucessório",
           "url": "https://www.bj.admin.ch/bj/fr/home/gesellschaft/gesetzgebung/erbrecht.html"
         },
         {
-          "labelKey": "KPMG – Private Wealth Switzerland",
+          "labelKey": "KPMG – Patrimônio Privado Suíça",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         }
       ],
@@ -363,19 +363,19 @@
           "url": "https://www.cfainstitute.org/en/ethics-standards/codes/gips-standards"
         },
         {
-          "labelKey": "FINMA – Transparence des frais (LSFin)",
+          "labelKey": "FINMA – Transparência de custos (LSFin)",
           "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/"
         },
         {
-          "labelKey": "SNB – Statistiques des marchés financiers",
+          "labelKey": "SNB – Estatísticas dos mercados financeiros",
           "url": "https://www.snb.ch/fr/iabout/stat/statrep"
         },
         {
-          "labelKey": "PwC Suisse – Family Office Reporting",
+          "labelKey": "PwC Suíça – Reporting de Family Offices",
           "url": "https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html"
         },
         {
-          "labelKey": "Pictet – Standards de mesure de performance",
+          "labelKey": "Pictet – Padrões de medição de desempenho",
           "url": "https://www.pictet.com/ch/fr/wealth-management"
         }
       ],
@@ -388,19 +388,19 @@
       "date": "2026-07-22",
       "references": [
         {
-          "labelKey": "SECO – Gouvernance d'entreprise familiale",
+          "labelKey": "SECO – Governança de empresas familiares",
           "url": "https://www.seco.admin.ch/seco/fr/home/Standortfoerderung/Unternehmenspolitik.html"
         },
         {
-          "labelKey": "EY – Family Enterprise Governance",
+          "labelKey": "EY – Governança de Empresas Familiares",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         },
         {
-          "labelKey": "Deloitte – Family Governance Framework",
+          "labelKey": "Deloitte – Estrutura de Governança Familiar",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         },
         {
-          "labelKey": "Fedlex – Code civil suisse (droit des personnes et de la famille)",
+          "labelKey": "Fedlex – Código Civil suíço (direito das pessoas e da família)",
           "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
         }
       ],
@@ -433,23 +433,23 @@
       ],
       "references": [
         {
-          "labelKey": "FINMA – Établissements financiers et surveillance",
+          "labelKey": "FINMA – Instituições financeiras e supervisão",
           "url": "https://www.finma.ch/fr/surveillance/etablissements-financiers/"
         },
         {
-          "labelKey": "Fedlex – Loi sur les services financiers (LSFin)",
+          "labelKey": "Fedlex – Lei de Serviços Financeiros (LSFin)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2019/758/fr"
         },
         {
-          "labelKey": "Swiss Banking – Qualité et standards du conseil",
+          "labelKey": "Swiss Banking – Qualidade e padrões de aconselhamento",
           "url": "https://www.swissbanking.ch/fr/themes/droit-et-compliance"
         },
         {
-          "labelKey": "EY Suisse – Family Office et coordination",
+          "labelKey": "EY Suíça – Family Office e coordenação",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         },
         {
-          "labelKey": "Deloitte Suisse – Multi Family Office",
+          "labelKey": "Deloitte Suíça – Multi Family Office",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         }
       ],
@@ -462,19 +462,19 @@
       "date": "2026-07-12",
       "references": [
         {
-          "labelKey": "esisuisse – Garantie des dépôts en Suisse",
+          "labelKey": "esisuisse – Garantia de depósitos na Suíça",
           "url": "https://www.esisuisse.ch/fr/garantie-des-depots"
         },
         {
-          "labelKey": "FINMA – Liste des banques agréées",
+          "labelKey": "FINMA – Lista dos bancos autorizados",
           "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/banques-agrees/"
         },
         {
-          "labelKey": "SNB – Rapport sur la stabilité financière 2024",
+          "labelKey": "SNB – Relatório sobre estabilidade financeira 2024",
           "url": "https://www.snb.ch/fr/publications/research/financial-stability-report"
         },
         {
-          "labelKey": "Swiss Banking – Sécurité des dépôts",
+          "labelKey": "Swiss Banking – Garantia de depósitos",
           "url": "https://www.swissbanking.ch/fr/themes/protection-des-clients"
         }
       ],
@@ -507,23 +507,23 @@
       ],
       "references": [
         {
-          "labelKey": "OFDF – Ports francs et dépôts francs en Suisse",
+          "labelKey": "OFDF – Zonas francas e depósitos francos na Suíça",
           "url": "https://www.bazg.admin.ch/bazg/fr/home/information-firmen/warenanmeldung/zollfreilager.html"
         },
         {
-          "labelKey": "Fedlex – Loi sur le transfert international des biens culturels (LTBC)",
+          "labelKey": "Fedlex – Lei sobre a transferência internacional de bens culturais (LTBC)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2005/317/fr"
         },
         {
-          "labelKey": "ESTV – Impôt sur la fortune : actifs mobiliers",
+          "labelKey": "AFC – Imposto sobre o patrimônio: ativos mobiliários",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/vermoegen.html"
         },
         {
-          "labelKey": "Deloitte Suisse – Family Office & Art",
+          "labelKey": "Deloitte Suíça – Family Office e Arte",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         },
         {
-          "labelKey": "UBS – Art Banking et collections privées",
+          "labelKey": "UBS – Art Banking e coleções privadas",
           "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
         }
       ],
@@ -540,15 +540,15 @@
           "url": "https://www.cfainstitute.org/en/ethics-standards/codes/gips-standards"
         },
         {
-          "labelKey": "FINMA – Transparence des frais et rétrocessions",
+          "labelKey": "FINMA – Transparência de custos e retrocessões",
           "url": "https://www.finma.ch/fr/surveillance/banques-et-negociants/obligation-de-diligence/"
         },
         {
-          "labelKey": "SNB – Statistiques financières",
+          "labelKey": "SNB – Estatísticas financeiras",
           "url": "https://www.snb.ch/fr/iabout/stat/statrep"
         },
         {
-          "labelKey": "PwC Suisse – Family Office Reporting",
+          "labelKey": "PwC Suíça – Reporting de Family Offices",
           "url": "https://www.pwc.ch/fr/services/financial-services/asset-wealth-management/family-office.html"
         }
       ],
@@ -571,15 +571,15 @@
       "date": "2026-06-25",
       "references": [
         {
-          "labelKey": "Deloitte – Family Office Cost Benchmarking",
+          "labelKey": "Deloitte – Benchmarking de Custos do Family Office",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         },
         {
-          "labelKey": "KPMG – Family Office Services Switzerland",
+          "labelKey": "KPMG – Serviços Family Office Suíça",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         },
         {
-          "labelKey": "EY – Family Enterprise Survey",
+          "labelKey": "EY – Pesquisa de Empresas Familiares",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         },
         {
@@ -616,23 +616,23 @@
       ],
       "references": [
         {
-          "labelKey": "ESTV – Valeur locative (Eigenmietwert)",
+          "labelKey": "AFC – Valor locativo (Eigenmietwert)",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/einkuenfte/eigenmietwert.html"
         },
         {
-          "labelKey": "Fedlex – LIFD (revenus de la fortune immobilière)",
+          "labelKey": "Fedlex – LIFD (rendimentos do patrimônio imobiliário)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "SNB – Marché immobilier et stabilité financière",
+          "labelKey": "SNB – Mercado imobiliário e estabilidade financeira",
           "url": "https://www.snb.ch/fr/publications/research/financial-stability-report"
         },
         {
-          "labelKey": "PwC Suisse – Fiscalité immobilière privée",
+          "labelKey": "PwC Suíça – Fiscalidade imobiliária privada",
           "url": "https://www.pwc.ch/fr/services/tax-legal/private-clients.html"
         },
         {
-          "labelKey": "KPMG Suisse – Real Estate & Wealth",
+          "labelKey": "KPMG Suíça – Imobiliário e Patrimônio",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         }
       ],
@@ -645,19 +645,19 @@
       "date": "2026-06-18",
       "references": [
         {
-          "labelKey": "Deloitte – Global Family Office Survey",
+          "labelKey": "Deloitte – Pesquisa Global de Family Offices",
           "url": "https://www2.deloitte.com/ch/en/pages/finance/articles/family-office.html"
         },
         {
-          "labelKey": "KPMG Suisse – Enjeux patrimoniaux des familles",
+          "labelKey": "KPMG Suíça – Gestão patrimonial familiar",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         },
         {
-          "labelKey": "SNB – Rapport sur la stabilité financière",
+          "labelKey": "SNB – Relatório sobre estabilidade financeira",
           "url": "https://www.snb.ch/fr/publications/research/financial-stability-report"
         },
         {
-          "labelKey": "Fedlex – Code civil suisse (succession)",
+          "labelKey": "Fedlex – Código Civil suíço (direito sucessório)",
           "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
         }
       ],
@@ -690,7 +690,7 @@
       ],
       "references": [
         {
-          "labelKey": "ESTV – Imposition d'après la dépense (art. 14 LIFD)",
+          "labelKey": "AFC – Tributação por despesas (art. 14 LIFD)",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/spezialthemen/aufwandbesteuerung.html"
         },
         {
@@ -698,15 +698,15 @@
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "SIF – Conventions de double imposition",
+          "labelKey": "SIF – Convenções para evitar a dupla tributação",
           "url": "https://www.sif.admin.ch/sif/fr/home/bilateral/steuerabkommen.html"
         },
         {
-          "labelKey": "KPMG Suisse – Private Clients",
+          "labelKey": "KPMG Suíça – Clientes privados",
           "url": "https://kpmg.com/ch/fr/home/industries/financial-services/wealth-management.html"
         },
         {
-          "labelKey": "PwC Suisse – Imposition forfaitaire",
+          "labelKey": "PwC Suíça – Tributação forfetária",
           "url": "https://www.pwc.ch/fr/services/tax-legal/private-clients.html"
         }
       ],
@@ -719,19 +719,19 @@
       "date": "2026-06-10",
       "references": [
         {
-          "labelKey": "FINMA – Directive sur la gestion de fortune",
+          "labelKey": "FINMA – Diretiva sobre gestão patrimonial",
           "url": "https://www.finma.ch/fr/reglementation/circulaires/"
         },
         {
-          "labelKey": "Loi sur les établissements financiers (LEFin) – Fedlex",
+          "labelKey": "Lei de Instituições Financeiras (LEFin) – Fedlex",
           "url": "https://www.fedlex.admin.ch/eli/cc/2018/801/fr"
         },
         {
-          "labelKey": "Swiss Banking – Code de conduite",
+          "labelKey": "Swiss Banking – Código de conduta",
           "url": "https://www.swissbanking.ch/fr/themes/droit-et-compliance"
         },
         {
-          "labelKey": "Pictet – Gestion de fortune en Suisse",
+          "labelKey": "Pictet – Gestão patrimonial na Suíça",
           "url": "https://www.pictet.com/ch/fr/wealth-management"
         }
       ],
@@ -764,23 +764,23 @@
       ],
       "references": [
         {
-          "labelKey": "ESTV – Déductibilité des dons à des institutions d'utilité publique",
+          "labelKey": "AFC – Dedutibilidade de doações a instituições de utilidade pública",
           "url": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/natuerliche-personen/abzuege.html"
         },
         {
-          "labelKey": "Zewo – Certification des organisations d'utilité publique",
+          "labelKey": "Zewo – Certificação de organizações de utilidade pública",
           "url": "https://www.zewo.ch/fr/"
         },
         {
-          "labelKey": "Fedlex – LIFD art. 33a (dons)",
+          "labelKey": "Fedlex – LIFD art. 33a (doações)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "EY Suisse – Philanthropie et planification patrimoniale",
+          "labelKey": "EY Suíça – Filantropia e planejamento patrimonial",
           "url": "https://www.ey.com/fr_ch/family-enterprise"
         },
         {
-          "labelKey": "UBS – Philanthropie et family office",
+          "labelKey": "UBS – Filantropia e family office",
           "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
         }
       ],
@@ -793,7 +793,7 @@
       "date": "2026-06-01",
       "references": [
         {
-          "labelKey": "FINMA – Surveillance des établissements financiers",
+          "labelKey": "FINMA – Supervisão de instituições financeiras",
           "url": "https://www.finma.ch/fr/surveillance/etablissements-financiers/"
         },
         {
@@ -805,7 +805,7 @@
           "url": "https://www.ubs.com/global/en/wealth-management/family-office-solutions.html"
         },
         {
-          "labelKey": "Julius Baer – Family Office Services",
+          "labelKey": "Julius Baer – Serviços Family Office",
           "url": "https://www.juliusbaer.com/en/insights/family-office/"
         }
       ],
@@ -828,19 +828,19 @@
       "date": "2026-09-20",
       "references": [
         {
-          "labelKey": "ge.ch — Employer du personnel de maison",
+          "labelKey": "ge.ch — Empregar pessoal doméstico",
           "url": "https://www.ge.ch/employer-du-personnel-maison"
         },
         {
-          "labelKey": "ge.ch — Conditions et obligations à respecter",
+          "labelKey": "ge.ch — Condições e obrigações a respeitar",
           "url": "https://www.ge.ch/employer-du-personnel-maison/conditions-obligations-respecter"
         },
         {
-          "labelKey": "ge.ch — Les CTT en vigueur à Genève",
+          "labelKey": "ge.ch — CTT em vigor em Genebra",
           "url": "https://www.ge.ch/respecter-contrats-type-travail-ctt/ctt-vigueur-geneve"
         },
         {
-          "labelKey": "ge.ch — Déclarer son personnel de maison aux impôts",
+          "labelKey": "ge.ch — Declarar o pessoal doméstico nos impostos",
           "url": "https://www.ge.ch/impot-source-employeurs-assureurs-dpis/declarer-son-personnel-maison-aux-impots"
         }
       ],
@@ -863,19 +863,19 @@
       "date": "2026-09-21",
       "references": [
         {
-          "labelKey": "ge.ch — Annoncer mon arrivée à l'OCPM",
+          "labelKey": "ge.ch — Comunicar a minha chegada à OCPM",
           "url": "https://www.ge.ch/annoncer-mon-arrivee-ocpm"
         },
         {
-          "labelKey": "ge.ch — Annoncer un changement d'adresse",
+          "labelKey": "ge.ch — Comunicar uma mudança de morada",
           "url": "https://www.ge.ch/annoncer-changement-adresse-geneve"
         },
         {
-          "labelKey": "ge.ch — Office cantonal de la population et des migrations (OCPM)",
+          "labelKey": "ge.ch — Serviço Cantonal de População e Migrações (OCPM)",
           "url": "https://www.ge.ch/organisation/office-cantonal-population-migrations-ocpm"
         },
         {
-          "labelKey": "ch.ch — Assurance-maladie obligatoire",
+          "labelKey": "ch.ch — Seguro de saúde obrigatório",
           "url": "https://www.ch.ch/fr/assurance-maladie/"
         }
       ],
@@ -898,19 +898,19 @@
       "date": "2026-09-22",
       "references": [
         {
-          "labelKey": "ahv-iv.ch — Mémento 2.06 Travail domestique",
+          "labelKey": "ahv-iv.ch — Memorando 2.06 Trabalho doméstico",
           "url": "https://www.ahv-iv.ch/p/2.06.f"
         },
         {
-          "labelKey": "ahv-iv.ch — Mémento 2.01 Cotisations salariales AVS/AI/APG",
+          "labelKey": "ahv-iv.ch — Memorando 2.01 Contribuições salariais AHV/IV/EO",
           "url": "https://www.ahv-iv.ch/p/2.01.f"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi sur la prévoyance professionnelle (LPP)",
+          "labelKey": "fedlex.admin.ch — Lei sobre a Previdência Profissional (LPP)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi sur l'assurance-accidents (LAA)",
+          "labelKey": "fedlex.admin.ch — Lei sobre o Seguro de Acidentes (LAA)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/fr"
         }
       ],
@@ -933,19 +933,19 @@
       "date": "2026-09-23",
       "references": [
         {
-          "labelKey": "ge.ch — Demander une autorisation de construire",
+          "labelKey": "ge.ch — Solicitar licença de construção",
           "url": "https://www.ge.ch/demander-autorisation-construire"
         },
         {
-          "labelKey": "ge.ch — Bases légales et directives (autorisation de construire)",
+          "labelKey": "ge.ch — Bases legais e diretrizes (licença de construção)",
           "url": "https://www.ge.ch/demander-autorisation-construire/bases-legales-directives"
         },
         {
-          "labelKey": "ge.ch — Gérer le chantier",
+          "labelKey": "ge.ch — Gerir a obra",
           "url": "https://www.ge.ch/gerer-chantier"
         },
         {
-          "labelKey": "fedlex.admin.ch — Code des obligations (contrat d'entreprise)",
+          "labelKey": "fedlex.admin.ch — Código das Obrigações (contrato de empreitada)",
           "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr"
         }
       ],
@@ -968,19 +968,19 @@
       "date": "2026-09-24",
       "references": [
         {
-          "labelKey": "ge.ch — Chèque-service : un soutien administratif",
+          "labelKey": "ge.ch — Chèque-service: apoio administrativo",
           "url": "https://www.ge.ch/employer-du-personnel-maison/cheque-service-soutien-administratif"
         },
         {
-          "labelKey": "ge.ch — Déclarer votre employé aux assurances sociales",
+          "labelKey": "ge.ch — Inscrever o empregado na segurança social",
           "url": "https://www.ge.ch/covid-19-employeuses-employeurs-economie-domestique-obligations-informations/declarer-votre-employe-e-aux-assurances-sociales"
         },
         {
-          "labelKey": "ge.ch — Employer du personnel de maison",
+          "labelKey": "ge.ch — Empregar pessoal doméstico",
           "url": "https://www.ge.ch/employer-du-personnel-maison"
         },
         {
-          "labelKey": "fedlex.admin.ch — Code des obligations (mandat)",
+          "labelKey": "fedlex.admin.ch — Código das Obrigações (mandato)",
           "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr"
         }
       ],
@@ -1003,19 +1003,19 @@
       "date": "2026-09-25",
       "references": [
         {
-          "labelKey": "fedlex.admin.ch — Code des obligations (bail à loyer)",
+          "labelKey": "fedlex.admin.ch — Código das Obrigações (arrendamento)",
           "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Ordonnance sur le bail à loyer (OBLF)",
+          "labelKey": "fedlex.admin.ch — Ordenança sobre arrendamento (OBLF)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/fr"
         },
         {
-          "labelKey": "justice.ge.ch — Tribunal des baux et loyers",
+          "labelKey": "justice.ge.ch — Tribunal de arrendamentos (Tribunal des baux et loyers)",
           "url": "https://justice.ge.ch/fr/contenu/tribunal-des-baux-et-loyers"
         },
         {
-          "labelKey": "ge.ch — Registre du commerce",
+          "labelKey": "ge.ch — Registo Comercial",
           "url": "https://www.ge.ch/organisation/registre-du-commerce"
         }
       ],
@@ -1038,23 +1038,23 @@
       "date": "2026-09-26",
       "references": [
         {
-          "labelKey": "ge.ch — Office cantonal de la population et des migrations (OCPM)",
+          "labelKey": "ge.ch — Serviço Cantonal de População e Migrações (OCPM)",
           "url": "https://www.ge.ch/organisation/office-cantonal-population-migrations-ocpm"
         },
         {
-          "labelKey": "sem.admin.ch — Vivre et travailler en Suisse (types d'autorisations)",
+          "labelKey": "sem.admin.ch — Viver e trabalhar na Suíça (tipos de autorizações)",
           "url": "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html"
         },
         {
-          "labelKey": "ch.ch — Permis de séjour et autorisations de travail",
+          "labelKey": "ch.ch — Autorizações de residência e de trabalho",
           "url": "https://www.ch.ch/fr/etrangers-en-suisse/vivre-en-suisse/permis-de-sejour/"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi fédérale sur les étrangers et l'intégration (LEI)",
+          "labelKey": "fedlex.admin.ch — Lei Federal sobre Estrangeiros e Integração (LEI)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2007/758/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Accord sur la libre circulation des personnes (ALCP)",
+          "labelKey": "fedlex.admin.ch — Acordo sobre a livre circulação de pessoas (ALCP)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2002/243/fr"
         }
       ],
@@ -1077,19 +1077,19 @@
       "date": "2026-09-27",
       "references": [
         {
-          "labelKey": "ge.ch — Impôt à la source",
+          "labelKey": "ge.ch — Imposto na fonte",
           "url": "https://www.ge.ch/imposition-source"
         },
         {
-          "labelKey": "estv.admin.ch — Impôt à la source (AFC)",
+          "labelKey": "estv.admin.ch — Imposto na fonte (AFC)",
           "url": "https://www.estv.admin.ch/estv/fr/accueil/impot-federal-direct/impot-source.html"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi fédérale sur l'impôt fédéral direct (LIFD)",
+          "labelKey": "fedlex.admin.ch — Lei Federal sobre o Imposto Federal Direto (LIFD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi sur l'harmonisation des impôts directs (LHID)",
+          "labelKey": "fedlex.admin.ch — Lei de Harmonização dos Impostos Diretos (LHID)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr"
         }
       ],
@@ -1112,15 +1112,15 @@
       "date": "2026-09-28",
       "references": [
         {
-          "labelKey": "edu.ge.ch — Département de l'instruction publique (DIP)",
+          "labelKey": "edu.ge.ch — Departamento de Instrução Pública (DIP)",
           "url": "https://edu.ge.ch/"
         },
         {
-          "labelKey": "ge.ch — Département de l'instruction publique, de la formation et de la jeunesse",
+          "labelKey": "ge.ch — Departamento de Instrução Pública, Formação e Juventude (DIP)",
           "url": "https://www.ge.ch/organisation/departement-instruction-publique-formation-jeunesse-dip"
         },
         {
-          "labelKey": "ge.ch — Scolarité obligatoire",
+          "labelKey": "ge.ch — Escolaridade obrigatória",
           "url": "https://www.ge.ch/dossier/scolarite-obligatoire"
         }
       ],
@@ -1143,19 +1143,19 @@
       "date": "2026-09-29",
       "references": [
         {
-          "labelKey": "ge.ch — Office cantonal de la population et des migrations (OCPM)",
+          "labelKey": "ge.ch — Serviço Cantonal de População e Migrações (OCPM)",
           "url": "https://www.ge.ch/organisation/office-cantonal-population-migrations-ocpm"
         },
         {
-          "labelKey": "fedlex.admin.ch — Code civil suisse (CC)",
+          "labelKey": "fedlex.admin.ch — Código Civil suíço (CC)",
           "url": "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi fédérale sur l'impôt fédéral direct (LIFD)",
+          "labelKey": "fedlex.admin.ch — Lei Federal sobre o Imposto Federal Direto (LIFD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
         },
         {
-          "labelKey": "fedlex.admin.ch — Loi sur l'harmonisation des impôts directs (LHID)",
+          "labelKey": "fedlex.admin.ch — Lei de Harmonização dos Impostos Diretos (LHID)",
           "url": "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr"
         }
       ],
@@ -1178,15 +1178,15 @@
       "date": "2026-09-30",
       "references": [
         {
-          "labelKey": "priminfo.admin.ch — Primes de l'assurance-maladie (OFSP)",
+          "labelKey": "priminfo.admin.ch — Prémios do seguro de saúde (OFSP)",
           "url": "https://www.priminfo.admin.ch/fr"
         },
         {
-          "labelKey": "bag.admin.ch — Assurance obligatoire des soins (OFSP)",
+          "labelKey": "bag.admin.ch — Seguro obrigatório de saúde (OFSP)",
           "url": "https://www.bag.admin.ch/bag/fr/home/versicherungen/krankenversicherung.html"
         },
         {
-          "labelKey": "ge.ch — Assurance-maladie",
+          "labelKey": "ge.ch — Seguro de saúde",
           "url": "https://www.ge.ch/dossier/assurance-maladie"
         }
       ],
@@ -1209,15 +1209,15 @@
       "date": "2026-10-01",
       "references": [
         {
-          "labelKey": "ge.ch — Office cantonal des véhicules (OCV)",
+          "labelKey": "ge.ch — Serviço Cantonal de Veículos (OCV)",
           "url": "https://www.ge.ch/organisation/office-cantonal-vehicules-ocv"
         },
         {
-          "labelKey": "ge.ch — Échanger un permis de conduire étranger",
+          "labelKey": "ge.ch — Trocar carta de condução estrangeira",
           "url": "https://www.ge.ch/echanger-permis-conduire-etranger"
         },
         {
-          "labelKey": "ch.ch — Circuler en Suisse avec un permis de conduire étranger",
+          "labelKey": "ch.ch — Conduzir na Suíça com carta de condução estrangeira",
           "url": "https://www.ch.ch/fr/vehicules-et-circulation/permis-de-conduire/permis-de-conduire-etranger/"
         }
       ],
