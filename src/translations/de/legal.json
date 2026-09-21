@@ -1,343 +1,343 @@
 {
     "Terms": {
-        "Title": "Conditions d'Utilisation",
-        "Subtitle": "Nos conditions d'utilisation",
-        "LastUpdated": "Dernière mise à jour",
+        "Title": "Nutzungsbedingungen",
+        "Subtitle": "Unsere Nutzungsbedingungen",
+        "LastUpdated": "Zuletzt aktualisiert",
         "Introduction": {
-            "Title": "Introduction",
+            "Title": "Einleitung",
             "Content": {
-                "0": "Bienvenue chez Ridger. Ridger est une marque de Ark Fiduciaire SA, Genève. Ces Conditions d'utilisation (\"Conditions\") régissent l'utilisation de notre site web et de nos services.",
-                "1": "En accédant ou en utilisant nos services, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, vous ne pouvez pas accéder à nos services."
+                "0": "Willkommen bei Ridger. Ridger ist eine Marke der Ark Fiduciaire SA, Genf. Diese Nutzungsbedingungen (\"Bedingungen\") regeln die Nutzung unserer Website und unserer Leistungen.",
+                "1": "Mit dem Zugriff auf unsere Leistungen oder deren Nutzung erklären Sie sich mit diesen Bedingungen einverstanden. Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, dürfen Sie unsere Leistungen nicht in Anspruch nehmen."
             }
         },
         "Services": {
-            "Title": "Nos Services",
+            "Title": "Unsere Leistungen",
             "Content": {
-                "0": "Ridger, marque de Ark Fiduciaire SA, fournit des services de family office : reporting consolidé, surveillance des investissements, coordination, gouvernance et succession, coordination fiscale et administrative, et coffre-fort numérique. L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés du client. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
-                "1": "Tous les services sont fournis conformément au droit suisse."
+                "0": "Ridger, Marke der Ark Fiduciaire SA, erbringt Family-Office-Leistungen: konsolidiertes Reporting, Anlageüberwachung, Koordination, Governance und Nachfolge, steuerliche und administrative Koordination sowie digitaler Tresor. Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern des Kunden. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+                "1": "Alle Leistungen werden nach schweizerischem Recht erbracht."
             }
         },
         "Responsibilities": {
-            "Title": "Responsabilités du Client",
+            "Title": "Pflichten des Kunden",
             "Content": {
-                "0": "Les clients doivent fournir des informations précises, complètes et opportunes nécessaires à la prestation de nos services.",
-                "1": "Les clients sont responsables de maintenir la confidentialité de leurs identifiants de connexion et de toutes les activités sous leur compte.",
-                "2": "Les clients doivent se conformer à toutes les lois et réglementations applicables dans leurs opérations commerciales."
+                "0": "Kunden haben die für die Erbringung unserer Leistungen erforderlichen Angaben präzise, vollständig und zeitgerecht bereitzustellen.",
+                "1": "Kunden sind für die Vertraulichkeit ihrer Zugangsdaten und für alle Aktivitäten unter ihrem Konto verantwortlich.",
+                "2": "Kunden haben in ihrer Geschäftstätigkeit alle anwendbaren Gesetze und Vorschriften einzuhalten."
             }
         },
         "ProfessionalStandards": {
-            "Title": "Normes Professionnelles et Confidentialité",
+            "Title": "Berufsstandards und Vertraulichkeit",
             "Content": {
-                "0": "Nous maintenons une stricte confidentialité concernant toutes les informations clients conformément aux lois suisses sur le secret professionnel et à la Loi Fédérale sur la Protection des Données (LPD).",
-                "1": "Nos services sont fournis par des professionnels qualifiés qui adhèrent aux plus hauts standards d'éthique et de compétence requis par les associations professionnelles suisses.",
-                "2": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles et informations commerciales contre l'accès non autorisé, l'altération, la divulgation ou la destruction."
+                "0": "Wir wahren strikte Vertraulichkeit in Bezug auf sämtliche Kundeninformationen im Einklang mit den schweizerischen Gesetzen zum Berufsgeheimnis und dem Bundesgesetz über den Datenschutz (DSG).",
+                "1": "Unsere Leistungen werden von qualifizierten Fachpersonen erbracht, die sich an die höchsten von den schweizerischen Berufsverbänden geforderten Standards an Ethik und Kompetenz halten.",
+                "2": "Wir treffen angemessene technische und organisatorische Massnahmen, um Ihre personenbezogenen Daten und Geschäftsinformationen vor unbefugtem Zugriff, Veränderung, Offenlegung oder Zerstörung zu schützen."
             }
         },
         "Fees": {
-            "Title": "Honoraires et Conditions de Paiement",
-            "Intro": "Les honoraires de service sont établis sur la base de :",
+            "Title": "Honorare und Zahlungsbedingungen",
+            "Intro": "Die Honorare werden auf folgender Grundlage festgelegt:",
             "Factors": {
-                "0": "Complexité et portée des services requis",
-                "1": "Temps et ressources alloués à votre engagement",
-                "2": "Tarifs du marché pour des services professionnels similaires",
-                "3": "Conditions spécifiques décrites dans votre accord de service"
+                "0": "Komplexität und Umfang der geforderten Leistungen",
+                "1": "Für Ihr Mandat eingesetzte Zeit und Ressourcen",
+                "2": "Marktübliche Tarife für vergleichbare berufliche Leistungen",
+                "3": "Spezifische Bedingungen gemäss Ihrer Dienstleistungsvereinbarung"
             },
-            "PaymentTerms": "Les conditions de paiement sont généralement de 30 jours à compter de la date de facturation sauf accord contraire. Un paiement tardif peut entraîner des frais d'intérêts et la suspension des services. Tous les honoraires sont soumis à la TVA suisse applicable."
+            "PaymentTerms": "Die Zahlungsfrist beträgt in der Regel 30 Tage ab Rechnungsdatum, sofern nichts anderes vereinbart wurde. Verspätete Zahlung kann Verzugszinsen und die Aussetzung der Leistungen zur Folge haben. Alle Honorare unterliegen der anwendbaren schweizerischen Mehrwertsteuer."
         },
         "Liability": {
-            "Title": "Limitation de Responsabilité",
-            "Overview": "Notre responsabilité est limitée au maximum autorisé par la loi suisse. Nous maintenons une assurance responsabilité professionnelle comme requis par nos associations professionnelles.",
-            "ExclusionsIntro": "Nous ne serons pas responsables pour :",
+            "Title": "Haftungsbeschränkung",
+            "Overview": "Unsere Haftung ist auf das nach schweizerischem Recht zulässige Höchstmass beschränkt. Wir unterhalten eine Berufshaftpflichtversicherung, wie von unseren Berufsverbänden gefordert.",
+            "ExclusionsIntro": "Wir haften nicht für:",
             "Exclusions": {
-                "0": "Dommages consécutifs, indirects ou spéciaux",
-                "1": "Perte de profits ou d'opportunités commerciales",
-                "2": "Dommages résultant de l'échec du client à fournir des informations précises",
-                "3": "Événements de force majeure au-delà de notre contrôle raisonnable"
+                "0": "Folge-, mittelbare oder besondere Schäden",
+                "1": "Entgangenen Gewinn oder verpasste Geschäftschancen",
+                "2": "Schäden, die aus der Nichtbereitstellung präziser Angaben durch den Kunden entstehen",
+                "3": "Ereignisse höherer Gewalt ausserhalb unserer zumutbaren Kontrolle"
             },
-            "Cap": "Notre responsabilité totale n'excédera pas les honoraires payés pour le service spécifique donnant lieu à la réclamation."
+            "Cap": "Unsere Gesamthaftung übersteigt nicht die für die konkrete, den Anspruch begründende Leistung gezahlten Honorare."
         },
         "Termination": {
-            "Title": "Résiliation",
-            "General": "Chaque partie peut résilier cet accord avec un préavis écrit de 30 jours. La résiliation immédiate peut survenir en cas de :",
+            "Title": "Kündigung",
+            "General": "Jede Partei kann diese Vereinbarung mit einer schriftlichen Frist von 30 Tagen kündigen. Eine fristlose Kündigung kann erfolgen bei:",
             "Immediate": {
-                "0": "Violation substantielle de ces Conditions",
-                "1": "Non-paiement des honoraires",
-                "2": "Circonstances qui compromettraient notre indépendance professionnelle"
+                "0": "Wesentlicher Verletzung dieser Bedingungen",
+                "1": "Nichtzahlung der Honorare",
+                "2": "Umständen, die unsere berufliche Unabhängigkeit beeinträchtigen würden"
             },
-            "UponTermination": "Lors de la résiliation, nous :",
+            "UponTermination": "Bei Kündigung werden wir:",
             "Actions": {
-                "0": "Terminerons le travail en cours (sous réserve de paiement)",
-                "1": "Retournerons les documents et données du client",
-                "2": "Fournirons une assistance raisonnable dans la transition vers de nouveaux prestataires de services",
-                "3": "Continuerons à maintenir les obligations de confidentialité"
+                "0": "Laufende Arbeiten abschliessen (vorbehaltlich Zahlung)",
+                "1": "Dokumente und Daten des Kunden zurückgeben",
+                "2": "Angemessene Unterstützung beim Übergang zu neuen Dienstleistern leisten",
+                "3": "Die Vertraulichkeitspflichten weiterhin einhalten"
             }
         },
         "GoverningLaw": {
-            "Title": "Droit Applicable",
-            "Description": "Ces Conditions sont régies par le droit suisse. Tout litige découlant de ces Conditions ou de notre relation professionnelle sera résolu par :",
+            "Title": "Anwendbares Recht",
+            "Description": "Diese Bedingungen unterstehen dem schweizerischen Recht. Jede aus diesen Bedingungen oder unserer Geschäftsbeziehung entstehende Streitigkeit wird beigelegt durch:",
             "Resolution": {
-                "0": "Négociations de bonne foi entre les parties",
-                "1": "Médiation par un service de médiation commerciale suisse reconnu",
-                "2": "Si nécessaire, litige devant les tribunaux suisses compétents"
+                "0": "Verhandlungen nach Treu und Glauben zwischen den Parteien",
+                "1": "Mediation durch einen anerkannten schweizerischen Wirtschaftsmediationsdienst",
+                "2": "Falls erforderlich, Klage vor den zuständigen schweizerischen Gerichten"
             },
-            "Jurisdiction": "Le lieu de juridiction est le siège social de Ark Fiduciaire SA, Genève, Suisse."
+            "Jurisdiction": "Gerichtsstand ist der Sitz der Ark Fiduciaire SA, Genf, Schweiz."
         },
         "Contact": {
-            "Title": "Informations de Contact",
-            "Description": "Pour toute question concernant ces Conditions d'utilisation ou nos services professionnels, veuillez nous contacter :",
+            "Title": "Kontaktangaben",
+            "Description": "Bei Fragen zu diesen Nutzungsbedingungen oder unseren beruflichen Leistungen kontaktieren Sie uns bitte:",
             "CompanyName": "Ridger — Ark Fiduciaire SA",
             "Email": "contact@ridger.ch",
-            "Address": "26 Boulevard Georges-Favon, 1204 Genève",
-            "Commitment": "Nous nous engageons à maintenir les plus hauts standards de service professionnel et de satisfaction client."
+            "Address": "26 Boulevard Georges-Favon, 1204 Genf",
+            "Commitment": "Wir verpflichten uns, höchste Standards an professionellem Service und Kundenzufriedenheit einzuhalten."
         },
-        "SoFitAffiliation": "Ark Fiduciaire SA, Genève (opérateur de la marque Ridger), est affiliée à l'OAR de",
-        "SoFitAffiliationSuffix": " (organisme d'autorégulation au sens de la LBA/LSFin)."
+        "SoFitAffiliation": "Die Ark Fiduciaire SA, Genf (Betreiberin der Marke Ridger), ist der SRO angeschlossen von",
+        "SoFitAffiliationSuffix": " (Selbstregulierungsorganisation im Sinne des GwG/FIDLEG)."
     },
     "Privacy": {
-        "Title": "Politique de Confidentialité",
-        "LastUpdated": "Dernière mise à jour",
-        "Subtitle": "Protection des Données et Avis de Confidentialité",
+        "Title": "Datenschutzerklärung",
+        "LastUpdated": "Zuletzt aktualisiert",
+        "Subtitle": "Datenschutz und Datenschutzhinweis",
         "Introduction": {
-            "Title": "Introduction",
+            "Title": "Einleitung",
             "Content": [
-                "Chez Ridger, marque de Ark Fiduciaire SA, Genève, nous nous engageons à protéger votre vie privée et vos données personnelles conformément à la Loi Fédérale Suisse sur la Protection des Données (LPD) et aux réglementations UE applicables.",
-                "Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos services."
+                "Bei Ridger, Marke der Ark Fiduciaire SA, Genf, verpflichten wir uns, Ihre Privatsphäre und Ihre personenbezogenen Daten im Einklang mit dem schweizerischen Bundesgesetz über den Datenschutz (DSG) und den anwendbaren EU-Vorschriften zu schützen.",
+                "Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen erheben, verwenden und schützen, wenn Sie unsere Leistungen nutzen."
             ]
         },
         "DataController": {
-            "Title": "Responsable du Traitement",
-            "Content": "Ark Fiduciaire SA, Genève, opérateur de la marque Ridger, agit en tant que responsable du traitement pour les données personnelles collectées et traitées en lien avec nos services.",
-            "ContactDetails": "Coordonnées :",
+            "Title": "Verantwortlicher",
+            "Content": "Die Ark Fiduciaire SA, Genf, Betreiberin der Marke Ridger, handelt als Verantwortliche für die im Zusammenhang mit unseren Leistungen erhobenen und bearbeiteten personenbezogenen Daten.",
+            "ContactDetails": "Kontaktangaben:",
             "CompanyName": "Ridger — Ark Fiduciaire SA",
             "Email": "contact@ridger.ch",
-            "Address": "26 Boulevard Georges-Favon, 1204 Genève"
+            "Address": "26 Boulevard Georges-Favon, 1204 Genf"
         },
         "DataCollection": {
-            "Title": "Données que Nous Collectons",
+            "Title": "Daten, die wir erheben",
             "ProfessionalData": {
-                "Title": "Données de Services Professionnels :",
+                "Title": "Daten aus beruflichen Leistungen:",
                 "Items": [
-                    "Informations d'identification personnelle (nom, adresse, date de naissance)",
-                    "Informations de contact (email, téléphone, adresse professionnelle)",
-                    "Informations financières (coordonnées bancaires, revenus, dépenses, actifs)",
-                    "Numéros fiscaux et de sécurité sociale",
-                    "Informations d'emploi et d'entreprise",
-                    "Documentation légale et de conformité"
+                    "Angaben zur Identifikation (Name, Adresse, Geburtsdatum)",
+                    "Kontaktangaben (E-Mail, Telefon, Geschäftsadresse)",
+                    "Finanzinformationen (Bankverbindung, Einkünfte, Ausgaben, Vermögenswerte)",
+                    "Steuer- und Sozialversicherungsnummern",
+                    "Angaben zu Anstellung und Unternehmen",
+                    "Rechtliche und Compliance-Dokumentation"
                 ]
             },
             "WebsiteData": {
-                "Title": "Données du Site Web :",
+                "Title": "Daten der Website:",
                 "Items": [
-                    "Informations techniques (adresse IP, type de navigateur, informations de l'appareil)",
-                    "Données d'utilisation (pages visitées, temps passé, sources de référence)",
-                    "Cookies et technologies de suivi similaires",
-                    "Soumissions de formulaires de contact et communications",
-                    "Contenu du chat IA et informations de contact (email, nom, société, téléphone) enregistrés dans notre système de suivi (Microsoft 365/SharePoint) pour répondre à votre demande"
+                    "Technische Informationen (IP-Adresse, Browsertyp, Geräteinformationen)",
+                    "Nutzungsdaten (besuchte Seiten, Verweildauer, Verweisquellen)",
+                    "Cookies und ähnliche Tracking-Technologien",
+                    "Übermittlungen von Kontaktformularen und Kommunikation",
+                    "Inhalt des KI-Chats und Kontaktangaben (E-Mail, Name, Unternehmen, Telefon), die in unserem Tracking-System (Microsoft 365/SharePoint) zur Beantwortung Ihrer Anfrage gespeichert werden"
                 ]
             }
         },
         "LegalBasis": {
-            "Title": "Base Légale pour le Traitement",
-            "Description": "Nous traitons vos données personnelles sur la base des fondements légaux suivants :",
+            "Title": "Rechtsgrundlage der Bearbeitung",
+            "Description": "Wir bearbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:",
             "Grounds": [
-                "Exécution du contrat : Pour fournir des services professionnels de comptabilité et de conseil",
-                "Conformité légale : Pour répondre aux exigences réglementaires et de reporting suisses",
-                "Intérêts légitimes : Pour les opérations commerciales, la prévention de la fraude et l'amélioration des services",
-                "Consentement : Pour les communications marketing et cookies non essentiels (si requis)",
-                "Intérêts vitaux : Pour protéger vos intérêts vitaux ou ceux d'autrui en situations d'urgence"
+                "Vertragserfüllung: Zur Erbringung von beruflichen Buchhaltungs- und Beratungsleistungen",
+                "Rechtliche Compliance: Zur Erfüllung der schweizerischen regulatorischen und Berichterstattungspflichten",
+                "Berechtigte Interessen: Für Geschäftstätigkeit, Betrugsprävention und Verbesserung der Leistungen",
+                "Einwilligung: Für Marketingkommunikation und nicht wesentliche Cookies (sofern erforderlich)",
+                "Lebenswichtige Interessen: Zum Schutz Ihrer lebenswichtigen Interessen oder derjenigen Dritter in Notsituationen"
             ]
         },
         "DataUse": {
-            "Title": "Comment Nous Utilisons Vos Données",
+            "Title": "Wie wir Ihre Daten verwenden",
             "ServiceDelivery": {
-                "Title": "Prestation de Services :",
+                "Title": "Leistungserbringung:",
                 "Items": [
-                    "Fournir des services de comptabilité, fiscalité, paie et conseil",
-                    "Préparer des états financiers et rapports",
-                    "Gérer les obligations de conformité",
-                    "Communiquer sur vos services et votre compte",
-                    "Répondre aux demandes via l'assistant IA, enregistrer l'échange et préparer les devis de suivi"
+                    "Erbringung von Buchhaltungs-, Steuer-, Lohn- und Beratungsleistungen",
+                    "Erstellung von Jahresabschlüssen und Berichten",
+                    "Verwaltung der Compliance-Pflichten",
+                    "Kommunikation zu Ihren Leistungen und Ihrem Konto",
+                    "Beantwortung von Anfragen über den KI-Assistenten, Aufzeichnung des Austauschs und Vorbereitung von Folgeofferten"
                 ]
             },
             "BusinessOperations": {
-                "Title": "Opérations Commerciales :",
+                "Title": "Geschäftstätigkeit:",
                 "Items": [
-                    "Gestion des relations clients",
-                    "Assurance qualité et développement professionnel",
-                    "Gestion des risques et prévention de la fraude",
-                    "Conformité légale et réglementaire",
-                    "Continuité d'activité et reprise après sinistre"
+                    "Verwaltung der Kundenbeziehungen",
+                    "Qualitätssicherung und berufliche Weiterentwicklung",
+                    "Risikomanagement und Betrugsprävention",
+                    "Rechtliche und regulatorische Compliance",
+                    "Betriebskontinuität und Notfallwiederherstellung"
                 ]
             }
         },
         "DataSharing": {
-            "Title": "Partage de Données",
-            "Description": "Nous pouvons partager vos données personnelles avec :",
+            "Title": "Weitergabe von Daten",
+            "Description": "Wir können Ihre personenbezogenen Daten weitergeben an:",
             "Recipients": [
-                "Autorités fiscales suisses et organismes de réglementation (légalement requis)",
-                "Banques et institutions financières (pour le traitement des paiements)",
-                "Prestataires de services professionnels (auditeurs, conseil juridique, support IT)",
-                "Odoo SA et partenaires certifiés (pour les services ERP)",
-                "Fournisseurs de services cloud avec garanties appropriées, dont Microsoft 365/SharePoint pour le suivi des leads"
+                "Schweizerische Steuerbehörden und Aufsichtsorgane (soweit gesetzlich vorgeschrieben)",
+                "Banken und Finanzinstitute (zur Zahlungsabwicklung)",
+                "Berufliche Dienstleister (Revisoren, Rechtsberatung, IT-Support)",
+                "Odoo SA und zertifizierte Partner (für ERP-Leistungen)",
+                "Cloud-Dienstleister mit angemessenen Garantien, darunter Microsoft 365/SharePoint für das Lead-Tracking"
             ],
-            "NoSelling": "Nous ne vendons pas de données personnelles à des tiers. Tout partage est effectué avec des accords de confidentialité appropriés et des mesures de protection des données en place."
+            "NoSelling": "Wir verkaufen keine personenbezogenen Daten an Dritte. Jede Weitergabe erfolgt mit angemessenen Vertraulichkeitsvereinbarungen und Datenschutzmassnahmen."
         },
         "DataSecurity": {
-            "Title": "Sécurité des Données",
-            "Description": "Nous mettons en œuvre des mesures de sécurité complètes incluant :",
+            "Title": "Datensicherheit",
+            "Description": "Wir setzen umfassende Sicherheitsmassnahmen um, darunter:",
             "Measures": [
-                "Chiffrement des données en transit et au repos",
-                "Authentification multi-facteurs et contrôles d'accès",
-                "Évaluations et mises à jour de sécurité régulières",
-                "Formation du personnel sur la protection des données",
-                "Procédures sécurisées de sauvegarde et de reprise après sinistre"
+                "Verschlüsselung der Daten während der Übertragung und im Ruhezustand",
+                "Mehrstufige Authentifizierung und Zugriffskontrollen",
+                "Regelmässige Sicherheitsüberprüfungen und -aktualisierungen",
+                "Schulung des Personals im Datenschutz",
+                "Sichere Sicherungs- und Notfallwiederherstellungsverfahren"
             ],
             "Retention": {
-                "Title": "Conservation des Données :",
-                "Professional": "Dossiers de services professionnels : Comme requis par la loi suisse (typiquement 10 ans)",
-                "Financial": "Dossiers financiers et fiscaux : Comme exigé par les exigences réglementaires",
-                "Website": "Données du site web : Pour la durée nécessaire pour accomplir les objectifs déclarés",
-                "Marketing": "Données marketing : Jusqu'à ce que le consentement soit retiré ou que les données ne soient plus nécessaires"
+                "Title": "Aufbewahrung der Daten:",
+                "Professional": "Unterlagen zu beruflichen Leistungen: Gemäss schweizerischem Recht (in der Regel 10 Jahre)",
+                "Financial": "Finanz- und Steuerunterlagen: Gemäss den regulatorischen Anforderungen",
+                "Website": "Daten der Website: Für die zur Erfüllung der genannten Zwecke erforderliche Dauer",
+                "Marketing": "Marketingdaten: Bis zum Widerruf der Einwilligung oder solange die Daten nicht mehr benötigt werden"
             }
         },
         "YourRights": {
-            "Title": "Vos Droits",
-            "Description": "Sous la loi suisse de protection des données, vous avez le droit de :",
+            "Title": "Ihre Rechte",
+            "Description": "Nach dem schweizerischen Datenschutzrecht haben Sie das Recht auf:",
             "Access": {
-                "Title": "Accès",
-                "Description": "Demander des informations sur les données personnelles que nous détenons sur vous"
+                "Title": "Auskunft",
+                "Description": "Informationen über die personenbezogenen Daten anzufordern, die wir über Sie halten"
             },
             "Rectification": {
-                "Title": "Rectification",
-                "Description": "Corriger des données personnelles inexactes ou incomplètes"
+                "Title": "Berichtigung",
+                "Description": "Unrichtige oder unvollständige personenbezogene Daten zu berichtigen"
             },
             "Erasure": {
-                "Title": "Effacement",
-                "Description": "Demander la suppression de données personnelles (sous réserve d'obligations légales)"
+                "Title": "Löschung",
+                "Description": "Die Löschung personenbezogener Daten zu verlangen (vorbehaltlich gesetzlicher Pflichten)"
             },
             "Restriction": {
-                "Title": "Restriction",
-                "Description": "Limiter le traitement dans certaines circonstances"
+                "Title": "Einschränkung",
+                "Description": "Die Bearbeitung unter bestimmten Umständen einzuschränken"
             },
             "Portability": {
-                "Title": "Portabilité des Données",
-                "Description": "Recevoir vos données dans un format structuré et lisible par machine"
+                "Title": "Datenübertragbarkeit",
+                "Description": "Ihre Daten in einem strukturierten, maschinenlesbaren Format zu erhalten"
             },
             "Object": {
-                "Title": "Opposition",
-                "Description": "S'opposer au traitement basé sur des intérêts légitimes"
+                "Title": "Widerspruch",
+                "Description": "Der auf berechtigten Interessen beruhenden Bearbeitung zu widersprechen"
             },
             "WithdrawConsent": {
-                "Title": "Retirer le Consentement",
-                "Description": "Pour le traitement basé sur le consentement"
+                "Title": "Widerruf der Einwilligung",
+                "Description": "Für die auf Einwilligung beruhende Bearbeitung"
             },
-            "Exercise": "Pour exercer ces droits, contactez-nous à contact@ridger.ch. Nous répondrons dans les 30 jours."
+            "Exercise": "Um diese Rechte auszuüben, kontaktieren Sie uns unter contact@ridger.ch. Wir antworten innerhalb von 30 Tagen."
         },
         "InternationalTransfers": {
-            "Title": "Transferts Internationaux de Données",
-            "Description": "Nous pouvons transférer des données personnelles hors de Suisse vers :",
+            "Title": "Internationale Datenübermittlungen",
+            "Description": "Wir können personenbezogene Daten ausserhalb der Schweiz übermitteln an:",
             "Destinations": {
-                "0": "Pays UE/EEE avec protection des données adéquate",
-                "1": "Pays avec décisions d'adéquation des autorités suisses",
-                "2": "Pays tiers avec garanties appropriées (clauses contractuelles types)"
+                "0": "EU-/EWR-Länder mit angemessenem Datenschutz",
+                "1": "Länder mit Angemessenheitsbeschlüssen der schweizerischen Behörden",
+                "2": "Drittländer mit angemessenen Garantien (Standardvertragsklauseln)"
             },
-            "Safeguards": "Tous les transferts internationaux sont effectués avec des garanties légales appropriées pour assurer que vos données restent protégées selon les standards suisses."
+            "Safeguards": "Alle internationalen Übermittlungen erfolgen mit angemessenen rechtlichen Garantien, um sicherzustellen, dass Ihre Daten nach schweizerischen Standards geschützt bleiben."
         },
         "PolicyChanges": {
-            "Title": "Modifications de cette Politique",
-            "Description": "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter des changements dans nos pratiques, services ou exigences légales. Les changements substantiels seront communiqués par :",
+            "Title": "Änderungen dieser Erklärung",
+            "Description": "Wir können diese Datenschutzerklärung aktualisieren, um Änderungen unserer Praktiken, Leistungen oder gesetzlicher Anforderungen widerzuspiegeln. Wesentliche Änderungen werden mitgeteilt durch:",
             "Communication": {
-                "0": "Notification par email aux clients enregistrés",
-                "1": "Avis visible sur notre site web",
-                "2": "Communication directe lors d'interactions de service"
+                "0": "E-Mail-Benachrichtigung an registrierte Kunden",
+                "1": "Sichtbaren Hinweis auf unserer Website",
+                "2": "Direkte Kommunikation im Rahmen von Dienstleistungsinteraktionen"
             },
-            "Effectiveness": "La politique mise à jour sera effective à partir de la date spécifiée dans la version révisée."
+            "Effectiveness": "Die aktualisierte Erklärung gilt ab dem in der überarbeiteten Fassung angegebenen Datum."
         },
         "Contact": {
-            "Title": "Nous Contacter",
-            "Description": "Si vous avez des questions sur cette Politique de Confidentialité ou souhaitez exercer vos droits, veuillez nous contacter :",
+            "Title": "Kontakt",
+            "Description": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte:",
             "CompanyName": "Ridger",
             "Email": "contact@ridger.ch",
-            "Address": "26 Boulevard Georges-Favon, 1204 Genève"
+            "Address": "26 Boulevard Georges-Favon, 1204 Genf"
         }
     },
     "Cookies": {
-        "Title": "Politique des Cookies",
-        "LastUpdated": "Dernière mise à jour",
-        "Subtitle": "Informations sur notre utilisation des cookies et technologies de suivi",
+        "Title": "Cookie-Richtlinie",
+        "LastUpdated": "Zuletzt aktualisiert",
+        "Subtitle": "Informationen zu unserer Verwendung von Cookies und Tracking-Technologien",
         "Introduction": {
-            "Title": "Introduction",
+            "Title": "Einleitung",
             "Content": [
-                "Cette Politique des Cookies explique comment Ridger utilise les cookies et technologies de suivi similaires sur notre site web. Elle fournit des informations sur ce que sont les cookies, comment nous les utilisons et vos choix concernant leur utilisation.",
-                "En utilisant notre site web, vous consentez à l'utilisation de cookies conformément à cette politique et à notre Politique de Confidentialité."
+                "Diese Cookie-Richtlinie erläutert, wie Ridger Cookies und ähnliche Tracking-Technologien auf unserer Website verwendet. Sie informiert darüber, was Cookies sind, wie wir sie verwenden und welche Wahlmöglichkeiten Sie bezüglich ihrer Verwendung haben.",
+                "Durch die Nutzung unserer Website willigen Sie in die Verwendung von Cookies im Einklang mit dieser Richtlinie und unserer Datenschutzerklärung ein."
             ]
         },
         "WhatAreCookies": {
-            "Title": "Que sont les Cookies ?",
-            "Description": "Les cookies sont de petits fichiers texte stockés sur votre appareil (ordinateur, tablette ou mobile) lorsque vous visitez un site web. Ils permettent au site web de reconnaître votre appareil et de stocker des informations sur vos préférences ou actions passées.",
-            "CookiesContain": "Les cookies contiennent typiquement :",
+            "Title": "Was sind Cookies?",
+            "Description": "Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Tablet oder Mobiltelefon) gespeichert werden, wenn Sie eine Website besuchen. Sie ermöglichen es der Website, Ihr Gerät wiederzuerkennen und Informationen zu Ihren Präferenzen oder früheren Handlungen zu speichern.",
+            "CookiesContain": "Cookies enthalten typischerweise:",
             "Contents": [
-                "Le nom du serveur qui a placé le cookie",
-                "Un identifiant sous forme de numéro unique",
-                "Une date d'expiration (certains cookies ne durent que la durée de votre session)"
+                "Den Namen des Servers, der das Cookie gesetzt hat",
+                "Eine Kennung in Form einer eindeutigen Nummer",
+                "Ein Ablaufdatum (manche Cookies bestehen nur für die Dauer Ihrer Sitzung)"
             ]
         },
         "Types": {
-            "Title": "Types de Cookies que Nous Utilisons",
+            "Title": "Arten von Cookies, die wir verwenden",
             "Essential": {
-                "Title": "1. Cookies Essentiels",
-                "Description": "Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés.",
-                "Purpose": "Objectif :",
+                "Title": "1. Wesentliche Cookies",
+                "Description": "Diese Cookies sind für das ordnungsgemässe Funktionieren der Website notwendig und können nicht deaktiviert werden.",
+                "Purpose": "Zweck:",
                 "Items": [
-                    "Navigation du site web et fonctionnalité de base",
-                    "Sécurité et authentification",
-                    "Préférences de langue et d'accessibilité",
-                    "Soumission de formulaire et gestion de session"
+                    "Navigation der Website und grundlegende Funktionalität",
+                    "Sicherheit und Authentifizierung",
+                    "Sprach- und Barrierefreiheitspräferenzen",
+                    "Formularübermittlung und Sitzungsverwaltung"
                 ]
             },
             "Analytics": {
-                "Title": "2. Cookies d'Analyse",
-                "Description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant et rapportant des informations de manière anonyme.",
-                "Purpose": "Objectif :",
+                "Title": "2. Analyse-Cookies",
+                "Description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym erheben und auswerten.",
+                "Purpose": "Zweck:",
                 "Items": [
-                    "Analyse du trafic du site web",
-                    "Surveillance des performances des pages",
-                    "Modèles de comportement des utilisateurs",
-                    "Optimisation et amélioration du site web"
+                    "Analyse des Website-Verkehrs",
+                    "Überwachung der Seiten-Performance",
+                    "Verhaltensmuster der Nutzer",
+                    "Optimierung und Verbesserung der Website"
                 ],
-                "Providers": "Fournisseurs : Google Analytics, outils d'analyse internes"
+                "Providers": "Anbieter: Google Analytics, interne Analysewerkzeuge"
             },
             "Functional": {
-                "Title": "3. Cookies Fonctionnels",
-                "Description": "Ces cookies permettent des fonctionnalités améliorées et des caractéristiques de personnalisation.",
-                "Purpose": "Objectif :",
+                "Title": "3. Funktionale Cookies",
+                "Description": "Diese Cookies ermöglichen erweiterte Funktionen und Personalisierungsmerkmale.",
+                "Purpose": "Zweck:",
                 "Items": [
-                    "Mémorisation des préférences de langue et de thème",
-                    "Sauvegarde des données de formulaire et de progression",
-                    "Personnalisation du contenu et de la mise en page",
-                    "Fourniture de fonctionnalités de chat en direct"
+                    "Speicherung der Sprach- und Designpräferenzen",
+                    "Sicherung von Formulardaten und Fortschritt",
+                    "Personalisierung von Inhalt und Layout",
+                    "Bereitstellung von Live-Chat-Funktionen"
                 ]
             },
             "Marketing": {
-                "Title": "4. Cookies Marketing",
-                "Description": "Ces cookies suivent les visiteurs à travers les sites web pour afficher des publicités pertinentes et engageantes.",
-                "Purpose": "Objectif :",
+                "Title": "4. Marketing-Cookies",
+                "Description": "Diese Cookies verfolgen Besucher über Websites hinweg, um relevante und ansprechende Werbung anzuzeigen.",
+                "Purpose": "Zweck:",
                 "Items": [
-                    "Publicité ciblée",
-                    "Mesure de l'efficacité des annonces",
-                    "Campagnes de reciblage",
-                    "Intégration des réseaux sociaux"
+                    "Zielgerichtete Werbung",
+                    "Messung der Wirksamkeit von Anzeigen",
+                    "Retargeting-Kampagnen",
+                    "Integration sozialer Netzwerke"
                 ],
-                "Providers": "Fournisseurs : Google Ads, LinkedIn, Facebook"
+                "Providers": "Anbieter: Google Ads, LinkedIn, Facebook"
             }
         },
         "ThirdParty": {
-            "Title": "Cookies Tiers",
-            "Description": "Notre site web peut inclure du contenu ou des services de tiers qui définissent leurs propres cookies. Ceux-ci incluent :",
+            "Title": "Cookies von Drittanbietern",
+            "Description": "Unsere Website kann Inhalte oder Dienste von Dritten einbinden, die ihre eigenen Cookies setzen. Dazu gehören:",
             "TableHeaders": {
-                "Provider": "Fournisseur",
-                "Purpose": "Objectif",
-                "PrivacyPolicy": "Politique de Confidentialité"
+                "Provider": "Anbieter",
+                "Purpose": "Zweck",
+                "PrivacyPolicy": "Datenschutzerklärung"
             },
             "Providers": {
                 "GoogleAnalytics": "Google Analytics",
@@ -345,89 +345,89 @@
                 "LinkedIn": "LinkedIn"
             },
             "Purposes": {
-                "Analytics": "Analyse et performance du site web",
-                "Maps": "Services de localisation et cartes",
-                "Professional": "Réseaux professionnels et publicité"
+                "Analytics": "Analyse und Performance der Website",
+                "Maps": "Standortdienste und Karten",
+                "Professional": "Berufliche Netzwerke und Werbung"
             }
         },
         "Duration": {
-            "Title": "Durée des Cookies",
-            "Description": "Les cookies sont classés par durée comme suit :",
+            "Title": "Dauer der Cookies",
+            "Description": "Cookies werden nach ihrer Dauer wie folgt eingeteilt:",
             "Types": [
-                "Cookies de Session : Cookies temporaires supprimés lorsque vous fermez votre navigateur",
-                "Cookies Persistants : Restent sur votre appareil pour une période définie ou jusqu'à suppression manuelle"
+                "Sitzungs-Cookies: Temporäre Cookies, die gelöscht werden, wenn Sie Ihren Browser schliessen",
+                "Dauerhafte Cookies: Verbleiben für einen festgelegten Zeitraum oder bis zur manuellen Löschung auf Ihrem Gerät"
             ],
             "Lifespans": {
-                "Title": "Durées de Vie Typiques des Cookies :",
+                "Title": "Typische Lebensdauer von Cookies:",
                 "Items": [
-                    "Cookies essentiels : Durée de session ou jusqu'à 1 an",
-                    "Cookies d'analyse : Maximum 2 ans",
-                    "Cookies fonctionnels : Maximum 1 an",
-                    "Cookies marketing : 30 jours à 2 ans"
+                    "Wesentliche Cookies: Sitzungsdauer oder bis zu 1 Jahr",
+                    "Analyse-Cookies: Höchstens 2 Jahre",
+                    "Funktionale Cookies: Höchstens 1 Jahr",
+                    "Marketing-Cookies: 30 Tage bis 2 Jahre"
                 ]
             }
         },
         "Management": {
-            "Title": "Gestion des Cookies",
+            "Title": "Verwaltung von Cookies",
             "ConsentBanner": {
-                "Title": "Bannière de Consentement des Cookies",
-                "Description": "Lorsque vous visitez notre site web pour la première fois, vous verrez une bannière de consentement des cookies avec deux options :",
+                "Title": "Cookie-Einwilligungsbanner",
+                "Description": "Wenn Sie unsere Website zum ersten Mal besuchen, sehen Sie ein Cookie-Einwilligungsbanner mit zwei Optionen:",
                 "Options": [
-                    "\"Tout\" - Accepter tous les cookies incluant l'analyse, la publicité et la personnalisation",
-                    "\"Essentiel\" - Accepter uniquement les cookies fonctionnels essentiels, refuser l'analyse et la publicité"
+                    "\"Alle\" – Alle Cookies akzeptieren, einschliesslich Analyse, Werbung und Personalisierung",
+                    "\"Essenziell\" – Nur die wesentlichen funktionalen Cookies akzeptieren, Analyse und Werbung ablehnen"
                 ],
-                "ChangePreferences": "Vous pouvez modifier vos préférences à tout moment en utilisant le bouton de paramètres des cookies qui apparaît sur le site web."
+                "ChangePreferences": "Sie können Ihre Präferenzen jederzeit über die Schaltfläche für die Cookie-Einstellungen ändern, die auf der Website erscheint."
             },
             "BrowserSettings": {
-                "Title": "Paramètres du Navigateur",
-                "Description": "Vous pouvez également contrôler les cookies via les paramètres de votre navigateur. La plupart des navigateurs vous permettent de :",
+                "Title": "Browsereinstellungen",
+                "Description": "Sie können Cookies auch über die Einstellungen Ihres Browsers steuern. Die meisten Browser erlauben Ihnen:",
                 "Options": [
-                    "Voir et supprimer les cookies",
-                    "Bloquer les cookies de sites web spécifiques",
-                    "Bloquer les cookies tiers",
-                    "Effacer tous les cookies lorsque vous fermez le navigateur"
+                    "Cookies anzuzeigen und zu löschen",
+                    "Cookies bestimmter Websites zu blockieren",
+                    "Cookies von Drittanbietern zu blockieren",
+                    "Alle Cookies beim Schliessen des Browsers zu löschen"
                 ],
-                "Instructions": "Instructions spécifiques au navigateur :",
-                "ChromeLink": "Gérer les cookies dans Chrome",
-                "FirefoxLink": "Gérer les cookies dans Firefox",
-                "SafariLink": "Gérer les cookies dans Safari",
-                "IELink": "Gérer les cookies dans Internet Explorer"
+                "Instructions": "Browserspezifische Anleitungen:",
+                "ChromeLink": "Cookies in Chrome verwalten",
+                "FirefoxLink": "Cookies in Firefox verwalten",
+                "SafariLink": "Cookies in Safari verwalten",
+                "IELink": "Cookies in Internet Explorer verwalten"
             },
             "DisablingImpact": {
-                "Title": "Impact de la Désactivation des Cookies",
-                "Description": "Veuillez noter que désactiver certains cookies peut affecter votre expérience sur notre site web :",
+                "Title": "Auswirkungen der Deaktivierung von Cookies",
+                "Description": "Bitte beachten Sie, dass die Deaktivierung bestimmter Cookies Ihr Erlebnis auf unserer Website beeinträchtigen kann:",
                 "Effects": [
-                    "Cookies essentiels : Le site web peut ne pas fonctionner correctement",
-                    "Cookies d'analyse : Nous ne pouvons pas améliorer notre site web basé sur les données d'utilisation",
-                    "Cookies fonctionnels : Les fonctionnalités de personnalisation seront désactivées",
-                    "Cookies marketing : Vous pourriez voir des publicités moins pertinentes"
+                    "Wesentliche Cookies: Die Website funktioniert möglicherweise nicht korrekt",
+                    "Analyse-Cookies: Wir können unsere Website nicht auf Grundlage der Nutzungsdaten verbessern",
+                    "Funktionale Cookies: Personalisierungsfunktionen werden deaktiviert",
+                    "Marketing-Cookies: Sie sehen möglicherweise weniger relevante Werbung"
                 ]
             }
         },
         "DoNotTrack": {
-            "Title": "Signaux Ne Pas Suivre",
-            "Description": "Certains navigateurs incluent une fonctionnalité \"Ne Pas Suivre\" qui vous permet de dire aux sites web que vous ne voulez pas être suivi. Actuellement, il n'y a pas de standard accepté pour comment les sites web devraient répondre aux signaux Ne Pas Suivre.",
-            "Response": "Nous respectons vos choix de confidentialité et surveillons les développements dans ce domaine pour implémenter des réponses appropriées aux signaux Ne Pas Suivre lorsque les standards de l'industrie seront établis."
+            "Title": "Do-Not-Track-Signale",
+            "Description": "Einige Browser verfügen über eine \"Do Not Track\"-Funktion, mit der Sie Websites mitteilen können, dass Sie nicht verfolgt werden möchten. Derzeit gibt es keinen anerkannten Standard dafür, wie Websites auf Do-Not-Track-Signale reagieren sollten.",
+            "Response": "Wir respektieren Ihre Datenschutzentscheidungen und verfolgen die Entwicklungen in diesem Bereich, um angemessene Reaktionen auf Do-Not-Track-Signale umzusetzen, sobald sich Branchenstandards etabliert haben."
         },
         "Updates": {
-            "Title": "Mises à Jour de cette Politique",
-            "Description": "Nous pouvons mettre à jour cette Politique des Cookies de temps en temps pour refléter des changements dans la technologie, la loi ou nos pratiques. Lorsque nous apportons des changements significatifs, nous :",
+            "Title": "Aktualisierungen dieser Richtlinie",
+            "Description": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen in Technologie, Recht oder unseren Praktiken widerzuspiegeln. Bei wesentlichen Änderungen werden wir:",
             "Actions": {
-                "0": "Mettrons à jour la date \"Dernière mise à jour\" en haut de cette page",
-                "1": "Notifierons les utilisateurs via notre bannière de site web ou email (pour les changements significatifs)",
-                "2": "Demanderons un consentement renouvelé lorsque requis par la loi"
+                "0": "Das Datum \"Zuletzt aktualisiert\" oben auf dieser Seite anpassen",
+                "1": "Nutzer über unser Website-Banner oder per E-Mail benachrichtigen (bei wesentlichen Änderungen)",
+                "2": "Eine erneute Einwilligung einholen, sofern gesetzlich vorgeschrieben"
             }
         },
         "Retention": {
-            "Title": "Conservation des Données",
-            "Description": "Nous conservons les données des cookies pendant une période limitée nécessaire aux fins décrites dans cette politique."
+            "Title": "Aufbewahrung der Daten",
+            "Description": "Wir bewahren Cookie-Daten für einen begrenzten, für die in dieser Richtlinie beschriebenen Zwecke erforderlichen Zeitraum auf."
         },
         "Contact": {
-            "Title": "Nous Contacter",
-            "Description": "Si vous avez des questions sur cette Politique des Cookies ou notre utilisation des cookies, veuillez nous contacter :",
+            "Title": "Kontakt",
+            "Description": "Wenn Sie Fragen zu dieser Cookie-Richtlinie oder unserer Verwendung von Cookies haben, kontaktieren Sie uns bitte:",
             "CompanyName": "Ridger",
             "Email": "contact@ridger.ch",
-            "Address": "26 Boulevard Georges-Favon, 1204 Genève"
+            "Address": "26 Boulevard Georges-Favon, 1204 Genf"
         }
     }
 }
