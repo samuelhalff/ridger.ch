@@ -1,28 +1,28 @@
 {
-  "Title": "Entretien confidentiel",
-  "Subtitle": "Écrivez-nous en toute confidentialité. Nous répondons dans un délai d'un jour ouvré, avec la plus stricte discrétion.",
-  "BookingButton": "Réserver un appel",
-  "BookingDescription": "Idéal pour un échange planifié avec notre équipe.",
-  "OrContactUs": "Écrivez-nous",
-  "CallLabel": "Appelez-nous",
-  "CallDescription": "Parlez directement avec notre équipe.",
+  "Title": "Entrevista confidencial",
+  "Subtitle": "Escríbanos con total confidencialidad. Respondemos en un plazo de un día hábil, con la más estricta discreción.",
+  "BookingButton": "Reservar una llamada",
+  "BookingDescription": "Ideal para un intercambio programado con nuestro equipo.",
+  "OrContactUs": "Escríbanos",
+  "CallLabel": "Llámenos",
+  "CallDescription": "Hable directamente con nuestro equipo.",
   "WhatsApp": {
     "Badge": "WhatsApp",
-    "Open": "Ouvrir le chat WhatsApp avec Ridger",
-    "Description": "Pour les questions rapides et les réponses rapides."
+    "Open": "Abrir el chat de WhatsApp con Ridger",
+    "Description": "Para preguntas rápidas y respuestas rápidas."
   },
   "Form": {
-    "Name": "Nom",
-    "Email": "E-mail",
-    "CompanyName": "Nom de l'entreprise (optionnel)",
-    "Phone": "Numéro de téléphone (optionnel)",
-    "Message": "Message",
-    "AumBand": "Patrimoine sous surveillance",
-    "Horizon": "Horizon",
-    "ServiceInterest": "Service d'intérêt",
+    "Name": "Nombre",
+    "Email": "Correo electrónico",
+    "CompanyName": "Nombre de la empresa (opcional)",
+    "Phone": "Número de teléfono (opcional)",
+    "Message": "Mensaje",
+    "AumBand": "Patrimonio bajo supervisión",
+    "Horizon": "Horizonte",
+    "ServiceInterest": "Servicio de interés",
     "AumBands": [
       {
-        "label": "Moins de 5 M CHF",
+        "label": "Menos de 5 M CHF",
         "value": "lt5m"
       },
       {
@@ -34,58 +34,58 @@
         "value": "20to50m"
       },
       {
-        "label": "Plus de 50 M CHF",
+        "label": "Más de 50 M CHF",
         "value": "gt50m"
       },
       {
-        "label": "Je préfère ne pas préciser",
+        "label": "Prefiero no indicarlo",
         "value": "undisclosed"
       }
     ],
     "Horizons": [
       {
-        "label": "Immédiat",
+        "label": "Inmediato",
         "value": "immediate"
       },
       {
-        "label": "3 à 6 mois",
+        "label": "De 3 a 6 meses",
         "value": "3to6m"
       },
       {
-        "label": "Exploratoire",
+        "label": "Exploratorio",
         "value": "exploratory"
       }
     ],
     "Placeholders": {
-      "Name": "Votre nom",
-      "Email": "votre@email.com",
-      "CompanyName": "Entreprise (optionnel)",
+      "Name": "Su nombre",
+      "Email": "su@email.com",
+      "CompanyName": "Empresa (opcional)",
       "Phone": "+41...",
-      "Select": "Sélectionner",
-      "Message": "Votre message..."
+      "Select": "Seleccionar",
+      "Message": "Su mensaje..."
     },
-    "Consent": "J'accepte d'être contacté concernant ma demande",
-    "Submit": "Demander un entretien confidentiel",
-    "Sending": "Envoi en cours",
-    "Success": "Message envoyé. Nous vous répondons sous un jour ouvré.",
-    "Error": "Échec de l'envoi du message. Veuillez réessayer."
+    "Consent": "Acepto ser contactado en relación con mi solicitud",
+    "Submit": "Solicitar una entrevista confidencial",
+    "Sending": "Enviando",
+    "Success": "Mensaje enviado. Le responderemos en un día hábil.",
+    "Error": "No se pudo enviar el mensaje. Inténtelo de nuevo."
   },
   "Errors": {
-    "Required": "Ce champ est obligatoire",
-    "InvalidEmail": "Veuillez saisir une adresse e-mail valide",
-    "MaxLength": "Le message ne peut pas dépasser 500 caractères",
-    "Consent": "Vous devez accepter d'être contacté"
+    "Required": "Este campo es obligatorio",
+    "InvalidEmail": "Introduzca una dirección de correo electrónico válida",
+    "MaxLength": "El mensaje no puede superar los 500 caracteres",
+    "Consent": "Debe aceptar ser contactado"
   },
   "Contact": {
     "CompanyName": "Ridger",
     "Email": "Email: contact@ridger.ch",
-    "Phone": "Téléphone: +41 XX XXX XX XX",
-    "Address": "Address: 26 Boulevard Georges Favon, 1204 Geneva",
-    "Commitment": "Nous nous engageons à maintenir les normes les plus élevées de service professionnel et de satisfaction client."
+    "Phone": "Teléfono: +41 XX XXX XX XX",
+    "Address": "Dirección: 26 Boulevard Georges Favon, 1204 Ginebra",
+    "Commitment": "Nos comprometemos a mantener los más altos estándares de servicio profesional y satisfacción del cliente."
   },
-  "MapTitle": "Notre localisation à Genève",
-  "MapDisclaimer": "La carte est fournie par Google Maps. Chargez-la seulement si vous acceptez un éventuel transfert de données (voir notre politique de confidentialité).",
-  "MapLoadButton": "Afficher la carte interactive",
-  "MapOpenExternal": "Ouvrir dans Google Maps",
-  "MapPrivacyPlaceholder": "Pour des raisons de confidentialité, la carte n'est pas chargée automatiquement."
+  "MapTitle": "Nuestra ubicación en Ginebra",
+  "MapDisclaimer": "El mapa lo proporciona Google Maps. Cárguelo únicamente si acepta una posible transferencia de datos (véase nuestra política de privacidad).",
+  "MapLoadButton": "Mostrar el mapa interactivo",
+  "MapOpenExternal": "Abrir en Google Maps",
+  "MapPrivacyPlaceholder": "Por motivos de privacidad, el mapa no se carga automáticamente."
 }

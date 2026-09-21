@@ -1,46 +1,46 @@
 {
   "Hero": {
-    "Title": "Fiscalité et administration",
-    "Description": "La coordination de votre conformité fiscale suisse et de votre administration au quotidien. Nous supervisons les déclarations, les paiements, la trésorerie et la gestion documentaire des membres de la famille et de leurs structures.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Fiscalidad y administración",
+    "Description": "La coordinación de su cumplimiento fiscal suizo y de su administración cotidiana. Supervisamos las declaraciones, los pagos, la tesorería y la gestión documental de los miembros de la familia y de sus estructuras.",
+    "CTA": "Solicitar una entrevista confidencial"
   },
   "Intro": [
-    "Une famille et ses structures de détention génèrent un flux constant d'obligations fiscales et administratives. Prises isolément, elles sont gérables ; ensemble, elles demandent une coordination rigoureuse.",
-    "Nous coordonnons cette conformité et cette administration, en nous appuyant sur l'expertise d'un groupe fiduciaire genevois établi. Vous conservez une vue d'ensemble, sans en porter la charge."
+    "Una familia y sus estructuras de tenencia generan un flujo constante de obligaciones fiscales y administrativas. Por separado son manejables; en conjunto, exigen una coordinación rigurosa.",
+    "Coordinamos ese cumplimiento y esa administración, apoyándonos en la experiencia de un grupo fiduciario ginebrino consolidado. Usted conserva la visión de conjunto, sin soportar su carga."
   ],
   "Pillars": [
     {
-      "Title": "Conformité fiscale suisse",
-      "Body": "Coordination des déclarations et obligations fiscales des membres de la famille et des structures de détention."
+      "Title": "Cumplimiento fiscal suizo",
+      "Body": "Coordinación de las declaraciones y obligaciones fiscales de los miembros de la familia y de las estructuras de tenencia."
     },
     {
-      "Title": "Supervision administrative",
-      "Body": "Suivi des échéances, des formalités et des interlocuteurs, pour une administration sans angle mort."
+      "Title": "Supervisión administrativa",
+      "Body": "Seguimiento de los plazos, las formalidades y los interlocutores, para una administración sin puntos ciegos."
     },
     {
-      "Title": "Paiements et trésorerie",
-      "Body": "Administration des paiements et suivi de la trésorerie, avec contrôles et traçabilité."
+      "Title": "Pagos y tesorería",
+      "Body": "Administración de los pagos y seguimiento de la tesorería, con controles y trazabilidad."
     },
     {
-      "Title": "Gestion documentaire",
-      "Body": "Classement, conservation et mise à disposition des documents utiles à vos conseillers."
+      "Title": "Gestión documental",
+      "Body": "Clasificación, conservación y puesta a disposición de los documentos útiles para sus asesores."
     },
     {
-      "Title": "Optimisation fiscale",
-      "Body": "Planification et optimisation fiscales dans le cadre suisse : structuration des revenus et de la détention, imposition d'après la dépense (forfait fiscal) pour les familles qui s'installent en Suisse, coordination de l'installation avec les autorités cantonales."
+      "Title": "Optimización fiscal",
+      "Body": "Planificación y optimización fiscal en el marco suizo: estructuración de las rentas y de la tenencia, tributación según el gasto (forfait fiscal) para las familias que se instalan en Suiza, coordinación de la instalación con las autoridades cantonales."
     },
     {
-      "Title": "Domiciliation et courrier",
-      "Body": "Domiciliation de structures à Genève, réception et gestion du courrier de la famille et de ses entités : tri, numérisation, transmission et suivi des actions requises."
+      "Title": "Domiciliación y correspondencia",
+      "Body": "Domiciliación de estructuras en Ginebra, recepción y gestión de la correspondencia de la familia y de sus entidades: clasificación, digitalización, remisión y seguimiento de las acciones requeridas."
     },
     {
-      "Title": "Gestion de la paie",
-      "Body": "La paie de tous vos employeurs : personnel de maison, collaborateurs de vos structures et de votre family office — contrats, salaires Swissdec, assurances sociales, impôt à la source et permis."
+      "Title": "Gestión de nóminas",
+      "Body": "La nómina de todos sus empleadores: personal doméstico, colaboradores de sus estructuras y de su family office — contratos, salarios Swissdec, seguros sociales, impuesto en la fuente (impôt à la source) y permisos."
     }
   ],
   "Closing": {
-    "Title": "Une administration maîtrisée",
-    "Body": "Vous gardez le contrôle et la vue d'ensemble ; nous prenons en charge l'exécution administrative et la coordination avec vos conseillers fiscaux."
+    "Title": "Una administración bajo control",
+    "Body": "Usted mantiene el control y la visión de conjunto; nosotros asumimos la ejecución administrativa y la coordinación con sus asesores fiscales."
   },
-  "Perimeter": "La coordination fiscale et administrative s'exerce en lien avec vos conseillers fiscaux et juridiques. Ridger fournit la coordination, le reporting et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "La coordinación fiscal y administrativa se ejerce en relación con sus asesores fiscales y jurídicos. Ridger aporta la coordinación, el reporting y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
 }

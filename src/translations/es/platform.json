@@ -1,58 +1,58 @@
 {
   "hero": {
-    "eyebrow": "La plateforme",
-    "title": "Un espace unique pour suivre l'ensemble de vos affaires",
-    "intro": "La plateforme Ridger réunit vos titres, votre immobilier, vos documents et votre reporting dans une vue consolidée, tenue à jour et lisible à tout moment.",
-    "illustration": "Illustration — données fictives"
+    "eyebrow": "La plataforma",
+    "title": "Un espacio único para seguir el conjunto de sus asuntos",
+    "intro": "La plataforma Ridger reúne sus valores, su inmobiliario, sus documentos y su reporting en una visión consolidada, actualizada y legible en todo momento.",
+    "illustration": "Ilustración — datos ficticios"
   },
   "frame": {
-    "browserLabel": "Aperçu de la plateforme Ridger"
+    "browserLabel": "Vista previa de la plataforma Ridger"
   },
   "sidebar": {
     "wordmark": "RIDGER",
     "nav": {
-      "overview": "Vue d'ensemble",
-      "positions": "Positions",
-      "realEstate": "Immobilier",
-      "documents": "Documents",
+      "overview": "Visión general",
+      "positions": "Posiciones",
+      "realEstate": "Inmobiliario",
+      "documents": "Documentos",
       "reporting": "Reporting"
     },
-    "userName": "Famille B.",
+    "userName": "Familia B.",
     "userInitials": "FB",
-    "userRole": "Espace privé",
-    "mobileNavLabel": "Sections de la plateforme"
+    "userRole": "Espacio privado",
+    "mobileNavLabel": "Secciones de la plataforma"
   },
   "overview": {
-    "netWorthLabel": "Fortune nette",
+    "netWorthLabel": "Patrimonio neto",
     "netWorthValue": "CHF 31'842'506",
     "netWorthDelta": "+2.4% YTD",
-    "periods": ["1M", "6M", "YTD", "1A", "Tout"],
-    "chartTitle": "Évolution sur 12 mois",
-    "chartAria": "Courbe de l'évolution de la fortune nette sur douze mois",
-    "allocationTitle": "Allocation",
-    "allocationAria": "Répartition de l'allocation par classe d'actifs",
+    "periods": ["1M", "6M", "YTD", "1A", "Todo"],
+    "chartTitle": "Evolución en 12 meses",
+    "chartAria": "Curva de la evolución del patrimonio neto durante doce meses",
+    "allocationTitle": "Asignación",
+    "allocationAria": "Distribución de la asignación por clase de activos",
     "allocation": [
-      { "label": "Titres", "pct": "54%" },
-      { "label": "Immobilier", "pct": "28%" },
+      { "label": "Valores", "pct": "54%" },
+      { "label": "Inmobiliario", "pct": "28%" },
       { "label": "Private equity", "pct": "11%" },
-      { "label": "Liquidités", "pct": "7%" }
+      { "label": "Liquidez", "pct": "7%" }
     ],
-    "activityTitle": "Activité récente",
+    "activityTitle": "Actividad reciente",
     "activity": [
-      { "label": "Dividende — Nestlé SA", "amount": "+CHF 18'240", "date": "12.09.2026", "positive": true },
-      { "label": "Loyer — Rue du Rhône 14", "amount": "+CHF 21'500", "date": "05.09.2026", "positive": true },
-      { "label": "Frais bancaires — Pictet & Cie", "amount": "−CHF 3'860", "date": "01.09.2026", "positive": false },
-      { "label": "Apport — compte courant", "amount": "+CHF 150'000", "date": "28.08.2026", "positive": true }
+      { "label": "Dividendo — Nestlé SA", "amount": "+CHF 18'240", "date": "12.09.2026", "positive": true },
+      { "label": "Alquiler — Rue du Rhône 14", "amount": "+CHF 21'500", "date": "05.09.2026", "positive": true },
+      { "label": "Gastos bancarios — Pictet & Cie", "amount": "−CHF 3'860", "date": "01.09.2026", "positive": false },
+      { "label": "Aportación — cuenta corriente", "amount": "+CHF 150'000", "date": "28.08.2026", "positive": true }
     ]
   },
   "positions": {
     "columns": {
-      "position": "Position",
-      "quantity": "Quantité",
-      "value": "Valeur (CHF)",
+      "position": "Posición",
+      "quantity": "Cantidad",
+      "value": "Valor (CHF)",
       "delta": "Δ YTD"
     },
-    "trendAria": "Micro-graphique de tendance",
+    "trendAria": "Micrográfico de tendencia",
     "groups": [
       {
         "custodian": "Pictet & Cie",
@@ -66,7 +66,7 @@
         "custodian": "Lombard Odier",
         "subtotal": "CHF 9'871'240",
         "rows": [
-          { "name": "Obligations CHF 2031", "qty": "—", "value": "1'240'000", "delta": "+0.9%", "positive": true },
+          { "name": "Bonos CHF 2031", "qty": "—", "value": "1'240'000", "delta": "+0.9%", "positive": true },
           { "name": "ETF MSCI World", "qty": "3'400", "value": "512'890", "delta": "+6.2%", "positive": true }
         ]
       },
@@ -74,47 +74,47 @@
         "custodian": "UBS",
         "subtotal": "CHF 4'412'380",
         "rows": [
-          { "name": "USD monétaire", "qty": "—", "value": "890'240", "delta": "+1.1%", "positive": true },
-          { "name": "Vontobel structuré", "qty": "—", "value": "402'110", "delta": "−1.3%", "positive": false }
+          { "name": "Monetario USD", "qty": "—", "value": "890'240", "delta": "+1.1%", "positive": true },
+          { "name": "Estructurado Vontobel", "qty": "—", "value": "402'110", "delta": "−1.3%", "positive": false }
         ]
       }
     ]
   },
   "realEstate": {
-    "estimatedLabel": "Valeur estimée",
-    "yieldLabel": "Rendement net",
+    "estimatedLabel": "Valor estimado",
+    "yieldLabel": "Rentabilidad neta",
     "ltvLabel": "LTV",
-    "ltvAria": "Ratio prêt / valeur",
+    "ltvAria": "Ratio préstamo / valor",
     "cards": [
-      { "address": "Rue du Rhône 14, Genève", "value": "CHF 4'650'000", "note": "Rendement net 3.2%", "ltv": 38 },
-      { "address": "Chemin des Crêts 8, Cologny", "value": "CHF 6'200'000", "note": "Résidence principale", "ltv": 22 },
-      { "address": "Chalet Les Arolles, Verbier", "value": "CHF 2'880'000", "note": "Rendement net 2.1%", "ltv": 31 }
+      { "address": "Rue du Rhône 14, Ginebra", "value": "CHF 4'650'000", "note": "Rentabilidad neta 3.2%", "ltv": 38 },
+      { "address": "Chemin des Crêts 8, Cologny", "value": "CHF 6'200'000", "note": "Residencia principal", "ltv": 22 },
+      { "address": "Chalet Les Arolles, Verbier", "value": "CHF 2'880'000", "note": "Rentabilidad neta 2.1%", "ltv": 31 }
     ]
   },
   "documents": {
-    "lockAria": "Document chiffré",
-    "footnote": "Coffre-fort chiffré — données hébergées en Suisse",
+    "lockAria": "Documento cifrado",
+    "footnote": "Caja fuerte cifrada — datos alojados en Suiza",
     "items": [
-      { "name": "Relevé consolidé — T2 2026", "meta": "PDF · 2.1 MB", "date": "30.06.2026" },
-      { "name": "Rapport fiscal 2025", "meta": "PDF · 4.8 MB", "date": "15.04.2026" },
-      { "name": "Pacte successoral — projet", "meta": "PDF · 1.2 MB", "date": "22.03.2026" },
-      { "name": "Police LAA personnel de maison", "meta": "PDF · 0.8 MB", "date": "10.01.2026" }
+      { "name": "Extracto consolidado — T2 2026", "meta": "PDF · 2.1 MB", "date": "30.06.2026" },
+      { "name": "Informe fiscal 2025", "meta": "PDF · 4.8 MB", "date": "15.04.2026" },
+      { "name": "Pacto sucesorio — borrador", "meta": "PDF · 1.2 MB", "date": "22.03.2026" },
+      { "name": "Póliza LAA personal doméstico", "meta": "PDF · 0.8 MB", "date": "10.01.2026" }
     ]
   },
   "reporting": {
-    "reportsTitle": "Rapports",
-    "downloadLabel": "Télécharger",
+    "reportsTitle": "Informes",
+    "downloadLabel": "Descargar",
     "reports": [
-      { "name": "Rapport trimestriel T2 2026", "date": "30.06.2026" },
-      { "name": "Rapport de performance YTD", "date": "12.09.2026" },
-      { "name": "Rapport fiscal 2025", "date": "15.04.2026" }
+      { "name": "Informe trimestral T2 2026", "date": "30.06.2026" },
+      { "name": "Informe de rentabilidad YTD", "date": "12.09.2026" },
+      { "name": "Informe fiscal 2025", "date": "15.04.2026" }
     ],
-    "feesTitle": "Transparence des frais",
+    "feesTitle": "Transparencia de comisiones",
     "fees": [
-      { "label": "Frais de gestion moyens pondérés", "value": "0.65%" },
-      { "label": "Frais bancaires cumulés", "value": "CHF 41'820" },
-      { "label": "Rétrocessions identifiées et restituées", "value": "CHF 12'400" }
+      { "label": "Comisiones de gestión medias ponderadas", "value": "0.65%" },
+      { "label": "Gastos bancarios acumulados", "value": "CHF 41'820" },
+      { "label": "Retrocesiones identificadas y restituidas", "value": "CHF 12'400" }
     ],
-    "feesTotal": "Transparence totale des frais — CHF 248'900 économisés depuis 2024"
+    "feesTotal": "Transparencia total de comisiones — CHF 248'900 ahorrados desde 2024"
   }
 }

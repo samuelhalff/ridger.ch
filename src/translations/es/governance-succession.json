@@ -1,38 +1,38 @@
 {
   "Hero": {
-    "Title": "Gouvernance et succession",
-    "Description": "Une gouvernance familiale claire, une transmission préparée. Nous accompagnons les chartes familiales, l'éducation de la nouvelle génération et la coordination de la planification successorale en droit suisse.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Gobernanza y sucesión",
+    "Description": "Una gobernanza familiar clara, una transmisión preparada. Acompañamos las cartas familiares, la formación de la nueva generación y la coordinación de la planificación sucesoria conforme al derecho suizo.",
+    "CTA": "Solicitar una entrevista confidencial"
   },
   "Intro": [
-    "La pérennité d'un patrimoine familial tient autant à sa gouvernance qu'à sa performance. Des règles partagées, comprises et respectées valent mieux que des décisions prises dans l'urgence.",
-    "Nous aidons votre famille à poser un cadre durable et à préparer la transmission, en coordination avec vos avocats et notaires, dans le respect du droit civil suisse. La planification successorale et les structures de trust ou de fondation sont mises en œuvre par des partenaires suisses établis ; Ridger en assure la coordination, sans jamais agir comme trustee."
+    "La perdurabilidad de un patrimonio familiar depende tanto de su gobernanza como de su rentabilidad. Unas reglas compartidas, comprendidas y respetadas valen más que las decisiones tomadas con premura.",
+    "Ayudamos a su familia a establecer un marco duradero y a preparar la transmisión, en coordinación con sus abogados y notarios, conforme al derecho civil suizo. La planificación sucesoria y las estructuras de trust o de fundación las implementan socios suizos consolidados; Ridger asegura su coordinación, sin actuar jamás como trustee."
   ],
   "Pillars": [
     {
-      "Title": "Chartes de gouvernance",
-      "Body": "Rédaction et mise en vie de chartes familiales qui définissent principes, rôles et modes de décision."
+      "Title": "Cartas de gobernanza",
+      "Body": "Redacción y puesta en práctica de cartas familiares que definen principios, funciones y modos de decisión."
     },
     {
-      "Title": "Nouvelle génération",
-      "Body": "Accompagnement et éducation de la génération suivante, pour une transmission progressive des responsabilités."
+      "Title": "Nueva generación",
+      "Body": "Acompañamiento y formación de la generación siguiente, para una transmisión progresiva de las responsabilidades."
     },
     {
-      "Title": "Planification successorale",
-      "Body": "Coordination approfondie de la planification successorale avec vos avocats et notaires, dans le cadre du droit civil suisse, jusqu'à la mise en œuvre des dispositions retenues."
+      "Title": "Planificación sucesoria",
+      "Body": "Coordinación en profundidad de la planificación sucesoria con sus abogados y notarios, en el marco del derecho civil suizo, hasta la puesta en práctica de las disposiciones adoptadas."
     },
     {
-      "Title": "Trusts et fondations",
-      "Body": "Coordination des structures de trust et de fondation via des partenaires suisses établis. Ridger agit comme coordinateur et point de contact, jamais comme trustee."
+      "Title": "Trusts y fundaciones",
+      "Body": "Coordinación de las estructuras de trust y de fundación a través de socios suizos consolidados. Ridger actúa como coordinador y punto de contacto, nunca como trustee."
     },
     {
-      "Title": "Conseils de famille",
-      "Body": "Préparation et animation des conseils de famille, pour des échanges structurés et documentés."
+      "Title": "Consejos de familia",
+      "Body": "Preparación y conducción de los consejos de familia, para intercambios estructurados y documentados."
     }
   ],
   "Closing": {
-    "Title": "Une transmission sereine",
-    "Body": "Un cadre clair réduit les tensions et protège l'unité familiale. Nous en assurons la coordination, discrètement et dans la durée."
+    "Title": "Una transmisión serena",
+    "Body": "Un marco claro reduce las tensiones y protege la unidad familiar. Nosotros aseguramos su coordinación, con discreción y a largo plazo."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
 }
