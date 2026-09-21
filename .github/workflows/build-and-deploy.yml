@@ -54,13 +54,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
-      # NEXT_PUBLIC_* and PLACEHOLDER_LOCALES are inlined at build time —
+      # NEXT_PUBLIC_* are inlined at build time —
       # they must be present here, not only in the synced server .env.
       NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
       NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
       NEXT_PUBLIC_SITE_URL: https://ridger.ch
       # DE/ES/PT are built but noindexed until their content is reviewed.
-      PLACEHOLDER_LOCALES: de,es,pt
+      PLACEHOLDER_LOCALES: ""
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -191,7 +191,6 @@ jobs:
           lines = [
             "PORT=5001",
             "NEXT_PUBLIC_SITE_URL=https://ridger.ch",
-            "PLACEHOLDER_LOCALES=de,es,pt",
           ]
           for key in keys:
             value = os.environ.get(key, "")
