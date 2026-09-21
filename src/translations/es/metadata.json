@@ -1,105 +1,110 @@
 {
   "default": {
-    "title": "Ridger | Family office à Genève",
-    "description": "Multi family office digital à Genève : reporting consolidé, surveillance des investissements, coordination et supervision administrative. Sans gestion d'actifs.",
-    "keywords": "family office suisse, family office genève, multi family office, reporting consolidé, gouvernance familiale",
+    "title": "Ridger | Family office en Ginebra",
+    "description": "Multi family office digital en Ginebra: reporting consolidado, supervisión de inversiones, coordinación y supervisión administrativa. Sin gestión de activos.",
+    "keywords": "family office suiza, family office ginebra, multi family office, reporting consolidado, gobernanza familiar",
     "topics": [
-      "family office genève",
-      "multi family office suisse",
-      "reporting consolidé",
-      "surveillance des investissements",
-      "gouvernance familiale"
+      "family office ginebra",
+      "multi family office suiza",
+      "reporting consolidado",
+      "supervisión de inversiones",
+      "gobernanza familiar"
     ],
     "author": "Ridger",
     "siteName": "Ridger"
   },
   "pages": {
     "/": {
-      "title": "Family office à Genève | Ridger",
-      "description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs.",
-      "keywords": "family office genève, multi family office suisse, reporting consolidé, coordination family office"
+      "title": "Multi family office en Ginebra | Ridger",
+      "description": "Family office de nueva generación en Ginebra: reporting consolidado, coordinación de sus asesores y discreción suiza. Ridger no gestiona activos.",
+      "keywords": "family office ginebra, multi family office suiza, reporting consolidado, coordinación family office"
     },
     "/approach": {
-      "title": "Notre approche | Ridger",
-      "description": "Indépendance, transparence sur les frais et discrétion suisse. Découvrez la méthode d'un family office qui coordonne, consolide et supervise vos intérêts.",
-      "keywords": "family office indépendant genève, approche family office, transparence frais, discrétion suisse"
+      "title": "Nuestro enfoque | Ridger",
+      "description": "Independencia, transparencia de comisiones y discreción suiza. Descubra el método de un family office que coordina, consolida y supervisa sus intereses.",
+      "keywords": "family office independiente ginebra, enfoque family office, transparencia comisiones, discreción suiza"
     },
     "/contact": {
-      "title": "Entretien confidentiel | Ridger",
-      "description": "Demandez un entretien confidentiel avec Ridger, family office à Genève. Réponse sous un jour ouvré, discrétion stricte.",
-      "keywords": "contact family office genève, entretien confidentiel, multi family office suisse"
+      "title": "Entrevista confidencial | Ridger",
+      "description": "Solicite una entrevista confidencial con Ridger, family office en Ginebra. Respuesta en un día hábil, discreción estricta.",
+      "keywords": "contacto family office ginebra, entrevista confidencial, multi family office suiza"
+    },
+    "/platform": {
+      "title": "La plataforma | Ridger",
+      "description": "La plataforma Ridger: un espacio único y seguro para seguir valores, inmobiliario, documentos y reporting de su patrimonio. Ilustración — datos ficticios.",
+      "keywords": "plataforma family office, reporting patrimonial, caja fuerte digital, seguimiento de patrimonio"
     },
     "/ressources": {
-      "title": "Ressources | Ridger",
-      "description": "Guides et analyses sur le reporting consolidé, la surveillance des investissements, la gouvernance et la succession pour familles en Suisse.",
-      "keywords": "ressources family office, reporting consolidé, gouvernance familiale, succession suisse"
+      "title": "Recursos | Ridger",
+      "description": "Guías y análisis sobre reporting consolidado, supervisión de inversiones, gobernanza y sucesión para familias en Suiza.",
+      "keywords": "recursos family office, reporting consolidado, gobernanza familiar, sucesión suiza"
     },
     "/services": {
-      "title": "Services family office à Genève | Ridger",
-      "description": "Les services d'un family office à Genève : reporting consolidé, surveillance des investissements, coordination, gouvernance, fiscalité et coffre-fort numérique.",
-      "keywords": "services family office genève, reporting consolidé, surveillance investissements, coordination family office"
+      "title": "Servicios family office en Ginebra | Ridger",
+      "description": "Los servicios de un family office en Ginebra: reporting consolidado, supervisión de inversiones, coordinación, gobernanza, fiscalidad y caja fuerte digital.",
+      "keywords": "servicios family office ginebra, reporting consolidado, supervisión inversiones, coordinación family office"
     },
     "/services/consolidated-reporting": {
-      "title": "Reporting consolidé indépendant | Ridger",
-      "description": "Reporting consolidé indépendant à Genève : banques, dépositaires, immobilier et private equity dans une vue unique, avec transparence sur performance et frais.",
-      "keywords": "reporting consolidé, consolidation patrimoniale, reporting indépendant, performance TWR, transparence des frais"
+      "title": "Reporting consolidado independiente | Ridger",
+      "description": "Reporting consolidado independiente en Ginebra: bancos, depositarios, inmobiliario y private equity en una visión única, con comisiones transparentes.",
+      "keywords": "reporting consolidado, consolidación patrimonial, reporting independiente, rentabilidad TWR, transparencia de comisiones"
     },
     "/services/investment-oversight": {
-      "title": "Surveillance des investissements | Ridger",
-      "description": "Surveillance des investissements à Genève : suivi des mandats et gérants, revues de performance, frais et risque, préparation du comité d'investissement familial.",
-      "keywords": "surveillance investissements, contrôle des gérants, revue de performance, comité d'investissement familial"
+      "title": "Supervisión de inversiones | Ridger",
+      "description": "Supervisión de inversiones en Ginebra: seguimiento de mandatos y gestores, revisiones de rentabilidad, comisiones y riesgo, y comité de inversión familiar.",
+      "keywords": "supervisión de inversiones, control de gestores, revisión de rentabilidad, comité de inversión familiar"
     },
     "/services/family-office-coordination": {
-      "title": "Coordination family office | Ridger",
-      "description": "Coordination à Genève : un interlocuteur unique pour vos conseillers et prestataires, la relocation et les permis (B, C, G), et l'intendance de vos résidences.",
-      "keywords": "coordination family office genève, interlocuteur unique, relocation genève, permis B C G, s'installer en suisse, démarches OCPM, frontalier, intendance de maisons, coordination prestataires"
+      "title": "Coordinación family office | Ridger",
+      "description": "Coordinación en Ginebra: un interlocutor único para sus asesores y proveedores, la reubicación y los permisos (B, C, G), y la administración de sus residencias.",
+      "keywords": "coordinación family office ginebra, interlocutor único, reubicación ginebra, permiso B C G, mudarse a suiza, trámites OCPM, trabajador fronterizo, administración de residencias, coordinación de proveedores"
     },
     "/services/governance-succession": {
-      "title": "Gouvernance et succession | Ridger",
-      "description": "Gouvernance et succession familiales à Genève : chartes de gouvernance, éducation de la nouvelle génération et coordination successorale en droit suisse.",
-      "keywords": "gouvernance familiale, charte familiale, planification successorale suisse, conseil de famille"
+      "title": "Gobernanza y sucesión | Ridger",
+      "description": "Gobernanza y sucesión familiares en Ginebra: cartas de gobernanza, formación de la nueva generación y coordinación sucesoria conforme al derecho suizo.",
+      "keywords": "gobernanza familiar, carta familiar, planificación sucesoria suiza, consejo de familia"
     },
     "/services/tax-administration": {
-      "title": "Fiscalité et administration | Ridger",
-      "description": "Fiscalité, administration et paie à Genève : conformité et optimisation fiscales, paie du personnel de maison (AVS, LPP, impôt à la source), domiciliation et gestion du courrier.",
-      "keywords": "conformité fiscale suisse, optimisation fiscale, forfait fiscal, paie personnel de maison, déclarer employé de maison genève, charges sociales AVS, domiciliation, gestion du courrier, administration familiale genève"
+      "title": "Fiscalidad y administración | Ridger",
+      "description": "Fiscalidad y administración en Ginebra: cumplimiento y optimización fiscal, nómina del personal doméstico (AVS, LPP, impuesto en la fuente) y domiciliación.",
+      "keywords": "cumplimiento fiscal suiza, optimización fiscal, forfait fiscal, nómina personal doméstico, declarar empleada de hogar ginebra, cotizaciones sociales AVS, domiciliación, gestión de correspondencia, administración familiar ginebra"
     },
     "/services/digital-vault": {
-      "title": "Coffre-fort numérique suisse | Ridger",
-      "description": "Coffre-fort numérique chiffré pour vos documents familiaux, hébergé en Suisse, avec partage contrôlé et flux de travail numériques.",
-      "keywords": "coffre-fort numérique, données en suisse, partage sécurisé, dossiers familiaux"
+      "title": "Caja fuerte digital suiza | Ridger",
+      "description": "Caja fuerte digital cifrada para sus documentos familiares, alojada en Suiza, con uso compartido controlado y flujos de trabajo digitales.",
+      "keywords": "caja fuerte digital, datos en suiza, uso compartido seguro, expedientes familiares"
     },
     "/services/real-estate-transactions": {
-      "title": "Immobilier et transactions | Ridger",
-      "description": "Immobilier à Genève : gestion et administration de vos biens, gérance locative, coordination des travaux et rénovations, repérage d'opportunités et transactions avec notaires et banques.",
-      "keywords": "gestion immobilière genève, gérance bien locatif, coordination travaux rénovation genève, coordination prestataires, régies, transactions immobilières, administration de biens"
+      "title": "Inmobiliario y transacciones | Ridger",
+      "description": "Inmobiliario en Ginebra: gestión y administración de bienes, arrendamientos, coordinación de obras, detección de oportunidades y transacciones con notarios y bancos.",
+      "keywords": "gestión inmobiliaria ginebra, gestión de arrendamientos, coordinación obras reforma ginebra, coordinación de proveedores, administradoras de fincas, transacciones inmobiliarias, administración de bienes"
     },
     "/legal/privacy": {
-      "title": "Politique de confidentialité | Ridger",
-      "description": "Politique de confidentialité de Ridger, marque de Ark Fiduciaire SA. Comment nous protégeons et traitons vos données selon les exigences suisses et européennes.",
-      "keywords": "politique confidentialité, protection données, données personnelles, ark fiduciaire"
+      "title": "Política de privacidad | Ridger",
+      "description": "Política de privacidad de Ridger, marca de Ark Fiduciaire SA. Cómo protegemos y tratamos sus datos conforme a las exigencias suizas y europeas.",
+      "keywords": "política privacidad, protección de datos, datos personales, ark fiduciaire"
     },
     "/legal/terms": {
-      "title": "Conditions de service | Ridger",
-      "description": "Conditions de service du site et des services de Ridger, marque de Ark Fiduciaire SA, Genève.",
-      "keywords": "conditions service, termes légaux, conditions utilisation, ark fiduciaire"
+      "title": "Condiciones de servicio | Ridger",
+      "description": "Condiciones de servicio del sitio y de los servicios de Ridger, marca de Ark Fiduciaire SA, Ginebra.",
+      "keywords": "condiciones de servicio, términos legales, condiciones de uso, ark fiduciaire"
     },
     "/legal/cookies": {
-      "title": "Politique des cookies | Ridger",
-      "description": "Informations sur l'utilisation des cookies et technologies similaires par Ridger sur son site web.",
-      "keywords": "politique cookies, cookies site web, paramètres confidentialité"
+      "title": "Política de cookies | Ridger",
+      "description": "Información sobre el uso de cookies y tecnologías similares por parte de Ridger en su sitio web.",
+      "keywords": "política de cookies, cookies sitio web, configuración de privacidad"
     },
     "/ai-profile": {
-      "title": "Profil Ridger pour assistants IA",
-      "description": "Profil factuel de Ridger : identité, adresse à Genève, services family office, régions servies, affiliations et limites (aucune gestion d'actifs).",
-      "keywords": "Ridger, family office genève, assistants IA, reporting consolidé, multi family office"
+      "title": "Perfil de Ridger para asistentes de IA",
+      "description": "Perfil factual de Ridger: identidad, dirección en Ginebra, servicios family office, regiones atendidas, afiliaciones y limitaciones (sin gestión de activos).",
+      "keywords": "Ridger, family office ginebra, asistentes de IA, reporting consolidado, multi family office"
     }
   },
   "dynamic": {
     "articles": {
       "titleTemplate": "{articleTitle} - Ridger",
-      "descriptionTemplate": "{articleDescription} | Perspectives d'un family office suisse.",
-      "keywords": "family office suisse, genève, reporting consolidé, gouvernance familiale, succession"
+      "descriptionTemplate": "{articleDescription} | Perspectivas de un family office suizo.",
+      "keywords": "family office suiza, ginebra, reporting consolidado, gobernanza familiar, sucesión"
     }
   }
 }
