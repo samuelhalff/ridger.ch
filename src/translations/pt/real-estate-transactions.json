@@ -1,38 +1,38 @@
 {
   "Hero": {
-    "Title": "Immobilier et transactions",
-    "Description": "La supervision et l'administration de votre patrimoine immobilier, la coordination de vos régies et l'accompagnement de vos acquisitions et cessions, du repérage des opportunités jusqu'à la signature.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Imobiliário e transações",
+    "Description": "A supervisão e a administração do seu património imobiliário, a coordenação das suas administrações de imóveis e o acompanhamento das suas aquisições e alienações, desde a identificação de oportunidades até à assinatura.",
+    "CTA": "Solicitar uma entrevista confidencial"
   },
   "Intro": [
-    "Le patrimoine immobilier d'une famille se détient rarement d'une seule manière. Biens en direct, sociétés immobilières, immeubles de rendement : chacun appelle un suivi rigoureux et une information claire.",
-    "Nous assurons la supervision et l'administration de vos actifs immobiliers, et nous coordonnons vos transactions avec vos régies, notaires et banques. Notre rôle est d'organiser, de superviser et de négocier ; la gestion des actifs et les décisions restent les vôtres."
+    "O património imobiliário de uma família raramente é detido de uma só forma. Bens diretos, sociedades imobiliárias, imóveis de rendimento: cada um exige um acompanhamento rigoroso e uma informação clara.",
+    "Asseguramos a supervisão e a administração dos seus ativos imobiliários e coordenamos as suas transações com as suas administrações de imóveis, notários e bancos. O nosso papel é organizar, supervisionar e negociar; a gestão dos ativos e as decisões permanecem suas."
   ],
   "Pillars": [
     {
-      "Title": "Supervision et administration",
-      "Body": "Suivi de vos biens détenus en direct ou via des sociétés immobilières, supervision de la gestion locative et reporting régulier sur les revenus, les charges et l'état de votre parc."
+      "Title": "Supervisão e administração",
+      "Body": "Acompanhamento dos seus bens detidos diretamente ou através de sociedades imobiliárias, supervisão da gestão do arrendamento e reporting regular sobre os rendimentos, os encargos e o estado do seu parque."
     },
     {
-      "Title": "Gestion immobilière",
-      "Body": "Gestion administrative de vos biens : suivi des baux et des loyers, charges et décomptes, pilotage des régies et des travaux, reporting consolidé de votre parc immobilier."
+      "Title": "Gestão imobiliária",
+      "Body": "Gestão administrativa dos seus bens: acompanhamento dos arrendamentos e das rendas, encargos e acertos de contas, condução das administrações de imóveis e das obras, reporting consolidado do seu parque imobiliário."
     },
     {
-      "Title": "Coordination des régies",
-      "Body": "Interface unique avec vos régies et gérants d'immeubles : cadrage des mandats, suivi des prestations et contrôle des comptes, dans votre intérêt."
+      "Title": "Coordenação das administrações de imóveis",
+      "Body": "Interface único com as suas administrações de imóveis e gestores de prédios: enquadramento dos mandatos, acompanhamento das prestações e controlo das contas, no seu interesse."
     },
     {
-      "Title": "Repérage des opportunités",
-      "Body": "Identification et évaluation d'opportunités d'acquisition alignées sur les souhaits de votre famille, avec une lecture indépendante des dossiers et des prix."
+      "Title": "Identificação de oportunidades",
+      "Body": "Identificação e avaliação de oportunidades de aquisição alinhadas com os desejos da sua família, com uma leitura independente dos dossiês e dos preços."
     },
     {
-      "Title": "Coordination des transactions",
-      "Body": "Orchestration des acquisitions et cessions avec notaires, banques et experts, suivi de la due diligence et appui à la négociation des conditions."
+      "Title": "Coordenação das transações",
+      "Body": "Orquestração das aquisições e alienações com notários, bancos e peritos, acompanhamento da due diligence e apoio à negociação das condições."
     }
   ],
   "Closing": {
-    "Title": "Des transactions maîtrisées",
-    "Body": "De la première opportunité à la signature, nous coordonnons chaque intervenant et veillons à la cohérence de l'ensemble, discrètement et dans la durée."
+    "Title": "Transações dominadas",
+    "Body": "Da primeira oportunidade à assinatura, coordenamos cada interveniente e velamos pela coerência do conjunto, discretamente e ao longo do tempo."
   },
-  "Perimeter": "La conservation, la gestion locative opérationnelle et la gestion des actifs restent assurées par vos régies, gérants et établissements régulés. Ridger assure la supervision, l'administration, la coordination et l'appui à la négociation. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "A custódia, a gestão operacional do arrendamento e a gestão dos ativos permanecem asseguradas pelas suas administrações de imóveis, gestores e estabelecimentos regulados. A Ridger assegura a supervisão, a administração, a coordenação e o apoio à negociação. A Ridger não gere ativos e não presta aconselhamento de investimento."
 }

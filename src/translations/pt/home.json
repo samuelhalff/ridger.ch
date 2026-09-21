@@ -1,102 +1,102 @@
 {
   "Meta": {
-    "Title": "Family office à Genève | Ridger",
-    "Description": "Family office nouvelle génération à Genève : reporting consolidé, coordination de vos conseillers et discrétion suisse. Ridger ne gère pas d'actifs."
+    "Title": "Family office em Genebra | Ridger",
+    "Description": "Family office de nova geração em Genebra: reporting consolidado, coordenação dos seus consultores e discrição suíça. A Ridger não gere ativos."
   },
   "Hero": {
-    "Title": "Un family office nouvelle génération",
-    "Description": "Ridger réunit votre patrimoine dans une vue unique, coordonne vos conseillers et supervise votre administration, avec la discrétion et la rigueur suisses. Nous ne gérons pas vos actifs ; nous veillons sur l'ensemble.",
-    "CTA": "Demander un entretien confidentiel",
-    "SecondaryCTA": "Demander un entretien confidentiel",
-    "Badge": "Genève",
-    "BadgeTwo": "Digital d'abord",
-    "ImageAlt": "Family office à Genève",
-    "ScrollHint": "Découvrir",
+    "Title": "Um family office de nova geração",
+    "Description": "A Ridger reúne o seu património numa visão única, coordena os seus consultores e supervisiona a sua administração, com a discrição e o rigor suíços. Não gerimos os seus ativos; velamos pelo conjunto.",
+    "CTA": "Solicitar uma entrevista confidencial",
+    "SecondaryCTA": "Solicitar uma entrevista confidencial",
+    "Badge": "Genebra",
+    "BadgeTwo": "Digital em primeiro lugar",
+    "ImageAlt": "Family office em Genebra",
+    "ScrollHint": "Descobrir",
     "Facts": {
       "Implantation": {
-        "Label": "// Indépendance",
-        "Value": "Sans banque",
-        "Sub": "Indépendant de toute banque et de tout gérant, aligné sur vos seuls intérêts."
+        "Label": "// Independência",
+        "Value": "Sem banco",
+        "Sub": "Independente de qualquer banco e de qualquer gestor, alinhado unicamente com os seus interesses."
       },
       "Expertises": {
-        "Label": "// Périmètre",
-        "Value": "Vue unique",
-        "Sub": "Reporting consolidé, surveillance, coordination et supervision administrative."
+        "Label": "// Perímetro",
+        "Value": "Visão única",
+        "Sub": "Reporting consolidado, supervisão, coordenação e supervisão administrativa."
       },
       "Solutions": {
-        "Label": "// Discrétion",
-        "Value": "Suisse",
-        "Sub": "Données hébergées en Suisse, secret professionnel, réponse sous un jour ouvré."
+        "Label": "// Discrição",
+        "Value": "Suíça",
+        "Sub": "Dados alojados na Suíça, sigilo profissional, resposta no prazo de um dia útil."
       }
     }
   },
   "Services": {
-    "Eyebrow": "Nos services",
-    "Title": "Ce dont votre famille a besoin, sous un seul toit.",
+    "Eyebrow": "Os nossos serviços",
+    "Title": "O que a sua família precisa, sob um único teto.",
     "Subtitle": ""
   },
   "Trust": {
-    "Eyebrow": "Nos engagements",
+    "Eyebrow": "Os nossos compromissos",
     "DataResidency": {
-      "Title": "Données en Suisse",
-      "Description": "Vos documents et vos données sont hébergés en Suisse, partagés uniquement avec les personnes que vous désignez."
+      "Title": "Dados na Suíça",
+      "Description": "Os seus documentos e os seus dados são alojados na Suíça, partilhados apenas com as pessoas que designar."
     },
     "Secrecy": {
-      "Title": "Secret professionnel",
-      "Description": "La confidentialité est au cœur de notre métier, à chaque échange et à chaque étape."
+      "Title": "Sigilo profissional",
+      "Description": "A confidencialidade está no centro do nosso ofício, em cada conversa e em cada etapa."
     },
     "Response": {
-      "Title": "Réponse sous un jour ouvré",
-      "Description": "Un interlocuteur unique qui connaît vos dossiers et vous répond dans un délai d'un jour ouvré."
+      "Title": "Resposta em um dia útil",
+      "Description": "Um interlocutor único que conhece os seus dossiês e lhe responde no prazo de um dia útil."
     }
   },
   "How": {
-    "Eyebrow": "Notre façon de travailler",
-    "Title": "Digital d'abord, humain avant tout.",
+    "Eyebrow": "A nossa forma de trabalhar",
+    "Title": "Digital em primeiro lugar, humano acima de tudo.",
     "Steps": [
       {
-        "Title": "Digital d'abord",
-        "Body": "Une consolidation continue et des flux de travail numériques, pour une information toujours à jour et sécurisée."
+        "Title": "Digital em primeiro lugar",
+        "Body": "Uma consolidação contínua e fluxos de trabalho digitais, para uma informação sempre atualizada e segura."
       },
       {
-        "Title": "Un interlocuteur unique",
-        "Body": "Une seule adresse pour vos demandes, qui mobilise les bonnes compétences au bon moment."
+        "Title": "Um interlocutor único",
+        "Body": "Um único endereço para os seus pedidos, que mobiliza as competências certas no momento certo."
       },
       {
-        "Title": "Discrétion suisse",
-        "Body": "La confidentialité et la rigueur d'un métier ancré dans la tradition genevoise."
+        "Title": "Discrição suíça",
+        "Body": "A confidencialidade e o rigor de um ofício ancorado na tradição genebrina."
       }
     ]
   },
   "About": {
-    "Eyebrow": "Pourquoi Ridger",
-    "Title": "Un regard indépendant sur votre patrimoine",
+    "Eyebrow": "Porquê a Ridger",
+    "Title": "Um olhar independente sobre o seu património",
     "Content": [
-      "Ridger est un multi family office digital basé à Genève. Nous accompagnons les familles dans la consolidation, la surveillance et la coordination de leur patrimoine, sans jamais gérer leurs actifs à la place de leurs banques et de leurs gérants.",
-      "Notre indépendance est la condition d'un regard objectif. Nous n'avons aucun produit à placer, aucune transaction à provoquer ; notre seule mission est de vous donner une vue claire et de coordonner vos conseillers.",
-      "Nous commençons par un audit de votre organisation existante, puis mettons en place un reporting consolidé et un rythme de surveillance adapté à vos priorités. Vous conservez la main sur les décisions ; nous en assurons la préparation et le suivi.",
-      "La confidentialité et la discrétion guident chacun de nos gestes. Vos données sont hébergées en Suisse et ne sont partagées qu'avec les personnes que vous désignez."
+      "A Ridger é um multi family office digital com sede em Genebra. Acompanhamos as famílias na consolidação, na supervisão e na coordenação do seu património, sem nunca gerir os seus ativos em substituição dos seus bancos e dos seus gestores.",
+      "A nossa independência é a condição de um olhar objetivo. Não temos qualquer produto para colocar, nem qualquer transação para provocar; a nossa única missão é dar-lhe uma visão clara e coordenar os seus consultores.",
+      "Começamos por uma auditoria da sua organização existente e, depois, implementamos um reporting consolidado e um ritmo de supervisão adaptado às suas prioridades. Mantém o controlo sobre as decisões; nós asseguramos a sua preparação e acompanhamento.",
+      "A confidencialidade e a discrição orientam cada um dos nossos gestos. Os seus dados são alojados na Suíça e apenas são partilhados com as pessoas que designar."
     ],
     "Quality": {
-      "Title": "Transparence sur les frais",
-      "Content": "Nous rendons lisibles les frais explicites et implicites de vos relations bancaires, pour une compréhension complète de ce que coûte votre patrimoine."
+      "Title": "Transparência sobre os custos",
+      "Content": "Tornamos legíveis os custos explícitos e implícitos das suas relações bancárias, para uma compreensão completa do que custa o seu património."
     },
     "Innovation": {
-      "Title": "Une méthode digitale",
-      "Content": "Consolidation continue, coffre-fort numérique et partage contrôlé : nos flux de travail numériques font gagner du temps sans jamais transiger sur la sécurité."
+      "Title": "Um método digital",
+      "Content": "Consolidação contínua, cofre digital e partilha controlada: os nossos fluxos de trabalho digitais poupam tempo sem nunca transigir na segurança."
     }
   },
   "FAQ": {
-    "Title": "Questions fréquentes",
-    "Subtitle": "Réponses rapides aux questions courantes sur notre rôle et nos services."
+    "Title": "Perguntas frequentes",
+    "Subtitle": "Respostas rápidas às questões correntes sobre o nosso papel e os nossos serviços."
   },
   "Testimonials": {
-    "SectionTitle": "Témoignages"
+    "SectionTitle": "Testemunhos"
   },
   "Platform": {
-    "Eyebrow": "La plateforme",
-    "Title": "Toutes vos affaires, dans un espace unique",
-    "Body": "Fortune consolidée, positions par banque, immobilier, documents et rapports : votre famille suit l'ensemble depuis un espace sécurisé, hébergé en Suisse, mis à jour en continu.",
-    "CTA": "Découvrir la plateforme"
+    "Eyebrow": "A plataforma",
+    "Title": "Todos os seus assuntos, num espaço único",
+    "Body": "Património consolidado, posições por banco, imobiliário, documentos e relatórios: a sua família acompanha o conjunto a partir de um espaço seguro, alojado na Suíça, atualizado em contínuo.",
+    "CTA": "Descobrir a plataforma"
   }
 }

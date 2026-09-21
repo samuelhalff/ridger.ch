@@ -1,46 +1,46 @@
 {
   "Hero": {
-    "Title": "Coordination family office",
-    "Description": "Un interlocuteur unique pour l'ensemble de vos conseillers. Nous coordonnons banquiers, avocats, notaires, conseillers fiscaux et assureurs, et intégrons l'écosystème existant de votre famille.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Coordenação family office",
+    "Description": "Um interlocutor único para todos os seus consultores. Coordenamos banqueiros, advogados, notários, consultores fiscais e seguradoras, e integramos o ecossistema existente da sua família.",
+    "CTA": "Solicitar uma entrevista confidencial"
   },
   "Intro": [
-    "Une famille bien accompagnée travaille souvent avec de nombreux conseillers, répartis entre plusieurs établissements et juridictions. La valeur se perd dans les allers-retours, les doublons et les informations dispersées.",
-    "Nous devenons votre point de contact unique. Nous connaissons vos dossiers, nous parlons à vos conseillers et nous veillons à ce que chacun dispose de l'information juste, au bon moment."
+    "Uma família bem acompanhada trabalha frequentemente com numerosos consultores, distribuídos por vários estabelecimentos e jurisdições. O valor perde-se nas idas e vindas, nas duplicações e na informação dispersa.",
+    "Tornamo-nos o seu ponto de contacto único. Conhecemos os seus dossiês, falamos com os seus consultores e velamos por que cada um disponha da informação certa, no momento certo."
   ],
   "Pillars": [
     {
-      "Title": "Point de contact unique",
-      "Body": "Une seule adresse pour vos demandes, qui mobilise ensuite les bons interlocuteurs sans que vous ayez à tout orchestrer."
+      "Title": "Ponto de contacto único",
+      "Body": "Um único endereço para os seus pedidos, que mobiliza depois os interlocutores certos sem que tenha de orquestrar tudo."
     },
     {
-      "Title": "Coordination des conseillers",
-      "Body": "Mise en relation et suivi entre banquiers, avocats, notaires, conseillers fiscaux et assureurs autour de vos priorités."
+      "Title": "Coordenação dos consultores",
+      "Body": "Articulação e acompanhamento entre banqueiros, advogados, notários, consultores fiscais e seguradoras em torno das suas prioridades."
     },
     {
-      "Title": "Intégration de l'existant",
-      "Body": "Nous partons de l'écosystème que vous avez déjà construit et l'intégrons, sans le remplacer."
+      "Title": "Integração do existente",
+      "Body": "Partimos do ecossistema que já construiu e integramo-lo, sem o substituir."
     },
     {
-      "Title": "Suivi et mémoire",
-      "Body": "Un suivi rigoureux des échéances, décisions et documents, pour une continuité qui traverse le temps."
+      "Title": "Acompanhamento e memória",
+      "Body": "Um acompanhamento rigoroso dos prazos, decisões e documentos, para uma continuidade que atravessa o tempo."
     },
     {
-      "Title": "Demandes particulières",
-      "Body": "Pour les familles établies, nous prenons en charge certaines demandes particulières — voyages, personnel, achats exceptionnels, projets spéciaux — dans le prolongement de notre coordination, avec discrétion."
+      "Title": "Pedidos particulares",
+      "Body": "Para as famílias estabelecidas, assumimos certos pedidos particulares — viagens, pessoal, aquisições excecionais, projetos especiais — em prolongamento da nossa coordenação, com discrição."
     },
     {
-      "Title": "Intendance de maisons",
-      "Body": "La gestion quotidienne de vos résidences : personnel de maison, fournisseurs et abonnements, entretien et interventions, factures et budgets — une intendance discrète, en Suisse comme à l'étranger."
+      "Title": "Intendência de residências",
+      "Body": "A gestão quotidiana das suas residências: pessoal doméstico, fornecedores e subscrições, manutenção e intervenções, faturas e orçamentos — uma intendência discreta, na Suíça como no estrangeiro."
     },
     {
-      "Title": "Relocation et permis",
-      "Body": "L'organisation de votre arrivée en Suisse : coordination des démarches de permis (B, C, G, L), inscription auprès des autorités, écoles, banques et assurances. Nous orchestrons les formalités avec les autorités et, au besoin, vos avocats — sans nous substituer au conseil juridique."
+      "Title": "Relocalização e autorizações",
+      "Body": "A organização da sua chegada à Suíça: coordenação dos procedimentos de autorização de residência (permis B, C, G, L), inscrição junto das autoridades, escolas, bancos e seguros. Orquestramos as formalidades com as autoridades e, se necessário, com os seus advogados — sem nos substituirmos ao aconselhamento jurídico."
     }
   ],
   "Closing": {
-    "Title": "Votre temps préservé",
-    "Body": "Vous gardez la main sur les décisions. Nous prenons en charge la coordination, les relances et la circulation de l'information entre vos conseillers."
+    "Title": "O seu tempo preservado",
+    "Body": "Mantém o controlo sobre as decisões. Assumimos a coordenação, os follow-ups e a circulação da informação entre os seus consultores."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
 }

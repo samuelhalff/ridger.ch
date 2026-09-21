@@ -7,34 +7,34 @@
         "AboutUs": "Sobre nós",
         "Careers": "Carreiras",
         "Press": "Imprensa",
-        "News": "Notícias",
-        "MediaKit": "Kit de mídia",
-        "Contact": "Contato"
+        "News": "Atualidades",
+        "MediaKit": "Kit de imprensa",
+        "Contact": "Contacto"
     },
     "Resources": {
         "Title": "Recursos",
-        "Blog": "Blog",
+        "Blog": "Blogue",
         "Newsletter": "Newsletter",
         "Events": "Eventos",
         "HelpCentre": "Centro de ajuda",
         "Tutorials": "Tutoriais",
-        "Support": "Suporte"
+        "Support": "Apoio"
     },
     "Social": {
-        "Title": "Social",
+        "Title": "Redes sociais",
         "LinkedIn": "LinkedIn"
     },
     "Legal": {
-        "Title": "Legal",
-        "Terms": "Termos",
+        "Title": "Aspetos legais",
+        "Terms": "Condições",
         "Privacy": "Privacidade",
         "Cookies": "Cookies",
         "Licenses": "Licenças",
-        "Settings": "Configurações",
-        "Contact": "Contato"
+        "Settings": "Definições",
+        "Contact": "Contacto"
     },
     "Copyright": "Todos os direitos reservados",
     "Ridger": "Ridger",
-    "SoFitAffiliationPrefix": "A Ark Fiduciaire SA é afiliada ao ORA de",
+    "SoFitAffiliationPrefix": "A Ark Fiduciaire SA está filiada no OAR de",
     "ArkAffiliationPrefix": "Ridger — uma marca do grupo Ark ·"
 }

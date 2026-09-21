@@ -1,34 +1,34 @@
 {
   "Hero": {
-    "Title": "Reporting consolidé",
-    "Description": "Une vue unique de l'ensemble de votre patrimoine, indépendante de toute banque. Nous rassemblons vos comptes bancaires, dépositaires, actifs immobiliers, participations en private equity et actifs de collection dans un reporting clair et régulier.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Reporting consolidado",
+    "Description": "Uma visão única de todo o seu património, independente de qualquer banco. Reunimos as suas contas bancárias, depositários, ativos imobiliários, participações em private equity e ativos de coleção num reporting claro e regular.",
+    "CTA": "Solicitar uma entrevista confidencial"
   },
   "Intro": [
-    "Votre patrimoine est réparti entre plusieurs banques, gérants et juridictions. Chaque relevé suit son propre format, sa propre devise et son propre calendrier. Le reporting consolidé réunit ces sources en une seule lecture, tenue à jour et vérifiable.",
-    "Nous produisons des relevés indépendants de performance et de frais. Vous voyez ce que vous détenez, comment cela évolue et ce que cela coûte, sans dépendre du reporting d'un seul établissement."
+    "O seu património está distribuído por vários bancos, gestores e jurisdições. Cada extrato segue o seu próprio formato, a sua própria moeda e o seu próprio calendário. O reporting consolidado reúne estas fontes numa única leitura, mantida atualizada e verificável.",
+    "Produzimos extratos independentes de desempenho e de custos. Vê o que detém, como evolui e quanto custa, sem depender do reporting de um único estabelecimento."
   ],
   "Pillars": [
     {
-      "Title": "Une vue unique",
-      "Body": "Banques, dépositaires, immobilier, private equity et actifs de collection réunis dans un même tableau de bord, en devise de référence."
+      "Title": "Uma visão única",
+      "Body": "Bancos, depositários, imobiliário, private equity e ativos de coleção reunidos num mesmo painel, na moeda de referência."
     },
     {
-      "Title": "Indépendance",
-      "Body": "Notre reporting est indépendant de toute banque. Les chiffres sont recoupés avec les relevés officiels de chaque contrepartie."
+      "Title": "Independência",
+      "Body": "O nosso reporting é independente de qualquer banco. Os números são cruzados com os extratos oficiais de cada contraparte."
     },
     {
-      "Title": "Performance mesurée",
-      "Body": "Calcul de performance pondérée par le temps (TWR), comparaison à des indices de référence et lecture claire des contributions."
+      "Title": "Desempenho medido",
+      "Body": "Cálculo de desempenho ponderado pelo tempo (TWR), comparação com índices de referência e leitura clara das contribuições."
     },
     {
-      "Title": "Transparence des frais",
-      "Body": "Recensement et lecture des frais explicites et implicites, pour une compréhension complète du coût de vos relations bancaires."
+      "Title": "Transparência dos custos",
+      "Body": "Levantamento e leitura dos custos explícitos e implícitos, para uma compreensão completa do custo das suas relações bancárias."
     }
   ],
   "Closing": {
-    "Title": "Un reporting à votre rythme",
-    "Body": "Mensuel, trimestriel ou à la demande, votre reporting est structuré selon vos priorités et partagé de façon sécurisée avec les personnes que vous désignez."
+    "Title": "Um reporting ao seu ritmo",
+    "Body": "Mensal, trimestral ou a pedido, o seu reporting é estruturado de acordo com as suas prioridades e partilhado de forma segura com as pessoas que designar."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
 }

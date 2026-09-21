@@ -1,34 +1,34 @@
 {
   "Hero": {
-    "Title": "Coffre-fort numérique",
-    "Description": "Vos documents familiaux, chiffrés et structurés, hébergés en Suisse. Un espace sécurisé pour conserver, organiser et partager les pièces essentielles avec vos conseillers, selon des droits que vous maîtrisez.",
-    "CTA": "Demander un entretien confidentiel"
+    "Title": "Cofre digital",
+    "Description": "Os seus documentos familiares, cifrados e estruturados, alojados na Suíça. Um espaço seguro para conservar, organizar e partilhar os documentos essenciais com os seus consultores, segundo direitos que controla.",
+    "CTA": "Solicitar uma entrevista confidencial"
   },
   "Intro": [
-    "Les documents d'une famille — actes, contrats, relevés, décisions — se dispersent avec le temps entre courriels, dossiers et intervenants. Les retrouver au moment voulu devient un exercice fastidieux.",
-    "Le coffre-fort numérique réunit ces pièces dans un espace unique, chiffré et hébergé en Suisse. Vous décidez qui voit quoi, et vous gardez la trace de chaque accès."
+    "Os documentos de uma família — escrituras, contratos, extratos, decisões — dispersam-se com o tempo entre e-mails, pastas e intervenientes. Encontrá-los no momento pretendido torna-se um exercício fastidioso.",
+    "O cofre digital reúne estes documentos num espaço único, cifrado e alojado na Suíça. Decide quem vê o quê e mantém o registo de cada acesso."
   ],
   "Pillars": [
     {
-      "Title": "Coffre chiffré",
-      "Body": "Un espace documentaire chiffré, pensé pour la confidentialité et la durée."
+      "Title": "Cofre cifrado",
+      "Body": "Um espaço documental cifrado, pensado para a confidencialidade e a durabilidade."
     },
     {
-      "Title": "Dossiers structurés",
-      "Body": "Une organisation claire des dossiers familiaux, facile à parcourir et à tenir à jour."
+      "Title": "Dossiês estruturados",
+      "Body": "Uma organização clara dos dossiês familiares, fácil de percorrer e de manter atualizada."
     },
     {
-      "Title": "Données en Suisse",
-      "Body": "Hébergement des données en Suisse, aligné avec vos exigences de résidence et de confidentialité."
+      "Title": "Dados na Suíça",
+      "Body": "Alojamento dos dados na Suíça, alinhado com as suas exigências de residência e de confidencialidade."
     },
     {
-      "Title": "Partage contrôlé",
-      "Body": "Partage sélectif avec vos conseillers, avec droits d'accès et traçabilité maîtrisés."
+      "Title": "Partilha controlada",
+      "Body": "Partilha seletiva com os seus consultores, com direitos de acesso e rastreabilidade controlados."
     }
   ],
   "Closing": {
-    "Title": "Un patrimoine documentaire durable",
-    "Body": "Des flux de travail numériques qui font gagner du temps, sans jamais transiger sur la sécurité ni la discrétion."
+    "Title": "Um património documental duradouro",
+    "Body": "Fluxos de trabalho digitais que poupam tempo, sem nunca transigir na segurança nem na discrição."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
 }
