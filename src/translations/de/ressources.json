@@ -35,7 +35,19 @@
   "RelatedArticles": "Verwandte Artikel",
   "ReadMore": "Weiterlesen",
   "SwissVATOffice": "Eidgenössische Steuerverwaltung",
-  "Contact": "Kontakt",
+  "Contact": {
+    "Eyebrow": "Sprechen wir",
+    "Title": "Kontakt aufnehmen",
+    "Description": "Unsere Experten helfen Ihnen, die Details und Auswirkungen für Ihre Situation zu verstehen. Erhalten Sie persönliche Beratung, die auf Ihre Bedürfnisse zugeschnitten ist.",
+    "ButtonText": "Unser Team kontaktieren",
+    "SecondaryButtonText": "Sofortangebot erhalten"
+  },
+  "ContextualCTA": {
+    "Title": "Brauchen Sie Hilfe zu diesem Thema?",
+    "Description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung. Erstes Gespräch kostenlos und unverbindlich.",
+    "PrimaryCTA": "Kontaktieren Sie uns",
+    "SecondaryCTA": "Sofort-Angebot"
+  },
   "ReadingTime": "Lesezeit",
   "Minutes": "Min",
   "Links": "Links",

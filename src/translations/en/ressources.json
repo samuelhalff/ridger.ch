@@ -35,7 +35,19 @@
   "RelatedArticles": "Related articles",
   "ReadMore": "Read more",
   "SwissVATOffice": "Swiss Federal Tax Administration",
-  "Contact": "Contact",
+  "Contact": {
+    "Eyebrow": "Let's talk",
+    "Title": "Get in touch",
+    "Description": "Our experts can help you understand the details and implications for your situation. Get personalised advice tailored to your needs.",
+    "ButtonText": "Contact our team",
+    "SecondaryButtonText": "Get an instant quote"
+  },
+  "ContextualCTA": {
+    "Title": "Need help with this topic?",
+    "Description": "Our experts are available for personalised guidance. First consultation free, no commitment.",
+    "PrimaryCTA": "Contact us",
+    "SecondaryCTA": "Instant quote"
+  },
   "ReadingTime": "Reading time",
   "Minutes": "min",
   "Links": "Links",

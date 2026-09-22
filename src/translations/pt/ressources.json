@@ -35,7 +35,19 @@
   "RelatedArticles": "Artigos relacionados",
   "ReadMore": "Ler mais",
   "SwissVATOffice": "Administração Federal das Contribuições",
-  "Contact": "Contacto",
+  "Contact": {
+    "Eyebrow": "Vamos conversar",
+    "Title": "Entrar em contato",
+    "Description": "Nossos especialistas podem ajudá-lo a entender os detalhes e implicações para a sua situação. Obtenha consultoria personalizada adaptada às suas necessidades.",
+    "ButtonText": "Contactar nossa equipe",
+    "SecondaryButtonText": "Obtenha um orçamento instantâneo"
+  },
+  "ContextualCTA": {
+    "Title": "Precisa de ajuda com este assunto?",
+    "Description": "Nossos especialistas estão disponíveis para um acompanhamento personalizado. Primeira consulta gratuita e sem compromisso.",
+    "PrimaryCTA": "Contacte-nos",
+    "SecondaryCTA": "Orçamento instantâneo"
+  },
   "ReadingTime": "Tempo de leitura",
   "Minutes": "min",
   "Links": "Ligações",

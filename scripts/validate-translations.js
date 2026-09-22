@@ -214,3 +214,83 @@ validateTranslations();
   }
   if (warn === 0) console.log("✅ No untranslated French values detected in active namespaces");
 })();
+
+// ─────────────────────────────────────────────────────────────────────────
+// Code-reference check (added 2026-09-22, FATAL). Scans app/ and src/ for
+// translation-hook calls with LITERAL keys and fails if a referenced key path
+// is ABSENT from any locale's namespace JSON. Rationale: getTranslations()
+// echoes the key string itself when a path is missing, so a `t("X.Y") || "…"`
+// fallback never fires — the raw "X.Y" renders on the page (this is exactly
+// how `Contact.Title` and `ContextualCTA.*` shipped as visible raw labels).
+// A present-but-EMPTY value ("") is allowed: i18next returns "" for it, which
+// renders blank, not the raw key — that's a legitimate "optional" value.
+// Only plain string-literal keys are checked; template-literal / dynamic keys
+// (e.g. `ContextualCTA.Categories.${cat}.Title`) are skipped by design, and
+// code that reads those already guards with `value !== key`.
+// ─────────────────────────────────────────────────────────────────────────
+(function codeReferenceCheck() {
+  const ROOTS = ["app", "src"].map((d) => path.join(__dirname, "..", d));
+  // path present (even if ""), as opposed to hasKey() which treats "" as absent
+  const keyExists = (obj, keyPath) => {
+    let cur = obj;
+    for (const k of keyPath.split(".")) {
+      if (cur && typeof cur === "object" && k in cur) cur = cur[k];
+      else return false;
+    }
+    return cur !== undefined && cur !== null;
+  };
+  const readNs = (loc, ns) => {
+    const fp = path.join(TRANSLATIONS_DIR, loc, `${ns}.json`);
+    return fs.existsSync(fp) ? JSON.parse(fs.readFileSync(fp, "utf-8")) : null;
+  };
+  const walk = (dir, acc = []) => {
+    if (!fs.existsSync(dir)) return acc;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        if (/node_modules|\.next/.test(p)) continue;
+        walk(p, acc);
+      } else if (/\.(tsx?|jsx?)$/.test(e.name)) acc.push(p);
+    }
+    return acc;
+  };
+  // const <var> = [await] getTranslations(<loc>, "<ns>")  |  useTranslations("<ns>")
+  const bindRe =
+    /const\s+(t[A-Za-z0-9_]*)\s*=\s*(?:await\s+)?(?:getTranslations|useTranslations)\(\s*(?:[A-Za-z0-9_]+\s*,\s*)?["'`]([a-zA-Z0-9_-]+)["'`]\s*\)/g;
+  const files = ROOTS.flatMap((r) => walk(r));
+  const fails = new Map(); // "ns:key" -> Set(locales)
+  for (const f of files) {
+    const srcTxt = fs.readFileSync(f, "utf-8");
+    const v2ns = {};
+    let m;
+    bindRe.lastIndex = 0;
+    while ((m = bindRe.exec(srcTxt))) v2ns[m[1]] = m[2];
+    for (const [v, ns] of Object.entries(v2ns)) {
+      const callRe = new RegExp(
+        v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
+          "\\(\\s*[\"'`]([A-Za-z0-9_][A-Za-z0-9_.]*)[\"'`]",
+        "g"
+      );
+      let c;
+      while ((c = callRe.exec(srcTxt))) {
+        const key = c[1];
+        for (const loc of LOCALES) {
+          const t = readNs(loc, ns);
+          if (!t || !keyExists(t, key)) {
+            const id = `${ns}:${key}`;
+            if (!fails.has(id)) fails.set(id, new Set());
+            fails.get(id).add(loc);
+          }
+        }
+      }
+    }
+  }
+  if (fails.size) {
+    console.error("\n❌ Code-reference check failed — keys used in code but ABSENT from JSON (will render as raw keys):");
+    for (const id of [...fails.keys()].sort())
+      console.error(`  - ${id}  [${[...fails.get(id)].join(", ")}]`);
+    console.error(`\n${fails.size} unresolved referenced key(s).`);
+    process.exit(1);
+  }
+  console.log("✅ Code-reference check: all literal translation keys used in code resolve in every locale");
+})();
