@@ -132,7 +132,7 @@
                     "Données d'utilisation (pages visitées, temps passé, sources de référence)",
                     "Cookies et technologies de suivi similaires",
                     "Soumissions de formulaires de contact et communications",
-                    "Contenu du chat IA et informations de contact (email, nom, société, téléphone) enregistrés dans notre système de suivi (Microsoft 365/SharePoint) pour répondre à votre demande"
+                    "Contenu du formulaire de contact et messages WhatsApp, avec vos informations de contact (email, nom, société, téléphone) enregistrés dans notre système de suivi (Microsoft 365/SharePoint) pour répondre à votre demande"
                 ]
             }
         },
@@ -156,7 +156,7 @@
                     "Préparer des états financiers et rapports",
                     "Gérer les obligations de conformité",
                     "Communiquer sur vos services et votre compte",
-                    "Répondre aux demandes via l'assistant IA, enregistrer l'échange et préparer les devis de suivi"
+                    "Répondre aux demandes reçues via le formulaire de contact ou WhatsApp, enregistrer l'échange et préparer les réponses de suivi"
                 ]
             },
             "BusinessOperations": {

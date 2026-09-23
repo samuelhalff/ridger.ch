@@ -40,13 +40,13 @@
     "Title": "Get in touch",
     "Description": "Our experts can help you understand the details and implications for your situation. Get personalised advice tailored to your needs.",
     "ButtonText": "Contact our team",
-    "SecondaryButtonText": "Get an instant quote"
+    "SecondaryButtonText": "Book a call"
   },
   "ContextualCTA": {
     "Title": "Need help with this topic?",
     "Description": "Our experts are available for personalised guidance. First consultation free, no commitment.",
     "PrimaryCTA": "Contact us",
-    "SecondaryCTA": "Instant quote"
+    "SecondaryCTA": "Book a call"
   },
   "ReadingTime": "Reading time",
   "Minutes": "min",

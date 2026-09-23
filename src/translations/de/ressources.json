@@ -40,13 +40,13 @@
     "Title": "Kontakt aufnehmen",
     "Description": "Unsere Experten helfen Ihnen, die Details und Auswirkungen für Ihre Situation zu verstehen. Erhalten Sie persönliche Beratung, die auf Ihre Bedürfnisse zugeschnitten ist.",
     "ButtonText": "Unser Team kontaktieren",
-    "SecondaryButtonText": "Sofortangebot erhalten"
+    "SecondaryButtonText": "Termin vereinbaren"
   },
   "ContextualCTA": {
     "Title": "Brauchen Sie Hilfe zu diesem Thema?",
     "Description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung. Erstes Gespräch kostenlos und unverbindlich.",
     "PrimaryCTA": "Kontaktieren Sie uns",
-    "SecondaryCTA": "Sofort-Angebot"
+    "SecondaryCTA": "Termin vereinbaren"
   },
   "ReadingTime": "Lesezeit",
   "Minutes": "Min",

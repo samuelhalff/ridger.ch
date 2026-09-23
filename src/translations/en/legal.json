@@ -132,7 +132,7 @@
                     "Usage data (pages visited, time spent, referral sources)",
                     "Cookies and similar tracking technologies",
                     "Contact form submissions and communications",
-                    "AI assistant chat content and lead details (email, name, optional company and phone) saved in our lead management system (Microsoft 365/SharePoint) to follow up on your request"
+                    "Contact form submissions and WhatsApp messages, with lead details (email, name, optional company and phone) saved in our lead management system (Microsoft 365/SharePoint) to follow up on your request"
                 ]
             }
         },
@@ -156,7 +156,7 @@
                     "Preparing financial statements and reports",
                     "Managing compliance obligations",
                     "Communicating about your services and account",
-                    "Responding to AI assistant requests, logging the conversation, and preparing follow-up quotes"
+                    "Responding to enquiries received via the contact form or WhatsApp, logging the exchange, and preparing follow-up responses"
                 ]
             },
             "BusinessOperations": {

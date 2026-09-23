@@ -37,16 +37,16 @@
   },
   "ExpertBanner": {
     "Title": "Fale com um dos nossos especialistas",
-    "Description": "Precisa de uma opinião rápida ou de um orçamento claro? A nossa equipa responde de forma direta e rápida.",
+    "Description": "Precisa de uma opinião rápida ou de um acompanhamento à medida? A nossa equipa responde de forma direta e rápida.",
     "PrimaryCTA": "Falar com um especialista",
-    "SecondaryCTA": "Obtenha um orçamento instantâneo"
+    "SecondaryCTA": "Agendar uma chamada"
   },
   "ScrollHint": "Descobrir mais",
   "InlineContact": {
     "Title": "Contactar",
     "Description": "Descreva-nos a sua necessidade e a nossa equipa responderá com uma proposta adaptada.",
     "PrimaryCTA": "Contactar",
-    "SecondaryCTA": "Orçamento instantâneo",
+    "SecondaryCTA": "Agendar uma chamada",
     "TrustLine": ""
   },
   "GoogleReviews": {

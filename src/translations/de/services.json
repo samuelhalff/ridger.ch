@@ -37,16 +37,16 @@
   },
   "ExpertBanner": {
     "Title": "Sprechen Sie mit einem unserer Experten",
-    "Description": "Brauchen Sie eine schnelle Einschätzung oder ein klares Angebot? Unser Team antwortet zügig und verständlich.",
+    "Description": "Brauchen Sie eine schnelle Einschätzung oder eine massgeschneiderte Begleitung? Unser Team antwortet schnell und kommt auf den Punkt.",
     "PrimaryCTA": "Mit einem Experten sprechen",
-    "SecondaryCTA": "Sofortangebot erhalten"
+    "SecondaryCTA": "Termin vereinbaren"
   },
   "ScrollHint": "Mehr entdecken",
   "InlineContact": {
     "Title": "Kontakt aufnehmen",
     "Description": "Beschreiben Sie uns Ihren Bedarf und unser Team meldet sich mit einem passenden Vorschlag.",
     "PrimaryCTA": "Kontakt aufnehmen",
-    "SecondaryCTA": "Sofortangebot",
+    "SecondaryCTA": "Termin vereinbaren",
     "TrustLine": ""
   },
   "GoogleReviews": {

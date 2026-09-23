@@ -132,7 +132,7 @@
                     "Nutzungsdaten (besuchte Seiten, Verweildauer, Verweisquellen)",
                     "Cookies und ähnliche Tracking-Technologien",
                     "Übermittlungen von Kontaktformularen und Kommunikation",
-                    "Inhalt des KI-Chats und Kontaktangaben (E-Mail, Name, Unternehmen, Telefon), die in unserem Tracking-System (Microsoft 365/SharePoint) zur Beantwortung Ihrer Anfrage gespeichert werden"
+                    "Inhalt des Kontaktformulars und WhatsApp-Nachrichten sowie Kontaktangaben (E-Mail, Name, Unternehmen, Telefon), die in unserem Tracking-System (Microsoft 365/SharePoint) zur Beantwortung Ihrer Anfrage gespeichert werden"
                 ]
             }
         },
@@ -156,7 +156,7 @@
                     "Erstellung von Jahresabschlüssen und Berichten",
                     "Verwaltung der Compliance-Pflichten",
                     "Kommunikation zu Ihren Leistungen und Ihrem Konto",
-                    "Beantwortung von Anfragen über den KI-Assistenten, Aufzeichnung des Austauschs und Vorbereitung von Folgeofferten"
+                    "Beantwortung von Anfragen über das Kontaktformular oder WhatsApp, Aufzeichnung des Austauschs und Vorbereitung von Folgeantworten"
                 ]
             },
             "BusinessOperations": {

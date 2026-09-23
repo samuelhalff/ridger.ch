@@ -37,16 +37,16 @@
   },
   "ExpertBanner": {
     "Title": "Speak to one of our experts",
-    "Description": "Need a quick opinion or a clear quote? Our team replies fast and keeps it simple.",
+    "Description": "Need a quick opinion or tailored guidance? Our team replies fast and keeps it simple.",
     "PrimaryCTA": "Speak to an expert",
-    "SecondaryCTA": "Get an instant quote"
+    "SecondaryCTA": "Book a call"
   },
   "ScrollHint": "Discover more",
   "InlineContact": {
     "Title": "Contact us",
     "Description": "Tell us about your needs and our team will respond with a tailored proposal.",
     "PrimaryCTA": "Contact us",
-    "SecondaryCTA": "Instant quote",
+    "SecondaryCTA": "Book a call",
     "TrustLine": ""
   },
   "GoogleReviews": {

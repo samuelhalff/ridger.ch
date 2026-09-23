@@ -37,16 +37,16 @@
   },
   "ExpertBanner": {
     "Title": "Parler à un de nos experts",
-    "Description": "Besoin d'un avis rapide ou d'un devis clair ? Notre équipe répond vite et va droit au but.",
+    "Description": "Besoin d'un avis rapide ou d'un accompagnement sur mesure ? Notre équipe répond vite et va droit au but.",
     "PrimaryCTA": "Parler à un expert",
-    "SecondaryCTA": "Obtenez un devis instantané"
+    "SecondaryCTA": "Prendre rendez-vous"
   },
   "ScrollHint": "Découvrir plus",
   "InlineContact": {
     "Title": "Nous contacter",
     "Description": "Décrivez-nous votre besoin et notre équipe vous répondra avec une proposition adaptée.",
     "PrimaryCTA": "Nous contacter",
-    "SecondaryCTA": "Devis instantané",
+    "SecondaryCTA": "Prendre rendez-vous",
     "TrustLine": ""
   },
   "GoogleReviews": {

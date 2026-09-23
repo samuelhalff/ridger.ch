@@ -132,7 +132,7 @@
                     "Dados de utilização (páginas visitadas, tempo passado, fontes de referência)",
                     "Cookies e tecnologias de seguimento semelhantes",
                     "Submissões de formulários de contacto e comunicações",
-                    "Conteúdo do chat de IA e informações de contacto (email, nome, empresa, telefone) registados no nosso sistema de seguimento (Microsoft 365/SharePoint) para responder ao seu pedido"
+                    "Conteúdo do formulário de contacto e mensagens de WhatsApp, com as informações de contacto (email, nome, empresa, telefone) registados no nosso sistema de seguimento (Microsoft 365/SharePoint) para responder ao seu pedido"
                 ]
             }
         },
@@ -156,7 +156,7 @@
                     "Preparar demonstrações financeiras e relatórios",
                     "Gerir as obrigações de conformidade",
                     "Comunicar sobre os seus serviços e a sua conta",
-                    "Responder aos pedidos através do assistente de IA, registar a interação e preparar os orçamentos de seguimento"
+                    "Responder aos pedidos recebidos através do formulário de contacto ou WhatsApp, registar a interação e preparar as respostas de seguimento"
                 ]
             },
             "BusinessOperations": {

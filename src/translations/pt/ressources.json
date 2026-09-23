@@ -40,13 +40,13 @@
     "Title": "Entrar em contato",
     "Description": "Nossos especialistas podem ajudá-lo a entender os detalhes e implicações para a sua situação. Obtenha consultoria personalizada adaptada às suas necessidades.",
     "ButtonText": "Contactar nossa equipe",
-    "SecondaryButtonText": "Obtenha um orçamento instantâneo"
+    "SecondaryButtonText": "Agendar uma chamada"
   },
   "ContextualCTA": {
     "Title": "Precisa de ajuda com este assunto?",
     "Description": "Nossos especialistas estão disponíveis para um acompanhamento personalizado. Primeira consulta gratuita e sem compromisso.",
     "PrimaryCTA": "Contacte-nos",
-    "SecondaryCTA": "Orçamento instantâneo"
+    "SecondaryCTA": "Agendar uma chamada"
   },
   "ReadingTime": "Tempo de leitura",
   "Minutes": "min",

@@ -40,13 +40,13 @@
     "Title": "Nous contacter",
     "Description": "Nos experts sont là pour vous aider à comprendre les détails et implications pour votre situation. Obtenez des conseils personnalisés adaptés à votre situation.",
     "ButtonText": "Contacter notre équipe",
-    "SecondaryButtonText": "Obtenez un devis instantané"
+    "SecondaryButtonText": "Prendre rendez-vous"
   },
   "ContextualCTA": {
     "Title": "Besoin d'aide sur ce sujet ?",
     "Description": "Nos experts sont à votre disposition pour un accompagnement personnalisé. Premier échange gratuit et sans engagement.",
     "PrimaryCTA": "Contactez-nous",
-    "SecondaryCTA": "Devis instantané"
+    "SecondaryCTA": "Prendre rendez-vous"
   },
   "ReadingTime": "Temps de lecture",
   "Minutes": "min",
