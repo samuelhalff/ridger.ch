@@ -1,5 +1,6 @@
 "use client";
 
+import type React from "react";
 import { Fragment, useId, useState } from "react";
 
 type NavKey = "overview" | "positions" | "realEstate" | "documents" | "reporting";
@@ -516,12 +517,28 @@ export default function DashboardMockup({ strings }: { strings: PlatformStrings 
           </nav>
 
           {/* Main pane */}
-          <div id={panelId} role="region" aria-live="polite" className="min-w-0 flex-1 p-5 sm:p-7">
-            {active === "overview" && <OverviewPane s={strings.overview} />}
-            {active === "positions" && <PositionsPane s={strings.positions} />}
-            {active === "realEstate" && <RealEstatePane s={strings.realEstate} />}
-            {active === "documents" && <DocumentsPane s={strings.documents} />}
-            {active === "reporting" && <ReportingPane s={strings.reporting} />}
+          {/* All panes share one grid cell, so the frame always takes the
+              tallest pane's height and never jumps when switching tabs.
+              Inactive panes keep their layout but are hidden and inert. */}
+          <div id={panelId} role="region" aria-live="polite" className="grid min-w-0 flex-1 p-5 sm:p-7">
+            {(
+              [
+                ["overview", <OverviewPane key="overview" s={strings.overview} />],
+                ["positions", <PositionsPane key="positions" s={strings.positions} />],
+                ["realEstate", <RealEstatePane key="realEstate" s={strings.realEstate} />],
+                ["documents", <DocumentsPane key="documents" s={strings.documents} />],
+                ["reporting", <ReportingPane key="reporting" s={strings.reporting} />],
+              ] as [NavKey, React.ReactNode][]
+            ).map(([key, pane]) => (
+              <div
+                key={key}
+                className={`col-start-1 row-start-1 min-w-0 ${active === key ? "" : "invisible"}`}
+                aria-hidden={active !== key}
+                inert={active !== key}
+              >
+                {pane}
+              </div>
+            ))}
           </div>
         </div>
       </div>
