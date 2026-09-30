@@ -1,0 +1,188 @@
+name: AI Resources Update (every 3 days)
+
+# One SEO/GEO article per run, in all 5 locales, or nothing.
+# Docs: docs/article-pipeline.md
+#
+# Schedule: 03:20 UTC on days 2, 5, 8, … — one day after ark-fid.ch's run
+# (days 1, 4, 7, … at 00:00) so the two sites never share Azure quota windows.
+# Pause: set the repository variable AI_RESSOURCES_PAUSED=true (manual runs
+# still work), or disable the workflow in the Actions tab.
+
+on:
+  schedule:
+    - cron: "20 3 2-31/3 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: research + generate + validate, but do not commit/push"
+        required: false
+        type: boolean
+        default: false
+      topic:
+        description: "Topic override: a backlog id from data/article-backlog.json, or free text"
+        required: false
+        type: string
+      topic_keywords:
+        description: "Optional comma-separated keywords for a free-text topic"
+        required: false
+        type: string
+      topic_category:
+        description: "Optional category for a free-text topic (family-office, reporting, fiscalite, patrimoine, gouvernance, emploi-domestique, vie-pratique, travaux-intendance)"
+        required: false
+        type: string
+      skip_topic_rotation:
+        description: "Skip the category/theme rotation rule (near-duplicate checks still apply)"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: ai-ressources-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write # dispatch build-and-deploy when pushing with GITHUB_TOKEN
+
+jobs:
+  update:
+    if: github.event_name == 'workflow_dispatch' || vars.AI_RESSOURCES_PAUSED != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    env:
+      HAS_PAT: ${{ secrets.PAT_TOKEN != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          # A PAT push triggers build-and-deploy.yml by itself; a GITHUB_TOKEN
+          # push does not, so the deploy is dispatched explicitly below.
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Pipeline unit tests (topic picker, keywords, guardrails)
+        run: node --test scripts/article-pipeline.test.js scripts/article-guardrails.test.js
+
+      - name: Research keywords + generate article (FR + EN/DE/ES/PT via Azure OpenAI)
+        id: gen
+        timeout-minutes: 30
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: ${{ vars.AZURE_OPENAI_API_VERSION || '2025-01-01-preview' }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DEPLOYMENT || 'gpt-4.1' }}
+          AZURE_OPENAI_DRAFT_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DRAFT_DEPLOYMENT || 'gpt-5.2' }}
+          AZURE_OPENAI_DRAFT_API_VERSION: ${{ vars.AZURE_OPENAI_DRAFT_API_VERSION || '2025-01-01-preview' }}
+          AZURE_OPENAI_DRAFT_MAX_TOKENS: "8192"
+          AZURE_OPENAI_RESEARCH_ENDPOINT: ${{ secrets.AZURE_OPENAI_RESEARCH_ENDPOINT }}
+          AZURE_OPENAI_RESEARCH_API_KEY: ${{ secrets.AZURE_OPENAI_RESEARCH_API_KEY }}
+          AZURE_OPENAI_RESEARCH_API_VERSION: ${{ vars.AZURE_OPENAI_RESEARCH_API_VERSION || '2024-05-01-preview' }}
+          AZURE_OPENAI_RESEARCH_DEPLOYMENT: ${{ vars.AZURE_OPENAI_RESEARCH_DEPLOYMENT }}
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_NAME: ${{ vars.AZURE_AGENT_NAME || 'web-deep-search:6' }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
+          AZURE_AGENT_FORCE_RESPONSES: "1"
+          AZURE_AGENT_FALLBACK_TO_OPENAI: "1"
+          AZURE_AGENT_RESPONSES_RETRIES: "6"
+          AZURE_AGENT_RESPONSES_BACKOFF_MS: "30000"
+          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS: "300000"
+          AZURE_AGENT_RESPONSES_TIMEOUT_MS: "180000"
+          AZURE_AGENT_RESPONSES_COOLDOWN_MS: "15000"
+          FORCE_TOPIC: ${{ inputs.topic }}
+          FORCE_TOPIC_KEYWORDS: ${{ inputs.topic_keywords }}
+          FORCE_TOPIC_CATEGORY: ${{ inputs.topic_category }}
+          SKIP_TOPIC_ROTATION: ${{ inputs.skip_topic_rotation && '1' || '' }}
+          REQUIRE_TRANSLATIONS: "1"
+          SEO_MIN_WORDS: "1100"
+          SEO_MAX_WORDS: "1900"
+          MODE: ${{ inputs.dry_run && '--dry-run' || '--apply' }}
+        run: timeout -k 30s 30m node scripts/ai-ressources-update.js "$MODE"
+
+      - name: Fix malformed internal markdown links
+        if: steps.gen.outputs.has_new == 'true'
+        run: node scripts/fix-article-internal-links.js --apply
+
+      - name: Validate new article (hard rules, SEO/GEO, parity, guardrails, sources)
+        if: steps.gen.outputs.has_new == 'true'
+        env:
+          SLUG: ${{ steps.gen.outputs.slug }}
+          REQUIRE_TRANSLATIONS: "1"
+        run: |
+          set -euo pipefail
+          node scripts/validate-article-seo.js --slug "$SLUG"
+          node scripts/validate-latest-article-guardrails.js --slug "$SLUG"
+          node scripts/validate-reference-source-policy.js --all-locales --slug "$SLUG"
+          node scripts/validate-article-facts.js
+          node scripts/validate-article-translations.js > /tmp/translations-report.txt
+          node scripts/fix-article-internal-links.js --check
+
+      - name: Full build (prebuild validators + next build)
+        if: steps.gen.outputs.has_new == 'true'
+        timeout-minutes: 20
+        run: npm run build
+
+      - name: Commit and push
+        id: push
+        if: steps.gen.outputs.has_new == 'true'
+        env:
+          TITLE: ${{ steps.gen.outputs.title }}
+        run: |
+          set -euo pipefail
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/translations/*/ressources.json data/article-research-log.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"; exit 0
+          fi
+          git commit -m "content(ressources): ${TITLE}" \
+            --author="samuelhalff <660062+samuelhalff@users.noreply.github.com>"
+          for i in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"; exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 10))
+          done
+          echo "Push failed after retries"; exit 1
+
+      - name: Dispatch build-and-deploy (GITHUB_TOKEN pushes do not trigger workflows)
+        if: steps.push.outputs.pushed == 'true' && env.HAS_PAT != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run build-and-deploy.yml --ref main
+
+      - name: Wait for the article to be live, then ping sitemaps + IndexNow
+        if: steps.push.outputs.pushed == 'true'
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          SLUG: ${{ steps.gen.outputs.slug }}
+        run: |
+          set -uo pipefail
+          URL="https://ridger.ch/fr/ressources/articles/${SLUG}/"
+          for i in $(seq 1 50); do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 20 "$URL" || echo 000)
+            echo "[$i] $URL → $CODE"
+            [ "$CODE" = "200" ] && break
+            sleep 30
+          done
+          node scripts/ping-sitemaps.js || true
+          # IndexNow: same endpoint/key as indexnow-reindex.yml (public key file).
+          BODY=$(node -e 'const s=process.env.SLUG;console.log(JSON.stringify({urls:["fr","en","de","es","pt"].map(l=>`https://ridger.ch/${l}/ressources/articles/${s}/`)}))')
+          for i in 1 2 3; do
+            STATUS=$(curl -s -o /tmp/indexnow.json -w "%{http_code}" -X POST "https://ridger.ch/api/indexnow/" \
+              -H "Content-Type: application/json" -d "$BODY") || STATUS=000
+            echo "IndexNow status: $STATUS"; cat /tmp/indexnow.json || true
+            [ "$STATUS" = "200" ] && exit 0
+            sleep $((i * 10))
+          done
+          exit 1

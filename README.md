@@ -42,3 +42,20 @@ node scripts/seo-indexability.test.js
 ```
 
 Secrets consumed by CI are listed in `.env.example`.
+
+## Automated articles
+
+`.github/workflows/ai-ressources.yml` publishes one SEO/GEO article every 3 days
+in all 5 locales. The run does this:
+- picks a topic from `data/article-backlog.json`;
+- researches keywords (Google autocomplete in 9 markets, plus a best-effort trend signal);
+- uses Azure OpenAI to research and draft the article;
+- validates it against the hard rules and the SEO/GEO structure, then translates it;
+- builds, pushes and deploys, then pings IndexNow.
+
+The workflow needs these secrets: `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY`; optional `AZURE_OPENAI_RESEARCH_*`, `AZURE_AGENT_*` and `PAT_TOKEN`. To pause it, set the variable `AI_RESSOURCES_PAUSED=true`. Full docs, including how to add topics: [docs/article-pipeline.md](docs/article-pipeline.md).
+
+```
+npm run articles:plan      # topic + live keyword research, no Azure, writes nothing
+npm run test:pipeline      # pure tests + offline end-to-end with a mocked model
+```
