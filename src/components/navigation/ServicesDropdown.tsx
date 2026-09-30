@@ -32,8 +32,9 @@ export default function ServicesDropdown({
   }, []);
 
   return (
+    // Not `relative`: the panel anchors to the primary-nav container (right
+    // edge), so it never overflows the viewport however many services exist.
     <li
-      className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={close}
       onFocusCapture={() => setOpen(true)}
@@ -60,7 +61,7 @@ export default function ServicesDropdown({
         />
       </Link>
       <div
-        className={`absolute left-0 top-full z-50 w-[min(92vw,720px)] rounded-md bg-background pt-2 shadow-xl transition-opacity duration-150 ${
+        className={`absolute right-0 top-full z-50 w-[min(92vw,720px)] rounded-md bg-background pt-2 shadow-xl transition-opacity duration-150 ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

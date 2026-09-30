@@ -113,13 +113,13 @@ const Footer = async ({ locale }: { locale?: string }) => {
       className="mt-12 bg-surface-warm/35 text-foreground xs:mt-20"
       role="contentinfo"
     >
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-x-8 gap-y-10 px-5 py-12 sm:grid-cols-2 sm:px-8 md:grid-cols-4 lg:grid-cols-[120px_minmax(340px,2fr)_repeat(4,minmax(120px,1fr))]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-x-8 gap-y-10 px-5 py-12 sm:grid-cols-2 sm:px-8 md:grid-cols-4 xl:grid-cols-[120px_minmax(340px,2fr)_repeat(4,minmax(120px,1fr))]">
         <Link
           href={`${localePrefix}/`}
           aria-label={tNavbar("Home")}
           locale={locale}
           prefetch={false}
-          className="space-y-5 lg:pt-1"
+          className="space-y-5 xl:pt-1"
         >
           <span className="block">
             <Image
@@ -146,7 +146,7 @@ const Footer = async ({ locale }: { locale?: string }) => {
         </Link>
 
         <div
-          className="space-y-3 rounded-2xl bg-surface-warm p-5 text-sm shadow-sm sm:col-span-2 md:col-span-2 lg:col-span-1"
+          className="space-y-3 rounded-2xl bg-surface-warm p-5 text-sm shadow-sm sm:col-span-2 md:col-span-2 xl:col-span-1"
           itemScope
           itemType="https://schema.org/PostalAddress"
         >

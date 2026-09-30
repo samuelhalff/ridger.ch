@@ -82,7 +82,7 @@ export default function NavbarClient({
           </Link>
 
           {/* Desktop primary navigation (server-rendered) */}
-          <div className="hidden min-w-0 flex-1 md:block">
+          <div className="relative hidden min-w-0 flex-1 md:block">
             <nav aria-label="Primary">
               <ul className="flex min-w-0 items-center justify-end gap-1">
                 <li>
