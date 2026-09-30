@@ -1,0 +1,209 @@
+{
+  "entries": [
+    {
+      "date": "2026-09-30",
+      "slug": "rachat-lpp-calcul-deduction-fiscale-conditions-etranger",
+      "backlogId": "rachat-lpp-deduction-fiscale-blocage",
+      "forced": false,
+      "researchProvider": "openai:gpt-4.1",
+      "demand": {
+        "rachat-lpp-deduction-fiscale-blocage": 13,
+        "creer-single-family-office-suisse-etapes": 7.5,
+        "assurer-collection-art-suisse": 17
+      },
+      "trend": {
+        "available": true,
+        "checked": 20,
+        "matches": []
+      },
+      "keywords": {
+        "fr": {
+          "primary": "rachat lpp",
+          "secondary": [
+            "rachat lpp deduction impot",
+            "rachat lpp conditions",
+            "rachat lpp 3 ans avant la retraite",
+            "rachat 2e pilier impot",
+            "rachat 2ème pilier déduction fiscale"
+          ],
+          "questions": [
+            "rachat lpp comment déclarer",
+            "rachat lpp c'est quoi en français",
+            "rachat lpp comment ça marche",
+            "rachat 2ème pilier jusqu à quel age"
+          ],
+          "markets": [
+            "fr-CH",
+            "fr-FR"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 90,
+            "uniqueCandidates": 28,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 90,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "en": {
+          "primary": "pension fund buy in switzerland",
+          "secondary": [
+            "pension fund in switzerland",
+            "pension fund buy in switzerland for foreigners",
+            "bvg buy in tax deductions",
+            "second pillar voluntary contributions",
+            "pension fund buy in switzerland vs us"
+          ],
+          "questions": [
+            "pension fund buy in switzerland what is it",
+            "pension fund buy in switzerland when selling a house",
+            "pension fund buy in switzerland how to",
+            "pension fund buy in switzerland when does it start",
+            "pension fund buy in switzerland why not",
+            "pension fund buy in switzerland how does it work",
+            "pension fund buy in switzerland when to pay",
+            "pension fund buy in switzerland why is it bad"
+          ],
+          "markets": [
+            "en-GB",
+            "en-US"
+          ],
+          "stats": {
+            "queries": 26,
+            "suggestions": 68,
+            "uniqueCandidates": 25,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 26,
+                "suggestions": 68,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "de": {
+          "primary": "pk einkauf",
+          "secondary": [
+            "pk einkauf steuern abziehen",
+            "pk einkauf sinnvoll",
+            "pk einkauf nach scheidung",
+            "pk einkauf steuern abziehen north carolina",
+            "einkauf pensionskasse steuern zürich"
+          ],
+          "questions": [
+            "pk einkauf bis wann",
+            "pk einkauf warum so teuer",
+            "pk einkauf was ist das",
+            "pk einkauf wie lange",
+            "bvg einkauf bis wann möglich"
+          ],
+          "markets": [
+            "de-CH",
+            "de-DE"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 144,
+            "uniqueCandidates": 44,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 144,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "es": {
+          "primary": "aportación voluntaria lpp",
+          "secondary": [
+            "aportación voluntaria lpp españa",
+            "recuperar segundo pilar suiza",
+            "rescate lpp suiza que significa",
+            "segundo pilar suiza",
+            "deducción fiscal lpp"
+          ],
+          "questions": [
+            "aportación voluntaria lpp cómo tributa",
+            "aportación voluntaria lpp cuándo es",
+            "rescate lpp suiza que es"
+          ],
+          "markets": [
+            "es-ES"
+          ],
+          "stats": {
+            "queries": 15,
+            "suggestions": 31,
+            "uniqueCandidates": 13,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 15,
+                "suggestions": 31,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "pt": {
+          "primary": "contribuição voluntária lpp",
+          "secondary": [
+            "contribuição voluntária lpp portugal",
+            "segundo pilar suíça portugal",
+            "dedução fiscal lppsa",
+            "contribuição voluntária lppi",
+            "segundo pilar suíça"
+          ],
+          "questions": [
+            "contribuição voluntária lpp como funciona",
+            "contribuição voluntária lpp porque é",
+            "contribuição voluntária lpp quando começa",
+            "contribuição voluntária lpp quando entra em vigor"
+          ],
+          "markets": [
+            "pt-PT",
+            "pt-BR"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 49,
+            "uniqueCandidates": 16,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 49,
+                "failed": 0
+              }
+            ]
+          }
+        }
+      },
+      "recentDevelopments": [
+        {
+          "date": "2025-12-15",
+          "status": "en vigueur",
+          "summary": "Aucune modification législative majeure sur le rachat LPP ou la déduction fiscale n'est entrée en vigueur entre 2025 et 2026. Les règles de blocage de trois ans et les conditions pour les arrivants de l'étranger restent inchangées.",
+          "source": "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html"
+        }
+      ]
+    }
+  ]
+}
