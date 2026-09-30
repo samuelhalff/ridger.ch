@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
     "test": "npm run typecheck && npm run seo:indexability && npm run test:ressources-loader && npm run lint:links && npm run test:guardrails && npm run test:pipeline",
-    "test:ressources-loader": "node --test scripts/ressources-loader.test.js",
+    "test:ressources-loader": "node --import ./scripts/lib/register-ts.mjs --test scripts/ressources-loader.test.js",
     "seo:indexability": "node --test scripts/seo-indexability.test.js",
     "lint:translations": "node scripts/lint-translations.js",
     "validate:article-facts": "node scripts/validate-article-facts.js",
