@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { locales } from "./src/lib/i18n-locales";
+import { locales, type Locale } from "./src/lib/i18n-locales";
+import { buildInternalUrl } from "./src/lib/paths";
 
 // Behind the tenant proxy, request.url carries the internal server identity
 // (localhost:5001); every externally visible redirect must use the public
@@ -172,9 +173,16 @@ export function middleware(request: NextRequest) {
       return redirectWithHeaders(`${localePrefix}/`);
     }
 
-    // Legacy path normalization: /<locale>/family-office/ -> /<locale>/services/family-office/
+    // Legacy path normalization: /<locale>/family-office/ -> the (localized)
+    // family-office coordination service page. /family-office/<city>/ location
+    // pages are real routes and are not affected.
     if (restNoTrailingSlash === "/family-office") {
-      return redirectWithHeaders(`${localePrefix}/services/family-office/`);
+      return redirectWithHeaders(
+        buildInternalUrl(
+          "/services/family-office-coordination",
+          effectiveLocale as Locale,
+        ),
+      );
     }
 
     // Hard-fail markdown-style bracketed link paths.

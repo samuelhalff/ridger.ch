@@ -7,7 +7,7 @@ import {
 } from "@/src/components/navigation/NavigationComponents";
 import React, { useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { withTrailingSlash } from "@/src/lib/paths";
+import { switchLocalePath } from "@/src/lib/paths";
 // Use plain <a> for full document reload on language change
 import type { Locale } from "@/src/lib/i18n";
 import { Globe as GlobeIcon } from "@phosphor-icons/react";
@@ -47,17 +47,8 @@ export default function LangSwitch(): React.ReactElement {
   );
 
   function buildHref(targetLocale: string) {
-    const segments = pathname.replace(/^\/+|\/+$/g, "").split("/");
-    let newSegments: string[];
-    const firstSegment = segments[0];
-    if (firstSegment && isValidLocale(firstSegment)) {
-      segments[0] = targetLocale;
-      newSegments = segments;
-    } else {
-      newSegments = [targetLocale, ...segments.filter(Boolean)];
-    }
     const qs = searchParams?.toString();
-    const path = withTrailingSlash(`/${newSegments.join("/")}`);
+    const path = switchLocalePath(pathname, targetLocale as Locale);
     return `${path}${qs ? `?${qs}` : ""}`;
   }
 

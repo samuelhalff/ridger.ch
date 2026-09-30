@@ -1,7 +1,8 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { withTrailingSlash } from "@/src/lib/paths";
+import { switchLocalePath } from "@/src/lib/paths";
+import type { Locale } from "@/src/lib/i18n-locales";
 
 const LANGS = [
   { code: "en", label: "EN" },
@@ -26,12 +27,8 @@ export default function LangSwitchMobile({
   const searchParams = useSearchParams();
 
   function buildHref(targetLocale: string) {
-    const parts = pathname.replace(/^\/+|\/+$/g, "").split("/");
-    const valid = ["en", "fr", "de", "es", "pt"];
-    if (valid.includes(parts[0])) parts[0] = targetLocale;
-    else parts.unshift(targetLocale);
     const qs = searchParams?.toString();
-    const path = withTrailingSlash(`/${parts.join("/")}`);
+    const path = switchLocalePath(pathname, targetLocale as Locale);
     return `${path}${qs ? `?${qs}` : ""}`;
   }
 

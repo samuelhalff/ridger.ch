@@ -14,6 +14,10 @@ const frMap: Record<string, string> = {
   "/services/tax-administration": "/services/fiscalite-administration",
   "/services/digital-vault": "/services/coffre-fort-numerique",
   "/services/real-estate-transactions": "/services/immobilier-transactions",
+  "/services/household-staff": "/services/personnel-maison-salaires",
+  "/services/relocation-residence": "/services/installation-permis-sejour",
+  "/services/domiciliation-mail": "/services/domiciliation-courrier",
+  "/services/property-management": "/services/gerance-immobiliere",
 };
 
 const deMap: Record<string, string> = {
@@ -25,6 +29,10 @@ const deMap: Record<string, string> = {
   "/services/tax-administration": "/services/steuerverwaltung",
   "/services/digital-vault": "/services/digitaler-tresor",
   "/services/real-estate-transactions": "/services/immobilien-transaktionen",
+  "/services/household-staff": "/services/hauspersonal-lohn",
+  "/services/relocation-residence": "/services/umzug-aufenthaltsbewilligung",
+  "/services/domiciliation-mail": "/services/domizil-postverwaltung",
+  "/services/property-management": "/services/liegenschaftsverwaltung",
 };
 
 const esMap: Record<string, string> = {
@@ -36,6 +44,10 @@ const esMap: Record<string, string> = {
   "/services/tax-administration": "/services/administracion-fiscal",
   "/services/digital-vault": "/services/caja-fuerte-digital",
   "/services/real-estate-transactions": "/services/inmobiliario-transacciones",
+  "/services/household-staff": "/services/personal-domestico-nominas",
+  "/services/relocation-residence": "/services/traslado-permisos-residencia",
+  "/services/domiciliation-mail": "/services/domiciliacion-correo",
+  "/services/property-management": "/services/gestion-inmobiliaria",
 };
 
 const ptMap: Record<string, string> = {
@@ -47,6 +59,10 @@ const ptMap: Record<string, string> = {
   "/services/tax-administration": "/services/administracao-fiscal",
   "/services/digital-vault": "/services/cofre-digital",
   "/services/real-estate-transactions": "/services/imobiliario-transacoes",
+  "/services/household-staff": "/services/pessoal-domestico-salarios",
+  "/services/relocation-residence": "/services/mudanca-autorizacoes-residencia",
+  "/services/domiciliation-mail": "/services/domiciliacao-correio",
+  "/services/property-management": "/services/gestao-imobiliaria",
 };
 
 const identity = (p: string) => p;
@@ -69,17 +85,36 @@ export function localizePath(path: string, locale: Locale): string {
   return localized;
 }
 
-// Map a localized path back to the base path (for rewrites if needed).
-// Currently only supports FR mappings.
+const rawMaps: Record<Exclude<Locale, "en">, Record<string, string>> = {
+  fr: frMap,
+  de: deMap,
+  es: esMap,
+  pt: ptMap,
+};
+
+// Map a localized path (without locale prefix) back to its canonical base path.
 export function delocalizePath(path: string, locale: Locale): string {
   const normalize = (s: string) =>
     s.endsWith("/") && s !== "/" ? s.slice(0, -1) : s;
   const key = normalize(path);
-  if (locale === "fr") {
-    const entry = Object.entries(frMap).find(([, v]) => v === key);
-    return entry ? entry[0] : key;
-  }
-  return key;
+  if (locale === "en") return key;
+  const entry = Object.entries(rawMaps[locale]).find(([, v]) => v === key);
+  return entry ? entry[0] : key;
+}
+
+/**
+ * Translate a full localized pathname (e.g. "/fr/services/reporting-consolide/")
+ * into the equivalent page in another locale ("/de/services/konsolidiertes-reporting/").
+ * Used by the language switcher so localized slugs never produce 404s.
+ */
+export function switchLocalePath(pathname: string, targetLocale: Locale): string {
+  const segments = pathname.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean);
+  const first = segments[0];
+  const isLocale = !!first && Object.prototype.hasOwnProperty.call(maps, first);
+  const sourceLocale = (isLocale ? first : "fr") as Locale;
+  const rest = `/${(isLocale ? segments.slice(1) : segments).join("/")}`;
+  const base = delocalizePath(rest, sourceLocale);
+  return buildInternalUrl(base, targetLocale);
 }
 
 /**
