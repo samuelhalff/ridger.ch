@@ -1421,7 +1421,7 @@
       },
       "officialSources": [
         "https://www.ge.ch/organisation/office-cantonal-emploi",
-        "https://www.chequeservice.ch/",
+        "https://www.seco.admin.ch/seco/fr/home.html",
         "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS"
       ]
     },
@@ -1579,7 +1579,7 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/fr",
         "https://www.bag.admin.ch/bag/fr/home.html",
-        "https://www.chequeservice.ch/"
+        "https://www.bsv.admin.ch/fr"
       ]
     },
     {
@@ -1684,7 +1684,7 @@
         ]
       },
       "officialSources": [
-        "https://www.post.ch/fr",
+        "https://www.postcom.admin.ch/fr/",
         "https://www.ch.ch/fr/"
       ]
     },
@@ -1790,7 +1790,7 @@
       },
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
-        "https://www.post.ch/fr"
+        "https://www.bj.admin.ch/fr"
       ]
     },
     {
@@ -2659,7 +2659,6 @@
       },
       "officialSources": [
         "https://www.sbfi.admin.ch/sbfi/fr/home.html",
-        "https://www.swissuniversities.ch/",
         "https://edu.ge.ch/"
       ]
     },
@@ -3091,7 +3090,6 @@
       },
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
-        "https://www.asfip-ge.ch/",
         "https://www.esa.admin.ch/fr/",
         "https://www.ge.ch/organisation/administration-fiscale-cantonale"
       ]
@@ -3202,8 +3200,7 @@
       },
       "officialSources": [
         "https://www.esa.admin.ch/fr/",
-        "https://www.asfip-ge.ch/",
-        "https://www.as-so.ch/",
+        "https://www.estv.admin.ch/fr",
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
       ]
     },
@@ -3728,7 +3725,6 @@
         ]
       },
       "officialSources": [
-        "https://www.leprogrammebatiments.ch/fr/",
         "https://www.ge.ch/organisation/office-cantonal-energie",
         "https://www.bfe.admin.ch/"
       ]

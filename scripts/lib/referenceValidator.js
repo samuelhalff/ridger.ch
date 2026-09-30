@@ -31,6 +31,9 @@
 const ALLOWED_REFERENCE_DOMAINS = [
   // Swiss federal government (covers all *.admin.ch subdomains)
   "admin.ch",
+  // Federal Supreme Court and Federal Parliament
+  "bger.ch",
+  "parlament.ch",
   // Swiss portal
   "ch.ch",
   // Swiss cantons (all 26)
@@ -127,6 +130,66 @@ const ALLOWED_REFERENCE_DOMAINS = [
   "ridger.ch",
   "episto.ch",
 ];
+
+// Official subset of the allowlist: authorities and bodies whose publications
+// can back a legal, tax or permit statement. Associations, encyclopaedias,
+// vendor docs, academic and sibling sites stay allowed for general context
+// but never count as official. Every entry must also be in
+// ALLOWED_REFERENCE_DOMAINS (asserted by the pipeline tests).
+const OFFICIAL_REFERENCE_DOMAINS = [
+  // Confederation, courts, parliament, federal portal
+  "admin.ch",
+  "bger.ch",
+  "ch.ch",
+  "parlament.ch",
+  // All 26 cantons
+  "ag.ch", "ai.ch", "ar.ch", "be.ch", "bl.ch", "bs.ch", "fr.ch", "ge.ch", "gl.ch",
+  "gr.ch", "ju.ch", "lu.ch", "ne.ch", "nw.ch", "ow.ch", "sg.ch", "sh.ch", "so.ch",
+  "sz.ch", "tg.ch", "ti.ch", "ur.ch", "vd.ch", "vs.ch", "zg.ch", "zh.ch",
+  // Federal/cantonal authorities and registries outside admin.ch
+  "ahv-iv.ch",
+  "finma.ch",
+  "rab-asr.ch",
+  "snb.ch",
+  "zefix.ch",
+  // Cantonal social insurance / compensation funds (public-law bodies)
+  "aknw.ch",
+  "akso.ch",
+  "caisseavs.ch",
+  "ocas.ch",
+  "sva-bl.ch",
+  "sva-sz.ch",
+  "svash.ch",
+  // Quasi-official bodies with a statutory or officially recognised role
+  "esisuisse.ch",
+  "osfin.ch",
+  "osfincontrol.ch",
+  "ssk-csi.ch",
+  "steuerkonferenz.ch",
+  "swissbanking.ch",
+  "zewo.ch",
+  // Supranational official sources
+  "europa.eu",
+  "oecd.org",
+];
+
+function hostMatches(url, domains) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return domains.some((d) => host === d || host.endsWith(`.${d}`));
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * True when the URL passes the reference allowlist AND belongs to an official
+ * authority/body (OFFICIAL_REFERENCE_DOMAINS). https only.
+ */
+function isOfficialReference(url) {
+  if (typeof url !== "string" || !/^https:\/\//i.test(url.trim())) return false;
+  return !isBlockedDomain(url.trim()) && hostMatches(url.trim(), OFFICIAL_REFERENCE_DOMAINS);
+}
 
 const DISALLOWED_FIRM_SOURCE_DOMAINS = [
   "aag-fiduciaire.ch",
@@ -797,10 +860,12 @@ module.exports = {
   extractDomain,
   isTrustedDomain,
   isBlockedDomain,
+  isOfficialReference,
   isUnverifiableSpaDomain,
   getFallbackReferences,
   VERIFIED_FALLBACK_REFS,
   ALLOWED_REFERENCE_DOMAINS,
+  OFFICIAL_REFERENCE_DOMAINS,
   DISALLOWED_FIRM_SOURCE_DOMAINS,
   DEFAULT_TIMEOUT_MS,
   DEFAULT_MIN_BYTES

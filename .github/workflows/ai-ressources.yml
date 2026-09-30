@@ -40,24 +40,30 @@ concurrency:
   group: ai-ressources-update
   cancel-in-progress: false
 
-permissions:
-  contents: write
-  actions: write # dispatch build-and-deploy when pushing with GITHUB_TOKEN
+# Least privilege: nothing at workflow level; the job gets only what the
+# GITHUB_TOKEN fallback push (contents) and deploy dispatch (actions) need.
+permissions: {}
 
 jobs:
   update:
     if: github.event_name == 'workflow_dispatch' || vars.AI_RESSOURCES_PAUSED != 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 80
+    # Budget: install ~3 + generation ≤ 40 + gate (validators, npm test,
+    # build) ≤ 20 + push incl. up to 3 re-gates ≤ 50 + live wait ≤ 30.
+    timeout-minutes: 150
+    permissions:
+      contents: write # GITHUB_TOKEN fallback push (only used in "Commit and push")
+      actions: write # dispatch build-and-deploy when pushing with GITHUB_TOKEN
     env:
       HAS_PAT: ${{ secrets.PAT_TOKEN != '' }}
     steps:
+      # No credentials are persisted in .git/config, so npm ci (lifecycle
+      # scripts), the generator, the validators and the build never see a
+      # write token. Push credentials are injected only in "Commit and push".
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          # A PAT push triggers build-and-deploy.yml by itself; a GITHUB_TOKEN
-          # push does not, so the deploy is dispatched explicitly below.
-          token: ${{ secrets.PAT_TOKEN || github.token }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -69,11 +75,23 @@ jobs:
         run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: Pipeline unit tests (topic picker, keywords, guardrails)
-        run: node --test scripts/article-pipeline.test.js scripts/article-guardrails.test.js
+        run: node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js scripts/article-guardrails.test.js
 
+      # Time budget (worst case, see worstCaseBudgets() in
+      # scripts/lib/azureClients.js and its test):
+      #   - one agent call: 3 × 180 s + backoffs 22 + 42 s + cooldown 15 s
+      #     = 619 s, hard-capped at AZURE_AGENT_CALL_BUDGET_MS = 10 min, and
+      #     never inside the last AZURE_AGENT_FALLBACK_RESERVE_MS = 15 min
+      #     (kept for the OpenAI fallbacks, draft, repairs, translations);
+      #   - one OpenAI call: 4 × 240 s + backoffs ≈ 16.3 min;
+      #   - global AI_PIPELINE_DEADLINE_MS = 33 min: every attempt's timeout is
+      #     clamped to what is left and no retry starts unless backoff + 30 s
+      #     fits, so the script exits on its own by ~33 min (+ at most one
+      #     reference HTTP check round, < 2 min) — before `timeout` (38 min)
+      #     and the step timeout (40 min).
       - name: Research keywords + generate article (FR + EN/DE/ES/PT via Azure OpenAI)
         id: gen
-        timeout-minutes: 30
+        timeout-minutes: 40
         env:
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
@@ -91,11 +109,16 @@ jobs:
           AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
           AZURE_AGENT_FORCE_RESPONSES: "1"
           AZURE_AGENT_FALLBACK_TO_OPENAI: "1"
-          AZURE_AGENT_RESPONSES_RETRIES: "6"
-          AZURE_AGENT_RESPONSES_BACKOFF_MS: "30000"
-          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS: "300000"
+          AZURE_AGENT_RESPONSES_RETRIES: "2"
+          AZURE_AGENT_RESPONSES_BACKOFF_MS: "20000"
+          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS: "60000"
           AZURE_AGENT_RESPONSES_TIMEOUT_MS: "180000"
           AZURE_AGENT_RESPONSES_COOLDOWN_MS: "15000"
+          AZURE_AGENT_CALL_BUDGET_MS: "600000"
+          AZURE_AGENT_FALLBACK_RESERVE_MS: "900000"
+          AZURE_OPENAI_RETRIES: "3"
+          AZURE_OPENAI_TIMEOUT_MS: "240000"
+          AI_PIPELINE_DEADLINE_MS: "1980000"
           FORCE_TOPIC: ${{ inputs.topic }}
           FORCE_TOPIC_KEYWORDS: ${{ inputs.topic_keywords }}
           FORCE_TOPIC_CATEGORY: ${{ inputs.topic_category }}
@@ -104,38 +127,44 @@ jobs:
           SEO_MIN_WORDS: "1100"
           SEO_MAX_WORDS: "1900"
           MODE: ${{ inputs.dry_run && '--dry-run' || '--apply' }}
-        run: timeout -k 30s 30m node scripts/ai-ressources-update.js "$MODE"
+        run: timeout -k 30s 38m node scripts/ai-ressources-update.js "$MODE"
 
       - name: Fix malformed internal markdown links
         if: steps.gen.outputs.has_new == 'true'
         run: node scripts/fix-article-internal-links.js --apply
 
-      - name: Validate new article (hard rules, SEO/GEO, parity, guardrails, sources)
-        if: steps.gen.outputs.has_new == 'true'
-        env:
-          SLUG: ${{ steps.gen.outputs.slug }}
-          REQUIRE_TRANSLATIONS: "1"
-        run: |
-          set -euo pipefail
-          node scripts/validate-article-seo.js --slug "$SLUG"
-          node scripts/validate-latest-article-guardrails.js --slug "$SLUG"
-          node scripts/validate-reference-source-policy.js --all-locales --slug "$SLUG"
-          node scripts/validate-article-facts.js
-          node scripts/validate-article-translations.js > /tmp/translations-report.txt
-          node scripts/fix-article-internal-links.js --check
-
-      - name: Full build (prebuild validators + next build)
+      - name: Validation gate (article validators, npm test, build)
         if: steps.gen.outputs.has_new == 'true'
         timeout-minutes: 20
-        run: npm run build
+        env:
+          SLUG: ${{ steps.gen.outputs.slug }}
+        run: bash scripts/article-gate.sh
 
+      # The gate above validated the tree on top of the checked-out main. If
+      # main moved, the rebased tree is a different tree: the FULL gate is run
+      # again on it before pushing. If main moves again meanwhile, the push is
+      # rejected (non-fast-forward) and the loop repeats — at most 3 times.
       - name: Commit and push
         id: push
-        if: steps.gen.outputs.has_new == 'true'
+        if: steps.gen.outputs.has_new == 'true' && !inputs.dry_run
+        timeout-minutes: 50
         env:
           TITLE: ${{ steps.gen.outputs.title }}
+          SLUG: ${{ steps.gen.outputs.slug }}
+          # PAT when configured (its push triggers build-and-deploy.yml),
+          # else GITHUB_TOKEN (job permissions: contents: write).
+          PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
         run: |
           set -euo pipefail
+          # Credentials only live in this step's env and are passed per git
+          # command as an extra header — never written to .git/config and
+          # stripped from the environment of the re-validation gate.
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$PUSH_TOKEN" | base64 -w0)"
+          echo "::add-mask::$AUTH_HEADER"
+          unset PUSH_TOKEN
+          git_auth() { git -c "http.https://github.com/.extraheader=${AUTH_HEADER}" "$@"; }
+          gate() { env -u AUTH_HEADER -u PUSH_TOKEN SLUG="$SLUG" bash scripts/article-gate.sh; }
+
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add src/translations/*/ressources.json data/article-research-log.json
@@ -144,15 +173,27 @@ jobs:
           fi
           git commit -m "content(ressources): ${TITLE}" \
             --author="samuelhalff <660062+samuelhalff@users.noreply.github.com>"
+
+          VALIDATED_BASE=$(git rev-parse HEAD~1)   # the gate step validated this base
           for i in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
+            git_auth fetch --no-tags origin main
+            REMOTE=$(git rev-parse origin/main)
+            if [ "$REMOTE" != "$VALIDATED_BASE" ]; then
+              echo "main moved ($VALIDATED_BASE → $REMOTE): rebasing and re-running the full gate (attempt $i/3)"
+              if ! git rebase origin/main; then
+                git rebase --abort 2>/dev/null || true
+                echo "::error::Rebase onto main conflicts — not pushing"; exit 1
+              fi
+              gate
+              VALIDATED_BASE="$REMOTE"
+            fi
+            if git_auth push origin HEAD:main; then
               echo "pushed=true" >> "$GITHUB_OUTPUT"; exit 0
             fi
-            git rebase --abort 2>/dev/null || true
+            echo "Push rejected (main moved again?), retrying"
             sleep $((i * 10))
           done
-          echo "Push failed after retries"; exit 1
+          echo "::error::Push failed after 3 validated rebase attempts"; exit 1
 
       - name: Dispatch build-and-deploy (GITHUB_TOKEN pushes do not trigger workflows)
         if: steps.push.outputs.pushed == 'true' && env.HAS_PAT != 'true'

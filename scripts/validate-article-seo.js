@@ -18,6 +18,7 @@ const path = require("path");
 const rules = require("./lib/ridgerArticleRules");
 const { isBlockedDomain } = require("./lib/referenceValidator");
 const { sortArticlesNewestFirst } = require("./lib/articleBacklog");
+const { checkOfficialOnlyReferences } = require("./lib/officialReferencePolicy");
 
 const ROOT = process.cwd();
 const argv = process.argv.slice(2);
@@ -58,24 +59,53 @@ function main() {
     slug = generated.slug;
   }
 
-  const servicePathMaps = rules.loadServicePathMaps(ROOT);
-  const slugs = fr.map((a) => a.slug);
-  const errors = [];
-  const frArticle = fr.find((a) => a.slug === slug);
-  if (!frArticle) {
-    console.error(`❌ ${slug} not found in fr/ressources.json`);
+  const errors = validateArticle(data, slug, { servicePathMaps: rules.loadServicePathMaps(ROOT) });
+  if (errors.length) {
+    console.error(`❌ Article SEO/GEO validation failed for ${slug}:`);
+    errors.forEach((e) => console.error(`  - ${e}`));
     process.exit(1);
   }
-  const frIndex = fr.indexOf(frArticle);
+  console.log(`✅ ${slug}: hard rules, SEO/GEO structure, number & structure parity OK in ${rules.LOCALES.length} locales`);
+}
+
+/**
+ * Locate the one article with `slug` in a locale. Exactly one is required:
+ * 0 → missing, >1 → duplicate (a find() would silently validate only the
+ * first copy while the site renders/links whichever it resolves).
+ */
+function locateUnique(articles, slug) {
+  const indexes = [];
+  (articles || []).forEach((a, i) => {
+    if (a && a.slug === slug) indexes.push(i);
+  });
+  return indexes;
+}
+
+/** Pure validation of one article across all locales; returns error strings. */
+function validateArticle(data, slug, { servicePathMaps } = {}) {
+  const errors = [];
+  const fr = data.fr?.Articles || [];
+  const slugs = fr.map((a) => a.slug);
+  const frIdx = locateUnique(fr, slug);
+  if (frIdx.length === 0) return [`[fr] ${slug} not found in fr/ressources.json`];
+  if (frIdx.length > 1) return [`[fr] duplicate slug ${slug} (${frIdx.length} articles at indexes ${frIdx.join(", ")}) — exactly one required`];
+  const frIndex = frIdx[0];
+  const frArticle = fr[frIndex];
 
   for (const locale of rules.LOCALES) {
-    const articles = data[locale].Articles || [];
-    const article = articles.find((a) => a.slug === slug);
-    if (!article) {
+    const articles = data[locale]?.Articles || [];
+    const idx = locateUnique(articles, slug);
+    if (idx.length === 0) {
       errors.push(`[${locale}] missing article`);
       continue;
     }
-    if (articles.indexOf(article) !== frIndex) errors.push(`[${locale}] article index differs from FR (key-parity is index-based)`);
+    if (idx.length > 1) {
+      errors.push(`[${locale}] duplicate slug ${slug} (${idx.length} articles at indexes ${idx.join(", ")}) — exactly one required`);
+      continue;
+    }
+    const article = articles[idx[0]];
+    if (idx[0] !== frIndex) errors.push(`[${locale}] article index differs from FR (key-parity is index-based)`);
+    checkOfficialOnlyReferences(article).forEach((e) => errors.push(`[${locale}] ${e}`));
     const kw = article.keywords || {};
     if (!kw.primary || !Array.isArray(kw.secondary)) errors.push(`[${locale}] missing keywords {primary, secondary[]}`);
     for (const v of rules.checkHardRules(article)) {
@@ -103,13 +133,9 @@ function main() {
       if ((article.tags || []).length !== (frArticle.tags || []).length) errors.push(`[${locale}] tags length differs from FR`);
     }
   }
-
-  if (errors.length) {
-    console.error(`❌ Article SEO/GEO validation failed for ${slug}:`);
-    errors.forEach((e) => console.error(`  - ${e}`));
-    process.exit(1);
-  }
-  console.log(`✅ ${slug}: hard rules, SEO/GEO structure, number & structure parity OK in ${rules.LOCALES.length} locales`);
+  return errors;
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { locateUnique, validateArticle };

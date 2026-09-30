@@ -30,7 +30,7 @@ const AZURE_AGENT_RESPONSES_API_VERSION =
 const AZURE_AGENT_FORCE_RESPONSES =
   process.env.AZURE_AGENT_FORCE_RESPONSES === "1";
 const AZURE_AGENT_RESPONSES_RETRIES = parseInt(
-  process.env.AZURE_AGENT_RESPONSES_RETRIES || "4",
+  process.env.AZURE_AGENT_RESPONSES_RETRIES || "2",
   10,
 );
 const AZURE_AGENT_RESPONSES_BACKOFF_MS = parseInt(
@@ -38,7 +38,7 @@ const AZURE_AGENT_RESPONSES_BACKOFF_MS = parseInt(
   10,
 );
 const AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS = parseInt(
-  process.env.AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS || "120000",
+  process.env.AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS || "60000",
   10,
 );
 const AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS = parseInt(
@@ -53,6 +53,67 @@ const AZURE_AGENT_RESPONSES_COOLDOWN_MS = parseInt(
   process.env.AZURE_AGENT_RESPONSES_COOLDOWN_MS || "8000",
   10,
 );
+// ─── Time budgets ─────────────────────────────────────────────────────────
+// AI_PIPELINE_DEADLINE_MS: global wall-clock budget measured from process
+// start. Every model attempt's timeout is clamped to what is left, and a
+// retry is only scheduled when its backoff plus a minimum useful attempt
+// still fits — so the process fails (or falls back) cleanly on its own
+// instead of being hard-killed by the CI step timeout. 0/unset = no deadline.
+const AI_PIPELINE_DEADLINE_MS = parseInt(process.env.AI_PIPELINE_DEADLINE_MS || "0", 10);
+const PROCESS_START_MS = Date.now() - Math.round(process.uptime() * 1000);
+const PIPELINE_DEADLINE_AT =
+  AI_PIPELINE_DEADLINE_MS > 0 ? PROCESS_START_MS + AI_PIPELINE_DEADLINE_MS : Infinity;
+// Shortest attempt worth starting (a draft call rarely returns faster).
+const AI_MIN_ATTEMPT_MS = parseInt(process.env.AI_MIN_ATTEMPT_MS || "30000", 10);
+// Per-attempt timeout for Azure OpenAI chat calls (previously unbounded).
+const AZURE_OPENAI_TIMEOUT_MS = parseInt(process.env.AZURE_OPENAI_TIMEOUT_MS || "240000", 10);
+// Hard cap for one agent call (all attempts + backoffs + cooldown).
+const AZURE_AGENT_CALL_BUDGET_MS = parseInt(process.env.AZURE_AGENT_CALL_BUDGET_MS || "600000", 10);
+// Time kept free after the agent for the OpenAI fallbacks, draft, repairs
+// and the 4 translations: the agent never runs into this window.
+const AZURE_AGENT_FALLBACK_RESERVE_MS = parseInt(
+  process.env.AZURE_AGENT_FALLBACK_RESERVE_MS || "900000",
+  10,
+);
+
+class DeadlineError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "DeadlineError";
+    this.code = "PIPELINE_DEADLINE";
+  }
+}
+
+/**
+ * Timeout for the next attempt: min(timeoutMs, deadlineAt - now), or 0 when
+ * less than minAttemptMs is left (caller must not start the attempt).
+ */
+function computeAttemptTimeoutMs({
+  timeoutMs,
+  deadlineAt = PIPELINE_DEADLINE_AT,
+  now = Date.now(),
+  minAttemptMs = AI_MIN_ATTEMPT_MS,
+}) {
+  const left = deadlineAt - now;
+  const t = Math.min(timeoutMs > 0 ? timeoutMs : Infinity, left);
+  if (!Number.isFinite(t)) return timeoutMs > 0 ? timeoutMs : 0;
+  return t >= minAttemptMs ? Math.floor(t) : 0;
+}
+
+/** True when sleeping delayMs still leaves room for a useful attempt. */
+function canAffordRetry({
+  delayMs,
+  deadlineAt = PIPELINE_DEADLINE_AT,
+  now = Date.now(),
+  minAttemptMs = AI_MIN_ATTEMPT_MS,
+}) {
+  return deadlineAt - now - Math.max(0, delayMs || 0) >= minAttemptMs;
+}
+
+function remainingBudgetMs(now = Date.now()) {
+  return PIPELINE_DEADLINE_AT - now;
+}
+
 const AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS = parseInt(
   process.env.AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS || "0",
   10,
@@ -661,11 +722,21 @@ async function azureOpenAIJson(prompt, options = {}) {
     responseFormat: { type: "json_object" },
   });
 
-  const maxRetries = parseInt(process.env.AZURE_OPENAI_RETRIES || "6", 10);
+  const maxRetries = parseInt(process.env.AZURE_OPENAI_RETRIES || "3", 10);
+  const label = debugLabel || deployment;
   let attempt = 0;
   while (true) {
     attempt += 1;
+    const attemptTimeoutMs = computeAttemptTimeoutMs({ timeoutMs: AZURE_OPENAI_TIMEOUT_MS });
+    if (!attemptTimeoutMs) {
+      throw new DeadlineError(
+        `Azure OpenAI (${label}): pipeline deadline reached — not starting attempt ${attempt}`,
+      );
+    }
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), attemptTimeoutMs);
     let res;
+    let text = "";
     try {
       res = await fetch(url, {
         method: "POST",
@@ -674,8 +745,25 @@ async function azureOpenAIJson(prompt, options = {}) {
           "api-key": apiKey,
         },
         body: JSON.stringify(body),
+        signal: controller.signal,
+      });
+      text = await res.text().catch((e) => {
+        if (controller.signal.aborted) throw e;
+        return "";
       });
     } catch (error) {
+      clearTimeout(timer);
+      if (controller.signal.aborted) {
+        const delay = computeAzureOpenAIRetryDelayMs(attempt);
+        if (attempt <= maxRetries && canAffordRetry({ delayMs: delay })) {
+          console.warn(
+            `[WARN] Azure OpenAI (${label}) timed out after ${attemptTimeoutMs}ms (attempt ${attempt}/${maxRetries}) retrying in ${delay}ms`,
+          );
+          await sleep(delay);
+          continue;
+        }
+        throw new Error(`Azure OpenAI (${label}) timed out after ${attemptTimeoutMs}ms`);
+      }
       const cause = error?.cause;
       const details = [];
       if (cause?.code) details.push(`code=${cause.code}`);
@@ -684,9 +772,14 @@ async function azureOpenAIJson(prompt, options = {}) {
       if (cause?.address) details.push(`address=${cause.address}`);
       if (cause?.port) details.push(`port=${cause.port}`);
       const detailSuffix = details.length ? ` (${details.join(", ")})` : "";
-      if (isRetryableAzureOpenAIFetchError(error) && attempt <= maxRetries) {
-        const retryAfterMs = getRetryAfterMsFromError(error);
-        const delay = computeAzureOpenAIRetryDelayMs(attempt, retryAfterMs);
+      const retryAfterMs = getRetryAfterMsFromError(error);
+      const fetchDelay = computeAzureOpenAIRetryDelayMs(attempt, retryAfterMs);
+      if (
+        isRetryableAzureOpenAIFetchError(error) &&
+        attempt <= maxRetries &&
+        canAffordRetry({ delayMs: fetchDelay })
+      ) {
+        const delay = fetchDelay;
         console.warn(
           `[WARN] Azure OpenAI fetch error (attempt ${attempt}/${maxRetries}) retrying in ${delay}ms: ${error?.message || "unknown error"}${detailSuffix}`,
         );
@@ -697,7 +790,7 @@ async function azureOpenAIJson(prompt, options = {}) {
         `Azure OpenAI fetch failed: ${error?.message || "unknown error"}${detailSuffix}`,
       );
     }
-    const text = await res.text().catch(() => "");
+    clearTimeout(timer);
     if (res.ok) {
       const parsed = JSON.parse(text);
       const metrics = extractOpenAIMetrics(parsed, {
@@ -730,6 +823,11 @@ async function azureOpenAIJson(prompt, options = {}) {
           ? Math.max(0, retryAfterSeconds) * 1000
           : null;
       const delay = computeAzureOpenAIRetryDelayMs(attempt, serverDelayMs);
+      if (!canAffordRetry({ delayMs: delay })) {
+        throw new Error(
+          `Azure OpenAI HTTP ${res.status} (${label}); retry in ${delay}ms would exceed the pipeline deadline`,
+        );
+      }
       console.warn(
         `[WARN] Azure OpenAI HTTP ${res.status} (attempt ${attempt}/${maxRetries}) retrying in ${delay}ms`,
       );
@@ -746,6 +844,37 @@ async function azureOpenAITranslateJson(prompt) {
     temperature: 0.2,
     topP: 0.9,
   });
+}
+
+function agentCallDeadlineAt(now = Date.now()) {
+  return Math.min(
+    now + AZURE_AGENT_CALL_BUDGET_MS,
+    PIPELINE_DEADLINE_AT - AZURE_AGENT_FALLBACK_RESERVE_MS,
+  );
+}
+
+/**
+ * Worst-case wall time of one agent call / one OpenAI call with the current
+ * settings (ignoring the deadline clamps, which only make it shorter). Used by
+ * the tests to prove the CI budgets fit in the step timeout.
+ */
+function worstCaseBudgets(env = process.env) {
+  const n = (k, d) => parseInt(env[k] || d, 10);
+  const agentRetries = n("AZURE_AGENT_RESPONSES_RETRIES", "2");
+  const agentTimeout = n("AZURE_AGENT_RESPONSES_TIMEOUT_MS", "180000");
+  const agentBackoff = n("AZURE_AGENT_RESPONSES_BACKOFF_MS", "15000");
+  const agentBackoffMax = n("AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS", "60000");
+  const agentJitter = n("AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS", "2000");
+  let agentMs = (agentRetries + 1) * agentTimeout + n("AZURE_AGENT_RESPONSES_COOLDOWN_MS", "8000");
+  for (let a = 0; a < agentRetries; a++) {
+    const b = agentBackoff * (a + 1) + agentJitter;
+    agentMs += agentBackoffMax > 0 ? Math.min(b, agentBackoffMax) : b;
+  }
+  agentMs = Math.min(agentMs, n("AZURE_AGENT_CALL_BUDGET_MS", "600000"));
+  const oaRetries = n("AZURE_OPENAI_RETRIES", "3");
+  let openaiMs = (oaRetries + 1) * n("AZURE_OPENAI_TIMEOUT_MS", "240000");
+  for (let a = 1; a <= oaRetries; a++) openaiMs += Math.min(30000, 2000 * Math.pow(2, a - 1)) + 400;
+  return { agentMs, openaiMs, deadlineMs: n("AI_PIPELINE_DEADLINE_MS", "0") };
 }
 
 /**
@@ -797,12 +926,21 @@ async function azureAgentResponsesApi(
 
   let response;
   let useMaxOutputTokens = AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS > 0;
+  // The agent may use neither more than its own call budget nor the window
+  // reserved for the fallbacks and the rest of the pipeline.
+  const callDeadlineAt = agentCallDeadlineAt();
   for (let attempt = 0; attempt <= AZURE_AGENT_RESPONSES_RETRIES; attempt++) {
+    const attemptTimeoutMs = computeAttemptTimeoutMs({
+      timeoutMs: AZURE_AGENT_RESPONSES_TIMEOUT_MS,
+      deadlineAt: callDeadlineAt,
+    });
+    if (!attemptTimeoutMs) {
+      throw new DeadlineError(
+        `Agent budget exhausted before attempt ${attempt + 1} (reserving ${AZURE_AGENT_FALLBACK_RESERVE_MS}ms for fallbacks)`,
+      );
+    }
     const controller = new AbortController();
-    const timeout = setTimeout(
-      () => controller.abort(),
-      AZURE_AGENT_RESPONSES_TIMEOUT_MS,
-    );
+    const timeout = setTimeout(() => controller.abort(), attemptTimeoutMs);
     try {
       const conversation = await openAIClient.conversations.create(
         {
@@ -826,7 +964,11 @@ async function azureAgentResponsesApi(
         response.status === "incomplete" &&
         response.incomplete_details?.reason === "max_output_tokens"
       ) {
-        if (useMaxOutputTokens && attempt < AZURE_AGENT_RESPONSES_RETRIES) {
+        if (
+          useMaxOutputTokens &&
+          attempt < AZURE_AGENT_RESPONSES_RETRIES &&
+          canAffordRetry({ delayMs: AZURE_AGENT_RESPONSES_BACKOFF_MS, deadlineAt: callDeadlineAt })
+        ) {
           useMaxOutputTokens = false;
           if (debugAgent) {
             console.log(
@@ -844,17 +986,16 @@ async function azureAgentResponsesApi(
       break;
     } catch (error) {
       if (controller.signal.aborted) {
-        if (attempt < AZURE_AGENT_RESPONSES_RETRIES) {
-          if (debugAgent) {
-            console.log(
-              `[agent] Responses API timeout after ${AZURE_AGENT_RESPONSES_TIMEOUT_MS}ms. Retrying...`,
-            );
-          }
+        if (
+          attempt < AZURE_AGENT_RESPONSES_RETRIES &&
+          canAffordRetry({ delayMs: 0, deadlineAt: callDeadlineAt })
+        ) {
+          console.warn(
+            `[agent] Responses API timeout after ${attemptTimeoutMs}ms. Retrying...`,
+          );
           continue;
         }
-        throw new Error(
-          `Responses API timeout after ${AZURE_AGENT_RESPONSES_TIMEOUT_MS}ms`,
-        );
+        throw new Error(`Responses API timeout after ${attemptTimeoutMs}ms`);
       }
 
       const status = error?.status || error?.statusCode;
@@ -888,6 +1029,11 @@ async function azureAgentResponsesApi(
             : proposed;
         const retryAfterMs = getRetryAfterMsFromError(error);
         const effectiveBackoffMs = Math.max(backoffMs, retryAfterMs || 0);
+        if (!canAffordRetry({ delayMs: effectiveBackoffMs, deadlineAt: callDeadlineAt })) {
+          throw new DeadlineError(
+            `Agent ${status}; retry in ${effectiveBackoffMs}ms would exceed the agent budget`,
+          );
+        }
         if (debugAgent) {
           console.log(
             `[agent] Responses API ${status} received. Retrying in ${effectiveBackoffMs}ms...`,
@@ -945,7 +1091,9 @@ async function requestAgentJson(prompt, { agentName = AZURE_AGENT_NAME } = {}) {
   const tryAgent = async () => {
     const result = await azureAgentResponsesApi(prompt, { agentName });
     if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
-      await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
+      // Never let the cooldown eat into the pipeline deadline.
+      const left = remainingBudgetMs() - AI_MIN_ATTEMPT_MS;
+      await sleep(Math.min(AZURE_AGENT_RESPONSES_COOLDOWN_MS, Math.max(0, left)));
     }
     return result;
   };
@@ -1026,6 +1174,13 @@ module.exports = {
   requestAgentJson,
   extractJsonFromText,
   computeAzureOpenAIRetryDelayMs,
+  computeAttemptTimeoutMs,
+  canAffordRetry,
+  remainingBudgetMs,
+  agentCallDeadlineAt,
+  worstCaseBudgets,
+  DeadlineError,
+  PIPELINE_DEADLINE_AT,
   getRetryAfterMsFromError,
   isRetryableAzureOpenAIFetchError,
   buildAzureOpenAIChatUrlFor,

@@ -59,8 +59,13 @@ const {
 const {
   validateReferences,
   isBlockedDomain,
+  isOfficialReference,
   extractDomain,
 } = require("./lib/referenceValidator");
+const {
+  MIN_OFFICIAL_REFERENCES,
+  checkOfficialOnlyReferences,
+} = require("./lib/officialReferencePolicy");
 const {
   chooseWithDemand,
   loadBacklog,
@@ -78,6 +83,7 @@ const {
   significantTokens,
 } = require("./lib/keywordResearch");
 const rules = require("./lib/ridgerArticleRules");
+const { writeJsonFilesAtomically } = require("./lib/atomicJsonWrite");
 
 const args = new Set(process.argv.slice(2));
 const PLAN_ONLY = args.has("--plan-only");
@@ -150,10 +156,6 @@ const VOICE_PROMPT = [
 
 function loadJSON(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
-}
-
-function saveJSON(file, data) {
-  fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
 function ressourcesPath(locale) {
@@ -476,14 +478,21 @@ async function fetchPageTitle(url) {
 }
 
 /**
- * HTTP-validate candidate references; keep allowlisted + reachable ones,
- * max 2 per hostname, max 8. Falls back to the backlog's official sources.
+ * HTTP-validate candidate references; keep allowlisted + reachable ones that
+ * are OFFICIAL (isOfficialReference — Ridger articles make legal/tax/permit
+ * statements, so non-official sources are rejected outright), max 2 per
+ * hostname, max 8. Falls back to the backlog's official sources.
  */
 async function buildValidatedReferences(candidates, item) {
   const clean = (list) =>
     (Array.isArray(list) ? list : [])
       .filter((r) => r && typeof r.url === "string" && /^https:\/\//.test(r.url))
       .filter((r) => !isBlockedDomain(r.url))
+      .filter((r) => {
+        if (isOfficialReference(r.url)) return true;
+        console.warn(`[refs] rejected non-official source ${r.url}`);
+        return false;
+      })
       .map((r) => ({ labelKey: String(r.labelKey || "").trim() || extractDomain(r.url) || r.url, url: r.url.trim() }));
 
   let pool = clean(candidates);
@@ -530,7 +539,7 @@ async function buildValidatedReferences(candidates, item) {
     }
     out.push({ labelKey, url: r.url });
   }
-  const official = out.filter((r) => rules.isOfficialSource(r.url)).length;
+  const official = out.filter((r) => isOfficialReference(r.url)).length;
   return { references: out, official };
 }
 
@@ -585,6 +594,8 @@ function validateLocaleArticle(article, { locale, keywords, allowedPaths, frArti
     const w = seo.stats.words;
     if (w < MIN_WORDS * 0.9) problems.push(`word count ${w} is below the target ${MIN_WORDS}`);
   }
+  // Legal/tax/permit statements must rest on official sources only.
+  problems.push(...checkOfficialOnlyReferences(article));
   if (extractOutdatedSwissVatRateMatches(article).length) {
     problems.push("mentions an outdated Swiss VAT rate (current: 8.1 % / 2.6 % / 3.8 %)");
   }
@@ -728,7 +739,7 @@ async function generateFrench({ item, keywords, frArticles, servicePathMaps, all
 
     const { references, official } = await buildValidatedReferences(research.references, item);
     log(`🔗 References: ${references.length} valid (${official} official) via ${provider}`);
-    if (references.length < 3 || official < 2) {
+    if (official < MIN_OFFICIAL_REFERENCES || official !== references.length) {
       lastError = new Error(`not enough verifiable official references (${references.length} valid, ${official} official)`);
       retryHint = "Les références précédentes étaient invalides ou non officielles : fournis des URL officielles exactes (admin.ch, fedlex, estv, sem, ch.ch, sites cantonaux).";
       console.warn(`   ↳ ${lastError.message}`);
@@ -861,7 +872,7 @@ async function translateAll({ frArticle, keywords, servicePathMaps, allowedPaths
   return out;
 }
 
-function appendResearchLog(entry) {
+function nextResearchLog(entry) {
   let logData = { entries: [] };
   if (fs.existsSync(RESEARCH_LOG)) {
     try {
@@ -873,7 +884,43 @@ function appendResearchLog(entry) {
   logData.entries = Array.isArray(logData.entries) ? logData.entries : [];
   logData.entries.push(entry);
   logData.entries = logData.entries.slice(-200);
-  saveJSON(RESEARCH_LOG, logData);
+  return logData;
+}
+
+/**
+ * Append the new article to all 5 locale files (and the research-log entry)
+ * all-or-nothing: every file is serialized, parsed back and re-checked first;
+ * only then are temp files swapped in (with rollback). On any failure the
+ * working tree is left unchanged.
+ */
+function writeArticleAtomically({ data, byLocale, researchLog, files = {} }) {
+  const slug = byLocale.fr.slug;
+  const next = Object.fromEntries(
+    LOCALES.map((l) => [l, { ...data[l], Articles: [...(data[l].Articles || []), byLocale[l]] }]),
+  );
+  const expectedSlugs = next.fr.Articles.map((a) => a.slug);
+  const pathFor = (l) => (files[l] || ressourcesPath(l));
+  const logPath = files.researchLog || RESEARCH_LOG;
+  const localeOf = new Map(LOCALES.map((l) => [pathFor(l), l]));
+  const entries = LOCALES.map((l) => ({ file: pathFor(l), data: next[l] }));
+  if (researchLog) entries.push({ file: logPath, data: researchLog });
+  writeJsonFilesAtomically(entries, {
+    validate(parsed, file) {
+      const locale = localeOf.get(file);
+      if (!locale) return;
+      const arts = Array.isArray(parsed?.Articles) ? parsed.Articles : null;
+      if (!arts) throw new Error(`${locale}: Articles missing after serialization`);
+      if (arts.length !== expectedSlugs.length || arts.some((a, i) => a.slug !== expectedSlugs[i])) {
+        throw new Error(`${locale}: Articles not index-aligned with FR after serialization`);
+      }
+      if (arts.filter((a) => a.slug === slug).length !== 1) throw new Error(`${locale}: slug ${slug} must appear exactly once`);
+      const article = arts[arts.length - 1];
+      const hard = rules.checkHardRules(article);
+      if (hard.length) throw new Error(`${locale}: hard rule ${hard[0].code} after serialization`);
+      const refs = checkOfficialOnlyReferences(article);
+      if (refs.length) throw new Error(`${locale}: ${refs[0]}`);
+    },
+  });
 }
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -937,11 +984,7 @@ async function main() {
     return;
   }
 
-  for (const l of LOCALES) {
-    data[l].Articles.push(byLocale[l]);
-    saveJSON(ressourcesPath(l), data[l]);
-  }
-  appendResearchLog({
+  const researchLog = nextResearchLog({
     date: today,
     slug: frArticle.slug,
     backlogId: topic.item.id,
@@ -952,6 +995,7 @@ async function main() {
     keywords: Object.fromEntries(LOCALES.map((l) => [l, { ...keywords[l], markets: raw[l].markets, stats: raw[l].stats }])),
     recentDevelopments: research.recentDevelopments || [],
   });
+  writeArticleAtomically({ data, byLocale, researchLog });
   log(`\n✅ Appended "${frArticle.title}" (${frArticle.slug}) to 5 locales.`);
   setOutput("has_new", "true");
   setOutput("slug", frArticle.slug);
@@ -974,6 +1018,8 @@ if (require.main === module) {
 
 module.exports = {
   appendReferencesSection,
+  buildValidatedReferences,
+  writeArticleAtomically,
   buildDraftPrompt,
   buildResearchPrompt,
   buildTranslatePrompt,

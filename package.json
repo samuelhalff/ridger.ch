@@ -39,7 +39,7 @@
     "assets:pdfs": "node scripts/download-missing-pdfs.js --locale fr",
     "test:unit": "node --test src/lib/lead-session.test.ts src/lib/agent/request-validation.test.ts",
     "test:guardrails": "node --test scripts/article-guardrails.test.js",
-    "test:pipeline": "node --test scripts/article-pipeline.test.js",
+    "test:pipeline": "node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js",
     "test:redirects": "node --import ./scripts/lib/register-ts.mjs --test scripts/redirect-destinations.test.js",
     "articles:plan": "node scripts/ai-ressources-update.js --plan-only",
     "articles:generate": "node scripts/ai-ressources-update.js --apply",

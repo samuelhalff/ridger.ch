@@ -29,7 +29,7 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
    - **Secondary keywords:** 5–10 long tails, plus the real question queries.
    - **Alignment:** secondary lists are trimmed to the same length in every locale. This is required because the build's key-parity check works by array index. Fewer than 3 in any locale fails the run; 3–4 only warns (e.g. autocomplete blocked on the CI runner — the backlog targets and seed are then used).
    - **Trend signal:** best effort, from Google Trends' public "trending now" RSS for CH (fr, de), matched against the keywords. It goes into the log and never fails the run. Autocomplete is best effort too: with no suggestions, the backlog `targetKeywords` are used.
-3. **Research.** The first available of these is used: the Azure AI Foundry web-search agent (`AZURE_AGENT_*`, same as ark), then `AZURE_OPENAI_RESEARCH_*`, then the main deployment. It returns current developments with their legal status (in force / adopted / proposal / consultation), dated key facts, an outline written as questions, FAQ questions and official references. The references are HTTP-validated (`referenceValidator`), must come from allow-listed domains (max 2 per host) and must include at least 2 official sources.
+3. **Research.** The first available of these is used: the Azure AI Foundry web-search agent (`AZURE_AGENT_*`, same as ark), then `AZURE_OPENAI_RESEARCH_*`, then the main deployment. It returns current developments with their legal status (in force / adopted / proposal / consultation), dated key facts, an outline written as questions, FAQ questions and official references. The references are HTTP-validated (`referenceValidator`), must come from allow-listed domains (max 2 per host) and must be **official only** (`isOfficialReference`: authorities, courts, cantons, public-law funds and the listed quasi-official bodies), at least 3 of them. Ridger articles make legal, tax and permit statements, so a non-official source (association, Wikipedia, vendor docs, …) rejects the article — at the reference step, in the per-locale validation and in `validate-article-seo` (`scripts/lib/officialReferencePolicy.js`). Every backlog `officialSources` entry must pass the same policy (tested).
 4. **Draft (FR).** Uses `AZURE_OPENAI_DRAFT_*`. The prompt carries the Ridger voice (warm, discreet, precise), a block of verified facts from the 2026 legal audit, the hard rules and the fixed structure below.
 5. **Validation, with up to 2 repair rounds.** If validation still fails, the attempt is discarded; up to 3 research attempts are made, then the run fails and nothing is written.
 6. **Translation.** One call per locale, using that locale's own researched keywords. Each locale must then pass these checks, with up to 3 attempts per locale:
@@ -38,19 +38,20 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
    - **structure parity** (H2/H3/FAQ/key-facts/link counts);
    - not identical to FR;
    - same tag count.
-7. **Write.** The article is appended to all 5 `ressources.json` files at the same index. The research log gets an entry, and the workflow outputs `has_new`, `slug` and `title`.
+7. **Write.** The article is appended to all 5 `ressources.json` files at the same index, together with the research-log entry, **all-or-nothing** (`scripts/lib/atomicJsonWrite.js`): every file is serialized, parsed back and re-checked (index alignment, slug exactly once, hard rules, official references), written to a temp file, then swapped in with rollback. On any failure the tree is unchanged. The workflow then gets `has_new`, `slug` and `title`.
 8. **Workflow.** The workflow then runs these steps:
    1. fix internal links;
-   2. `validate-article-seo --slug`;
-   3. `validate-latest-article-guardrails --slug`;
-   4. `validate-reference-source-policy --slug`;
-   5. article-facts, translations and link checks;
-   6. `npm run build` (includes the prebuild `validate-translations.js` with its fatal code-reference and key-parity checks);
-   7. commit `content(ressources): <title>` and push to `main`;
-   8. deploy: a PAT push triggers `build-and-deploy.yml` on its own; with `GITHUB_TOKEN`, the workflow dispatches it;
-   9. wait until the FR URL returns 200;
-   10. ping sitemaps;
-   11. IndexNow (`POST /api/indexnow/` with the 5 URLs; same key as `indexnow-reindex.yml`).
+   2. the validation gate `scripts/article-gate.sh`: `validate-article-seo --slug` (exactly one article per slug per locale), `validate-latest-article-guardrails --slug`, `validate-reference-source-policy --slug`, article-facts, translations and link checks, `npm test`, `npm run build` (includes the prebuild `validate-translations.js` with its fatal code-reference and key-parity checks);
+   3. commit `content(ressources): <title>` and push to `main`. If `main` moved since the validated base, the commit is rebased and the **full gate runs again** on the rebased tree before pushing; a rejected push (main moved again) loops, at most 3 times, then the run fails. A rebase conflict fails immediately;
+   4. deploy: a PAT push triggers `build-and-deploy.yml` on its own; with `GITHUB_TOKEN`, the workflow dispatches it;
+   5. wait until the FR URL returns 200;
+   6. ping sitemaps;
+   7. IndexNow (`POST /api/indexnow/` with the 5 URLs; same key as `indexnow-reindex.yml`).
+
+### Credentials and time budgets
+
+- Checkout uses `persist-credentials: false` and the workflow has no top-level permissions; the job has `contents: write` (GITHUB_TOKEN fallback push) and `actions: write` (deploy dispatch). `npm ci`, the generator, the validators and the build never see a write token. The push token (`PAT_TOKEN` if set, else `GITHUB_TOKEN`) exists only in the "Commit and push" step and is passed per git command as an HTTP header, never written to `.git/config`, and stripped from the re-validation gate's environment.
+- Generation has a global deadline (`AI_PIPELINE_DEADLINE_MS` = 33 min from process start). Every model attempt's timeout is clamped to the time left, and a retry only starts when its backoff plus 30 s still fits. The agent is capped at 10 min per call and never runs into the last 15 min (`AZURE_AGENT_FALLBACK_RESERVE_MS`), kept for the OpenAI fallbacks, draft, repairs and translations. Azure OpenAI calls now have a per-attempt timeout (`AZURE_OPENAI_TIMEOUT_MS` = 240 s, 3 retries). The script therefore exits on its own before `timeout 38m` and the 40-minute step timeout; `worstCaseBudgets()` and `scripts/article-pipeline-hardening.test.js` check these numbers against the workflow.
 
 ## Article structure and where each keyword goes
 
