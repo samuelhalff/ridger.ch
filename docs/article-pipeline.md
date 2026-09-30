@@ -7,7 +7,7 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
 |---|---|
 | Workflow (cron + manual) | `.github/workflows/ai-ressources.yml` |
 | Orchestrator | `scripts/ai-ressources-update.js` |
-| Editorial backlog (72 topics, 16 themes) | `data/article-backlog.json` |
+| Editorial backlog (76 topics, 17 themes, `legacyArticles` map) | `data/article-backlog.json` |
 | Topic picker / diversity | `scripts/lib/articleBacklog.js` |
 | Keyword and trend research | `scripts/lib/keywordResearch.js` |
 | Hard rules + SEO/GEO checks | `scripts/lib/ridgerArticleRules.js` |
@@ -18,7 +18,7 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
 
 ## How a run works
 
-1. **Topic.** The picker ranks the backlog items that are not yet published. An article carries `backlogId`, so the bot never edits the backlog. Rules:
+1. **Topic.** The picker ranks the backlog items that are not yet published. A generated article carries `backlogId`, so the bot never edits the backlog. Hand-written articles that predate the pipeline are mapped in `legacyArticles` (slug → theme, audience, optional `backlogId` of the item they cover), so rotation and coverage also see them; `npm run test:pipeline` fails if an article is neither generated nor mapped, or if a mapping points to a missing article. Rules:
    - never the same category as the last article;
    - no theme repeated within the last 4 generated articles;
    - no near-duplicate of any existing article (the same all-time check as `validate-latest-article-guardrails.js`).
@@ -151,11 +151,11 @@ Append an item to `data/article-backlog.json` → `items`:
 ```
 
 Field values:
-- `theme`: one of the 16 keys in `themes`.
+- `theme`: one of the keys in `themes`.
 - `category`: one of the 8 site categories: `family-office`, `reporting`, `fiscalite`, `patrimoine`, `gouvernance`, `emploi-domestique`, `vie-pratique`, `travaux-intendance`.
 - `audience`: `accessible`, `affluent` or `uhnw`.
 - `priority`: 1 is the highest.
-- `service`: one of the 7 canonical service paths.
+- `service`: one of the 11 canonical service paths (`CANONICAL_SERVICES` in `scripts/lib/ridgerArticleRules.js`).
 - `seeds`: how people actually search, 2–5 words.
 - `months`: optional seasonal boost.
 

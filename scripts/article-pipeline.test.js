@@ -172,6 +172,50 @@ test("picker boosts seasonal items and under-used categories; skipRotation lifts
   assert.ok(lifted.ranked.some((r) => r.item.id === "lambda-three"));
 });
 
+test("legacy (hand-written) articles feed theme rotation, coverage and audience alternation", () => {
+  const backlog = {
+    themes,
+    items: [
+      item("nu-one", "patrimoine", "a"),
+      item("nu-two", "gouvernance", "b"),
+      item("nu-three", "reporting", "c", { audience: "uhnw" }),
+      item("nu-four", "fiscalite", "d", { audience: "accessible" }),
+    ],
+    legacyArticles: {
+      "old-a": { theme: "a", audience: "accessible" },
+      "old-b": { theme: "e", audience: "accessible", backlogId: "nu-two" },
+    },
+  };
+  const articles = [
+    { slug: "old-a", title: "Ancien A", date: "2026-09-20", category: "vie-pratique" },
+    { slug: "old-b", title: "Ancien B", date: "2026-09-01", category: "family-office" },
+  ];
+  const { ranked, excluded } = backlogLib.rankBacklogCandidates({ backlog, articles, today: "2026-09-30" });
+  // Theme "a" comes from the legacy mapping (no backlogId on the article).
+  assert.ok(excluded.some((e) => e.id === "nu-one" && /theme a/.test(e.reason)));
+  // A legacy article covering a backlog item marks it as published.
+  assert.ok(excluded.some((e) => e.id === "nu-two" && /published/.test(e.reason)));
+  // The last article's legacy audience (accessible) drives alternation.
+  const three = ranked.find((r) => r.item.id === "nu-three");
+  const four = ranked.find((r) => r.item.id === "nu-four");
+  assert.ok(three.reasons.includes("audience alternation"));
+  assert.ok(!four.reasons.includes("audience alternation"));
+  assert.deepEqual(backlogLib.checkBacklogCoverage(backlog, articles), []);
+  assert.deepEqual(backlogLib.validateBacklog({ ...backlog, items: [] }).filter((p) => /legacy/.test(p)), [
+    "legacy old-b: unknown backlogId nu-two",
+  ]);
+  const drift = backlogLib.checkBacklogCoverage(backlog, [...articles, { slug: "new-x", title: "X" }]);
+  assert.deepEqual(drift, ["article new-x has no backlogId and no legacyArticles entry"]);
+  const stale = backlogLib.checkBacklogCoverage(backlog, [articles[0]]);
+  assert.deepEqual(stale, ["legacyArticles entry old-b matches no article"]);
+});
+
+test("every published article is traceable to the backlog (backlogId or legacyArticles)", () => {
+  const backlog = backlogLib.loadBacklog(ROOT);
+  const fr = require("../src/translations/fr/ressources.json").Articles;
+  assert.deepEqual(backlogLib.checkBacklogCoverage(backlog, fr), []);
+});
+
 test("newest-first ordering treats later array position as newer on equal dates", () => {
   const s = backlogLib.sortArticlesNewestFirst([
     { slug: "a", date: "2026-09-30" },

@@ -65,6 +65,10 @@
     "next-gen": {
       "category": "family-office",
       "label": "Génération suivante"
+    },
+    "family-office-model": {
+      "category": "family-office",
+      "label": "Le modèle family office"
     }
   },
   "arkCoreTerms": {
@@ -1321,7 +1325,7 @@
       "category": "emploi-domestique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Accueillir un ou une au pair à Genève : autorisations selon la nationalité, contrat-type, temps de travail, rémunération minimale et assurances obligatoires.",
       "seeds": {
         "fr": "au pair genève",
@@ -1374,7 +1378,7 @@
       "category": "emploi-domestique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Engager une nounou à domicile à Genève : contrat-type de l'économie domestique, horaires, vacances, déclaration aux assurances sociales et outils simplifiés.",
       "seeds": {
         "fr": "nounou genève déclarer",
@@ -1427,7 +1431,7 @@
       "category": "emploi-domestique",
       "audience": "uhnw",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Chauffeur, majordome ou gouvernante : clauses essentielles du contrat de travail, temps de travail et disponibilité, logement de fonction, confidentialité et fin des rapports de travail.",
       "seeds": {
         "fr": "contrat majordome suisse",
@@ -1479,7 +1483,7 @@
       "category": "emploi-domestique",
       "audience": "affluent",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Mettre fin au contrat d'un employé de maison : délais de congé, période d'essai, protection contre le congé en temps inopportun, vacances non prises et certificat de travail.",
       "seeds": {
         "fr": "licencier employé de maison",
@@ -1531,7 +1535,7 @@
       "category": "emploi-domestique",
       "audience": "affluent",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Assurance accidents obligatoire pour le personnel de maison : couverture LAA dès la première heure, perte de gain maladie et obligations de l'employeur privé.",
       "seeds": {
         "fr": "assurance accident employé maison",
@@ -1584,7 +1588,7 @@
       "category": "emploi-domestique",
       "audience": "affluent",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/household-staff",
       "angle": "Engager du personnel de maison venant de l'étranger : régime de libre circulation pour les ressortissants UE/AELE, conditions restrictives pour les pays tiers, et cas distinct des domestiques privés de diplomates.",
       "seeds": {
         "fr": "permis travail employé maison",
@@ -2131,7 +2135,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Obtenir le permis C : durée de séjour requise selon la nationalité, critères d'intégration, niveau de langue, octroi anticipé et démarches à Genève.",
       "seeds": {
         "fr": "permis c conditions",
@@ -2184,7 +2188,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Naturalisation ordinaire : permis C, dix ans de séjour, critères d'intégration et de langue, puis étapes fédérale, cantonale et communale à Genève.",
       "seeds": {
         "fr": "naturalisation suisse conditions",
@@ -2237,7 +2241,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Regroupement familial en Suisse : conditions selon le permis et la nationalité (UE/AELE ou pays tiers), délais pour déposer la demande, logement approprié et moyens financiers.",
       "seeds": {
         "fr": "regroupement familial suisse",
@@ -2290,7 +2294,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Permis G frontalier : conditions, retour hebdomadaire au domicile, imposition à la source à Genève et démarches pour un ménage installé en France voisine.",
       "seeds": {
         "fr": "permis g frontalier",
@@ -2343,7 +2347,7 @@
       "category": "vie-pratique",
       "audience": "uhnw",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "S'installer en Suisse sans activité lucrative : conditions pour les ressortissants UE/AELE (moyens suffisants, assurance) et pour les rentiers de pays tiers, sans présenter d'achat immobilier ni d'investissement comme voie d'accès au séjour.",
       "seeds": {
         "fr": "permis sans activité lucrative",
@@ -3418,7 +3422,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "S'installer dans le canton de Vaud : annonce à la commune, autorisation de séjour, assurance maladie, impôts et école dans les premières semaines.",
       "seeds": {
         "fr": "arrivée canton de vaud",
@@ -3471,7 +3475,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 1,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Importer ses effets de déménagement en Suisse en franchise de droits : conditions d'usage préalable, formulaire 18.44, liste d'inventaire et cas particuliers (véhicules, alcool, objets neufs).",
       "seeds": {
         "fr": "déménagement suisse douane",
@@ -3523,7 +3527,7 @@
       "category": "vie-pratique",
       "audience": "affluent",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Importer sa voiture en Suisse : dédouanement, impôt sur les véhicules automobiles, contrôle technique et immatriculation à Genève.",
       "seeds": {
         "fr": "importer voiture suisse",
@@ -3575,7 +3579,7 @@
       "category": "vie-pratique",
       "audience": "accessible",
       "priority": 2,
-      "service": "/services/family-office-coordination",
+      "service": "/services/relocation-residence",
       "angle": "Venir s'installer en Suisse avec son chien ou son chat : puce, passeport, vaccination contre la rage selon le pays de provenance et enregistrement du chien.",
       "seeds": {
         "fr": "chien suisse importation",
@@ -3988,6 +3992,351 @@
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ge.ch/organisation/service-protection-mineurs"
       ]
+    },
+    {
+      "id": "creer-single-family-office-suisse-etapes",
+      "theme": "family-office-model",
+      "category": "family-office",
+      "audience": "uhnw",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Créer un single family office en Suisse : périmètre, structure juridique, gouvernance, équipe, et quand l'assujettissement à la LEFin ne s'applique pas (liens familiaux), comparé à un family office externalisé.",
+      "seeds": {
+        "fr": "créer un single family office",
+        "en": "single family office setup switzerland",
+        "de": "single family office gründen",
+        "es": "crear single family office suiza",
+        "pt": "criar single family office suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "création single family office",
+          "single family office suisse",
+          "family office externalisé",
+          "structure family office"
+        ],
+        "en": [
+          "single family office setup",
+          "single family office switzerland",
+          "outsourced family office",
+          "family office structure"
+        ],
+        "de": [
+          "single family office gründen",
+          "single family office schweiz",
+          "ausgelagertes family office",
+          "family office struktur"
+        ],
+        "es": [
+          "crear un single family office",
+          "single family office suiza",
+          "family office externalizado",
+          "estructura family office"
+        ],
+        "pt": [
+          "criar um single family office",
+          "single family office suíça",
+          "family office externalizado",
+          "estrutura family office"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/2019/759/fr",
+        "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/"
+      ]
+    },
+    {
+      "id": "presenter-famille-family-office-avocat-banquier",
+      "theme": "family-office-model",
+      "category": "family-office",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Avocats, banquiers privés et gérants indépendants : quand présenter une famille à un family office, comment se répartissent les rôles et comment préserver la confidentialité et le secret professionnel.",
+      "seeds": {
+        "fr": "family office avocat banquier",
+        "en": "family office referral lawyers bankers",
+        "de": "family office anwalt vermögensverwalter",
+        "es": "family office abogados banqueros",
+        "pt": "family office advogados banqueiros"
+      },
+      "targetKeywords": {
+        "fr": [
+          "apporteur d'affaires family office",
+          "family office et avocat",
+          "gérant indépendant family office",
+          "secret professionnel avocat"
+        ],
+        "en": [
+          "family office referral",
+          "family office for lawyers",
+          "external asset manager family office",
+          "introducer family office"
+        ],
+        "de": [
+          "family office vermittlung",
+          "family office anwalt",
+          "externer vermögensverwalter family office",
+          "berufsgeheimnis anwalt"
+        ],
+        "es": [
+          "presentar cliente family office",
+          "family office abogados",
+          "gestor independiente family office",
+          "secreto profesional abogado"
+        ],
+        "pt": [
+          "apresentar cliente family office",
+          "family office advogados",
+          "gestor independente family office",
+          "sigilo profissional advogado"
+        ]
+      },
+      "officialSources": [
+        "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/",
+        "https://www.fedlex.admin.ch/eli/cc/2019/758/fr"
+      ]
+    },
+    {
+      "id": "installation-zurich-zoug-famille-demarches",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/relocation-residence",
+      "angle": "S'installer en famille à Zurich ou à Zoug : annonce d'arrivée, autorisation de séjour, assurance maladie, impôts cantonaux et écoles, et ce qui change par rapport à Genève.",
+      "seeds": {
+        "fr": "s'installer à zurich",
+        "en": "moving to zurich family",
+        "de": "umzug nach zürich familie",
+        "es": "mudarse a zúrich",
+        "pt": "mudar para zurique"
+      },
+      "targetKeywords": {
+        "fr": [
+          "s'installer à zurich",
+          "s'installer à zoug",
+          "démarches arrivée zurich",
+          "family office zurich"
+        ],
+        "en": [
+          "moving to zurich",
+          "moving to zug",
+          "relocating to zurich family",
+          "family office zurich"
+        ],
+        "de": [
+          "umzug nach zürich",
+          "umzug nach zug",
+          "anmeldung zürich",
+          "family office zürich"
+        ],
+        "es": [
+          "mudarse a zúrich",
+          "vivir en zug",
+          "trámites llegada zúrich",
+          "family office zúrich"
+        ],
+        "pt": [
+          "mudar para zurique",
+          "viver em zug",
+          "procedimentos chegada zurique",
+          "family office zurique"
+        ]
+      },
+      "officialSources": [
+        "https://www.zh.ch/de/migration-integration.html",
+        "https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html",
+        "https://zg.ch/de/finanzdirektion/steuerverwaltung",
+        "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html"
+      ]
+    },
+    {
+      "id": "installation-tessin-lugano-famille-demarches",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/relocation-residence",
+      "angle": "S'installer en famille à Lugano ou au Tessin : autorisation de séjour, annonce à la commune, fiscalité cantonale, assurance maladie et écoles, en contexte italophone.",
+      "seeds": {
+        "fr": "s'installer à lugano",
+        "en": "moving to lugano",
+        "de": "umzug nach lugano",
+        "es": "mudarse a lugano",
+        "pt": "mudar para lugano"
+      },
+      "targetKeywords": {
+        "fr": [
+          "s'installer à lugano",
+          "vivre au tessin",
+          "démarches arrivée tessin",
+          "family office lugano"
+        ],
+        "en": [
+          "moving to lugano",
+          "living in ticino",
+          "relocating to ticino",
+          "family office lugano"
+        ],
+        "de": [
+          "umzug nach lugano",
+          "leben im tessin",
+          "anmeldung tessin",
+          "family office lugano"
+        ],
+        "es": [
+          "mudarse a lugano",
+          "vivir en el tesino",
+          "trámites llegada tesino",
+          "family office lugano"
+        ],
+        "pt": [
+          "mudar para lugano",
+          "viver no ticino",
+          "procedimentos chegada ticino",
+          "family office lugano"
+        ]
+      },
+      "officialSources": [
+        "https://www4.ti.ch/index.php?id=117690",
+        "https://www4.ti.ch/dfe/dc/",
+        "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html"
+      ]
     }
-  ]
+  ],
+  "legacyArticles": {
+    "family-offices-suisse-panorama-liste-comment-choisir": {
+      "theme": "family-office-model",
+      "audience": "accessible"
+    },
+    "family-office-digital-agregation-coffre-fort-cybersecurite": {
+      "theme": "digital-security",
+      "audience": "affluent"
+    },
+    "cybersecurite-confidentialite-familles-fortunees-suisse": {
+      "theme": "digital-security",
+      "audience": "uhnw"
+    },
+    "calendrier-annuel-famille-fortunee-suisse-echeances-fiscales": {
+      "theme": "tax",
+      "audience": "affluent"
+    },
+    "onboarding-family-office-90-premiers-jours": {
+      "theme": "family-office-model",
+      "audience": "uhnw"
+    },
+    "structures-detention-patrimoniale-suisse-holding-fondation-trust": {
+      "theme": "estate-succession",
+      "audience": "uhnw"
+    },
+    "family-office-reglementation-finma-lsfin-lefin-perimetre": {
+      "theme": "family-office-model",
+      "audience": "uhnw"
+    },
+    "planification-successorale-suisse-bases-reserve-hereditaire": {
+      "theme": "estate-succession",
+      "audience": "affluent"
+    },
+    "normes-reporting-performance-twr-mwr-benchmarks": {
+      "theme": "wealth-reporting",
+      "audience": "uhnw"
+    },
+    "charte-gouvernance-familiale-contenu-processus": {
+      "theme": "family-governance",
+      "audience": "uhnw"
+    },
+    "travailler-conseillers-existants-family-office-coordinateur": {
+      "theme": "family-office-model",
+      "audience": "uhnw"
+    },
+    "choisir-banques-depositaires-suisse-criteres": {
+      "theme": "wealth-reporting",
+      "audience": "affluent"
+    },
+    "actifs-passion-art-montres-collections-gouvernance": {
+      "theme": "art-collections",
+      "audience": "uhnw"
+    },
+    "reporting-consolide-patrimoine-multi-banques": {
+      "theme": "wealth-reporting",
+      "audience": "affluent"
+    },
+    "cout-family-office-suisse-modeles-facturation": {
+      "theme": "family-office-model",
+      "audience": "affluent"
+    },
+    "immobilier-patrimoine-familial-supervision-reporting": {
+      "theme": "real-estate",
+      "audience": "uhnw"
+    },
+    "quand-famille-besoin-family-office-suisse": {
+      "theme": "family-office-model",
+      "audience": "affluent"
+    },
+    "impatriation-suisse-forfait-fiscal-familles-internationales": {
+      "theme": "tax",
+      "audience": "uhnw"
+    },
+    "multi-family-office-vs-banque-privee-differences": {
+      "theme": "family-office-model",
+      "audience": "affluent"
+    },
+    "philanthropie-structuree-suisse-fondation-donatrice-zewo": {
+      "theme": "philanthropy",
+      "audience": "uhnw"
+    },
+    "multi-family-office-definition-suisse": {
+      "theme": "family-office-model",
+      "audience": "accessible"
+    },
+    "employer-personnel-maison-geneve-obligations": {
+      "theme": "household-staff",
+      "audience": "affluent"
+    },
+    "installation-geneve-checklist-administrative": {
+      "theme": "relocation",
+      "audience": "accessible"
+    },
+    "charges-sociales-employe-domicile-avs-lpp": {
+      "theme": "household-staff",
+      "audience": "accessible"
+    },
+    "renover-geneve-coordination-artisans-prestataires": {
+      "theme": "concierge-works",
+      "audience": "affluent"
+    },
+    "cheque-service-ou-mandat-declaration-employe": {
+      "theme": "household-staff",
+      "audience": "accessible"
+    },
+    "gerance-bien-locatif-geneve": {
+      "theme": "real-estate",
+      "audience": "affluent"
+    },
+    "permis-sejour-travail-geneve-guide": {
+      "theme": "immigration-permits",
+      "audience": "accessible"
+    },
+    "impot-source-geneve-retenue-rectification": {
+      "theme": "tax",
+      "audience": "accessible"
+    },
+    "scolarite-geneve-public-prive-international": {
+      "theme": "education-schools",
+      "audience": "accessible"
+    },
+    "adresse-correspondance-domicile-geneve": {
+      "theme": "domiciliation-mail",
+      "audience": "accessible"
+    },
+    "assurances-essentielles-menage-geneve": {
+      "theme": "insurance",
+      "audience": "accessible"
+    },
+    "echanger-permis-conduire-etranger-geneve": {
+      "theme": "relocation",
+      "audience": "accessible"
+    }
+  }
 }

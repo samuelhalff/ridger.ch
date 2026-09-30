@@ -6,7 +6,10 @@
  * data/article-backlog.json holds the editorial backlog (themes, seeds and
  * hypothesised keywords per locale). Published items are recognised by the
  * `backlogId` stored on each generated article, so the backlog never needs to
- * be edited by the bot.
+ * be edited by the bot. Hand-written articles that predate the pipeline carry
+ * no backlogId; `legacyArticles` in the backlog maps their slug to a theme and
+ * audience (and optionally the backlog item they cover), so theme rotation,
+ * audience alternation and coverage tracking also see them.
  *
  * Diversity policy (enforced here AND re-checked on the finished article):
  *   - never the same category twice in a row
@@ -30,6 +33,8 @@ const ALLOWED_CATEGORIES = [
   "vie-pratique",
   "travaux-intendance",
 ];
+
+const AUDIENCES = ["accessible", "affluent", "uhnw"];
 
 const THEME_WINDOW = 4;
 const CATEGORY_WINDOW = 8;
@@ -66,14 +71,68 @@ function validateBacklog(backlog) {
       }
     }
   }
+  const legacy = backlog?.legacyArticles || {};
+  for (const [slug, entry] of Object.entries(legacy)) {
+    if (!backlog.themes || !backlog.themes[entry?.theme]) problems.push(`legacy ${slug}: unknown theme ${entry?.theme}`);
+    if (!AUDIENCES.includes(entry?.audience)) problems.push(`legacy ${slug}: bad audience ${entry?.audience}`);
+    if (entry?.backlogId && !ids.has(entry.backlogId)) problems.push(`legacy ${slug}: unknown backlogId ${entry.backlogId}`);
+  }
   return problems;
 }
 
-function themeOfArticle(article, backlogById) {
-  if (article && article.backlogId && backlogById.has(article.backlogId)) {
-    return backlogById.get(article.backlogId).theme;
+/**
+ * Backlog view of an article: its backlog id (if any), theme and audience.
+ * Generated articles carry `backlogId`; hand-written ones are resolved through
+ * `backlog.legacyArticles[slug]`.
+ */
+function articleBacklogInfo(article, backlogById, legacyArticles = {}) {
+  if (!article) return null;
+  if (article.backlogId) {
+    const item = backlogById.get(article.backlogId);
+    return {
+      backlogId: article.backlogId,
+      theme: item ? item.theme : null,
+      audience: item ? item.audience : null,
+    };
+  }
+  const legacy = legacyArticles[article.slug];
+  if (legacy) {
+    const item = legacy.backlogId ? backlogById.get(legacy.backlogId) : null;
+    return {
+      backlogId: legacy.backlogId || null,
+      theme: legacy.theme || (item ? item.theme : null),
+      audience: legacy.audience || (item ? item.audience : null),
+    };
   }
   return null;
+}
+
+function themeOfArticle(article, backlogById, legacyArticles) {
+  return articleBacklogInfo(article, backlogById, legacyArticles)?.theme || null;
+}
+
+/**
+ * Coverage/drift check: every article must be traceable to the backlog
+ * (a backlogId, or a legacyArticles entry), and legacy entries must point to
+ * existing articles. Returns a list of problems (empty = OK). Pure.
+ */
+function checkBacklogCoverage(backlog, articles) {
+  const problems = [];
+  const legacy = backlog?.legacyArticles || {};
+  const slugs = new Set();
+  for (const article of Array.isArray(articles) ? articles : []) {
+    slugs.add(article.slug);
+    if (!article.backlogId && !legacy[article.slug]) {
+      problems.push(`article ${article.slug} has no backlogId and no legacyArticles entry`);
+    }
+    if (article.backlogId && legacy[article.slug]) {
+      problems.push(`article ${article.slug} has both a backlogId and a legacyArticles entry`);
+    }
+  }
+  for (const slug of Object.keys(legacy)) {
+    if (!slugs.has(slug)) problems.push(`legacyArticles entry ${slug} matches no article`);
+  }
+  return problems;
 }
 
 function hashString(s) {
@@ -98,15 +157,17 @@ function hashString(s) {
 function rankBacklogCandidates({ backlog, articles, today = new Date(), skipRotation = false }) {
   const items = Array.isArray(backlog?.items) ? backlog.items : [];
   const byId = new Map(items.map((i) => [i.id, i]));
+  const legacy = backlog?.legacyArticles || {};
   const sorted = sortArticlesNewestFirst(articles);
-  const published = new Set(sorted.map((a) => a.backlogId).filter(Boolean));
+  const info = (a) => articleBacklogInfo(a, byId, legacy);
+  const published = new Set(sorted.map((a) => info(a)?.backlogId).filter(Boolean));
   const lastCategory = sorted[0]?.category || null;
   const recentThemes = sorted
     .slice(0, THEME_WINDOW)
-    .map((a) => themeOfArticle(a, byId))
+    .map((a) => themeOfArticle(a, byId, legacy))
     .filter(Boolean);
   const recentCategories = sorted.slice(0, CATEGORY_WINDOW).map((a) => a.category);
-  const lastAudience = sorted[0]?.backlogId ? byId.get(sorted[0].backlogId)?.audience : null;
+  const lastAudience = sorted.length ? info(sorted[0])?.audience || null : null;
   const month = (today instanceof Date ? today : new Date(today)).getUTCMonth() + 1;
   const dateKey = (today instanceof Date ? today : new Date(today)).toISOString().slice(0, 10);
 
@@ -203,6 +264,9 @@ function resolveForcedTopic(backlog, { topic, keywords = [], category = "" }) {
 
 module.exports = {
   ALLOWED_CATEGORIES,
+  AUDIENCES,
+  articleBacklogInfo,
+  checkBacklogCoverage,
   CATEGORY_WINDOW,
   THEME_WINDOW,
   chooseWithDemand,
