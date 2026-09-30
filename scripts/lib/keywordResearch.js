@@ -3,13 +3,15 @@
 /**
  * Keyword & trend research for the Ridger article pipeline.
  *
- * Runs BEFORE any writing: for each locale we query Google autocomplete in the
- * markets that matter for Ridger (Swiss first, then the large same-language
- * market), then derive a primary keyword, 5–10 secondary keywords and the
+ * Runs BEFORE any writing: for each locale we query autocomplete (Google, else
+ * Bing, else DuckDuckGo — Google blocks datacenter IPs such as GitHub Actions
+ * runners) in the markets that matter for Ridger (Swiss first, then the large
+ * same-language market), then derive a primary keyword, 5–10 secondary keywords and the
  * question-style queries people actually type. Everything network-facing is
  * best-effort: a failed or blocked request yields no suggestions and the
- * derivation falls back to the backlog's hypothesised keywords — research can
- * degrade, it never fails the run.
+ * derivation falls back to the item's pre-researched keywords
+ * (researchedKeywords, from scripts/refresh-keywords.js), then to the backlog's
+ * hypothesised keywords — research can degrade, it never fails the run.
  *
  * Pure parts (parseAutocompleteResponse, deriveKeywords, …) are unit-tested in
  * scripts/article-pipeline.test.js.
@@ -86,6 +88,12 @@ const EXCLUDE_PATTERNS = [
   /\b(pdf|reddit|wikipedia|wiki|youtube|forum|login|connexion|anmelden|facebook|linkedin|instagram|tiktok)\b/,
   // tool intent (calculators/simulators) — not an article query
   /\b(rechner|calculator|calculateur|calculette|simulateur|simulator|simulador|calculadora)\b/,
+  // dictionary / word-game / printable intent — not an article query
+  /\b(mots? fl[eé]ch[eé]s|mots? crois[eé]s|synonymes?|synonyms?|crossword|kreuzwortr[aä]tsel|sin[oó]nimos?|sin[oô]nimos?|palavras cruzadas|crucigramas?|traduction|translation|[uü]bersetzung|traducci[oó]n|tradu[cç][aã]o|meaning|[aà] imprimer|printable|zum ausdrucken)\b/,
+  // off-market jurisdictions surfaced by Bing/DuckDuckGo market drift
+  /\b(canada|australia|new zealand|nederland|netherlands|vlaamse|vlaanderen|canarias|andaluc[ií]a|andaluza|cabildo|catalunya|galicia|junta de|brasil|brazil|india|nigeria|pakistan|philippines)\b/,
+  // template artefacts ("… what is $sp")
+  /\$/,
   // job seekers
   /\b(emploi|emplois|offre d'emploi|job|jobs|stellen|stellenangebote|empleo|empleos|vagas|salary jobs)\b/,
   // US-person structuring — out of scope for Ridger
@@ -180,6 +188,64 @@ function parseAutocompleteResponse(raw) {
     .map((s) => (typeof s === "string" ? normalizeKeyword(s) : ""))
     .filter(Boolean);
 }
+
+/** DuckDuckGo returns `[{ "phrase": "…" }, …]`. Anything else yields []. */
+function parseDuckDuckGoResponse(raw) {
+  let data = raw;
+  if (typeof raw === "string") {
+    try {
+      data = JSON.parse(raw);
+    } catch {
+      return [];
+    }
+  }
+  if (!Array.isArray(data)) return [];
+  return data
+    .map((x) => (x && typeof x.phrase === "string" ? normalizeKeyword(x.phrase) : ""))
+    .filter(Boolean);
+}
+
+/** Bing market code: fr-CH, en-GB, de-DE, es-ES, pt-PT, pt-BR … */
+function bingMarket({ hl, gl }) {
+  return hl.includes("-") ? hl : `${hl}-${String(gl).toUpperCase()}`;
+}
+
+/** DuckDuckGo region code: ch-fr, fr-fr, uk-en, us-en, ch-de, de-de, es-es, pt-pt, br-pt. */
+function ddgRegion({ hl, gl }) {
+  const country = gl === "gb" ? "uk" : gl;
+  return `${country}-${hl.split("-")[0]}`;
+}
+
+/**
+ * Autocomplete providers in fallback order. Google suggestqueries blocks most
+ * datacenter IPs (GitHub Actions runners get 403/429 or an HTML consent page),
+ * so Bing and DuckDuckGo are tried when Google yields nothing for a locale.
+ * `parse` returns null when the body is not the expected shape.
+ */
+const isJsonArray = (text) => {
+  try {
+    return Array.isArray(JSON.parse(text));
+  } catch {
+    return false;
+  }
+};
+const AUTOCOMPLETE_PROVIDERS = {
+  google: {
+    url: buildAutocompleteUrl,
+    parse: (text) => (isJsonArray(text) ? parseAutocompleteResponse(text) : null),
+  },
+  bing: {
+    url: (query, market) =>
+      `https://api.bing.com/osjson.aspx?${new URLSearchParams({ query, market: bingMarket(market) }).toString()}`,
+    parse: (text) => (isJsonArray(text) ? parseAutocompleteResponse(text) : null),
+  },
+  duckduckgo: {
+    url: (query, market) =>
+      `https://duckduckgo.com/ac/?${new URLSearchParams({ q: query, kl: ddgRegion(market) }).toString()}`,
+    parse: (text) => (isJsonArray(text) ? parseDuckDuckGoResponse(text) : null),
+  },
+};
+const PROVIDER_ORDER = ["google", "bing", "duckduckgo"];
 
 function buildResearchQueries(locale, { seed, targetKeywords = [] }) {
   const base = normalizeKeyword(seed);
@@ -446,52 +512,150 @@ async function fetchWithTimeout(url, { timeoutMs = 6000, headers = {} } = {}) {
 }
 
 const offline = () => process.env.OFFLINE_MODE === "1";
+function marketLabel(m) {
+  return m.hl.includes("-") ? m.hl : `${m.hl}-${m.gl.toUpperCase()}`;
+}
 
-async function fetchAutocomplete(query, market, { fetcher } = {}) {
-  if (!fetcher && offline()) return [];
+/**
+ * One autocomplete request. Never throws: `{ suggestions, error }` where
+ * error is e.g. "HTTP 429", "timeout", "unparseable body" (consent page).
+ */
+async function fetchAutocompleteDetailed(query, market, { fetcher, provider = "google" } = {}) {
+  if (!fetcher && offline()) return { suggestions: [], error: null };
   fetcher = fetcher || fetchWithTimeout;
+  const p = AUTOCOMPLETE_PROVIDERS[provider];
   try {
-    const res = await fetcher(buildAutocompleteUrl(query, market));
-    if (!res.ok) return [];
-    return parseAutocompleteResponse(res.text);
-  } catch {
-    return [];
+    const res = await fetcher(p.url(query, market));
+    if (!res.ok) return { suggestions: [], error: `HTTP ${res.status}` };
+    const suggestions = p.parse(res.text);
+    return suggestions ? { suggestions, error: null } : { suggestions: [], error: "unparseable body" };
+  } catch (err) {
+    const msg = err && err.name === "AbortError" ? "timeout" : String((err && err.message) || err);
+    return { suggestions: [], error: msg.slice(0, 60) };
   }
 }
 
+async function fetchAutocomplete(query, market, opts = {}) {
+  return (await fetchAutocompleteDetailed(query, market, opts)).suggestions;
+}
+
+/** "HTTP 429 ×10, timeout ×2 (fr-CH, fr-FR)" — one line per provider; "" when no errors. */
+function summarizeErrors(rows) {
+  const counts = new Map();
+  const markets = new Set();
+  for (const r of rows) {
+    if (!r.error) continue;
+    counts.set(r.error, (counts.get(r.error) || 0) + 1);
+    markets.add(marketLabel(r.market));
+  }
+  if (!counts.size) return "";
+  return `${[...counts].map(([e, n]) => `${e} ×${n}`).join(", ")} (${[...markets].join(", ")})`;
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const newResearchState = () => ({ blocked: new Set() });
+
+/**
+ * Query providers in fallback order until one returns suggestions. A provider
+ * whose every request failed is marked blocked in `state` and skipped for the
+ * remaining locales. Errors are logged once per provider and locale. Never throws.
+ */
+async function collectAutocomplete(locale, queries, { fetcher, delayMs = 0, log = () => {}, state = newResearchState(), providers = PROVIDER_ORDER } = {}) {
+  const markets = AUTOCOMPLETE_MARKETS[locale] || [];
+  const attempts = [];
+  for (const provider of providers) {
+    if (state.blocked.has(provider)) {
+      attempts.push({ provider, skipped: "blocked" });
+      continue;
+    }
+    const results = [];
+    for (const market of markets) {
+      for (const query of queries) {
+        const started = Date.now();
+        const { suggestions, error } = await fetchAutocompleteDetailed(query, market, { fetcher, provider });
+        results.push({ query, market, suggestions, error, provider });
+        // Spacing between request starts (polite rate limit), not an extra pause.
+        if (delayMs) await sleep(Math.max(0, delayMs - (Date.now() - started)));
+      }
+    }
+    const count = results.reduce((n, r) => n + r.suggestions.length, 0);
+    const failed = results.filter((r) => r.error).length;
+    if (failed) log(`   ${locale}: ${provider} ${failed}/${results.length} requests failed — ${summarizeErrors(results)}`);
+    attempts.push({ provider, requests: results.length, suggestions: count, failed });
+    if (results.length && failed === results.length) state.blocked.add(provider);
+    if (count > 0) return { provider, results, attempts };
+  }
+  return { provider: null, results: [], attempts };
+}
 
 /**
  * Live research for one locale. Never throws.
  */
-async function researchLocaleKeywords(locale, { seed, targetKeywords = [], avoidTerms = [], delayMs = offline() ? 0 : 120, fetcher } = {}) {
+async function researchLocaleKeywords(locale, { seed, targetKeywords = [], avoidTerms = [], delayMs = offline() ? 0 : 120, fetcher, log, state } = {}) {
   const markets = AUTOCOMPLETE_MARKETS[locale] || [];
   const queries = buildResearchQueries(locale, { seed, targetKeywords });
-  const results = [];
-  for (const market of markets) {
-    for (const query of queries) {
-      const suggestions = await fetchAutocomplete(query, market, { fetcher });
-      results.push({ query, market, suggestions });
-      if (delayMs) await sleep(delayMs);
-    }
-  }
+  const { provider, results, attempts } = await collectAutocomplete(locale, queries, { fetcher, delayMs, log, state });
   const derived = deriveKeywords(locale, { seed, targetKeywords, results, avoidTerms });
-  return {
-    ...derived,
-    markets: markets.map((m) => (m.hl.includes("-") ? m.hl : `${m.hl}-${m.gl.toUpperCase()}`)),
-  };
+  if (derived.stats.source === "autocomplete") derived.stats.source = `autocomplete:${provider}`;
+  derived.stats.provider = provider;
+  derived.stats.attempts = attempts;
+  return { ...derived, markets: markets.map(marketLabel) };
 }
 
-async function researchAllLocales(item, { avoidTermsByLocale = {}, fetcher, delayMs } = {}) {
+/**
+ * Stored (pre-researched) keywords for a locale, written by
+ * scripts/refresh-keywords.js: item.researchedKeywords.perLocale[locale].
+ */
+function storedLocaleKeywords(item, locale, { avoidTerms = [], minSecondary = 5 } = {}) {
+  const rk = item && item.researchedKeywords;
+  const s = rk && rk.perLocale && rk.perLocale[locale];
+  if (!s || !s.primary) return null;
+  // Re-apply the current filters (they may be stricter than when stored).
+  const list = (v) => (Array.isArray(v) ? v.map(normalizeKeyword).filter((k) => k && !isExcluded(k, avoidTerms)) : []);
+  const primary = normalizeKeyword(s.primary);
+  const secondary = list(s.secondary);
+  // Top up from the backlog targets so the cross-locale alignment floor holds.
+  for (const t of (item.targetKeywords && item.targetKeywords[locale]) || []) {
+    const k = normalizeKeyword(t);
+    if (secondary.length >= minSecondary) break;
+    if (k && k !== primary && !secondary.includes(k) && !isExcluded(k, avoidTerms)) secondary.push(k);
+  }
+  return { primary, secondary, questions: list(s.questions), date: rk.date || "?" };
+}
+
+/**
+ * Keyword research for every locale. Source per locale, in order:
+ *  1. live autocomplete (Google → Bing → DuckDuckGo) when it yields candidates;
+ *  2. item.researchedKeywords (pre-researched from a normal machine);
+ *  3. the backlog seeds/targetKeywords (deriveKeywords fallback).
+ * `stats.source` says which one was used. Never throws.
+ */
+async function researchAllLocales(item, { avoidTermsByLocale = {}, fetcher, delayMs, log, state = newResearchState(), useStored = true } = {}) {
   const out = {};
   for (const locale of LOCALES) {
-    out[locale] = await researchLocaleKeywords(locale, {
+    const live = await researchLocaleKeywords(locale, {
       seed: item?.seeds?.[locale] || item?.seeds?.fr || "",
       targetKeywords: item?.targetKeywords?.[locale] || [],
       avoidTerms: avoidTermsByLocale[locale] || [],
       fetcher,
       delayMs,
+      log,
+      state,
     });
+    const stored = useStored && !live.stats.uniqueCandidates
+      ? storedLocaleKeywords(item, locale, { avoidTerms: avoidTermsByLocale[locale] || [] })
+      : null;
+    if (stored && stored.secondary.length) {
+      out[locale] = {
+        primary: stored.primary,
+        secondary: stored.secondary,
+        questions: stored.questions,
+        stats: { ...live.stats, source: `stored ${stored.date}` },
+        markets: live.markets,
+      };
+    } else {
+      out[locale] = live;
+    }
   }
   return out;
 }
@@ -499,18 +663,28 @@ async function researchAllLocales(item, { avoidTermsByLocale = {}, fetcher, dela
 /**
  * Cheap demand probe used to choose between the top backlog candidates:
  * number of relevant autocomplete suggestions for the FR seed in fr-CH + fr-FR.
+ * Uses the first provider that answers (a blocked Google falls through to
+ * Bing, then DuckDuckGo) so candidates stay comparable within one run.
  */
-async function probeDemand(item, { fetcher, avoidTerms = [] } = {}) {
+async function probeDemand(item, { fetcher, avoidTerms = [], state = newResearchState(), log = () => {} } = {}) {
   const seed = item?.seeds?.fr;
   if (!seed) return 0;
-  let total = 0;
-  for (const market of AUTOCOMPLETE_MARKETS.fr) {
-    for (const q of [normalizeKeyword(seed), `${normalizeKeyword(seed)} `]) {
-      const list = await fetchAutocomplete(q, market, { fetcher });
-      total += list.filter((s) => !isExcluded(s, avoidTerms)).length * market.weight;
+  for (const provider of PROVIDER_ORDER) {
+    if (state.blocked.has(provider)) continue;
+    let total = 0;
+    const rows = [];
+    for (const market of AUTOCOMPLETE_MARKETS.fr) {
+      for (const q of [normalizeKeyword(seed), `${normalizeKeyword(seed)} `]) {
+        const r = await fetchAutocompleteDetailed(q, market, { fetcher, provider });
+        rows.push({ ...r, market });
+        total += r.suggestions.filter((s) => !isExcluded(s, avoidTerms)).length * market.weight;
+      }
     }
+    if (rows.some((r) => !r.error)) return total;
+    state.blocked.add(provider);
+    log(`   demand probe: ${provider} blocked — ${summarizeErrors(rows)}`);
   }
-  return total;
+  return 0;
 }
 
 function decodeXmlEntities(s) {
@@ -585,11 +759,21 @@ module.exports = {
   hasStaleYear,
   LOCALES,
   AUTOCOMPLETE_MARKETS,
+  AUTOCOMPLETE_PROVIDERS,
+  PROVIDER_ORDER,
   QUESTION_PREFIXES,
   QUESTION_SUFFIXES,
   looksTruncated,
   alignKeywordSets,
+  bingMarket,
   buildAutocompleteUrl,
+  collectAutocomplete,
+  ddgRegion,
+  fetchAutocompleteDetailed,
+  newResearchState,
+  parseDuckDuckGoResponse,
+  storedLocaleKeywords,
+  summarizeErrors,
   buildResearchQueries,
   containsKeywordLoosely,
   deriveKeywords,

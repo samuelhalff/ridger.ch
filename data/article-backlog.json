@@ -207,7 +207,102 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "assemblée de famille",
+            "secondary": [
+              "assemblée de famille patrimoine genève",
+              "réunion de famille",
+              "réunion de famille jean forest",
+              "assemblée de famille commentry",
+              "gouvernance familiale exemple",
+              "organisation familiale"
+            ],
+            "questions": [
+              "assemblée de famille comment ça marche",
+              "comment organiser une réunion de famille",
+              "pourquoi faire une réunion de famille",
+              "assemblée de famille c'est quoi en suisse"
+            ]
+          },
+          "en": {
+            "primary": "family assembly",
+            "secondary": [
+              "family assembly wealth management",
+              "family assembly zee telugu",
+              "family assembly church",
+              "family meeting agenda wealth management",
+              "family governance meeting agenda",
+              "family governance meetings",
+              "family unit examples"
+            ],
+            "questions": [
+              "what is family assembly",
+              "family assembly how does it work",
+              "family assembly why is it important",
+              "family assembly how to use"
+            ]
+          },
+          "de": {
+            "primary": "familienversammlung",
+            "secondary": [
+              "familienversammlung familienvermögen schweiz",
+              "familienverfassung umsetzung schweiz",
+              "family governance deutsch",
+              "family governance and firm performance agency stewardship and capabilities",
+              "familienversammlung wien",
+              "familienversammlung wiesendangen"
+            ],
+            "questions": [
+              "familienversammlung wann beginnt",
+              "familienversammlung warum so wichtig",
+              "familienversammlung was ist das",
+              "familienversammlung was ist zu beachten",
+              "familienversammlung wie lange"
+            ]
+          },
+          "es": {
+            "primary": "asamblea familiar",
+            "secondary": [
+              "asamblea familiar patrimonio cultural",
+              "asamblea familiar drama",
+              "asamblea familiar virgilio davila",
+              "protocolo familiar reunión familiar",
+              "gobierno familiar empresas",
+              "gobierno de familiares",
+              "mediación familiar gobierno vasco",
+              "asamblea familiares"
+            ],
+            "questions": [
+              "asamblea familiar cómo llegar",
+              "asamblea familiar cuándo es",
+              "asamblea familiar que es"
+            ]
+          },
+          "pt": {
+            "primary": "assembleia familiar",
+            "secondary": [
+              "assembleia familiar patrimônio cultural",
+              "assembleia da pastoral familiar",
+              "governança familiar corporativa",
+              "associação brasileira governança familiar",
+              "reunião de família patrimônio cultural",
+              "conselho familiar governança corporativa",
+              "governança corporativa empresas familiares",
+              "reunião de família patrimônios",
+              "assembleia familiar de minas gerais",
+              "assembleia familiare"
+            ],
+            "questions": [
+              "assembleia familiar como fazer",
+              "assembleia familiar o que é isso"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "pacte-actionnaires-familial-suisse-clauses",
@@ -363,7 +458,121 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "régime matrimonial suisse",
+            "secondary": [
+              "régime matrimonial suisse par défaut",
+              "régime légal suisse mariage",
+              "situation et régime matrimonial",
+              "qu'est ce que le régime matrimonial",
+              "3 régimes matrimoniaux suisse",
+              "régime matrimoniaux en france",
+              "régime légal en suisse",
+              "séparation de biens mariage",
+              "séparation de biens avec société d'acquêts",
+              "participation aux acquêts suisse"
+            ],
+            "questions": [
+              "quel est mon régime matrimonial",
+              "c'est quoi le régime matrimonial",
+              "qu'est-ce que le régime matrimonial",
+              "que veut dire régime matrimonial"
+            ]
+          },
+          "en": {
+            "primary": "change of matrimonial property regime",
+            "secondary": [
+              "property in switzerland for foreigners",
+              "property regimes of spouses",
+              "matrimonial property regimes in south africa",
+              "real estates on offer in switzerland",
+              "rental properties in switzerland",
+              "separation of property agreement nz",
+              "separation and property settlement process",
+              "separation of property agreement"
+            ],
+            "questions": [
+              "what is a matrimonial property regime",
+              "how to own property in switzerland",
+              "how to get married in switzerland"
+            ]
+          },
+          "de": {
+            "primary": "güterstand schweiz",
+            "secondary": [
+              "güterstand schweiz ohne ehevertrag",
+              "güterstand ehe schweiz",
+              "errungenschaftsbeteiligung schweiz",
+              "gütertrennung bei ehepaaren",
+              "errungenschaftsbeteiligung einfach erklärt",
+              "gütertrennung vor und nachteile",
+              "errungenschaftsbeteiligung türkei",
+              "gütertrennung ehevertrag",
+              "gütertrennung bei scheidung",
+              "errungenschaftsbeteiligung bedeutung"
+            ],
+            "questions": [
+              "was ist ein güterstand",
+              "was ist mit güterstand gemeint",
+              "was versteht man unter güterstand",
+              "was bedeutet gesetzlicher güterstand"
+            ]
+          },
+          "es": {
+            "primary": "régimen matrimonial suiza",
+            "secondary": [
+              "régimen económico matrimonial suiza",
+              "regimen matrimonial en suecia",
+              "requisitos para ir a suiza",
+              "recomendaciones para viajar a suiza",
+              "requisitos para viajar a suiza desde españa",
+              "separación de bienes españa",
+              "matrimonio con separación de bienes en españa",
+              "régime légal matrimonial suédois",
+              "separación de bienes y sociedad conyugal",
+              "régime matrimonial en suisse"
+            ],
+            "questions": [
+              "que necesito para ir a suiza",
+              "qué es separación de bienes",
+              "que se necesita para entrar a suiza",
+              "qué es régimen matrimonial",
+              "como se hace la separación de bienes",
+              "se puede cambiar el régimen matrimonial",
+              "cómo irse a vivir a suiza"
+            ]
+          },
+          "pt": {
+            "primary": "regime de bens suíça",
+            "secondary": [
+              "regime político da suíça",
+              "forma de governo da suíça",
+              "regimes de casamento na suíça",
+              "informações sobre a suíça",
+              "sistema de saúde da suíça",
+              "suíça é um país",
+              "quantos estados tem a suíça",
+              "suiça essências e produtos químicos",
+              "suíça faz parte da europa",
+              "separação de bens legal"
+            ],
+            "questions": [
+              "quem governa a suíça",
+              "o que precisa para ir para suiça",
+              "como morar na suíça legalmente",
+              "o que conhecer na suíça",
+              "como é morar na suíça",
+              "como ir pra suíça",
+              "como pedir a reforma da suica",
+              "o que comprar na suiça"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "retrocessions-bancaires-transparence-restitution",
@@ -471,7 +680,111 @@
         "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/",
         "https://www.finma.ch/fr/finma-public/etablissements-personnes-et-produits-autorises/",
         "https://www.finma.ch/fr/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "gérant de fortune indépendant",
+            "secondary": [
+              "gérant de fortune indépendant genève",
+              "gestionnaires de fortune indépendants",
+              "gestionnaire de fortune finma",
+              "finma liste gérant de fortune",
+              "gestionnaire de fortune collective finma",
+              "gestionnaire de fortune indépendant suisse",
+              "liste gérant de fortune indépendant suisse",
+              "gestion de fortune indépendant",
+              "organisme de surveillance des banques",
+              "organisme de surveillance pour intermédiaires financiers & trustees"
+            ],
+            "questions": [
+              "gérant de fortune indépendant comment déclarer",
+              "gérant de fortune indépendant pourquoi pas",
+              "gérant de fortune indépendant comment ca marche",
+              "gérant de fortune indépendant c'est quoi en suisse"
+            ]
+          },
+          "en": {
+            "primary": "independent asset manager switzerland",
+            "secondary": [
+              "independent asset managers switzerland",
+              "independent asset manager switzerland salary",
+              "top 50 independent asset managers switzerland",
+              "independent asset manager finma guidance",
+              "finma licensed asset managers",
+              "finma register checker",
+              "finma registration number",
+              "independent asset manager finmac",
+              "independent asset manager switzerland private equity"
+            ],
+            "questions": [
+              "independent asset manager switzerland what is it",
+              "what is a register check",
+              "do asset managers need a license",
+              "independent asset manager switzerland how does it work",
+              "independent asset manager switzerland how many",
+              "independent asset manager switzerland when did it start",
+              "independent asset manager switzerland why is it important",
+              "can you buy check registers at walmart"
+            ]
+          },
+          "de": {
+            "primary": "unabhängiger vermögensverwalter",
+            "secondary": [
+              "unabhängiger vermögensverwalter zürich",
+              "verein unabhängiger vermögensverwalter liechtenstein",
+              "verband unabhängiger vermögensverwalter deutschland ev",
+              "finma bewilligung vermögensverwalter schweiz",
+              "vermögensverwalter finma bewilligungszeit",
+              "aufsichtsorganisation finma",
+              "aufsichtsorganisationen vermögensverwalter",
+              "aufsichtsorganisation aoos",
+              "aufsichtsorganisation verordnung",
+              "aufsichtsorganisation englisch"
+            ],
+            "questions": [
+              "unabhängiger vermögensverwalter wann schweiz",
+              "unabhängiger vermögensverwalter was ist das",
+              "unabhängiger vermögensverwalter warum nicht",
+              "unabhängiger vermögensverwalter wie geht das"
+            ]
+          },
+          "es": {
+            "primary": "gestor patrimonial independiente suiza",
+            "secondary": [
+              "gestor patrimonial independiente finmatica",
+              "registro finma intermediari",
+              "finma register",
+              "finma registro dei consulenti",
+              "registro intermediari assicurativi finma"
+            ],
+            "questions": [
+              "gestor patrimonial independiente suiza cómo funciona",
+              "gestor patrimonial independiente suiza cuándo es"
+            ]
+          },
+          "pt": {
+            "primary": "gestor de fortunas independente suíça",
+            "secondary": [
+              "gestor de fortunas independente finma portugal",
+              "gestor de fortunas independente finmart",
+              "gestor de fortunas independente suíça porquerolles",
+              "licença finmaster",
+              "registo finmag",
+              "licença finmasket",
+              "registo finmat",
+              "registo finmar",
+              "licença finmar"
+            ],
+            "questions": [
+              "gestor de fortunas independente suíça como funciona",
+              "gestor de fortunas independente suíça quando é",
+              "gestor de fortunas independente suíça quando foi criada"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "choisir-gerant-fortune-independant-criteres-lefin",
@@ -738,7 +1051,109 @@
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/",
         "https://justice.ge.ch/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "testament olographe",
+            "secondary": [
+              "testament olographe suisse exemple",
+              "testament manuscrit suisse",
+              "testament olographe définition",
+              "testament manuscrit valable en suisse",
+              "testament manuscrit valable combien de temps",
+              "faut il enregistrer un testament olographe",
+              "rédiger un testament suisse romande",
+              "testament olographe code civil"
+            ],
+            "questions": [
+              "comment rédiger un testament olographe en suisse",
+              "testament olographe c'est quoi en suisse",
+              "comment un testament olographe est il valable",
+              "pourquoi faire un testament olographe",
+              "testament olographe comment ca marche",
+              "testament olographe comment remplir",
+              "comment faire un testament olographe au québec",
+              "comment annuler un testament olographe déposé chez un notaire"
+            ]
+          },
+          "en": {
+            "primary": "handwritten will switzerland",
+            "secondary": [
+              "holographic will switzerland",
+              "handwritten will switzerland template",
+              "swiss will template",
+              "swiss will template geneva",
+              "swiss will requirements in english"
+            ],
+            "questions": [
+              "does a handwritten will need to be witnessed",
+              "can a handwritten will be notarized",
+              "handwritten will switzerland how long",
+              "handwritten will switzerland what is it",
+              "how to make a will in switzerland",
+              "how to write a will template",
+              "handwritten will switzerland how many days"
+            ]
+          },
+          "de": {
+            "primary": "handschriftliches testament",
+            "secondary": [
+              "handschriftliches testament schweiz muster",
+              "handschriftliches testament vorlage",
+              "handschriftliches testament vorlage deutschland",
+              "testament schreiben schweiz vorlage",
+              "testament schreiben ohne notar schweiz",
+              "testament gültigkeit schweiz",
+              "testament gültigkeit",
+              "testament gültig bei demenz",
+              "testament gültigkeit ohne notar",
+              "testament gültigkeitsdauer"
+            ],
+            "questions": [
+              "handschriftliches testament wann gültig",
+              "handschriftliches testament wie lange gültig",
+              "handschriftliches testament warum so wichtig",
+              "handschriftliches testament was ist zu beachten",
+              "was bedeutet handschriftliches testament",
+              "muss ein handschriftliches testament beglaubigt werden",
+              "was muss ein handschriftliches testament enthalten",
+              "wie muss ein handschriftliches testament aussehen"
+            ]
+          },
+          "es": {
+            "primary": "testamento ológrafo suiza",
+            "secondary": [
+              "testamento ológrafo suiza requisitos",
+              "hacer testamento en suiza online",
+              "testamento manuscrito válido en español",
+              "testamento manuscrito válido",
+              "testamento ológrafo suiza cómo obtenerlo"
+            ],
+            "questions": [
+              "testamento ológrafo suiza cómo obtenerlo",
+              "testamento ológrafo suiza cuándo caduca",
+              "testamento ológrafo suiza por qué es importante"
+            ]
+          },
+          "pt": {
+            "primary": "testamento hológrafo suíça",
+            "secondary": [
+              "fazer testamento na suíça online",
+              "testamento manuscrito válido em portugal",
+              "testamento hológrafo suíça portugal",
+              "testamento manuscrito válido",
+              "testamento hológrafo suíça como fazer"
+            ],
+            "questions": [
+              "testamento hológrafo suíça como fazer",
+              "testamento hológrafo suíça o que é preciso",
+              "testamento hológrafo suíça quando foi criado"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "pacte-successoral-suisse-notaire",
@@ -790,7 +1205,117 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "pacte successoral",
+            "secondary": [
+              "pacte successoral suisse exemple",
+              "pacte successoral suisse",
+              "renonciation à succession formulaire",
+              "pacte sur succession future",
+              "pacte sur succession future autorisé",
+              "pacte sur succession future code civil",
+              "renonciation à succession enfant mineur",
+              "qu'est ce que l'actif successoral",
+              "renonciation à succession code civil",
+              "renonciation à succession tribunal compétent"
+            ],
+            "questions": [
+              "c'est quoi l'actif successoral"
+            ]
+          },
+          "en": {
+            "primary": "inheritance tax in switzerland",
+            "secondary": [
+              "swiss bank account for inheritance",
+              "switzerland inheritance tax referendum",
+              "swiss inheritance lawyers in zurich",
+              "inheritance law in south africa",
+              "waiver of inheritance form",
+              "waiver of beneficiary rights to inheritance",
+              "inheritance tax waiver form",
+              "inheritance tax waiver requirements by state",
+              "waive rights to inheritance"
+            ],
+            "questions": [
+              "does switzerland have inheritance tax",
+              "what is an inheritance tax waiver"
+            ]
+          },
+          "de": {
+            "primary": "erbvertrag",
+            "secondary": [
+              "erbvertrag schweiz vorlage",
+              "erbvertrag oder testament",
+              "erbvertrag schweiz",
+              "erbvertrag muster",
+              "erbvertrag bgb",
+              "erbvertrag aufheben",
+              "erbvertrag definition",
+              "erbvertrag scheidung",
+              "erbvertrag vs testament",
+              "erbvertrag pflichtteil"
+            ],
+            "questions": [
+              "was ist ein erbvertrag",
+              "wie kann ein erbvertrag aufgehoben werden",
+              "was kostet ein erbvertrag beim notar",
+              "was ist ein erbvertrag schweiz",
+              "muss ein erbvertrag eröffnet werden",
+              "wann endet ein erbvertrag",
+              "was ist ein erbvertrag einfach erklärt",
+              "was wird in einem erbvertrag geregelt"
+            ]
+          },
+          "es": {
+            "primary": "pacto sucesorio en bizkaia",
+            "secondary": [
+              "pacto sucesorio país vasco",
+              "pacto sucesorio con efecto de presente",
+              "pacto sucesorio atribución particular",
+              "pacto sucesorio en cataluña fiscalidad",
+              "la renuncia a la herencia",
+              "efectos de la renuncia a la herencia",
+              "renunciar a la herencia",
+              "renunciar a una herencia gratuitamente",
+              "renunciar herencia en vida"
+            ],
+            "questions": [
+              "pacto sucesorio que es",
+              "que pasa si renuncias a la herencia",
+              "cómo renunciar a una herencia en españa"
+            ]
+          },
+          "pt": {
+            "primary": "pacto sucessório suíça",
+            "secondary": [
+              "morte assistida na suíça",
+              "pacto de gestão do sus",
+              "pacto pela saúde sus",
+              "informações sobre a suíça",
+              "a história da suíça",
+              "renúncia à herança e seus efeitos jurídicos",
+              "estações do ano na suíça",
+              "renúncia abdicativa de herança",
+              "sistema de saúde da suíça",
+              "oq fazer na suíça"
+            ],
+            "questions": [
+              "o que é pacto sucessório",
+              "o que conhecer na suíça",
+              "o que aconteceu na suíça",
+              "quem nasce na suíça",
+              "quando é verão na suíça",
+              "contrato sucesorio que es",
+              "o que precisa para ir para suiça",
+              "renuncia a herança como fazer"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "mandat-pour-cause-inaptitude-directives-anticipees",
@@ -843,7 +1368,120 @@
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/",
         "https://justice.ge.ch/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "mandat pour cause d'inaptitude",
+            "secondary": [
+              "mandat pour cause d'inaptitude vaud",
+              "mandat pour cause d'inaptitude pro senectute",
+              "mandat en cas d'inaptitude",
+              "mandat pour cause d'inaptitude croix rouge",
+              "mandat en cas d'inaptitude modèle",
+              "mandat pour cause d'inaptitude code civil",
+              "personne inapte sans mandat d'inaptitude",
+              "directives anticipées fmh",
+              "directives anticipées fmh version courte",
+              "directives anticipées document officiel"
+            ],
+            "questions": [
+              "comment se procurer un mandat d'inaptitude"
+            ]
+          },
+          "en": {
+            "primary": "incapacity mandate",
+            "secondary": [
+              "power of attorney switzerland",
+              "power of attorney in het nederlands",
+              "lasting power of attorney santander",
+              "power of attorney in case of incapacity",
+              "enduring power of attorney act nl",
+              "nz enduring power of attorney",
+              "advance care directive uk",
+              "mandate of incapacity quebec"
+            ],
+            "questions": [
+              "what is advance care directive",
+              "was ist power of attorney"
+            ]
+          },
+          "de": {
+            "primary": "vorsorgeauftrag",
+            "secondary": [
+              "vorsorgeauftrag vorlage schweiz",
+              "vorsorgeauftrag vorlage",
+              "vorsorgeauftrag schweiz",
+              "vorsorgeauftrag kesb",
+              "vorsorgeauftrag pro senectute vorlage",
+              "vorsorgeauftrag schweiz formular ubs",
+              "vorsorgeauftrag formular zum ausfüllen",
+              "vorsorgeauftrag widerrufen",
+              "patientenverfügung vorlage",
+              "vorsorgeauftrag akb"
+            ],
+            "questions": [
+              "was ist ein vorsorgeauftrag schweiz",
+              "vorsorgeauftrag validieren wie geht das",
+              "warum ein vorsorgeauftrag",
+              "was ist ein vorsorgeauftrag",
+              "wann ist ein vorsorgeauftrag gültig",
+              "muss ein vorsorgeauftrag handschriftlich sein"
+            ]
+          },
+          "es": {
+            "primary": "mandato por incapacidad",
+            "secondary": [
+              "requisitos para pedir la incapacidad",
+              "puedo pedir la incapacidad permanente",
+              "requisitos para una incapacidad permanente",
+              "requisitos para ir a suiza",
+              "seguridad social en suiza",
+              "requisitos para entrar en suiza desde españa",
+              "suiza es un país intracomunitario",
+              "pasos para solicitar incapacidad",
+              "sueldo mínimo de suiza",
+              "suiza no es intracomunitaria"
+            ],
+            "questions": [
+              "cómo pedir la incapacidad",
+              "donde se solicita la incapacidad",
+              "que debe llevar una incapacidad",
+              "cómo va mi incapacidad permanente",
+              "cómo se autoriza una incapacidad",
+              "que se necesita para una incapacidad",
+              "que se necesita para entrar a suiza",
+              "como es la sanidad en suiza"
+            ]
+          },
+          "pt": {
+            "primary": "mandato por incapacidade",
+            "secondary": [
+              "requisitos benefício por incapacidade",
+              "isenção de imi por incapacidade",
+              "atestado de incapacidade mental",
+              "interdição por incapacidade civil",
+              "principal causa de incapacidade no mundo",
+              "sobre os benefícios por incapacidade",
+              "benefício por incapacidade quem tem direito",
+              "morte assistida na suíça",
+              "que direitos tenho com 60% de incapacidade",
+              "pedir novo benefício por incapacidade"
+            ],
+            "questions": [
+              "o que é incapacidade permanente",
+              "como podemos definir incapacidade",
+              "o que é incapacidade",
+              "o que é incapacidade civil",
+              "o que significa incapacidade",
+              "como prorrogar benefício por incapacidade",
+              "o que é incapacidade civil não suprida",
+              "como pedir atestado de incapacidade"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "certificat-heritier-geneve-demarches",
@@ -896,7 +1534,106 @@
         "https://justice.ge.ch/",
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ge.ch/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "certificat d'héritier",
+            "secondary": [
+              "certificat d héritier genève obligatoire",
+              "certificat d héritier genève",
+              "certificat d'héritier alsace moselle",
+              "succession genève démarches simplifiées",
+              "succession genève procédure"
+            ],
+            "questions": [
+              "comment obtenir un certificat d héritier genève",
+              "certificat d'héritier quand on est marié",
+              "certificat d'héritier c'est quoi en suisse",
+              "certificat d heredité comment l obtenir",
+              "certificat d hérédité pourquoi",
+              "certificat d'hérédité c'est quoi",
+              "certificat d'héritier comment faire"
+            ]
+          },
+          "en": {
+            "primary": "certificate of inheritance switzerland",
+            "secondary": [
+              "swiss inheritance laws",
+              "certificate of inheritance switzerland form",
+              "estate settlement geneva switzerland",
+              "certificate of inheritance switzerland tax treaty",
+              "swiss inheritance certificate example"
+            ],
+            "questions": [
+              "what is a certificate of inheritance",
+              "certificate of inheritance switzerland why is it important",
+              "what is a certificate of inheritance in switzerland",
+              "certificate of inheritance switzerland how long",
+              "how do i get a certificate of inheritance",
+              "certificate of inheritance switzerland when to apply",
+              "certificate of inheritance switzerland when does it start",
+              "certificate of inheritance switzerland how it works"
+            ]
+          },
+          "de": {
+            "primary": "erbbescheinigung",
+            "secondary": [
+              "erbbescheinigung schweiz formular",
+              "erbbescheinigung beantragen",
+              "erbbescheinigung schweiz",
+              "erbbescheinigung aargau",
+              "erbbescheinigung bestellen",
+              "erbenbescheinigung beantragen schweiz",
+              "erbbescheinigung zürich",
+              "erbbescheinigung bestellen aargau",
+              "erbbescheinigung st. gallen",
+              "erbbescheinigung wiesbaden"
+            ],
+            "questions": [
+              "erbbescheinigung was ist das",
+              "erbbescheinigung wie lange",
+              "was ist eine erbbescheinigung schweiz",
+              "wie sieht eine erbbescheinigung in der schweiz aus",
+              "was kostet eine erbbescheinigung im kanton aargau",
+              "erbbescheinigung wie lange gültig",
+              "erbbescheinigung wann ausfüllen"
+            ]
+          },
+          "es": {
+            "primary": "certificado de herederos suiza",
+            "secondary": [
+              "certificado de herederos suiza online",
+              "cuenta bancaria fallecido suiza que hago",
+              "herencia en suiza trámites en línea",
+              "herencia en suiza trámites",
+              "declaración de herederos"
+            ],
+            "questions": [
+              "certificado de herederos suiza cómo obtenerlo",
+              "certificado de herederos suiza cuándo se paga"
+            ]
+          },
+          "pt": {
+            "primary": "certificado de herdeiros suíça",
+            "secondary": [
+              "conta bancária falecido suíça portugal",
+              "herança na suíça procedimentos concursais",
+              "certificado de herdeiros suíça portugal",
+              "herança na suíça procedimentos",
+              "habilitação de herdeiros"
+            ],
+            "questions": [
+              "certificado de herdeiros suíça como fazer",
+              "certificado de herdeiros suíça o que é necessário",
+              "certificado de herdeiros suíça quando recebo",
+              "certificado de herdeiros suíça porque demora tanto",
+              "certificado de herdeiros suíça quando entra em vigor"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "usufruit-nue-propriete-transmission-immobilier",
@@ -1001,7 +1738,110 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/fr",
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "succession internationale",
+            "secondary": [
+              "succession internationale loi applicable",
+              "succession internationale fiscalité",
+              "droit international privé succession",
+              "nouveau droit des successions suisse",
+              "frais de succession en suisse",
+              "qu'est ce qu'une succession",
+              "droit de succession parent enfant suisse",
+              "impôt sur la succession en france",
+              "succession en droit français",
+              "impôt sur les successions suisse"
+            ],
+            "questions": [
+              "comment répudier une succession en suisse",
+              "que veut dire succession",
+              "c'est quoi la succession",
+              "quels sont les droits de succession"
+            ]
+          },
+          "en": {
+            "primary": "international succession switzerland",
+            "secondary": [
+              "eu succession regulation switzerland",
+              "succession under international law",
+              "droits de succession en suisse",
+              "convention france suisse succession",
+              "sweden line of succession",
+              "eu succession regulation brussels iv",
+              "state succession in public international law",
+              "legals on offer in switzerland",
+              "succession planning in french"
+            ],
+            "questions": [
+              "what is state succession in international law"
+            ]
+          },
+          "de": {
+            "primary": "internationaler erbfall",
+            "secondary": [
+              "rechtswahl im testament",
+              "schenkungen vor dem erbfall",
+              "und oder konto im erbfall",
+              "erbe stirbt nach erbfall",
+              "kostenlose rechtsberatung im erbfall"
+            ],
+            "questions": [
+              "was ist der erbfall",
+              "erbfall was ist zu tun",
+              "wann tritt der erbfall ein"
+            ]
+          },
+          "es": {
+            "primary": "sucesión de estados derecho internacional",
+            "secondary": [
+              "suiza es un país intracomunitario",
+              "suiza es un país",
+              "requisitos para ir a suiza",
+              "lo imprescindible de suiza",
+              "requisitos para entrar en suiza desde españa",
+              "suecia y suiza es lo mismo",
+              "suprema a la suiza que lleva",
+              "suiza está en la unión europea",
+              "ley aplicable sucesiones",
+              "para viajar a suiza se necesita pasaporte"
+            ],
+            "questions": [
+              "cuando ir a suiza",
+              "que se necesita para entrar a suiza",
+              "como se llaman los de suiza",
+              "dónde se sitúa suiza"
+            ]
+          },
+          "pt": {
+            "primary": "sucessão internacional suíça",
+            "secondary": [
+              "tudo sobre a suíça",
+              "oq fazer na suíça",
+              "suíça é um país",
+              "e preciso passaporte para suiça",
+              "suíça é um país desenvolvido",
+              "suíça está na união europeia",
+              "viajar para a suíça",
+              "suíça é união europeia",
+              "viajar para a suíça é preciso passaporte"
+            ],
+            "questions": [
+              "o que precisa para ir para suiça",
+              "quem governa a suíça",
+              "o que conhecer na suíça",
+              "o que aconteceu na suíça",
+              "o que comprar na suiça",
+              "como ir pra suíça",
+              "como entrar na suíça",
+              "o que se fala na suica"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "acheter-bien-immobilier-suisse-etranger-lfaie",
@@ -1054,7 +1894,113 @@
         "https://www.fedlex.admin.ch/eli/cc/1984/1149_1149_1149/fr",
         "https://www.ge.ch/",
         "https://www.vd.ch/territoire-et-construction"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "lex koller",
+            "secondary": [
+              "achat immobilier suisse etranger",
+              "acheter maison en suisse etranger",
+              "lex koller suisse",
+              "lfaie suisse",
+              "lfaie genève",
+              "lfaie admin",
+              "lfaie directives",
+              "lfaie valais",
+              "lfaie révision",
+              "lfaie vaud"
+            ],
+            "questions": [
+              "lex koller comment ca marche",
+              "lex koller c'est quoi en français"
+            ]
+          },
+          "en": {
+            "primary": "buy property in switzerland as a foreigner",
+            "secondary": [
+              "buying property in switzerland as a foreigner",
+              "buy property in switzerland as a foreigner in switzerland",
+              "buying property switzerland foreigners",
+              "buy house switzerland foreigner",
+              "buy property switzerland foreigner taxes",
+              "lex koller law switzerland",
+              "lex koller law",
+              "buying real estate in switzerland for foreigners",
+              "lex koller property market reform",
+              "buy property switzerland foreigner tax resident"
+            ],
+            "questions": [
+              "can i buy property in switzerland as a foreigner",
+              "can a foreigner own property in switzerland",
+              "can foreigners buy land in switzerland",
+              "can you buy land in switzerland as a foreigner",
+              "can foreigners buy real estate in switzerland",
+              "can foreigners buy property in lugano switzerland",
+              "can foreign nationals buy property in switzerland"
+            ]
+          },
+          "de": {
+            "primary": "lex koller",
+            "secondary": [
+              "lex koller schweiz",
+              "immobilien kaufen schweiz ausländer schweiz",
+              "immobilien kaufen schweiz ausländeranteil",
+              "immobilienkauf ausländer schweiz steuern",
+              "lex koller einfach erklärt",
+              "lex koller erklärung zürich"
+            ],
+            "questions": [
+              "lex koller warum so teuer",
+              "lex koller was ist das",
+              "lex koller wie hoch",
+              "warum heisst es lex koller"
+            ]
+          },
+          "es": {
+            "primary": "comprar vivienda en suiza extranjero",
+            "secondary": [
+              "comprar casa en suiza siendo extranjero",
+              "comprar vivienda en suiza extranjero renta",
+              "comprar vivienda en suiza extranjeros",
+              "un extranjero puede comprar una propiedad en suiza",
+              "comprar propiedad en suiza en españa",
+              "lex koller erklärung",
+              "lex koller property market reform",
+              "lex koller law switzerland",
+              "lex koller gesetz schweiz"
+            ],
+            "questions": [
+              "comprar vivienda en suiza extranjero cómo tributa",
+              "comprar vivienda en suiza extranjero cuándo se paga",
+              "comprar vivienda en suiza extranjero por qué es rentable",
+              "comprar vivienda en suiza extranjero qué es renta fija",
+              "comprar vivienda en suiza extranjero cuándo hay que pagar"
+            ]
+          },
+          "pt": {
+            "primary": "comprar imóvel na suíça estrangeiro",
+            "secondary": [
+              "comprar imóvel na suíça estrangeiros",
+              "comprar casa na suíça estrangeiro em portugal",
+              "lex koller law",
+              "lex koller law switzerland",
+              "comprar apartamento na suíça para alugar",
+              "comprar apartamento suíça",
+              "lex koller property market reform",
+              "lex koller erklärung zürich"
+            ],
+            "questions": [
+              "comprar imóvel na suíça estrangeiro como fazer",
+              "comprar imóvel na suíça estrangeiro quando começa",
+              "comprar imóvel na suíça estrangeiro porque não",
+              "comprar imóvel na suíça estrangeiro quando posso viajar",
+              "comprar imóvel na suíça estrangeiro quando não tem"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "valeur-locative-suppression-proprietaires-calendrier",
@@ -1107,7 +2053,134 @@
         "https://www.estv.admin.ch/",
         "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr",
         "https://www.ge.ch/organisation/administration-fiscale-cantonale"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "valeur locative",
+            "secondary": [
+              "valeur locative genève suppression",
+              "valeur locative suppression entrée en vigueur",
+              "valeur locative genève",
+              "valeur locative cadastrale par ville",
+              "valeur locative taxe foncière",
+              "valeur locative brute figurant sur l'avis de taxe foncière",
+              "estimation immobilière genève",
+              "suppression valeur locative texte de loi",
+              "valeur locative valais calcul"
+            ],
+            "questions": [
+              "valeur locative suppression quand",
+              "comment connaitre valeur locative cadastrale",
+              "pourquoi la valeur locative cadastrale augmente",
+              "quel est la valeur locative de mon logement",
+              "valeur locative comment calculer",
+              "quel est la valeur locative cadastrale",
+              "pourquoi supprimer la valeur locative",
+              "valeur locative comment ca marche"
+            ]
+          },
+          "en": {
+            "primary": "imputed rental value switzerland",
+            "secondary": [
+              "imputed rental value switzerland vote",
+              "imputed rental value",
+              "switzerland mortgage interest tax deduction",
+              "imputed rental value abolition",
+              "imputed rent example",
+              "imputed rent abolition in switzerland",
+              "imputed rental value switzerland tax implications",
+              "imputed rental value switzerland vs usa"
+            ],
+            "questions": [
+              "imputed rental value switzerland how to calculate",
+              "what is imputed rental value in switzerland",
+              "imputed rental value switzerland when selling property",
+              "imputed rental value switzerland why is it important",
+              "imputed rental value switzerland what is it used for",
+              "imputed rental value switzerland why not",
+              "imputed rental value switzerland how does it work",
+              "imputed rental value switzerland why does it matter"
+            ]
+          },
+          "de": {
+            "primary": "eigenmietwert",
+            "secondary": [
+              "eigenmietwert abschaffung schweiz",
+              "eigenmietwert abschaffung kanton bern",
+              "eigenmietwert abschaffung was bedeutet das",
+              "eigenmietwert abschaffung",
+              "eigenmietwert berechnen",
+              "eigenmietwert schweiz",
+              "eigenmietwert aargau",
+              "eigenmietwert abstimmung",
+              "eigenmietwert steuern",
+              "eigenmietwert abstimmung inkrafttreten"
+            ],
+            "questions": [
+              "eigenmietwert abschaffung ab wann",
+              "eigenmietwert wann abgeschafft",
+              "eigenmietwert was ist das",
+              "eigenmietwert wie lange noch",
+              "eigenmietwert wie hoch",
+              "warum kein eigenmietwert",
+              "abschaffung eigenmietwert was ist das",
+              "abschaffung eigenmietwert welche parteien sind dafür"
+            ]
+          },
+          "es": {
+            "primary": "valor locativo suiza",
+            "secondary": [
+              "suiza que zona es",
+              "lo imprescindible de suiza",
+              "tipo de interés suiza",
+              "suiza número de habitantes",
+              "situación geográfica de suiza",
+              "cuanto es un alquiler en suiza",
+              "comprar en suiza es intracomunitario",
+              "requisitos para ir a suiza",
+              "los intereses de la hipoteca son deducibles",
+              "importe máximo deducción hipoteca"
+            ],
+            "questions": [
+              "dónde se sitúa suiza",
+              "que comprar en suiza",
+              "que se ocupa para ir a suiza",
+              "porque suiza es ch",
+              "que se necesita para entrar a suiza",
+              "capital de suiza cual es",
+              "como se vive en suiza",
+              "dónde está suiza en el mapa"
+            ]
+          },
+          "pt": {
+            "primary": "valor locativo suíça",
+            "secondary": [
+              "quantos habitantes tem a suíça",
+              "lugares para conhecer na suíça",
+              "informações sobre a suíça",
+              "suiça fica na onde",
+              "número de habitantes da suíça",
+              "quero morar na suiça",
+              "taxa de juros hipoteca",
+              "localização geográfica da suíça",
+              "suíça qualidade de vida",
+              "puedo deducirme la hipoteca"
+            ],
+            "questions": [
+              "qual é a área da suíça",
+              "onde fica a suíça",
+              "o que comprar na suiça",
+              "como investir na suíça",
+              "como ir pra suíça",
+              "como morar na suíça legalmente",
+              "o que conhecer na suíça",
+              "hipoteca judicial o que é"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "ppe-assemblee-coproprietaires-fonds-renovation",
@@ -1370,7 +2443,128 @@
         "https://www.ge.ch/organisation/office-cantonal-emploi",
         "https://www.sem.admin.ch/sem/fr/home/themen/arbeit.html",
         "https://www.ge.ch/organisation/office-cantonal-population-migrations"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "contrat au pair",
+            "secondary": [
+              "au pair en suisse",
+              "fille au pair genève",
+              "au pair en france",
+              "trouver une au pair",
+              "au pair en allemagne",
+              "au pair à l'étranger",
+              "au pair französische schweiz",
+              "trouver une famille au pair",
+              "au pair in der schweiz",
+              "aller de pair ou aller de paire"
+            ],
+            "questions": [
+              "comment devenir au pair",
+              "au pair was ist das",
+              "comment fonctionne le pair à pair",
+              "c'est quoi un pair de france",
+              "was ist ein au pair jahr"
+            ]
+          },
+          "en": {
+            "primary": "au pair switzerland",
+            "secondary": [
+              "au pair in europe",
+              "au pair in der schweiz",
+              "au pair in germany",
+              "au pair in austria",
+              "au pair in france",
+              "au pair in europa",
+              "au pair finden schweiz",
+              "au pair in deutschland",
+              "au pair rules uk"
+            ],
+            "questions": [
+              "how to get an au pair",
+              "what does an au pair do",
+              "how does au pair work",
+              "was ist au pair",
+              "what's a au pair",
+              "do you pay an au pair"
+            ]
+          },
+          "de": {
+            "primary": "au pair schweiz",
+            "secondary": [
+              "au pair schweiz französisch",
+              "au pair im ausland",
+              "au pair in deutschland",
+              "au pair in deutschland finden",
+              "au pair aufnehmen voraussetzungen",
+              "au pair aus europa finden",
+              "au pair vertrag vorlage",
+              "au pair jahr im ausland",
+              "au pair vertrag agentur für arbeit",
+              "au pair in österreich"
+            ],
+            "questions": [
+              "was macht ein au pair",
+              "wie finde ich ein au pair",
+              "was ist ein au pair jahr",
+              "au pair wie lange",
+              "wie wird man au pair"
+            ]
+          },
+          "es": {
+            "primary": "au pair suiza",
+            "secondary": [
+              "au pair en francia",
+              "au pair en italia",
+              "hay paro en suiza",
+              "suiza que se habla",
+              "au pair en españa",
+              "au pair en estados unidos",
+              "au pair en español",
+              "au pair en verano",
+              "en suiza se habla francés",
+              "trabajo de au pair"
+            ],
+            "questions": [
+              "que hablan en suiza",
+              "porque suiza es ch",
+              "qué es una au pair",
+              "que se habla en suiza",
+              "que se necesita para entrar a suiza",
+              "que hay en suiza",
+              "porque quiero ser au pair",
+              "como se llaman los de suiza"
+            ]
+          },
+          "pt": {
+            "primary": "au pair na suíça",
+            "secondary": [
+              "au pair em portugal",
+              "au pair en suiza",
+              "au pair na espanha",
+              "au pair na itália",
+              "au pair na inglaterra",
+              "au pair na europa",
+              "faido que parte da suiça",
+              "intercâmbio de au pair",
+              "significado de au pair",
+              "de paris para suica"
+            ],
+            "questions": [
+              "o que é uma au pair",
+              "au pair como funciona",
+              "que es una au pair",
+              "que es un au pair",
+              "o que significa au pair",
+              "como ser au pair nos eua",
+              "o que precisa para ir para suiça",
+              "o que conhecer na suíça"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "engager-nounou-domicile-geneve-contrat",
@@ -1423,7 +2617,122 @@
         "https://www.ge.ch/organisation/office-cantonal-emploi",
         "https://www.seco.admin.ch/seco/fr/home.html",
         "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "garde d'enfants à domicile",
+            "secondary": [
+              "nounou à genève",
+              "garde d'enfants à domicile fiche métier",
+              "contrat nounou à domicile",
+              "garde d'enfants à domicile toulouse",
+              "où trouver une nounou",
+              "contrat nounou pajemploi calcul heures",
+              "contrat nounou à domicile pajemploi",
+              "contrat nounou pajemploi temps partiel",
+              "je cherche une nounou",
+              "hôpital des nounours genève"
+            ],
+            "questions": [
+              "que fait une nounou",
+              "quand chercher une nounou",
+              "comment appelle t on une nounou"
+            ]
+          },
+          "en": {
+            "primary": "nanny agency geneva",
+            "secondary": [
+              "nanny gent",
+              "live in nannies switzerland",
+              "hiring a live in nanny",
+              "hiring a nanny near me",
+              "hire a nanny new york",
+              "nanny in der schweiz",
+              "nanny agency los angeles",
+              "nanny agency in los angeles ca",
+              "nanny birthday gifts jewelry",
+              "hire a nanny near you"
+            ],
+            "questions": [
+              "what is the nanny on",
+              "was ist eine nanny",
+              "how to hire a nanny",
+              "how many geneva conventions are there",
+              "how many geneva convention laws are there"
+            ]
+          },
+          "de": {
+            "primary": "nanny schweiz",
+            "secondary": [
+              "nanny suchen schweiz",
+              "kinderbetreuung zu hause",
+              "kinderbetreuung zu hause srk",
+              "nanny einstellen",
+              "zuhause bleiben wegen kinderbetreuung",
+              "kinderbetreuung zu hause srk zürich",
+              "nanny aus dem ausland",
+              "kinderbetreuung zu hause statt kita",
+              "die nanny auf deutsch",
+              "nänny + partner ag"
+            ],
+            "questions": [
+              "was ist eine nanny",
+              "wo kann man die nanny schauen",
+              "wie viele staffeln hat die nanny"
+            ]
+          },
+          "es": {
+            "primary": "a que pertenece ginebra",
+            "secondary": [
+              "con que se hace la ginebra",
+              "de que esta hecha la ginebra",
+              "con que se toma la ginebra",
+              "historia de la ginebra",
+              "cuidado de niños en casa",
+              "la vida de una niñera",
+              "cuidado de ancianos a domicilio",
+              "empresa de cuidados a domicilio",
+              "propiedades de la ginebra",
+              "servicio de cuidadoras a domicilio"
+            ],
+            "questions": [
+              "que hace una niñera",
+              "dónde ver la niñera",
+              "que hay en ginebra",
+              "como se elabora la ginebra",
+              "que es la ginebra",
+              "ginebra bebida que es"
+            ]
+          },
+          "pt": {
+            "primary": "baba general waivers",
+            "secondary": [
+              "origem da palavra babá",
+              "baba general store & digital point",
+              "baba general store",
+              "oq fazer em genebra",
+              "baba general applicability waiver",
+              "funções de uma babá",
+              "atribuições de uma baba",
+              "cuidado com as crianças",
+              "cuidadora de criança em casa",
+              "imagem sobre cuidado com a criança"
+            ],
+            "questions": [
+              "o que faz uma babá",
+              "o que significa are baba",
+              "o que conhecer em genebra",
+              "qual a função da baba",
+              "como se escreve baba",
+              "o que fazer em genebra",
+              "o que é genebra",
+              "como cuidar de crianças"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "contrat-chauffeur-majordome-gouvernante",
@@ -1634,7 +2943,98 @@
         "https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta.html",
         "https://www.ge.ch/organisation/office-cantonal-emploi",
         "https://www.fedlex.admin.ch/eli/cc/2007/758_758_758/fr"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "permis de travail personnel de maison",
+            "secondary": [
+              "permis travail employé maison geneve",
+              "permis de travail personnel de maison suisse",
+              "droit du travail personnel de maison",
+              "permis employé domestique genève",
+              "engager employé étranger genève"
+            ],
+            "questions": [
+              "permis de travail personnel de maison comment faire",
+              "permis de travail personnel de maison comment ça marche"
+            ]
+          },
+          "en": {
+            "primary": "work permit domestic worker switzerland",
+            "secondary": [
+              "eu citizen switzerland work permit",
+              "work permit domestic worker switzerland application",
+              "eu national work in switzerland",
+              "european citizen working in switzerland",
+              "hiring foreign household staff switzerland",
+              "eu resident working in switzerland",
+              "hiring foreign household staffing"
+            ],
+            "questions": [
+              "work permit domestic worker switzerland how to apply",
+              "work permit domestic worker switzerland what is it",
+              "can eu citizen work in switzerland",
+              "work permit domestic worker switzerland when working in switzerland",
+              "work permit domestic worker switzerland why not",
+              "work permit domestic worker switzerland when does it expire",
+              "work permit domestic worker switzerland why is it required",
+              "work permit domestic worker switzerland how many days"
+            ]
+          },
+          "de": {
+            "primary": "arbeitsbewilligung hausangestellte",
+            "secondary": [
+              "arbeitsbewilligung hausangestellte schweiz",
+              "drittstaaten bewilligung schweiz",
+              "drittstaaten bewilligung",
+              "ausländische haushaltshilfe einstellen",
+              "arbeitsbewilligung hausangestellter"
+            ],
+            "questions": [
+              "arbeitsbewilligung hausangestellte wann auszahlung",
+              "arbeitsbewilligung hausangestellte warum so wichtig",
+              "arbeitsbewilligung hausangestellte was ist das",
+              "arbeitsbewilligung hausangestellte wie lange",
+              "arbeitsbewilligung hausangestellte warum keine krankenversicherung"
+            ]
+          },
+          "es": {
+            "primary": "permiso de trabajo empleada doméstica",
+            "secondary": [
+              "permiso de trabajo empleada doméstica en suiza",
+              "contratar personal extranjero suiza en suiza",
+              "permiso de trabajo empleada doméstica geneve suisse",
+              "permiso ue suiza",
+              "personal doméstico diplomático"
+            ],
+            "questions": [
+              "permiso de trabajo empleada doméstica qué es en suiza",
+              "permiso de trabajo empleada doméstica cómo se calcula",
+              "permiso de trabajo empleada doméstica cuándo se paga"
+            ]
+          },
+          "pt": {
+            "primary": "autorização de trabalho empregada doméstica",
+            "secondary": [
+              "autorização de trabalho empregada doméstica portugal",
+              "autorização trabalho empregada doméstica suíça geneve",
+              "contratar pessoal estrangeiro suíça portugal",
+              "autorização ue suíça",
+              "pessoal doméstico diplomático"
+            ],
+            "questions": [
+              "autorização de trabalho empregada doméstica como fazer",
+              "autorização de trabalho empregada doméstica porque não",
+              "autorização de trabalho empregada doméstica quando recebo",
+              "autorização de trabalho empregada doméstica o que é isso",
+              "autorização de trabalho empregada doméstica quando entra em vigor",
+              "autorização trabalho empregada doméstica suíça como funciona"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "courrier-absence-prolongee-suisse",
@@ -1846,7 +3246,100 @@
         "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr",
         "https://www.estv.admin.ch/estv/fr/accueil/droit-fiscal-international.html",
         "https://www.estv.admin.ch/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "résidence fiscale suisse",
+            "secondary": [
+              "résidence fiscale suisse critères",
+              "domicile fiscal suisse définition",
+              "adresse fiscale suisse",
+              "résident fiscal suisse conditions",
+              "assujettissement illimité suisse",
+              "resident fiscal suisse"
+            ],
+            "questions": [
+              "résidence fiscale suisse comment ça marche",
+              "comment devenir resident fiscal suisse"
+            ]
+          },
+          "en": {
+            "primary": "swiss tax residency",
+            "secondary": [
+              "swiss tax residency rules",
+              "swiss tax rules",
+              "swiss lump sum tax residency",
+              "tax residency switzerland 183 days",
+              "switzerland 183 day rule",
+              "tax resident in switzerland rules",
+              "swiss tax residency rules for us citizens",
+              "swiss tax residency rules for non residents",
+              "swiss tax non resident",
+              "tax residency certificate switzerland individual"
+            ],
+            "questions": [
+              "how to get swiss tax residency",
+              "how many days in switzerland to be tax resident",
+              "swiss tax residency what is it",
+              "swiss tax residency how long does it take",
+              "swiss tax residency when does it start",
+              "swiss tax residency when living abroad",
+              "swiss tax residency why is it important",
+              "swiss tax residency how many years"
+            ]
+          },
+          "de": {
+            "primary": "steuerlicher wohnsitz schweiz",
+            "secondary": [
+              "steuerlicher wohnsitz schweiz steuern",
+              "183 tage regel deutschland schweiz",
+              "steuerpflicht schweiz wohnsitz ausland",
+              "183 tage regel schweizer armee",
+              "steuerpflicht schweiz alter",
+              "steuerpflicht schweiz 183 tage",
+              "steuerpflicht schweiz ab welchem alter"
+            ],
+            "questions": [
+              "steuerlicher wohnsitz schweiz wann auszahlung",
+              "steuerlicher wohnsitz schweiz was ist das",
+              "steuerlicher wohnsitz schweiz wie lange",
+              "steuerpflicht schweiz ab wann"
+            ]
+          },
+          "es": {
+            "primary": "residencia fiscal suiza",
+            "secondary": [
+              "certificado residencia fiscal suiza",
+              "residencia fiscal suiza en suiza",
+              "residente fiscal suiza en españa",
+              "regla 183 días suiza",
+              "convenio doble imposición suiza"
+            ],
+            "questions": [
+              "residencia fiscal suiza cómo tributa",
+              "residencia fiscal suiza cuándo empieza",
+              "residencia fiscal suiza qué es y para que sirve"
+            ]
+          },
+          "pt": {
+            "primary": "residência fiscal suíça",
+            "secondary": [
+              "certificado de residência fiscal suíça",
+              "regra 183 dias suíça",
+              "acordo dupla tributação suíça",
+              "residência fiscal suíça como funciona",
+              "residência fiscal suíça quando começa"
+            ],
+            "questions": [
+              "residência fiscal suíça como funciona",
+              "residência fiscal suíça quando começa",
+              "residência fiscal suíça o que é necessário"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "declaration-impot-geneve-particuliers-delais",
@@ -1903,7 +3396,85 @@
         1,
         2,
         3
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "déclaration d'impôt genève",
+            "secondary": [
+              "déclaration impôt source genève",
+              "demande délai déclaration impôts genève",
+              "formulaire de départ impôt genève",
+              "etat de genève impôts",
+              "déclaration impôts frontalier genève",
+              "impôt genève demande de délai",
+              "getax 2026",
+              "demander un délai pour les impôts genève",
+              "getax 2026 genève"
+            ],
+            "questions": []
+          },
+          "en": {
+            "primary": "geneva tax return",
+            "secondary": [
+              "geneva city tax return",
+              "income tax in geneva",
+              "geneva city income tax form",
+              "geneva corporate tax rate",
+              "geneva county tax records",
+              "geneva ny tax collector",
+              "town of geneva ny tax bills",
+              "tax at source form geneva",
+              "geneva town wi tax search",
+              "geneva college tax documents"
+            ],
+            "questions": []
+          },
+          "de": {
+            "primary": "fristerstreckung steuererklärung",
+            "secondary": [
+              "fristerstreckung steuererklärung zürich",
+              "steuererklärung frist 2026",
+              "steuererklärung gefahrene kilometer",
+              "steuererklärung fristverlängerung",
+              "gewerkschaft steuererklärung wo eintragen",
+              "fristerstreckung steuererklärung schwyz jp",
+              "steuererklärung fristverlängerung beantragen"
+            ],
+            "questions": [
+              "wo gebe ich in der steuererklärung",
+              "wie wird bei der steuererklärung gerundet"
+            ]
+          },
+          "es": {
+            "primary": "la declaración de ginebra",
+            "secondary": [
+              "ir de ginebra a berna",
+              "declaración de ginebra medicina",
+              "pagar impuestos vehicular de ginebra valle",
+              "de que esta hecha la ginebra",
+              "gobierno del estado impuestos",
+              "con que se hace la ginebra",
+              "ginebra es una ciudad",
+              "gobierno del estado de guanajuato impuestos"
+            ],
+            "questions": [
+              "que es la declaracion de ginebra"
+            ]
+          },
+          "pt": {
+            "primary": "declaração de impostos genebra",
+            "secondary": [
+              "gov declaração de imposto",
+              "direção geral de impostos",
+              "prazo declaração suíça",
+              "getax"
+            ],
+            "questions": []
+          }
+        }
+      }
     },
     {
       "id": "impot-fortune-geneve-vaud-calcul-evaluation",
@@ -1956,7 +3527,97 @@
         "https://www.ge.ch/organisation/administration-fiscale-cantonale",
         "https://www.vd.ch/etat-droit-finances/impots",
         "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "impôt sur la fortune genève",
+            "secondary": [
+              "impôt sur la fortune genève barème",
+              "imposition sur la.fortune genève",
+              "impot fortune vaud",
+              "bouclier fiscal genève exemple calcul",
+              "impot fortune vaud calcul",
+              "bouclier fiscal genève formulaire"
+            ],
+            "questions": [
+              "impôt sur la fortune genève comment faire",
+              "impôt sur la fortune genève comment ça marche",
+              "impôt sur la fortune genève comment déclarer aux impots"
+            ]
+          },
+          "en": {
+            "primary": "wealth tax switzerland",
+            "secondary": [
+              "wealth tax switzerland by canton",
+              "wealth tax canton comparison chart",
+              "geneva wealth tax percentage",
+              "wealth tax geneve",
+              "wealth tax switzerland basel stadt",
+              "fortune tax geneva"
+            ],
+            "questions": [
+              "does switzerland have a wealth tax",
+              "what is wealth tax switzerland",
+              "how does swiss wealth tax work",
+              "switzerland wealth tax how does it work",
+              "how is wealth tax calculated in switzerland",
+              "wealth tax switzerland when born",
+              "wealth tax switzerland why is it important",
+              "wealth tax switzerland what is considered income"
+            ]
+          },
+          "de": {
+            "primary": "vermögenssteuer schweiz",
+            "secondary": [
+              "vermögenssteuer schweiz tabelle",
+              "vermögenssteuer schweiz vs deutschland",
+              "vermögenssteuer schweiz ab wieviel",
+              "vermögenssteuer genf berechnen",
+              "vermögenssteuer schweiz kanton bern",
+              "vermögenssteuer schweiz für deutsche"
+            ],
+            "questions": [
+              "vermögenssteuer schweiz wie hoch",
+              "vermögenssteuer schweiz ab wann",
+              "was ist vermögenssteuer schweiz",
+              "vermögenssteuer schweiz warum so teuer",
+              "wie viel prozent vermögenssteuer schweiz"
+            ]
+          },
+          "es": {
+            "primary": "impuesto sobre el patrimonio suiza",
+            "secondary": [
+              "impuesto patrimonio ginebra",
+              "escudo fiscal ginebra",
+              "impuesto sobre el patrimonio suiza cómo tributa",
+              "impuesto sobre el patrimonio suiza cuándo se paga",
+              "impuesto sobre el patrimonio suiza por qué es importante"
+            ],
+            "questions": [
+              "impuesto sobre el patrimonio suiza cómo tributa",
+              "impuesto sobre el patrimonio suiza cuándo se paga",
+              "impuesto sobre el patrimonio suiza por qué es importante"
+            ]
+          },
+          "pt": {
+            "primary": "imposto sobre a fortuna suíça",
+            "secondary": [
+              "imposto sobre a fortuna suíça portugal",
+              "imposto sobre fortunas suica",
+              "imposto fortuna genebra suiça",
+              "imposto fortuna cantões portugal",
+              "imposto fortuna genebra"
+            ],
+            "questions": [
+              "imposto sobre a fortuna suíça como funciona",
+              "imposto sobre a fortuna suíça o que é isso",
+              "imposto sobre a fortuna suíça quando começou"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "pilier-3a-deduction-plafond-delai",
@@ -2015,7 +3676,108 @@
         10,
         11,
         12
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "pilier 3a",
+            "secondary": [
+              "pilier 3a déduction fiscale",
+              "pilier 3a deduction",
+              "pilier 3a maximum 2026",
+              "pilier 3a et 3b différence",
+              "plafond 3a 2026",
+              "3eme pilier deduction impot geneve",
+              "3ème pilier b déduction fiscale vaud",
+              "3eme pilier reduction impot"
+            ],
+            "questions": [
+              "pilier 3a comment calculer",
+              "pilier 3a quand declarer",
+              "pilier 3a suisse c'est quoi",
+              "pilier 3a comment ca marche"
+            ]
+          },
+          "en": {
+            "primary": "pillar 3a switzerland",
+            "secondary": [
+              "pillar 3a comparison",
+              "pillar 3a switzerland 2026",
+              "third pillar switzerland tax deductible",
+              "swiss pillar 3a maximum contribution",
+              "third pillar tax deductions",
+              "pillar 3a withdrawal tax rate",
+              "pillar 3a vs 3b"
+            ],
+            "questions": [
+              "what is pillar 3a switzerland",
+              "what is pillar 3a",
+              "what is pillar 3",
+              "pillar 3a switzerland how it works",
+              "pillar 3a switzerland how to apply",
+              "pillar 3a switzerland when did it start",
+              "pillar 3a switzerland why is it important",
+              "pillar 3a switzerland why not"
+            ]
+          },
+          "de": {
+            "primary": "säule 3a",
+            "secondary": [
+              "säule 3a maximalbetrag 2026",
+              "säule 3a abzug steuern",
+              "säule 3a vergleich",
+              "säule 3a einkauf rückwirkend",
+              "säule 3a wieviel pro konto",
+              "bezug säule 3a einkauf pensionskasse",
+              "säule 3a vergleich kassensturz",
+              "säule 3a schweiz auszahlung",
+              "säule 3a und 3b unterschied"
+            ],
+            "questions": [
+              "was ist säule 3a und 3b",
+              "säule 3a wie viel steuern sparen",
+              "säule 3a wann beziehen",
+              "säule 3a wie lange einzahlen",
+              "wie viele säule 3a konten darf man haben",
+              "säule 3a wann neues konto",
+              "säule 3a welche ist die beste",
+              "wann muss säule 3a spätestens bezogen werden"
+            ]
+          },
+          "es": {
+            "primary": "pilar 3a suiza",
+            "secondary": [
+              "pilas 3a suiza",
+              "deducción fiscal 3a renta",
+              "deducción fiscal 3ac",
+              "aportación máxima 3a",
+              "pilar 3a suiza cómo funciona"
+            ],
+            "questions": [
+              "pilar 3a suiza cómo funciona",
+              "pilar 3a suiza cuándo se fundó",
+              "pilar 3a suiza por qué es importante"
+            ]
+          },
+          "pt": {
+            "primary": "pilar 3a suíça",
+            "secondary": [
+              "pilar 3a suíça contactos",
+              "terceiro pilar suica",
+              "dedução fiscal 3as",
+              "contribuição máxima 3a",
+              "pilar 3a suíça como funciona"
+            ],
+            "questions": [
+              "pilar 3a suíça como funciona",
+              "pilar 3a suíça quando abre",
+              "pilar 3a suíça o que é isso",
+              "pilar 3a suíça quando foi criada"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "rachat-lpp-deduction-fiscale-blocage",
@@ -2074,7 +3836,105 @@
         10,
         11,
         12
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "rachat lpp",
+            "secondary": [
+              "rachat lpp deduction impot",
+              "rachat lpp déductible",
+              "rachat lpp 3 ans avant la retraite",
+              "rachat 2e pilier impot",
+              "rachat 2ème pilier déduction fiscale",
+              "rachat lpp déduction fiscale geneve",
+              "rachat 2ème pilier désavantages",
+              "rachat 2ème pilier déclaration impôt france"
+            ],
+            "questions": [
+              "rachat lpp comment faire",
+              "rachat lpp c'est quoi en suisse",
+              "rachat lpp comment ça marche",
+              "rachat 2ème pilier jusqu à quel age"
+            ]
+          },
+          "en": {
+            "primary": "pension fund buy in switzerland",
+            "secondary": [
+              "pension fund in switzerland",
+              "bvg buy in tax deductions",
+              "second pillar voluntary contributions",
+              "pension fund buy in switzerland tax",
+              "second pillar voluntary contribution fund"
+            ],
+            "questions": [
+              "pension fund buy in switzerland what is it",
+              "pension fund buy in switzerland when selling",
+              "pension fund buy in switzerland how it works",
+              "pension fund buy in switzerland how does it work",
+              "pension fund buy in switzerland when does it start",
+              "pension fund buy in switzerland why not",
+              "pension fund buy in switzerland why is it important",
+              "pension fund buy in switzerland how to"
+            ]
+          },
+          "de": {
+            "primary": "pk einkauf",
+            "secondary": [
+              "pk einkauf steuern abziehen",
+              "pk einkauf sinnvoll",
+              "pk einkauf nach scheidung",
+              "einkauf pensionskasse steuern zürich",
+              "bvg einkauf abzug steuern",
+              "bvg einkauf sperrfrist",
+              "bvg einkauf selbständigerwerbende ahv",
+              "bvg einkauf vor pensionierung",
+              "bvg einkauf durch arbeitgeber",
+              "pk einkaufsstätte köln"
+            ],
+            "questions": [
+              "pk einkauf bis wann",
+              "pk einkauf warum so teuer",
+              "pk einkauf was ist das",
+              "pk einkauf wie lange",
+              "bvg einkauf bis wann möglich"
+            ]
+          },
+          "es": {
+            "primary": "aportación voluntaria lpp",
+            "secondary": [
+              "aportación voluntaria lpp en suiza",
+              "recuperar segundo pilar suiza",
+              "rescate lpp suiza que significa",
+              "segundo pilar suiza",
+              "deducción fiscal lpp"
+            ],
+            "questions": [
+              "rescate lpp suiza que es",
+              "aportación voluntaria lpp cómo tributa",
+              "aportación voluntaria lpp cuándo es"
+            ]
+          },
+          "pt": {
+            "primary": "contribuição voluntária lpp",
+            "secondary": [
+              "contribuição voluntária lpp geneve",
+              "dedução fiscal lppsa",
+              "segundo pilar suíça",
+              "fundo de pensões suíça",
+              "resgate lpp suíça"
+            ],
+            "questions": [
+              "contribuição voluntária lpp porque é",
+              "contribuição voluntária lpp quando começa",
+              "contribuição voluntária lpp como funciona",
+              "contribuição voluntária lpp quando entra em vigor",
+              "resgate lpp suíça como funciona"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "donation-impot-geneve-vaud-exonerations",
@@ -2450,7 +4310,113 @@
         9,
         10,
         11
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "changer de caisse maladie",
+            "secondary": [
+              "changer caisse maladie suisse",
+              "changement caisse maladie date",
+              "changer assurance maladie",
+              "changer assurance maladie suisse date",
+              "changer de caisse d assurance maladie msa",
+              "changer assurance maladie delai",
+              "faut il changer de caisse d assurance maladie",
+              "résiliation lamal départ étranger",
+              "résiliation lamal frontalier",
+              "franchise lamal enfant"
+            ],
+            "questions": [
+              "quand changer de caisse maladie",
+              "pourquoi changer de caisse d assurance maladie",
+              "quel délai pour changer de caisse maladie",
+              "comment changer de caisse d assurance maladie en ligne",
+              "caisse maladie c'est quoi",
+              "pourquoi changer de caisse d assurance maladie eaux vives",
+              "changer de caisse maladie comment faire",
+              "comment changer assurance maladie"
+            ]
+          },
+          "en": {
+            "primary": "switch health insurance switzerland",
+            "secondary": [
+              "change health insurance switzerland",
+              "switch health insurance switzerland online",
+              "cancel health insurance leaving switzerland",
+              "cancel car insurance switzerland",
+              "compare premiums switzerland"
+            ],
+            "questions": [
+              "when can you change health insurance in switzerland",
+              "how to switch health insurance switzerland",
+              "is health insurance mandatory in switzerland",
+              "what is the best health insurance in switzerland",
+              "switch health insurance switzerland what is it",
+              "is health insurance tax deductible in switzerland",
+              "how does health insurance work in switzerland",
+              "can you cancel health insurance at any time"
+            ]
+          },
+          "de": {
+            "primary": "krankenkasse wechseln",
+            "secondary": [
+              "krankenkasse wechseln frist",
+              "krankenkasse wechseln als rentner",
+              "krankenkasse wechseln was beachten",
+              "krankenkasse wechseln schweiz frist",
+              "franchise krankenkasse englisch",
+              "krankenkasse wechseln unter dem jahr",
+              "franchise krankenkasse einfach erklärt",
+              "krankenkasse kündigen vorlage",
+              "krankenkasse kündigen wegen umzug ins ausland",
+              "krankenkasse kündigen schweiz vorlage"
+            ],
+            "questions": [
+              "krankenkasse wechseln wann möglich",
+              "krankenkasse wechseln was ist zu beachten",
+              "muss man krankenkasse wechseln bei umzug",
+              "krankenkasse wechseln welche ist die beste",
+              "krankenkasse wechseln wie schnell",
+              "krankenkasse wechseln muss ich kündigen",
+              "krankenkasse wechseln wie lange dauert das",
+              "muss man die krankenkasse wechseln wenn man arbeitslos ist"
+            ]
+          },
+          "es": {
+            "primary": "cambiar seguro médico suiza",
+            "secondary": [
+              "cambiar seguro médico suiza a suiza",
+              "comparar primas suiza y españa",
+              "franquicia seguro suiza",
+              "comparar primas suiza",
+              "lamal"
+            ],
+            "questions": [
+              "cambiar seguro médico suiza cómo funciona",
+              "cambiar seguro médico suiza cuándo empieza",
+              "cambiar seguro médico suiza por qué cubre"
+            ]
+          },
+          "pt": {
+            "primary": "mudar seguro de saúde suíça",
+            "secondary": [
+              "mudar seguro de saúde suíça para portugal",
+              "comparar prémios suíça e portugal",
+              "franquia seguro suíça",
+              "comparar prémios suíça",
+              "lamal"
+            ],
+            "questions": [
+              "mudar seguro de saúde suíça como funciona",
+              "mudar seguro de saúde suíça quando recebo",
+              "mudar seguro de saúde suíça o que é necessário",
+              "mudar seguro de saúde suíça porque demora tanto"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "objets-valeur-sous-assurance-menage",
@@ -2555,7 +4521,103 @@
         "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS",
         "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/fr",
         "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/ahv.html"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "avs sans activité lucrative",
+            "secondary": [
+              "avs sans activité lucrative vaud",
+              "cotisation avs sans activité lucrative valais",
+              "cotisation avs fortune",
+              "cotisations avs non actif",
+              "avs fortune cotisations sociales",
+              "calcul cotisation avs non actif",
+              "cotisations avs non actifs genève"
+            ],
+            "questions": [
+              "avs sans activité lucrative comment déclarer",
+              "avs sans activité lucrative comment ça marche"
+            ]
+          },
+          "en": {
+            "primary": "ahv contributions non employed",
+            "secondary": [
+              "ahv non employed switzerland contribution",
+              "swiss social security early retirees",
+              "ahv contributions non employed spouse",
+              "ahv on wealth management",
+              "ahv on wealthsimple",
+              "swiss social security early retiree benefits",
+              "ahv contributions non employed staff education",
+              "ahv contributions non employed vs unemployed",
+              "ahv on wealthfront",
+              "ahv on wealth.com"
+            ],
+            "questions": [
+              "ahv contributions non employed when working",
+              "ahv contributions non employed what is it",
+              "ahv contributions non employed how to",
+              "ahv contributions non employed why not",
+              "ahv contributions non employed how does it work",
+              "ahv contributions non employed what is your notice period",
+              "ahv contributions non employed when producing ciphertext"
+            ]
+          },
+          "de": {
+            "primary": "ahv nichterwerbstätige",
+            "secondary": [
+              "ahv nichterwerbstätige beiträge",
+              "ahv beiträge nichterwerbstätige vermögen",
+              "frühpensionierung ahv-renten tabelle",
+              "frühpensionierung ahv mit 63",
+              "berechnung ahv beiträge nach vermögen",
+              "frühpensionierung ahv beiträge berechnen",
+              "ahv nichterwerbstätigenbeiträge",
+              "ahv nichterwerbstätigenbeiträge berechnen",
+              "frühpensionierung ahv weiter einzahlen",
+              "frühpensionierung ahv mit 62 männer"
+            ],
+            "questions": [
+              "ahv nichterwerbstätige ab wann",
+              "ahv nichterwerbstätige was ist zu beachten",
+              "ahv nichterwerbstätige wie hoch"
+            ]
+          },
+          "es": {
+            "primary": "avs sin actividad lucrativa",
+            "secondary": [
+              "avs sin actividad lucrativa que hago",
+              "cotizaciones avs patrimonio neto",
+              "jubilacion anticipada suiza",
+              "cotizaciones avs patrimonio",
+              "avs cónyuge"
+            ],
+            "questions": [
+              "avs sin actividad lucrativa cómo funciona",
+              "avs sin actividad lucrativa que es"
+            ]
+          },
+          "pt": {
+            "primary": "avs sem atividade lucrativa",
+            "secondary": [
+              "idade reforma antecipada suíça",
+              "avs sem atividade lucrativa significado",
+              "avs sem atividade lucrativas",
+              "contribuições avs patrimônio cultural",
+              "contribuições avs patrimônios",
+              "reforma antecipada na suíça"
+            ],
+            "questions": [
+              "avs sem atividade lucrativa como funciona",
+              "avs sem atividade lucrativa porque é",
+              "avs sem atividade lucrativa quando começa",
+              "avs sem atividade lucrativa quando entra em vigor"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "lacunes-avs-expatries-rattrapage",
@@ -2778,7 +4840,114 @@
         7,
         8,
         9
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "demande de bourse",
+            "secondary": [
+              "demande de bourse d'études genève",
+              "bourse d'étude genève en ligne",
+              "service des bourses et prêts d'études genève",
+              "bourse etat de genève",
+              "bourse d'étude en suisse",
+              "bourse etudiant france universitaire geneve",
+              "service des bourses genève",
+              "prêt études",
+              "prêt études crédit mutuel"
+            ],
+            "questions": [
+              "comment obtenir une bourse d'études",
+              "comment obtenir une bourse d'étude en suisse"
+            ]
+          },
+          "en": {
+            "primary": "geneva college study abroad",
+            "secondary": [
+              "university of geneva geneva switzerland",
+              "university of geneva phd",
+              "the university of geneva",
+              "university of geneva phd programs",
+              "geneva graduate institute scholarships",
+              "associate professor genevieve grant",
+              "geneva college financial aid",
+              "government grants for study",
+              "student loan general forbearance form",
+              "graduate institute in geneva"
+            ],
+            "questions": [
+              "what is study grant",
+              "what is geneva application",
+              "why is geneva important",
+              "can i get a grant to study",
+              "what is a work study grant"
+            ]
+          },
+          "de": {
+            "primary": "stipendium beantragen",
+            "secondary": [
+              "stipendium beantragen zürich",
+              "ausbildungsbeiträge baselland",
+              "genf in der schweiz",
+              "ausbildungsbeiträge basel stadt",
+              "ausbildungsbeiträge bern",
+              "stipendium beantragen kanton bern",
+              "ausbildungsbeiträge bs",
+              "ausbildungsbeiträge aargau",
+              "ausbildungsbeiträge zürich",
+              "ausbildungsbeiträge bl"
+            ],
+            "questions": [
+              "welche stipendien gibt es",
+              "wie gross ist genf"
+            ]
+          },
+          "es": {
+            "primary": "beca general estudios universitarios",
+            "secondary": [
+              "pedir beca de estudios",
+              "elaboracion de la ginebra",
+              "ginebra es de la ue",
+              "beca estudios no universitarios gencat",
+              "con que se toma la ginebra",
+              "ginebra es una ciudad",
+              "centro de estudios humanitarios ginebra",
+              "visitar ginebra y su entorno"
+            ],
+            "questions": [
+              "como ir de ginebra a berna",
+              "que hay en ginebra",
+              "como se elabora la ginebra",
+              "beca junaeb que es",
+              "cómo encontrar una beca de estudio",
+              "cómo obtener la beca junaeb",
+              "es buena la ginebra"
+            ]
+          },
+          "pt": {
+            "primary": "bolsa de estudos brasil",
+            "secondary": [
+              "concessão de bolsa de estudos",
+              "guia bolsa de estudo",
+              "bolsa de estudos quero bolsa",
+              "universidade de genebra cursos",
+              "oq fazer em genebra",
+              "urgente ganhe uma bolsa de estudos",
+              "dges bolsa de estudo prazo",
+              "bíblia de estudo de genebra",
+              "bíblia de estudo de genebra online",
+              "portal do aluno genebra"
+            ],
+            "questions": [
+              "o que é bolsa de estudos",
+              "o que conhecer em genebra",
+              "como conseguir bolsa de estudos",
+              "genebra o que é"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "creche-accueil-parascolaire-geneve-inscription",
@@ -2883,7 +5052,108 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/fr",
         "https://www.bak.admin.ch/bak/fr/home.html"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "valeur agréée",
+            "secondary": [
+              "assurance oeuvres d'art",
+              "assurance oeuvres d'art exposition",
+              "assurance oeuvre d art particulier",
+              "valeur agréée assurance",
+              "assurance collection art déco",
+              "assurance œuvres d'art commentaire",
+              "valeur agréée définition assurance",
+              "assurance collection artisanale"
+            ],
+            "questions": [
+              "assurance œuvres d'art comment ça marche",
+              "assurance œuvres d'art comment faire",
+              "assurance œuvres d'art c'est quoi en français"
+            ]
+          },
+          "en": {
+            "primary": "fine art insurance switzerland",
+            "secondary": [
+              "fine art insurance switzerland sàrl",
+              "art collection insurance uk",
+              "agreed value artinya",
+              "art collector insurance",
+              "art gallery insurance supplemental application",
+              "agreed value artificial intelligence"
+            ],
+            "questions": [
+              "fine art insurance switzerland what is it",
+              "fine art insurance switzerland how does it work",
+              "what is agreed value",
+              "does agreed value depreciate",
+              "fine art insurance switzerland how many employees",
+              "fine art insurance switzerland when to use",
+              "fine art insurance switzerland why is it so expensive",
+              "fine art insurance switzerland when does it start"
+            ]
+          },
+          "de": {
+            "primary": "kunstversicherung",
+            "secondary": [
+              "uniqa kunstversicherung schweiz",
+              "kunstversicherung schweiz",
+              "kunstversicherung ausstellung",
+              "kunstversicherung österreich",
+              "kunstversicherung vergleich",
+              "kunstsammlung versichern schweiz",
+              "kunstversicherung hiscox",
+              "kunstversicherung uniqa",
+              "kunstversicherung wien",
+              "vereinbarter werte"
+            ],
+            "questions": [
+              "kunstversicherung warum so wichtig",
+              "kunstversicherung was ist das",
+              "kunstversicherung was ist zu beachten",
+              "kunstversicherung wie lange",
+              "kunstversicherung wie lange gültig"
+            ]
+          },
+          "es": {
+            "primary": "seguro obras de arte",
+            "secondary": [
+              "seguro obras de arte mapfre",
+              "seguro de obras de arte clavo a clavo",
+              "seguro obras de arte suiza geneve",
+              "valor convenido y valor comercial",
+              "valor convenido de un auto",
+              "seguro de obras de artes"
+            ],
+            "questions": [
+              "seguro obras de arte cómo funciona",
+              "seguro obras de arte cuándo es"
+            ]
+          },
+          "pt": {
+            "primary": "seguro obras de arte",
+            "secondary": [
+              "seguro obras de arte mapfre",
+              "seguro obras de arte suíça geneve",
+              "seguro de obras de arte clavo a clavo",
+              "seguro coleção de artesanato",
+              "valor acordado o que significa",
+              "valor acordado entre as partes",
+              "valor acordado está correto",
+              "seguro coleção de artes visuais",
+              "oq significa valor acordado",
+              "seguro de obras de artes"
+            ],
+            "questions": [
+              "seguro obras de arte como funciona",
+              "seguro obras de arte porque é",
+              "seguro obras de arte porque demora tanto"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "acheter-importer-oeuvre-art-diligence-provenance",
@@ -3092,7 +5362,111 @@
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.esa.admin.ch/fr/",
         "https://www.ge.ch/organisation/administration-fiscale-cantonale"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "créer une fondation",
+            "secondary": [
+              "creer une fondation suisse",
+              "créer une fondation familiale suisse",
+              "créer une fondation en côte d'ivoire",
+              "fondation d'utilité publique suisse",
+              "acte de fondation lacan",
+              "combien faut il pour créer une fondation",
+              "fondation d utilité publique belgique liste",
+              "faut il faire une fondation pour une terrasse",
+              "actes fondation de nice",
+              "créer une fondation pour transmettre son patrimoine"
+            ],
+            "questions": [
+              "pourquoi créer une fondation en suisse",
+              "comment créer une fondation",
+              "comment créer une fondation en france",
+              "comment creer une fondation a but non lucratif",
+              "que faut-il pour créer une fondation",
+              "quel montant pour créer une fondation",
+              "quelles sont les conditions pour créer une fondation"
+            ]
+          },
+          "en": {
+            "primary": "set up a foundation in switzerland",
+            "secondary": [
+              "setting up a charity in switzerland",
+              "setting up a non profit in switzerland",
+              "set up foundation switzerland in switzerland",
+              "foundation deed format",
+              "family foundation switzerland",
+              "templeton charity foundation switzerland",
+              "deed foundation kansas city",
+              "charity trust switzerland",
+              "deedee foundation",
+              "set up a foundation in switzerland for tax purposes"
+            ],
+            "questions": [
+              "how to set up a foundation in switzerland",
+              "what is a swiss foundation",
+              "set up a foundation in switzerland what is required",
+              "set up a foundation in switzerland how it works",
+              "set up a foundation in switzerland when traveling"
+            ]
+          },
+          "de": {
+            "primary": "stiftung gründen",
+            "secondary": [
+              "stiftung gründen schweiz voraussetzungen",
+              "stiftung gründen schweiz steuern sparen",
+              "stiftung gründen vorteile",
+              "stiftung gründen vor- und nachteile",
+              "stiftung gründen als privatperson",
+              "stiftung gründen wieviel kapital",
+              "stiftungsurkunde schweiz",
+              "stiftungsurkunde muster",
+              "stiftungsurkunde einsehen",
+              "stiftungsurkunde englisch"
+            ],
+            "questions": [
+              "stiftung gründen wann sinnvoll",
+              "stiftung gründen was ist das",
+              "stiftung gründen warum so wichtig",
+              "stiftung gründen wie viele personen",
+              "stiftung gründen wie lange",
+              "stiftung gründen wie"
+            ]
+          },
+          "es": {
+            "primary": "crear una fundación en suiza",
+            "secondary": [
+              "crear una fundación en suiza para niños",
+              "escritura de constitución de fundación",
+              "fundación benéfica suiza",
+              "escritura de fundación",
+              "exención fiscal fundación"
+            ],
+            "questions": [
+              "crear una fundación en suiza cómo se llama",
+              "crear una fundación en suiza cuándo empieza"
+            ]
+          },
+          "pt": {
+            "primary": "criar uma fundação na suíça",
+            "secondary": [
+              "criar fundação suíça online",
+              "ato de constituição fundação champalimaud",
+              "ato de constituição fundação calouste gulbenkian",
+              "fundação de utilidade pública portuguesa",
+              "fundações de utilidade pública",
+              "criar uma fundação na suíça de forma gratuita"
+            ],
+            "questions": [
+              "criar uma fundação na suíça o que é necessário",
+              "criar uma fundação na suíça como fazer",
+              "criar uma fundação na suíça quando foi criada"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "deduire-dons-impots-geneve-federal",
@@ -3149,7 +5523,113 @@
       "months": [
         11,
         12
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "déduction des dons",
+            "secondary": [
+              "deduction don impot geneve",
+              "déduction des dons impots",
+              "dons déductibles des impôts genève",
+              "déduction dons impôts genève france",
+              "défiscalisation des dons",
+              "défiscalisation des dons aux associations",
+              "dons deduction impot societe",
+              "micro dons déduction impôts"
+            ],
+            "questions": [
+              "déduction des dons comment déclarer aux impots",
+              "déduction des dons quand déclarer",
+              "comment déclarer des dons aux associations",
+              "comment déclarer des dons",
+              "comment déduire dons des impôts",
+              "déduction des dons c'est quoi en suisse",
+              "comment fonctionne la défiscalisation des dons"
+            ]
+          },
+          "en": {
+            "primary": "tax deductible donations switzerland",
+            "secondary": [
+              "tax deductible donations switzerland tax",
+              "charitable donations tax relief ireland",
+              "charitable donations tax relief self employed",
+              "donation receipt switzerland template",
+              "charitable donations tax relief limited companies",
+              "charitable donations tax relief sole trader",
+              "charitable giving tax relief",
+              "charitable donation tax deduction",
+              "donation receipt switzerland tax return"
+            ],
+            "questions": [
+              "what is tax deductible donations",
+              "is a donation to an overseas charity tax deductible",
+              "tax deductible donations switzerland what is it",
+              "tax deductible donations switzerland why is it important",
+              "are foreign charitable donations tax deductible",
+              "tax deductible donations switzerland when working",
+              "tax deductible donations switzerland why not",
+              "tax deductible donations switzerland how to"
+            ]
+          },
+          "de": {
+            "primary": "spenden steuerabzug",
+            "secondary": [
+              "steuerabzug spenden schweiz",
+              "steuerabzug spenden kanton zürich",
+              "steuerabzug spenden ohne beleg",
+              "spenden von steuern abziehen schweiz",
+              "spenden steuern abziehen ohne beleg schweiz",
+              "spenden steuerabzugsfähig",
+              "spendenbescheinigung formular ausfüllbar",
+              "spendenbescheinigung ab welchem betrag 2026",
+              "spendenbescheinigung schweiz",
+              "spendenbescheinigung vorlage schweiz"
+            ],
+            "questions": [
+              "spenden steuerabzug warum schweiz",
+              "kann man spenden von den steuern abziehen schweiz",
+              "spenden steuerabzug was ist das",
+              "spenden steuerabzug wie lange",
+              "spenden steuerabzug wann zahlen"
+            ]
+          },
+          "es": {
+            "primary": "certificado de donación",
+            "secondary": [
+              "deduccion fiscal por donaciones ong",
+              "deducción donaciones suiza irpf",
+              "deduccion fiscal donaciones",
+              "donaciones deducibles suiza renta",
+              "deducción fiscal donaciones comunidad valenciana",
+              "certificado de donación modelo",
+              "certificado de donación para descuento tributario",
+              "certificado de donación cruz roja"
+            ],
+            "questions": [
+              "donaciones deducibles suiza cómo tributan",
+              "donaciones deducibles suiza cuándo se paga"
+            ]
+          },
+          "pt": {
+            "primary": "doações dedutíveis suíça",
+            "secondary": [
+              "dedução doações suíça para portugal",
+              "dedução doações suíças",
+              "recibo de doação de imóvel",
+              "recibo de doação simples word",
+              "doações dedutíveis suíça para venda",
+              "recibo de doação em dinheiro para pessoa física",
+              "recibo de doação de terreno de pai para filho"
+            ],
+            "questions": [
+              "doações dedutíveis suíça como declarar",
+              "doações dedutíveis suíça o que é necessário"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "obligations-annuelles-fondation-surveillance",
@@ -3254,7 +5734,106 @@
       "officialSources": [
         "https://www.ncsc.admin.ch/ncsc/fr/home.html",
         "https://www.fedpol.admin.ch/fedpol/fr/home.html"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "fraude au président",
+            "secondary": [
+              "jurisprudence faux conseiller bancaire",
+              "fraude bancaire que faire",
+              "victime de fraude bancaire que faire",
+              "lutte contre la fraude bancaire",
+              "risque de fraude banque",
+              "arnaque au conseiller bancaire",
+              "arnaque sur compte bancaire que faire",
+              "arnaque banque téléphone",
+              "arnaque à la banque",
+              "avocat spécialisé fraude bancaire"
+            ],
+            "questions": [
+              "que faire en cas de fraude bancaire",
+              "que fait un conseiller bancaire",
+              "que choisir arnaque au faux conseiller",
+              "arnaque bancaire quels recours",
+              "comment changer de conseiller bancaire"
+            ]
+          },
+          "en": {
+            "primary": "ceo fraud",
+            "secondary": [
+              "impersonation scam red flags",
+              "government impersonation scam advisory",
+              "bank on ip scam",
+              "scam transactions and bank responsibility",
+              "bank scams to watch out for",
+              "cheating by impersonation bns",
+              "banks responsibility in fraud scams",
+              "banking scams recently by phone",
+              "new bank scam warning",
+              "ceo fraud definition"
+            ],
+            "questions": [
+              "is impersonating a bank employee illegal",
+              "what is impersonation fraud",
+              "is bank on yourself a scam",
+              "is a bank responsible for scammed money",
+              "what is impersonation fraud coverage"
+            ]
+          },
+          "de": {
+            "primary": "ceo betrug",
+            "secondary": [
+              "anwalt für bank betrug",
+              "telefonbetrug melden schweiz",
+              "ceo betrug bedeutung",
+              "ceo betrug anderer name",
+              "ceo betrugsmasche"
+            ],
+            "questions": []
+          },
+          "es": {
+            "primary": "fraude del ceo",
+            "secondary": [
+              "reclamación al banco por estafa",
+              "banco españa billete presuntamente falso",
+              "banco estado denuncia estafa",
+              "billetes presuntamente falsos banco de españa",
+              "banco españa presunto falso",
+              "abogado estafa fraude barcelona",
+              "denunciar estafa por transferencia bancaria",
+              "estafeta hablar con un asesor",
+              "estafa y fraude diferencias",
+              "fraude del ceo pasos"
+            ],
+            "questions": [
+              "atestado falso como proceder",
+              "como saber si un boleto es falso",
+              "fraude del ceo como prevenir",
+              "cómo identificar una estafa",
+              "que pasa cuando fallece un empleado",
+              "que es el fraude del ceo",
+              "como verificar boleto falso"
+            ]
+          },
+          "pt": {
+            "primary": "fraude do ceo",
+            "secondary": [
+              "burla com fraude bancária código penal",
+              "diferença entre burla e fraude",
+              "ceo fraude betekenis",
+              "burla falso funcionário bancário",
+              "burla telefónica suíça"
+            ],
+            "questions": [
+              "como proceder em caso de burla",
+              "que es el fraude del ceo",
+              "qué es el fraude del ceo en ingeniería social"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "documents-essentiels-famille-conserver-numeriser",
@@ -3306,7 +5885,107 @@
       "officialSources": [
         "https://www.ch.ch/fr/",
         "https://www.edoeb.admin.ch/edoeb/fr/home.html"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "documents à conserver",
+            "secondary": [
+              "documents à conserver durée",
+              "documents à conserver gouv fr",
+              "liste des documents à conserver et durée",
+              "documents à conserver combien de temps",
+              "durée conservation documents particuliers",
+              "les documents que j'ai souhaité conserver",
+              "documents à conserver après décès des parents",
+              "durée conservation documents service public",
+              "documents à conserver après succession",
+              "conserver les documents pendant x années"
+            ],
+            "questions": [
+              "comment conserver un document important",
+              "quelle durée de conservation des documents"
+            ]
+          },
+          "en": {
+            "primary": "important family documents",
+            "secondary": [
+              "length of time to keep documents",
+              "keep documents for 7 years",
+              "important family documents checklist",
+              "digital document storage solutions",
+              "family important document organizer",
+              "digital document store"
+            ],
+            "questions": [
+              "how long to keep important documents",
+              "how long to retain documents",
+              "how long should you keep legal documents"
+            ]
+          },
+          "de": {
+            "primary": "dokumente digitalisieren",
+            "secondary": [
+              "aufbewahrungsfrist private unterlagen",
+              "aufbewahrungsfrist privatpersonen",
+              "unterlagen aufbewahren 10 jahre",
+              "dokumente digitalisieren privat",
+              "aufbewahrungsfristen für unterlagen privat",
+              "zur aufbewahrung in ihren unterlagen",
+              "aufbewahrung von unterlagen privat",
+              "private aufbewahrungsfristen für dokumente",
+              "dokumente digitalisieren lassen münchen",
+              "unterlagen von bewerbern aufbewahren"
+            ],
+            "questions": [
+              "wie lange unterlagen aufbewahren privat",
+              "wie lange müssen unterlagen aufbewahrt werden",
+              "wie lange muss man was aufbewahren",
+              "wie lange dokumente aufbewahren",
+              "welche unterlagen sind aufbewahrungspflichtig",
+              "ab wann beginnt aufbewahrungsfrist"
+            ]
+          },
+          "es": {
+            "primary": "cuánto tiempo guardar documentos",
+            "secondary": [
+              "cuánto tiempo guardar documentos empresa",
+              "tiempo de guardar documentos",
+              "tiempo obligatorio para guardar documentación",
+              "cuantos años hay que guardar la documentación",
+              "obligación de guardar documentos por 10 años",
+              "nombre de algo que guarda documentos",
+              "cuánto tiempo se debe archivar un documento",
+              "por quanto tempo guardar documentos",
+              "digitalizar documentos windows 11",
+              "digitalizar documentos vucem"
+            ],
+            "questions": [
+              "como guardar en mis documentos",
+              "donde guardar documentos importantes",
+              "como guarda los documentos"
+            ]
+          },
+          "pt": {
+            "primary": "quanto tempo guardar documentos",
+            "secondary": [
+              "quanto tempo guardar documentos empresa",
+              "tempo para guardar documentos",
+              "tempo de guarda de documentos da empresa",
+              "período de guarda de documentos",
+              "digitalizar documentos na impressora hp",
+              "digitalizar documentos online",
+              "digitalizar documentos epson l3250",
+              "cuánto tiempo se deben guardar los documentos"
+            ],
+            "questions": [
+              "qual o prazo para guardar documentos fiscais",
+              "onde guardar documentos em casa"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "heritage-numerique-comptes-en-ligne-deces",
@@ -3359,7 +6038,112 @@
         "https://www.edoeb.admin.ch/edoeb/fr/home.html",
         "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
         "https://www.ch.ch/fr/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "héritage numérique",
+            "secondary": [
+              "décès et comptes bancaires",
+              "comptes bancaires en cas de deces",
+              "compte commun et décès",
+              "qu'est ce qu'un héritage",
+              "compte commun en cas de deces",
+              "décès base de données en ligne",
+              "tout savoir sur l'heritage",
+              "décès famille en ligne directe",
+              "règles en matière d'héritage",
+              "avis de décès en ligne"
+            ],
+            "questions": [
+              "comment fonctionne un héritage",
+              "comment savoir si j'ai un héritage"
+            ]
+          },
+          "en": {
+            "primary": "digital inheritance",
+            "secondary": [
+              "safe4 digital inheritance vault",
+              "digital inheritance plan",
+              "access to online accounts after death",
+              "digital estate planning tools",
+              "bank accounts after death",
+              "digital estate planning initiatives pty ltd",
+              "accessing bank account after death",
+              "checking account after death",
+              "payment on death accounts",
+              "bank account after someone dies"
+            ],
+            "questions": [
+              "what is inheritance in computer science",
+              "what is data inheritance",
+              "how to close bank account after death",
+              "how to find accounts when someone dies",
+              "will for after death online service",
+              "who can access bank account after death",
+              "accessing bank accounts when someone dies"
+            ]
+          },
+          "de": {
+            "primary": "digitaler nachlass",
+            "secondary": [
+              "digitaler nachlass regeln",
+              "digitaler nachlass bestattung wien",
+              "digitaler nachlass whatsapp konto löschen",
+              "online konten todesfall",
+              "kryptowährungen erben"
+            ],
+            "questions": [
+              "digitaler nachlass was ist das",
+              "was ist ein nachlass",
+              "was gehört zu einem digitalen nachlass",
+              "was zählt zum digitalen nachlass",
+              "was versteht man unter nachlass"
+            ]
+          },
+          "es": {
+            "primary": "herencia digital",
+            "secondary": [
+              "en qué consiste la herencia",
+              "herencia digital apple",
+              "certificado digital herencia yacente",
+              "definición de herencia en programación",
+              "imagen de la herencia",
+              "herencia en los humanos",
+              "para que sirve la herencia",
+              "porción disponible de la herencia",
+              "el significado de herencia",
+              "concepto de la herencia"
+            ],
+            "questions": [
+              "que es una herencia",
+              "qué es una herencia en programación",
+              "quién recibe la herencia"
+            ]
+          },
+          "pt": {
+            "primary": "herança digital",
+            "secondary": [
+              "herança digital stj",
+              "erick regis herança digital",
+              "herança digital controvérsias e alternativas",
+              "herança digital e direito sucessório",
+              "artigos sobre herança digital",
+              "a herança resumo do dia",
+              "conceito de herança em programação",
+              "significado da palavra herança"
+            ],
+            "questions": [
+              "como funciona a herança",
+              "o que é herança",
+              "o que é herança na programação",
+              "o que significa herança",
+              "o que é herança cultural"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "protection-donnees-foyer-employeur-lpd",
@@ -3727,7 +6511,105 @@
       "officialSources": [
         "https://www.ge.ch/organisation/office-cantonal-energie",
         "https://www.bfe.admin.ch/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "pompe à chaleur subvention",
+            "secondary": [
+              "tout savoir sur la rénovation énergétique",
+              "plan de rénovation énergétique des bâtiments",
+              "subvention pour les rénovations",
+              "subvention gouvernementale pour rénovation",
+              "aide rénovation énergétique immeuble",
+              "guide de la rénovation énergétique",
+              "subvention pour rénovation énergétique maison",
+              "liste des travaux de rénovation énergétique",
+              "qu'est ce que la rénovation énergétique",
+              "pompe à chaleur subvention état"
+            ],
+            "questions": [
+              "quelles aides pour rénovation énergétique",
+              "rénovation énergétique c'est quoi"
+            ]
+          },
+          "en": {
+            "primary": "renovation rates during subsidy",
+            "secondary": [
+              "heat pump subsidy uk",
+              "energy innovation grant program",
+              "government heat pump scheme",
+              "nz govt heat pump subsidy",
+              "heat pumps subsidy advice unit",
+              "government subsidy for heat pumps",
+              "lift modernisation subsidy scheme"
+            ],
+            "questions": []
+          },
+          "de": {
+            "primary": "das gebäudeprogramm",
+            "secondary": [
+              "das gebäudeprogramm zürich",
+              "das gebäudeprogramm portal",
+              "das gebäudeprogramm aargau",
+              "das gebäudeprogramm zh",
+              "das gebäudeprogramm ar",
+              "das gebäudeprogramm zug",
+              "wärmepumpe förderung 2026",
+              "das gebäudeprogramm bl",
+              "das gebäudeprogramm bern",
+              "das gebäudeprogramm solothurn"
+            ],
+            "questions": [
+              "wärmepumpe förderung wie lange noch",
+              "was definiert ein gebäude",
+              "wo ist das gebäude zu finden",
+              "was ist das für ein gebäude"
+            ]
+          },
+          "es": {
+            "primary": "subvenciones renovación energética suiza",
+            "secondary": [
+              "subvenciones para eficiencia energética",
+              "subvenciones eficiencia energética 2026",
+              "subvención para la energía",
+              "subvenciones energías renovables 2026",
+              "subvenciones gobierno de españa",
+              "fundación suiza para la cooperación técnica",
+              "bomba de calor con recuperación de calor",
+              "bomba de calor de alta eficiencia",
+              "bomba de calor calefaccion"
+            ],
+            "questions": [
+              "bomba de calor que es"
+            ]
+          },
+          "pt": {
+            "primary": "subsídios renovação energética suíça",
+            "secondary": [
+              "subsidio nacional de energía",
+              "subsidio para la energía",
+              "forma de governo da suíça",
+              "subsidios a energías renovables",
+              "regime político da suíça",
+              "sistema de saúde da suíça",
+              "secretaría de energía subsidios",
+              "sistema de bomba de calor",
+              "bomba de calor águas sanitárias",
+              "suiça essências e produtos químicos"
+            ],
+            "questions": [
+              "quem governa a suíça",
+              "como economizar na suica",
+              "quando é verão na suíça",
+              "como pedir a reforma da suica",
+              "o que precisa para ir para suiça",
+              "onde esquiar na suíça"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "autorisation-construire-geneve-suivi-chantier",
@@ -4039,7 +6921,97 @@
       "officialSources": [
         "https://www.fedlex.admin.ch/eli/cc/2019/759/fr",
         "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/"
-      ]
+      ],
+      "researchedKeywords": {
+        "date": "2026-09-30",
+        "perLocale": {
+          "fr": {
+            "primary": "création single family office",
+            "secondary": [
+              "création single family office suisse",
+              "créer un single family office geneve",
+              "family office externalisé suisse",
+              "single family office association switzerland",
+              "family office externalisée"
+            ],
+            "questions": [
+              "création single family office c'est quoi en français",
+              "création single family office comment faire",
+              "création single family office comment ca marche"
+            ]
+          },
+          "en": {
+            "primary": "single family office setup",
+            "secondary": [
+              "single family office structure",
+              "setting up a family office",
+              "single family office setup switzerland tax",
+              "single family office association switzerland",
+              "outsourced family office services",
+              "single family office set up",
+              "single family office setup guide",
+              "jp morgan outsourced family office",
+              "family office locations"
+            ],
+            "questions": [
+              "what is a single family office",
+              "how to set up single family office in singapore",
+              "why set up a family office",
+              "single family office setup what is it",
+              "who offers outsourced family office services",
+              "single family office setup when to invest",
+              "single family office setup how many employees",
+              "single family office setup why is it important"
+            ]
+          },
+          "de": {
+            "primary": "single family office gründen",
+            "secondary": [
+              "single family office gründen schweiz",
+              "ausgelagertes family office schweiz",
+              "ausgelagertes family office",
+              "single family office gründen wann schweiz",
+              "single family office gründen warum so wichtig"
+            ],
+            "questions": [
+              "single family office gründen wann schweiz",
+              "single family office gründen warum so wichtig",
+              "single family office gründen was ist das",
+              "single family office gründen wie lange"
+            ]
+          },
+          "es": {
+            "primary": "crear un single family office",
+            "secondary": [
+              "crear un single family office en suiza",
+              "family office externalizado",
+              "crear single family office suiza",
+              "crear un single family office cómo funciona",
+              "crear un single family office cuándo es"
+            ],
+            "questions": [
+              "crear un single family office cómo funciona",
+              "crear un single family office cuándo es"
+            ]
+          },
+          "pt": {
+            "primary": "criar um single family office",
+            "secondary": [
+              "criar um single family office em portugal",
+              "um single family office",
+              "criar single family office suíça online",
+              "family office externalizado em portugal",
+              "criar single family office suíça"
+            ],
+            "questions": [
+              "criar um single family office como fazer",
+              "criar um single family office quando usar",
+              "o que é um single family office",
+              "criar um single family office o que é isso"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "presenter-famille-family-office-avocat-banquier",

@@ -487,3 +487,151 @@ test("bare URLs are rejected by the SEO checks and stripped by the sanitizer", (
   const out = sanitizeExternalLinks("Voir https://example.com/x et [AFC](https://www.estv.admin.ch/) ou [X](https://evil.example/).", [{ url: "https://www.estv.admin.ch/" }]);
   assert.equal(out, "Voir et [AFC](https://www.estv.admin.ch/) ou X.");
 });
+
+// ─── Autocomplete provider fallback & stored keywords ─────────────────────
+
+const refreshKeywords = require("./refresh-keywords");
+
+// Fake fetcher: per-provider behaviour keyed by host; records requested URLs.
+function fakeFetcher(byHost) {
+  const calls = [];
+  const fetcher = async (url) => {
+    calls.push(url);
+    const host = new URL(url).host;
+    const h = byHost[host];
+    if (!h) return { ok: false, status: 404, text: "" };
+    return typeof h === "function" ? h(url) : h;
+  };
+  return { fetcher, calls };
+}
+const G = "suggestqueries.google.com";
+const B = "api.bing.com";
+const D = "duckduckgo.com";
+
+test("provider parsers: bing osjson, duckduckgo phrases, HTML consent page rejected", () => {
+  const P = kw.AUTOCOMPLETE_PROVIDERS;
+  assert.deepEqual(P.bing.parse(JSON.stringify(["q", ["Rachat LPP", "rachat lpp impôt"]])), ["rachat lpp", "rachat lpp impôt"]);
+  assert.deepEqual(P.duckduckgo.parse(JSON.stringify([{ phrase: "rachat lpp" }, { phrase: "" }, {}])), ["rachat lpp"]);
+  assert.deepEqual(kw.parseDuckDuckGoResponse("<html>"), []);
+  assert.equal(P.google.parse("<html>consent</html>"), null);
+  assert.deepEqual(kw.PROVIDER_ORDER, ["google", "bing", "duckduckgo"]);
+});
+
+test("provider market mapping covers every Ridger market", () => {
+  const got = Object.values(kw.AUTOCOMPLETE_MARKETS).flat().map((m) => [kw.bingMarket(m), kw.ddgRegion(m)]);
+  assert.deepEqual(got, [
+    ["fr-CH", "ch-fr"], ["fr-FR", "fr-fr"],
+    ["en-GB", "uk-en"], ["en-US", "us-en"],
+    ["de-CH", "ch-de"], ["de-DE", "de-de"],
+    ["es-ES", "es-es"],
+    ["pt-PT", "pt-pt"], ["pt-BR", "br-pt"],
+  ]);
+  const url = new URL(kw.AUTOCOMPLETE_PROVIDERS.bing.url("rachat lpp", { hl: "fr", gl: "ch" }));
+  assert.equal(url.searchParams.get("market"), "fr-CH");
+  assert.equal(url.searchParams.get("query"), "rachat lpp");
+});
+
+test("fallback: google blocked → bing; errors logged once per provider; google skipped afterwards", async () => {
+  const { fetcher, calls } = fakeFetcher({
+    [G]: { ok: false, status: 429, text: "" },
+    [B]: (url) => ({ ok: true, status: 200, text: JSON.stringify(["q", [`${new URL(url).searchParams.get("query")} geneve`]]) }),
+  });
+  const logs = [];
+  const state = kw.newResearchState();
+  const r = await kw.collectAutocomplete("fr", ["rachat lpp"], { fetcher, log: (m) => logs.push(m), state });
+  assert.equal(r.provider, "bing");
+  assert.equal(r.results.length, 2);
+  assert.equal(logs.length, 1);
+  assert.match(logs[0], /google 2\/2 requests failed — HTTP 429 ×2 \(fr-CH, fr-FR\)/);
+  assert.ok(state.blocked.has("google"));
+  calls.length = 0;
+  const r2 = await kw.collectAutocomplete("en", ["lpp buy-in"], { fetcher, state });
+  assert.equal(r2.provider, "bing");
+  assert.ok(calls.every((u) => !u.includes(G)), "blocked google not retried");
+});
+
+test("fallback: google + bing empty → duckduckgo; all empty → no provider", async () => {
+  const empty = { ok: true, status: 200, text: JSON.stringify(["q", []]) };
+  const { fetcher } = fakeFetcher({
+    [G]: empty,
+    [B]: empty,
+    [D]: { ok: true, status: 200, text: JSON.stringify([{ phrase: "rachat lpp conditions" }]) },
+  });
+  const r = await kw.collectAutocomplete("fr", ["rachat lpp"], { fetcher });
+  assert.equal(r.provider, "duckduckgo");
+  assert.deepEqual(r.attempts.map((a) => a.provider), ["google", "bing", "duckduckgo"]);
+  const none = await kw.collectAutocomplete("fr", ["rachat lpp"], { fetcher: fakeFetcher({ [G]: empty, [B]: empty, [D]: empty }).fetcher });
+  assert.equal(none.provider, null);
+});
+
+test("researchAllLocales: live → stored researchedKeywords → backlog seeds, with source", async () => {
+  const item = {
+    seeds: { fr: "rachat lpp", en: "lpp buy-in", de: "pk einkauf", es: "aportación lpp", pt: "resgate lpp" },
+    targetKeywords: { fr: ["rachat lpp"], en: ["lpp buy-in"], de: ["pk einkauf"], es: ["aportación lpp"], pt: ["resgate lpp"] },
+    researchedKeywords: {
+      date: "2026-09-30",
+      perLocale: { en: { primary: "lpp buy-in", secondary: ["lpp buy-in tax", "lpp buy-in rules"], questions: ["how does an lpp buy-in work"] } },
+    },
+  };
+  const { fetcher } = fakeFetcher({
+    [G]: (url) => {
+      const hl = new URL(url).searchParams.get("hl");
+      const q = new URL(url).searchParams.get("q").trim();
+      return hl === "fr"
+        ? { ok: true, status: 200, text: JSON.stringify([q, ["rachat lpp conditions", "rachat lpp impot"]]) }
+        : { ok: false, status: 403, text: "" };
+    },
+  });
+  const out = await kw.researchAllLocales(item, { fetcher, delayMs: 0 });
+  assert.equal(out.fr.stats.source, "autocomplete:google");
+  assert.equal(out.en.stats.source, "stored 2026-09-30");
+  assert.deepEqual(out.en.secondary, ["lpp buy-in tax", "lpp buy-in rules"]);
+  assert.deepEqual(out.en.questions, ["how does an lpp buy-in work"]);
+  assert.equal(out.de.stats.source, "backlog-fallback");
+  const noStored = await kw.researchAllLocales(item, { fetcher, delayMs: 0, useStored: false });
+  assert.equal(noStored.en.stats.source, "backlog-fallback");
+});
+
+test("refresh-keywords: stores only live results, keeps previous locales", () => {
+  const item = { researchedKeywords: { date: "2026-01-01", perLocale: { de: { primary: "pk einkauf", secondary: ["a b"], questions: [] } } } };
+  const research = {
+    fr: { primary: "rachat lpp", secondary: ["rachat lpp conditions"], questions: ["comment fonctionne le rachat lpp"], stats: { source: "autocomplete:bing", uniqueCandidates: 3 } },
+    de: { primary: "x", secondary: [], questions: [], stats: { source: "backlog-fallback", uniqueCandidates: 0 } },
+  };
+  assert.deepEqual(refreshKeywords.applyResearch(item, research, "2026-09-30"), ["fr"]);
+  assert.equal(item.researchedKeywords.date, "2026-09-30");
+  assert.equal(item.researchedKeywords.perLocale.de.primary, "pk einkauf");
+  assert.deepEqual(item.researchedKeywords.perLocale.fr.questions, ["comment fonctionne le rachat lpp"]);
+});
+
+test("probeDemand falls through a blocked provider", async () => {
+  const { fetcher } = fakeFetcher({
+    [G]: { ok: false, status: 429, text: "" },
+    [B]: { ok: true, status: 200, text: JSON.stringify(["q", ["rachat lpp conditions", "rachat lpp prix"]]) },
+  });
+  const state = kw.newResearchState();
+  const demand = await kw.probeDemand({ seeds: { fr: "rachat lpp" } }, { fetcher, state });
+  assert.ok(demand > 0);
+  assert.ok(state.blocked.has("google"));
+});
+
+test("junk suggestions (dictionary/word games/templates) are excluded", () => {
+  for (const s of ["réunion de famille mots fléchés", "gouvernance synonyme", "family assembly what is $sp", "rachat lpp calculateur", "family office jobs"]) {
+    assert.ok(kw.isExcluded(s), s);
+  }
+  assert.equal(kw.isExcluded("rachat lpp conditions"), false);
+});
+
+test("stored keywords are re-filtered and topped up from backlog targets", () => {
+  const item = {
+    targetKeywords: { fr: ["rachat lpp", "rachat lpp retraite", "rachat lpp impôt", "rachat lpp divorce"] },
+    researchedKeywords: {
+      date: "2026-09-30",
+      perLocale: { fr: { primary: "rachat lpp", secondary: ["rachat lpp conditions", "rachat lpp mots fléchés", "rachat lpp canada"], questions: ["rachat lpp synonyme", "comment faire un rachat lpp"] } },
+    },
+  };
+  const s = kw.storedLocaleKeywords(item, "fr", { minSecondary: 3 });
+  assert.deepEqual(s.secondary, ["rachat lpp conditions", "rachat lpp retraite", "rachat lpp impôt"]);
+  assert.deepEqual(s.questions, ["comment faire un rachat lpp"]);
+  assert.equal(kw.storedLocaleKeywords({ researchedKeywords: { perLocale: {} } }, "fr"), null);
+});

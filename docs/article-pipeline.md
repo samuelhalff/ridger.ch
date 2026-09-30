@@ -24,6 +24,8 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
    - no near-duplicate of any existing article (the same all-time check as `validate-latest-article-guardrails.js`).
    Priority, seasonality (`months`), under-used categories and audience alternation raise the score. For the top 3, a cheap Google-autocomplete demand probe (fr-CH + fr-FR) picks the winner.
 2. **Keyword research, before any writing.** For each locale, Google autocomplete (`suggestqueries.google.com`, `client=firefox`) is queried in these markets: fr-CH/fr-FR, en-GB/en-US, de-CH/de-DE, es-ES, pt-PT/pt-BR. The queries are the seed, the head term and question expansions ("<head> comment", "comment <head>", …).
+   - **Providers and fallback:** Google blocks datacenter IPs (GitHub Actions runners), so providers are tried in order Google → Bing (`api.bing.com/osjson.aspx`, market fr-CH …) → DuckDuckGo (`duckduckgo.com/ac`, kl ch-fr …). A provider whose every request fails is skipped for the rest of the run; failures are logged once per provider and locale (e.g. `google 26/26 requests failed — HTTP 429 ×26 (fr-CH, fr-FR)`).
+   - **Stored keywords:** when live research yields no candidates for a locale, the item's `researchedKeywords.perLocale[locale]` (written by `npm run keywords:refresh` from a normal machine) is used, else the backlog seeds/targets. The log prints `Keyword source: fr=autocomplete:google, en=stored 2026-09-30, de=backlog-fallback, …`.
    - **Filters:** pricing, jobs, tool and navigational queries; stale years; truncated tokens; prefix echoes; location variants; ark-fid.ch core terms (`arkCoreTerms`, the anti-cannibalisation guard).
    - **Primary keyword:** the backlog head term when autocomplete confirms it, otherwise the strongest seed-covering suggestion.
    - **Secondary keywords:** 5–10 long tails, plus the real question queries.
@@ -120,6 +122,7 @@ Repository **variables** (all optional; defaults in brackets):
 
 ```
 npm run articles:plan        # topic + live keyword research only, no Azure, writes nothing
+npm run keywords:refresh     # pre-research keywords for all todo items into the backlog (run locally, not on CI; ~1 req/300 ms, 20 min cap; -- --missing-only to resume, -- --id <id> for one)
 npm run articles:dry-run     # full generation + validation, writes nothing (needs Azure env)
 npm run articles:generate    # full run, appends to the 5 locales
 npm run validate:article-seo -- --slug <slug>

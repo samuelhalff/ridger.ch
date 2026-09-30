@@ -10,8 +10,10 @@
  *                   never the same category twice in a row, no theme repeat in
  *                   the last 4, no near-duplicate), demand-weighted between
  *                   the top 3 candidates using live autocomplete richness.
- *   2. Keywords   — Google autocomplete per locale (fr-CH/fr-FR, en-GB/en-US,
- *                   de-CH/de-DE, es-ES, pt-PT/pt-BR) → primary + 5–10
+ *   2. Keywords   — autocomplete per locale (Google, else Bing, else
+ *                   DuckDuckGo; fr-CH/fr-FR, en-GB/en-US, de-CH/de-DE,
+ *                   es-ES, pt-PT/pt-BR), else the item's researchedKeywords
+ *                   (npm run keywords:refresh), else seeds → primary + 5–10
  *                   secondary + question keywords; best-effort Google Trends
  *                   "trending now" CH signal. Never fails the run.
  *   3. Research   — Azure AI Foundry agent (web search, AZURE_AGENT_*), else
@@ -77,12 +79,16 @@ const {
 const {
   alignKeywordSets,
   fetchTrendSignal,
+  newResearchState,
   probeDemand,
   researchAllLocales,
   slugify,
   significantTokens,
 } = require("./lib/keywordResearch");
 const rules = require("./lib/ridgerArticleRules");
+// Shared across the demand probe and keyword research: a provider that failed
+// every request (Google on CI runners) is skipped for the rest of the run.
+const KEYWORD_RESEARCH_STATE = newResearchState();
 const { writeJsonFilesAtomically } = require("./lib/atomicJsonWrite");
 
 const args = new Set(process.argv.slice(2));
@@ -677,7 +683,7 @@ async function selectTopic({ backlog, frArticles }) {
   if (!ranked.length) throw new Error("No eligible backlog item — add topics to data/article-backlog.json");
   const demand = {};
   for (const c of ranked.slice(0, 3)) {
-    demand[c.item.id] = OFFLINE_MODE ? 0 : await probeDemand(c.item, { avoidTerms: backlog.arkCoreTerms?.fr || [] });
+    demand[c.item.id] = OFFLINE_MODE ? 0 : await probeDemand(c.item, { avoidTerms: backlog.arkCoreTerms?.fr || [], state: KEYWORD_RESEARCH_STATE, log });
   }
   const choice = chooseWithDemand(ranked, demand);
   log(`🎯 Topic: ${choice.item.id} [${choice.item.category}/${choice.item.theme}] score=${choice.total.toFixed(1)} demand=${choice.demand}`);
@@ -685,11 +691,12 @@ async function selectTopic({ backlog, frArticles }) {
 }
 
 async function researchKeywords({ item, backlog }) {
-  log("🔎 Keyword research (Google autocomplete, 5 locales)…");
-  const raw = await researchAllLocales(item, { avoidTermsByLocale: backlog.arkCoreTerms || {} });
+  log("🔎 Keyword research (autocomplete Google → Bing → DuckDuckGo, else stored, else seeds; 5 locales)…");
+  const raw = await researchAllLocales(item, { avoidTermsByLocale: backlog.arkCoreTerms || {}, log, state: KEYWORD_RESEARCH_STATE });
   for (const l of LOCALES) {
     log(`   ${l} [${raw[l].markets.join(", ")}] primary="${raw[l].primary}" secondary=${raw[l].secondary.length} questions=${raw[l].questions.length} (${raw[l].stats.source}, ${raw[l].stats.suggestions} suggestions)`);
   }
+  log(`🔑 Keyword source: ${LOCALES.map((l) => `${l}=${raw[l].stats.source}`).join(", ")}`);
   const { aligned, count, ok } = alignKeywordSets(raw);
   // Hard floor of 3 (below that the H2/keyword checks become meaningless);
   // 3–4 only warns so a temporary autocomplete block on CI runners (backlog
