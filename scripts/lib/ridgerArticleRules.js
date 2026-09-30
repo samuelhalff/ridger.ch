@@ -321,6 +321,203 @@ function dedupeViolations(list) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────
+// Keyword naturalness (no raw search queries in the prose)
+// ─────────────────────────────────────────────────────────────────────────
+
+// Tokens that are proper nouns / acronyms: when a keyword containing one of
+// them shows up in the text with that token in lowercase ("rachat lpp",
+// "pension fund buy in switzerland", "pk einkauf"), it is a raw query pasted
+// verbatim, not natural writing. Accent-stripped, lowercase.
+const PROPER_TOKENS = new Set([
+  // countries / places
+  "switzerland", "swiss", "suisse", "schweiz", "schweizer", "suiza", "suizo", "suica", "suico",
+  "svizzera", "geneve", "geneva", "genf", "ginebra", "genebra", "zurich", "lausanne", "bern", "berne",
+  "basel", "bale", "zug", "zoug", "ticino", "tessin", "vaud", "waadt", "valais", "wallis", "lucerne", "luzern",
+  "france", "germany", "deutschland", "allemagne", "espana", "spain", "espagne", "portugal", "italy", "italie",
+  "europe", "usa", "uk", "london", "londres",
+  // Swiss social-security / tax acronyms
+  // (no 2-letter ambiguous words such as "eu"/"ue"/"lp", no "sem" — Portuguese "without")
+  "lpp", "bvg", "pk", "avs", "ahv", "lppi", "lppsa", "opp2", "bvv2", "lifd", "dbg", "lhid", "afc", "estv",
+  "finma", "tva", "mwst", "iva", "vat",
+]);
+
+// Meta-phrases that talk about searches / keywords instead of the subject.
+// Matched on accent-stripped lowercase text.
+const SEARCH_META_PHRASES = [
+  // fr
+  /\b(recherches?|requetes?) (comme|du type|de type|telles? que|populaires?|frequentes?)\b/,
+  /\b(les )?internautes (recherchent|cherchent|tapent|demandent)\b/,
+  /\b(vous|on) (recherchez|cherchez|tapez|tape|recherche) (souvent )?(sur (google|internet)|en ligne|« |")/,
+  /\bmots?-cles?\b/,
+  /\b(la|cette) (requete|recherche) «/,
+  // en
+  /\b(searches|search queries|queries|search terms?) (like|such as|for)\b/,
+  // "seeking" verbs only count with an online marker (people search for a flat ≠ web search)
+  /\bpeople (often |frequently |commonly )?(google|search (online|on google|the web|the internet))\b/,
+  /\b(if|when) you (google|search (online|on google|the web|for it online))\b/,
+  /\bkeywords?\b/,
+  /\b(search|query) "/,
+  // de
+  /\b(suchanfragen?|suchbegriffe?|suchbegriffen|schlusselworte?r?|schlusselbegriffe?)\b/,
+  /\b(googelt|googeln|gegoogelt)\b/,
+  /\b(online|im internet|bei google|im netz) .{0,40}\b(sucht|suchen|gesucht)\b/,
+  /\b(sucht|suchen) .{0,40}\b(online|im internet|bei google|im netz)\b/,
+  // es
+  /\b(busquedas?|consultas?) (como|del tipo|de tipo|populares|frecuentes)\b/,
+  /\b(terminos? de busqueda|palabras? clave)\b/,
+  /\b(buscan|busca|buscamos) (en google|en internet|online)\b/,
+  /\bgooglean?\b/,
+  // pt
+  /\b(pesquisas?|buscas?) (como|do tipo|de tipo|populares|frequentes)\b/,
+  /\b(termos? de pesquisa|palavras?-chave|palavras? chave)\b/,
+  /\b(pesquisa|pesquisam|procura|procuram) (no google|na internet|online)\b/,
+  /\b(quem|muitos|as pessoas) (pesquisa|pesquisam)\b/,
+  /\bgoogla(m)?\b/,
+];
+
+// Words that are correct both with and without an accent (es/pt/fr).
+const AMBIGUOUS_ACCENTLESS = new Set(["como", "esta", "estas", "mais", "sera", "entre", "publico", "publica", "pratica", "calculo", "deposito", "credito", "politica", "valida", "unica", "economica"]);
+
+function normalizeForKeyword(s) {
+  return stripAccents(String(s || "").toLowerCase())
+    .replace(/[’`']/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+/** Text of an article without link targets and bare URLs (anchors kept). */
+function proseFields(article) {
+  return stripMarkdownLinks(articleTextFields(article));
+}
+
+/** Accented spellings used in the article, keyed by their accent-free form. */
+function accentedVocabulary(text) {
+  const vocab = new Map();
+  for (const w of String(text || "").toLowerCase().match(/[\p{L}]+/gu) || []) {
+    const bare = stripAccents(w);
+    if (bare !== w) vocab.set(bare, w);
+  }
+  return vocab;
+}
+
+/** Bold (**x**, __x__) and quoted («x», “x”, „x“, "x") phrases. */
+function emphasizedPhrases(text) {
+  const out = [];
+  const src = String(text || "");
+  const patterns = [
+    [/\*\*([^*\n]+?)\*\*/g, "bold"],
+    [/(?<![\w])__([^_\n]+?)__(?![\w])/g, "bold"],
+    [/«\s*([^»\n]+?)\s*»/g, "quoted"],
+    [/“([^”\n]+?)”/g, "quoted"],
+    [/„([^“”\n]+?)[“”]/g, "quoted"],
+    [/(?<![\w])"([^"\n]+?)"(?![\w])/g, "quoted"],
+  ];
+  for (const [re, kind] of patterns) {
+    for (const m of src.matchAll(re)) out.push({ kind, phrase: m[1].trim() });
+  }
+  return out;
+}
+
+function hasLowercaseProperToken(phrase) {
+  return (String(phrase).match(/[\p{L}\p{N}]+/gu) || []).some(
+    (w) => PROPER_TOKENS.has(stripAccents(w)) && w === w.toLowerCase(),
+  );
+}
+
+function containsWords(hay, needle) {
+  return ` ${hay} `.includes(` ${needle} `);
+}
+
+/**
+ * Reject keyword stuffing: raw search queries pasted into the prose.
+ *   KW_BOLD_QUERY     — a bold/quoted phrase that is (or contains) a keyword of
+ *                       ≥ 2 words, written all-lowercase or missing the accents
+ *                       the article itself uses; any bolded keyword at all.
+ *   KW_RAW_QUERY      — a keyword containing a proper noun / acronym appears
+ *                       verbatim with that token in lowercase ("rachat lpp").
+ *   KW_SEARCH_META    — sentences that talk about searches / keywords.
+ * @returns {Array<{code:string,message:string,excerpt:string}>}
+ */
+function checkKeywordNaturalness(article, keywords = {}) {
+  const violations = [];
+  const kws = [keywords.primary, ...(Array.isArray(keywords.secondary) ? keywords.secondary : [])]
+    .filter((k) => typeof k === "string" && k.trim())
+    .map((k) => ({ raw: k.trim(), norm: normalizeForKeyword(k) }))
+    .filter((k) => k.norm);
+  const text = proseFields(article);
+  const vocab = accentedVocabulary(text);
+
+  // (a) bold / quoted keyword phrases
+  for (const { kind, phrase } of emphasizedPhrases(text)) {
+    const norm = normalizeForKeyword(phrase);
+    if (!norm) continue;
+    const words = norm.split(" ");
+    const hit = kws.find((k) => norm === k.norm || (k.norm.includes(" ") && containsWords(norm, k.norm)));
+    const allLower = phrase === phrase.toLowerCase() && /\p{L}/u.test(phrase);
+    const missingAccents = (phrase.toLowerCase().match(/[\p{L}]+/gu) || []).some(
+      // ≥ 4 letters: skips function words that exist both ways (ou/où, que/qué)
+      (w) => w.length >= 4 && stripAccents(w) === w && vocab.has(w),
+    );
+    let reason = "";
+    if (hit && kind === "bold") reason = `bolded keyword "${hit.raw}" (keywords are never bolded)`;
+    else if (hit && words.length >= 2 && (allLower || missingAccents)) {
+      reason = `quoted raw keyword "${hit.raw}" (${allLower ? "all-lowercase" : "missing accents"})`;
+    } else if (words.length >= 2 && allLower && hasLowercaseProperToken(phrase)) {
+      reason = `${kind} raw search query (lowercase acronym / proper noun)`;
+    } else if (words.length >= 2 && kind === "bold" && missingAccents && allLower) {
+      reason = "bold raw search query (missing accents)";
+    }
+    if (reason) {
+      violations.push({ code: "KW_BOLD_QUERY", message: `${reason} — write it naturally, without emphasis`, excerpt: phrase });
+    }
+  }
+
+  // (b) verbatim keyword with a lowercased proper noun / acronym
+  const tokenRe = /[\p{L}\p{N}]+/gu;
+  const tokens = [...text.matchAll(tokenRe)].map((m) => ({ w: m[0], i: m.index, n: stripAccents(m[0].toLowerCase()) }));
+  for (const k of kws) {
+    const kTokens = k.norm.split(" ");
+    if (kTokens.length < 2) continue;
+    for (let i = 0; i + kTokens.length <= tokens.length; i++) {
+      let match = true;
+      for (let j = 0; j < kTokens.length; j++) {
+        if (tokens[i + j].n !== kTokens[j]) { match = false; break; }
+      }
+      if (!match) continue;
+      const span = tokens.slice(i, i + kTokens.length);
+      const lowerProper = span.some((t) => PROPER_TOKENS.has(t.n) && t.w === t.w.toLowerCase());
+      // Accent-less spelling of a word the article itself writes with accents
+      // ("deduction impot" next to "déduction", "impôt"): a pasted raw query.
+      const accentLess = span.filter((t) => t.w.length >= 4 && t.w.toLowerCase() === t.n && vocab.has(t.n) && !AMBIGUOUS_ACCENTLESS.has(t.n));
+      if (lowerProper || accentLess.length) {
+        const start = span[0].i;
+        const end = span[span.length - 1].i + span[span.length - 1].w.length;
+        violations.push({
+          code: "KW_RAW_QUERY",
+          message: `keyword "${k.raw}" pasted verbatim ${lowerProper ? "with a lowercase proper noun/acronym" : `without accents (${accentLess.map((t) => vocab.get(t.n)).join(", ")})`} — use the natural form (capitals, accents, hyphens)`,
+          excerpt: text.slice(Math.max(0, start - 40), end + 40).replace(/\s+/g, " ").trim(),
+        });
+        break; // one hit per keyword is enough
+      }
+    }
+  }
+
+  // (c) meta-phrases about searches
+  for (const sentence of splitSentences(text)) {
+    const s = plain(sentence);
+    if (SEARCH_META_PHRASES.some((re) => re.test(s))) {
+      violations.push({
+        code: "KW_SEARCH_META",
+        message: "talks about searches / keywords instead of the subject",
+        excerpt: sentence.slice(0, 220),
+      });
+    }
+  }
+
+  return dedupeViolations(violations);
+}
+
+// ─────────────────────────────────────────────────────────────────────────
 // Markdown structure
 // ─────────────────────────────────────────────────────────────────────────
 
@@ -505,6 +702,11 @@ function checkSeoStructure(article, ctx) {
   const primary = keywords.primary || "";
   const secondary = Array.isArray(keywords.secondary) ? keywords.secondary : [];
   const L = SEO_LIMITS;
+
+  // Keywords written naturally (no raw queries, no bold keywords, no "searches like")
+  for (const v of checkKeywordNaturalness(article, keywords)) {
+    errors.push(`${v.code}: ${v.message}${v.excerpt ? ` — « ${v.excerpt.slice(0, 160)} »` : ""}`);
+  }
 
   // Title / H1
   const title = String(article.title || "");
@@ -750,10 +952,13 @@ module.exports = {
   FAQ_HEADINGS,
   KEY_FACTS_HEADINGS,
   LOCALES,
+  PROPER_TOKENS,
+  SEARCH_META_PHRASES,
   REFERENCES_HEADINGS,
   SEO_LIMITS,
   buildAllowedInternalPaths,
   checkHardRules,
+  checkKeywordNaturalness,
   checkSeoStructure,
   compareNumberParity,
   compareStructure,

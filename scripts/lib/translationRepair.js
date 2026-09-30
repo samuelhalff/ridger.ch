@@ -270,9 +270,9 @@ function requirementsBlock({ frBody, expected, primary }) {
   const urls = [...new Set(expected.map((e) => e.url))];
   return [
     "HARD LIMITS (characters, spaces included — checked by a program, any overflow = rejection):",
-    `- title: ${L.titleMin}–${L.titleMax} characters (aim ≤ ${L.titleMax - 7}). Must contain "${primary}".`,
-    `- seoTitle: ${L.seoTitleMin}–${L.seoTitleMax} characters, WITHOUT the brand (added at render; aim ≤ ${L.seoTitleMax - 5}). Must contain "${primary}".`,
-    `- metaDescription: ${L.metaMin}–${L.metaMax} characters. Must contain "${primary}".`,
+    `- title: ${L.titleMin}–${L.titleMax} characters (aim ≤ ${L.titleMax - 7}). Must contain "${primary}" in its natural written form (accents, capitals, acronyms in caps), not the raw lowercase query.`,
+    `- seoTitle: ${L.seoTitleMin}–${L.seoTitleMax} characters, WITHOUT the brand (added at render; aim ≤ ${L.seoTitleMax - 5}). Must contain "${primary}" in its natural written form (accents, capitals, acronyms in caps), not the raw lowercase query.`,
+    `- metaDescription: ${L.metaMin}–${L.metaMax} characters. Must contain "${primary}" in its natural written form (accents, capitals, acronyms in caps), not the raw lowercase query.`,
     `- imageAlt: 40–120 characters.`,
     "REQUIRED COUNTS in content (identical to the French body):",
     `- ## headings: ${c.h2} · ### headings: ${c.h3} · FAQ questions: ${c.faq} · key-facts bullets: ${c.keyFacts}`,

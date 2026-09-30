@@ -161,6 +161,27 @@ const HARD_RULES_PROMPT = [
   "- Les projets de loi, consultations ou accords non ratifiés sont présentés comme tels (« projet », « en consultation »), jamais comme du droit en vigueur.",
 ].join("\n");
 
+// Keywords are raw search queries (lowercase, no accents, word salad): they
+// steer the topic, never the wording. Enforced by
+// rules.checkKeywordNaturalness (KW_BOLD_QUERY / KW_RAW_QUERY / KW_SEARCH_META).
+const KEYWORD_USAGE_PROMPT = [
+  "USAGE DES MOTS-CLÉS (contrôlé automatiquement, tout manquement = rejet) :",
+  "- Les mots-clés fournis sont des requêtes brutes (minuscules, sans accents, mots juxtaposés). Ne les recopie JAMAIS tels quels : écris leur forme naturelle et grammaticale, avec accents, majuscules, sigles en capitales (LPP, AVS, PK, BVG) et noms propres capitalisés (Suisse, Genève).",
+  "- Exemple : « rachat lpp deduction impot » → « la déduction fiscale d'un rachat LPP » ; « rachat lpp 3 ans avant la retraite » → « un rachat LPP dans les 3 ans précédant la retraite ».",
+  "- Jamais de mot-clé en gras (**…**) ni entre guillemets. Pas de gras pour mettre un terme en avant.",
+  "- Ne parle jamais des recherches ou des internautes (« les recherches comme… », « la question « … » », « mots-clés ») : réponds directement au sujet.",
+  "- Si un mot-clé ne peut pas être intégré naturellement (hors sujet, autre pays, requête incohérente), ignore-le plutôt que de le coller en fin de phrase.",
+].join("\n");
+
+const KEYWORD_USAGE_PROMPT_EN = [
+  "KEYWORD USAGE (checked by a program, any breach = rejection):",
+  "- The keywords are raw search queries (lowercase, no accents, word salad). NEVER paste them verbatim: write their natural, grammatical form in the target language, with correct accents, capitals, acronyms in caps (LPP, BVG, PK, AHV/AVS) and capitalised proper nouns (Switzerland, Zürich), hyphenated where the language requires it (\"PK-Einkauf\", \"pension fund buy-in\").",
+  "- Example: \"pension fund buy in switzerland\" → \"a pension fund buy-in in Switzerland\"; \"pk einkauf steuern abziehen\" → \"den PK-Einkauf von den Steuern abziehen\".",
+  "- Never bold (**…**) or quote a keyword. Do not use bold to highlight terms.",
+  "- Never talk about searches or keywords (\"searches like…\", \"the question '…'\", \"Suchanfragen\", \"búsquedas como\", \"pesquisas como\"): answer the subject directly.",
+  "- If a keyword cannot be used naturally (off-topic, another country, incoherent query), skip it instead of tacking it onto a sentence.",
+].join("\n");
+
 const VOICE_PROMPT = [
   "VOIX RIDGER (family office suisse, discret) :",
   "- Chaleureuse, discrète, précise. Vouvoiement. Phrases nettes, sans jargon inutile, sans superlatifs ni ton commercial.",
@@ -317,6 +338,7 @@ function buildResearchPrompt({ item, keywords, existing, today, retryHint }) {
     `Mot-clé principal : ${fr.primary}`,
     `Mots-clés secondaires : ${fr.secondary.join(" | ")}`,
     fr.questions?.length ? `Questions réellement tapées : ${fr.questions.join(" | ")}` : "",
+    KEYWORD_USAGE_PROMPT,
     "",
     "=== FAITS VÉRIFIÉS (ne jamais contredire) ===",
     ...VERIFIED_FACTS.map((f) => `- ${f}`),
@@ -371,9 +393,10 @@ function buildDraftPrompt({ item, research, references, keywords, servicePathMap
     ...VERIFIED_FACTS.map((f) => `- ${f}`),
     "",
     "=== MOTS-CLÉS (placement naturel, jamais de bourrage) ===",
-    `Principal : « ${fr.primary} » → dans le titre (H1), le seoTitle, la metaDescription, la première phrase et une fois ou deux dans le corps.`,
-    `Secondaires : ${fr.secondary.map((k) => `« ${k} »`).join(", ")} → au moins 3 H2 en question en contiennent un ; les autres apparaissent naturellement dans le texte.`,
-    fr.questions?.length ? `Questions des internautes (pour les H2 et la FAQ) : ${fr.questions.join(" | ")}` : "",
+    `Principal : « ${fr.primary} » → sous sa forme naturelle (accents, majuscules, sigles) dans le titre (H1), le seoTitle, la metaDescription, la première phrase et une fois ou deux dans le corps.`,
+    `Secondaires : ${fr.secondary.map((k) => `« ${k} »`).join(", ")} → au moins 3 H2 en question en reprennent l'idée sous une forme naturelle ; les autres apparaissent naturellement dans le texte.`,
+    fr.questions?.length ? `Questions des internautes (pour les H2 et la FAQ, reformulées correctement) : ${fr.questions.join(" | ")}` : "",
+    KEYWORD_USAGE_PROMPT,
     "",
     "=== STRUCTURE OBLIGATOIRE DU CHAMP content (Markdown) ===",
     "1. Un paragraphe d'ouverture de 2 à 3 phrases qui RÉPOND directement à la question (le mot-clé principal y figure). Pas de titre avant.",
@@ -430,6 +453,8 @@ function buildRepairPrompt({ article, problems, keywords, servicePathMaps, item,
     locale === "fr" ? VOICE_PROMPT : "",
     HARD_RULES_PROMPT,
     "",
+    locale === "fr" ? KEYWORD_USAGE_PROMPT : KEYWORD_USAGE_PROMPT_EN,
+    "",
     "=== FAITS VÉRIFIÉS ===",
     ...VERIFIED_FACTS.map((f) => `- ${f}`),
     "",
@@ -465,7 +490,8 @@ function buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, pr
     `- Section headings: "## ${KEY(locale, "facts")}" for "## Points clés" and "## ${KEY(locale, "faq")}" for "## Questions fréquentes"; "### ${rules.REFERENCES_HEADINGS[locale]}" for "### Références".`,
     "- Question headings stay questions ending with '?'. Do NOT write a references list at the end (it is appended automatically).",
     `- Internal links: replace each French path with its ${locale} equivalent: ${JSON.stringify(frServiceUrls)} ; any /fr/ressources/articles/<slug>/ becomes /${locale}/ressources/articles/<slug>/ (slug unchanged).`,
-    `- SEO for this market: primary keyword "${k.primary}" must appear in title, seoTitle, metaDescription and the first sentence; weave the secondary keywords (${k.secondary.map((s) => `"${s}"`).join(", ")}) naturally — at least one question heading must contain one.`,
+    `- SEO for this market: the primary keyword "${k.primary}" must appear — in its natural written form — in title, seoTitle, metaDescription and the first sentence; weave the secondary keywords (${k.secondary.map((s) => `"${s}"`).join(", ")}) naturally — at least one question heading must contain one. Keywords are raw queries: never copy them verbatim (see KEYWORD USAGE below).`,
+    KEYWORD_USAGE_PROMPT_EN,
     "- No prices, no quote tool, no AI assistant, no e-mail address, no guarantees, no US-person structuring. Do not add facts that are not in the French.",
     `- tags: exactly ${frArticle.tags.length} tags (same number as the French), translated, lowercase. referenceLabels: exactly ${frArticle.references.length} translated labels, one per French reference label, same order (keep the leading domain as is).`,
     "",

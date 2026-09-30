@@ -21,6 +21,18 @@ const L = {
 
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
+// A real model is told to write keywords in their natural form (acronyms in
+// caps, proper nouns capitalised) — rules.checkKeywordNaturalness rejects the
+// raw lowercase query, so the mock does the same.
+const ACRONYMS = new Set(["lpp", "bvg", "pk", "avs", "ahv", "lifd", "opp2", "tva", "mwst", "iva", "vat", "finma"]);
+const ACCENTED = { deduction: "déduction", impot: "impôt", "2eme": "2e", fiscalite: "fiscalité", deduccion: "deducción", aportacion: "aportación", contribuicao: "contribuição", deducao: "dedução" };
+const natural = (k) =>
+  String(k)
+    .split(" ")
+    .map((w) => ACCENTED[w] || w)
+    .map((w) => (ACRONYMS.has(w) ? w.toUpperCase() : rules.PROPER_TOKENS.has(w.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) ? cap(w) : w))
+    .join(" ");
+
 function buildArticle(locale, { keywords, references, serviceUrl, today }) {
   const t = L[locale];
   const k = keywords[locale];
@@ -29,11 +41,11 @@ function buildArticle(locale, { keywords, references, serviceUrl, today }) {
   const sections = [0, 1, 2, 3].map((i) => {
     const kw = sec[i % sec.length];
     const link = i === 0 ? ` [${references[0].labelKey}](${references[0].url})` : "";
-    return `## ${i % 2 ? t.q2 : t.q} ${kw} ?\n\n${para}${link}\n\n${para}`;
+    return `## ${i % 2 ? t.q2 : t.q} ${natural(kw)} ?\n\n${para}${link}\n\n${para}`;
   });
-  const faq = [1, 2, 3, 4].map((i) => `### ${t.q} ${sec[i % sec.length]} (${i + 10}) ?\n\n${t.answer}`);
+  const faq = [1, 2, 3, 4].map((i) => `### ${t.q} ${natural(sec[i % sec.length])} (${i + 10}) ?\n\n${t.answer}`);
   const content = [
-    `${cap(k.primary)} : ${t.answer} ${t.lead}, 30 / 90.`,
+    `${cap(natural(k.primary))} : ${t.answer} ${t.lead}, 30 / 90.`,
     "",
     `## ${rules.KEY_FACTS_HEADINGS[locale]}`,
     "",
@@ -52,13 +64,13 @@ function buildArticle(locale, { keywords, references, serviceUrl, today }) {
     "",
     ...faq.flatMap((f) => [f, ""]),
   ].join("\n");
-  const title = `${cap(k.primary)} : ${t.lead.toLowerCase()} (${locale})`.slice(0, 70);
+  const title = `${cap(natural(k.primary))} : ${t.lead.toLowerCase()} (${locale})`.slice(0, 70);
   return {
     title,
-    seoTitle: `${cap(k.primary)} — ${t.lead.toLowerCase()} et repères`.slice(0, 50),
-    metaDescription: `${cap(k.primary)} — ${t.answer}`.slice(0, 155),
+    seoTitle: `${cap(natural(k.primary))} — ${t.lead.toLowerCase()} et repères`.slice(0, 50),
+    metaDescription: `${cap(natural(k.primary))} — ${t.answer}`.slice(0, 155),
     description: t.answer,
-    imageAlt: `${cap(k.primary)} — illustration`,
+    imageAlt: `${cap(natural(k.primary))} — illustration`,
     tags: [k.primary, ...sec.slice(0, 4)].map((x) => x.toLowerCase()),
     content,
   };
@@ -70,9 +82,9 @@ module.exports = {
     return {
       research: {
         slug: `${k.primary} guide ${item.id}`.slice(0, 70),
-        title: `${cap(k.primary)} : en bref (fr)`,
-        seoTitle: `${cap(k.primary)} — en bref et repères`.slice(0, 50),
-        metaDescription: `${cap(k.primary)} — ${L.fr.answer}`.slice(0, 155),
+        title: `${cap(natural(k.primary))} : en bref (fr)`,
+        seoTitle: `${cap(natural(k.primary))} — en bref et repères`.slice(0, 50),
+        metaDescription: `${cap(natural(k.primary))} — ${L.fr.answer}`.slice(0, 155),
         description: L.fr.answer,
         directAnswer: L.fr.answer,
         keyFacts: [],

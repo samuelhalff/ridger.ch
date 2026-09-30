@@ -635,3 +635,110 @@ test("stored keywords are re-filtered and topped up from backlog targets", () =>
   assert.deepEqual(s.questions, ["comment faire un rachat lpp"]);
   assert.equal(kw.storedLocaleKeywords({ researchedKeywords: { perLocale: {} } }, "fr"), null);
 });
+
+// ─── Keyword naturalness (no raw search queries) ──────────────────────────
+
+const kwCodes = (content, keywords, extra = {}) =>
+  rules.checkKeywordNaturalness({ title: "Titre", content, ...extra }, keywords).map((v) => v.code);
+
+test("keyword naturalness: bolded lowercase keyword is rejected (FR/EN/DE)", () => {
+  assert.ok(kwCodes("Le **rachat lpp** permet de combler des lacunes.", { primary: "rachat lpp", secondary: [] }).includes("KW_BOLD_QUERY"));
+  assert.ok(kwCodes("The logic of **bvg buy in tax deductions** is simple.", { primary: "x", secondary: ["bvg buy in tax deductions"] }).includes("KW_BOLD_QUERY"));
+  assert.ok(kwCodes("Der **pk einkauf** ermöglicht es Ihnen.", { primary: "pk einkauf", secondary: [] }).includes("KW_BOLD_QUERY"));
+});
+
+test("keyword naturalness: any bolded keyword is rejected, even correctly written", () => {
+  assert.ok(kwCodes("La **aportación voluntaria LPP** le permite.", { primary: "aportación voluntaria lpp", secondary: [] }).includes("KW_BOLD_QUERY"));
+});
+
+test("keyword naturalness: quoted keyword missing the accents used in the article is rejected", () => {
+  const content = "La déduction d'impôt est possible. La logique « rachat 2eme pilier deduction impot » est simple.";
+  const codes = kwCodes(content, { primary: "rachat 2e pilier", secondary: ["rachat 2eme pilier deduction impot"] });
+  assert.ok(codes.includes("KW_BOLD_QUERY"), codes.join());
+});
+
+test("keyword naturalness: quoted lowercase raw query with an acronym is rejected even if not a keyword", () => {
+  const codes = kwCodes("La question « rachat lpp jusqu à quel age » dépend de 2 paramètres.", { primary: "x y", secondary: [] });
+  assert.ok(codes.includes("KW_BOLD_QUERY"), codes.join());
+});
+
+test("keyword naturalness: verbatim lowercase keyword with a proper noun/acronym is rejected anywhere", () => {
+  assert.ok(kwCodes("A pension fund buy in switzerland allows you to close gaps.", { primary: "pension fund buy in switzerland", secondary: [] }).includes("KW_RAW_QUERY"));
+  assert.ok(kwCodes("Ein pk einkauf ist freiwillig.", { primary: "pk einkauf", secondary: [] }).includes("KW_RAW_QUERY"));
+  assert.ok(kwCodes("Texte.", { primary: "rachat lpp", secondary: [] }, { imageAlt: "Famille, rachat lpp et déduction" }).includes("KW_RAW_QUERY"));
+  // capitalised first word does not hide a lowercase acronym
+  assert.ok(kwCodes("Rachat lpp : comment ça marche ?", { primary: "rachat lpp", secondary: [] }).includes("KW_RAW_QUERY"));
+});
+
+test("keyword naturalness: verbatim accent-less keyword next to its accented spelling is rejected", () => {
+  const content = "La déduction de l'impôt est encadrée. Le rachat 2e pilier deduction impot suit une logique simple.";
+  const v = rules.checkKeywordNaturalness({ content }, { primary: "rachat 2e pilier", secondary: ["rachat 2e pilier deduction impot"] });
+  assert.ok(v.some((x) => x.code === "KW_RAW_QUERY" && /déduction/.test(x.message)), JSON.stringify(v));
+});
+
+test("keyword naturalness: natural forms pass (accents, capitals, hyphens, acronyms)", () => {
+  const cases = [
+    ["Le rachat LPP permet de combler des lacunes. La déduction fiscale d'un rachat LPP suit une logique simple.", { primary: "rachat lpp", secondary: ["rachat lpp deduction impot", "rachat lpp conditions"] }],
+    ["A pension fund buy-in in Switzerland allows you to close gaps. The tax deduction for a BVG buy-in is simple.", { primary: "pension fund buy in switzerland", secondary: ["bvg buy in tax deductions"] }],
+    ["Der PK-Einkauf ermöglicht es Ihnen, Lücken zu schliessen. Den PK-Einkauf von den Steuern abzuziehen, ist einfach.", { primary: "pk einkauf", secondary: ["pk einkauf steuern abziehen"] }],
+    ["La aportación voluntaria LPP le permite cubrir lagunas en su previsión suiza.", { primary: "aportación voluntaria lpp", secondary: ["segundo pilar suiza"] }],
+    ["A contribuição voluntária LPP permite colmatar lacunas, sem risco de erro de cálculo.", { primary: "contribuição voluntária lpp", secondary: [] }],
+    // a link target / slug containing the raw keyword is not prose
+    ["Voir [notre guide sur le rachat LPP](/fr/ressources/articles/rachat-lpp-calcul/).", { primary: "rachat lpp", secondary: [] }],
+    // quoting ordinary text / emphasis on non-keywords stays allowed
+    ["Un calcul « de caisse » et des lacunes « théoriques » ; **attention** au délai.", { primary: "rachat lpp", secondary: [] }],
+  ];
+  for (const [content, keywords] of cases) assert.deepEqual(kwCodes(content, keywords), [], content);
+});
+
+test("keyword naturalness: meta-phrases about searches are rejected in all 5 languages", () => {
+  const k = { primary: "rachat lpp", secondary: [] };
+  for (const s of [
+    "Les recherches comme celle-ci sont fréquentes en fin d'année.",
+    "Les internautes cherchent souvent comment déduire un rachat.",
+    "Searches like this peak in December.",
+    "Many people google the deadline in December.",
+    "Suchanfragen zum Einkauf nehmen im Dezember zu.",
+    "Wer im Internet nach dem Einkauf sucht, findet viele Antworten.",
+    "Las búsquedas como esta aumentan en diciembre.",
+    "As pesquisas como esta aumentam em dezembro.",
+    "Quem pesquisa este tema encontra muitas respostas.",
+  ]) {
+    assert.ok(kwCodes(s, k).includes("KW_SEARCH_META"), s);
+  }
+});
+
+test("keyword naturalness: ordinary 'looking for' prose is not a search meta-phrase", () => {
+  const k = { primary: "rachat lpp", secondary: [] };
+  for (const s of [
+    "Wer eine Wohnung sucht, sollte früh beginnen.",
+    "Quienes buscan vivienda en Ginebra deben anticiparse.",
+    "Quem procura casa em Genebra deve antecipar.",
+    "People search for housing well in advance.",
+    "Les familles qui cherchent un logement doivent anticiper.",
+  ]) {
+    assert.deepEqual(kwCodes(s, k), [], s);
+  }
+});
+
+test("checkSeoStructure surfaces keyword-naturalness violations as errors", () => {
+  const res = rules.checkSeoStructure(
+    { title: "Rachat LPP : calcul et déduction fiscale", content: "Le **rachat lpp** permet de combler des lacunes." },
+    { locale: "fr", keywords: { primary: "rachat lpp", secondary: [] }, allowedInternalPaths: new Set() },
+  );
+  assert.ok(res.errors.some((e) => /^KW_BOLD_QUERY/.test(e)), res.errors.join("\n"));
+  assert.ok(res.errors.some((e) => /^KW_RAW_QUERY/.test(e)), res.errors.join("\n"));
+});
+
+test("the corpus has no keyword-stuffing left (bold/raw queries, search meta-phrases)", () => {
+  const fs = require("node:fs");
+  const hits = [];
+  for (const l of rules.LOCALES) {
+    const data = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "translations", l, "ressources.json"), "utf8"));
+    for (const a of data.Articles || []) {
+      if (!a.keywords) continue;
+      for (const v of rules.checkKeywordNaturalness(a, a.keywords)) hits.push(`[${l}] ${a.slug}: ${v.code} — ${v.excerpt}`);
+    }
+  }
+  assert.deepEqual(hits, []);
+});
