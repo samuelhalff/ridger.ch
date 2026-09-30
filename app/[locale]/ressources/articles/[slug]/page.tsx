@@ -32,8 +32,14 @@ import {
 import {
   buildArticleSchema,
   buildBreadcrumbList,
+  buildFAQPage,
   getArkServiceEntityId,
 } from "@/src/lib/structuredData";
+import {
+  buildArticleKeywordList,
+  extractArticleFaq,
+  ridgerCategoryService,
+} from "@/src/lib/articleSeo";
 
 // Dynamic because the page reads the per-request CSP nonce from headers().
 export const dynamic = "force-dynamic";
@@ -191,6 +197,26 @@ function getArticleStructuredDataContext(
     };
   }
 
+  // Ridger categories: the article is "about" the matching service entity
+  // (plus its researched primary keyword) and part of that service's page.
+  const ridgerService = article.category
+    ? ridgerCategoryService[article.category]
+    : undefined;
+  if (ridgerService) {
+    const primary = article.keywords?.primary?.trim();
+    return {
+      schemaType: "BlogPosting" as const,
+      about: [
+        { "@id": getArkServiceEntityId(ridgerService) },
+        ...(primary ? [{ "@type": "Thing", name: primary }] : []),
+      ],
+      isPartOf: {
+        "@type": "WebPage",
+        "@id": serviceLocaleUrl(`/services/${ridgerService}`),
+      },
+    };
+  }
+
   return {
     schemaType: "BlogPosting" as const,
     about: [],
@@ -301,10 +327,15 @@ export default async function ArticlePage(props: Params) {
     url: articleUrl,
     locale,
     image: imageUrl,
-    keywords: article.tags,
+    imageCaption: article.imageAlt,
+    keywords: buildArticleKeywordList(article.keywords, article.tags),
     section: getArticleSection(article, ressources.Categories),
     timeRequired: reading?.timeRequiredISO,
   });
+
+  // Visible "## FAQ" section in the markdown → FAQPage JSON-LD (GEO/AEO).
+  const faqEntries = extractArticleFaq(fullContent);
+  const faqJsonLd = faqEntries.length >= 2 ? buildFAQPage(faqEntries) : null;
 
   return (
     <main className="max-w-3xl mx-auto px-5 py-12 mt-8 sm:px-8">
@@ -324,6 +355,13 @@ export default async function ArticlePage(props: Params) {
         nonce={nonce}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Breadcrumbs
         className="mb-6"
         baseLabel={ressources.IntroShort || "Resources"}
@@ -550,7 +588,14 @@ export async function generateMetadata(props: Params) {
     article.slug,
     article.title,
     article.description,
-    validLocales
+    validLocales,
+    {
+      seoTitle: article.seoTitle,
+      metaDescription: article.metaDescription,
+      imageAlt: article.imageAlt,
+      publishedTime: article.date,
+      modifiedTime: article.updated ?? article.date,
+    }
   );
   const robotsConfig: Record<string, unknown> =
     meta && typeof meta.robots === "object" && meta.robots !== null

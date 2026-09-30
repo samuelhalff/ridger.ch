@@ -81,6 +81,14 @@ export async function getPageMetadata(
     articleTitle?: string;
     articleDescription?: string;
     validLocales?: Locale[];
+    // Pipeline-researched SEO fields (optional). seoTitle replaces the H1 in
+    // <title> (template still appends the brand); metaDescription is used
+    // verbatim (already length-checked 110–160), without the template suffix.
+    articleSeoTitle?: string;
+    articleMetaDescription?: string;
+    articleImageAlt?: string;
+    articlePublishedTime?: string;
+    articleModifiedTime?: string;
   }
 ): Promise<Metadata> {
   const config = await loadMetadataConfig(locale);
@@ -97,9 +105,15 @@ export async function getPageMetadata(
   
   // Handle dynamic pages (like articles)
   if (normalizedPath.startsWith("/ressources/articles/") && customData?.articleTitle) {
-    title = config.dynamic.articles.titleTemplate.replace("{articleTitle}", customData.articleTitle);
-    description = config.dynamic.articles.descriptionTemplate.replace("{articleDescription}", customData.articleDescription || "");
+    title = config.dynamic.articles.titleTemplate.replace(
+      "{articleTitle}",
+      customData.articleSeoTitle || customData.articleTitle,
+    );
+    description = customData.articleMetaDescription
+      ? customData.articleMetaDescription
+      : config.dynamic.articles.descriptionTemplate.replace("{articleDescription}", customData.articleDescription || "");
   }
+  const isArticle = normalizedPath.startsWith("/ressources/articles/") && !!customData?.articleTitle;
   
   // Generate locale-aware URLs (all locales have prefix in our setup, but slugs may differ per locale)
   const localizedCanonical = localizePath(normalizedPath, locale);
@@ -156,7 +170,13 @@ export async function getPageMetadata(
       },
     },
     openGraph: {
-      type: "website",
+      ...(isArticle
+        ? {
+            type: "article" as const,
+            ...(customData?.articlePublishedTime ? { publishedTime: customData.articlePublishedTime } : {}),
+            ...(customData?.articleModifiedTime ? { modifiedTime: customData.articleModifiedTime } : {}),
+          }
+        : { type: "website" as const }),
       locale: ogLocale,
       url: `https://ridger.ch${canonicalPath}`,
       title,
@@ -167,7 +187,7 @@ export async function getPageMetadata(
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: "Ridger",
+          alt: (isArticle && (customData?.articleImageAlt || customData?.articleTitle)) || "Ridger",
         },
       ],
     },
@@ -237,7 +257,14 @@ export async function generateMetadataForArticle(
   slugOrTitle?: string,
   titleOrDescription?: string,
   description?: string,
-  validLocales?: Locale[]
+  validLocales?: Locale[],
+  seo?: {
+    seoTitle?: string;
+    metaDescription?: string;
+    imageAlt?: string;
+    publishedTime?: string;
+    modifiedTime?: string;
+  }
 ): Promise<Metadata> {
   if (typeof localeOrSlug === 'string' && slugOrTitle && titleOrDescription && !description) {
     // Old signature: generateMetadataForArticle(slug, title, description)
@@ -252,6 +279,11 @@ export async function generateMetadataForArticle(
       articleTitle: titleOrDescription,
       articleDescription: description,
       validLocales,
+      articleSeoTitle: seo?.seoTitle,
+      articleMetaDescription: seo?.metaDescription,
+      articleImageAlt: seo?.imageAlt,
+      articlePublishedTime: seo?.publishedTime,
+      articleModifiedTime: seo?.modifiedTime,
     });
   }
 }

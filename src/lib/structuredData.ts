@@ -473,6 +473,7 @@ export interface ArticleSchemaConfig {
   authorUrl?: string;
   publisherName?: string;
   image?: string;
+  imageCaption?: string;
   url: string;
   locale: string;
   section?: string;
@@ -519,6 +520,7 @@ export function buildArticleSchema(cfg: ArticleSchemaConfig) {
           image: {
             "@type": "ImageObject",
             url: cfg.image,
+            ...(cfg.imageCaption ? { caption: cfg.imageCaption } : {}),
           },
         }
       : {}),

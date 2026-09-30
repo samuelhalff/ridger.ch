@@ -23,6 +23,13 @@ export type ResourceArticle = {
   references?: ArticleReference[];
   category?: string;
   tags?: string[];
+  // SEO fields written by the article pipeline (scripts/ai-ressources-update.js).
+  // All optional: hand-written articles keep working without them.
+  seoTitle?: string;
+  metaDescription?: string;
+  imageAlt?: string;
+  keywords?: { primary?: string; secondary?: string[] };
+  backlogId?: string;
 };
 
 type CachedArticles = {
