@@ -19,7 +19,7 @@ export const dynamicParams = false;
 type Section = { Title?: string; Body?: string };
 
 // Location landing pages: Ridger is based in Geneva and works with families
-// elsewhere in Switzerland remotely and through visits — no local offices.
+// elsewhere in Switzerland remotely, with in-person meetings arranged when useful — no local offices.
 const cityPlace: Record<string, { name: string; region: string }> = {
   geneva: { name: "Genève", region: "Canton of Geneva" },
   lausanne: { name: "Lausanne", region: "Canton of Vaud" },
@@ -88,7 +88,7 @@ export default async function LocationPage(props: {
       serviceType: "Multi-family office",
       url: pageUrl,
       // Provider is the Geneva office; the city is where the service is
-      // delivered (remotely and through visits), not a branch location.
+      // delivered (remotely, in-person meetings when useful), not a branch location.
       provider: { "@id": arkEntityIds.organization },
       areaServed: {
         "@type": "City",

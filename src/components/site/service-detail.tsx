@@ -52,6 +52,13 @@ const ServiceDetail = async ({
     ? (t("Pillars") as unknown as Pillar[])
     : [];
   const perimeter = (t("Perimeter") as string) || "";
+  // Optional hero image alt text; a missing key echoes back the key itself,
+  // so fall back to a decorative (empty) alt in that case.
+  const rawImageAlt = t("Hero.ImageAlt") as string;
+  const imageAlt =
+    typeof rawImageAlt === "string" && rawImageAlt !== "Hero.ImageAlt"
+      ? rawImageAlt
+      : "";
   const closingTitle = (t("Closing.Title") as string) || "";
   const closingBody = (t("Closing.Body") as string) || "";
   // Optional "related" note (e.g. a sister site). Missing keys echo back the
@@ -154,7 +161,7 @@ const ServiceDetail = async ({
           <div className="relative min-h-[320px] w-full overflow-hidden rounded-[28px] bg-muted/30 shadow-sm sm:min-h-[420px] lg:min-h-[520px]">
             <Image
               src={imageSrc}
-              alt=""
+              alt={imageAlt}
               className="object-cover"
               sizes="(min-width:1024px) 520px, 90vw"
               priority

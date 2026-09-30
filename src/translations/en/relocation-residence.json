@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Relocation and residence permits — your family's move to Switzerland",
     "Description": "We coordinate your family's relocation to Switzerland — Geneva, Vaud or elsewhere: permits, registrations, health insurance, schools and housing, in the right order.",
-    "CTA": "Request a confidential consultation"
+    "CTA": "Request a confidential consultation",
+    "ImageAlt": "Lavaux vineyards and a house above Lake Geneva, with the Alps in the distance"
   },
   "Intro": [
     "Settling in Switzerland means a chain of steps with short deadlines, each depending on the last: registering your arrival, the residence permit, health insurance, schooling, tax. The difficulty lies less in each step than in how they fit together.",

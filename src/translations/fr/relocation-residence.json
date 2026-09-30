@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Relocation et permis de séjour — l'installation de votre famille en Suisse",
     "Description": "Nous coordonnons la relocation de votre famille à Genève, dans le canton de Vaud ou ailleurs en Suisse : permis, annonces, assurance-maladie, écoles et logement, dans le bon ordre.",
-    "CTA": "Demander un entretien confidentiel"
+    "CTA": "Demander un entretien confidentiel",
+    "ImageAlt": "Vignes de Lavaux et maison au-dessus du Léman, avec les Alpes au loin"
   },
   "Intro": [
     "S'installer en Suisse enchaîne des démarches à délais courts, qui dépendent les unes des autres : annonce d'arrivée, titre de séjour, assurance-maladie, scolarité, fiscalité. La difficulté tient moins à chaque étape qu'à leur enchaînement.",

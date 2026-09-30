@@ -89,7 +89,7 @@ const services: ServiceItem[] = [
     titleKey: "HouseholdStaff.Title",
     href: "/services/household-staff",
     descriptionKey: "HouseholdStaff.Description",
-    image: "/assets/hero/services/payroll-hero.optimized.webp",
+    image: "/assets/hero/services/household-home-kitchen.optimized.webp",
     extended: true,
   },
   {
@@ -97,7 +97,7 @@ const services: ServiceItem[] = [
     titleKey: "RelocationResidence.Title",
     href: "/services/relocation-residence",
     descriptionKey: "RelocationResidence.Description",
-    image: "/assets/hero/services/immigration-hero.optimized.webp",
+    image: "/assets/hero/services/relocation-lavaux-lake-geneva.optimized.webp",
     extended: true,
   },
   {

@@ -26,7 +26,7 @@ export default async function Page(props: {
       namespace="household-staff"
       basePath="/services/household-staff"
       serviceEntityId={arkEntityIds.serviceHouseholdStaff}
-      imageSrc="/assets/hero/services/payroll-hero.optimized.webp"
+      imageSrc="/assets/hero/services/household-home-kitchen.optimized.webp"
       locale={params.locale}
       nonce={nonce}
     />

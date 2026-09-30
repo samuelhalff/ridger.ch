@@ -33,7 +33,7 @@ Office (the only office):
 1204 Geneva
 Switzerland
 
-Ridger works with families in Geneva and elsewhere in Switzerland (Lausanne and the canton of Vaud, Zurich, Zug, Lugano and Ticino) remotely and through visits, coordinating with their local advisers. Ridger has no offices outside Geneva.
+Ridger works with families in Geneva and elsewhere in Switzerland (Lausanne and the canton of Vaud, Zurich, Zug, Lugano and Ticino) remotely, with in-person meetings arranged when useful, coordinating with their local advisers. Ridger has no offices outside Geneva.
 
 Primary market:
 

@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Personnel de maison et salaires — une gestion de maison discrète et en règle",
     "Description": "Nous coordonnons l'intendance de vos résidences et les obligations d'employeur liées à votre personnel de maison à Genève : contrats, assurances sociales, salaires et certificats.",
-    "CTA": "Demander un entretien confidentiel"
+    "CTA": "Demander un entretien confidentiel",
+    "ImageAlt": "Cuisine familiale lumineuse et bien tenue, avec une corbeille de fruits sur le plan de travail"
   },
   "Intro": [
     "Engager une gouvernante, une nounou, un chauffeur ou un jardinier fait de votre foyer un employeur à part entière. À Genève, le cadre est précis : un contrat-type de travail pour l'économie domestique, des assurances sociales dès le premier salaire et des déclarations qui reviennent chaque mois.",
@@ -19,7 +20,7 @@
     },
     {
       "Title": "Assurances sociales",
-      "Body": "Affiliation à la caisse de compensation AVS, assurance-accidents (LAA), prévoyance professionnelle (LPP) lorsque les conditions sont remplies, allocations familiales et assurance perte de gain maladie prévue par le cadre genevois."
+      "Body": "Affiliation à la caisse de compensation AVS, assurance-accidents (LAA), prévoyance professionnelle (LPP) lorsque les conditions sont remplies, allocations familiales et assurance perte de gain maladie prévue par le contrat-type de travail genevois de l'économie domestique (CTT-EDom, art. 13)."
     },
     {
       "Title": "Salaires mensuels",

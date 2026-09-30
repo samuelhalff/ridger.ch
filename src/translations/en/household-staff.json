@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Household staff and payroll — household management done properly",
     "Description": "We coordinate the running of your residences and every employer obligation for your household staff in Geneva: contracts, social insurance, payroll and salary certificates.",
-    "CTA": "Request a confidential consultation"
+    "CTA": "Request a confidential consultation",
+    "ImageAlt": "A bright, well-kept family kitchen with a bowl of fruit on the counter"
   },
   "Intro": [
     "Hiring a housekeeper, a nanny, a driver or a gardener makes your household an employer in its own right. In Geneva the framework is precise: a standard employment contract for domestic work, social insurance from the first salary, and filings that come back every month.",
@@ -19,7 +20,7 @@
     },
     {
       "Title": "Social insurance",
-      "Body": "Registration with the AHV/AVS compensation fund, accident insurance (LAA), occupational pension (LPP) where the conditions are met, family allowances and the sickness loss-of-earnings cover required under Geneva's framework."
+      "Body": "Registration with the AHV/AVS compensation fund, accident insurance (LAA), occupational pension (LPP) where the conditions are met, family allowances and the sickness loss-of-earnings insurance provided for in Geneva's standard employment contract for domestic work (CTT-EDom, art. 13)."
     },
     {
       "Title": "Monthly payroll",

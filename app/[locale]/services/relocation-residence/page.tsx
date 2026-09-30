@@ -26,7 +26,7 @@ export default async function Page(props: {
       namespace="relocation-residence"
       basePath="/services/relocation-residence"
       serviceEntityId={arkEntityIds.serviceRelocation}
-      imageSrc="/assets/hero/services/immigration-hero.optimized.webp"
+      imageSrc="/assets/hero/services/relocation-lavaux-lake-geneva.optimized.webp"
       locale={params.locale}
       nonce={nonce}
     />

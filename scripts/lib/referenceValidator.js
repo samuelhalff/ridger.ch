@@ -63,6 +63,8 @@ const ALLOWED_REFERENCE_DOMAINS = [
   "vs.ch",
   "zg.ch",
   "zh.ch",
+  // Official cantonal legislation databases
+  "silgeneve.ch",
   // Swiss official bodies & registries
   "ahv-iv.ch",
   "caisseavs.ch",
@@ -152,6 +154,8 @@ const OFFICIAL_REFERENCE_DOMAINS = [
   "rab-asr.ch",
   "snb.ch",
   "zefix.ch",
+  // Official cantonal legislation database (Geneva)
+  "silgeneve.ch",
   // Cantonal social insurance / compensation funds (public-law bodies)
   "aknw.ch",
   "akso.ch",

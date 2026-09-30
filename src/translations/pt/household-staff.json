@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Pessoal doméstico e salários — uma gestão da casa discreta e em ordem",
     "Description": "Coordenamos a intendência das suas residências e todas as obrigações de empregador relativas ao seu pessoal doméstico na Suíça: contratos, seguros sociais, salários e certificados de salário.",
-    "CTA": "Solicitar uma entrevista confidencial"
+    "CTA": "Solicitar uma entrevista confidencial",
+    "ImageAlt": "Cozinha familiar luminosa e bem cuidada, com uma fruteira sobre a bancada"
   },
   "Intro": [
     "Contratar uma governanta, uma ama, um motorista ou um jardineiro faz do seu lar um empregador de pleno direito. Em Genebra, o quadro é preciso: um contrato-tipo de trabalho para o serviço doméstico, seguros sociais desde o primeiro salário e declarações que se repetem todos os meses.",
@@ -19,7 +20,7 @@
     },
     {
       "Title": "Seguros sociais",
-      "Body": "Inscrição na caixa de compensação do seguro de velhice e sobrevivência (AVS), seguro de acidentes (LAA), previdência profissional (LPP) quando as condições se verificam, abonos de família e o seguro de perda de rendimento por doença previsto no quadro genebrino."
+      "Body": "Inscrição na caixa de compensação do seguro de velhice e sobrevivência (AVS), seguro de acidentes (LAA), previdência profissional (LPP) quando as condições se verificam, abonos de família e o seguro de perda de rendimento por doença previsto no contrato-tipo de trabalho genebrino da economia doméstica (CTT-EDom, art. 13)."
     },
     {
       "Title": "Salários mensais",

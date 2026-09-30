@@ -720,6 +720,8 @@ const CANTON_DOMAINS = [
 ];
 const OFFICIAL_DOMAINS = [
   "admin.ch", "ch.ch", ...CANTON_DOMAINS,
+  // Official cantonal legislation database (Geneva)
+  "silgeneve.ch",
   "finma.ch", "snb.ch", "ahv-iv.ch", "zewo.ch", "esisuisse.ch", "bger.ch",
   "parlament.ch", "edoeb.admin.ch", "ncsc.admin.ch", "sem.admin.ch",
   "europa.eu", "oecd.org",

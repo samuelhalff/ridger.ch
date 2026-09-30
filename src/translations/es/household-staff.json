@@ -2,7 +2,8 @@
   "Hero": {
     "Title": "Personal doméstico y nóminas — una gestión del hogar discreta y en regla",
     "Description": "Coordinamos la intendencia de sus residencias y todas las obligaciones de empleador de su personal doméstico en Suiza: contratos, seguros sociales, nóminas y certificados de salario.",
-    "CTA": "Solicitar una entrevista confidencial"
+    "CTA": "Solicitar una entrevista confidencial",
+    "ImageAlt": "Cocina familiar luminosa y bien cuidada, con un frutero sobre la encimera"
   },
   "Intro": [
     "Contratar a una gobernanta, una niñera, un chófer o un jardinero convierte su hogar en un empleador de pleno derecho. En Ginebra el marco es preciso: un contrato tipo de trabajo para el servicio doméstico, seguros sociales desde el primer salario y declaraciones que vuelven cada mes.",
@@ -19,7 +20,7 @@
     },
     {
       "Title": "Seguros sociales",
-      "Body": "Afiliación a la caja de compensación del seguro de vejez y supervivencia (AVS), seguro de accidentes (LAA), previsión profesional (LPP) cuando se cumplen las condiciones, asignaciones familiares y el seguro de pérdida de ingresos por enfermedad previsto en el marco ginebrino."
+      "Body": "Afiliación a la caja de compensación del seguro de vejez y supervivencia (AVS), seguro de accidentes (LAA), previsión profesional (LPP) cuando se cumplen las condiciones, asignaciones familiares y el seguro de pérdida de ingresos por enfermedad previsto en el contrato tipo de trabajo ginebrino de la economía doméstica (CTT-EDom, art. 13)."
     },
     {
       "Title": "Nóminas mensuales",
