@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const {
+  DISALLOWED_FIRM_SOURCE_DOMAINS,
   extractDomain,
   isBlockedDomain,
 } = require("./lib/referenceValidator");
@@ -40,6 +41,47 @@ function extractUrls(text) {
     .filter(Boolean);
 }
 
+// Quasi-official bodies accepted as article sources on top of the shared
+// allowlist in lib/referenceValidator.js. They are not authorities, but they
+// carry a statutory or officially recognised role, so they are not "private
+// sources" in the sense of the policy (unlike Big-4 firms, banks or lobbies):
+//   - esisuisse.ch: the Swiss depositor protection scheme (art. 37h LB)
+//   - steuerkonferenz.ch / ssk-csi.ch: Swiss Tax Conference (CSI/SSK), the
+//     conference of the cantonal tax administrations (steuerkonferenz.ch now
+//     redirects to ssk-csi.ch)
+//   - osfin.ch / osfincontrol.ch: FINMA-authorised supervisory organisation
+//     for portfolio managers and trustees (osfin.ch now redirects to
+//     osfincontrol.ch)
+//   - zewo.ch: the officially recognised Swiss certification for charities
+//     collecting donations
+//   - swissbanking.ch: the banking sector's self-regulation body, whose
+//     agreements (e.g. CDB due diligence convention) FINMA recognises as
+//     minimum standards
+// Firm/competitor domains stay blocked: these hosts are only exempted from
+// the "not on the allowlist" rule.
+const QUASI_OFFICIAL_DOMAINS = [
+  "esisuisse.ch",
+  "steuerkonferenz.ch",
+  "ssk-csi.ch",
+  "osfin.ch",
+  "osfincontrol.ch",
+  "zewo.ch",
+  "swissbanking.ch",
+];
+
+function isQuasiOfficial(url) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    const matches = (d) => host === d || host.endsWith(`.${d}`);
+    return (
+      QUASI_OFFICIAL_DOMAINS.some(matches) &&
+      !DISALLOWED_FIRM_SOURCE_DOMAINS.some(matches)
+    );
+  } catch {
+    return false;
+  }
+}
+
 function recordUrl(violations, context, rawUrl) {
   const url = normalizeUrl(rawUrl);
   if (!url) return;
@@ -51,7 +93,7 @@ function recordUrl(violations, context, rawUrl) {
     return;
   }
 
-  if (isBlockedDomain(url)) {
+  if (isBlockedDomain(url) && !isQuasiOfficial(url)) {
     violations.push({
       ...context,
       url,
