@@ -33,7 +33,8 @@
   "Services": {
     "Eyebrow": "Nos services",
     "Title": "Ce dont votre famille a besoin, sous un seul toit.",
-    "Subtitle": ""
+    "Subtitle": "",
+    "HubIntro": "Ridger est un multi-family office basé à Genève, qui travaille avec des familles dans toute la Suisse. Nous faisons office de family office externalisé : l'organisation d'un single family office, sans avoir à en créer un. Pour les familles qui envisagent la création d'un single family office, nous aidons à en définir le périmètre et la gouvernance, avec leurs avocats."
   },
   "Trust": {
     "Eyebrow": "Nos engagements",

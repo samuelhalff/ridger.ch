@@ -144,6 +144,9 @@ export default async function ServicesPage(
             </li>
           </ol>
         </nav>
+        <p className="max-w-[68ch] text-base leading-8 text-muted-foreground sm:text-lg">
+          {tHome("Services.HubIntro") as string}
+        </p>
       </header>
       <Service
         showSubtitle={true}
