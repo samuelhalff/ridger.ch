@@ -1,0 +1,83 @@
+{
+  "Hero": {
+    "Eyebrow": "For lawyers, notaries and bankers",
+    "Title": "Introducing a family to Ridger",
+    "Description": "Do you advise a family whose affairs need coordination? Lawyers, private bankers and independent asset managers can introduce them to us, in full discretion.",
+    "CTA": "Get in touch discreetly"
+  },
+  "Intro": [
+    "Some families work with several banks, hold structures in different jurisdictions and rely on advisers who do not always talk to each other. You often see it before they do: what is missing is an overall view and someone to hold the thread.",
+    "Working with Ridger as a family office referral partner means handing that coordination to someone who respects your place as the introducer. We do not manage assets and we do not give legal advice; we organise the information and make everyone's work easier."
+  ],
+  "Audiences": {
+    "Title": "Who we work with",
+    "Items": [
+      {
+        "Title": "Lawyers and notaries",
+        "Body": "Estates, family agreements, foundations or business succession: your work benefits from up-to-date wealth information and careful follow-up of the decisions taken with the family."
+      },
+      {
+        "Title": "Private bankers",
+        "Body": "Your client banks with several institutions and wants the full picture. We consolidate without placing products, and your relationship stays yours."
+      },
+      {
+        "Title": "External asset managers",
+        "Body": "You run the mandate, we coordinate the rest: administration, tax matters with the specialists, documents and deadlines. Consolidated reporting shows your mandate within the family's overall wealth."
+      },
+      {
+        "Title": "Tax advisers and fiduciaries",
+        "Body": "Complete, well-organised documents, a calendar that is followed and a contact who knows the file: tax returns and planning become simpler to prepare."
+      }
+    ]
+  },
+  "Steps": {
+    "Title": "How an introduction works",
+    "Items": [
+      {
+        "Title": "A first conversation",
+        "Body": "You describe the situation, without names if you prefer. We tell you honestly whether we can help."
+      },
+      {
+        "Title": "Meeting the family",
+        "Body": "We meet the family, with you or without you, whichever suits them best."
+      },
+      {
+        "Title": "Scoping the mandate",
+        "Body": "Together we agree on the scope of our work and who does what, so every role is clear from the start."
+      },
+      {
+        "Title": "Ongoing coordination",
+        "Body": "We coordinate over time. You stay informed to the extent the family chooses."
+      }
+    ]
+  },
+  "Roles": {
+    "Title": "Who does what",
+    "Items": [
+      {
+        "Who": "You",
+        "Does": "You keep your mandate and your relationship with the family: legal advice, deeds, portfolio management or banking, depending on your profession."
+      },
+      {
+        "Who": "Ridger",
+        "Does": "We coordinate the advisers, consolidate the family's wealth in a single report and oversee the administration. We do not manage assets or give legal advice, so we do not compete with your mandate."
+      },
+      {
+        "Who": "The family",
+        "Does": "They keep control of decisions and choose what is shared, with whom and when."
+      }
+    ]
+  },
+  "Discretion": {
+    "Title": "Discretion, on both sides",
+    "Body": [
+      "Confidentiality is at the heart of our work. The family's documents are kept in a digital vault hosted in Switzerland, and information is shared only with the people who need it.",
+      "The family decides what passes between its advisers. We respect the confidentiality duties of your profession: a first conversation can take place without any names, and nothing is passed on without the family's agreement."
+    ]
+  },
+  "Form": {
+    "Title": "Introduce a family",
+    "Subtitle": "A few lines are enough. We will come back to you quickly and in confidence.",
+    "MessagePlaceholder": "e.g. a short, anonymised description of the situation"
+  }
+}

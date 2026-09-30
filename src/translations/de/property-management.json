@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Liegenschaftsverwaltung — Ihre Immobilien, auf der Seite des Eigentümers",
+    "Description": "Die Liegenschaftsverwaltung Ihrer Residenzen und Renditeobjekte in Genf und in der ganzen Schweiz, dauerhaft: Mietverträge, Nebenkosten, Verwaltungen, Arbeiten und Reporting.",
+    "CTA": "Vertrauliches Gespräch anfragen"
+  },
+  "Intro": [
+    "Nach dem Kauf beginnt die eigentliche Arbeit: Mieten verfolgen, Abrechnungen prüfen, unterhalten, versichern, deklarieren. Verteilt auf mehrere Verwaltungen und Residenzen verliert diese Betreuung rasch an Kohärenz.",
+    "Wir übernehmen die Immobilienverwaltung Ihrer Familie auf der Seite des Eigentümers. Die Liegenschaftsverwaltungen behalten ihre operative Rolle, wo sie mandatiert sind; wir steuern sie, prüfen ihre Abrechnungen und führen alles in einer klaren Sicht auf Ihr Vermögen zusammen."
+  ],
+  "Pillars": [
+    {
+      "Title": "Mietverträge und Mieten",
+      "Body": "Überwachung der Mietverträge, Termine und Mieteingänge, mit der Verwaltung abgestimmte Mahnungen und sorgfältige Prüfung von Mietzinsanpassungen."
+    },
+    {
+      "Title": "Nebenkosten und Abrechnungen",
+      "Body": "Kontrolle der Nebenkosten und Jahresabrechnungen, Rückfragen an die richtige Stelle und Nachverfolgung bis zum Abschluss."
+    },
+    {
+      "Title": "Steuerung der Verwaltungen",
+      "Body": "Ausgestaltung der Mandate, Nachverfolgung der Leistungen und Kontrolle der Abrechnungen Ihrer Liegenschaftsverwaltungen und Hausverwalter, in Ihrem Interesse als Eigentümer."
+    },
+    {
+      "Title": "Unterhalt und Arbeiten",
+      "Body": "Koordination von Unterhalt und Arbeiten mit Handwerkern und Unternehmen, von der Offerte bis zur Abnahme, im Einklang mit Ihren Renovationsprojekten."
+    },
+    {
+      "Title": "Gebäudeversicherungen",
+      "Body": "Betreuung der Gebäude- und Gebäudehaftpflichtversicherungen, der Fälligkeiten und Schadenfälle, mit Ihren Brokern und Versicherern."
+    },
+    {
+      "Title": "Buchhaltung und Reporting",
+      "Body": "Buchhaltung auf Eigentümerseite, konsolidiertes Reporting in der Gesamtsicht Ihres Vermögens und Aufbereitung der Immobiliendaten — einschliesslich Eigenmietwert — für Ihre Steuererklärungen, in Abstimmung mit Ihren Steuerberatern."
+    }
+  ],
+  "Closing": {
+    "Title": "Immobilien langfristig betreut",
+    "Body": "Sie bestimmen die Ausrichtung Ihres Immobilienvermögens. Wir sorgen für dessen Verwaltung, Kohärenz und Gedächtnis, lange nach der Unterzeichnung."
+  },
+  "Perimeter": "Die operative Mietverwaltung verbleibt bei Ihren Liegenschaftsverwaltungen, wo sie mandatiert sind, rechtliche und steuerliche Fragen bei Ihren Anwälten, Notaren und Steuerberatern. Ridger erbringt Verwaltung, Aufsicht, Koordination und Reporting. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+}

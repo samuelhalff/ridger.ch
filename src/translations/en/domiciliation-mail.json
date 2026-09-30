@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Domiciliation and mail — a Geneva address, mail under control",
+    "Description": "A correspondence address in Switzerland for family members who are often abroad, and a mail management service in Geneva that lets no deadline slip.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "When a family lives across several countries, Swiss mail becomes a sensitive point: tax assessments, letters from the authorities, invoices, statements. A letter opened too late can cost a deadline.",
+    "We receive, scan and share your mail securely, and follow up on what it requires. A correspondence address remains a postal address: it does not establish your domicile or your tax residence, which depend on your actual circumstances."
+  ],
+  "Pillars": [
+    {
+      "Title": "Correspondence address",
+      "Body": "A c/o address in Geneva to receive mail for each family member, separate from your legal domicile and revocable at any time."
+    },
+    {
+      "Title": "Receipt and scanning",
+      "Body": "Receipt, sorting and scanning of mail, then secure sharing through your digital vault; originals are kept or forwarded as you instruct."
+    },
+    {
+      "Title": "Deadlines and replies",
+      "Body": "Spotting deadlines — tax notices, letters from the authorities, invoices — and coordinating replies with you and your advisers."
+    },
+    {
+      "Title": "Company domiciliation",
+      "Body": "Domiciliation in Geneva of family holding or management companies. Where the rules require it, a company must have real substance and take its management decisions there; we take this into account with your advisers."
+    },
+    {
+      "Title": "Archiving",
+      "Body": "Structured filing and archiving of the documents received, easy to retrieve for you and your advisers."
+    }
+  ],
+  "Closing": {
+    "Title": "Nothing goes missing",
+    "Body": "Wherever you are, you know what has arrived, what needs action and what has been dealt with. We keep it all in order, discreetly."
+  },
+  "Perimeter": "A correspondence address does not create a civil domicile or a tax residence. Legal and tax questions about domicile and company substance are handled with your lawyers and tax advisers. Ridger provides mail receipt, mail management and administrative coordination. Ridger does not manage assets and does not provide investment advice."
+}

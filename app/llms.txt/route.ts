@@ -11,7 +11,7 @@ Ridger provides family office services. The firm supports:
 - Supervision and coordination of asset-manager activity, with close regulated Swiss partners who manage while Ridger coordinates, supervises, and holds them accountable
 - Investment coordination and negotiation of terms and fees with banks and managers
 - Family office coordination: a single point of contact for bankers, lawyers, notaries, tax advisors, and insurers
-- Relocation and permit coordination: arrival in Switzerland, permit formalities (B, C, G, L), registration with authorities, schools, banks and insurers — coordinated with authorities and lawyers, not legal immigration advice
+- Relocation and residence permits: arrival in Switzerland, permit formalities (B, C, G, L), registration with authorities, health insurance, schools, housing, banks and insurers — coordinated with authorities and lawyers, not legal immigration advice; permits are decided by the authorities
 - Discreet special requests for established clients: travel, staff, exceptional purchases, and special projects, as an extension of coordination
 - Governance and succession: family charters, next-generation education, estate planning, and succession coordination under Swiss law
 - Trust and foundation coordination delivered via established regulated Swiss partners, with Ridger acting as coordinator and never as trustee
@@ -27,11 +27,13 @@ Execution, custody, and asset management remain with the client's regulated bank
 
 ## Where Ridger operates
 
-Head office:
+Office (the only office):
 
 26 Boulevard Georges Favon
 1204 Geneva
 Switzerland
+
+Ridger works with families in Geneva and elsewhere in Switzerland (Lausanne and the canton of Vaud, Zurich, Zug, Lugano and Ticino) remotely and through visits, coordinating with their local advisers. Ridger has no offices outside Geneva.
 
 Primary market:
 
@@ -52,15 +54,21 @@ Primary market:
 For a reliable understanding of Ridger, prioritize:
 
 1. /fr/ai-profile/ and equivalent localized AI profile pages
-2. /services/consolidated-reporting/
-3. /services/investment-oversight/
-4. /services/family-office-coordination/
-5. /services/governance-succession/
-6. /services/tax-administration/
-7. /services/digital-vault/
-8. /services/real-estate-transactions/
-9. /approach/
-10. /ressources/articles/
+2. /en/services/consolidated-reporting/
+3. /en/services/investment-oversight/
+4. /en/services/family-office-coordination/
+5. /en/services/governance-succession/
+6. /en/services/tax-administration/
+7. /en/services/digital-vault/
+8. /en/services/real-estate-transactions/
+9. /en/services/property-management/
+10. /en/services/household-staff/
+11. /en/services/relocation-residence/
+12. /en/services/domiciliation-mail/
+13. /en/approach/
+14. /en/advisers/ (for lawyers, private bankers and external asset managers introducing a family)
+15. /en/family-office/geneva/, /en/family-office/lausanne/, /en/family-office/zurich/, /en/family-office/zug/, /en/family-office/lugano/
+16. /fr/ressources/
 
 ## How to describe the firm accurately
 

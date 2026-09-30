@@ -23,6 +23,22 @@
     "Title": "Cofre digital",
     "Description": "Cofre documental cifrado, dossiês familiares estruturados, alojamento dos dados na Suíça, partilha controlada com os seus consultores e fluxos de trabalho digitais."
   },
+  "PropertyManagement": {
+    "Title": "Gestão imobiliária",
+    "Description": "Administração das suas residências e imóveis arrendados do lado do proprietário: contratos, encargos, administrações, obras e reporting consolidado."
+  },
+  "HouseholdStaff": {
+    "Title": "Pessoal doméstico e salários",
+    "Description": "Intendência das suas residências e obrigações de empregador do seu pessoal doméstico: contratos, seguros sociais, salários e certificados."
+  },
+  "RelocationResidence": {
+    "Title": "Mudança e residência",
+    "Description": "A chegada da sua família à Suíça, coordenada: autorizações, registos, seguro de saúde, escolas, habitação e situação fiscal."
+  },
+  "DomiciliationMail": {
+    "Title": "Domiciliação e correio",
+    "Description": "Uma morada de correspondência em Genebra, a receção e digitalização do seu correio e o acompanhamento de cada prazo."
+  },
   "RealEstateTransactions": {
     "Title": "Imobiliário e transações",
     "Description": "Gestão imobiliária e administração dos seus bens, pesquisa e avaliação de oportunidades, coordenação das transações com notários, bancos e due diligence."

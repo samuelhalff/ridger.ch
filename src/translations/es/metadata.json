@@ -29,6 +29,11 @@
       "description": "Solicite una entrevista confidencial con Ridger, family office en Ginebra. Respuesta en un día hábil, discreción estricta.",
       "keywords": "contacto family office ginebra, entrevista confidencial, multi family office suiza"
     },
+    "/advisers": {
+      "title": "Family office para abogados y banqueros | Ridger",
+      "description": "Family office para abogados, banqueros privados y gestores independientes: preséntenos una familia con discreción. Coordinamos, sin gestionar activos.",
+      "keywords": "family office para abogados, family office para banqueros privados, gestores independientes, notarios, asesores fiscales, presentación de clientes"
+    },
     "/platform": {
       "title": "La plataforma | Ridger",
       "description": "La plataforma Ridger: un espacio único y seguro para seguir valores, inmobiliario, documentos y reporting de su patrimonio. Ilustración — datos ficticios.",
@@ -78,6 +83,51 @@
       "title": "Inmobiliario y transacciones | Ridger",
       "description": "Inmobiliario en Ginebra: gestión y administración de bienes, arrendamientos, coordinación de obras, detección de oportunidades y transacciones con notarios y bancos.",
       "keywords": "gestión inmobiliaria ginebra, gestión de arrendamientos, coordinación obras reforma ginebra, coordinación de proveedores, administradoras de fincas, transacciones inmobiliarias, administración de bienes"
+    },
+    "/services/property-management": {
+      "title": "Administración de propiedades en Ginebra | Ridger",
+      "description": "Administración de propiedades en Ginebra del lado del propietario: contratos y alquileres, gastos, administradoras de fincas, obras y reporting consolidado.",
+      "keywords": "administración de propiedades ginebra, gestión inmobiliaria suiza, administradoras de fincas, liquidación de gastos, inmuebles en alquiler"
+    },
+    "/services/household-staff": {
+      "title": "Personal doméstico y nóminas en Suiza | Ridger",
+      "description": "Nóminas del personal doméstico en Suiza y gestión del hogar en Ginebra: contratos según el CTT-EDom, seguros sociales, salarios e impuesto en la fuente.",
+      "keywords": "personal doméstico suiza nóminas, personal doméstico ginebra, gestión del hogar, contratar personal doméstico en suiza, certificado de salario"
+    },
+    "/services/relocation-residence": {
+      "title": "Traslado y permiso de residencia | Ridger",
+      "description": "Mudarse a Suiza en familia: permiso de residencia en Suiza, registro de llegada, seguro de enfermedad, colegios, vivienda y coordinación fiscal.",
+      "keywords": "mudarse a suiza familia, permiso de residencia suiza, vivir en ginebra, trámites ocpm, permiso B C L, seguro de enfermedad lamal"
+    },
+    "/services/domiciliation-mail": {
+      "title": "Domiciliación y correo en Ginebra | Ridger",
+      "description": "Domiciliación en Ginebra: dirección de correspondencia, gestión del correo con recepción y digitalización, control de plazos y domiciliación de sociedades.",
+      "keywords": "domiciliación ginebra, gestión del correo, dirección de correspondencia suiza, dirección c/o ginebra, domiciliación de sociedades"
+    },
+    "/family-office/geneva": {
+      "title": "Family office en Ginebra | Ridger",
+      "description": "Multi-family office en Suiza con sede en Ginebra: reporting consolidado, coordinación de sus asesores y reuniones en nuestra oficina. Sin gestión de activos.",
+      "keywords": "family office en Ginebra, multi-family office Suiza, reporting consolidado, coordinación de asesores, patrimonio familiar"
+    },
+    "/family-office/lausanne": {
+      "title": "Family office en Lausana y Vaud | Ridger",
+      "description": "Con sede en Ginebra, Ridger acompaña a familias de Lausana y del cantón de Vaud: visión única del patrimonio, asesores coordinados y seguimiento fiscal.",
+      "keywords": "family office en Lausana, family office Vaud, multi-family office, reporting consolidado, coordinación de asesores"
+    },
+    "/family-office/zurich": {
+      "title": "Family office en Zúrich | Ridger",
+      "description": "Con sede en Ginebra, Ridger acompaña a familias de Zúrich a distancia y mediante visitas: reporting consolidado y coordinación de sus asesores.",
+      "keywords": "family office en Zúrich, multi-family office Suiza, reporting consolidado, coordinación de asesores, familias en Zúrich"
+    },
+    "/family-office/zug": {
+      "title": "Family office en Zug | Ridger",
+      "description": "Con sede en Ginebra, Ridger acompaña a familias del cantón de Zug: patrimonio privado y empresas familiares en una visión única, asesores coordinados.",
+      "keywords": "family office en Zug, multi-family office Suiza, empresas familiares, reporting consolidado, coordinación de asesores"
+    },
+    "/family-office/lugano": {
+      "title": "Family office en Lugano y el Tesino | Ridger",
+      "description": "Con sede en Ginebra, Ridger acompaña a familias de Lugano y del Tesino a distancia y mediante visitas, junto con sus asesores locales.",
+      "keywords": "family office en Lugano, family office Tesino, multi-family office Suiza, reporting consolidado, coordinación de asesores"
     },
     "/legal/privacy": {
       "title": "Política de privacidad | Ridger",

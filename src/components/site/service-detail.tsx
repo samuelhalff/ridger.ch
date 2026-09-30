@@ -54,6 +54,18 @@ const ServiceDetail = async ({
   const perimeter = (t("Perimeter") as string) || "";
   const closingTitle = (t("Closing.Title") as string) || "";
   const closingBody = (t("Closing.Body") as string) || "";
+  // Optional "related" note (e.g. a sister site). Missing keys echo back the
+  // key itself, so only render when the value is a real URL.
+  const relatedHref = t("Related.LinkHref") as string;
+  const related =
+    typeof relatedHref === "string" && /^https:\/\//.test(relatedHref)
+      ? {
+          title: t("Related.Title") as string,
+          body: t("Related.Body") as string,
+          label: t("Related.LinkLabel") as string,
+          href: relatedHref,
+        }
+      : null;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -207,6 +219,25 @@ const ServiceDetail = async ({
                 </p>
               ) : null}
             </div>
+          ) : null}
+
+          {related ? (
+            <aside className="mt-12 max-w-3xl rounded-2xl bg-surface-warm p-6 shadow-sm">
+              <h2 className="text-lg font-semibold tracking-tight text-foreground">
+                {related.title}
+              </h2>
+              <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                {related.body}{" "}
+                <a
+                  href={related.href}
+                  className="font-medium text-foreground underline underline-offset-4 hover:no-underline"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {related.label}
+                </a>
+              </p>
+            </aside>
           ) : null}
 
           {perimeter ? (

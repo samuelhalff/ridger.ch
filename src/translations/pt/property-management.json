@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Gestão imobiliária — os seus imóveis, do lado do proprietário",
+    "Description": "A gestão imobiliária em Genebra e em toda a Suíça das suas residências e imóveis arrendados: contratos, encargos, administrações de imóveis, obras e reporting.",
+    "CTA": "Solicitar uma entrevista confidencial"
+  },
+  "Intro": [
+    "Depois da aquisição começa o trabalho de fundo: acompanhar as rendas, verificar os acertos de contas, manter, segurar, declarar. Repartido entre várias administrações e residências, este acompanhamento perde depressa a coerência.",
+    "Administramos os imóveis da sua família do lado do proprietário. As administrações de imóveis mantêm o seu papel operacional quando mandatadas; nós orientamo-las, verificamos as suas contas e reunimos o conjunto numa visão clara do seu património."
+  ],
+  "Pillars": [
+    {
+      "Title": "Arrendamentos e rendas",
+      "Body": "Acompanhamento dos contratos de arrendamento, dos prazos e dos recebimentos, insistências coordenadas com a administração e leitura atenta das atualizações de renda."
+    },
+    {
+      "Title": "Encargos e acertos de contas",
+      "Body": "Controlo dos encargos e dos acertos de contas anuais, questões colocadas ao interlocutor certo e acompanhamento até ao seu encerramento."
+    },
+    {
+      "Title": "Condução das administrações",
+      "Body": "Enquadramento dos mandatos, acompanhamento das prestações e controlo das contas das suas administrações de imóveis e gestores de prédios, no seu interesse de proprietário."
+    },
+    {
+      "Title": "Manutenção e obras",
+      "Body": "Coordenação da manutenção e das obras com artesãos e empresas, do orçamento à receção, em articulação com os seus projetos de renovação."
+    },
+    {
+      "Title": "Seguros do edifício",
+      "Body": "Acompanhamento dos seguros do edifício e de responsabilidade civil do proprietário, dos vencimentos e dos sinistros, com os seus corretores e seguradoras."
+    },
+    {
+      "Title": "Contabilidade e reporting",
+      "Body": "Contabilidade do lado do proprietário, reporting consolidado integrado na visão global do seu património e preparação dos dados imobiliários — incluindo o valor locativo — para as suas declarações, tratadas com os seus consultores fiscais."
+    }
+  ],
+  "Closing": {
+    "Title": "Um património acompanhado no tempo",
+    "Body": "Decide a orientação do seu património imobiliário. Nós asseguramos a sua administração, a sua coerência e a sua memória, muito depois da assinatura."
+  },
+  "Perimeter": "A gestão operacional do arrendamento permanece assegurada pelas suas administrações de imóveis quando mandatadas, e as questões jurídicas e fiscais pelos seus advogados, notários e consultores fiscais. A Ridger assegura a administração, a supervisão, a coordenação e o reporting. A Ridger não gere ativos e não presta aconselhamento de investimento."
+}

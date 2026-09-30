@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Domizil und Postverwaltung — eine Adresse in Genf, Post unter Kontrolle",
+    "Description": "Eine Korrespondenzadresse in Genf für Familienmitglieder, die oft im Ausland sind, und eine Postverwaltung, die keine Frist verstreichen lässt.",
+    "CTA": "Vertrauliches Gespräch anfragen"
+  },
+  "Intro": [
+    "Lebt eine Familie in mehreren Ländern, wird die Schweizer Post zu einem heiklen Punkt: Steuerveranlagungen, Behördenschreiben, Rechnungen, Auszüge. Ein zu spät geöffneter Brief kann eine Frist kosten.",
+    "Wir nehmen Ihre Post entgegen, scannen sie und stellen sie sicher bereit, und wir verfolgen, was sie verlangt. Eine Korrespondenzadresse bleibt eine Postadresse: Sie begründet weder Ihren Wohnsitz noch Ihre steuerliche Ansässigkeit, die von Ihren tatsächlichen Verhältnissen abhängen."
+  ],
+  "Pillars": [
+    {
+      "Title": "Korrespondenzadresse",
+      "Body": "Eine c/o-Adresse in Genf für die Post jedes Familienmitglieds, getrennt vom rechtlichen Wohnsitz und jederzeit widerrufbar."
+    },
+    {
+      "Title": "Empfang und Digitalisierung",
+      "Body": "Empfang, Sortierung und Digitalisierung der Post und sichere Bereitstellung in Ihrem digitalen Tresor; Originale werden nach Ihren Anweisungen aufbewahrt oder weitergeleitet."
+    },
+    {
+      "Title": "Fristen und Antworten",
+      "Body": "Erkennen von Fristen — Steuerbescheide, Behördenschreiben, Rechnungen — und Koordination der Antworten mit Ihnen und Ihren Beratern."
+    },
+    {
+      "Title": "Domizil für Gesellschaften",
+      "Body": "Domizil in Genf für Familienholdings und Verwaltungsgesellschaften. Wo es die Vorschriften verlangen, muss eine Gesellschaft über echte Substanz verfügen und ihre Geschäftsentscheide dort treffen; dies berücksichtigen wir mit Ihren Beratern."
+    },
+    {
+      "Title": "Archivierung",
+      "Body": "Strukturierte Ablage und Archivierung der eingegangenen Dokumente, jederzeit auffindbar für Sie und Ihre Berater."
+    }
+  ],
+  "Closing": {
+    "Title": "Nichts geht verloren",
+    "Body": "Wo immer Sie sind, wissen Sie, was eingetroffen ist, was eine Handlung erfordert und was erledigt wurde. Wir halten alles in Ordnung, diskret."
+  },
+  "Perimeter": "Eine Korrespondenzadresse begründet weder einen zivilrechtlichen Wohnsitz noch eine steuerliche Ansässigkeit. Rechtliche und steuerliche Fragen zu Wohnsitz und Substanz von Gesellschaften werden mit Ihren Anwälten und Steuerberatern behandelt. Ridger erbringt Postempfang, Postverwaltung und administrative Koordination. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+}

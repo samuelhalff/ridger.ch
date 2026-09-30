@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Administración de propiedades — sus inmuebles, del lado del propietario",
+    "Description": "La administración de propiedades en Ginebra y en toda Suiza para sus residencias y sus inmuebles en alquiler: contratos, gastos, administradoras de fincas, obras y reporting.",
+    "CTA": "Solicitar una entrevista confidencial"
+  },
+  "Intro": [
+    "Una vez adquirido el inmueble empieza el trabajo de fondo: seguir los alquileres, revisar las liquidaciones, mantener, asegurar, declarar. Repartido entre varias administradoras y residencias, este seguimiento pierde pronto su coherencia.",
+    "Administramos los inmuebles de su familia del lado del propietario. Las administradoras de fincas conservan su papel operativo cuando tienen mandato; nosotros las dirigimos, revisamos sus cuentas y reunimos el conjunto en una visión clara de su patrimonio."
+  ],
+  "Pillars": [
+    {
+      "Title": "Contratos y alquileres",
+      "Body": "Seguimiento de los contratos de arrendamiento, los vencimientos y los cobros, reclamaciones coordinadas con la administradora y lectura atenta de las revisiones de renta."
+    },
+    {
+      "Title": "Gastos y liquidaciones",
+      "Body": "Control de los gastos comunes y de las liquidaciones anuales, preguntas planteadas al interlocutor adecuado y seguimiento hasta su cierre."
+    },
+    {
+      "Title": "Dirección de las administradoras",
+      "Body": "Encuadre de los mandatos, seguimiento de los servicios y control de las cuentas de sus administradoras de fincas y gestores de inmuebles, en su interés como propietario."
+    },
+    {
+      "Title": "Mantenimiento y obras",
+      "Body": "Coordinación del mantenimiento y de las obras con artesanos y empresas, del presupuesto a la recepción, en línea con sus proyectos de renovación."
+    },
+    {
+      "Title": "Seguros del edificio",
+      "Body": "Seguimiento de los seguros del edificio y de responsabilidad civil del propietario, de los vencimientos y de los siniestros, con sus corredores y aseguradoras."
+    },
+    {
+      "Title": "Contabilidad y reporting",
+      "Body": "Contabilidad del lado del propietario, reporting consolidado integrado en la visión global de su patrimonio y preparación de los datos inmobiliarios — incluido el valor locativo — para sus declaraciones, tratadas con sus asesores fiscales."
+    }
+  ],
+  "Closing": {
+    "Title": "Un patrimonio atendido en el tiempo",
+    "Body": "Usted decide la orientación de su patrimonio inmobiliario. Nosotros aseguramos su administración, su coherencia y su memoria, mucho después de la firma."
+  },
+  "Perimeter": "La gestión operativa de los arrendamientos sigue a cargo de sus administradoras de fincas cuando tienen mandato, y las cuestiones jurídicas y fiscales de sus abogados, notarios y asesores fiscales. Ridger asegura la administración, la supervisión, la coordinación y el reporting. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+}

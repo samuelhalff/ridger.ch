@@ -1,0 +1,48 @@
+{
+  "Hero": {
+    "Title": "Traslado y permisos de residencia — la llegada de su familia a Suiza",
+    "Description": "Coordinamos todo lo necesario para mudarse a Suiza en familia — a Ginebra, Vaud u otro cantón: permisos, registros, seguro de enfermedad, colegios y vivienda, en el orden correcto.",
+    "CTA": "Solicitar una entrevista confidencial"
+  },
+  "Intro": [
+    "Instalarse en Suiza supone una cadena de trámites con plazos cortos que dependen unos de otros: registro de llegada, permiso de residencia, seguro de enfermedad, escolarización, fiscalidad. La dificultad no está tanto en cada paso como en su encadenamiento.",
+    "Organizamos esta secuencia para toda la familia y coordinamos a las autoridades, sus abogados, sus asesores fiscales y los proveedores locales. Los permisos los deciden únicamente las autoridades; nuestro papel es preparar expedientes completos y seguir cada trámite."
+  ],
+  "Pillars": [
+    {
+      "Title": "Permisos de residencia",
+      "Body": "Coordinación de las solicitudes de permiso de residencia en Suiza ante la oficina cantonal de migración — la OCPM en Ginebra — en el marco fijado por la Secretaría de Estado de Migración (SEM): permiso B, C o L según su situación, y estatuto de trabajador fronterizo (G) cuando corresponda. Las cuestiones de derecho de extranjería se tratan con sus abogados."
+    },
+    {
+      "Title": "Registros",
+      "Body": "Registro de llegada ante la oficina cantonal o el municipio, según el cantón, cambios de dirección y seguimiento de los documentos exigidos para cada miembro de la familia."
+    },
+    {
+      "Title": "Seguro de enfermedad",
+      "Body": "Afiliación de cada miembro de la familia al seguro de enfermedad obligatorio (LAMal) dentro del plazo legal tras la llegada, con una lectura clara de los modelos disponibles."
+    },
+    {
+      "Title": "Colegios y vivienda",
+      "Body": "Coordinación de la elección del colegio, público o privado, y de la búsqueda de vivienda con agencias y administradoras de fincas, al ritmo del calendario familiar."
+    },
+    {
+      "Title": "Vida práctica",
+      "Body": "Canje del permiso de conducir extranjero, matriculación de vehículos, cuentas bancarias y seguros: los trámites del día a día, seguidos hasta el final."
+    },
+    {
+      "Title": "Situación fiscal",
+      "Body": "Coordinación de su situación fiscal a la llegada con sus asesores fiscales, incluido el análisis de la tributación según el gasto (forfait fiscal) cuando se cumplen las condiciones legales."
+    }
+  ],
+  "Closing": {
+    "Title": "Una llegada serena",
+    "Body": "Cada trámite llega en su momento, sin duplicidades ni olvidos. Usted se dedica a instalarse; nosotros mantenemos el hilo con las autoridades y sus asesores."
+  },
+  "Perimeter": "Los permisos de residencia los conceden las autoridades cantonales y federales, que deciden por sí solas. El asesoramiento jurídico y fiscal corresponde a sus abogados y asesores fiscales. Ridger asegura la coordinación y el seguimiento administrativo. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Related": {
+    "Title": "Para la mudanza en sí",
+    "Body": "Para la mudanza y los trámites de residencia propiamente dichos, Switzerland Residency, el sitio hermano de nuestro grupo, detalla cada etapa.",
+    "LinkLabel": "Switzerland Residency",
+    "LinkHref": "https://switzerlandresidency.ch/"
+  }
+}

@@ -28,5 +28,21 @@
   "DigitalVault": {
     "Title": "Digital vault",
     "Description": "An encrypted family document vault with Swiss data residency, structured records and controlled sharing with your advisors."
+  },
+  "PropertyManagement": {
+    "Title": "Property management",
+    "Description": "Owner-side administration of your residences and rental properties: leases, service charges, managing agents, works and consolidated reporting."
+  },
+  "HouseholdStaff": {
+    "Title": "Household staff and payroll",
+    "Description": "Running your residences and every employer obligation for your household staff: contracts, social insurance, payroll and certificates."
+  },
+  "RelocationResidence": {
+    "Title": "Relocation and residence",
+    "Description": "Your family's move to Switzerland, coordinated: permits, registrations, health insurance, schools, housing and tax status."
+  },
+  "DomiciliationMail": {
+    "Title": "Domiciliation and mail",
+    "Description": "A correspondence address in Geneva, receipt and scanning of your mail, and follow-up of every deadline."
   }
 }

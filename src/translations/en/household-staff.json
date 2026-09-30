@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Household staff and payroll — household management done properly",
+    "Description": "We coordinate the running of your residences and every employer obligation for your household staff in Geneva: contracts, social insurance, payroll and salary certificates.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "Hiring a housekeeper, a nanny, a driver or a gardener makes your household an employer in its own right. In Geneva the framework is precise: a standard employment contract for domestic work, social insurance from the first salary, and filings that come back every month.",
+    "We take on this household management over time, from hiring to the annual salary certificate. You keep the relationship with the people who work for you; we make sure everything is in order, quietly."
+  ],
+  "Pillars": [
+    {
+      "Title": "Running your residences",
+      "Body": "Household management in Geneva and beyond: staff schedules, suppliers, maintenance and repairs, budgets and invoices, with one contact who knows how you like things done."
+    },
+    {
+      "Title": "Recruitment and contracts",
+      "Body": "Coordination of recruitment through agencies or your own contacts, and written contracts based on Geneva's standard employment contract for domestic work (CTT-EDom), reviewed by your lawyers where needed."
+    },
+    {
+      "Title": "Social insurance",
+      "Body": "Registration with the AHV/AVS compensation fund, accident insurance (LAA), occupational pension (LPP) where the conditions are met, family allowances and the sickness loss-of-earnings cover required under Geneva's framework."
+    },
+    {
+      "Title": "Monthly payroll",
+      "Body": "Household staff payroll in Switzerland handled every month: salary calculation and payment, payslips, contribution statements, holiday and absence tracking."
+    },
+    {
+      "Title": "Withholding tax and certificates",
+      "Body": "Deduction and filing of withholding tax for staff who are subject to it, and preparation of the annual salary certificates."
+    },
+    {
+      "Title": "Chèque service or full mandate",
+      "Body": "For a few hours a week, Geneva's chèque service scheme may be enough. We help you choose the right route and take over the more complex situations."
+    }
+  ],
+  "Closing": {
+    "Title": "A well-run home",
+    "Body": "You choose the people and set the priorities for the house. We look after the administrative regularity, the deadlines and the day-to-day coordination."
+  },
+  "Perimeter": "Working conditions follow the applicable legal framework and standard contract; employment law questions are handled with your lawyers. Ridger provides administration, payroll and coordination for your household staff. Ridger does not manage assets and does not provide investment advice."
+}

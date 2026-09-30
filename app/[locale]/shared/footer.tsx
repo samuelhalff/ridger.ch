@@ -6,6 +6,7 @@ import CookieSettingsLink from "@/src/components/CookieSettingsLink";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { buildInternalUrl } from "@/src/lib/paths";
 import { WHATSAPP_URL } from "@/src/lib/whatsapp";
+import locationCities from "@/src/lib/locations.json";
 
 // Replace '#' with real or placeholder URLs for SEO. Update as needed.
 const footerSections = [
@@ -47,12 +48,33 @@ const footerSections = [
         href: "/services/real-estate-transactions/",
         ns: "servicesItems",
       },
+      {
+        titleKey: "PropertyManagement.Title",
+        href: "/services/property-management/",
+        ns: "servicesItems",
+      },
+      {
+        titleKey: "HouseholdStaff.Title",
+        href: "/services/household-staff/",
+        ns: "servicesItems",
+      },
+      {
+        titleKey: "RelocationResidence.Title",
+        href: "/services/relocation-residence/",
+        ns: "servicesItems",
+      },
+      {
+        titleKey: "DomiciliationMail.Title",
+        href: "/services/domiciliation-mail/",
+        ns: "servicesItems",
+      },
     ],
   },
   {
     titleKey: "Company.Title",
     links: [
       { titleKey: "Approach", href: "/approach/", ns: "navbar" },
+      { titleKey: "Advisers", href: "/advisers/", ns: "footer" },
       { titleKey: "Contact", href: "/contact/", ns: "navbar" },
     ],
   },
@@ -85,6 +107,7 @@ const Footer = async ({ locale }: { locale?: string }) => {
   const tNavbar = await getTranslations(currentLocale, "navbar");
   const tItems = await getTranslations(currentLocale, "servicesItems");
   const tContact = await getTranslations(currentLocale, "contact");
+  const tLocations = await getTranslations(currentLocale, "locations");
   return (
     <footer
       className="mt-12 bg-surface-warm/35 text-foreground xs:mt-20"
@@ -227,6 +250,28 @@ const Footer = async ({ locale }: { locale?: string }) => {
           </nav>
         ))}
       </div>
+      <nav
+        aria-label={tLocations("Common.HubLabel") as string}
+        className="mx-auto max-w-[1240px] px-5 pb-10 text-sm text-muted-foreground sm:px-8"
+      >
+        <span className="font-semibold text-foreground">
+          {tLocations("Common.HubLabel") as string}
+        </span>
+        <span aria-hidden="true"> · </span>
+        {locationCities.map((city, index) => (
+          <span key={city}>
+            {index > 0 ? <span aria-hidden="true"> · </span> : null}
+            <Link
+              href={buildInternalUrl(`/family-office/${city}`, currentLocale)}
+              className="transition-colors hover:text-foreground"
+              locale={locale}
+              prefetch={false}
+            >
+              {tLocations(`Cities.${city}.Name`) as string}
+            </Link>
+          </span>
+        ))}
+      </nav>
       <Separator />
       <div className="mx-auto flex max-w-[1240px] flex-col-reverse items-center justify-between gap-x-2 gap-y-5 px-5 py-8 sm:flex-row sm:px-8">
         <span className="w-full text-center text-sm text-muted-foreground xs:text-start">

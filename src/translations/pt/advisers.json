@@ -1,0 +1,83 @@
+{
+  "Hero": {
+    "Eyebrow": "Para advogados, notários e banqueiros",
+    "Title": "Apresentar uma família à Ridger",
+    "Description": "Acompanha uma família cujo património precisa de coordenação? Advogados, banqueiros privados e gestores independentes podem apresentá-la a nós, com total discrição.",
+    "CTA": "Contactar com discrição"
+  },
+  "Intro": [
+    "Algumas famílias trabalham com vários bancos, detêm estruturas em diferentes jurisdições e contam com consultores que nem sempre falam entre si. Muitas vezes, vê-o antes delas: falta uma visão de conjunto e alguém que segure o fio.",
+    "Ser um family office para advogados e banqueiros privados significa, para nós, assumir essa coordenação respeitando o lugar de quem nos apresenta a família. Não gerimos ativos nem prestamos aconselhamento jurídico; organizamos a informação e facilitamos o trabalho de todos."
+  ],
+  "Audiences": {
+    "Title": "Para quem",
+    "Items": [
+      {
+        "Title": "Advogados e notários",
+        "Body": "Sucessões, acordos familiares, fundações ou transmissão de empresas: o seu trabalho beneficia de informação patrimonial atualizada e de um acompanhamento rigoroso das decisões tomadas com a família."
+      },
+      {
+        "Title": "Banqueiros privados",
+        "Body": "O seu cliente trabalha com várias instituições e quer uma visão de conjunto. Consolidamos sem colocar produtos, e a relação com o cliente continua a ser sua."
+      },
+      {
+        "Title": "Gestores de patrimónios independentes",
+        "Body": "Gere o mandato; nós coordenamos o resto: administração, questões fiscais com os especialistas, documentos e prazos. O reporting consolidado situa o seu mandato no património global da família."
+      },
+      {
+        "Title": "Consultores fiscais e fiduciárias",
+        "Body": "Documentos completos e organizados, um calendário cumprido e um interlocutor que conhece o dossiê: preparar declarações e planeamentos torna-se mais simples."
+      }
+    ]
+  },
+  "Steps": {
+    "Title": "Como funciona uma apresentação",
+    "Items": [
+      {
+        "Title": "Uma primeira conversa",
+        "Body": "Descreve-nos a situação, sem nomes se preferir. Dizemos-lhe com franqueza se podemos ser úteis."
+      },
+      {
+        "Title": "O encontro com a família",
+        "Body": "Reunimo-nos com a família, consigo ou sem si, conforme lhe for mais conveniente."
+      },
+      {
+        "Title": "A definição do mandato",
+        "Body": "Definimos em conjunto o âmbito do nosso trabalho e quem faz o quê, para que cada papel fique claro desde o início."
+      },
+      {
+        "Title": "Uma coordenação contínua",
+        "Body": "Coordenamos ao longo do tempo. Mantém-se informado na medida que a família escolher."
+      }
+    ]
+  },
+  "Roles": {
+    "Title": "Quem faz o quê",
+    "Items": [
+      {
+        "Who": "Quem apresenta",
+        "Does": "Mantém o seu mandato e a sua relação com a família: aconselhamento jurídico, escrituras, gestão de carteiras ou relação bancária, consoante a sua profissão."
+      },
+      {
+        "Who": "Ridger",
+        "Does": "Coordenamos os consultores, consolidamos o património num reporting único e supervisionamos a administração. Não gerimos ativos nem prestamos aconselhamento jurídico, pelo que não concorremos com o seu mandato."
+      },
+      {
+        "Who": "A família",
+        "Does": "Mantém o controlo das decisões e escolhe o que é partilhado, com quem e quando."
+      }
+    ]
+  },
+  "Discretion": {
+    "Title": "Uma discrição partilhada",
+    "Body": [
+      "A confidencialidade está no centro do nosso trabalho. Os documentos da família são guardados num cofre digital alojado na Suíça, e cada informação só é partilhada com quem dela precisa.",
+      "É a família que decide o que circula entre os seus consultores. Respeitamos os deveres de sigilo próprios da sua profissão: uma primeira conversa pode decorrer sem qualquer nome, e nada é transmitido sem o acordo da família."
+    ]
+  },
+  "Form": {
+    "Title": "Apresentar-nos uma família",
+    "Subtitle": "Bastam algumas linhas. Respondemos-lhe rapidamente e com total confidencialidade.",
+    "MessagePlaceholder": "p. ex., uma breve descrição anonimizada da situação"
+  }
+}

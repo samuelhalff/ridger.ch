@@ -1,0 +1,48 @@
+{
+  "Hero": {
+    "Title": "Relocation and residence permits — your family's move to Switzerland",
+    "Description": "We coordinate your family's relocation to Switzerland — Geneva, Vaud or elsewhere: permits, registrations, health insurance, schools and housing, in the right order.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "Settling in Switzerland means a chain of steps with short deadlines, each depending on the last: registering your arrival, the residence permit, health insurance, schooling, tax. The difficulty lies less in each step than in how they fit together.",
+    "We organise this sequence for the whole family and coordinate the authorities, your lawyers, your tax advisers and local providers. Permits are decided by the authorities alone; our role is to prepare complete files and follow every step through."
+  ],
+  "Pillars": [
+    {
+      "Title": "Residence permits",
+      "Body": "Coordination of Swiss residence permit applications with the cantonal migration office — the OCPM in Geneva — within the framework set by the SEM: B, C or L permits depending on your situation, and cross-border (G) status where it applies. Immigration law questions are handled with your lawyers."
+    },
+    {
+      "Title": "Registrations",
+      "Body": "Registering your arrival with the cantonal office or the municipality, depending on the canton, address changes and follow-up of the documents required for each family member."
+    },
+    {
+      "Title": "Health insurance",
+      "Body": "Enrolment of every family member in compulsory health insurance (LAMal) within the legal deadline after arrival, with a clear reading of the available models."
+    },
+    {
+      "Title": "Schools and housing",
+      "Body": "Coordination of the choice of school, public or private, and of the housing search with agents, in step with the family's timetable."
+    },
+    {
+      "Title": "Practical life",
+      "Body": "Exchanging a foreign driving licence, registering vehicles, bank accounts and insurance: everyday formalities, followed through to the end."
+    },
+    {
+      "Title": "Tax status",
+      "Body": "Coordination of your tax position on arrival with your tax advisers, including a review of lump-sum taxation (forfait fiscal) where the legal conditions are met."
+    }
+  ],
+  "Closing": {
+    "Title": "A calm arrival",
+    "Body": "Each step comes at the right time, with nothing duplicated or forgotten. You focus on settling in; we keep the thread with the authorities and your advisers."
+  },
+  "Perimeter": "Residence permits are granted by the cantonal and federal authorities, which alone decide on them. Legal and tax advice is provided by your lawyers and tax advisers. Ridger provides coordination and administrative follow-up. Ridger does not manage assets and does not provide investment advice.",
+  "Related": {
+    "Title": "For the move itself",
+    "Body": "For the move and the residence formalities themselves, Switzerland Residency, our sister site within the group, walks through each step.",
+    "LinkLabel": "Switzerland Residency",
+    "LinkHref": "https://switzerlandresidency.ch/"
+  }
+}

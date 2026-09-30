@@ -1,0 +1,157 @@
+{
+  "Common": {
+    "Eyebrow": "Family office",
+    "BasedInGeneva": "Ridger is based in Geneva and works with families across Switzerland.",
+    "ServicesTitle": "What we do for your family",
+    "OtherLocationsTitle": "Elsewhere in Switzerland",
+    "CTA": "Request a confidential consultation",
+    "HubLabel": "Families across Switzerland"
+  },
+  "Cities": {
+    "geneva": {
+      "Name": "Geneva",
+      "Hero": {
+        "Title": "Family office in Geneva — close to you, in the heart of the city",
+        "Description": "Ridger is a Swiss multi-family office based on boulevard Georges-Favon in Geneva. We bring your wealth into a single view and coordinate your advisers, without managing your assets."
+      },
+      "Intro": [
+        "Geneva is our home base. This is where we welcome families, meet their advisers and follow their affairs day to day.",
+        "Our work is digital first: consolidated reporting, a digital vault and online exchanges. But in Geneva, a meeting at our office is always an option."
+      ],
+      "Sections": [
+        {
+          "Title": "Meetings at our office",
+          "Body": "We welcome you at our Geneva office for the moments that matter: a first meeting, the annual review of your wealth, family decisions. The rest of the time, you reach us however you prefer."
+        },
+        {
+          "Title": "Your Geneva advisers, coordinated",
+          "Body": "Private banks, independent asset managers, lawyers, notaries: we work with the advisers you already have. We also prepare the documents expected by the Administration fiscale cantonale and follow deadlines with your tax adviser."
+        },
+        {
+          "Title": "Families from here and elsewhere",
+          "Body": "Many Geneva families have ties to several countries. We work in French, English, German, Spanish and Portuguese, and coordinate advisers in Switzerland and abroad."
+        }
+      ],
+      "Closing": {
+        "Title": "Let's talk about your situation",
+        "Body": "A first confidential meeting, at our office or by video call, to understand your needs and see how we can help."
+      }
+    },
+    "lausanne": {
+      "Name": "Lausanne",
+      "Hero": {
+        "Title": "Family office for families in Lausanne and the canton of Vaud",
+        "Description": "From Geneva, Ridger supports families in Vaud: a single view of their wealth, coordination of their advisers and oversight of their administration."
+      },
+      "Intro": [
+        "We are not based in Lausanne, and we prefer to say so plainly. Our office is in Geneva, a short distance away, and the way we work lends itself well to remote support.",
+        "A digital platform, consolidated reporting and video calls make up the day-to-day. When meeting in person is useful, we come to you or welcome you in Geneva."
+      ],
+      "Sections": [
+        {
+          "Title": "From Geneva, at your pace",
+          "Body": "You follow your wealth online, at any time, and we stay reachable through the channel you prefer. Important reviews can take place in person, in Lausanne or in Geneva."
+        },
+        {
+          "Title": "Your Vaud advisers, coordinated",
+          "Body": "We work with your current banks, notary, lawyer and fiduciary. We gather the documents needed by the Administration cantonale des impôts (ACI) and follow the calendar with your tax adviser."
+        },
+        {
+          "Title": "Tax and succession in Vaud",
+          "Body": "The taxation of wealth and inheritance differs from one canton to another. These questions are handled with your tax advisers and notary; we make sure they have complete, up-to-date information."
+        }
+      ],
+      "Closing": {
+        "Title": "A first conversation, with no commitment",
+        "Body": "By video call or in Geneva, a confidential meeting to review your situation and your priorities."
+      }
+    },
+    "zurich": {
+      "Name": "Zurich",
+      "Hero": {
+        "Title": "Family office for families in Zurich",
+        "Description": "Based in Geneva, Ridger supports families in Zurich remotely and through visits: a single view of their wealth and coordination of their advisers."
+      },
+      "Intro": [
+        "Ridger has no office in Zurich. We work from Geneva with families living elsewhere in Switzerland, with an organisation designed for digital from the start.",
+        "Your wealth is consolidated on a secure platform, your documents are kept in a digital vault hosted in Switzerland, and we travel when it is useful."
+      ],
+      "Sections": [
+        {
+          "Title": "Remote by default, visits when useful",
+          "Body": "Everyday exchanges happen online and by video call. For an annual review, a family decision or a meeting with your advisers, we arrange a visit."
+        },
+        {
+          "Title": "Your Zurich advisers, coordinated",
+          "Body": "We bring in your current banks, asset managers, lawyers and fiduciaries rather than replacing them. For tax, we prepare the documents expected by the Kantonales Steueramt Zürich and coordinate deadlines with your tax adviser."
+        },
+        {
+          "Title": "In German, French or English",
+          "Body": "We work in German, French, English, Spanish and Portuguese. Each family member can speak with us in the language that comes most naturally."
+        }
+      ],
+      "Closing": {
+        "Title": "Let's get acquainted",
+        "Body": "A first confidential video call to understand your situation and see whether we can help."
+      }
+    },
+    "zug": {
+      "Name": "Zug",
+      "Hero": {
+        "Title": "Family office for families in Zug",
+        "Description": "From Geneva, Ridger supports families in the canton of Zug: private wealth and family companies in a single view, with their advisers coordinated."
+      },
+      "Intro": [
+        "Our office is in Geneva; we have no presence in Zug. We support families in Zug remotely, with a digital platform and visits when useful.",
+        "Our role is the same everywhere: bring the information together, coordinate the advisers and oversee the administration, without ever managing your assets."
+      ],
+      "Sections": [
+        {
+          "Title": "A remote relationship, well kept",
+          "Body": "Online consolidated reporting, a digital vault and video calls set the rhythm. We travel for the meetings that call for it."
+        },
+        {
+          "Title": "Private wealth and family companies",
+          "Body": "When the family's wealth includes an operating company or a holding, we keep both sides, private and corporate, easy to read, and coordinate your fiduciary, lawyers and banks."
+        },
+        {
+          "Title": "Working with the Zug tax administration",
+          "Body": "We prepare the documents needed by the Steuerverwaltung des Kantons Zug and follow deadlines with your tax adviser, who remains your contact for any tax question."
+        }
+      ],
+      "Closing": {
+        "Title": "A first confidential meeting",
+        "Body": "By video call, to review your wealth, your advisers and what you expect from a family office."
+      }
+    },
+    "lugano": {
+      "Name": "Lugano",
+      "Hero": {
+        "Title": "Family office for families in Lugano and Ticino",
+        "Description": "Based in Geneva, Ridger supports families in Ticino remotely and through visits, in coordination with their local advisers."
+      },
+      "Intro": [
+        "We have no office in Ticino. From Geneva, we support families in Lugano and the surrounding region with a digital platform, video calls and visits when useful.",
+        "We work in French, English, German, Spanish and Portuguese, but not in Italian. For exchanges in Italian, we rely on your advisers in Ticino."
+      ],
+      "Sections": [
+        {
+          "Title": "From Geneva, in close contact with you",
+          "Body": "Your wealth is consolidated online and your documents are kept in a digital vault hosted in Switzerland. We come to you for the meetings that matter."
+        },
+        {
+          "Title": "Your Ticino advisers, coordinated",
+          "Body": "Banks, lawyers, notaries and fiduciaries: we work with the ones you already know. We gather the documents needed by the Divisione delle contribuzioni and follow the calendar with your tax adviser."
+        },
+        {
+          "Title": "An Italian-speaking setting",
+          "Body": "In Ticino, many documents are written in Italian. We bring them into your reporting and digital vault, and your local advisers remain your contacts for exchanges in that language."
+        }
+      ],
+      "Closing": {
+        "Title": "Let's talk about your situation",
+        "Body": "A first confidential video call, in whichever of our working languages suits you best."
+      }
+    }
+  }
+}

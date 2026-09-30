@@ -7,6 +7,10 @@ import {
   Receipt,
   Vault,
   Buildings,
+  HouseLine,
+  AirplaneTilt,
+  Mailbox,
+  Key,
 } from "@phosphor-icons/react/dist/ssr";
 
 const iconProps = {
@@ -21,6 +25,10 @@ const GovernanceIcon = () => <Scales {...iconProps} />;
 const TaxAdminIcon = () => <Receipt {...iconProps} />;
 const VaultIcon = () => <Vault {...iconProps} />;
 const RealEstateIcon = () => <Buildings {...iconProps} />;
+const HouseholdIcon = () => <HouseLine {...iconProps} />;
+const RelocationIcon = () => <AirplaneTilt {...iconProps} />;
+const MailIcon = () => <Mailbox {...iconProps} />;
+const PropertyIcon = () => <Key {...iconProps} />;
 
 const ServicesElements = [
   {
@@ -64,6 +72,30 @@ const ServicesElements = [
     descriptionKey: "RealEstateTransactions.Description",
     href: "/services/real-estate-transactions/",
     icon: <RealEstateIcon />,
+  },
+  {
+    titleKey: "PropertyManagement.Title",
+    descriptionKey: "PropertyManagement.Description",
+    href: "/services/property-management/",
+    icon: <PropertyIcon />,
+  },
+  {
+    titleKey: "HouseholdStaff.Title",
+    descriptionKey: "HouseholdStaff.Description",
+    href: "/services/household-staff/",
+    icon: <HouseholdIcon />,
+  },
+  {
+    titleKey: "RelocationResidence.Title",
+    descriptionKey: "RelocationResidence.Description",
+    href: "/services/relocation-residence/",
+    icon: <RelocationIcon />,
+  },
+  {
+    titleKey: "DomiciliationMail.Title",
+    descriptionKey: "DomiciliationMail.Description",
+    href: "/services/domiciliation-mail/",
+    icon: <MailIcon />,
   },
 ];
 

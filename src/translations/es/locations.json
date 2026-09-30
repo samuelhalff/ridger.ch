@@ -1,0 +1,157 @@
+{
+  "Common": {
+    "Eyebrow": "Family office",
+    "BasedInGeneva": "Ridger tiene su sede en Ginebra y acompaña a familias en toda Suiza.",
+    "ServicesTitle": "Lo que hacemos por su familia",
+    "OtherLocationsTitle": "En otros lugares de Suiza",
+    "CTA": "Solicitar una entrevista confidencial",
+    "HubLabel": "Familias en toda Suiza"
+  },
+  "Cities": {
+    "geneva": {
+      "Name": "Ginebra",
+      "Hero": {
+        "Title": "Family office en Ginebra — cerca de usted, en el corazón de la ciudad",
+        "Description": "Ridger es un multi-family office en Suiza con sede en el boulevard Georges-Favon de Ginebra. Reunimos su patrimonio en una visión única y coordinamos a sus asesores, sin gestionar sus activos."
+      },
+      "Intro": [
+        "Ginebra es nuestra base. Aquí recibimos a las familias, nos reunimos con sus asesores y seguimos sus asuntos en el día a día.",
+        "Nuestro trabajo es digital ante todo: reporting consolidado, caja fuerte digital e intercambios en línea. Pero en Ginebra siempre es posible una reunión en nuestra oficina."
+      ],
+      "Sections": [
+        {
+          "Title": "Reuniones en nuestra oficina",
+          "Body": "Le recibimos en nuestra oficina de Ginebra para los momentos importantes: la primera reunión, la revisión anual del patrimonio, las decisiones familiares. El resto del tiempo, puede contactarnos como prefiera."
+        },
+        {
+          "Title": "Sus asesores en Ginebra, coordinados",
+          "Body": "Bancos privados, gestores independientes, abogados, notarios: trabajamos con los asesores que ya tiene. También preparamos los documentos que requiere la Administration fiscale cantonale y seguimos los plazos con su asesor fiscal."
+        },
+        {
+          "Title": "Familias de aquí y de otros lugares",
+          "Body": "Muchas familias de Ginebra tienen vínculos con varios países. Trabajamos en francés, inglés, alemán, español y portugués, y coordinamos asesores en Suiza y en el extranjero."
+        }
+      ],
+      "Closing": {
+        "Title": "Hablemos de su situación",
+        "Body": "Una primera reunión confidencial, en nuestra oficina o por videollamada, para entender sus necesidades y ver cómo podemos ayudarle."
+      }
+    },
+    "lausanne": {
+      "Name": "Lausana",
+      "Hero": {
+        "Title": "Family office para familias de Lausana y del cantón de Vaud",
+        "Description": "Desde Ginebra, Ridger acompaña a familias del cantón de Vaud: una visión única del patrimonio, la coordinación de sus asesores y la supervisión de su administración."
+      },
+      "Intro": [
+        "No estamos instalados en Lausana, y preferimos decirlo con claridad. Nuestra oficina está en Ginebra, a poca distancia, y nuestra forma de trabajar se presta bien al acompañamiento a distancia.",
+        "Plataforma digital, reporting consolidado y videollamadas forman el día a día. Cuando conviene reunirse en persona, vamos a verle o le recibimos en Ginebra."
+      ],
+      "Sections": [
+        {
+          "Title": "Desde Ginebra, a su ritmo",
+          "Body": "Sigue su patrimonio en línea, en cualquier momento, y seguimos disponibles por el canal que prefiera. Las revisiones importantes pueden hacerse en persona, en Lausana o en Ginebra."
+        },
+        {
+          "Title": "Sus asesores en Vaud, coordinados",
+          "Body": "Trabajamos con sus bancos, su notario, su abogado y su fiduciaria actuales. Reunimos los documentos que necesita la Administration cantonale des impôts (ACI) y seguimos el calendario con su asesor fiscal."
+        },
+        {
+          "Title": "Fiscalidad y sucesión en Vaud",
+          "Body": "La tributación del patrimonio y de las sucesiones varía de un cantón a otro. Estas cuestiones se tratan con sus asesores fiscales y su notario; nosotros nos aseguramos de que dispongan de información completa y actualizada."
+        }
+      ],
+      "Closing": {
+        "Title": "Una primera conversación, sin compromiso",
+        "Body": "Por videollamada o en Ginebra, una reunión confidencial para hacer balance de su situación y sus prioridades."
+      }
+    },
+    "zurich": {
+      "Name": "Zúrich",
+      "Hero": {
+        "Title": "Family office para familias de Zúrich",
+        "Description": "Con sede en Ginebra, Ridger acompaña a familias de Zúrich a distancia y mediante visitas: una visión única del patrimonio y la coordinación de sus asesores."
+      },
+      "Intro": [
+        "Ridger no tiene oficina en Zúrich. Trabajamos desde Ginebra con familias que viven en otras partes de Suiza, con una organización pensada para lo digital desde el principio.",
+        "Su patrimonio se consolida en una plataforma segura, sus documentos se guardan en una caja fuerte digital alojada en Suiza, y nos desplazamos cuando resulta útil."
+      ],
+      "Sections": [
+        {
+          "Title": "A distancia por defecto, visitas cuando conviene",
+          "Body": "Los intercambios habituales se hacen en línea y por videollamada. Para una revisión anual, una decisión familiar o una reunión con sus asesores, organizamos una visita."
+        },
+        {
+          "Title": "Sus asesores en Zúrich, coordinados",
+          "Body": "Integramos a sus bancos, gestores, abogados y fiduciarias actuales en lugar de sustituirlos. En materia fiscal, preparamos los documentos que requiere el Kantonales Steueramt Zürich y coordinamos los plazos con su asesor fiscal."
+        },
+        {
+          "Title": "En alemán, francés o inglés",
+          "Body": "Trabajamos en alemán, francés, inglés, español y portugués. Cada miembro de la familia puede hablar con nosotros en el idioma que le resulte más natural."
+        }
+      ],
+      "Closing": {
+        "Title": "Conozcámonos",
+        "Body": "Una primera videollamada confidencial para entender su situación y ver si podemos ayudarle."
+      }
+    },
+    "zug": {
+      "Name": "Zug",
+      "Hero": {
+        "Title": "Family office para familias de Zug",
+        "Description": "Desde Ginebra, Ridger acompaña a familias del cantón de Zug: patrimonio privado y empresas familiares en una visión única, con sus asesores coordinados."
+      },
+      "Intro": [
+        "Nuestra oficina está en Ginebra; no tenemos presencia en Zug. Acompañamos a las familias de Zug a distancia, con una plataforma digital y visitas cuando resultan útiles.",
+        "Nuestro papel es el mismo en todas partes: reunir la información, coordinar a los asesores y supervisar la administración, sin gestionar nunca sus activos."
+      ],
+      "Sections": [
+        {
+          "Title": "Una relación a distancia, bien cuidada",
+          "Body": "Reporting consolidado en línea, caja fuerte digital y videollamadas marcan el ritmo. Nos desplazamos para las reuniones que lo justifican."
+        },
+        {
+          "Title": "Patrimonio privado y empresas familiares",
+          "Body": "Cuando el patrimonio incluye una empresa o una holding, mantenemos ambas partes, privada y empresarial, fáciles de leer, y coordinamos a su fiduciaria, sus abogados y sus bancos."
+        },
+        {
+          "Title": "Coordinación con la administración fiscal de Zug",
+          "Body": "Preparamos los documentos que necesita la Steuerverwaltung des Kantons Zug y seguimos los plazos con su asesor fiscal, que sigue siendo su interlocutor para cualquier cuestión tributaria."
+        }
+      ],
+      "Closing": {
+        "Title": "Una primera reunión confidencial",
+        "Body": "Por videollamada, para hablar de su patrimonio, de sus asesores y de lo que espera de un family office."
+      }
+    },
+    "lugano": {
+      "Name": "Lugano",
+      "Hero": {
+        "Title": "Family office para familias de Lugano y del Tesino",
+        "Description": "Con sede en Ginebra, Ridger acompaña a familias del Tesino a distancia y mediante visitas, en coordinación con sus asesores locales."
+      },
+      "Intro": [
+        "No tenemos oficina en el Tesino. Desde Ginebra, acompañamos a familias de Lugano y su región con una plataforma digital, videollamadas y visitas cuando resultan útiles.",
+        "Trabajamos en francés, inglés, alemán, español y portugués, pero no en italiano. Para los intercambios en italiano, nos apoyamos en sus asesores del Tesino."
+      ],
+      "Sections": [
+        {
+          "Title": "Desde Ginebra, en contacto estrecho con usted",
+          "Body": "Su patrimonio se consolida en línea y sus documentos se guardan en una caja fuerte digital alojada en Suiza. Vamos a verle para las reuniones importantes."
+        },
+        {
+          "Title": "Sus asesores del Tesino, coordinados",
+          "Body": "Bancos, abogados, notarios y fiduciarias: trabajamos con los que ya conoce. Reunimos los documentos que necesita la Divisione delle contribuzioni y seguimos el calendario con su asesor fiscal."
+        },
+        {
+          "Title": "Un entorno de habla italiana",
+          "Body": "En el Tesino, muchos documentos están redactados en italiano. Los integramos en su reporting y su caja fuerte digital, y sus asesores locales siguen siendo sus interlocutores para los intercambios en esa lengua."
+        }
+      ],
+      "Closing": {
+        "Title": "Hablemos de su situación",
+        "Body": "Una primera videollamada confidencial, en el idioma que prefiera entre los que utilizamos."
+      }
+    }
+  }
+}

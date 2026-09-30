@@ -1,0 +1,83 @@
+{
+  "Hero": {
+    "Eyebrow": "Für Anwälte, Notare und Banker",
+    "Title": "Eine Familie an Ridger vermitteln",
+    "Description": "Sie begleiten eine Familie, deren Vermögen Koordination braucht? Anwälte, Privatbanker und unabhängige Vermögensverwalter können sie uns diskret vorstellen.",
+    "CTA": "Diskret Kontakt aufnehmen"
+  },
+  "Intro": [
+    "Manche Familien arbeiten mit mehreren Banken, halten Strukturen in verschiedenen Rechtsordnungen und stützen sich auf Berater, die nicht immer miteinander sprechen. Oft sehen Sie es vor ihnen: Es fehlt der Gesamtüberblick und jemand, der die Fäden zusammenhält.",
+    "Ein Family Office für Anwälte und Vermögensverwalter heisst für uns: Wer uns eine Familie vorstellt, übergibt die Koordination an ein Gegenüber, das seine Rolle respektiert. Wir verwalten kein Vermögen und erteilen keine Rechtsberatung; wir ordnen die Informationen und erleichtern allen Beteiligten die Arbeit."
+  ],
+  "Audiences": {
+    "Title": "Für wen",
+    "Items": [
+      {
+        "Title": "Anwälte und Notare",
+        "Body": "Nachlass, Familienverträge, Stiftungen oder Unternehmensnachfolge: Ihre Arbeit profitiert von aktuellen Vermögensinformationen und einer sorgfältigen Nachverfolgung der Entscheide, die mit der Familie getroffen werden."
+      },
+      {
+        "Title": "Privatbanker",
+        "Body": "Ihr Kunde arbeitet mit mehreren Banken und wünscht sich einen Gesamtüberblick. Wir konsolidieren, ohne Produkte zu platzieren, und Ihre Kundenbeziehung bleibt Ihre."
+      },
+      {
+        "Title": "Unabhängige Vermögensverwalter",
+        "Body": "Sie führen das Mandat, wir koordinieren den Rest: Administration, Steuerfragen mit den Spezialisten, Dokumente und Fristen. Das konsolidierte Reporting zeigt Ihr Mandat im Gesamtvermögen der Familie."
+      },
+      {
+        "Title": "Steuerberater und Treuhänder",
+        "Body": "Vollständige, geordnete Unterlagen, ein eingehaltener Kalender und ein Ansprechpartner, der das Dossier kennt: So lassen sich Steuererklärungen und Planungen einfacher vorbereiten."
+      }
+    ]
+  },
+  "Steps": {
+    "Title": "So läuft eine Vorstellung ab",
+    "Items": [
+      {
+        "Title": "Ein erstes Gespräch",
+        "Body": "Sie schildern uns die Situation, auf Wunsch ohne Namen. Wir sagen Ihnen offen, ob wir helfen können."
+      },
+      {
+        "Title": "Das Treffen mit der Familie",
+        "Body": "Wir treffen die Familie, mit Ihnen oder ohne Sie, so wie es ihr am besten passt."
+      },
+      {
+        "Title": "Das Mandat abstecken",
+        "Body": "Gemeinsam legen wir den Umfang unserer Arbeit fest und klären, wer was übernimmt, damit jede Rolle von Anfang an klar ist."
+      },
+      {
+        "Title": "Laufende Koordination",
+        "Body": "Wir koordinieren über die Zeit. Sie bleiben in dem Mass informiert, das die Familie wünscht."
+      }
+    ]
+  },
+  "Roles": {
+    "Title": "Wer macht was",
+    "Items": [
+      {
+        "Who": "Sie",
+        "Does": "Sie behalten Ihr Mandat und Ihre Beziehung zur Familie: Rechtsberatung, Urkunden, Portfolioverwaltung oder Bankbeziehung, je nach Beruf."
+      },
+      {
+        "Who": "Ridger",
+        "Does": "Wir koordinieren die Berater, konsolidieren das Vermögen in einem einheitlichen Reporting und begleiten die Administration. Wir verwalten kein Vermögen und beraten nicht rechtlich, deshalb konkurrenzieren wir Ihr Mandat nicht."
+      },
+      {
+        "Who": "Die Familie",
+        "Does": "Sie behält die Entscheidungen in der Hand und bestimmt, was mit wem und wann geteilt wird."
+      }
+    ]
+  },
+  "Discretion": {
+    "Title": "Diskretion auf beiden Seiten",
+    "Body": [
+      "Vertraulichkeit steht im Zentrum unserer Arbeit. Die Dokumente der Familie liegen in einem digitalen Tresor mit Hosting in der Schweiz, und Informationen werden nur mit den Personen geteilt, die sie brauchen.",
+      "Die Familie entscheidet, was zwischen ihren Beratern ausgetauscht wird. Wir respektieren die Geheimhaltungspflichten Ihres Berufs: Ein erstes Gespräch ist ohne Namen möglich, und ohne Zustimmung der Familie wird nichts weitergegeben."
+    ]
+  },
+  "Form": {
+    "Title": "Eine Familie vorstellen",
+    "Subtitle": "Ein paar Zeilen genügen. Wir melden uns rasch und vertraulich bei Ihnen.",
+    "MessagePlaceholder": "z. B. eine kurze, anonymisierte Beschreibung der Situation"
+  }
+}

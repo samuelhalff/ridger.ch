@@ -175,6 +175,10 @@ export const arkEntityIds = {
   serviceTaxAdmin: `${arkOrganization.url}/#service-tax-administration`,
   serviceVault: `${arkOrganization.url}/#service-digital-vault`,
   serviceRealEstate: `${arkOrganization.url}/#service-real-estate-transactions`,
+  serviceHouseholdStaff: `${arkOrganization.url}/#service-household-staff`,
+  serviceRelocation: `${arkOrganization.url}/#service-relocation-residence`,
+  serviceDomiciliation: `${arkOrganization.url}/#service-domiciliation-mail`,
+  servicePropertyManagement: `${arkOrganization.url}/#service-property-management`,
 } as const;
 
 function buildAdministrativeAreaGeneva() {
@@ -277,6 +281,50 @@ function buildArkServiceNodes(locale: string) {
       provider: { "@id": arkEntityIds.organization },
       url: `${baseLocaleUrl}${localizePath("/services/real-estate-transactions", locale as Locale)}/`,
     },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceHouseholdStaff,
+      name: fr ? "Personnel de maison et salaires" : "Household staff and payroll",
+      serviceType: fr
+        ? "Gestion de maison, obligations d'employeur et salaires du personnel de maison"
+        : "Household management, employer obligations and household staff payroll",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/household-staff", locale as Locale)}/`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceRelocation,
+      name: fr ? "Installation et permis de séjour" : "Relocation and residence permits",
+      serviceType: fr
+        ? "Coordination de l'installation en Suisse et des démarches de séjour"
+        : "Coordination of relocation to Switzerland and residence permit procedures",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/relocation-residence", locale as Locale)}/`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.serviceDomiciliation,
+      name: fr ? "Domiciliation et courrier" : "Domiciliation and mail management",
+      serviceType: fr
+        ? "Adresse de correspondance, gestion du courrier et domiciliation de sociétés familiales"
+        : "Correspondence address, mail management and domiciliation of family companies",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/domiciliation-mail", locale as Locale)}/`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": arkEntityIds.servicePropertyManagement,
+      name: fr ? "Gérance immobilière" : "Property management",
+      serviceType: fr
+        ? "Administration et supervision des biens immobiliers de la famille"
+        : "Administration and supervision of the family's properties",
+      areaServed,
+      provider: { "@id": arkEntityIds.organization },
+      url: `${baseLocaleUrl}${localizePath("/services/property-management", locale as Locale)}/`,
+    },
   ] as const;
 }
 
@@ -289,6 +337,10 @@ export function getArkServiceEntityId(
     | "tax-administration"
     | "digital-vault"
     | "real-estate-transactions"
+    | "household-staff"
+    | "relocation-residence"
+    | "domiciliation-mail"
+    | "property-management"
     // Legacy keys retained for existing article schema references.
     | "accounting"
     | "odoo"
@@ -308,6 +360,14 @@ export function getArkServiceEntityId(
       return arkEntityIds.serviceVault;
     case "real-estate-transactions":
       return arkEntityIds.serviceRealEstate;
+    case "household-staff":
+      return arkEntityIds.serviceHouseholdStaff;
+    case "relocation-residence":
+      return arkEntityIds.serviceRelocation;
+    case "domiciliation-mail":
+      return arkEntityIds.serviceDomiciliation;
+    case "property-management":
+      return arkEntityIds.servicePropertyManagement;
     case "odoo":
     case "incorporation":
     case "consolidated-reporting":

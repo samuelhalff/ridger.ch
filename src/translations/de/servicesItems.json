@@ -23,6 +23,22 @@
     "Title": "Digitaler Tresor",
     "Description": "Verschlüsselter Dokumententresor, strukturierte Familiendossiers, Datenhosting in der Schweiz, kontrollierte Freigabe an Ihre Berater und digitale Arbeitsabläufe."
   },
+  "PropertyManagement": {
+    "Title": "Liegenschaftsverwaltung",
+    "Description": "Verwaltung Ihrer Residenzen und Renditeobjekte auf Eigentümerseite: Mietverträge, Nebenkosten, Verwaltungen, Arbeiten und konsolidiertes Reporting."
+  },
+  "HouseholdStaff": {
+    "Title": "Hauspersonal und Löhne",
+    "Description": "Haushaltsführung Ihrer Residenzen und sämtliche Arbeitgeberpflichten für Ihr Hauspersonal: Verträge, Sozialversicherungen, Löhne und Lohnausweise."
+  },
+  "RelocationResidence": {
+    "Title": "Umzug und Bewilligungen",
+    "Description": "Der Umzug Ihrer Familie in die Schweiz, koordiniert: Bewilligungen, Anmeldungen, Krankenversicherung, Schulen, Wohnung und Steuerstatus."
+  },
+  "DomiciliationMail": {
+    "Title": "Domizil und Postverwaltung",
+    "Description": "Eine Korrespondenzadresse in Genf, Empfang und Digitalisierung Ihrer Post und die Nachverfolgung jeder Frist."
+  },
   "RealEstateTransactions": {
     "Title": "Immobilien und Transaktionen",
     "Description": "Immobilienverwaltung und Bewirtschaftung Ihrer Objekte, Suche und Bewertung von Gelegenheiten, Koordination der Transaktionen mit Notaren, Banken und Due Diligence."

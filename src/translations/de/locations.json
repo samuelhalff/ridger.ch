@@ -1,0 +1,157 @@
+{
+  "Common": {
+    "Eyebrow": "Family Office",
+    "BasedInGeneva": "Ridger hat seinen Sitz in Genf und begleitet Familien in der ganzen Schweiz.",
+    "ServicesTitle": "Was wir für Ihre Familie tun",
+    "OtherLocationsTitle": "Weitere Orte in der Schweiz",
+    "CTA": "Vertrauliches Gespräch anfragen",
+    "HubLabel": "Familien in der ganzen Schweiz"
+  },
+  "Cities": {
+    "geneva": {
+      "Name": "Genf",
+      "Hero": {
+        "Title": "Family Office in Genf — nah bei Ihnen, im Herzen der Stadt",
+        "Description": "Ridger ist ein Multi-Family-Office in der Schweiz mit Sitz am Boulevard Georges-Favon in Genf. Wir bündeln Ihr Vermögen in einer Gesamtsicht und koordinieren Ihre Berater, ohne Ihr Vermögen zu verwalten."
+      },
+      "Intro": [
+        "Genf ist unser Heimathafen. Hier empfangen wir Familien, treffen ihre Berater und betreuen ihre Anliegen im Alltag.",
+        "Unsere Arbeit ist digital zuerst: konsolidiertes Reporting, digitaler Tresor und Austausch online. In Genf ist ein Treffen in unserem Büro aber jederzeit möglich."
+      ],
+      "Sections": [
+        {
+          "Title": "Treffen in unserem Büro",
+          "Body": "Für die wichtigen Momente empfangen wir Sie in unserem Genfer Büro: erstes Gespräch, jährliche Vermögensbesprechung, Entscheide der Familie. Sonst erreichen Sie uns so, wie es Ihnen am liebsten ist."
+        },
+        {
+          "Title": "Ihre Genfer Berater, koordiniert",
+          "Body": "Privatbanken, unabhängige Vermögensverwalter, Anwälte, Notare: Wir arbeiten mit den Beratern, die Sie bereits haben. Zudem bereiten wir die Unterlagen für die Administration fiscale cantonale vor und verfolgen die Fristen mit Ihrem Steuerberater."
+        },
+        {
+          "Title": "Familien von hier und anderswo",
+          "Body": "Viele Genfer Familien haben Verbindungen in mehrere Länder. Wir arbeiten auf Französisch, Englisch, Deutsch, Spanisch und Portugiesisch und koordinieren Berater in der Schweiz wie im Ausland."
+        }
+      ],
+      "Closing": {
+        "Title": "Sprechen wir über Ihre Situation",
+        "Body": "Ein erstes vertrauliches Gespräch, in unserem Büro oder per Videocall, um Ihre Bedürfnisse zu verstehen und zu sehen, wie wir helfen können."
+      }
+    },
+    "lausanne": {
+      "Name": "Lausanne",
+      "Hero": {
+        "Title": "Family Office für Familien in Lausanne und im Kanton Waadt",
+        "Description": "Von Genf aus begleitet Ridger Familien im Kanton Waadt: eine Gesamtsicht auf das Vermögen, koordinierte Berater und eine betreute Administration."
+      },
+      "Intro": [
+        "Wir sind nicht in Lausanne ansässig und sagen das lieber offen. Unser Büro ist in Genf, nicht weit entfernt, und unsere Arbeitsweise eignet sich gut für die Begleitung aus der Distanz.",
+        "Digitale Plattform, konsolidiertes Reporting und Videocalls prägen den Alltag. Wenn ein persönliches Treffen sinnvoll ist, kommen wir zu Ihnen oder empfangen Sie in Genf."
+      ],
+      "Sections": [
+        {
+          "Title": "Von Genf aus, in Ihrem Rhythmus",
+          "Body": "Sie verfolgen Ihr Vermögen jederzeit online, und wir bleiben über Ihren bevorzugten Kanal erreichbar. Wichtige Besprechungen finden auf Wunsch persönlich statt, in Lausanne oder in Genf."
+        },
+        {
+          "Title": "Ihre Waadtländer Berater, koordiniert",
+          "Body": "Wir arbeiten mit Ihren bisherigen Banken, Ihrem Notar, Ihrem Anwalt und Ihrem Treuhänder. Wir stellen die Unterlagen für die Administration cantonale des impôts (ACI) zusammen und verfolgen den Kalender mit Ihrem Steuerberater."
+        },
+        {
+          "Title": "Steuern und Nachfolge im Kanton Waadt",
+          "Body": "Die Besteuerung von Vermögen und Erbschaften unterscheidet sich von Kanton zu Kanton. Diese Fragen klären Ihre Steuerberater und Ihr Notar; wir sorgen dafür, dass sie vollständige und aktuelle Informationen haben."
+        }
+      ],
+      "Closing": {
+        "Title": "Ein erstes Gespräch, unverbindlich",
+        "Body": "Per Videocall oder in Genf: ein vertrauliches Gespräch über Ihre Situation und Ihre Prioritäten."
+      }
+    },
+    "zurich": {
+      "Name": "Zürich",
+      "Hero": {
+        "Title": "Family Office für Familien in Zürich",
+        "Description": "Mit Sitz in Genf begleitet Ridger Familien in Zürich aus der Distanz und bei Besuchen: eine Gesamtsicht auf das Vermögen und koordinierte Berater."
+      },
+      "Intro": [
+        "Ridger hat kein Büro in Zürich. Wir arbeiten von Genf aus mit Familien in der ganzen Schweiz, mit einer Organisation, die von Anfang an digital gedacht ist.",
+        "Ihr Vermögen wird auf einer sicheren Plattform konsolidiert, Ihre Dokumente liegen in einem digitalen Tresor mit Hosting in der Schweiz, und wir reisen an, wenn es sinnvoll ist."
+      ],
+      "Sections": [
+        {
+          "Title": "Aus der Distanz betreut, vor Ort wenn nötig",
+          "Body": "Der laufende Austausch erfolgt online und per Videocall. Für eine Jahresbesprechung, einen Familienentscheid oder ein Treffen mit Ihren Beratern kommen wir nach Zürich."
+        },
+        {
+          "Title": "Ihre Zürcher Berater, koordiniert",
+          "Body": "Wir binden Ihre bisherigen Banken, Vermögensverwalter, Anwälte und Treuhänder ein, statt sie zu ersetzen. Für die Steuern bereiten wir die Unterlagen für das Kantonale Steueramt Zürich vor und stimmen die Fristen mit Ihrem Steuerberater ab."
+        },
+        {
+          "Title": "Auf Deutsch, Französisch oder Englisch",
+          "Body": "Wir arbeiten auf Deutsch, Französisch, Englisch, Spanisch und Portugiesisch. Jedes Familienmitglied kann sich in der Sprache austauschen, die ihm am nächsten liegt."
+        }
+      ],
+      "Closing": {
+        "Title": "Lernen wir uns kennen",
+        "Body": "Ein erstes vertrauliches Gespräch per Videocall, um Ihre Situation zu verstehen und zu sehen, ob wir helfen können."
+      }
+    },
+    "zug": {
+      "Name": "Zug",
+      "Hero": {
+        "Title": "Family Office für Familien in Zug",
+        "Description": "Von Genf aus begleitet Ridger Familien im Kanton Zug: Privatvermögen und Familienunternehmen in einer Gesamtsicht, die Berater koordiniert."
+      },
+      "Intro": [
+        "Unser Büro ist in Genf; in Zug sind wir nicht vertreten. Wir begleiten Zuger Familien aus der Distanz, mit einer digitalen Plattform und mit Besuchen, wenn sie sinnvoll sind.",
+        "Unsere Rolle ist überall dieselbe: Informationen zusammenführen, Berater koordinieren und die Administration begleiten, ohne je Ihr Vermögen zu verwalten."
+      ],
+      "Sections": [
+        {
+          "Title": "Eine Beziehung aus der Distanz, gut gepflegt",
+          "Body": "Konsolidiertes Reporting online, digitaler Tresor und Videocalls geben den Takt vor. Für Treffen, die es rechtfertigen, reisen wir an."
+        },
+        {
+          "Title": "Privatvermögen und Familienunternehmen",
+          "Body": "Gehört ein Unternehmen oder eine Holding zum Vermögen, halten wir beide Seiten, privat und geschäftlich, übersichtlich und koordinieren Ihren Treuhänder, Ihre Anwälte und Ihre Banken."
+        },
+        {
+          "Title": "Zusammenarbeit mit der Zuger Steuerverwaltung",
+          "Body": "Wir bereiten die Unterlagen für die Steuerverwaltung des Kantons Zug vor und verfolgen die Fristen mit Ihrem Steuerberater, der für alle Steuerfragen Ihr Ansprechpartner bleibt."
+        }
+      ],
+      "Closing": {
+        "Title": "Ein erstes vertrauliches Gespräch",
+        "Body": "Per Videocall, um über Ihr Vermögen, Ihre Berater und Ihre Erwartungen an ein Family Office zu sprechen."
+      }
+    },
+    "lugano": {
+      "Name": "Lugano",
+      "Hero": {
+        "Title": "Family Office für Familien in Lugano und im Tessin",
+        "Description": "Mit Sitz in Genf begleitet Ridger Familien im Tessin aus der Distanz und bei Besuchen, in Abstimmung mit ihren Beratern vor Ort."
+      },
+      "Intro": [
+        "Wir haben kein Büro im Tessin. Von Genf aus begleiten wir Familien in Lugano und Umgebung mit einer digitalen Plattform, Videocalls und Besuchen, wenn sie sinnvoll sind.",
+        "Wir arbeiten auf Französisch, Englisch, Deutsch, Spanisch und Portugiesisch, jedoch nicht auf Italienisch. Für den Austausch auf Italienisch stützen wir uns auf Ihre Tessiner Berater."
+      ],
+      "Sections": [
+        {
+          "Title": "Von Genf aus, eng mit Ihnen verbunden",
+          "Body": "Ihr Vermögen wird online konsolidiert, Ihre Dokumente liegen in einem digitalen Tresor mit Hosting in der Schweiz. Für die wichtigen Treffen kommen wir zu Ihnen."
+        },
+        {
+          "Title": "Ihre Tessiner Berater, koordiniert",
+          "Body": "Banken, Anwälte, Notare und Treuhänder: Wir arbeiten mit denen, die Sie bereits kennen. Wir stellen die Unterlagen für die Divisione delle contribuzioni zusammen und verfolgen den Kalender mit Ihrem Steuerberater."
+        },
+        {
+          "Title": "Ein italienischsprachiges Umfeld",
+          "Body": "Im Tessin sind viele Dokumente auf Italienisch verfasst. Wir nehmen sie in Ihr Reporting und Ihren digitalen Tresor auf, und Ihre Berater vor Ort bleiben Ihre Ansprechpartner für den Austausch in dieser Sprache."
+        }
+      ],
+      "Closing": {
+        "Title": "Sprechen wir über Ihre Situation",
+        "Body": "Ein erstes vertrauliches Gespräch per Videocall, in der Sprache Ihrer Wahl unter denen, die wir sprechen."
+      }
+    }
+  }
+}

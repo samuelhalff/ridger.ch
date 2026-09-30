@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Domiciliación y correo — una dirección en Ginebra, un correo bajo control",
+    "Description": "Una domiciliación en Ginebra para los miembros de su familia que suelen estar en el extranjero, y una gestión del correo que no deja pasar ningún plazo.",
+    "CTA": "Solicitar una entrevista confidencial"
+  },
+  "Intro": [
+    "Cuando una familia vive entre varios países, el correo suizo se vuelve un punto delicado: liquidaciones fiscales, cartas de las autoridades, facturas, extractos. Una carta abierta demasiado tarde puede costar un plazo.",
+    "Recibimos, escaneamos y compartimos su correo de forma segura, y damos seguimiento a lo que exige. Una dirección de correspondencia sigue siendo una dirección postal: no fija su domicilio ni su residencia fiscal, que dependen de su situación real."
+  ],
+  "Pillars": [
+    {
+      "Title": "Dirección de correspondencia",
+      "Body": "Una dirección c/o en Ginebra para recibir el correo de cada miembro de la familia, distinta del domicilio legal y revocable en cualquier momento."
+    },
+    {
+      "Title": "Recepción y digitalización",
+      "Body": "Recepción, clasificación y digitalización del correo, y puesta a disposición segura en su caja fuerte digital; los originales se conservan o se reenvían según sus instrucciones."
+    },
+    {
+      "Title": "Plazos y respuestas",
+      "Body": "Detección de plazos — notificaciones fiscales, cartas de las autoridades, facturas — y coordinación de las respuestas con usted y sus asesores."
+    },
+    {
+      "Title": "Domiciliación de sociedades",
+      "Body": "Domiciliación en Ginebra de sus sociedades holding o de gestión familiares. Cuando la normativa lo exige, una sociedad debe tener sustancia real y tomar allí sus decisiones de gestión; lo tenemos en cuenta con sus asesores."
+    },
+    {
+      "Title": "Archivo",
+      "Body": "Clasificación estructurada y archivo de los documentos recibidos, fáciles de encontrar para usted y para sus asesores."
+    }
+  ],
+  "Closing": {
+    "Title": "Nada se pierde",
+    "Body": "Esté donde esté, sabe qué ha llegado, qué requiere una acción y qué se ha resuelto. Mantenemos el conjunto en orden, con discreción."
+  },
+  "Perimeter": "Una dirección de correspondencia no crea domicilio civil ni residencia fiscal. Las cuestiones jurídicas y fiscales relativas al domicilio y a la sustancia de las sociedades se tratan con sus abogados y asesores fiscales. Ridger asegura la recepción y la gestión del correo, así como la coordinación administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+}

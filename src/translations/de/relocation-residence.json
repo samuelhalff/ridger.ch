@@ -1,0 +1,48 @@
+{
+  "Hero": {
+    "Title": "Umzug und Aufenthaltsbewilligung — die Ankunft Ihrer Familie in der Schweiz",
+    "Description": "Wir koordinieren den Umzug Ihrer Familie in die Schweiz — nach Genf, in die Waadt oder anderswohin: Bewilligungen, Anmeldungen, Krankenversicherung, Schulen und Wohnung, in der richtigen Reihenfolge.",
+    "CTA": "Vertrauliches Gespräch anfragen"
+  },
+  "Intro": [
+    "Die Niederlassung in der Schweiz bringt eine Reihe von Schritten mit kurzen Fristen, die voneinander abhängen: Anmeldung, Aufenthaltsbewilligung, Krankenversicherung, Schule, Steuern. Schwierig ist weniger der einzelne Schritt als ihr Zusammenspiel.",
+    "Wir organisieren diese Abfolge für die ganze Familie und koordinieren Behörden, Ihre Anwälte, Ihre Steuerberater und lokale Dienstleister. Über Bewilligungen entscheiden allein die Behörden; unsere Aufgabe ist es, vollständige Unterlagen vorzubereiten und jeden Schritt zu begleiten."
+  ],
+  "Pillars": [
+    {
+      "Title": "Aufenthaltsbewilligungen",
+      "Body": "Koordination der Gesuche um eine Aufenthaltsbewilligung in der Schweiz beim kantonalen Migrationsamt — in Genf beim OCPM — im Rahmen der Vorgaben des SEM: Bewilligung B, C oder L je nach Situation sowie Grenzgängerstatus (G), wo er zutrifft. Ausländerrechtliche Fragen werden mit Ihren Anwälten behandelt."
+    },
+    {
+      "Title": "Anmeldungen",
+      "Body": "Anmeldung beim kantonalen Amt oder bei der Gemeinde, je nach Kanton, Adressänderungen und Nachverfolgung der Unterlagen für jedes Familienmitglied."
+    },
+    {
+      "Title": "Krankenversicherung",
+      "Body": "Anmeldung jedes Familienmitglieds bei der obligatorischen Krankenversicherung (KVG) innerhalb der gesetzlichen Frist nach der Ankunft, mit einer klaren Übersicht über die angebotenen Modelle."
+    },
+    {
+      "Title": "Schulen und Wohnung",
+      "Body": "Koordination der Schulwahl, öffentlich oder privat, und der Wohnungssuche mit Maklern und Verwaltungen, abgestimmt auf den Zeitplan der Familie."
+    },
+    {
+      "Title": "Praktischer Alltag",
+      "Body": "Umtausch des ausländischen Führerausweises, Fahrzeugzulassung, Bankkonten und Versicherungen: die Formalitäten des Alltags, bis zum Abschluss begleitet."
+    },
+    {
+      "Title": "Steuerlicher Status",
+      "Body": "Koordination Ihrer steuerlichen Situation bei der Ankunft mit Ihren Steuerberatern, einschliesslich der Prüfung der Aufwandbesteuerung (Pauschalbesteuerung), sofern die gesetzlichen Voraussetzungen erfüllt sind."
+    }
+  ],
+  "Closing": {
+    "Title": "Eine ruhige Ankunft",
+    "Body": "Jeder Schritt erfolgt zur richtigen Zeit, ohne Doppelspurigkeiten oder Versäumnisse. Sie konzentrieren sich auf Ihr neues Zuhause; wir halten den Faden mit den Behörden und Ihren Beratern."
+  },
+  "Perimeter": "Aufenthaltsbewilligungen werden von den kantonalen und eidgenössischen Behörden erteilt, die allein darüber entscheiden. Rechts- und Steuerberatung erbringen Ihre Anwälte und Steuerberater. Ridger erbringt Koordination und administrative Begleitung. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Related": {
+    "Title": "Für den Umzug selbst",
+    "Body": "Für den Umzug und die Formalitäten rund um den Wohnsitz beschreibt Switzerland Residency, unsere Partnerseite innerhalb der Gruppe, jeden Schritt im Detail.",
+    "LinkLabel": "Switzerland Residency",
+    "LinkHref": "https://switzerlandresidency.ch/"
+  }
+}

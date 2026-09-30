@@ -137,6 +137,8 @@ validateTranslations();
     "consolidated-reporting", "investment-oversight", "family-office-coordination",
     "governance-succession", "tax-administration", "digital-vault",
     "real-estate-transactions",
+    "household-staff", "relocation-residence", "domiciliation-mail", "property-management",
+    "advisers", "locations",
   ]);
   const CANON = "fr";
   const flat = (v, p = "", out = {}) => {
@@ -188,6 +190,8 @@ validateTranslations();
     "consolidated-reporting", "investment-oversight", "family-office-coordination",
     "governance-succession", "tax-administration", "digital-vault",
     "real-estate-transactions",
+    "household-staff", "relocation-residence", "domiciliation-mail", "property-management",
+    "advisers", "locations",
   ];
   const FR = /\b(vous|votre|vos|nous|notre|nos|dans|avec|pour|sans|leur|ainsi|selon|chaque|entre|aux|qui|que|sont|plus|toute|jusqu|met à|à votre)\b/i;
   const flat = (v, p = "", out = {}) => {

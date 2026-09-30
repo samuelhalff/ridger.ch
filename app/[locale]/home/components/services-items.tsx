@@ -6,12 +6,27 @@ import {
   Receipt,
   Vault,
   Buildings,
+  HouseLine,
+  AirplaneTilt,
+  Mailbox,
+  Key,
 } from "@phosphor-icons/react/dist/ssr";
 
 const calcClass = "h-6 w-6 sm:h-7 sm:w-7";
 const iconProps = { className: calcClass, weight: "regular" as const };
 
-const services = [
+type ServiceItem = {
+  icon: React.ReactNode;
+  titleKey: string;
+  href: string;
+  descriptionKey: string;
+  image: string;
+  /** Extended services are listed on the services hub, nav and contact form,
+   * but not in the home-page bento (which stays on the seven core services). */
+  extended?: boolean;
+};
+
+const services: ServiceItem[] = [
   {
     icon: <ChartLineUp {...iconProps} />,
     titleKey: "ConsolidatedReporting.Title",
@@ -60,6 +75,38 @@ const services = [
     href: "/services/real-estate-transactions",
     descriptionKey: "RealEstateTransactions.Description",
     image: "/assets/hero/services/mna-hero.optimized.webp",
+  },
+  {
+    icon: <Key {...iconProps} />,
+    titleKey: "PropertyManagement.Title",
+    href: "/services/property-management",
+    descriptionKey: "PropertyManagement.Description",
+    image: "/assets/hero/services/samuel-ferrara-XQZRB1IU4Dc-unsplash.optimized.webp",
+    extended: true,
+  },
+  {
+    icon: <HouseLine {...iconProps} />,
+    titleKey: "HouseholdStaff.Title",
+    href: "/services/household-staff",
+    descriptionKey: "HouseholdStaff.Description",
+    image: "/assets/hero/services/payroll-hero.optimized.webp",
+    extended: true,
+  },
+  {
+    icon: <AirplaneTilt {...iconProps} />,
+    titleKey: "RelocationResidence.Title",
+    href: "/services/relocation-residence",
+    descriptionKey: "RelocationResidence.Description",
+    image: "/assets/hero/services/immigration-hero.optimized.webp",
+    extended: true,
+  },
+  {
+    icon: <Mailbox {...iconProps} />,
+    titleKey: "DomiciliationMail.Title",
+    href: "/services/domiciliation-mail",
+    descriptionKey: "DomiciliationMail.Description",
+    image: "/assets/hero/services/domiciliation-hero.optimized.webp",
+    extended: true,
   },
 ];
 

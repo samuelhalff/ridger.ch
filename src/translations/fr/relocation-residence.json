@@ -1,0 +1,48 @@
+{
+  "Hero": {
+    "Title": "Relocation et permis de séjour — l'installation de votre famille en Suisse",
+    "Description": "Nous coordonnons la relocation de votre famille à Genève, dans le canton de Vaud ou ailleurs en Suisse : permis, annonces, assurance-maladie, écoles et logement, dans le bon ordre.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "S'installer en Suisse enchaîne des démarches à délais courts, qui dépendent les unes des autres : annonce d'arrivée, titre de séjour, assurance-maladie, scolarité, fiscalité. La difficulté tient moins à chaque étape qu'à leur enchaînement.",
+    "Nous organisons cette séquence pour toute la famille et coordonnons les autorités, vos avocats, vos conseillers fiscaux et les prestataires locaux. Les permis relèvent de la seule décision des autorités ; notre rôle est de préparer des dossiers complets et de suivre chaque démarche."
+  ],
+  "Pillars": [
+    {
+      "Title": "Permis de séjour",
+      "Body": "Coordination des demandes de permis de séjour en Suisse auprès de l'office cantonal des migrations — l'OCPM à Genève — dans le cadre fixé par le SEM : permis B, C ou L selon votre situation, et statut de frontalier (G) lorsqu'il s'applique. Les questions de droit des étrangers sont traitées avec vos avocats."
+    },
+    {
+      "Title": "Annonces et inscriptions",
+      "Body": "Annonce d'arrivée auprès de l'office cantonal ou de la commune selon le canton, changements d'adresse et suivi des documents à fournir pour chaque membre de la famille."
+    },
+    {
+      "Title": "Assurance-maladie",
+      "Body": "Affiliation de chaque membre de la famille à l'assurance-maladie obligatoire (LAMal) dans le délai légal suivant l'arrivée, avec une lecture claire des modèles proposés."
+    },
+    {
+      "Title": "Écoles et logement",
+      "Body": "Coordination du choix de l'école, publique ou privée, et de la recherche de logement avec les agences et régies, en fonction du calendrier de la famille."
+    },
+    {
+      "Title": "Vie pratique",
+      "Body": "Échange du permis de conduire étranger, immatriculation des véhicules, comptes bancaires et assurances : les formalités du quotidien, suivies jusqu'au bout."
+    },
+    {
+      "Title": "Statut fiscal",
+      "Body": "Coordination de votre situation fiscale à l'arrivée avec vos conseillers fiscaux, y compris l'examen de l'imposition d'après la dépense (forfait fiscal) lorsque les conditions légales sont réunies."
+    }
+  ],
+  "Closing": {
+    "Title": "Une arrivée sereine",
+    "Body": "Chaque démarche arrive au bon moment, sans doublon ni oubli. Vous vous consacrez à votre installation ; nous tenons le fil avec les autorités et vos conseillers."
+  },
+  "Perimeter": "Les autorisations de séjour sont accordées par les autorités cantonales et fédérales, qui en décident seules. Les conseils juridiques et fiscaux sont fournis par vos avocats et conseillers fiscaux. Ridger assure la coordination et le suivi administratif. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Related": {
+    "Title": "Pour l'installation elle-même",
+    "Body": "Pour le déménagement et les démarches de résidence proprement dits, notre site partenaire du groupe, Switzerland Residency, détaille chaque étape.",
+    "LinkLabel": "Switzerland Residency",
+    "LinkHref": "https://switzerlandresidency.ch/"
+  }
+}

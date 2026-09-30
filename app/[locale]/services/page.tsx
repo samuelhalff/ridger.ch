@@ -145,7 +145,12 @@ export default async function ServicesPage(
           </ol>
         </nav>
       </header>
-      <Service showSubtitle={true} showHeading={false} locale={locale} />
+      <Service
+        showSubtitle={true}
+        showHeading={false}
+        includeExtended={true}
+        locale={locale}
+      />
       <div className="mt-8 max-w-3xl text-sm leading-6 text-muted-foreground">
         <p>
           {locale === "fr"

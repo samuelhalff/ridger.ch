@@ -29,6 +29,11 @@
       "description": "Request a private consultation with Ridger, a family office in Geneva. Reply within one business day, strict confidentiality.",
       "keywords": "family office geneva contact, private consultation, multi-family office switzerland"
     },
+    "/advisers": {
+      "title": "Family office referral partners | Ridger",
+      "description": "Lawyers, private bankers and external asset managers: introduce a family to Ridger in confidence. We coordinate, without managing assets.",
+      "keywords": "family office referral partners, family office introducers, lawyers, private bankers, external asset managers, tax advisers, client introductions"
+    },
     "/platform": {
       "title": "The platform | Ridger",
       "description": "Discover the Ridger platform: a single, secure space to follow the securities, real estate, documents and reporting of your wealth. Illustration — sample data.",
@@ -78,6 +83,51 @@
       "title": "Real estate and transactions | Ridger",
       "description": "Real estate in Geneva: management and administration of your properties, rental management, renovation and works coordination, opportunity sourcing and transactions with notaries and banks.",
       "keywords": "property management geneva, rental property management, renovation works coordination, contractor coordination, managing agents, real estate transactions, property administration"
+    },
+    "/services/property-management": {
+      "title": "Property management in Geneva | Ridger",
+      "description": "Private property management in Switzerland, owner side: leases and rent, service charges, managing agents, works, insurance and consolidated reporting.",
+      "keywords": "property management geneva, private property management switzerland, managing agent oversight, service charge statements, rental property administration"
+    },
+    "/services/household-staff": {
+      "title": "Household staff payroll in Switzerland | Ridger",
+      "description": "Household staff payroll and household management in Geneva: contracts under the CTT-EDom, social insurance, monthly pay, withholding tax and certificates.",
+      "keywords": "household staff payroll switzerland, household management geneva, domestic staff geneva, employing household staff, salary certificates, withholding tax"
+    },
+    "/services/relocation-residence": {
+      "title": "Relocation and Swiss residence permits | Ridger",
+      "description": "Relocation to Switzerland for your family: Swiss residence permit procedures, registrations, health insurance, schools, housing and tax coordination.",
+      "keywords": "relocation to switzerland family, swiss residence permit, moving to geneva, ocpm procedures, B C L permits, health insurance lamal"
+    },
+    "/services/domiciliation-mail": {
+      "title": "Mail management service in Geneva | Ridger",
+      "description": "Mail management service in Geneva: a correspondence address in Switzerland, mail receipt and scanning, deadline follow-up and company domiciliation.",
+      "keywords": "mail management service geneva, correspondence address switzerland, c/o address geneva, company domiciliation geneva, mail scanning"
+    },
+    "/family-office/geneva": {
+      "title": "Family office in Geneva | Ridger",
+      "description": "A Swiss multi-family office based in Geneva: consolidated reporting, coordination of your advisers and meetings at our office. No asset management.",
+      "keywords": "family office Geneva, multi-family office Switzerland, Geneva family office, consolidated reporting, adviser coordination, family wealth"
+    },
+    "/family-office/lausanne": {
+      "title": "Family office for Lausanne and Vaud | Ridger",
+      "description": "Based in Geneva, Ridger supports families in Lausanne and the canton of Vaud: a single view of their wealth, coordinated advisers and tax follow-up.",
+      "keywords": "family office Lausanne, family office Vaud, multi-family office, consolidated reporting, adviser coordination"
+    },
+    "/family-office/zurich": {
+      "title": "Family office for Zurich families | Ridger",
+      "description": "Based in Geneva, Ridger supports families in Zurich remotely and through visits: consolidated reporting and coordination of their advisers.",
+      "keywords": "family office Zurich, multi-family office Switzerland, consolidated reporting, adviser coordination, Zurich families"
+    },
+    "/family-office/zug": {
+      "title": "Family office for Zug families | Ridger",
+      "description": "Based in Geneva, Ridger supports families in the canton of Zug: private wealth and family companies in a single view, with advisers coordinated.",
+      "keywords": "family office Zug, multi-family office Switzerland, family companies, consolidated reporting, adviser coordination"
+    },
+    "/family-office/lugano": {
+      "title": "Family office for Lugano and Ticino | Ridger",
+      "description": "Based in Geneva, Ridger supports families in Lugano and Ticino remotely and through visits, alongside their local advisers. No asset management.",
+      "keywords": "family office Lugano, family office Ticino, multi-family office Switzerland, consolidated reporting, adviser coordination"
     },
     "/legal/privacy": {
       "title": "Privacy policy | Ridger",

@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Domiciliação e correio — uma morada em Genebra, um correio sob controlo",
+    "Description": "Uma domiciliação em Genebra para os membros da sua família que estão muitas vezes no estrangeiro, e uma gestão de correio que não deixa escapar nenhum prazo.",
+    "CTA": "Solicitar uma entrevista confidencial"
+  },
+  "Intro": [
+    "Quando uma família vive entre vários países, o correio suíço torna-se um ponto sensível: notas de liquidação, cartas das autoridades, faturas, extratos. Uma carta aberta tarde demais pode custar um prazo.",
+    "Recebemos, digitalizamos e partilhamos o seu correio em segurança, e acompanhamos o que ele exige. Uma morada de correspondência continua a ser uma morada postal: não fixa o seu domicílio nem a sua residência fiscal, que dependem da sua situação real."
+  ],
+  "Pillars": [
+    {
+      "Title": "Morada de correspondência",
+      "Body": "Uma morada c/o em Genebra para receber o correio de cada membro da família, distinta do domicílio legal e revogável a qualquer momento."
+    },
+    {
+      "Title": "Receção e digitalização",
+      "Body": "Receção, triagem e digitalização do correio, e partilha segura no seu cofre digital; os originais são conservados ou reencaminhados conforme as suas instruções."
+    },
+    {
+      "Title": "Prazos e respostas",
+      "Body": "Identificação de prazos — notificações fiscais, cartas das autoridades, faturas — e coordenação das respostas consigo e com os seus consultores."
+    },
+    {
+      "Title": "Domiciliação de sociedades",
+      "Body": "Domiciliação em Genebra das suas sociedades holding ou de gestão familiares. Quando a regulamentação o exige, uma sociedade deve ter substância real e tomar aí as suas decisões de gestão; temos isso em conta com os seus consultores."
+    },
+    {
+      "Title": "Arquivo",
+      "Body": "Classificação estruturada e arquivo dos documentos recebidos, fáceis de encontrar para si e para os seus consultores."
+    }
+  ],
+  "Closing": {
+    "Title": "Nada se perde",
+    "Body": "Onde quer que esteja, sabe o que chegou, o que exige uma ação e o que foi tratado. Mantemos tudo em ordem, com discrição."
+  },
+  "Perimeter": "Uma morada de correspondência não cria domicílio civil nem residência fiscal. As questões jurídicas e fiscais relativas ao domicílio e à substância das sociedades são tratadas com os seus advogados e consultores fiscais. A Ridger assegura a receção e a gestão do correio, bem como a coordenação administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+}

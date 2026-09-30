@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Property management — your properties, on the owner's side",
+    "Description": "Private property management in Geneva and across Switzerland for your residences and rental properties: leases, service charges, managing agents, works and reporting.",
+    "CTA": "Request a confidential consultation"
+  },
+  "Intro": [
+    "Once a property is bought, the real work begins: following the rent, checking statements, maintaining, insuring, declaring. Spread across several managing agents and residences, this follow-up quickly loses its coherence.",
+    "We administer your family's properties on the owner's side. Managing agents keep their operational role where they hold a mandate; we steer them, review their accounts and bring everything together in a clear view of your wealth."
+  ],
+  "Pillars": [
+    {
+      "Title": "Leases and rent",
+      "Body": "Tracking of leases, deadlines and rent receipts, reminders coordinated with the managing agent and a careful reading of rent adjustments."
+    },
+    {
+      "Title": "Service charges and statements",
+      "Body": "Review of service charges and annual statements, questions raised with the right contact and follow-up until they are closed."
+    },
+    {
+      "Title": "Steering managing agents",
+      "Body": "Framing mandates, tracking services and reviewing the accounts of your managing agents and building managers, in your interest as owner."
+    },
+    {
+      "Title": "Maintenance and works",
+      "Body": "Coordination of maintenance and works with craftsmen and contractors, from quote to handover, in line with your renovation projects."
+    },
+    {
+      "Title": "Building insurance",
+      "Body": "Follow-up of building and owner's liability insurance, renewals and claims, with your brokers and insurers."
+    },
+    {
+      "Title": "Accounting and reporting",
+      "Body": "Owner-side accounting, consolidated reporting within the overall view of your wealth, and preparation of property data — including imputed rental value — for your tax returns, handled with your tax advisers."
+    }
+  ],
+  "Closing": {
+    "Title": "Properties looked after over time",
+    "Body": "You decide the direction of your real estate. We provide its administration, coherence and memory, long after the signing."
+  },
+  "Perimeter": "Operational rental management remains with your managing agents where they hold a mandate, and legal and tax matters with your lawyers, notaries and tax advisers. Ridger provides administration, supervision, coordination and reporting. Ridger does not manage assets and does not provide investment advice."
+}

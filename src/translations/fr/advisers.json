@@ -1,0 +1,83 @@
+{
+  "Hero": {
+    "Eyebrow": "Avocats, notaires et banquiers",
+    "Title": "Présenter une famille à Ridger",
+    "Description": "Vous accompagnez une famille dont le patrimoine demande de la coordination ? Avocats, banquiers privés et gérants indépendants peuvent nous la présenter, en toute discrétion.",
+    "CTA": "Prendre contact en toute discrétion"
+  },
+  "Intro": [
+    "Certaines familles réunissent plusieurs banques, des structures dans différentes juridictions et un cercle de conseillers qui ne se parlent pas toujours. Vous le voyez souvent avant elles : il leur manque une vue d'ensemble et quelqu'un pour tenir le fil.",
+    "Travailler avec Ridger comme apporteur d'affaires family office, c'est confier cette coordination à un interlocuteur qui respecte votre place. Nous ne gérons pas d'actifs et ne donnons pas de conseil juridique ; nous organisons l'information et facilitons le travail de chacun."
+  ],
+  "Audiences": {
+    "Title": "Pour qui",
+    "Items": [
+      {
+        "Title": "Avocats et notaires",
+        "Body": "Successions, pactes, fondations ou transmission d'entreprise : vos travaux gagnent à s'appuyer sur une information patrimoniale à jour et sur un suivi rigoureux des décisions prises avec la famille."
+      },
+      {
+        "Title": "Banquiers privés",
+        "Body": "Votre client travaille avec plusieurs établissements et souhaite une vision d'ensemble. Nous consolidons sans placer de produits, et votre relation reste la vôtre."
+      },
+      {
+        "Title": "Gérants indépendants",
+        "Body": "Vous gérez le mandat, nous coordonnons le reste : administration, fiscalité avec les spécialistes, documents et échéances. Le reporting consolidé situe votre mandat dans l'ensemble du patrimoine."
+      },
+      {
+        "Title": "Conseillers fiscaux et fiduciaires",
+        "Body": "Des pièces complètes et rangées, un calendrier suivi et un interlocuteur qui connaît le dossier : la préparation des déclarations et des planifications devient plus simple."
+      }
+    ]
+  },
+  "Steps": {
+    "Title": "Comment se passe une présentation",
+    "Items": [
+      {
+        "Title": "Un premier échange",
+        "Body": "Vous nous décrivez la situation, sans nom si vous le préférez. Nous vous disons franchement si nous pouvons être utiles."
+      },
+      {
+        "Title": "La rencontre avec la famille",
+        "Body": "Nous rencontrons la famille, avec vous ou sans vous, selon ce qui lui convient le mieux."
+      },
+      {
+        "Title": "Le cadrage du mandat",
+        "Body": "Nous définissons ensemble le périmètre de notre intervention et qui fait quoi, pour que chaque rôle soit clair dès le départ."
+      },
+      {
+        "Title": "Une coordination suivie",
+        "Body": "Nous coordonnons dans la durée. Vous restez informé dans la mesure que la famille choisit."
+      }
+    ]
+  },
+  "Roles": {
+    "Title": "Qui fait quoi",
+    "Items": [
+      {
+        "Who": "Vous",
+        "Does": "Vous conservez votre mandat et votre relation avec la famille : conseil juridique, actes, gestion de portefeuille ou relation bancaire, selon votre métier."
+      },
+      {
+        "Who": "Ridger",
+        "Does": "Nous coordonnons les conseillers, consolidons le patrimoine dans un reporting unique et suivons l'administration. Nous ne gérons pas d'actifs et ne donnons pas de conseil juridique : nous ne concurrençons pas votre mandat."
+      },
+      {
+        "Who": "La famille",
+        "Does": "Elle garde la main sur les décisions et choisit ce qui est partagé, avec qui et à quel moment."
+      }
+    ]
+  },
+  "Discretion": {
+    "Title": "Une discrétion partagée",
+    "Body": [
+      "La confidentialité est au cœur de notre métier. Les documents de la famille sont conservés dans un coffre numérique hébergé en Suisse, et chaque information n'est partagée qu'avec les personnes qui en ont besoin.",
+      "C'est la famille qui décide de ce qui circule entre ses conseillers. Nous respectons les obligations de secret propres à votre profession : un premier échange peut se faire sans aucun nom, et rien n'est transmis sans l'accord de la famille."
+    ]
+  },
+  "Form": {
+    "Title": "Nous présenter une famille",
+    "Subtitle": "Quelques lignes suffisent. Nous revenons vers vous rapidement et en toute confidentialité.",
+    "MessagePlaceholder": "Par exemple : une brève description anonymisée de la situation"
+  }
+}

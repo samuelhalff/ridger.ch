@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Hauspersonal und Löhne — eine diskrete, korrekte Haushaltsführung",
+    "Description": "Wir koordinieren die Haushaltsführung Ihrer Residenzen in Genf und sämtliche Arbeitgeberpflichten für Ihr Hauspersonal: Verträge, Sozialversicherungen, Lohnabrechnung und Lohnausweise.",
+    "CTA": "Vertrauliches Gespräch anfragen"
+  },
+  "Intro": [
+    "Wer eine Haushälterin, eine Nanny, einen Chauffeur oder einen Gärtner beschäftigt, wird zum vollwertigen Arbeitgeber. In Genf ist der Rahmen klar geregelt: ein Normalarbeitsvertrag für die Hauswirtschaft, Sozialversicherungen ab dem ersten Lohn und Meldungen, die jeden Monat wiederkehren.",
+    "Wir übernehmen diese Haushaltsführung dauerhaft, von der Anstellung bis zum Lohnausweis. Sie pflegen die Beziehung zu den Menschen, die bei Ihnen arbeiten; wir sorgen dafür, dass alles in Ordnung ist, mit Diskretion."
+  ],
+  "Pillars": [
+    {
+      "Title": "Haushaltsführung Ihrer Residenzen",
+      "Body": "Die tägliche Organisation Ihrer Häuser: Einsatzpläne des Personals, Lieferanten, Unterhalt und Reparaturen, Budgets und Rechnungen, mit einer Ansprechperson, die Ihre Gewohnheiten kennt."
+    },
+    {
+      "Title": "Rekrutierung und Verträge",
+      "Body": "Koordination der Rekrutierung über Agenturen oder Ihre Kontakte und schriftliche Verträge auf Grundlage des Genfer Normalarbeitsvertrags für die Hauswirtschaft (CTT-EDom), bei Bedarf von Ihren Anwälten geprüft."
+    },
+    {
+      "Title": "Sozialversicherungen",
+      "Body": "Anmeldung bei der AHV-Ausgleichskasse, Unfallversicherung (UVG), berufliche Vorsorge (BVG), sofern die Voraussetzungen erfüllt sind, Familienzulagen und die im Genfer Rahmen vorgesehene Krankentaggeldversicherung."
+    },
+    {
+      "Title": "Monatliche Lohnabrechnung",
+      "Body": "Die Lohnabrechnung für Ihr Hauspersonal jeden Monat: Berechnung und Auszahlung der Löhne, Lohnabrechnungen, Beitragsabrechnungen sowie Ferien- und Absenzenkontrolle."
+    },
+    {
+      "Title": "Quellensteuer und Lohnausweise",
+      "Body": "Abzug und Abrechnung der Quellensteuer für quellensteuerpflichtiges Personal sowie Erstellung der jährlichen Lohnausweise."
+    },
+    {
+      "Title": "Chèque service oder Mandat",
+      "Body": "Für wenige Stunden pro Woche kann der Genfer Chèque service genügen. Wir helfen Ihnen, den passenden Weg zu wählen, und übernehmen komplexere Situationen."
+    }
+  ],
+  "Closing": {
+    "Title": "Ein gut geführter Haushalt",
+    "Body": "Sie wählen die Menschen aus und setzen die Prioritäten im Haus. Wir sorgen für die administrative Ordnung, die Fristen und die tägliche Koordination."
+  },
+  "Perimeter": "Die Arbeitsbedingungen richten sich nach dem geltenden Recht und dem anwendbaren Normalarbeitsvertrag; arbeitsrechtliche Fragen werden mit Ihren Anwälten behandelt. Ridger erbringt Administration, Lohnabrechnung und Koordination für Ihr Hauspersonal. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+}

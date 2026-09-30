@@ -94,7 +94,11 @@ export type RidgerServiceKey =
   | "governance-succession"
   | "tax-administration"
   | "digital-vault"
-  | "real-estate-transactions";
+  | "real-estate-transactions"
+  | "household-staff"
+  | "relocation-residence"
+  | "domiciliation-mail"
+  | "property-management";
 
 /** Ridger article category → the service the article is "about". */
 export const ridgerCategoryService: Record<string, RidgerServiceKey> = {
@@ -103,7 +107,7 @@ export const ridgerCategoryService: Record<string, RidgerServiceKey> = {
   fiscalite: "tax-administration",
   patrimoine: "governance-succession",
   gouvernance: "governance-succession",
-  "emploi-domestique": "family-office-coordination",
-  "vie-pratique": "family-office-coordination",
+  "emploi-domestique": "household-staff",
+  "vie-pratique": "relocation-residence",
   "travaux-intendance": "real-estate-transactions",
 };

@@ -425,14 +425,18 @@ const CANONICAL_SERVICES = [
   "/services/tax-administration",
   "/services/digital-vault",
   "/services/real-estate-transactions",
+  "/services/household-staff",
+  "/services/relocation-residence",
+  "/services/domiciliation-mail",
+  "/services/property-management",
 ];
 
 const STATIC_PAGES = {
-  fr: ["/", "/services", "/approche", "/platform", "/contact", "/ressources", "/ressources/articles"],
-  en: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles"],
-  de: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles"],
-  es: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles"],
-  pt: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles"],
+  fr: ["/", "/services", "/approche", "/platform", "/contact", "/ressources", "/ressources/articles", "/advisers"],
+  en: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles", "/advisers"],
+  de: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles", "/advisers"],
+  es: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles", "/advisers"],
+  pt: ["/", "/services", "/approach", "/platform", "/contact", "/ressources", "/ressources/articles", "/advisers"],
 };
 
 /**

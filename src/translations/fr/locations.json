@@ -1,0 +1,157 @@
+{
+  "Common": {
+    "Eyebrow": "Family office",
+    "BasedInGeneva": "Ridger est basé à Genève et accompagne des familles dans toute la Suisse.",
+    "ServicesTitle": "Ce que nous faisons pour votre famille",
+    "OtherLocationsTitle": "Ailleurs en Suisse",
+    "CTA": "Demander un entretien confidentiel",
+    "HubLabel": "Des familles dans toute la Suisse"
+  },
+  "Cities": {
+    "geneva": {
+      "Name": "Genève",
+      "Hero": {
+        "Title": "Family office à Genève — proche de vous, au cœur de la ville",
+        "Description": "Ridger est un multi-family office suisse installé à Genève, boulevard Georges-Favon. Nous réunissons votre patrimoine dans une vue unique et coordonnons vos conseillers, sans gérer vos actifs."
+      },
+      "Intro": [
+        "Genève est notre port d'attache. C'est ici que nous recevons les familles, que nous rencontrons leurs conseillers et que nous suivons leurs dossiers au quotidien.",
+        "Notre travail est digital d'abord : reporting consolidé, coffre numérique et échanges en ligne. Mais à Genève, un rendez-vous à notre bureau reste toujours possible."
+      ],
+      "Sections": [
+        {
+          "Title": "Des rencontres à notre bureau",
+          "Body": "Nous vous recevons à notre bureau genevois pour les moments qui comptent : premier entretien, revue annuelle du patrimoine, décisions de famille. Le reste du temps, vous nous joignez comme vous le préférez."
+        },
+        {
+          "Title": "Vos conseillers genevois, coordonnés",
+          "Body": "Banques privées, gérants indépendants, avocats, notaires : nous travaillons avec les conseillers que vous avez déjà. Nous préparons aussi les pièces attendues par l'Administration fiscale cantonale et suivons les échéances avec votre conseiller fiscal."
+        },
+        {
+          "Title": "Des familles d'ici et d'ailleurs",
+          "Body": "Beaucoup de familles genevoises ont des attaches dans plusieurs pays. Nous travaillons en français, en anglais, en allemand, en espagnol et en portugais, et coordonnons des conseillers situés en Suisse comme à l'étranger."
+        }
+      ],
+      "Closing": {
+        "Title": "Parlons de votre situation",
+        "Body": "Un premier entretien confidentiel, à notre bureau ou en visioconférence, pour comprendre vos besoins et voir comment nous pouvons vous aider."
+      }
+    },
+    "lausanne": {
+      "Name": "Lausanne",
+      "Hero": {
+        "Title": "Family office pour les familles de Lausanne et du canton de Vaud",
+        "Description": "Depuis Genève, Ridger accompagne des familles vaudoises : une vue unique sur le patrimoine, la coordination des conseillers et le suivi de l'administration."
+      },
+      "Intro": [
+        "Nous ne sommes pas installés à Lausanne, et nous préférons le dire clairement. Notre bureau est à Genève, à une courte distance de Lausanne, et notre façon de travailler se prête bien à l'accompagnement à distance.",
+        "Plateforme digitale, reporting consolidé et rendez-vous en visioconférence forment le quotidien. Lorsqu'une rencontre en personne est utile, nous venons à vous ou vous recevons à Genève."
+      ],
+      "Sections": [
+        {
+          "Title": "Depuis Genève, à votre rythme",
+          "Body": "Vous suivez votre patrimoine en ligne, à tout moment, et nous restons joignables par votre canal préféré. Les revues importantes peuvent se tenir en personne, à Lausanne ou à Genève."
+        },
+        {
+          "Title": "Vos conseillers vaudois, coordonnés",
+          "Body": "Nous travaillons avec vos banques, votre notaire, votre avocat et votre fiduciaire actuels. Nous rassemblons les pièces utiles pour l'Administration cantonale des impôts (ACI) et suivons le calendrier avec votre conseiller fiscal."
+        },
+        {
+          "Title": "Fiscalité et transmission dans le canton de Vaud",
+          "Body": "L'imposition de la fortune et des successions varie d'un canton à l'autre. Ces questions sont traitées avec vos conseillers fiscaux et votre notaire ; nous veillons à ce qu'ils disposent d'une information complète et à jour."
+        }
+      ],
+      "Closing": {
+        "Title": "Un premier échange, sans engagement",
+        "Body": "En visioconférence ou à Genève, un entretien confidentiel pour faire le point sur votre situation et vos priorités."
+      }
+    },
+    "zurich": {
+      "Name": "Zurich",
+      "Hero": {
+        "Title": "Family office pour les familles de Zurich",
+        "Description": "Basé à Genève, Ridger accompagne des familles zurichoises à distance et lors de visites : une vue unique sur le patrimoine et la coordination de leurs conseillers."
+      },
+      "Intro": [
+        "Ridger n'a pas de bureau à Zurich. Nous travaillons depuis Genève avec des familles installées ailleurs en Suisse, grâce à une organisation pensée dès le départ pour le digital.",
+        "Votre patrimoine est consolidé sur une plateforme sécurisée, vos documents sont rangés dans un coffre numérique hébergé en Suisse, et nous nous déplaçons lorsque c'est utile."
+      ],
+      "Sections": [
+        {
+          "Title": "Un suivi à distance, des visites quand c'est utile",
+          "Body": "Les échanges courants se font en ligne et en visioconférence. Pour une revue annuelle, une décision de famille ou une rencontre avec vos conseillers, nous organisons une visite."
+        },
+        {
+          "Title": "Vos conseillers zurichois, coordonnés",
+          "Body": "Nous intégrons vos banques, gérants, avocats et fiduciaires actuels plutôt que de les remplacer. Pour les impôts, nous préparons les pièces attendues par le Kantonales Steueramt Zürich et coordonnons les échéances avec votre conseiller fiscal."
+        },
+        {
+          "Title": "En allemand, en français ou en anglais",
+          "Body": "Nous travaillons en allemand, en français, en anglais, en espagnol et en portugais. Chaque membre de la famille peut échanger dans la langue qui lui est la plus naturelle."
+        }
+      ],
+      "Closing": {
+        "Title": "Faisons connaissance",
+        "Body": "Un premier entretien confidentiel en visioconférence, pour comprendre votre situation et voir si nous pouvons vous aider."
+      }
+    },
+    "zug": {
+      "Name": "Zoug",
+      "Hero": {
+        "Title": "Family office pour les familles de Zoug",
+        "Description": "Depuis Genève, Ridger accompagne des familles du canton de Zoug : patrimoine privé et sociétés familiales réunis dans une vue unique, conseillers coordonnés."
+      },
+      "Intro": [
+        "Notre bureau est à Genève ; nous n'avons pas d'implantation à Zoug. Nous accompagnons les familles zougoises à distance, avec une plateforme digitale et des visites lorsque c'est utile.",
+        "Notre rôle reste le même partout : réunir l'information, coordonner les conseillers et suivre l'administration, sans jamais gérer vos actifs."
+      ],
+      "Sections": [
+        {
+          "Title": "Une relation à distance, bien tenue",
+          "Body": "Reporting consolidé en ligne, coffre numérique et rendez-vous en visioconférence rythment l'accompagnement. Nous nous déplaçons pour les rencontres qui le justifient."
+        },
+        {
+          "Title": "Patrimoine privé et sociétés familiales",
+          "Body": "Lorsque le patrimoine comprend une société ou une holding, nous gardons une lecture claire des deux côtés, privé et entreprise, et coordonnons votre fiduciaire, vos avocats et vos banques."
+        },
+        {
+          "Title": "Coordination avec l'administration zougoise",
+          "Body": "Nous préparons les pièces utiles pour la Steuerverwaltung des Kantons Zug et suivons les échéances avec votre conseiller fiscal, qui reste votre interlocuteur pour toute question de fiscalité."
+        }
+      ],
+      "Closing": {
+        "Title": "Un premier entretien confidentiel",
+        "Body": "En visioconférence, pour faire le point sur votre patrimoine, vos conseillers et ce que vous attendez d'un family office."
+      }
+    },
+    "lugano": {
+      "Name": "Lugano",
+      "Hero": {
+        "Title": "Family office pour les familles de Lugano et du Tessin",
+        "Description": "Basé à Genève, Ridger accompagne des familles tessinoises à distance et lors de visites, en coordination avec leurs conseillers locaux."
+      },
+      "Intro": [
+        "Nous n'avons pas de bureau au Tessin. Depuis Genève, nous accompagnons des familles de Lugano et de la région avec une plateforme digitale, des échanges en visioconférence et des visites lorsque c'est utile.",
+        "Nous travaillons en français, en anglais, en allemand, en espagnol et en portugais, mais pas en italien. Pour les échanges en italien, nous nous appuyons sur vos conseillers tessinois."
+      ],
+      "Sections": [
+        {
+          "Title": "Depuis Genève, en lien étroit avec vous",
+          "Body": "Votre patrimoine est consolidé en ligne et vos documents sont rangés dans un coffre numérique hébergé en Suisse. Nous venons à vous pour les rencontres importantes."
+        },
+        {
+          "Title": "Vos conseillers tessinois, coordonnés",
+          "Body": "Banques, avocats, notaires et fiduciaires : nous travaillons avec ceux que vous connaissez déjà. Nous rassemblons les pièces utiles pour la Divisione delle contribuzioni et suivons le calendrier avec votre conseiller fiscal."
+        },
+        {
+          "Title": "Un contexte italophone",
+          "Body": "Au Tessin, beaucoup de documents sont rédigés en italien. Nous les intégrons dans votre reporting et votre coffre numérique, et vos conseillers locaux restent vos interlocuteurs pour les échanges dans cette langue."
+        }
+      ],
+      "Closing": {
+        "Title": "Parlons de votre situation",
+        "Body": "Un premier entretien confidentiel en visioconférence, dans la langue de votre choix parmi celles que nous pratiquons."
+      }
+    }
+  }
+}

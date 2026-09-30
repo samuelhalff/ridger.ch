@@ -1,0 +1,48 @@
+{
+  "Hero": {
+    "Title": "Mudança e autorizações de residência — a chegada da sua família à Suíça",
+    "Description": "Coordenamos tudo o que é preciso para mudar para a Suíça em família — Genebra, Vaud ou outro cantão: autorizações, registos, seguro de saúde, escolas e habitação, pela ordem certa.",
+    "CTA": "Solicitar uma entrevista confidencial"
+  },
+  "Intro": [
+    "Instalar-se na Suíça implica uma sequência de diligências com prazos curtos, que dependem umas das outras: registo da chegada, autorização de residência, seguro de saúde, escolaridade, fiscalidade. A dificuldade está menos em cada etapa do que no seu encadeamento.",
+    "Organizamos esta sequência para toda a família e coordenamos as autoridades, os seus advogados, os seus consultores fiscais e os prestadores locais. As autorizações são decididas exclusivamente pelas autoridades; o nosso papel é preparar processos completos e acompanhar cada diligência."
+  ],
+  "Pillars": [
+    {
+      "Title": "Autorizações de residência",
+      "Body": "Coordenação dos pedidos de autorização de residência na Suíça junto do serviço cantonal de migração — o OCPM em Genebra — no quadro definido pela Secretaria de Estado das Migrações (SEM): autorização B, C ou L consoante a sua situação, e estatuto de trabalhador transfronteiriço (G) quando aplicável. As questões de direito dos estrangeiros são tratadas com os seus advogados."
+    },
+    {
+      "Title": "Registos",
+      "Body": "Registo da chegada junto do serviço cantonal ou do município, consoante o cantão, alterações de morada e acompanhamento dos documentos exigidos para cada membro da família."
+    },
+    {
+      "Title": "Seguro de saúde",
+      "Body": "Inscrição de cada membro da família no seguro de saúde obrigatório (LAMal) dentro do prazo legal após a chegada, com uma leitura clara dos modelos disponíveis."
+    },
+    {
+      "Title": "Escolas e habitação",
+      "Body": "Coordenação da escolha da escola, pública ou privada, e da procura de habitação com agências e administrações de imóveis, ao ritmo do calendário da família."
+    },
+    {
+      "Title": "Vida prática",
+      "Body": "Troca da carta de condução estrangeira, matrícula de veículos, contas bancárias e seguros: as formalidades do dia a dia, acompanhadas até ao fim."
+    },
+    {
+      "Title": "Situação fiscal",
+      "Body": "Coordenação da sua situação fiscal à chegada com os seus consultores fiscais, incluindo a análise da tributação segundo a despesa (forfait fiscal) quando as condições legais estão reunidas."
+    }
+  ],
+  "Closing": {
+    "Title": "Uma chegada serena",
+    "Body": "Cada diligência chega no momento certo, sem duplicações nem esquecimentos. Dedica-se à sua instalação; nós mantemos o fio com as autoridades e os seus consultores."
+  },
+  "Perimeter": "As autorizações de residência são concedidas pelas autoridades cantonais e federais, que decidem por si só. O aconselhamento jurídico e fiscal é prestado pelos seus advogados e consultores fiscais. A Ridger assegura a coordenação e o acompanhamento administrativo. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Related": {
+    "Title": "Para a mudança propriamente dita",
+    "Body": "Para a mudança e as formalidades de residência propriamente ditas, o Switzerland Residency, site irmão do nosso grupo, descreve cada etapa em pormenor.",
+    "LinkLabel": "Switzerland Residency",
+    "LinkHref": "https://switzerlandresidency.ch/"
+  }
+}

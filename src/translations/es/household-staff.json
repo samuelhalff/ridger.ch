@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Personal doméstico y nóminas — una gestión del hogar discreta y en regla",
+    "Description": "Coordinamos la intendencia de sus residencias y todas las obligaciones de empleador de su personal doméstico en Suiza: contratos, seguros sociales, nóminas y certificados de salario.",
+    "CTA": "Solicitar una entrevista confidencial"
+  },
+  "Intro": [
+    "Contratar a una gobernanta, una niñera, un chófer o un jardinero convierte su hogar en un empleador de pleno derecho. En Ginebra el marco es preciso: un contrato tipo de trabajo para el servicio doméstico, seguros sociales desde el primer salario y declaraciones que vuelven cada mes.",
+    "Asumimos esta gestión del hogar de forma continuada, desde la contratación hasta el certificado de salario anual. Usted mantiene la relación con las personas que trabajan en su casa; nosotros velamos por que todo esté en orden, con discreción."
+  ],
+  "Pillars": [
+    {
+      "Title": "Intendencia de sus residencias",
+      "Body": "La organización diaria de sus casas: horarios del personal, proveedores, mantenimiento e intervenciones, presupuestos y facturas, con un interlocutor que conoce sus costumbres."
+    },
+    {
+      "Title": "Selección y contratos",
+      "Body": "Coordinación de la selección a través de agencias o de sus contactos, y contratos escritos basados en el contrato tipo de trabajo del servicio doméstico vigente en Ginebra (CTT-EDom), revisados por sus abogados cuando sea necesario."
+    },
+    {
+      "Title": "Seguros sociales",
+      "Body": "Afiliación a la caja de compensación del seguro de vejez y supervivencia (AVS), seguro de accidentes (LAA), previsión profesional (LPP) cuando se cumplen las condiciones, asignaciones familiares y el seguro de pérdida de ingresos por enfermedad previsto en el marco ginebrino."
+    },
+    {
+      "Title": "Nóminas mensuales",
+      "Body": "Las nóminas de su personal doméstico en Suiza, cada mes: cálculo y pago de los salarios, recibos de salario, liquidación de cotizaciones y control de vacaciones y ausencias."
+    },
+    {
+      "Title": "Impuesto en la fuente y certificados",
+      "Body": "Retención y liquidación del impuesto en la fuente para el personal sujeto a él, y elaboración de los certificados de salario anuales."
+    },
+    {
+      "Title": "Dispositivo cantonal o mandato",
+      "Body": "Para unas pocas horas semanales, el dispositivo cantonal ginebrino (chèque service) puede bastar. Le ayudamos a elegir la vía adecuada y nos ocupamos de las situaciones más complejas."
+    }
+  ],
+  "Closing": {
+    "Title": "Un hogar bien atendido",
+    "Body": "Usted elige a las personas y fija las prioridades de la casa. Nosotros nos ocupamos del rigor administrativo, los plazos y la coordinación diaria."
+  },
+  "Perimeter": "Las condiciones de trabajo se rigen por el marco legal y el contrato tipo aplicables; las cuestiones de derecho laboral se tratan con sus abogados. Ridger asegura la administración, las nóminas y la coordinación de su personal doméstico. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+}

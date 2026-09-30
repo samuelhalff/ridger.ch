@@ -29,6 +29,11 @@
       "description": "Fragen Sie ein vertrauliches Gespräch mit Ridger an, Family Office in Genf. Antwort innerhalb eines Werktags, strikte Diskretion.",
       "keywords": "Kontakt Family Office Genf, vertrauliches Gespräch, Multi Family Office Schweiz"
     },
+    "/advisers": {
+      "title": "Family Office für Anwälte und Banker | Ridger",
+      "description": "Family Office für Anwälte, Privatbanker und Vermögensverwalter: Stellen Sie uns eine Familie diskret vor. Wir koordinieren, ohne Vermögen zu verwalten.",
+      "keywords": "Family Office für Anwälte, Family Office Vermögensverwalter, Privatbanker, Notare, Steuerberater, Vermittlung, Zusammenarbeit"
+    },
     "/ressources": {
       "title": "Ressourcen | Ridger",
       "description": "Ratgeber und Analysen zu konsolidiertem Reporting, Anlageüberwachung, Governance und Nachfolge für Familien in der Schweiz.",
@@ -73,6 +78,51 @@
       "title": "Immobilien und Transaktionen | Ridger",
       "description": "Immobilien in Genf: Verwaltung Ihrer Objekte, Mietverwaltung, Koordination von Arbeiten und Renovationen, Aufspüren von Gelegenheiten und Transaktionen.",
       "keywords": "Immobilienverwaltung Genf, Mietverwaltung, Koordination Renovation Genf, Koordination Dienstleister, Liegenschaftsverwaltung, Immobilientransaktionen, Objektverwaltung"
+    },
+    "/services/property-management": {
+      "title": "Liegenschaftsverwaltung in Genf | Ridger",
+      "description": "Liegenschaftsverwaltung in Genf auf Eigentümerseite: Mietverträge, Nebenkosten, Steuerung der Verwaltungen, Arbeiten und konsolidiertes Reporting.",
+      "keywords": "liegenschaftsverwaltung genf, immobilienverwaltung familie, nebenkostenabrechnung, steuerung liegenschaftsverwaltung, renditeobjekte verwalten"
+    },
+    "/services/household-staff": {
+      "title": "Hauspersonal und Lohnabrechnung | Ridger",
+      "description": "Hauspersonal-Lohnabrechnung und Haushaltsführung in Genf: Verträge nach CTT-EDom, Sozialversicherungen, monatliche Löhne, Quellensteuer und Lohnausweise.",
+      "keywords": "hauspersonal lohnabrechnung, haushaltsführung genf, hauspersonal genf, hausangestellte anmelden, lohnausweis, quellensteuer hauspersonal"
+    },
+    "/services/relocation-residence": {
+      "title": "Umzug und Aufenthaltsbewilligung | Ridger",
+      "description": "Umzug in die Schweiz mit Familie: Aufenthaltsbewilligung, Anmeldung, Krankenversicherung, Schulen, Wohnungssuche und steuerliche Koordination.",
+      "keywords": "umzug in die schweiz familie, aufenthaltsbewilligung schweiz, umzug nach genf, bewilligung B C L, krankenversicherung kvg, relocation genf"
+    },
+    "/services/domiciliation-mail": {
+      "title": "Domizil und Postverwaltung in Genf | Ridger",
+      "description": "Domizil in Genf: Korrespondenzadresse, Postverwaltung mit Empfang und Digitalisierung, Fristenkontrolle und Domizil für Familiengesellschaften.",
+      "keywords": "domizil genf, postverwaltung, korrespondenzadresse schweiz, c/o-adresse genf, domizil gesellschaft, post digitalisieren"
+    },
+    "/family-office/geneva": {
+      "title": "Family Office in Genf | Ridger",
+      "description": "Multi-Family-Office in der Schweiz mit Sitz in Genf: konsolidiertes Reporting, koordinierte Berater und Treffen in unserem Büro. Keine Vermögensverwaltung.",
+      "keywords": "Family Office Genf, Multi-Family-Office Schweiz, konsolidiertes Reporting, Beraterkoordination, Familienvermögen"
+    },
+    "/family-office/lausanne": {
+      "title": "Family Office für Lausanne und Waadt | Ridger",
+      "description": "Mit Sitz in Genf begleitet Ridger Familien in Lausanne und im Kanton Waadt: Gesamtsicht auf das Vermögen, koordinierte Berater, betreute Steuerfristen.",
+      "keywords": "Family Office Lausanne, Family Office Waadt, Multi-Family-Office, konsolidiertes Reporting, Beraterkoordination"
+    },
+    "/family-office/zurich": {
+      "title": "Family Office für Zürich | Ridger",
+      "description": "Mit Sitz in Genf begleitet Ridger Familien in Zürich aus der Distanz und bei Besuchen: konsolidiertes Reporting und koordinierte Berater.",
+      "keywords": "Family Office Zürich, Multi-Family-Office Schweiz, konsolidiertes Reporting, Beraterkoordination, Zürcher Familien"
+    },
+    "/family-office/zug": {
+      "title": "Family Office für Zug | Ridger",
+      "description": "Mit Sitz in Genf begleitet Ridger Familien im Kanton Zug: Privatvermögen und Familienunternehmen in einer Gesamtsicht, Berater koordiniert.",
+      "keywords": "Family Office Zug, Multi-Family-Office Schweiz, Familienunternehmen, konsolidiertes Reporting, Beraterkoordination"
+    },
+    "/family-office/lugano": {
+      "title": "Family Office für Lugano und Tessin | Ridger",
+      "description": "Mit Sitz in Genf begleitet Ridger Familien in Lugano und im Tessin aus der Distanz und bei Besuchen, gemeinsam mit ihren Beratern vor Ort.",
+      "keywords": "Family Office Lugano, Family Office Tessin, Multi-Family-Office Schweiz, konsolidiertes Reporting, Beraterkoordination"
     },
     "/legal/privacy": {
       "title": "Datenschutzerklärung | Ridger",

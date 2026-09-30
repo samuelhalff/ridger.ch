@@ -1,0 +1,38 @@
+{
+  "Hero": {
+    "Title": "Domiciliation et courrier — une adresse à Genève, un courrier maîtrisé",
+    "Description": "Une adresse de correspondance à Genève pour les membres de votre famille souvent à l'étranger, et une gestion du courrier qui ne laisse passer aucune échéance.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Lorsque la famille vit entre plusieurs pays, le courrier suisse devient un point sensible : avis de taxation, lettres des autorités, factures, relevés. Un pli ouvert trop tard peut coûter un délai.",
+    "Nous recevons, numérisons et partageons votre courrier en toute sécurité, et nous suivons ce qu'il appelle. Une adresse de correspondance reste une adresse postale : elle ne fixe ni votre domicile ni votre résidence fiscale, qui dépendent de votre situation réelle."
+  ],
+  "Pillars": [
+    {
+      "Title": "Adresse de correspondance",
+      "Body": "Une adresse c/o à Genève pour recevoir les plis de chaque membre de la famille, distincte du domicile légal et révocable à tout moment."
+    },
+    {
+      "Title": "Réception et numérisation",
+      "Body": "Réception, tri et numérisation du courrier, puis partage sécurisé dans votre coffre-fort numérique ; les originaux sont conservés ou réexpédiés selon vos consignes."
+    },
+    {
+      "Title": "Échéances et réponses",
+      "Body": "Repérage des délais — avis d'impôt, courriers des autorités, factures — et coordination des réponses avec vous et vos conseillers."
+    },
+    {
+      "Title": "Domiciliation de sociétés",
+      "Body": "Domiciliation à Genève de vos sociétés holding ou de gestion familiales. Lorsque la réglementation l'exige, une société doit disposer d'une substance réelle et y prendre ses décisions de gestion ; nous en tenons compte avec vos conseillers."
+    },
+    {
+      "Title": "Archivage",
+      "Body": "Classement structuré et archivage des documents reçus, retrouvables en quelques instants, pour vous comme pour vos conseillers."
+    }
+  ],
+  "Closing": {
+    "Title": "Rien ne se perd",
+    "Body": "Où que vous soyez, vous savez ce qui est arrivé, ce qui demande une action et ce qui a été traité. Nous gardons l'ensemble en ordre, discrètement."
+  },
+  "Perimeter": "Une adresse de correspondance ne crée ni domicile civil ni résidence fiscale. Les questions juridiques et fiscales liées au domicile et à la substance des sociétés sont traitées avec vos avocats et conseillers fiscaux. Ridger assure la réception et la gestion du courrier ainsi que la coordination administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

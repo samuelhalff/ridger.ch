@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Gérance immobilière — l'administration de vos biens, côté propriétaire",
+    "Description": "La gérance immobilière de vos résidences et biens locatifs à Genève et en Suisse, dans la durée : baux, charges, régies, travaux et reporting.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Une fois le bien acquis commence le travail de fond : suivre les loyers, contrôler les décomptes, entretenir, assurer, déclarer. Réparti entre plusieurs régies et plusieurs résidences, ce suivi perd vite sa cohérence.",
+    "Nous assurons la gestion immobilière de votre famille du côté du propriétaire. Les régies conservent leur rôle opérationnel lorsqu'elles sont mandatées ; nous les pilotons, contrôlons leurs comptes et réunissons l'ensemble dans une vue claire de votre patrimoine."
+  ],
+  "Pillars": [
+    {
+      "Title": "Baux et loyers",
+      "Body": "Suivi des baux, des échéances et des encaissements, relances coordonnées avec la régie et lecture attentive des adaptations de loyer."
+    },
+    {
+      "Title": "Charges et décomptes",
+      "Body": "Contrôle des charges et des décomptes annuels, questions posées au bon interlocuteur et suivi jusqu'à leur clôture."
+    },
+    {
+      "Title": "Pilotage des régies",
+      "Body": "Cadrage des mandats, suivi des prestations et contrôle des comptes de vos régies et gérants d'immeubles, dans votre intérêt de propriétaire."
+    },
+    {
+      "Title": "Entretien et travaux",
+      "Body": "Coordination de l'entretien et des travaux avec les artisans et entreprises, du devis à la réception, en lien avec vos projets de rénovation."
+    },
+    {
+      "Title": "Assurances du bâtiment",
+      "Body": "Suivi des assurances bâtiment et responsabilité civile du propriétaire, des échéances et des sinistres, avec vos courtiers et assureurs."
+    },
+    {
+      "Title": "Comptabilité et reporting",
+      "Body": "Comptabilité côté propriétaire, reporting consolidé intégré à la vue d'ensemble de votre patrimoine, et préparation des données immobilières — dont la valeur locative — pour vos déclarations, traitées avec vos conseillers fiscaux."
+    }
+  ],
+  "Closing": {
+    "Title": "Un parc suivi dans la durée",
+    "Body": "Vous décidez des orientations de votre patrimoine immobilier. Nous en assurons l'administration, la cohérence et la mémoire, bien après la signature."
+  },
+  "Perimeter": "La gestion locative opérationnelle reste assurée par vos régies lorsqu'elles sont mandatées, et les questions juridiques et fiscales par vos avocats, notaires et conseillers fiscaux. Ridger assure l'administration, la supervision, la coordination et le reporting. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

@@ -24,6 +24,7 @@ const contactSchema = z.object({
   aumBand: z.string().trim().max(80).optional().or(z.literal("")),
   horizon: z.string().trim().max(80).optional().or(z.literal("")),
   serviceInterest: z.string().trim().max(120).optional().or(z.literal("")),
+  formType: z.enum(["consultation", "introducer"]).optional(),
   pageUrl: z.string().trim().max(600).optional().or(z.literal("")),
   referrer: z.string().trim().max(600).optional().or(z.literal("")),
   gaClientId: z

@@ -23,6 +23,22 @@
     "Title": "Caja fuerte digital",
     "Description": "Caja fuerte documental cifrada, expedientes familiares estructurados, alojamiento de datos en Suiza, uso compartido controlado con sus asesores y flujos de trabajo digitales."
   },
+  "PropertyManagement": {
+    "Title": "Administración inmobiliaria",
+    "Description": "Administración de sus residencias e inmuebles en alquiler del lado del propietario: contratos, gastos, administradoras, obras y reporting consolidado."
+  },
+  "HouseholdStaff": {
+    "Title": "Personal doméstico y nóminas",
+    "Description": "Intendencia de sus residencias y obligaciones de empleador de su personal doméstico: contratos, seguros sociales, nóminas y certificados."
+  },
+  "RelocationResidence": {
+    "Title": "Traslado y residencia",
+    "Description": "La llegada de su familia a Suiza, coordinada: permisos, registros, seguro de enfermedad, colegios, vivienda y situación fiscal."
+  },
+  "DomiciliationMail": {
+    "Title": "Domiciliación y correo",
+    "Description": "Una dirección de correspondencia en Ginebra, la recepción y digitalización de su correo y el seguimiento de cada plazo."
+  },
   "RealEstateTransactions": {
     "Title": "Inmobiliario y transacciones",
     "Description": "Gestión inmobiliaria y administración de sus bienes, búsqueda y evaluación de oportunidades, coordinación de transacciones con notarios, bancos y due diligence."

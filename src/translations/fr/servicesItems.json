@@ -23,6 +23,22 @@
     "Title": "Coffre-fort numérique",
     "Description": "Coffre-fort documentaire chiffré, dossiers familiaux structurés, hébergement des données en Suisse, partage contrôlé avec vos conseillers et flux de travail numériques."
   },
+  "PropertyManagement": {
+    "Title": "Gérance immobilière",
+    "Description": "L'administration de vos résidences et biens locatifs côté propriétaire : baux, charges, régies, travaux et reporting consolidé."
+  },
+  "HouseholdStaff": {
+    "Title": "Personnel de maison et salaires",
+    "Description": "Intendance de vos résidences et obligations d'employeur de votre personnel de maison : contrats, assurances sociales, salaires et certificats."
+  },
+  "RelocationResidence": {
+    "Title": "Relocation et permis de séjour",
+    "Description": "L'installation de votre famille en Suisse coordonnée : permis, annonces, assurance-maladie, écoles, logement et statut fiscal."
+  },
+  "DomiciliationMail": {
+    "Title": "Domiciliation et courrier",
+    "Description": "Une adresse de correspondance à Genève, la réception et la numérisation de votre courrier, et le suivi de chaque échéance."
+  },
   "RealEstateTransactions": {
     "Title": "Immobilier et transactions",
     "Description": "Gestion immobilière et administration de vos biens, recherche et évaluation d’opportunités, coordination des transactions avec notaires, banques et due diligence."

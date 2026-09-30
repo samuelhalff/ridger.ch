@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Pessoal doméstico e salários — uma gestão da casa discreta e em ordem",
+    "Description": "Coordenamos a intendência das suas residências e todas as obrigações de empregador relativas ao seu pessoal doméstico na Suíça: contratos, seguros sociais, salários e certificados de salário.",
+    "CTA": "Solicitar uma entrevista confidencial"
+  },
+  "Intro": [
+    "Contratar uma governanta, uma ama, um motorista ou um jardineiro faz do seu lar um empregador de pleno direito. Em Genebra, o quadro é preciso: um contrato-tipo de trabalho para o serviço doméstico, seguros sociais desde o primeiro salário e declarações que se repetem todos os meses.",
+    "Assumimos esta gestão da casa de forma contínua, da contratação ao certificado de salário anual. Mantém a relação com as pessoas que trabalham em sua casa; nós garantimos que tudo está em ordem, com discrição."
+  ],
+  "Pillars": [
+    {
+      "Title": "Intendência das suas residências",
+      "Body": "A organização diária das suas casas: horários do pessoal, fornecedores, manutenção e intervenções, orçamentos e faturas, com um interlocutor que conhece os seus hábitos."
+    },
+    {
+      "Title": "Recrutamento e contratos",
+      "Body": "Coordenação do recrutamento através de agências ou dos seus contactos, e contratos escritos baseados no contrato-tipo de trabalho do serviço doméstico em vigor em Genebra (CTT-EDom), revistos pelos seus advogados quando necessário."
+    },
+    {
+      "Title": "Seguros sociais",
+      "Body": "Inscrição na caixa de compensação do seguro de velhice e sobrevivência (AVS), seguro de acidentes (LAA), previdência profissional (LPP) quando as condições se verificam, abonos de família e o seguro de perda de rendimento por doença previsto no quadro genebrino."
+    },
+    {
+      "Title": "Salários mensais",
+      "Body": "O processamento dos salários do seu pessoal doméstico na Suíça, todos os meses: cálculo e pagamento, recibos de vencimento, apuramento das contribuições e controlo de férias e ausências."
+    },
+    {
+      "Title": "Retenção na fonte e certificados",
+      "Body": "Retenção e declaração do imposto retido na fonte para o pessoal a ele sujeito, e emissão dos certificados de salário anuais."
+    },
+    {
+      "Title": "Dispositivo cantonal ou mandato",
+      "Body": "Para algumas horas por semana, o dispositivo cantonal genebrino (chèque service) pode bastar. Ajudamos a escolher a via adequada e assumimos as situações mais complexas."
+    }
+  ],
+  "Closing": {
+    "Title": "Uma casa bem cuidada",
+    "Body": "Escolhe as pessoas e define as prioridades da casa. Nós asseguramos o rigor administrativo, os prazos e a coordenação do dia a dia."
+  },
+  "Perimeter": "As condições de trabalho decorrem do quadro legal e do contrato-tipo aplicáveis; as questões de direito do trabalho são tratadas com os seus advogados. A Ridger assegura a administração, o processamento salarial e a coordenação do seu pessoal doméstico. A Ridger não gere ativos e não presta aconselhamento de investimento."
+}

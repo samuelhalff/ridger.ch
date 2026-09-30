@@ -3,12 +3,13 @@ import { locales, type Locale } from "@/src/lib/i18n-locales";
 import { localizePath } from "@/src/lib/paths";
 import { hreflangFor } from "@/src/lib/hreflang";
 import { getArticles, getValidLocalesForSlug } from "@/src/lib/articles";
+import locationCities from "@/src/lib/locations.json";
 
 const BASE = "https://ridger.ch";
 const canonicalLocale: Locale = "fr";
 // Bump manually when static-page content changes meaningfully; a build-time
 // date would falsely mark every static URL as modified on each deploy.
-const STATIC_LASTMOD = "2026-09-16";
+const STATIC_LASTMOD = "2026-09-30";
 
 function getPlaceholderLocales(): Set<string> {
   const raw = process.env.PLACEHOLDER_LOCALES || "";
@@ -29,6 +30,7 @@ const staticPaths = [
   "/services",
   "/ressources",
   "/contact",
+  "/advisers",
   "/legal/terms",
   "/legal/privacy",
   "/legal/cookies",
@@ -43,7 +45,14 @@ const servicePaths = [
   "/services/tax-administration",
   "/services/digital-vault",
   "/services/real-estate-transactions",
+  "/services/property-management",
+  "/services/household-staff",
+  "/services/relocation-residence",
+  "/services/domiciliation-mail",
 ];
+
+// Location landing pages (same slug in every locale).
+const locationPaths = locationCities.map((city) => `/family-office/${city}`);
 
 type PathEntry = { path: string; date?: string; locales?: Locale[] } | string;
 const toPathEntry = (p: PathEntry) => (typeof p === "string" ? { path: p } : p);
@@ -67,6 +76,7 @@ function getSitemapPaths(sitemapLocales: readonly Locale[]) {
   return [
     ...staticPaths.map(toPathEntry),
     ...servicePaths.map(toPathEntry),
+    ...locationPaths.map(toPathEntry),
     ...ressourcesArticles,
   ] as Array<{ path: string; date?: string; locales?: Locale[] }>;
 }
@@ -100,7 +110,8 @@ export async function GET() {
       const isHome = p === "/";
       const isArticle = p.startsWith("/ressources/articles/");
       const isResources = p.startsWith("/ressources") && !isArticle;
-      const isService = p.startsWith("/services");
+      const isService =
+        p.startsWith("/services") || p.startsWith("/family-office/");
       const isLegal = p.startsWith("/legal/");
       const changefreq =
         isHome || isArticle

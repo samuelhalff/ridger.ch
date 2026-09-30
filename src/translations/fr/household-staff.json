@@ -1,0 +1,42 @@
+{
+  "Hero": {
+    "Title": "Personnel de maison et salaires — une gestion de maison discrète et en règle",
+    "Description": "Nous coordonnons l'intendance de vos résidences et les obligations d'employeur liées à votre personnel de maison à Genève : contrats, assurances sociales, salaires et certificats.",
+    "CTA": "Demander un entretien confidentiel"
+  },
+  "Intro": [
+    "Engager une gouvernante, une nounou, un chauffeur ou un jardinier fait de votre foyer un employeur à part entière. À Genève, le cadre est précis : un contrat-type de travail pour l'économie domestique, des assurances sociales dès le premier salaire et des déclarations qui reviennent chaque mois.",
+    "Nous prenons en charge cette gestion de maison dans la durée, de l'engagement au certificat de salaire. Vous gardez le lien avec les personnes qui travaillent chez vous ; nous veillons à ce que tout soit en ordre, avec discrétion."
+  ],
+  "Pillars": [
+    {
+      "Title": "Intendance de vos résidences",
+      "Body": "L'organisation quotidienne de vos maisons : plannings du personnel, fournisseurs, entretien et interventions, budgets et factures, avec un interlocuteur qui connaît vos habitudes."
+    },
+    {
+      "Title": "Recrutement et contrats",
+      "Body": "Coordination du recrutement avec des agences ou vos contacts, et préparation de contrats écrits fondés sur le contrat-type de travail de l'économie domestique (CTT-EDom) en vigueur à Genève, relus au besoin par vos avocats."
+    },
+    {
+      "Title": "Assurances sociales",
+      "Body": "Affiliation à la caisse de compensation AVS, assurance-accidents (LAA), prévoyance professionnelle (LPP) lorsque les conditions sont remplies, allocations familiales et assurance perte de gain maladie prévue par le cadre genevois."
+    },
+    {
+      "Title": "Salaires mensuels",
+      "Body": "Calcul et versement des salaires du personnel de maison chaque mois, fiches de salaire, décomptes de cotisations et suivi des vacances et des absences."
+    },
+    {
+      "Title": "Impôt à la source et certificats",
+      "Body": "Retenue et décompte de l'impôt à la source pour le personnel qui y est soumis, et établissement des certificats de salaire annuels."
+    },
+    {
+      "Title": "Chèque service ou mandat",
+      "Body": "Pour un engagement de quelques heures, le chèque service genevois peut suffire. Nous vous aidons à choisir la voie adaptée et reprenons les situations plus complexes."
+    }
+  ],
+  "Closing": {
+    "Title": "Un foyer bien tenu",
+    "Body": "Vous choisissez les personnes et fixez les priorités de la maison. Nous assurons la régularité administrative, les échéances et la coordination au quotidien."
+  },
+  "Perimeter": "Les conditions de travail découlent du cadre légal et du contrat-type applicables ; les questions de droit du travail sont traitées avec vos avocats. Ridger assure l'administration, la paie et la coordination de votre personnel de maison. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+}

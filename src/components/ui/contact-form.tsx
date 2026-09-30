@@ -171,6 +171,8 @@ interface ContactFormProps {
   redirectPath?: string; // locale-aware redirect after success
   /** Additional classes merged into the inner Card element */
   cardClassName?: string;
+  /** Hidden form type sent with the lead (e.g. "introducer" on /advisers/). */
+  formType?: "consultation" | "introducer";
 }
 
 const ContactForm: FC<ContactFormProps> = ({
@@ -180,6 +182,7 @@ const ContactForm: FC<ContactFormProps> = ({
   locale,
   redirectPath = "/",
   cardClassName,
+  formType = "consultation",
 }) => {
   const router = useRouter();
   const [sending, setSending] = React.useState(false);
@@ -206,6 +209,7 @@ const ContactForm: FC<ContactFormProps> = ({
     formStartTracked.current = true;
     trackEvent("consultation_form_start", {
       form_id: "consultation",
+      form_type: formType,
       locale: eventLocale,
     });
   };
@@ -225,6 +229,7 @@ const ContactForm: FC<ContactFormProps> = ({
         },
         body: JSON.stringify({
           ...data,
+          formType,
           pageUrl: window.location.href,
           referrer: document.referrer || "",
           gaClientId: getGaClientId() || "",
@@ -237,6 +242,7 @@ const ContactForm: FC<ContactFormProps> = ({
       }
       const eventParams = {
         form_id: "consultation",
+      form_type: formType,
         aum_band: data.aumBand || "",
         service_interest: data.serviceInterest || "",
         horizon: data.horizon || "",
@@ -254,6 +260,7 @@ const ContactForm: FC<ContactFormProps> = ({
     } catch (e) {
       trackEvent("consultation_form_error", {
         form_id: "consultation",
+      form_type: formType,
         error_type: errorType,
         locale: eventLocale,
       });
