@@ -73,6 +73,28 @@ const ALLOWED_REFERENCE_DOMAINS = [
   "so-fit.ch",
   "swissdec.ch",
   "zefix.ch",
+  // Quasi-official bodies: not authorities, but with a statutory or
+  // officially recognised role, so not "private sources" in the sense of the
+  // policy (unlike Big-4 firms, banks or lobbies).
+  //   - esisuisse.ch: the Swiss depositor protection scheme (art. 37h LB)
+  //   - steuerkonferenz.ch / ssk-csi.ch: Swiss Tax Conference (CSI/SSK), the
+  //     conference of the cantonal tax administrations (the old domain now
+  //     redirects to ssk-csi.ch)
+  //   - osfin.ch / osfincontrol.ch: FINMA-authorised supervisory organisation
+  //     for portfolio managers and trustees (osfin.ch redirects to
+  //     osfincontrol.ch)
+  //   - zewo.ch: the officially recognised Swiss certification for charities
+  //     collecting donations
+  //   - swissbanking.ch: the banking sector's self-regulation body, whose
+  //     agreements (e.g. the CDB due diligence convention) FINMA recognises
+  //     as minimum standards
+  "esisuisse.ch",
+  "osfin.ch",
+  "osfincontrol.ch",
+  "ssk-csi.ch",
+  "steuerkonferenz.ch",
+  "swissbanking.ch",
+  "zewo.ch",
   // Swiss cantonal social insurance / compensation funds
   "aknw.ch",
   "akso.ch",
@@ -556,8 +578,23 @@ async function validateUrl(url, options = {}) {
       }
     } else {
       // For binary content, use content-length or read body
-      const contentLength = response.headers.get("content-length");
-      if (contentLength) {
+      let contentLength = response.headers.get("content-length");
+      // A HEAD response has no body: when it carries no (or a zero)
+      // Content-Length, measure the real document with a GET instead of
+      // reading the empty HEAD body (e.g. ahv-iv.ch memento PDFs).
+      if (usedHead && (!contentLength || contentLength === "0")) {
+        response = await fetchWithTimeout(url, { method: "GET", timeout });
+        usedHead = false;
+        result.status = response.status;
+        result.finalUrl = response.url;
+        if (!response.ok) {
+          result.reason = "http-error";
+          result.error = `HTTP ${response.status}: ${response.statusText}`;
+          return result;
+        }
+        contentLength = response.headers.get("content-length");
+      }
+      if (contentLength && contentLength !== "0") {
         result.bodySize = parseInt(contentLength, 10);
       } else {
         const buffer = await response.arrayBuffer();

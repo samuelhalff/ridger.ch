@@ -21,6 +21,14 @@ const allowedExamples = [
   "https://entscheidsuche.ch/view/CH_BGer_009_9C-606-2025_2026-02-24",
   "https://www.swissdec.ch/fr/",
   "https://houle.ai/",
+  // quasi-official bodies
+  "https://www.esisuisse.ch/fr/garantie-des-depots/le-systeme-suisse",
+  "https://www.ssk-csi.ch/fr/",
+  "https://www.steuerkonferenz.ch/",
+  "https://www.osfincontrol.ch/fr/",
+  "https://osfin.ch/fr/",
+  "https://zewo.ch/fr/",
+  "https://www.swissbanking.ch/fr/",
 ];
 
 const firmDomains = [
