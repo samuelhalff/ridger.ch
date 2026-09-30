@@ -52,6 +52,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     env:
       NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
       # NEXT_PUBLIC_* are inlined at build time —
@@ -283,9 +284,14 @@ jobs:
 
             KEEP=3
             cd "$RELEASES_DIR" || exit 0
-            ls -1t | tail -n +$((KEEP+1)) | while read -r rel; do
-              [ -d "$rel" ] && [ "$rel" != "$TS" ] && rm -rf "$RELEASES_DIR/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
-            done
+            # Only directories count as releases: a stray file as the last
+            # loop item made the loop exit 1 under set -e and failed a live
+            # deploy (houle.ai, 2026-09-25..30). Best-effort, never fatal.
+            ls -1t | while read -r rel; do if [ -d "$rel" ]; then echo "$rel"; fi; done | tail -n +$((KEEP+1)) | while read -r rel; do
+              if [ "$rel" != "$TS" ]; then
+                rm -rf "${RELEASES_DIR:?}/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
+              fi
+            done || echo "[deploy] WARN: release cleanup incomplete" >> "$LOG"
             echo "[deploy] Cleanup completed, keeping last $KEEP releases" >> "$LOG"
           '
 
