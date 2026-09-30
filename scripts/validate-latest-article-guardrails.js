@@ -36,7 +36,21 @@ if (articles.length < 2) {
   process.exit(0);
 }
 
-const sorted = [...articles].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+// --slug <slug> (or LATEST_ARTICLE_SLUG): validate that article as "latest".
+// The pipeline passes its new slug explicitly because hand-written articles
+// are sometimes future-dated, so "newest by date" is not always the new one.
+const slugArgIdx = process.argv.indexOf("--slug");
+const targetSlug =
+  (slugArgIdx !== -1 && process.argv[slugArgIdx + 1]) ||
+  process.env.LATEST_ARTICLE_SLUG ||
+  "";
+const byDate = [...articles].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+let sorted = byDate;
+if (targetSlug) {
+  const target = articles.find((a) => a.slug === targetSlug);
+  if (!target) fail(`Article ${targetSlug} not found in FR ressources`);
+  sorted = [target, ...byDate.filter((a) => a !== target)];
+}
 const latest = sorted[0];
 const recent = sorted.slice(1, TOPIC_ROTATION_WINDOW + 1);
 

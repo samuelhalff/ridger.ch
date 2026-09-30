@@ -14,7 +14,7 @@
     "prod": "npm run build && mkdir -p .next/standalone/.next/static && cp -R .next/static/* .next/standalone/.next/static/ 2>/dev/null || true && mkdir -p .next/standalone/public && cp -R public/* .next/standalone/public/ 2>/dev/null || true && mkdir -p .next/standalone/src && cp -R src/translations .next/standalone/src/ 2>/dev/null || true && PORT=${PORT:-5000} node -r ./scripts/load-env.js .next/standalone/server.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
-    "test": "npm run typecheck && npm run seo:indexability && npm run test:ressources-loader && npm run lint:links && npm run test:guardrails",
+    "test": "npm run typecheck && npm run seo:indexability && npm run test:ressources-loader && npm run lint:links && npm run test:guardrails && npm run test:pipeline",
     "test:ressources-loader": "node --test scripts/ressources-loader.test.js",
     "seo:indexability": "node --test scripts/seo-indexability.test.js",
     "lint:translations": "node scripts/lint-translations.js",
@@ -38,7 +38,12 @@
     "lint:hero-blur": "node scripts/check-hero-blur.js",
     "assets:pdfs": "node scripts/download-missing-pdfs.js --locale fr",
     "test:unit": "node --test src/lib/lead-session.test.ts src/lib/agent/request-validation.test.ts",
-    "test:guardrails": "node --test scripts/article-guardrails.test.js"
+    "test:guardrails": "node --test scripts/article-guardrails.test.js",
+    "test:pipeline": "node --test scripts/article-pipeline.test.js",
+    "articles:plan": "node scripts/ai-ressources-update.js --plan-only",
+    "articles:generate": "node scripts/ai-ressources-update.js --apply",
+    "articles:dry-run": "node scripts/ai-ressources-update.js --dry-run",
+    "validate:article-seo": "node scripts/validate-article-seo.js"
   },
   "dependencies": {
     "@azure/ai-projects": "^1.0.1",

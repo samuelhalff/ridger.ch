@@ -22,6 +22,9 @@ const value = (name, fallback) => {
 const allLocales = flag("--all-locales");
 const locale = value("--locale", "fr");
 const asJson = flag("--json");
+// --slug <slug>: scope the scan to one article (the pipeline's new article).
+// Without it the whole corpus is scanned exactly as before.
+const onlySlug = value("--slug", "");
 
 function normalizeUrl(raw) {
   if (typeof raw !== "string") return "";
@@ -68,7 +71,7 @@ function scanLocale(loc) {
 
   const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-  for (const item of Array.isArray(data.Files) ? data.Files : []) {
+  for (const item of onlySlug ? [] : Array.isArray(data.Files) ? data.Files : []) {
     if (item?.source_url) {
       recordUrl(violations, {
         locale: loc,
@@ -80,6 +83,7 @@ function scanLocale(loc) {
 
   for (const article of Array.isArray(data.Articles) ? data.Articles : []) {
     const slug = article?.slug || null;
+    if (onlySlug && slug !== onlySlug) continue;
     for (const ref of Array.isArray(article?.references) ? article.references : []) {
       recordUrl(violations, {
         locale: loc,
@@ -106,6 +110,17 @@ function main() {
     ? listLocales(TRANSLATIONS_DIR, { requireRessources: true })
     : [locale];
   const violations = locales.flatMap(scanLocale);
+  if (onlySlug) {
+    const found = locales.every((loc) => {
+      const fp = path.join(TRANSLATIONS_DIR, loc, "ressources.json");
+      const d = fs.existsSync(fp) ? JSON.parse(fs.readFileSync(fp, "utf8")) : {};
+      return (d.Articles || []).some((a) => a?.slug === onlySlug);
+    });
+    if (!found) {
+      console.error(`Article ${onlySlug} not found in every checked locale.`);
+      process.exit(1);
+    }
+  }
 
   if (asJson) {
     console.log(JSON.stringify({ checkedLocales: locales, violations }, null, 2));

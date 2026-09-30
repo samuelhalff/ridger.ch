@@ -1,0 +1,3993 @@
+{
+  "version": 1,
+  "updated": "2026-09-30",
+  "themes": {
+    "family-governance": {
+      "category": "gouvernance",
+      "label": "Gouvernance familiale"
+    },
+    "wealth-reporting": {
+      "category": "reporting",
+      "label": "Reporting et supervision du patrimoine"
+    },
+    "estate-succession": {
+      "category": "patrimoine",
+      "label": "Succession et transmission"
+    },
+    "real-estate": {
+      "category": "travaux-intendance",
+      "label": "Immobilier"
+    },
+    "household-staff": {
+      "category": "emploi-domestique",
+      "label": "Personnel de maison"
+    },
+    "domiciliation-mail": {
+      "category": "vie-pratique",
+      "label": "Adresse et courrier privés"
+    },
+    "tax": {
+      "category": "fiscalite",
+      "label": "Fiscalité des particuliers"
+    },
+    "immigration-permits": {
+      "category": "vie-pratique",
+      "label": "Permis et séjour"
+    },
+    "insurance": {
+      "category": "vie-pratique",
+      "label": "Assurances et prévoyance"
+    },
+    "education-schools": {
+      "category": "vie-pratique",
+      "label": "Écoles et formation"
+    },
+    "art-collections": {
+      "category": "patrimoine",
+      "label": "Art et collections"
+    },
+    "philanthropy": {
+      "category": "gouvernance",
+      "label": "Philanthropie"
+    },
+    "digital-security": {
+      "category": "reporting",
+      "label": "Sécurité numérique et documents"
+    },
+    "relocation": {
+      "category": "vie-pratique",
+      "label": "Installation et départ"
+    },
+    "concierge-works": {
+      "category": "travaux-intendance",
+      "label": "Travaux et intendance"
+    },
+    "next-gen": {
+      "category": "family-office",
+      "label": "Génération suivante"
+    }
+  },
+  "arkCoreTerms": {
+    "fr": [
+      "fiduciaire",
+      "fiduciaire genève",
+      "comptabilité",
+      "comptabilité pme",
+      "tva",
+      "décompte tva",
+      "création de société",
+      "création sàrl",
+      "création sa",
+      "domiciliation d'entreprise",
+      "révision des comptes",
+      "salaires pme",
+      "odoo",
+      "bouclement",
+      "déclaration d'impôt entreprise"
+    ],
+    "en": [
+      "fiduciary",
+      "swiss fiduciary",
+      "accounting",
+      "bookkeeping",
+      "vat",
+      "swiss vat return",
+      "company formation",
+      "gmbh formation switzerland",
+      "company domiciliation",
+      "statutory audit",
+      "payroll services",
+      "odoo",
+      "year-end closing",
+      "corporate tax return",
+      "chartered accountant"
+    ],
+    "de": [
+      "treuhand",
+      "treuhänder",
+      "buchhaltung",
+      "buchhaltung kmu",
+      "mwst",
+      "mwst abrechnung",
+      "firmengründung",
+      "gmbh gründung",
+      "ag gründung",
+      "firmendomizil",
+      "revision",
+      "lohnbuchhaltung",
+      "odoo",
+      "jahresabschluss",
+      "steuererklärung firma"
+    ],
+    "es": [
+      "fiduciaria",
+      "contabilidad",
+      "contabilidad pyme",
+      "iva",
+      "declaración de iva",
+      "constitución de sociedad",
+      "crear empresa en suiza",
+      "domiciliación de empresas",
+      "auditoría de cuentas",
+      "nóminas",
+      "odoo",
+      "cierre contable",
+      "impuesto de sociedades",
+      "contable"
+    ],
+    "pt": [
+      "fiduciária",
+      "contabilidade",
+      "contabilidade pme",
+      "iva",
+      "declaração de iva",
+      "constituição de empresa",
+      "abrir empresa na suíça",
+      "domiciliação de empresas",
+      "auditoria de contas",
+      "processamento salarial",
+      "odoo",
+      "fecho de contas",
+      "imposto sobre sociedades",
+      "contabilista"
+    ]
+  },
+  "items": [
+    {
+      "id": "assemblee-de-famille-organisation-ordre-du-jour",
+      "theme": "family-governance",
+      "category": "gouvernance",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Comment organiser une assemblée de famille utile : ordre du jour, fréquence, rôles, prise de décision et suivi des décisions dans le temps.",
+      "seeds": {
+        "fr": "assemblée de famille patrimoine",
+        "en": "family assembly wealth",
+        "de": "familienversammlung familienvermögen",
+        "es": "asamblea familiar patrimonio",
+        "pt": "assembleia familiar patrimônio"
+      },
+      "targetKeywords": {
+        "fr": [
+          "assemblée de famille",
+          "gouvernance familiale",
+          "réunion de famille patrimoine",
+          "ordre du jour assemblée familiale"
+        ],
+        "en": [
+          "family assembly",
+          "family governance meeting",
+          "family meeting agenda wealth",
+          "family council meeting"
+        ],
+        "de": [
+          "familienversammlung",
+          "family governance",
+          "familienverfassung umsetzung",
+          "familientreffen vermögen"
+        ],
+        "es": [
+          "asamblea familiar",
+          "gobierno familiar",
+          "protocolo familiar reunión",
+          "reunión familiar patrimonio"
+        ],
+        "pt": [
+          "assembleia familiar",
+          "governança familiar",
+          "reunião de família patrimônio",
+          "protocolo familiar"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "pacte-actionnaires-familial-suisse-clauses",
+      "theme": "family-governance",
+      "category": "gouvernance",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Ce que contient un pacte d'actionnaires familial en droit suisse (préemption, sortie, gouvernance, résolution des conflits) et comment il s'articule avec la planification successorale.",
+      "seeds": {
+        "fr": "pacte actionnaires familial",
+        "en": "family shareholders agreement switzerland",
+        "de": "aktionärbindungsvertrag familie",
+        "es": "pacto de accionistas familiar",
+        "pt": "acordo de acionistas familiar"
+      },
+      "targetKeywords": {
+        "fr": [
+          "pacte d'actionnaires familial",
+          "convention d'actionnaires suisse",
+          "droit de préemption actions",
+          "clause de sortie actionnaires"
+        ],
+        "en": [
+          "family shareholders agreement",
+          "shareholders agreement switzerland",
+          "pre-emption rights family company",
+          "family business governance"
+        ],
+        "de": [
+          "aktionärbindungsvertrag",
+          "aktionärbindungsvertrag familie",
+          "vorkaufsrecht aktien",
+          "familienunternehmen nachfolge"
+        ],
+        "es": [
+          "pacto de accionistas familiar",
+          "acuerdo de accionistas suiza",
+          "derecho de tanteo acciones",
+          "empresa familiar sucesión"
+        ],
+        "pt": [
+          "acordo de acionistas familiar",
+          "acordo parassocial suíça",
+          "direito de preferência ações",
+          "empresa familiar sucessão"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
+      ]
+    },
+    {
+      "id": "conseil-de-famille-role-composition",
+      "theme": "family-governance",
+      "category": "gouvernance",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/governance-succession",
+      "angle": "Conseil de famille : rôle, composition, mandat et différence avec un conseil d'administration ou un conseil de fondation dans une famille qui détient un patrimoine commun.",
+      "seeds": {
+        "fr": "conseil de famille patrimoine",
+        "en": "family council role",
+        "de": "familienrat vermögen",
+        "es": "consejo de familia patrimonio",
+        "pt": "conselho de família patrimônio"
+      },
+      "targetKeywords": {
+        "fr": [
+          "conseil de famille",
+          "rôle du conseil de famille",
+          "gouvernance familiale patrimoine",
+          "conseil de famille composition"
+        ],
+        "en": [
+          "family council",
+          "family council role",
+          "family council vs board",
+          "family governance structure"
+        ],
+        "de": [
+          "familienrat",
+          "familienrat aufgaben",
+          "family governance",
+          "familienrat zusammensetzung"
+        ],
+        "es": [
+          "consejo de familia",
+          "funciones consejo de familia",
+          "gobierno familiar",
+          "consejo de familia empresa familiar"
+        ],
+        "pt": [
+          "conselho de família",
+          "papel do conselho de família",
+          "governança familiar",
+          "conselho de família empresa"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr"
+      ]
+    },
+    {
+      "id": "regime-matrimonial-suisse-contrat-de-mariage",
+      "theme": "family-governance",
+      "category": "patrimoine",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Participation aux acquêts, séparation de biens, communauté de biens : comment le régime matrimonial suisse répartit le patrimoine du couple et comment le modifier par contrat de mariage.",
+      "seeds": {
+        "fr": "régime matrimonial suisse",
+        "en": "marital property regime switzerland",
+        "de": "güterstand schweiz",
+        "es": "régimen matrimonial suiza",
+        "pt": "regime de bens suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "régime matrimonial suisse",
+          "participation aux acquêts",
+          "séparation de biens",
+          "contrat de mariage suisse"
+        ],
+        "en": [
+          "marital property regime switzerland",
+          "prenuptial agreement switzerland",
+          "separation of property switzerland",
+          "participation in acquired property"
+        ],
+        "de": [
+          "güterstand schweiz",
+          "errungenschaftsbeteiligung",
+          "gütertrennung",
+          "ehevertrag schweiz"
+        ],
+        "es": [
+          "régimen matrimonial suiza",
+          "separación de bienes suiza",
+          "capitulaciones matrimoniales suiza",
+          "participación en los gananciales"
+        ],
+        "pt": [
+          "regime de bens suíça",
+          "separação de bens suíça",
+          "pacto antenupcial suíça",
+          "comunhão de bens"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "retrocessions-bancaires-transparence-restitution",
+      "theme": "family-governance",
+      "category": "gouvernance",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/investment-oversight",
+      "angle": "Rétrocessions : ce que prévoient le droit du mandat et la jurisprudence du Tribunal fédéral sur leur restitution, et quelles questions de transparence la famille doit poser à ses banques et gérants.",
+      "seeds": {
+        "fr": "rétrocessions banque suisse",
+        "en": "retrocessions swiss banks",
+        "de": "retrozessionen bank schweiz",
+        "es": "retrocesiones banca suiza",
+        "pt": "retrocessões banco suíço"
+      },
+      "targetKeywords": {
+        "fr": [
+          "rétrocessions",
+          "restitution des rétrocessions",
+          "rétrocessions gestion de fortune",
+          "transparence frais bancaires"
+        ],
+        "en": [
+          "retrocessions switzerland",
+          "retrocessions asset management",
+          "kickbacks swiss banks",
+          "fee transparency private banking"
+        ],
+        "de": [
+          "retrozessionen",
+          "retrozessionen zurückfordern",
+          "retrozessionen vermögensverwaltung",
+          "transparenz bankgebühren"
+        ],
+        "es": [
+          "retrocesiones banca",
+          "retrocesiones gestión patrimonial",
+          "transparencia comisiones bancarias",
+          "retrocesiones suiza"
+        ],
+        "pt": [
+          "retrocessões bancárias",
+          "retrocessões gestão de patrimônio",
+          "transparência de comissões",
+          "retrocessões suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.finma.ch/fr/"
+      ]
+    },
+    {
+      "id": "verifier-gerant-fortune-independant-autorisation-finma",
+      "theme": "wealth-reporting",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/investment-oversight",
+      "angle": "Comment vérifier qu'un gérant de fortune indépendant est autorisé par la FINMA et suivi par un organisme de surveillance, et quels contrôles de routine mettre en place ensuite.",
+      "seeds": {
+        "fr": "gérant de fortune finma",
+        "en": "independent asset manager finma",
+        "de": "vermögensverwalter finma bewilligung",
+        "es": "gestor patrimonial independiente finma",
+        "pt": "gestor de fortunas independente finma"
+      },
+      "targetKeywords": {
+        "fr": [
+          "gérant de fortune indépendant",
+          "autorisation finma gérant de fortune",
+          "organisme de surveillance",
+          "lefin gérant de fortune",
+          "vérifier gérant finma"
+        ],
+        "en": [
+          "independent asset manager switzerland",
+          "finma licensed asset manager",
+          "finma register check",
+          "supervisory organisation",
+          "finia asset manager"
+        ],
+        "de": [
+          "unabhängiger vermögensverwalter",
+          "finma bewilligung vermögensverwalter",
+          "aufsichtsorganisation",
+          "finig vermögensverwalter",
+          "finma register"
+        ],
+        "es": [
+          "gestor patrimonial independiente suiza",
+          "licencia finma",
+          "registro finma",
+          "organismo de supervisión suiza"
+        ],
+        "pt": [
+          "gestor de fortunas independente suíça",
+          "licença finma",
+          "registo finma",
+          "organismo de supervisão suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/",
+        "https://www.finma.ch/fr/finma-public/etablissements-personnes-et-produits-autorises/",
+        "https://www.finma.ch/fr/"
+      ]
+    },
+    {
+      "id": "choisir-gerant-fortune-independant-criteres-lefin",
+      "theme": "wealth-reporting",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/investment-oversight",
+      "angle": "Critères concrets pour sélectionner un gérant de fortune indépendant sous la LEFin : autorisation, organisme de surveillance, banque dépositaire séparée, mandat écrit et qualité du reporting.",
+      "seeds": {
+        "fr": "choisir gérant de fortune genève",
+        "en": "choosing wealth manager switzerland",
+        "de": "vermögensverwalter wählen schweiz",
+        "es": "elegir gestor patrimonial suiza",
+        "pt": "escolher gestor de patrimônio suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "choisir un gérant de fortune",
+          "gérant de fortune genève",
+          "mandat de gestion",
+          "critères gestionnaire de fortune"
+        ],
+        "en": [
+          "choosing a wealth manager switzerland",
+          "independent wealth manager geneva",
+          "discretionary mandate switzerland",
+          "asset manager due diligence"
+        ],
+        "de": [
+          "vermögensverwalter wählen",
+          "vermögensverwalter genf",
+          "vermögensverwaltungsmandat",
+          "vermögensverwalter vergleich kriterien"
+        ],
+        "es": [
+          "elegir gestor patrimonial",
+          "gestor patrimonial ginebra",
+          "mandato de gestión discrecional",
+          "due diligence gestor"
+        ],
+        "pt": [
+          "escolher gestor de patrimônio",
+          "gestor de fortunas genebra",
+          "mandato de gestão discricionária",
+          "due diligence gestor"
+        ]
+      },
+      "officialSources": [
+        "https://www.finma.ch/fr/autorisation/gestionnaires-de-fortune-et-trustees/",
+        "https://www.finma.ch/fr/finma-public/etablissements-personnes-et-produits-autorises/"
+      ]
+    },
+    {
+      "id": "inventaire-patrimoine-familial-methode",
+      "theme": "wealth-reporting",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/consolidated-reporting",
+      "angle": "Comment dresser un inventaire complet du patrimoine familial (comptes, prévoyance, immobilier, assurances, dettes, objets de valeur) et le tenir à jour pour la famille et les proches.",
+      "seeds": {
+        "fr": "inventaire patrimoine familial",
+        "en": "family wealth inventory",
+        "de": "vermögensinventar familie",
+        "es": "inventario patrimonio familiar",
+        "pt": "inventário patrimônio familiar"
+      },
+      "targetKeywords": {
+        "fr": [
+          "inventaire du patrimoine",
+          "inventaire patrimoine familial",
+          "bilan patrimonial",
+          "liste des avoirs"
+        ],
+        "en": [
+          "family wealth inventory",
+          "personal balance sheet",
+          "asset inventory family",
+          "net worth statement"
+        ],
+        "de": [
+          "vermögensinventar",
+          "vermögensübersicht familie",
+          "vermögensaufstellung",
+          "nachlassinventar vorbereiten"
+        ],
+        "es": [
+          "inventario patrimonial",
+          "inventario de bienes familia",
+          "balance patrimonial personal",
+          "relación de activos"
+        ],
+        "pt": [
+          "inventário patrimonial",
+          "inventário de bens família",
+          "balanço patrimonial pessoal",
+          "lista de ativos"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "reporting-heritiers-generation-suivante-information",
+      "theme": "wealth-reporting",
+      "category": "reporting",
+      "audience": "uhnw",
+      "priority": 3,
+      "service": "/services/consolidated-reporting",
+      "angle": "Quel reporting consolidé préparer pour les héritiers et la génération suivante, à quel rythme et avec quels droits d'accès, sans compromettre la confidentialité du patrimoine.",
+      "seeds": {
+        "fr": "reporting patrimonial héritiers",
+        "en": "wealth reporting for heirs",
+        "de": "vermögensreporting erben",
+        "es": "informe patrimonial herederos",
+        "pt": "relatório patrimonial herdeiros"
+      },
+      "targetKeywords": {
+        "fr": [
+          "reporting patrimonial famille",
+          "information des héritiers",
+          "reporting consolidé famille",
+          "transparence patrimoine enfants"
+        ],
+        "en": [
+          "wealth reporting for heirs",
+          "family wealth reporting",
+          "consolidated reporting next generation",
+          "family transparency wealth"
+        ],
+        "de": [
+          "vermögensreporting familie",
+          "information erben",
+          "konsolidiertes reporting familie",
+          "nächste generation vermögen"
+        ],
+        "es": [
+          "informe patrimonial familiar",
+          "información herederos",
+          "reporting consolidado familia",
+          "transparencia patrimonio hijos"
+        ],
+        "pt": [
+          "relatório patrimonial família",
+          "informação herdeiros",
+          "relatório consolidado família",
+          "transparência patrimônio filhos"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.finma.ch/fr/"
+      ]
+    },
+    {
+      "id": "releve-fiscal-bancaire-impot-anticipe",
+      "theme": "wealth-reporting",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/tax-administration",
+      "angle": "Relevé fiscal bancaire : ce qu'il contient, comment le rapprocher de la déclaration d'impôt et comment vérifier la récupération de l'impôt anticipé de 35 %.",
+      "seeds": {
+        "fr": "relevé fiscal banque",
+        "en": "swiss bank tax statement",
+        "de": "steuerauszug bank",
+        "es": "extracto fiscal banco suizo",
+        "pt": "extrato fiscal banco suíço"
+      },
+      "targetKeywords": {
+        "fr": [
+          "relevé fiscal bancaire",
+          "état des titres",
+          "impôt anticipé remboursement",
+          "relevé fiscal déclaration d'impôt"
+        ],
+        "en": [
+          "swiss bank tax statement",
+          "withholding tax refund switzerland",
+          "securities statement tax return",
+          "e-tax statement"
+        ],
+        "de": [
+          "steuerauszug bank",
+          "wertschriftenverzeichnis",
+          "verrechnungssteuer rückerstattung",
+          "e-steuerauszug"
+        ],
+        "es": [
+          "extracto fiscal bancario suiza",
+          "impuesto anticipado suiza",
+          "reembolso retención suiza",
+          "relación de valores"
+        ],
+        "pt": [
+          "extrato fiscal bancário suíça",
+          "imposto antecipado suíça",
+          "reembolso retenção suíça",
+          "lista de títulos"
+        ]
+      },
+      "officialSources": [
+        "https://www.estv.admin.ch/estv/fr/accueil/impot-anticipe.html",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.estv.admin.ch/"
+      ],
+      "months": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "testament-olographe-suisse-forme-validite",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Rédiger un testament olographe valable en Suisse : écriture manuscrite, date, signature, dépôt, et erreurs de forme qui exposent le testament à l'annulation.",
+      "seeds": {
+        "fr": "testament olographe suisse",
+        "en": "handwritten will switzerland",
+        "de": "handschriftliches testament schweiz",
+        "es": "testamento ológrafo suiza",
+        "pt": "testamento hológrafo suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "testament olographe",
+          "rédiger un testament suisse",
+          "testament manuscrit valable",
+          "dépôt testament genève"
+        ],
+        "en": [
+          "handwritten will switzerland",
+          "how to write a will in switzerland",
+          "swiss will requirements",
+          "holographic will"
+        ],
+        "de": [
+          "handschriftliches testament",
+          "testament schreiben schweiz",
+          "testament gültig",
+          "testament hinterlegen"
+        ],
+        "es": [
+          "testamento ológrafo suiza",
+          "hacer testamento en suiza",
+          "testamento manuscrito válido",
+          "requisitos testamento suiza"
+        ],
+        "pt": [
+          "testamento hológrafo suíça",
+          "fazer testamento na suíça",
+          "testamento manuscrito válido",
+          "requisitos testamento suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/",
+        "https://justice.ge.ch/"
+      ]
+    },
+    {
+      "id": "pacte-successoral-suisse-notaire",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Pacte successoral : dans quels cas le préférer au testament, forme authentique devant notaire, renonciation d'un héritier réservataire et conditions de modification.",
+      "seeds": {
+        "fr": "pacte successoral suisse",
+        "en": "inheritance contract switzerland",
+        "de": "erbvertrag schweiz",
+        "es": "pacto sucesorio suiza",
+        "pt": "pacto sucessório suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "pacte successoral",
+          "pacte successoral notaire",
+          "renonciation à succession",
+          "pacte successoral ou testament"
+        ],
+        "en": [
+          "inheritance contract switzerland",
+          "swiss inheritance agreement",
+          "waiver of inheritance switzerland",
+          "will vs inheritance contract"
+        ],
+        "de": [
+          "erbvertrag",
+          "erbverzichtsvertrag",
+          "erbvertrag oder testament",
+          "erbvertrag notar"
+        ],
+        "es": [
+          "pacto sucesorio suiza",
+          "renuncia a la herencia suiza",
+          "contrato sucesorio",
+          "testamento o pacto sucesorio"
+        ],
+        "pt": [
+          "pacto sucessório suíça",
+          "renúncia à herança suíça",
+          "contrato sucessório",
+          "testamento ou pacto sucessório"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "mandat-pour-cause-inaptitude-directives-anticipees",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Mandat pour cause d'inaptitude et directives anticipées : différences, forme, enregistrement et rôle de l'autorité de protection de l'adulte à Genève.",
+      "seeds": {
+        "fr": "mandat pour cause inaptitude",
+        "en": "power of attorney incapacity switzerland",
+        "de": "vorsorgeauftrag schweiz",
+        "es": "mandato por incapacidad suiza",
+        "pt": "mandato por incapacidade suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "mandat pour cause d'inaptitude",
+          "directives anticipées",
+          "mandat d'inaptitude genève",
+          "protection de l'adulte"
+        ],
+        "en": [
+          "lasting power of attorney switzerland",
+          "advance care directive switzerland",
+          "incapacity mandate",
+          "adult protection switzerland"
+        ],
+        "de": [
+          "vorsorgeauftrag",
+          "patientenverfügung",
+          "vorsorgeauftrag vorlage",
+          "kesb vorsorgeauftrag"
+        ],
+        "es": [
+          "mandato por incapacidad",
+          "voluntades anticipadas suiza",
+          "poder preventivo suiza",
+          "protección de adultos"
+        ],
+        "pt": [
+          "mandato por incapacidade",
+          "diretivas antecipadas suíça",
+          "procuração preventiva",
+          "proteção de adultos"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/",
+        "https://justice.ge.ch/"
+      ]
+    },
+    {
+      "id": "certificat-heritier-geneve-demarches",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Obtenir un certificat d'héritier à Genève : autorité compétente, documents requis, délais et utilisation auprès des banques et du registre foncier.",
+      "seeds": {
+        "fr": "certificat héritier genève",
+        "en": "certificate of inheritance switzerland",
+        "de": "erbbescheinigung schweiz",
+        "es": "certificado de herederos suiza",
+        "pt": "certificado de herdeiros suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "certificat d'héritier",
+          "certificat d'héritier genève",
+          "succession genève démarches",
+          "justice de paix succession"
+        ],
+        "en": [
+          "certificate of inheritance switzerland",
+          "swiss inheritance certificate",
+          "estate settlement geneva",
+          "bank account after death switzerland"
+        ],
+        "de": [
+          "erbbescheinigung",
+          "erbenbescheinigung beantragen",
+          "erbschaft schweiz ablauf",
+          "bankkonto verstorbener"
+        ],
+        "es": [
+          "certificado de herederos suiza",
+          "herencia en suiza trámites",
+          "cuenta bancaria fallecido suiza",
+          "declaración de herederos"
+        ],
+        "pt": [
+          "certificado de herdeiros suíça",
+          "herança na suíça procedimentos",
+          "conta bancária falecido suíça",
+          "habilitação de herdeiros"
+        ]
+      },
+      "officialSources": [
+        "https://justice.ge.ch/",
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "usufruit-nue-propriete-transmission-immobilier",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/governance-succession",
+      "angle": "Usufruit et nue-propriété en droit suisse : usages dans la transmission d'un bien immobilier au sein de la famille et conséquences fiscales pour l'usufruitier et le nu-propriétaire.",
+      "seeds": {
+        "fr": "usufruit nue propriété suisse",
+        "en": "usufruct switzerland property",
+        "de": "nutzniessung schweiz liegenschaft",
+        "es": "usufructo nuda propiedad suiza",
+        "pt": "usufruto nua propriedade suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "usufruit",
+          "nue-propriété",
+          "usufruit immobilier suisse",
+          "usufruit fiscalité"
+        ],
+        "en": [
+          "usufruct switzerland",
+          "usufruct property inheritance",
+          "bare ownership switzerland",
+          "usufruct tax switzerland"
+        ],
+        "de": [
+          "nutzniessung",
+          "nutzniessung liegenschaft",
+          "nutzniessung steuern",
+          "wohnrecht schweiz"
+        ],
+        "es": [
+          "usufructo suiza",
+          "nuda propiedad",
+          "usufructo vivienda herencia",
+          "usufructo impuestos"
+        ],
+        "pt": [
+          "usufruto suíça",
+          "nua propriedade",
+          "usufruto imóvel herança",
+          "usufruto impostos"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr"
+      ]
+    },
+    {
+      "id": "succession-internationale-residents-suisse-droit-applicable",
+      "theme": "estate-succession",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Succession internationale d'un résident suisse : droit applicable selon la LDIP, élection du droit national par un étranger, compétence des autorités et biens situés à l'étranger.",
+      "seeds": {
+        "fr": "succession internationale suisse",
+        "en": "international estate switzerland",
+        "de": "internationaler erbfall schweiz",
+        "es": "sucesión internacional suiza",
+        "pt": "sucessão internacional suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "succession internationale",
+          "droit applicable succession suisse",
+          "ldip succession",
+          "élection de droit testament"
+        ],
+        "en": [
+          "international succession switzerland",
+          "cross-border inheritance switzerland",
+          "choice of law will switzerland",
+          "foreigner dies in switzerland"
+        ],
+        "de": [
+          "internationaler erbfall",
+          "ipr erbrecht schweiz",
+          "rechtswahl testament",
+          "erbfall ausländer schweiz"
+        ],
+        "es": [
+          "sucesión internacional suiza",
+          "herencia transfronteriza",
+          "ley aplicable sucesión",
+          "extranjero herencia suiza"
+        ],
+        "pt": [
+          "sucessão internacional suíça",
+          "herança transfronteiriça",
+          "lei aplicável sucessão",
+          "estrangeiro herança suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1988/1776_1776_1776/fr",
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
+      ]
+    },
+    {
+      "id": "acheter-bien-immobilier-suisse-etranger-lfaie",
+      "theme": "real-estate",
+      "category": "patrimoine",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/real-estate-transactions",
+      "angle": "Acheter un bien immobilier en Suisse en tant qu'étranger : ce que la LFAIE (Lex Koller) en vigueur autorise selon le permis, pourquoi l'achat ne donne aucun droit de séjour, et quels projets de révision restent à ce stade des propositions.",
+      "seeds": {
+        "fr": "acheter maison suisse étranger",
+        "en": "buy property switzerland foreigner",
+        "de": "immobilien kaufen schweiz ausländer",
+        "es": "comprar casa en suiza extranjero",
+        "pt": "comprar casa na suíça estrangeiro"
+      },
+      "targetKeywords": {
+        "fr": [
+          "lex koller",
+          "lfaie",
+          "achat immobilier étranger suisse",
+          "acheter un appartement en suisse"
+        ],
+        "en": [
+          "buy property in switzerland as a foreigner",
+          "lex koller",
+          "can foreigners buy property in switzerland",
+          "swiss property purchase rules"
+        ],
+        "de": [
+          "lex koller",
+          "immobilienkauf ausländer schweiz",
+          "bewilg",
+          "wohnung kaufen schweiz ausländer"
+        ],
+        "es": [
+          "comprar vivienda en suiza extranjero",
+          "lex koller",
+          "comprar propiedad en suiza",
+          "inmuebles suiza extranjeros"
+        ],
+        "pt": [
+          "comprar imóvel na suíça estrangeiro",
+          "lex koller",
+          "comprar apartamento na suíça",
+          "imóveis suíça estrangeiros"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1984/1149_1149_1149/fr",
+        "https://www.ge.ch/",
+        "https://www.vd.ch/territoire-et-construction"
+      ]
+    },
+    {
+      "id": "valeur-locative-suppression-proprietaires-calendrier",
+      "theme": "real-estate",
+      "category": "fiscalite",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Suppression de la valeur locative acceptée en votation le 28 septembre 2025 : ce qui changera pour les propriétaires, calendrier d'entrée en vigueur tel que fixé par la Confédération et sort des déductions d'intérêts et de frais d'entretien.",
+      "seeds": {
+        "fr": "valeur locative suppression",
+        "en": "imputed rental value switzerland",
+        "de": "eigenmietwert abschaffung",
+        "es": "valor locativo suiza",
+        "pt": "valor locativo suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "valeur locative",
+          "suppression valeur locative",
+          "valeur locative genève",
+          "déduction intérêts hypothécaires"
+        ],
+        "en": [
+          "imputed rental value switzerland",
+          "imputed rent abolition",
+          "mortgage interest deduction switzerland",
+          "swiss homeowner tax"
+        ],
+        "de": [
+          "eigenmietwert",
+          "eigenmietwert abschaffung",
+          "eigenmietwert inkrafttreten",
+          "schuldzinsabzug"
+        ],
+        "es": [
+          "valor locativo suiza",
+          "abolición valor locativo",
+          "deducción intereses hipoteca suiza",
+          "impuestos propietarios suiza"
+        ],
+        "pt": [
+          "valor locativo suíça",
+          "abolição valor locativo",
+          "dedução juros hipoteca suíça",
+          "impostos proprietários suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.estv.admin.ch/",
+        "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale"
+      ]
+    },
+    {
+      "id": "ppe-assemblee-coproprietaires-fonds-renovation",
+      "theme": "real-estate",
+      "category": "travaux-intendance",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/real-estate-transactions",
+      "angle": "PPE en Suisse : fonctionnement de l'assemblée des copropriétaires, majorités requises, fonds de rénovation, rôle de l'administrateur et points à vérifier avant d'acheter un lot.",
+      "seeds": {
+        "fr": "assemblée ppe genève",
+        "en": "condominium owners meeting switzerland",
+        "de": "stockwerkeigentum versammlung",
+        "es": "propiedad horizontal suiza",
+        "pt": "condomínio suíça assembleia"
+      },
+      "targetKeywords": {
+        "fr": [
+          "ppe",
+          "assemblée des copropriétaires",
+          "fonds de rénovation ppe",
+          "administrateur ppe",
+          "règlement ppe"
+        ],
+        "en": [
+          "condominium ownership switzerland",
+          "stockwerkeigentum",
+          "owners association switzerland",
+          "renovation fund condominium"
+        ],
+        "de": [
+          "stockwerkeigentum",
+          "stockwerkeigentümerversammlung",
+          "erneuerungsfonds",
+          "stwe verwaltung"
+        ],
+        "es": [
+          "propiedad horizontal suiza",
+          "comunidad de propietarios suiza",
+          "fondo de renovación",
+          "administrador de fincas"
+        ],
+        "pt": [
+          "propriedade horizontal suíça",
+          "condomínio suíça",
+          "fundo de renovação",
+          "administrador de condomínio"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "residence-secondaire-valais-lex-weber-achat",
+      "theme": "real-estate",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/real-estate-transactions",
+      "angle": "Acheter un chalet en Valais : règles fédérales sur les résidences secondaires (lex Weber), contingents LFAIE pour les étrangers et points de due diligence avant l'achat.",
+      "seeds": {
+        "fr": "acheter chalet valais",
+        "en": "buy chalet switzerland",
+        "de": "chalet kaufen wallis",
+        "es": "comprar chalet suiza",
+        "pt": "comprar chalé suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "acheter chalet valais",
+          "résidence secondaire suisse",
+          "lex weber",
+          "chalet étranger valais"
+        ],
+        "en": [
+          "buy chalet switzerland",
+          "second home switzerland",
+          "lex weber",
+          "ski chalet valais foreigner"
+        ],
+        "de": [
+          "chalet kaufen wallis",
+          "zweitwohnung schweiz",
+          "zweitwohnungsgesetz",
+          "ferienwohnung ausländer schweiz"
+        ],
+        "es": [
+          "comprar chalet suiza",
+          "segunda residencia suiza",
+          "lex weber",
+          "chalet valais extranjero"
+        ],
+        "pt": [
+          "comprar chalé suíça",
+          "segunda residência suíça",
+          "lex weber",
+          "chalé valais estrangeiro"
+        ]
+      },
+      "officialSources": [
+        "https://www.are.admin.ch/are/fr/home.html",
+        "https://www.vs.ch/",
+        "https://www.fedlex.admin.ch/eli/cc/1984/1149_1149_1149/fr"
+      ]
+    },
+    {
+      "id": "resilier-bail-habitation-geneve-delais",
+      "theme": "real-estate",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Résilier un bail d'habitation à Genève : délais et termes, formes valables, locataire de remplacement et état des lieux de sortie.",
+      "seeds": {
+        "fr": "résilier bail genève",
+        "en": "terminate lease geneva",
+        "de": "mietvertrag kündigen schweiz",
+        "es": "rescindir contrato alquiler suiza",
+        "pt": "rescindir contrato arrendamento suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "résiliation bail genève",
+          "résilier son bail",
+          "locataire de remplacement",
+          "délai de résiliation bail"
+        ],
+        "en": [
+          "terminate lease geneva",
+          "break lease switzerland",
+          "notice period rental switzerland",
+          "replacement tenant switzerland"
+        ],
+        "de": [
+          "mietvertrag kündigen",
+          "kündigungsfrist wohnung",
+          "nachmieter schweiz",
+          "kündigungstermine"
+        ],
+        "es": [
+          "rescindir alquiler suiza",
+          "preaviso alquiler ginebra",
+          "inquilino sustituto suiza",
+          "finalizar contrato alquiler"
+        ],
+        "pt": [
+          "rescindir arrendamento suíça",
+          "aviso prévio arrendamento genebra",
+          "inquilino substituto suíça",
+          "terminar contrato aluguer"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "garantie-de-loyer-suisse-restitution",
+      "theme": "real-estate",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Garantie de loyer en Suisse : montant maximal légal, compte bancaire bloqué ou caution par un assureur, et récupération de la garantie en fin de bail.",
+      "seeds": {
+        "fr": "garantie de loyer genève",
+        "en": "rent deposit switzerland",
+        "de": "mietkaution schweiz",
+        "es": "fianza alquiler suiza",
+        "pt": "caução arrendamento suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "garantie de loyer",
+          "garantie loyer genève",
+          "récupérer garantie de loyer",
+          "caution loyer sans dépôt"
+        ],
+        "en": [
+          "rent deposit switzerland",
+          "rental deposit geneva",
+          "get rent deposit back switzerland",
+          "rent guarantee insurance"
+        ],
+        "de": [
+          "mietkaution",
+          "mietkaution zurück",
+          "mietkautionsversicherung",
+          "mietzinsdepot"
+        ],
+        "es": [
+          "fianza alquiler suiza",
+          "depósito alquiler ginebra",
+          "recuperar fianza suiza",
+          "garantía de alquiler"
+        ],
+        "pt": [
+          "caução arrendamento suíça",
+          "depósito aluguer genebra",
+          "recuperar caução suíça",
+          "garantia de aluguer"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "au-pair-geneve-conditions-contrat",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Accueillir un ou une au pair à Genève : autorisations selon la nationalité, contrat-type, temps de travail, rémunération minimale et assurances obligatoires.",
+      "seeds": {
+        "fr": "au pair genève",
+        "en": "au pair switzerland rules",
+        "de": "au pair schweiz",
+        "es": "au pair suiza",
+        "pt": "au pair suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "au pair genève",
+          "jeune au pair suisse",
+          "contrat au pair",
+          "salaire au pair genève"
+        ],
+        "en": [
+          "au pair switzerland",
+          "au pair geneva rules",
+          "hosting an au pair switzerland",
+          "au pair contract switzerland"
+        ],
+        "de": [
+          "au pair schweiz",
+          "au pair lohn schweiz",
+          "au pair vertrag",
+          "gastfamilie schweiz"
+        ],
+        "es": [
+          "au pair suiza",
+          "au pair ginebra",
+          "familia de acogida suiza",
+          "contrato au pair"
+        ],
+        "pt": [
+          "au pair suíça",
+          "au pair genebra",
+          "família de acolhimento suíça",
+          "contrato au pair"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/office-cantonal-emploi",
+        "https://www.sem.admin.ch/sem/fr/home/themen/arbeit.html",
+        "https://www.ge.ch/organisation/office-cantonal-population-migrations"
+      ]
+    },
+    {
+      "id": "engager-nounou-domicile-geneve-contrat",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Engager une nounou à domicile à Genève : contrat-type de l'économie domestique, horaires, vacances, déclaration aux assurances sociales et outils simplifiés.",
+      "seeds": {
+        "fr": "nounou genève déclarer",
+        "en": "nanny geneva",
+        "de": "nanny schweiz anstellen",
+        "es": "niñera ginebra",
+        "pt": "babá genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "nounou genève",
+          "garde d'enfants à domicile",
+          "contrat nounou",
+          "déclarer une nounou"
+        ],
+        "en": [
+          "nanny geneva",
+          "hiring a nanny switzerland",
+          "nanny contract switzerland",
+          "childcare at home geneva"
+        ],
+        "de": [
+          "nanny schweiz",
+          "kinderbetreuung zuhause",
+          "nanny anstellen",
+          "nanny vertrag"
+        ],
+        "es": [
+          "niñera ginebra",
+          "contratar niñera suiza",
+          "cuidado de niños a domicilio",
+          "contrato niñera"
+        ],
+        "pt": [
+          "babá genebra",
+          "contratar babá suíça",
+          "cuidado de crianças em casa",
+          "contrato babá"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/office-cantonal-emploi",
+        "https://www.chequeservice.ch/",
+        "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS"
+      ]
+    },
+    {
+      "id": "contrat-chauffeur-majordome-gouvernante",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Chauffeur, majordome ou gouvernante : clauses essentielles du contrat de travail, temps de travail et disponibilité, logement de fonction, confidentialité et fin des rapports de travail.",
+      "seeds": {
+        "fr": "contrat majordome suisse",
+        "en": "butler employment contract switzerland",
+        "de": "butler arbeitsvertrag schweiz",
+        "es": "contrato mayordomo suiza",
+        "pt": "contrato mordomo suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "contrat majordome",
+          "contrat chauffeur privé",
+          "gouvernante de maison",
+          "clause de confidentialité employé"
+        ],
+        "en": [
+          "butler contract switzerland",
+          "private chauffeur contract",
+          "house manager employment",
+          "staff confidentiality agreement"
+        ],
+        "de": [
+          "butler arbeitsvertrag",
+          "privatchauffeur anstellen",
+          "hausdame",
+          "geheimhaltungsklausel arbeitsvertrag"
+        ],
+        "es": [
+          "contrato mayordomo",
+          "chófer privado contrato",
+          "ama de llaves",
+          "cláusula de confidencialidad"
+        ],
+        "pt": [
+          "contrato mordomo",
+          "motorista particular contrato",
+          "governanta",
+          "cláusula de confidencialidade"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.ge.ch/organisation/office-cantonal-emploi"
+      ]
+    },
+    {
+      "id": "fin-contrat-employe-maison-delais-conge",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Mettre fin au contrat d'un employé de maison : délais de congé, période d'essai, protection contre le congé en temps inopportun, vacances non prises et certificat de travail.",
+      "seeds": {
+        "fr": "licencier employé de maison",
+        "en": "terminate domestic worker switzerland",
+        "de": "hausangestellte kündigen",
+        "es": "despedir empleada doméstica suiza",
+        "pt": "despedir empregada doméstica suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "licenciement employé de maison",
+          "délai de congé",
+          "certificat de travail",
+          "congé en temps inopportun"
+        ],
+        "en": [
+          "dismiss domestic worker switzerland",
+          "notice period switzerland",
+          "employment certificate switzerland",
+          "termination during illness"
+        ],
+        "de": [
+          "hausangestellte kündigen",
+          "kündigungsfrist",
+          "arbeitszeugnis",
+          "sperrfrist krankheit"
+        ],
+        "es": [
+          "despido empleada doméstica suiza",
+          "plazo de preaviso suiza",
+          "certificado de trabajo",
+          "despido baja médica"
+        ],
+        "pt": [
+          "despedimento empregada doméstica",
+          "prazo de aviso prévio suíça",
+          "certificado de trabalho",
+          "despedimento baixa médica"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.ge.ch/organisation/office-cantonal-emploi"
+      ]
+    },
+    {
+      "id": "assurance-accidents-personnel-maison-laa",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Assurance accidents obligatoire pour le personnel de maison : couverture LAA dès la première heure, perte de gain maladie et obligations de l'employeur privé.",
+      "seeds": {
+        "fr": "assurance accident employé maison",
+        "en": "accident insurance domestic worker switzerland",
+        "de": "unfallversicherung hausangestellte",
+        "es": "seguro accidentes empleada doméstica",
+        "pt": "seguro acidentes empregada doméstica"
+      },
+      "targetKeywords": {
+        "fr": [
+          "assurance accidents employé de maison",
+          "laa personnel domestique",
+          "perte de gain maladie",
+          "assurance femme de ménage"
+        ],
+        "en": [
+          "accident insurance domestic staff switzerland",
+          "uvg household employee",
+          "sickness benefit insurance",
+          "cleaner insurance switzerland"
+        ],
+        "de": [
+          "unfallversicherung hausangestellte",
+          "uvg putzfrau",
+          "krankentaggeld",
+          "versicherung haushaltshilfe"
+        ],
+        "es": [
+          "seguro de accidentes empleada doméstica",
+          "seguro obligatorio suiza",
+          "indemnización enfermedad",
+          "seguro limpiadora"
+        ],
+        "pt": [
+          "seguro de acidentes empregada doméstica",
+          "seguro obrigatório suíça",
+          "subsídio de doença",
+          "seguro empregada limpeza"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1982/1676_1676_1676/fr",
+        "https://www.bag.admin.ch/bag/fr/home.html",
+        "https://www.chequeservice.ch/"
+      ]
+    },
+    {
+      "id": "permis-personnel-maison-ue-pays-tiers",
+      "theme": "household-staff",
+      "category": "emploi-domestique",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Engager du personnel de maison venant de l'étranger : régime de libre circulation pour les ressortissants UE/AELE, conditions restrictives pour les pays tiers, et cas distinct des domestiques privés de diplomates.",
+      "seeds": {
+        "fr": "permis travail employé maison",
+        "en": "work permit domestic worker switzerland",
+        "de": "arbeitsbewilligung hausangestellte",
+        "es": "permiso trabajo empleada doméstica suiza",
+        "pt": "autorização trabalho empregada doméstica suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "permis de travail personnel de maison",
+          "engager employé étranger genève",
+          "permis employé domestique",
+          "domestique privé diplomate"
+        ],
+        "en": [
+          "work permit domestic worker switzerland",
+          "hiring foreign household staff",
+          "eu citizen work switzerland",
+          "private household employee diplomat"
+        ],
+        "de": [
+          "arbeitsbewilligung hausangestellte",
+          "ausländische haushaltshilfe",
+          "bewilligung drittstaaten",
+          "private hausangestellte diplomaten"
+        ],
+        "es": [
+          "permiso de trabajo empleada doméstica",
+          "contratar personal extranjero suiza",
+          "permiso ue suiza",
+          "personal doméstico diplomático"
+        ],
+        "pt": [
+          "autorização de trabalho empregada doméstica",
+          "contratar pessoal estrangeiro suíça",
+          "autorização ue suíça",
+          "pessoal doméstico diplomático"
+        ]
+      },
+      "officialSources": [
+        "https://www.sem.admin.ch/sem/fr/home/themen/arbeit.html",
+        "https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta.html",
+        "https://www.ge.ch/organisation/office-cantonal-emploi",
+        "https://www.fedlex.admin.ch/eli/cc/2007/758_758_758/fr"
+      ]
+    },
+    {
+      "id": "courrier-absence-prolongee-suisse",
+      "theme": "domiciliation-mail",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/digital-vault",
+      "angle": "Gérer son courrier privé pendant une absence prolongée : réexpédition, garde du courrier, scan et suivi des échéances officielles (impôts, assurances, poursuites) pour ne rien manquer.",
+      "seeds": {
+        "fr": "courrier pendant absence",
+        "en": "mail forwarding switzerland",
+        "de": "post umleiten schweiz",
+        "es": "reenvío de correo suiza",
+        "pt": "reencaminhamento de correio suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "réexpédition courrier",
+          "garde du courrier la poste",
+          "courrier pendant les vacances",
+          "délai recommandé absence"
+        ],
+        "en": [
+          "mail forwarding switzerland",
+          "hold mail swiss post",
+          "mail while abroad switzerland",
+          "registered letter while away"
+        ],
+        "de": [
+          "nachsendeauftrag",
+          "post zurückbehalten",
+          "post während abwesenheit",
+          "eingeschriebener brief ferien"
+        ],
+        "es": [
+          "reenvío de correo suiza",
+          "retener correo suiza",
+          "correo en el extranjero",
+          "carta certificada ausencia"
+        ],
+        "pt": [
+          "reencaminhamento de correio suíça",
+          "reter correio",
+          "correio no estrangeiro",
+          "carta registada ausência"
+        ]
+      },
+      "officialSources": [
+        "https://www.post.ch/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "domicile-notification-suisse-resident-etranger",
+      "theme": "domiciliation-mail",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/tax-administration",
+      "angle": "Résident à l'étranger avec des intérêts en Suisse (immeuble, succession, procédure) : quand une autorité exige un domicile de notification ou un représentant en Suisse, et comment l'organiser.",
+      "seeds": {
+        "fr": "domicile de notification suisse",
+        "en": "swiss address for service",
+        "de": "zustelldomizil schweiz",
+        "es": "domicilio de notificación suiza",
+        "pt": "domicílio de notificação suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "domicile de notification",
+          "représentant en suisse",
+          "élection de domicile",
+          "non-résident immeuble suisse"
+        ],
+        "en": [
+          "address for service switzerland",
+          "swiss representative non resident",
+          "non resident property switzerland",
+          "tax representative switzerland"
+        ],
+        "de": [
+          "zustelldomizil schweiz",
+          "vertreter in der schweiz",
+          "steuervertreter",
+          "ausländer liegenschaft schweiz"
+        ],
+        "es": [
+          "domicilio de notificación suiza",
+          "representante en suiza",
+          "no residente inmueble suiza",
+          "representante fiscal suiza"
+        ],
+        "pt": [
+          "domicílio de notificação suíça",
+          "representante na suíça",
+          "não residente imóvel suíça",
+          "representante fiscal suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.estv.admin.ch/",
+        "https://www.eda.admin.ch/eda/fr/dfae/vivre-a-l-etranger.html"
+      ]
+    },
+    {
+      "id": "procuration-bancaire-postale-mandataire",
+      "theme": "domiciliation-mail",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/digital-vault",
+      "angle": "Procurations bancaires et postales : quel type choisir pour qu'un proche ou un mandataire gère le courrier et les paiements pendant une absence, et comment les limiter et les révoquer.",
+      "seeds": {
+        "fr": "procuration bancaire suisse",
+        "en": "power of attorney bank switzerland",
+        "de": "bankvollmacht schweiz",
+        "es": "poder bancario suiza",
+        "pt": "procuração bancária suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "procuration bancaire",
+          "procuration postale",
+          "procuration générale suisse",
+          "révoquer une procuration"
+        ],
+        "en": [
+          "bank power of attorney switzerland",
+          "swiss post power of attorney",
+          "general power of attorney switzerland",
+          "revoke power of attorney"
+        ],
+        "de": [
+          "bankvollmacht",
+          "postvollmacht",
+          "generalvollmacht schweiz",
+          "vollmacht widerrufen"
+        ],
+        "es": [
+          "poder bancario suiza",
+          "poder notarial suiza",
+          "autorización correos",
+          "revocar un poder"
+        ],
+        "pt": [
+          "procuração bancária suíça",
+          "procuração correios",
+          "procuração geral suíça",
+          "revogar procuração"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr",
+        "https://www.post.ch/fr"
+      ]
+    },
+    {
+      "id": "residence-fiscale-suisse-particuliers-criteres",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Quand devient-on résident fiscal suisse : domicile avec intention de s'établir, séjour de 30 jours avec activité lucrative ou 90 jours sans, règles de départage des conventions, et pourquoi la règle des 183 jours n'est pas le critère interne.",
+      "seeds": {
+        "fr": "résidence fiscale suisse",
+        "en": "swiss tax residency rules",
+        "de": "steuerlicher wohnsitz schweiz",
+        "es": "residencia fiscal suiza",
+        "pt": "residência fiscal suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "résidence fiscale suisse",
+          "domicile fiscal suisse",
+          "assujettissement illimité",
+          "règle des 183 jours suisse",
+          "convention double imposition"
+        ],
+        "en": [
+          "swiss tax residency",
+          "tax resident switzerland",
+          "183 day rule switzerland",
+          "double tax treaty tie breaker"
+        ],
+        "de": [
+          "steuerlicher wohnsitz schweiz",
+          "steuerpflicht schweiz",
+          "183 tage regel schweiz",
+          "doppelbesteuerungsabkommen"
+        ],
+        "es": [
+          "residencia fiscal suiza",
+          "residente fiscal suiza",
+          "regla 183 días suiza",
+          "convenio doble imposición suiza"
+        ],
+        "pt": [
+          "residência fiscal suíça",
+          "residente fiscal suíça",
+          "regra 183 dias suíça",
+          "acordo dupla tributação suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr",
+        "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr",
+        "https://www.estv.admin.ch/estv/fr/accueil/droit-fiscal-international.html",
+        "https://www.estv.admin.ch/"
+      ]
+    },
+    {
+      "id": "declaration-impot-geneve-particuliers-delais",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Déclaration d'impôt des particuliers à Genève : délai de dépôt, logiciel GeTax, pièces justificatives, demande de prolongation et suivi du bordereau.",
+      "seeds": {
+        "fr": "déclaration impôt genève",
+        "en": "geneva tax return",
+        "de": "steuererklärung genf",
+        "es": "declaración de impuestos ginebra",
+        "pt": "declaração de impostos genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "déclaration d'impôt genève",
+          "getax",
+          "délai déclaration impôt genève",
+          "prolongation déclaration impôt"
+        ],
+        "en": [
+          "geneva tax return",
+          "getax geneva",
+          "tax return deadline geneva",
+          "tax filing extension switzerland"
+        ],
+        "de": [
+          "steuererklärung genf",
+          "steuererklärung frist",
+          "fristerstreckung steuererklärung",
+          "steuererklärung schweiz ausländer"
+        ],
+        "es": [
+          "declaración de impuestos ginebra",
+          "plazo declaración suiza",
+          "prórroga declaración impuestos",
+          "getax"
+        ],
+        "pt": [
+          "declaração de impostos genebra",
+          "prazo declaração suíça",
+          "prorrogação declaração impostos",
+          "getax"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.estv.admin.ch/"
+      ],
+      "months": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "impot-fortune-geneve-vaud-calcul-evaluation",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Impôt sur la fortune à Genève et Vaud : assiette, évaluation des titres et de l'immobilier, déductions, barèmes et bouclier fiscal, sans affirmer qu'il n'existe pas d'impôt sur la fortune en Suisse.",
+      "seeds": {
+        "fr": "impôt sur la fortune genève",
+        "en": "wealth tax switzerland",
+        "de": "vermögenssteuer schweiz",
+        "es": "impuesto sobre el patrimonio suiza",
+        "pt": "imposto sobre a fortuna suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "impôt sur la fortune genève",
+          "impôt fortune vaud",
+          "bouclier fiscal genève",
+          "évaluation des titres impôt"
+        ],
+        "en": [
+          "wealth tax switzerland",
+          "wealth tax geneva",
+          "wealth tax canton comparison",
+          "tax shield geneva"
+        ],
+        "de": [
+          "vermögenssteuer schweiz",
+          "vermögenssteuer genf",
+          "vermögenssteuer waadt",
+          "vermögenssteuer kantone vergleich"
+        ],
+        "es": [
+          "impuesto sobre el patrimonio suiza",
+          "impuesto patrimonio ginebra",
+          "impuesto patrimonio cantones",
+          "escudo fiscal ginebra"
+        ],
+        "pt": [
+          "imposto sobre a fortuna suíça",
+          "imposto fortuna genebra",
+          "imposto fortuna cantões",
+          "escudo fiscal genebra"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.vd.ch/etat-droit-finances/impots",
+        "https://www.fedlex.admin.ch/eli/cc/1991/1256_1256_1256/fr"
+      ]
+    },
+    {
+      "id": "pilier-3a-deduction-plafond-delai",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Pilier 3a : qui peut cotiser, plafonds de déduction selon la situation, date limite de versement en fin d'année et nouvelle possibilité de rachat des années manquantes.",
+      "seeds": {
+        "fr": "pilier 3a déduction",
+        "en": "pillar 3a switzerland",
+        "de": "säule 3a abzug",
+        "es": "pilar 3a suiza",
+        "pt": "pilar 3a suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "pilier 3a",
+          "3e pilier déduction fiscale",
+          "plafond 3a",
+          "versement 3a décembre",
+          "rachat 3a"
+        ],
+        "en": [
+          "pillar 3a switzerland",
+          "third pillar tax deduction",
+          "pillar 3a maximum contribution",
+          "pillar 3a buy in"
+        ],
+        "de": [
+          "säule 3a",
+          "säule 3a maximalbetrag",
+          "säule 3a einkauf",
+          "säule 3a steuern sparen"
+        ],
+        "es": [
+          "pilar 3a suiza",
+          "tercer pilar suiza",
+          "deducción fiscal 3a",
+          "aportación máxima 3a"
+        ],
+        "pt": [
+          "pilar 3a suíça",
+          "terceiro pilar suíça",
+          "dedução fiscal 3a",
+          "contribuição máxima 3a"
+        ]
+      },
+      "officialSources": [
+        "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html",
+        "https://www.estv.admin.ch/",
+        "https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/fr"
+      ],
+      "months": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "rachat-lpp-deduction-fiscale-blocage",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Rachat LPP : calcul du potentiel de rachat, déduction fiscale, blocage de trois ans pour les retraits en capital et points de vigilance pour les personnes arrivées de l'étranger.",
+      "seeds": {
+        "fr": "rachat lpp déduction",
+        "en": "pension fund buy in switzerland",
+        "de": "pk einkauf steuern",
+        "es": "rescate lpp suiza",
+        "pt": "resgate lpp suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "rachat lpp",
+          "rachat 2e pilier",
+          "déduction rachat lpp",
+          "rachat lpp retrait capital"
+        ],
+        "en": [
+          "pension fund buy in switzerland",
+          "bvg buy in tax deduction",
+          "second pillar voluntary contribution",
+          "lpp buy back"
+        ],
+        "de": [
+          "pk einkauf",
+          "einkauf pensionskasse steuern",
+          "bvg einkauf",
+          "einkauf pensionskasse kapitalbezug"
+        ],
+        "es": [
+          "aportación voluntaria lpp",
+          "segundo pilar suiza",
+          "deducción fiscal lpp",
+          "fondo de pensiones suiza"
+        ],
+        "pt": [
+          "contribuição voluntária lpp",
+          "segundo pilar suíça",
+          "dedução fiscal lpp",
+          "fundo de pensões suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1983/797_797_797/fr",
+        "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html",
+        "https://www.estv.admin.ch/"
+      ],
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "donation-impot-geneve-vaud-exonerations",
+      "theme": "tax",
+      "category": "fiscalite",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Donations entre vifs à Genève et Vaud : qui est imposé, exonérations entre conjoints et en ligne directe selon le canton, déclaration et différence avec l'impôt sur les successions.",
+      "seeds": {
+        "fr": "impôt donation genève",
+        "en": "gift tax switzerland",
+        "de": "schenkungssteuer schweiz",
+        "es": "impuesto donaciones suiza",
+        "pt": "imposto doações suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "impôt sur les donations genève",
+          "donation vaud impôt",
+          "donation enfants suisse",
+          "droits de donation"
+        ],
+        "en": [
+          "gift tax switzerland",
+          "gift tax geneva",
+          "donation to children switzerland",
+          "inheritance and gift tax cantons"
+        ],
+        "de": [
+          "schenkungssteuer schweiz",
+          "schenkung an kinder",
+          "schenkungssteuer kantone",
+          "erbschaftssteuer schweiz"
+        ],
+        "es": [
+          "impuesto sobre donaciones suiza",
+          "donación a hijos suiza",
+          "impuesto sucesiones suiza",
+          "donación ginebra"
+        ],
+        "pt": [
+          "imposto sobre doações suíça",
+          "doação a filhos suíça",
+          "imposto sucessões suíça",
+          "doação genebra"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.vd.ch/etat-droit-finances/impots",
+        "https://www.estv.admin.ch/"
+      ]
+    },
+    {
+      "id": "permis-c-etablissement-conditions",
+      "theme": "immigration-permits",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Obtenir le permis C : durée de séjour requise selon la nationalité, critères d'intégration, niveau de langue, octroi anticipé et démarches à Genève.",
+      "seeds": {
+        "fr": "permis c conditions",
+        "en": "swiss c permit requirements",
+        "de": "niederlassungsbewilligung c",
+        "es": "permiso c suiza",
+        "pt": "autorização c suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "permis c",
+          "permis c conditions",
+          "permis d'établissement",
+          "permis c genève"
+        ],
+        "en": [
+          "c permit switzerland",
+          "swiss settlement permit",
+          "c permit requirements",
+          "c permit after 5 years"
+        ],
+        "de": [
+          "niederlassungsbewilligung",
+          "ausweis c",
+          "ausweis c voraussetzungen",
+          "c bewilligung"
+        ],
+        "es": [
+          "permiso c suiza",
+          "permiso de establecimiento suiza",
+          "requisitos permiso c",
+          "permiso c ginebra"
+        ],
+        "pt": [
+          "autorização c suíça",
+          "autorização de estabelecimento",
+          "requisitos autorização c",
+          "autorização c genebra"
+        ]
+      },
+      "officialSources": [
+        "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html",
+        "https://www.fedlex.admin.ch/eli/cc/2007/758_758_758/fr",
+        "https://www.ge.ch/organisation/office-cantonal-population-migrations"
+      ]
+    },
+    {
+      "id": "naturalisation-ordinaire-geneve-conditions",
+      "theme": "immigration-permits",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Naturalisation ordinaire : permis C, dix ans de séjour, critères d'intégration et de langue, puis étapes fédérale, cantonale et communale à Genève.",
+      "seeds": {
+        "fr": "naturalisation suisse conditions",
+        "en": "swiss citizenship requirements",
+        "de": "einbürgerung schweiz voraussetzungen",
+        "es": "nacionalidad suiza requisitos",
+        "pt": "nacionalidade suíça requisitos"
+      },
+      "targetKeywords": {
+        "fr": [
+          "naturalisation suisse",
+          "naturalisation genève",
+          "conditions naturalisation",
+          "test naturalisation"
+        ],
+        "en": [
+          "swiss citizenship",
+          "swiss naturalisation requirements",
+          "become swiss citizen",
+          "naturalisation geneva"
+        ],
+        "de": [
+          "einbürgerung schweiz",
+          "einbürgerung voraussetzungen",
+          "schweizer pass beantragen",
+          "einbürgerungstest"
+        ],
+        "es": [
+          "nacionalidad suiza",
+          "naturalización suiza",
+          "requisitos ciudadanía suiza",
+          "pasaporte suizo"
+        ],
+        "pt": [
+          "nacionalidade suíça",
+          "naturalização suíça",
+          "requisitos cidadania suíça",
+          "passaporte suíço"
+        ]
+      },
+      "officialSources": [
+        "https://www.sem.admin.ch/sem/fr/home/integration-einbuergerung.html",
+        "https://www.fedlex.admin.ch/eli/cc/2016/404/fr",
+        "https://www.ge.ch/organisation/office-cantonal-population-migrations"
+      ]
+    },
+    {
+      "id": "regroupement-familial-suisse-conditions-delais",
+      "theme": "immigration-permits",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Regroupement familial en Suisse : conditions selon le permis et la nationalité (UE/AELE ou pays tiers), délais pour déposer la demande, logement approprié et moyens financiers.",
+      "seeds": {
+        "fr": "regroupement familial suisse",
+        "en": "family reunification switzerland",
+        "de": "familiennachzug schweiz",
+        "es": "reagrupación familiar suiza",
+        "pt": "reagrupamento familiar suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "regroupement familial",
+          "regroupement familial genève",
+          "délai regroupement familial",
+          "conjoint étranger suisse"
+        ],
+        "en": [
+          "family reunification switzerland",
+          "bring spouse to switzerland",
+          "family reunion permit",
+          "dependent visa switzerland"
+        ],
+        "de": [
+          "familiennachzug",
+          "familiennachzug fristen",
+          "ehepartner nachziehen",
+          "familiennachzug drittstaaten"
+        ],
+        "es": [
+          "reagrupación familiar suiza",
+          "traer cónyuge a suiza",
+          "visado familiar suiza",
+          "plazos reagrupación"
+        ],
+        "pt": [
+          "reagrupamento familiar suíça",
+          "trazer cônjuge para a suíça",
+          "visto familiar suíça",
+          "prazos reagrupamento"
+        ]
+      },
+      "officialSources": [
+        "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html",
+        "https://www.fedlex.admin.ch/eli/cc/2007/758_758_758/fr",
+        "https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta.html"
+      ]
+    },
+    {
+      "id": "permis-g-frontalier-geneve",
+      "theme": "immigration-permits",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Permis G frontalier : conditions, retour hebdomadaire au domicile, imposition à la source à Genève et démarches pour un ménage installé en France voisine.",
+      "seeds": {
+        "fr": "permis g frontalier",
+        "en": "cross border permit geneva",
+        "de": "grenzgängerbewilligung g",
+        "es": "permiso g fronterizo",
+        "pt": "autorização g fronteiriço"
+      },
+      "targetKeywords": {
+        "fr": [
+          "permis g",
+          "permis frontalier",
+          "frontalier genève",
+          "imposition frontalier genève"
+        ],
+        "en": [
+          "g permit switzerland",
+          "cross border worker geneva",
+          "frontalier permit",
+          "living in france working in geneva"
+        ],
+        "de": [
+          "grenzgängerbewilligung",
+          "ausweis g",
+          "grenzgänger genf",
+          "grenzgänger steuern"
+        ],
+        "es": [
+          "permiso g suiza",
+          "trabajador fronterizo ginebra",
+          "vivir en francia trabajar en ginebra",
+          "fronterizo impuestos"
+        ],
+        "pt": [
+          "autorização g suíça",
+          "trabalhador fronteiriço genebra",
+          "viver em frança trabalhar em genebra",
+          "fronteiriço impostos"
+        ]
+      },
+      "officialSources": [
+        "https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta.html",
+        "https://www.ge.ch/organisation/office-cantonal-population-migrations",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale"
+      ]
+    },
+    {
+      "id": "autorisation-sejour-sans-activite-lucrative-rentiers",
+      "theme": "immigration-permits",
+      "category": "vie-pratique",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "S'installer en Suisse sans activité lucrative : conditions pour les ressortissants UE/AELE (moyens suffisants, assurance) et pour les rentiers de pays tiers, sans présenter d'achat immobilier ni d'investissement comme voie d'accès au séjour.",
+      "seeds": {
+        "fr": "permis sans activité lucrative",
+        "en": "swiss residence without work",
+        "de": "aufenthalt ohne erwerbstätigkeit",
+        "es": "residencia suiza sin trabajo",
+        "pt": "residência suíça sem trabalho"
+      },
+      "targetKeywords": {
+        "fr": [
+          "permis sans activité lucrative",
+          "s'installer en suisse retraité",
+          "permis rentier suisse",
+          "autorisation de séjour retraité"
+        ],
+        "en": [
+          "residence permit switzerland without working",
+          "retire to switzerland",
+          "swiss residency for retirees",
+          "non working residence permit"
+        ],
+        "de": [
+          "aufenthalt ohne erwerbstätigkeit",
+          "rentner schweiz aufenthalt",
+          "in die schweiz auswandern rentner",
+          "aufenthaltsbewilligung nichterwerbstätige"
+        ],
+        "es": [
+          "residencia en suiza sin trabajar",
+          "jubilarse en suiza",
+          "permiso residencia jubilados suiza",
+          "vivir en suiza sin trabajar"
+        ],
+        "pt": [
+          "residência na suíça sem trabalhar",
+          "reformar-se na suíça",
+          "autorização residência reformados",
+          "viver na suíça sem trabalhar"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/2007/758_758_758/fr",
+        "https://www.sem.admin.ch/sem/fr/home/themen/aufenthalt.html",
+        "https://www.sem.admin.ch/sem/fr/home/themen/fza_schweiz-eu-efta.html"
+      ]
+    },
+    {
+      "id": "changer-caisse-maladie-lamal-resiliation",
+      "theme": "insurance",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Changer de caisse maladie LAMal : délai de résiliation au 30 novembre, choix de la franchise, modèles alternatifs et prudence avec les assurances complémentaires.",
+      "seeds": {
+        "fr": "changer caisse maladie",
+        "en": "switch health insurance switzerland",
+        "de": "krankenkasse wechseln",
+        "es": "cambiar seguro médico suiza",
+        "pt": "mudar seguro de saúde suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "changer de caisse maladie",
+          "résiliation lamal",
+          "franchise lamal",
+          "comparateur primes lamal"
+        ],
+        "en": [
+          "switch health insurance switzerland",
+          "cancel health insurance switzerland",
+          "health insurance deductible switzerland",
+          "compare premiums switzerland"
+        ],
+        "de": [
+          "krankenkasse wechseln",
+          "krankenkasse kündigen",
+          "franchise krankenkasse",
+          "prämienvergleich"
+        ],
+        "es": [
+          "cambiar seguro médico suiza",
+          "franquicia seguro suiza",
+          "comparar primas suiza",
+          "lamal"
+        ],
+        "pt": [
+          "mudar seguro de saúde suíça",
+          "franquia seguro suíça",
+          "comparar prémios suíça",
+          "lamal"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/fr",
+        "https://www.priminfo.admin.ch/",
+        "https://www.bag.admin.ch/bag/fr/home.html"
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "objets-valeur-sous-assurance-menage",
+      "theme": "insurance",
+      "category": "patrimoine",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/consolidated-reporting",
+      "angle": "Bijoux, montres et objets de valeur : comment éviter la sous-assurance dans l'assurance ménage (somme d'assurance, inventaire, justificatifs) et quand une couverture spécifique se justifie.",
+      "seeds": {
+        "fr": "assurance objets de valeur",
+        "en": "insure jewellery switzerland",
+        "de": "wertsachenversicherung schweiz",
+        "es": "seguro objetos de valor suiza",
+        "pt": "seguro objetos de valor suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "sous-assurance ménage",
+          "assurance objets de valeur",
+          "assurance bijoux montres",
+          "inventaire assurance ménage"
+        ],
+        "en": [
+          "underinsurance switzerland",
+          "valuables insurance switzerland",
+          "jewellery insurance",
+          "home contents inventory"
+        ],
+        "de": [
+          "unterversicherung hausrat",
+          "wertsachenversicherung",
+          "schmuckversicherung",
+          "hausratinventar"
+        ],
+        "es": [
+          "infraseguro hogar",
+          "seguro joyas relojes",
+          "seguro objetos de valor",
+          "inventario seguro hogar"
+        ],
+        "pt": [
+          "subseguro recheio",
+          "seguro joias relógios",
+          "seguro objetos de valor",
+          "inventário seguro casa"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/fr",
+        "https://www.finma.ch/fr/"
+      ]
+    },
+    {
+      "id": "avs-sans-activite-lucrative-cotisations-fortune",
+      "theme": "insurance",
+      "category": "patrimoine",
+      "audience": "affluent",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "AVS des personnes sans activité lucrative : cotisations calculées sur la fortune et le revenu sous forme de rente, retraités anticipés, conjoints et risque de lacunes.",
+      "seeds": {
+        "fr": "avs sans activité lucrative",
+        "en": "ahv non employed switzerland",
+        "de": "ahv nichterwerbstätige",
+        "es": "avs sin actividad lucrativa",
+        "pt": "avs sem atividade lucrativa"
+      },
+      "targetKeywords": {
+        "fr": [
+          "avs sans activité lucrative",
+          "cotisations avs non actifs",
+          "avs fortune cotisation",
+          "retraite anticipée avs"
+        ],
+        "en": [
+          "ahv contributions non employed",
+          "swiss social security early retiree",
+          "ahv on wealth",
+          "non working spouse ahv"
+        ],
+        "de": [
+          "ahv nichterwerbstätige",
+          "ahv beiträge vermögen",
+          "frühpensionierung ahv",
+          "ahv ehepartner"
+        ],
+        "es": [
+          "avs sin actividad lucrativa",
+          "cotizaciones avs patrimonio",
+          "jubilación anticipada suiza",
+          "avs cónyuge"
+        ],
+        "pt": [
+          "avs sem atividade lucrativa",
+          "contribuições avs patrimônio",
+          "reforma antecipada suíça",
+          "avs cônjuge"
+        ]
+      },
+      "officialSources": [
+        "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS",
+        "https://www.fedlex.admin.ch/eli/cc/63/837_843_843/fr",
+        "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/ahv.html"
+      ]
+    },
+    {
+      "id": "lacunes-avs-expatries-rattrapage",
+      "theme": "insurance",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Lacunes de cotisation AVS pour les expatriés : consulter son compte individuel, rattraper les années manquantes dans le délai légal et effet des conventions de sécurité sociale.",
+      "seeds": {
+        "fr": "lacune avs rattraper",
+        "en": "ahv gaps expats",
+        "de": "ahv beitragslücken",
+        "es": "lagunas avs extranjeros",
+        "pt": "lacunas avs estrangeiros"
+      },
+      "targetKeywords": {
+        "fr": [
+          "lacune avs",
+          "extrait compte individuel avs",
+          "rattraper cotisations avs",
+          "convention sécurité sociale"
+        ],
+        "en": [
+          "ahv contribution gaps",
+          "swiss pension gaps expats",
+          "individual account extract ahv",
+          "social security agreement switzerland"
+        ],
+        "de": [
+          "ahv beitragslücken",
+          "ahv lücken nachzahlen",
+          "ik auszug ahv",
+          "sozialversicherungsabkommen"
+        ],
+        "es": [
+          "lagunas cotización avs",
+          "extracto cuenta individual avs",
+          "convenio seguridad social suiza",
+          "pensión suiza extranjeros"
+        ],
+        "pt": [
+          "lacunas contribuição avs",
+          "extrato conta individual avs",
+          "acordo segurança social suíça",
+          "pensão suíça estrangeiros"
+        ]
+      },
+      "officialSources": [
+        "https://www.ahv-iv.ch/fr/",
+        "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/ahv.html",
+        "https://www.eak.admin.ch/"
+      ]
+    },
+    {
+      "id": "maturite-suisse-ou-baccalaureat-international",
+      "theme": "education-schools",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Maturité suisse ou baccalauréat international : reconnaissance, accès aux hautes écoles suisses et étrangères, et critères pour choisir selon le projet de l'enfant.",
+      "seeds": {
+        "fr": "maturité ou bac international",
+        "en": "ib vs swiss maturity",
+        "de": "matura oder ib",
+        "es": "bachillerato internacional suiza",
+        "pt": "bacharelato internacional suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "maturité gymnasiale",
+          "baccalauréat international genève",
+          "ib ou maturité",
+          "admission université suisse"
+        ],
+        "en": [
+          "international baccalaureate switzerland",
+          "swiss matura vs ib",
+          "ib university admission switzerland",
+          "international school diploma"
+        ],
+        "de": [
+          "matura oder ib",
+          "international baccalaureate schweiz",
+          "gymnasiale maturität",
+          "uni zulassung ib"
+        ],
+        "es": [
+          "bachillerato internacional suiza",
+          "matura suiza",
+          "acceso universidad suiza",
+          "ib o matura"
+        ],
+        "pt": [
+          "bacharelato internacional suíça",
+          "matura suíça",
+          "acesso universidade suíça",
+          "ib ou matura"
+        ]
+      },
+      "officialSources": [
+        "https://www.sbfi.admin.ch/sbfi/fr/home.html",
+        "https://www.swissuniversities.ch/",
+        "https://edu.ge.ch/"
+      ]
+    },
+    {
+      "id": "inscription-ecole-publique-geneve-arrivee",
+      "theme": "education-schools",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Inscrire son enfant à l'école publique à Genève en arrivant : calendrier, établissement de secteur, classes d'accueil pour élèves non francophones et documents requis.",
+      "seeds": {
+        "fr": "inscription école genève",
+        "en": "enrol school geneva",
+        "de": "schule anmelden genf",
+        "es": "inscripción escuela ginebra",
+        "pt": "inscrição escola genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "inscription école primaire genève",
+          "classe d'accueil genève",
+          "école publique genève",
+          "rentrée scolaire genève"
+        ],
+        "en": [
+          "enrol child school geneva",
+          "geneva public school",
+          "welcome class non french speakers",
+          "school registration switzerland"
+        ],
+        "de": [
+          "schule anmelden genf",
+          "öffentliche schule genf",
+          "einschulung schweiz",
+          "aufnahmeklasse"
+        ],
+        "es": [
+          "inscripción escuela ginebra",
+          "escuela pública ginebra",
+          "clase de acogida",
+          "escolarización suiza"
+        ],
+        "pt": [
+          "inscrição escola genebra",
+          "escola pública genebra",
+          "classe de acolhimento",
+          "escolarização suíça"
+        ]
+      },
+      "officialSources": [
+        "https://edu.ge.ch/",
+        "https://www.ge.ch/organisation/departement-instruction-publique-formation-jeunesse"
+      ],
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "bourses-prets-etudes-geneve-conditions",
+      "theme": "education-schools",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Bourses et prêts d'études à Genève : qui y a droit, conditions de domicile et de nationalité, méthode de calcul et dates de dépôt.",
+      "seeds": {
+        "fr": "bourse études genève",
+        "en": "study grant geneva",
+        "de": "stipendien genf",
+        "es": "beca estudios ginebra",
+        "pt": "bolsa de estudos genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "bourse d'études genève",
+          "prêt d'études",
+          "conditions bourse genève",
+          "demande de bourse"
+        ],
+        "en": [
+          "study grant geneva",
+          "scholarship switzerland residents",
+          "student loan geneva",
+          "education grant switzerland"
+        ],
+        "de": [
+          "stipendien genf",
+          "ausbildungsbeiträge",
+          "stipendium beantragen",
+          "darlehen studium"
+        ],
+        "es": [
+          "beca de estudios ginebra",
+          "beca suiza residentes",
+          "préstamo estudios suiza",
+          "ayuda estudios"
+        ],
+        "pt": [
+          "bolsa de estudos genebra",
+          "bolsa suíça residentes",
+          "empréstimo estudos suíça",
+          "apoio estudos"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/service-bourses-prets-etudes",
+        "https://www.ge.ch/"
+      ],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "creche-accueil-parascolaire-geneve-inscription",
+      "theme": "education-schools",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Crèche, accueil familial de jour et parascolaire à Genève : fonctionnement, inscriptions et listes d'attente, et démarches à anticiper avant l'arrivée.",
+      "seeds": {
+        "fr": "crèche genève inscription",
+        "en": "daycare geneva",
+        "de": "kita genf",
+        "es": "guardería ginebra",
+        "pt": "creche genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "crèche genève",
+          "inscription crèche",
+          "accueil familial de jour",
+          "parascolaire genève"
+        ],
+        "en": [
+          "daycare geneva",
+          "nursery geneva",
+          "after school care geneva",
+          "childcare waiting list geneva"
+        ],
+        "de": [
+          "kita genf",
+          "kinderkrippe genf",
+          "tagesfamilie",
+          "schulergänzende betreuung"
+        ],
+        "es": [
+          "guardería ginebra",
+          "inscripción guardería",
+          "cuidado extraescolar",
+          "lista de espera guardería"
+        ],
+        "pt": [
+          "creche genebra",
+          "inscrição creche",
+          "atividades extracurriculares",
+          "lista de espera creche"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/",
+        "https://www.ge.ch/organisation/departement-instruction-publique-formation-jeunesse",
+        "https://edu.ge.ch/"
+      ]
+    },
+    {
+      "id": "assurer-collection-art-suisse",
+      "theme": "art-collections",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 1,
+      "service": "/services/consolidated-reporting",
+      "angle": "Assurer une collection d'art en Suisse : valeur agréée, expertise et mise à jour des estimations, conditions de conservation et couverture pendant les transports.",
+      "seeds": {
+        "fr": "assurance collection art",
+        "en": "fine art insurance switzerland",
+        "de": "kunstversicherung schweiz",
+        "es": "seguro obras de arte suiza",
+        "pt": "seguro obras de arte suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "assurance œuvres d'art",
+          "assurance collection art",
+          "valeur agréée",
+          "expertise œuvre d'art"
+        ],
+        "en": [
+          "fine art insurance switzerland",
+          "art collection insurance",
+          "agreed value art",
+          "art valuation for insurance"
+        ],
+        "de": [
+          "kunstversicherung",
+          "kunstsammlung versichern",
+          "vereinbarter wert",
+          "kunstschätzung"
+        ],
+        "es": [
+          "seguro obras de arte",
+          "seguro colección de arte",
+          "valor convenido",
+          "tasación obra de arte"
+        ],
+        "pt": [
+          "seguro obras de arte",
+          "seguro coleção de arte",
+          "valor acordado",
+          "avaliação obra de arte"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/fr",
+        "https://www.bak.admin.ch/bak/fr/home.html"
+      ]
+    },
+    {
+      "id": "acheter-importer-oeuvre-art-diligence-provenance",
+      "theme": "art-collections",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/consolidated-reporting",
+      "angle": "Acheter ou importer une œuvre d'art en Suisse : devoirs de diligence sur la provenance prévus par la loi sur le transfert des biens culturels et formalités douanières.",
+      "seeds": {
+        "fr": "importer oeuvre art suisse",
+        "en": "import artwork switzerland",
+        "de": "kunstwerk einführen schweiz",
+        "es": "importar obra de arte suiza",
+        "pt": "importar obra de arte suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "importer œuvre d'art suisse",
+          "provenance œuvre d'art",
+          "transfert des biens culturels",
+          "douane œuvre d'art"
+        ],
+        "en": [
+          "import artwork switzerland",
+          "art provenance due diligence",
+          "cultural property transfer act",
+          "customs art switzerland"
+        ],
+        "de": [
+          "kunstwerk einführen",
+          "provenienz kunst",
+          "kulturgütertransfergesetz",
+          "zoll kunstwerk"
+        ],
+        "es": [
+          "importar obra de arte suiza",
+          "procedencia obra de arte",
+          "bienes culturales suiza",
+          "aduana obra de arte"
+        ],
+        "pt": [
+          "importar obra de arte suíça",
+          "proveniência obra de arte",
+          "bens culturais suíça",
+          "alfândega obra de arte"
+        ]
+      },
+      "officialSources": [
+        "https://www.bak.admin.ch/bak/fr/home.html",
+        "https://www.bazg.admin.ch/"
+      ]
+    },
+    {
+      "id": "ports-francs-depots-douaniers-suisse",
+      "theme": "art-collections",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 3,
+      "service": "/services/consolidated-reporting",
+      "angle": "Ports francs et dépôts douaniers en Suisse : ce que prévoit le droit douanier, obligations d'inventaire et de transparence, et limites d'usage pour une collection privée.",
+      "seeds": {
+        "fr": "port franc genève",
+        "en": "geneva freeport",
+        "de": "zollfreilager schweiz",
+        "es": "puerto franco ginebra",
+        "pt": "porto franco genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "port franc genève",
+          "dépôt franc sous douane",
+          "entrepôt douanier",
+          "stockage œuvres port franc"
+        ],
+        "en": [
+          "geneva freeport",
+          "swiss free port art storage",
+          "bonded warehouse switzerland",
+          "art storage geneva"
+        ],
+        "de": [
+          "zollfreilager",
+          "freilager genf",
+          "zolllager",
+          "kunstlager schweiz"
+        ],
+        "es": [
+          "puerto franco ginebra",
+          "depósito aduanero suiza",
+          "almacén de arte ginebra",
+          "zona franca suiza"
+        ],
+        "pt": [
+          "porto franco genebra",
+          "entreposto aduaneiro suíça",
+          "armazenamento arte genebra",
+          "zona franca suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.bazg.admin.ch/",
+        "https://www.bak.admin.ch/bak/fr/home.html"
+      ]
+    },
+    {
+      "id": "preter-oeuvre-musee-garantie-restitution",
+      "theme": "art-collections",
+      "category": "patrimoine",
+      "audience": "uhnw",
+      "priority": 3,
+      "service": "/services/consolidated-reporting",
+      "angle": "Prêter une œuvre à un musée ou une exposition : contrat de prêt, garantie de restitution prévue par la loi sur le transfert des biens culturels, assurance clou à clou et transport.",
+      "seeds": {
+        "fr": "prêt oeuvre musée",
+        "en": "lending artwork to museum",
+        "de": "leihgabe museum",
+        "es": "préstamo obra museo",
+        "pt": "empréstimo obra museu"
+      },
+      "targetKeywords": {
+        "fr": [
+          "prêt d'œuvre d'art",
+          "contrat de prêt musée",
+          "garantie de restitution",
+          "assurance clou à clou"
+        ],
+        "en": [
+          "lending art to a museum",
+          "art loan agreement",
+          "return guarantee switzerland",
+          "nail to nail insurance"
+        ],
+        "de": [
+          "leihgabe museum",
+          "leihvertrag kunstwerk",
+          "rückgabegarantie",
+          "nagel zu nagel versicherung"
+        ],
+        "es": [
+          "préstamo de obra a museo",
+          "contrato de préstamo de arte",
+          "garantía de devolución",
+          "seguro clavo a clavo"
+        ],
+        "pt": [
+          "empréstimo de obra a museu",
+          "contrato de empréstimo de arte",
+          "garantia de restituição",
+          "seguro prego a prego"
+        ]
+      },
+      "officialSources": [
+        "https://www.bak.admin.ch/bak/fr/home.html",
+        "https://www.bazg.admin.ch/"
+      ]
+    },
+    {
+      "id": "creer-fondation-utilite-publique-geneve",
+      "theme": "philanthropy",
+      "category": "gouvernance",
+      "audience": "uhnw",
+      "priority": 1,
+      "service": "/services/governance-succession",
+      "angle": "Créer une fondation d'utilité publique en Suisse depuis Genève : acte de fondation, capital, inscription, autorité de surveillance cantonale ou fédérale et exonération fiscale.",
+      "seeds": {
+        "fr": "créer une fondation suisse",
+        "en": "set up foundation switzerland",
+        "de": "stiftung gründen schweiz",
+        "es": "crear fundación suiza",
+        "pt": "criar fundação suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "créer une fondation",
+          "fondation d'utilité publique",
+          "acte de fondation",
+          "exonération fiscale fondation"
+        ],
+        "en": [
+          "set up a foundation in switzerland",
+          "charitable foundation switzerland",
+          "foundation deed",
+          "tax exempt foundation switzerland"
+        ],
+        "de": [
+          "stiftung gründen",
+          "gemeinnützige stiftung",
+          "stiftungsurkunde",
+          "steuerbefreiung stiftung"
+        ],
+        "es": [
+          "crear una fundación en suiza",
+          "fundación benéfica suiza",
+          "escritura de fundación",
+          "exención fiscal fundación"
+        ],
+        "pt": [
+          "criar uma fundação na suíça",
+          "fundação de utilidade pública",
+          "ato de constituição fundação",
+          "isenção fiscal fundação"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.asfip-ge.ch/",
+        "https://www.esa.admin.ch/fr/",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale"
+      ]
+    },
+    {
+      "id": "deduire-dons-impots-geneve-federal",
+      "theme": "philanthropy",
+      "category": "fiscalite",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/tax-administration",
+      "angle": "Déduire ses dons des impôts à Genève et à l'impôt fédéral direct : plafonds, institutions reconnues d'utilité publique et justificatifs à conserver.",
+      "seeds": {
+        "fr": "déduction dons impôts genève",
+        "en": "tax deductible donations switzerland",
+        "de": "spenden steuerabzug schweiz",
+        "es": "deducción donaciones suiza",
+        "pt": "dedução doações suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "déduction des dons",
+          "dons déductibles impôts",
+          "dons genève impôt",
+          "attestation de don"
+        ],
+        "en": [
+          "tax deductible donations switzerland",
+          "charitable donation tax relief",
+          "donation receipt switzerland",
+          "giving tax deduction geneva"
+        ],
+        "de": [
+          "spenden steuerabzug",
+          "spenden von den steuern abziehen",
+          "spendenbescheinigung",
+          "gemeinnützige organisation steuern"
+        ],
+        "es": [
+          "donaciones deducibles suiza",
+          "deducción fiscal donaciones",
+          "certificado de donación",
+          "donar a ong suiza"
+        ],
+        "pt": [
+          "doações dedutíveis suíça",
+          "dedução fiscal doações",
+          "recibo de doação",
+          "doar a ong suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.estv.admin.ch/",
+        "https://www.ge.ch/organisation/administration-fiscale-cantonale",
+        "https://www.zewo.ch/"
+      ],
+      "months": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": "obligations-annuelles-fondation-surveillance",
+      "theme": "philanthropy",
+      "category": "gouvernance",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/governance-succession",
+      "angle": "Obligations annuelles d'une fondation suisse : rapport à l'autorité de surveillance, organe de révision, fonctionnement du conseil de fondation et modification de l'acte.",
+      "seeds": {
+        "fr": "surveillance des fondations",
+        "en": "foundation supervision switzerland",
+        "de": "stiftungsaufsicht schweiz",
+        "es": "supervisión fundaciones suiza",
+        "pt": "supervisão fundações suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "surveillance des fondations",
+          "conseil de fondation",
+          "obligations fondation suisse",
+          "modification acte de fondation"
+        ],
+        "en": [
+          "foundation supervision switzerland",
+          "foundation board duties",
+          "annual reporting foundation",
+          "amend foundation deed"
+        ],
+        "de": [
+          "stiftungsaufsicht",
+          "stiftungsrat pflichten",
+          "jahresbericht stiftung",
+          "stiftungsurkunde ändern"
+        ],
+        "es": [
+          "supervisión de fundaciones suiza",
+          "patronato fundación",
+          "obligaciones fundación",
+          "modificar estatutos fundación"
+        ],
+        "pt": [
+          "supervisão de fundações suíça",
+          "conselho da fundação",
+          "obrigações fundação",
+          "alterar estatutos fundação"
+        ]
+      },
+      "officialSources": [
+        "https://www.esa.admin.ch/fr/",
+        "https://www.asfip-ge.ch/",
+        "https://www.as-so.ch/",
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr"
+      ]
+    },
+    {
+      "id": "fraude-faux-conseiller-bancaire-president",
+      "theme": "digital-security",
+      "category": "reporting",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/digital-vault",
+      "angle": "Fraude au faux conseiller bancaire et fraude au président : signaux d'alerte, réflexes immédiats, contact avec la banque et signalement au NCSC.",
+      "seeds": {
+        "fr": "arnaque faux conseiller bancaire",
+        "en": "bank impersonation scam switzerland",
+        "de": "betrug falscher bankberater",
+        "es": "estafa falso asesor bancario",
+        "pt": "burla falso gestor bancário"
+      },
+      "targetKeywords": {
+        "fr": [
+          "fraude faux conseiller bancaire",
+          "fraude au président",
+          "arnaque téléphone banque",
+          "signaler arnaque suisse"
+        ],
+        "en": [
+          "bank impersonation scam",
+          "ceo fraud",
+          "phone scam switzerland",
+          "report cyber fraud switzerland"
+        ],
+        "de": [
+          "falscher bankmitarbeiter betrug",
+          "ceo betrug",
+          "telefonbetrug schweiz",
+          "betrug melden ncsc"
+        ],
+        "es": [
+          "estafa falso empleado banco",
+          "fraude del ceo",
+          "estafa telefónica suiza",
+          "denunciar fraude suiza"
+        ],
+        "pt": [
+          "burla falso funcionário bancário",
+          "fraude do ceo",
+          "burla telefónica suíça",
+          "denunciar fraude suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.ncsc.admin.ch/ncsc/fr/home.html",
+        "https://www.fedpol.admin.ch/fedpol/fr/home.html"
+      ]
+    },
+    {
+      "id": "documents-essentiels-famille-conserver-numeriser",
+      "theme": "digital-security",
+      "category": "reporting",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/digital-vault",
+      "angle": "Quels documents familiaux essentiels conserver et numériser (état civil, testament, polices, titres de propriété, prévoyance), combien de temps les garder et comment les rendre accessibles en cas d'urgence.",
+      "seeds": {
+        "fr": "durée conservation documents privés",
+        "en": "how long keep documents switzerland",
+        "de": "unterlagen aufbewahren wie lange",
+        "es": "cuánto tiempo guardar documentos",
+        "pt": "quanto tempo guardar documentos"
+      },
+      "targetKeywords": {
+        "fr": [
+          "documents à conserver",
+          "durée de conservation documents",
+          "numériser documents importants",
+          "classement papiers famille"
+        ],
+        "en": [
+          "how long to keep documents switzerland",
+          "important family documents",
+          "digital document storage",
+          "emergency document folder"
+        ],
+        "de": [
+          "aufbewahrungsfrist privat",
+          "wichtige dokumente aufbewahren",
+          "dokumente digitalisieren",
+          "notfallordner"
+        ],
+        "es": [
+          "cuánto tiempo guardar documentos",
+          "documentos importantes familia",
+          "digitalizar documentos",
+          "carpeta de emergencia"
+        ],
+        "pt": [
+          "quanto tempo guardar documentos",
+          "documentos importantes família",
+          "digitalizar documentos",
+          "pasta de emergência"
+        ]
+      },
+      "officialSources": [
+        "https://www.ch.ch/fr/",
+        "https://www.edoeb.admin.ch/edoeb/fr/home.html"
+      ]
+    },
+    {
+      "id": "heritage-numerique-comptes-en-ligne-deces",
+      "theme": "digital-security",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/digital-vault",
+      "angle": "Héritage numérique : que deviennent les comptes en ligne, e-mails, photos et cryptoactifs au décès, et comment préparer l'accès des proches sans compromettre la sécurité.",
+      "seeds": {
+        "fr": "héritage numérique suisse",
+        "en": "digital inheritance switzerland",
+        "de": "digitaler nachlass schweiz",
+        "es": "herencia digital suiza",
+        "pt": "herança digital suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "héritage numérique",
+          "comptes en ligne décès",
+          "succession cryptomonnaies",
+          "mots de passe succession"
+        ],
+        "en": [
+          "digital inheritance",
+          "digital estate planning",
+          "online accounts after death",
+          "crypto inheritance"
+        ],
+        "de": [
+          "digitaler nachlass",
+          "online konten todesfall",
+          "kryptowährungen erben",
+          "passwörter nachlass"
+        ],
+        "es": [
+          "herencia digital",
+          "cuentas online fallecimiento",
+          "herencia criptomonedas",
+          "contraseñas herencia"
+        ],
+        "pt": [
+          "herança digital",
+          "contas online falecimento",
+          "herança criptomoedas",
+          "senhas herança"
+        ]
+      },
+      "officialSources": [
+        "https://www.edoeb.admin.ch/edoeb/fr/home.html",
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "protection-donnees-foyer-employeur-lpd",
+      "theme": "digital-security",
+      "category": "reporting",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/digital-vault",
+      "angle": "Protection des données dans un foyer employeur : ce que la LPD révisée implique pour les données du personnel de maison, la vidéosurveillance du domicile et les prestataires externes.",
+      "seeds": {
+        "fr": "vidéosurveillance domicile employé",
+        "en": "home cctv employees switzerland",
+        "de": "videoüberwachung zuhause angestellte",
+        "es": "videovigilancia hogar empleados",
+        "pt": "videovigilância casa empregados"
+      },
+      "targetKeywords": {
+        "fr": [
+          "vidéosurveillance employé de maison",
+          "protection des données personnel",
+          "nlpd particuliers",
+          "caméra domicile légal"
+        ],
+        "en": [
+          "home cctv employees switzerland",
+          "data protection domestic staff",
+          "swiss data protection act",
+          "camera at home legal"
+        ],
+        "de": [
+          "videoüberwachung hausangestellte",
+          "datenschutz haushalt",
+          "revdsg",
+          "kamera zuhause erlaubt"
+        ],
+        "es": [
+          "videovigilancia empleados hogar",
+          "protección de datos personal doméstico",
+          "ley protección datos suiza",
+          "cámaras en casa legal"
+        ],
+        "pt": [
+          "videovigilância empregados domésticos",
+          "proteção de dados pessoal doméstico",
+          "lei proteção dados suíça",
+          "câmaras em casa legal"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/2022/491/fr",
+        "https://www.edoeb.admin.ch/edoeb/fr/home.html"
+      ]
+    },
+    {
+      "id": "installation-vaud-checklist-administrative",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "S'installer dans le canton de Vaud : annonce à la commune, autorisation de séjour, assurance maladie, impôts et école dans les premières semaines.",
+      "seeds": {
+        "fr": "arrivée canton de vaud",
+        "en": "moving to lausanne checklist",
+        "de": "umzug waadt anmeldung",
+        "es": "mudarse a lausana",
+        "pt": "mudar para lausana"
+      },
+      "targetKeywords": {
+        "fr": [
+          "s'installer à lausanne",
+          "annonce arrivée commune vaud",
+          "démarches arrivée vaud",
+          "expatrié vaud"
+        ],
+        "en": [
+          "moving to lausanne",
+          "relocating to vaud",
+          "register commune vaud",
+          "expat lausanne checklist"
+        ],
+        "de": [
+          "umzug waadt",
+          "anmeldung gemeinde waadt",
+          "lausanne wohnen",
+          "umzug in die westschweiz"
+        ],
+        "es": [
+          "mudarse a lausana",
+          "vivir en vaud",
+          "registro municipal suiza",
+          "expatriado lausana"
+        ],
+        "pt": [
+          "mudar para lausana",
+          "viver em vaud",
+          "registo municipal suíça",
+          "expatriado lausana"
+        ]
+      },
+      "officialSources": [
+        "https://www.vd.ch/population",
+        "https://www.vd.ch/etat-droit-finances/impots",
+        "https://www.vd.ch/"
+      ]
+    },
+    {
+      "id": "effets-demenagement-douane-suisse-franchise",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/family-office-coordination",
+      "angle": "Importer ses effets de déménagement en Suisse en franchise de droits : conditions d'usage préalable, formulaire 18.44, liste d'inventaire et cas particuliers (véhicules, alcool, objets neufs).",
+      "seeds": {
+        "fr": "déménagement suisse douane",
+        "en": "moving to switzerland customs",
+        "de": "umzugsgut zoll schweiz",
+        "es": "mudanza a suiza aduana",
+        "pt": "mudança para a suíça alfândega"
+      },
+      "targetKeywords": {
+        "fr": [
+          "effets de déménagement",
+          "formulaire 18.44",
+          "douane déménagement suisse",
+          "dédouanement déménagement"
+        ],
+        "en": [
+          "moving household goods switzerland",
+          "form 18.44",
+          "customs clearance relocation",
+          "import personal effects switzerland"
+        ],
+        "de": [
+          "umzugsgut",
+          "formular 18.44",
+          "zoll umzug schweiz",
+          "umzugsgut verzollen"
+        ],
+        "es": [
+          "mudanza internacional suiza",
+          "formulario 18.44",
+          "aduana mudanza",
+          "importar enseres suiza"
+        ],
+        "pt": [
+          "mudança internacional suíça",
+          "formulário 18.44",
+          "alfândega mudança",
+          "importar bens pessoais suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.bazg.admin.ch/",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "importer-voiture-suisse-immatriculation-geneve",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Importer sa voiture en Suisse : dédouanement, impôt sur les véhicules automobiles, contrôle technique et immatriculation à Genève.",
+      "seeds": {
+        "fr": "importer voiture suisse",
+        "en": "import car to switzerland",
+        "de": "auto importieren schweiz",
+        "es": "importar coche suiza",
+        "pt": "importar carro suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "importer une voiture en suisse",
+          "dédouanement voiture",
+          "immatriculation genève",
+          "expertise véhicule importé"
+        ],
+        "en": [
+          "import car to switzerland",
+          "car customs switzerland",
+          "register car geneva",
+          "swiss vehicle inspection"
+        ],
+        "de": [
+          "auto importieren schweiz",
+          "auto verzollen",
+          "auto einlösen genf",
+          "fahrzeugprüfung import"
+        ],
+        "es": [
+          "importar coche a suiza",
+          "aduana coche suiza",
+          "matricular coche ginebra",
+          "inspección vehículo suiza"
+        ],
+        "pt": [
+          "importar carro para a suíça",
+          "alfândega carro suíça",
+          "matricular carro genebra",
+          "inspeção veículo suíça"
+        ]
+      },
+      "officialSources": [
+        "https://www.bazg.admin.ch/",
+        "https://www.ge.ch/organisation/office-cantonal-vehicules"
+      ]
+    },
+    {
+      "id": "venir-en-suisse-avec-animaux-chien-chat",
+      "theme": "relocation",
+      "category": "vie-pratique",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/family-office-coordination",
+      "angle": "Venir s'installer en Suisse avec son chien ou son chat : puce, passeport, vaccination contre la rage selon le pays de provenance et enregistrement du chien.",
+      "seeds": {
+        "fr": "chien suisse importation",
+        "en": "bringing dog to switzerland",
+        "de": "hund einreise schweiz",
+        "es": "llevar perro a suiza",
+        "pt": "levar cão para a suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "importer chien suisse",
+          "voyager avec chat suisse",
+          "vaccin rage suisse",
+          "enregistrement chien amicus"
+        ],
+        "en": [
+          "bringing a dog to switzerland",
+          "moving pets to switzerland",
+          "pet passport switzerland",
+          "dog registration switzerland"
+        ],
+        "de": [
+          "hund einreise schweiz",
+          "katze einreise schweiz",
+          "tollwutimpfung",
+          "amicus hund"
+        ],
+        "es": [
+          "llevar perro a suiza",
+          "viajar con gato suiza",
+          "pasaporte mascota suiza",
+          "vacuna rabia"
+        ],
+        "pt": [
+          "levar cão para a suíça",
+          "viajar com gato suíça",
+          "passaporte animal suíça",
+          "vacina raiva"
+        ]
+      },
+      "officialSources": [
+        "https://www.blv.admin.ch/blv/fr/home.html",
+        "https://www.bazg.admin.ch/",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "quitter-suisse-fiscalite-depart-prevoyance",
+      "theme": "relocation",
+      "category": "fiscalite",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/tax-administration",
+      "angle": "Quitter la Suisse : annonce de départ, fin de l'assujettissement et taxation au prorata, imposition des prestations de prévoyance versées à l'étranger et impôt anticipé après le départ.",
+      "seeds": {
+        "fr": "quitter la suisse impôts",
+        "en": "leaving switzerland taxes",
+        "de": "wegzug schweiz steuern",
+        "es": "salir de suiza impuestos",
+        "pt": "sair da suíça impostos"
+      },
+      "targetKeywords": {
+        "fr": [
+          "départ de suisse impôts",
+          "annonce de départ",
+          "retrait 2e pilier départ",
+          "impôt à la source prestation en capital"
+        ],
+        "en": [
+          "leaving switzerland taxes",
+          "deregister switzerland",
+          "withdraw pension leaving switzerland",
+          "capital withdrawal tax non resident"
+        ],
+        "de": [
+          "wegzug schweiz steuern",
+          "abmeldung schweiz",
+          "pensionskasse auszahlung wegzug",
+          "quellensteuer kapitalleistung"
+        ],
+        "es": [
+          "salir de suiza impuestos",
+          "baja en suiza",
+          "retirar pensión al salir de suiza",
+          "impuesto capital pensión"
+        ],
+        "pt": [
+          "sair da suíça impostos",
+          "cancelar residência suíça",
+          "levantar pensão ao sair da suíça",
+          "imposto capital pensão"
+        ]
+      },
+      "officialSources": [
+        "https://www.estv.admin.ch/",
+        "https://www.ge.ch/organisation/office-cantonal-population-migrations",
+        "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html",
+        "https://www.estv.admin.ch/estv/fr/accueil/droit-fiscal-international.html"
+      ]
+    },
+    {
+      "id": "subventions-renovation-energetique-geneve",
+      "theme": "concierge-works",
+      "category": "travaux-intendance",
+      "audience": "accessible",
+      "priority": 1,
+      "service": "/services/real-estate-transactions",
+      "angle": "Rénovation énergétique à Genève : subventions du Programme Bâtiments et du canton, démarches à faire avant le début des travaux et traitement fiscal des frais.",
+      "seeds": {
+        "fr": "subvention rénovation genève",
+        "en": "renovation subsidy switzerland",
+        "de": "förderprogramm gebäude sanierung",
+        "es": "subvenciones renovación suiza",
+        "pt": "subsídios renovação suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "subvention rénovation énergétique",
+          "programme bâtiments genève",
+          "pompe à chaleur subvention",
+          "déduction travaux énergie"
+        ],
+        "en": [
+          "building renovation subsidies switzerland",
+          "energy renovation grant geneva",
+          "heat pump subsidy switzerland",
+          "building programme switzerland"
+        ],
+        "de": [
+          "das gebäudeprogramm",
+          "förderbeiträge sanierung",
+          "wärmepumpe förderung",
+          "energetische sanierung steuern"
+        ],
+        "es": [
+          "subvenciones renovación energética suiza",
+          "bomba de calor subvención",
+          "programa edificios suiza",
+          "reforma energética"
+        ],
+        "pt": [
+          "subsídios renovação energética suíça",
+          "bomba de calor subsídio",
+          "programa edifícios suíça",
+          "obras eficiência energética"
+        ]
+      },
+      "officialSources": [
+        "https://www.leprogrammebatiments.ch/fr/",
+        "https://www.ge.ch/organisation/office-cantonal-energie",
+        "https://www.bfe.admin.ch/"
+      ]
+    },
+    {
+      "id": "autorisation-construire-geneve-suivi-chantier",
+      "theme": "concierge-works",
+      "category": "travaux-intendance",
+      "audience": "affluent",
+      "priority": 2,
+      "service": "/services/real-estate-transactions",
+      "angle": "Autorisation de construire à Genève : procédure accélérée ou définitive, délais, pièces du dossier et suivi de chantier côté propriétaire.",
+      "seeds": {
+        "fr": "autorisation de construire genève",
+        "en": "building permit geneva",
+        "de": "baubewilligung genf",
+        "es": "licencia de obra ginebra",
+        "pt": "licença de construção genebra"
+      },
+      "targetKeywords": {
+        "fr": [
+          "autorisation de construire genève",
+          "apa genève",
+          "demande définitive",
+          "suivi de chantier"
+        ],
+        "en": [
+          "building permit geneva",
+          "renovation permit geneva",
+          "construction permit switzerland",
+          "site supervision renovation"
+        ],
+        "de": [
+          "baubewilligung genf",
+          "baugesuch schweiz",
+          "bauüberwachung",
+          "renovation bewilligung"
+        ],
+        "es": [
+          "licencia de obra ginebra",
+          "permiso de construcción suiza",
+          "supervisión de obra",
+          "reforma permiso"
+        ],
+        "pt": [
+          "licença de construção genebra",
+          "autorização de obras suíça",
+          "supervisão de obra",
+          "remodelação licença"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/office-autorisations-construire",
+        "https://www.ge.ch/"
+      ]
+    },
+    {
+      "id": "family-assistant-intendant-role-perimetre",
+      "theme": "concierge-works",
+      "category": "travaux-intendance",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/family-office-coordination",
+      "angle": "Family assistant ou intendant de maison : rôle, périmètre, coordination avec le personnel et les prestataires, et outils de suivi des tâches du foyer.",
+      "seeds": {
+        "fr": "family assistant genève",
+        "en": "family assistant role",
+        "de": "family assistant schweiz",
+        "es": "asistente familiar",
+        "pt": "assistente familiar"
+      },
+      "targetKeywords": {
+        "fr": [
+          "family assistant",
+          "intendant de maison",
+          "gestion de maison",
+          "house manager genève"
+        ],
+        "en": [
+          "family assistant",
+          "household manager",
+          "estate manager role",
+          "private household management"
+        ],
+        "de": [
+          "family assistant",
+          "haushaltsmanager",
+          "hausverwalter privat",
+          "privathaushalt organisation"
+        ],
+        "es": [
+          "asistente familiar",
+          "gestor del hogar",
+          "administrador de casa",
+          "gestión doméstica"
+        ],
+        "pt": [
+          "assistente familiar",
+          "gestor doméstico",
+          "administrador de casa",
+          "gestão doméstica"
+        ]
+      },
+      "officialSources": [
+        "https://www.ge.ch/organisation/office-cantonal-emploi",
+        "https://www.seco.admin.ch/seco/fr/home.html"
+      ]
+    },
+    {
+      "id": "education-financiere-enfants-adolescents",
+      "theme": "next-gen",
+      "category": "family-office",
+      "audience": "accessible",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Éducation financière des enfants et adolescents : argent de poche, premier compte, premier salaire d'apprenti, et ce que le droit suisse permet au mineur de gérer seul.",
+      "seeds": {
+        "fr": "éducation financière enfants",
+        "en": "financial education kids",
+        "de": "finanzielle bildung kinder",
+        "es": "educación financiera niños",
+        "pt": "educação financeira crianças"
+      },
+      "targetKeywords": {
+        "fr": [
+          "éducation financière enfants",
+          "argent de poche suisse",
+          "compte bancaire enfant",
+          "parler d'argent aux enfants"
+        ],
+        "en": [
+          "financial education for kids",
+          "teaching children about money",
+          "pocket money switzerland",
+          "bank account for child"
+        ],
+        "de": [
+          "finanzielle bildung kinder",
+          "taschengeld schweiz",
+          "jugendkonto",
+          "kindern geld erklären"
+        ],
+        "es": [
+          "educación financiera niños",
+          "paga semanal",
+          "cuenta bancaria menor",
+          "enseñar a los hijos el dinero"
+        ],
+        "pt": [
+          "educação financeira crianças",
+          "mesada",
+          "conta bancária menor",
+          "ensinar dinheiro aos filhos"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ch.ch/fr/"
+      ]
+    },
+    {
+      "id": "preparer-generation-suivante-gouvernance-patrimoine",
+      "theme": "next-gen",
+      "category": "family-office",
+      "audience": "uhnw",
+      "priority": 2,
+      "service": "/services/governance-succession",
+      "angle": "Préparer la génération suivante à reprendre la gouvernance du patrimoine : parcours de formation, participation progressive aux décisions et règles d'entrée dans les organes familiaux.",
+      "seeds": {
+        "fr": "préparer la next gen",
+        "en": "next generation wealth transfer",
+        "de": "nächste generation vermögen",
+        "es": "preparar nueva generación",
+        "pt": "preparar próxima geração"
+      },
+      "targetKeywords": {
+        "fr": [
+          "next gen family office",
+          "transmission patrimoine génération suivante",
+          "préparer héritiers",
+          "relève familiale"
+        ],
+        "en": [
+          "next generation wealth",
+          "preparing heirs",
+          "next gen family office",
+          "intergenerational wealth transfer"
+        ],
+        "de": [
+          "nächste generation vermögen",
+          "erben vorbereiten",
+          "next gen family office",
+          "generationenwechsel"
+        ],
+        "es": [
+          "nueva generación patrimonio",
+          "preparar herederos",
+          "relevo generacional",
+          "transferencia de patrimonio"
+        ],
+        "pt": [
+          "próxima geração patrimônio",
+          "preparar herdeiros",
+          "sucessão geracional",
+          "transferência de patrimônio"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr"
+      ]
+    },
+    {
+      "id": "majorite-18-ans-biens-enfant-suisse",
+      "theme": "next-gen",
+      "category": "family-office",
+      "audience": "affluent",
+      "priority": 3,
+      "service": "/services/governance-succession",
+      "angle": "À 18 ans en Suisse : fin de l'administration des biens de l'enfant par les parents, comptes et placements à transférer, et règles de protection des biens des mineurs avant la majorité.",
+      "seeds": {
+        "fr": "biens enfant mineur suisse",
+        "en": "child assets switzerland",
+        "de": "kindesvermögen schweiz",
+        "es": "bienes del menor suiza",
+        "pt": "bens de menores suíça"
+      },
+      "targetKeywords": {
+        "fr": [
+          "biens de l'enfant",
+          "administration des biens du mineur",
+          "majorité 18 ans suisse",
+          "compte épargne enfant"
+        ],
+        "en": [
+          "child assets switzerland",
+          "minor property management",
+          "turning 18 switzerland",
+          "savings account for children"
+        ],
+        "de": [
+          "kindesvermögen",
+          "kindesvermögen verwaltung",
+          "volljährigkeit schweiz",
+          "sparkonto kind"
+        ],
+        "es": [
+          "bienes del menor",
+          "administración bienes hijo",
+          "mayoría de edad suiza",
+          "cuenta ahorro niño"
+        ],
+        "pt": [
+          "bens de menores",
+          "administração bens filho",
+          "maioridade suíça",
+          "conta poupança criança"
+        ]
+      },
+      "officialSources": [
+        "https://www.fedlex.admin.ch/eli/cc/24/233_245_233/fr",
+        "https://www.ge.ch/organisation/service-protection-mineurs"
+      ]
+    }
+  ]
+}
