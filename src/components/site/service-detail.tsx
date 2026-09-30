@@ -132,7 +132,7 @@ const ServiceDetail = async ({
                 </li>
               </ol>
             </nav>
-            <h1 className="max-w-[16ch] text-balance text-5xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl">
+            <h1 className="max-w-full text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground hyphens-manual [overflow-wrap:break-word] sm:max-w-[16ch] sm:text-6xl">
               {tidyTitle(title || rawTitle)}
             </h1>
             {subtitle ? (
