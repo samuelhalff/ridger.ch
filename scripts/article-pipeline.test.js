@@ -82,7 +82,8 @@ test("deriveKeywords falls back to backlog targets when autocomplete is empty", 
     results: [],
   });
   assert.equal(out.primary, "pk einkauf");
-  assert.deepEqual(out.secondary, ["einkauf pensionskasse", "bvg einkauf steuern"]);
+  // targets first, then the seed phrase as last-resort top-up
+  assert.deepEqual(out.secondary, ["einkauf pensionskasse", "bvg einkauf steuern", "pk einkauf steuern"]);
   assert.equal(out.stats.source, "backlog-fallback");
 });
 
@@ -417,4 +418,28 @@ test("offline end-to-end dry run through the real orchestrator (mocked model)", 
   assert.match(out, /FR article valid/);
   for (const l of ["en", "de", "es", "pt"]) assert.match(out, new RegExp(`✅ ${l} valid`));
   assert.match(out, /not written/);
+});
+
+// ─── Review follow-ups ────────────────────────────────────────────────────
+
+test("guarantee exemption only for a negation adjacent to the guarantee", () => {
+  assert.ok(codes("Not only do we guarantee results, we deliver them.").includes("GUARANTEE"));
+  assert.ok(codes("This is not a myth: we guarantee success.").includes("GUARANTEE"));
+  assert.deepEqual(codes("Nous ne garantissons aucune issue."), []);
+  assert.deepEqual(codes("Ridger garantiert keinen Verfahrensausgang."), []);
+  assert.deepEqual(codes("A Ridger não garantimos qualquer desfecho."), []);
+});
+
+test("bare URLs are rejected by the SEO checks and stripped by the sanitizer", () => {
+  const { article, keywords } = goodFrArticle();
+  article.content = article.content.replace("## Notre rôle", "Voir https://example.com/x pour plus.\n\n## Notre rôle");
+  const res = rules.checkSeoStructure(article, {
+    locale: "fr",
+    keywords: keywords.fr,
+    allowedInternalPaths: rules.buildAllowedInternalPaths("fr", { servicePathMaps }),
+  });
+  assert.ok(res.errors.some((e) => /bare URL/.test(e)));
+  const { sanitizeExternalLinks } = require("./ai-ressources-update");
+  const out = sanitizeExternalLinks("Voir https://example.com/x et [AFC](https://www.estv.admin.ch/) ou [X](https://evil.example/).", [{ url: "https://www.estv.admin.ch/" }]);
+  assert.equal(out, "Voir et [AFC](https://www.estv.admin.ch/) ou X.");
 });

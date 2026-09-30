@@ -163,10 +163,22 @@ const RULES = [
     code: "GUARANTEE",
     message: "promises / guarantees an outcome",
     test: (s) => {
-      if (/\b(esisuisse|garantie des depots|deposit (insurance|protection)|einlagensicherung|garantia de depositos|garantia de depositos|constitution|verfassung|constitucion|constituicao|garantie de loyer|rent deposit|mietkaution|deposito de garantia|fianza|plafond|threshold|obergrenze|limite|limit|hochstbetrag)\b/.test(s) || NEGATION.test(s)) {
+      if (/\b(esisuisse|garantie des depots|deposit (insurance|protection)|einlagensicherung|garantia de depositos|garantia de depositos|constitution|verfassung|constitucion|constituicao|garantie de loyer|rent deposit|mietkaution|deposito de garantia|fianza|plafond|threshold|obergrenze|limite|limit|hochstbetrag)\b/.test(s)) {
         return false;
       }
-      return /\b(nous (vous )?garantissons|garantissons|we guarantee|guaranteed|risk-free|sans risque|wir garantieren|garantiert|garantizamos|garantizad[oa]s?|sin riesgo|garantimos|garantid[oa]s?|sem risco|(rendement|resultat|economies?|succes|return|returns|result|results|savings|success|rendite|ergebnis|erfolg|rentabilidad|resultado|ahorro|exito|rendimento|poupanca|sucesso)s? garanti)/.test(s);
+      const re = /\b(nous (vous )?garantissons|garantissons|we guarantee|guaranteed|risk-free|sans risque|wir garantieren|garantiert|garantizamos|garantizad[oa]s?|sin riesgo|garantimos|garantid[oa]s?|sem risco|(rendement|resultat|economies?|succes|return|returns|result|results|savings|success|rendite|ergebnis|erfolg|rentabilidad|resultado|ahorro|exito|rendimento|poupanca|sucesso)s? garanti)/g;
+      // Only a negation right next to the guarantee exempts it ("ne
+      // garantissons aucune issue", "garantiert keinen …") — never a negation
+      // elsewhere in the sentence, and never "not only / non seulement".
+      for (const m of s.matchAll(re)) {
+        const before = s.slice(Math.max(0, m.index - 28), m.index);
+        const after = s.slice(m.index + m[0].length, m.index + m[0].length + 14);
+        const negBefore = /\b(ne|n'|pas|jamais|not|never|no|nicht|nie|nao|nunca|sin|sem)\b[^.:;!?]{0,12}$/.test(before) &&
+          !/\b(not only|non seulement|nicht nur|no solo|nao so|nao apenas)\b/.test(before);
+        const negAfter = /^\s*(aucun|aucune|pas|rien|nothing|no |keine|keinen|kein|ningun|ninguna|nada|nenhum|nenhuma|qualquer)/.test(after);
+        if (!negBefore && !negAfter) return true;
+      }
+      return false;
     },
   },
   {
@@ -395,6 +407,12 @@ function extractExternalLinks(content) {
   }));
 }
 
+/** URLs that are not the target of a Markdown link (plain text / <autolinks>). */
+function extractBareUrls(content) {
+  const withoutLinks = String(content || "").replace(/\]\((https?:\/\/[^)\s]+)\)/g, "]()");
+  return [...withoutLinks.matchAll(/<?https?:\/\/[^\s)>\]]+/g)].map((m) => m[0].replace(/^</, ""));
+}
+
 // ─────────────────────────────────────────────────────────────────────────
 // Internal link resolution
 // ─────────────────────────────────────────────────────────────────────────
@@ -601,12 +619,14 @@ function checkSeoStructure(article, ctx) {
     }
   }
 
-  // External links: official sources only
+  // External links: official sources only (Markdown links AND bare URLs)
   if (typeof isTrustedDomain === "function") {
     for (const link of extractExternalLinks(content)) {
       if (!isTrustedDomain(link.url)) errors.push(`external link to non-allowlisted domain: ${link.url}`);
     }
   }
+  const bare = extractBareUrls(content);
+  if (bare.length) errors.push(`bare URL(s) in text (use a Markdown link to a validated reference): ${bare.slice(0, 3).join(", ")}`);
 
   // Length
   const words = countWords(stripMarkdownLinks(content));
@@ -725,6 +745,7 @@ module.exports = {
   compareNumberParity,
   compareStructure,
   countWords,
+  extractBareUrls,
   extractExternalLinks,
   extractFaq,
   extractHeadings,

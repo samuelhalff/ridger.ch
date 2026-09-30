@@ -553,9 +553,11 @@ function appendReferencesSection(content, references, locale) {
  */
 function sanitizeExternalLinks(content, references) {
   const allowed = new Set(references.map((r) => r.url));
-  return String(content || "").replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (m, label, url) =>
-    allowed.has(url) ? m : label,
-  );
+  return String(content || "")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (m, label, url) => (allowed.has(url) ? m : label))
+    // bare / autolinked URLs are never kept in the body
+    .replace(/(?<!\]\()<?https?:\/\/[^\s)>\]]+>?/g, "")
+    .replace(/[ \t]{2,}/g, " ");
 }
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -678,6 +680,10 @@ async function researchKeywords({ item, backlog }) {
     log(`   ${l} [${raw[l].markets.join(", ")}] primary="${raw[l].primary}" secondary=${raw[l].secondary.length} questions=${raw[l].questions.length} (${raw[l].stats.source}, ${raw[l].stats.suggestions} suggestions)`);
   }
   const { aligned, count, ok } = alignKeywordSets(raw);
+  // Hard floor of 3 (below that the H2/keyword checks become meaningless);
+  // 3–4 only warns so a temporary autocomplete block on CI runners (backlog
+  // fallback = 3–5 targets) does not stop publication.
+  if (count < 3) throw new Error(`only ${count} secondary keywords available in every locale (min 3) — enrich targetKeywords for ${item.id}`);
   if (!ok) console.warn(`⚠️ only ${count} secondary keywords aligned across locales (target ≥ 5)`);
   const keywords = {};
   for (const l of LOCALES) keywords[l] = { ...aligned[l], questions: raw[l].questions };

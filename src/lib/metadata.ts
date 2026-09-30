@@ -266,7 +266,10 @@ export async function generateMetadataForArticle(
     modifiedTime?: string;
   }
 ): Promise<Metadata> {
-  if (typeof localeOrSlug === 'string' && slugOrTitle && titleOrDescription && !description) {
+  // Old 3-arg signature only when the first argument is NOT a locale — an
+  // article with an empty description must not fall into this branch.
+  const firstIsLocale = (locales as readonly string[]).includes(localeOrSlug as string);
+  if (!firstIsLocale && typeof localeOrSlug === 'string' && slugOrTitle && titleOrDescription && !description) {
     // Old signature: generateMetadataForArticle(slug, title, description)
     return await getPageMetadata('fr' as Locale, `/ressources/articles/${localeOrSlug}`, {
       articleTitle: slugOrTitle,

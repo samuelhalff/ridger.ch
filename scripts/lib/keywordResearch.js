@@ -384,6 +384,11 @@ function deriveKeywords(locale, input) {
     if (t === primary || isExcluded(t, avoidTerms) || tooClose(t, [primary, ...secondary])) continue;
     secondary.push(t);
   }
+  // Last resort (autocomplete blocked/offline): the seed phrase itself.
+  const seedKw = normalizeKeyword(seed);
+  if (secondary.length < minSecondary && seedKw && seedKw !== primary && !isExcluded(seedKw, avoidTerms) && !secondary.includes(seedKw)) {
+    secondary.push(seedKw);
+  }
   for (const q of questions) {
     if (secondary.length >= minSecondary) break;
     if (!secondary.includes(q)) secondary.push(q);
