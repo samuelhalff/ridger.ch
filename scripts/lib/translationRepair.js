@@ -43,13 +43,19 @@ const FIELD_LIMITS = {
   imageAlt: { min: L.imageAltMin, max: L.imageAltMax, keyword: false },
 };
 
-function fieldFits(field, value, primary) {
+/** Why a candidate value does not fit (null when it does). */
+function fieldMisfit(field, value, primary) {
   const lim = FIELD_LIMITS[field];
   const v = String(value || "").trim();
-  if (v.length < lim.min || v.length > lim.max) return false;
-  if (field === "seoTitle" && /ridger/i.test(v)) return false;
-  if (lim.keyword && primary && !containsKeywordLoosely(v, primary, 0.6)) return false;
-  return true;
+  if (!v) return "empty";
+  if (v.length < lim.min || v.length > lim.max) return `${v.length} characters (allowed ${lim.min}–${lim.max})`;
+  if (field === "seoTitle" && /ridger/i.test(v)) return "contains the brand";
+  if (lim.keyword && primary && !containsKeywordLoosely(v, primary, 0.6)) return `lost the primary keyword "${primary}"`;
+  return null;
+}
+
+function fieldFits(field, value, primary) {
+  return fieldMisfit(field, value, primary) === null;
 }
 
 /** Fields whose length is outside the validator's limits. */
@@ -66,7 +72,8 @@ function buildShortenPrompt({ locale, localeName, fields, primary, context = "" 
   const lines = fields.map((f) => {
     const lim = FIELD_LIMITS[f.field];
     const verb = f.length > f.max ? `shorten to AT MOST ${f.max} characters` : `lengthen to AT LEAST ${f.min} characters`;
-    return `- ${f.field} (currently ${f.length} characters): ${verb} — allowed range ${f.min}–${f.max} characters${lim.note ? ` (${lim.note})` : ""}${lim.keyword ? `; must keep the primary keyword "${primary}"` : ""}.\n  Current: ${JSON.stringify(f.value)}`;
+    const rejected = (f.rejected || []).map((r) => `\n  Rejected earlier: ${JSON.stringify(r.value)} — ${r.reason}`).join("");
+    return `- ${f.field} (currently ${f.length} characters): ${verb} — allowed range ${f.min}–${f.max} characters${lim.note ? ` (${lim.note})` : ""}${lim.keyword ? `; must keep the primary keyword "${primary}" (its words may be reordered or inflected, not dropped)` : ""}.\n  Current: ${JSON.stringify(f.value)}${rejected}`;
   });
   return [
     `Rewrite the following ${localeName || locale} metadata fields of a Swiss family-office article so that each fits its character limit.`,
@@ -87,11 +94,12 @@ function buildShortenPrompt({ locale, localeName, fields, primary, context = "" 
  * (and keep the primary keyword where required) are accepted.
  * @returns {Promise<{article: object, fixed: string[], remaining: object[]}>}
  */
-async function fitFieldLengths({ article, locale, localeName, primary, call, rounds = 2, context = "", log = () => {} }) {
+async function fitFieldLengths({ article, locale, localeName, primary, call, rounds = 3, context = "", log = () => {} }) {
   let current = { ...article };
   const fixed = [];
+  const rejected = {};
   for (let round = 1; round <= rounds; round++) {
-    const bad = fieldLengthProblems(current).map((f) => ({ ...f, value: String(current[f.field] || "") }));
+    const bad = fieldLengthProblems(current).map((f) => ({ ...f, value: String(current[f.field] || ""), rejected: rejected[f.field] || [] }));
     if (!bad.length) break;
     log(`   ✂️ ${locale}: fitting ${bad.map((f) => `${f.field} ${f.length}→${f.length > f.max ? `≤${f.max}` : `≥${f.min}`}`).join(", ")} (round ${round}/${rounds})`);
     let out;
@@ -103,9 +111,13 @@ async function fitFieldLengths({ article, locale, localeName, primary, call, rou
     }
     for (const f of bad) {
       const v = typeof out?.[f.field] === "string" ? out[f.field].trim() : "";
-      if (v && fieldFits(f.field, v, primary)) {
+      const reason = fieldMisfit(f.field, v, primary);
+      if (!reason) {
         current = { ...current, [f.field]: v };
         fixed.push(f.field);
+      } else {
+        (rejected[f.field] ||= []).push({ value: v, reason });
+        log(`   ↳ ${locale}: ${f.field} candidate rejected (${reason}): ${JSON.stringify(v)}`);
       }
     }
   }

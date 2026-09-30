@@ -68,9 +68,13 @@ test("fitFieldLengths never accepts a value that is still too long, lacks the ke
     { title: "Pension fund buy in Switzerland: the tax deduction", seoTitle: "Pension fund buy in Switzerland | Ridger" }, // brand
   ];
   let i = 0;
-  const call = async () => replies[i++];
+  const prompts = [];
+  const call = async (prompt) => (prompts.push(prompt), replies[i++]);
   const res = await tr.fitFieldLengths({ article: enArticle(), locale: "en", primary: PRIMARY, call, rounds: 2 });
   assert.equal(i, 2);
+  // round 2 is told why round 1's candidates were refused
+  assert.match(prompts[1], /Rejected earlier: "x{80}" — 80 characters \(allowed 20–75\)/);
+  assert.match(prompts[1], /Rejected earlier: "Tax rules for voluntary purchases" — lost the primary keyword/);
   assert.equal(res.article.title, "Pension fund buy in Switzerland: the tax deduction");
   assert.equal(res.article.seoTitle, enArticle().seoTitle); // unchanged: still invalid → validation keeps failing
   assert.deepEqual(res.remaining.map((r) => r.field), ["seoTitle"]);
