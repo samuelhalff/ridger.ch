@@ -34,7 +34,9 @@
         "Coffre-fort numérique : coffre documentaire chiffré, données hébergées en Suisse, partage contrôlé",
         "Optimisation et planification fiscales : structuration dans le cadre suisse, imposition d'après la dépense (forfait fiscal) pour les familles s'installant en Suisse",
         "Domiciliation et gestion du courrier : domiciliation de structures à Genève, tri, numérisation et suivi du courrier",
-        "Personnel de maison : contrats, paie, AVS et assurances sociales, impôt à la source et permis"
+        "Gestion de maison et personnel de maison : intendance des résidences, contrats, salaires, AVS et assurances sociales, impôt à la source, certificats de salaire",
+        "Installation et permis de séjour : coordination de l'arrivée en Suisse, démarches de permis (B, C, L, G) auprès des autorités, enregistrements, assurance maladie, écoles et logement ; les permis sont décidés par les autorités",
+        "Gérance immobilière côté propriétaire : baux et loyers, charges et décomptes, pilotage des régies, travaux, assurances et reporting consolidé"
       ]
     },
     {
@@ -50,6 +52,7 @@
       "Items": [
         "Genève",
         "Suisse",
+        "Familles ailleurs en Suisse (Lausanne et Vaud, Zurich, Zoug, Lugano et Tessin), à distance et lors de visites ; bureau à Genève uniquement",
         "Situations familiales internationales"
       ]
     },
@@ -114,6 +117,26 @@
     {
       "Label": "Immobilier et transactions",
       "Href": "/services/real-estate-transactions"
+    },
+    {
+      "Label": "Gérance immobilière",
+      "Href": "/services/property-management"
+    },
+    {
+      "Label": "Personnel de maison et salaires",
+      "Href": "/services/household-staff"
+    },
+    {
+      "Label": "Relocation et permis de séjour",
+      "Href": "/services/relocation-residence"
+    },
+    {
+      "Label": "Domiciliation et courrier",
+      "Href": "/services/domiciliation-mail"
+    },
+    {
+      "Label": "Présenter une famille à Ridger",
+      "Href": "/advisers"
     },
     {
       "Label": "Contact",

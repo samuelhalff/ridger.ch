@@ -34,7 +34,9 @@
         "Caja fuerte digital: caja documental cifrada, datos alojados en Suiza, uso compartido controlado",
         "Optimización y planificación fiscal: estructuración en el marco suizo, tributación según el gasto (forfait fiscal) para las familias que se instalan en Suiza",
         "Domiciliación y gestión de la correspondencia: domiciliación de estructuras en Ginebra, clasificación, digitalización y seguimiento de la correspondencia",
-        "Personal doméstico: contratos, nómina, AVS y seguros sociales, impuesto en la fuente y permisos"
+        "Gestión del hogar y personal doméstico: intendencia de las residencias, contratos, nóminas, AVS y seguros sociales, retención en la fuente, certificados de salario",
+        "Traslado y permisos de residencia: coordinación de la llegada a Suiza, trámites de permisos (B, C, L, G) ante las autoridades, registros, seguro médico, escuelas y vivienda; los permisos los deciden las autoridades",
+        "Administración de propiedades del lado del propietario: contratos y alquileres, gastos y liquidaciones, supervisión de administradores, obras, seguros y reporting consolidado"
       ]
     },
     {
@@ -50,6 +52,7 @@
       "Items": [
         "Ginebra",
         "Suiza",
+        "Familias en otras partes de Suiza (Lausana y Vaud, Zúrich, Zug, Lugano y Tesino), a distancia y mediante visitas; oficina solo en Ginebra",
         "Situaciones familiares internacionales"
       ]
     },
@@ -114,6 +117,26 @@
     {
       "Label": "Inmobiliario y transacciones",
       "Href": "/services/real-estate-transactions"
+    },
+    {
+      "Label": "Administración inmobiliaria",
+      "Href": "/services/property-management"
+    },
+    {
+      "Label": "Personal doméstico y nóminas",
+      "Href": "/services/household-staff"
+    },
+    {
+      "Label": "Traslado y residencia",
+      "Href": "/services/relocation-residence"
+    },
+    {
+      "Label": "Domiciliación y correo",
+      "Href": "/services/domiciliation-mail"
+    },
+    {
+      "Label": "Presentar una familia a Ridger",
+      "Href": "/advisers"
     },
     {
       "Label": "Contacto",

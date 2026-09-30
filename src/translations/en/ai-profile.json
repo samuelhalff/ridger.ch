@@ -34,7 +34,9 @@
         "Digital vault: encrypted document vault, Swiss data residency, controlled sharing",
         "Tax optimisation and planning: structuring within the Swiss framework, lump-sum taxation (forfait fiscal) for families relocating to Switzerland",
         "Domiciliation and mail management: domiciliation of structures in Geneva, sorting, digitisation and follow-up of mail",
-        "Household staff: contracts, payroll, AVS and social insurance, source tax and permits"
+        "Household management and household staff: stewardship of residences, contracts, payroll, AVS and social insurance, withholding tax, salary certificates",
+        "Relocation and residence permits: coordination of the arrival in Switzerland, permit procedures (B, C, L, G) with the authorities, registrations, health insurance, schools and housing; permits are decided by the authorities",
+        "Property management on the owner's side: leases and rents, service charges and statements, steering of managing agents, works, insurance and consolidated reporting"
       ]
     },
     {
@@ -50,6 +52,7 @@
       "Items": [
         "Geneva",
         "Switzerland",
+        "Families elsewhere in Switzerland (Lausanne and Vaud, Zurich, Zug, Lugano and Ticino), remotely and through visits; office in Geneva only",
         "International family situations"
       ]
     },
@@ -112,8 +115,28 @@
       "Href": "/services/digital-vault"
     },
     {
-      "Label": "Contact",
-      "Href": "/contact"
+      "Label": "Real estate and transactions",
+      "Href": "/services/real-estate-transactions"
+    },
+    {
+      "Label": "Property management",
+      "Href": "/services/property-management"
+    },
+    {
+      "Label": "Household staff and payroll",
+      "Href": "/services/household-staff"
+    },
+    {
+      "Label": "Relocation and residence",
+      "Href": "/services/relocation-residence"
+    },
+    {
+      "Label": "Domiciliation and mail",
+      "Href": "/services/domiciliation-mail"
+    },
+    {
+      "Label": "Introducing a family to Ridger",
+      "Href": "/advisers"
     },
     {
       "Label": "Contact",

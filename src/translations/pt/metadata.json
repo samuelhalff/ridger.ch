@@ -62,7 +62,7 @@
     "/services/family-office-coordination": {
       "title": "Coordenação family office | Ridger",
       "description": "Coordenação em Genebra: um interlocutor único para os seus consultores e prestadores, a relocalização e as autorizações (B, C, G) e a intendência das suas residências.",
-      "keywords": "coordenação family office Genebra, interlocutor único, relocalização Genebra, permis B C G, viver na Suíça, procedimentos OCPM, trabalhador fronteiriço, intendência de residências, coordenação de prestadores"
+      "keywords": "coordenação family office Genebra, interlocutor único, mudança para Genebra, autorização B, C ou G, viver na Suíça, procedimentos OCPM, trabalhador fronteiriço, intendência de residências, coordenação de prestadores"
     },
     "/services/governance-succession": {
       "title": "Governação e sucessão | Ridger",
@@ -71,8 +71,8 @@
     },
     "/services/tax-administration": {
       "title": "Fiscalidade e administração | Ridger",
-      "description": "Fiscalidade, administração e salários em Genebra: conformidade e otimização fiscais, salários do pessoal doméstico (AVS, LPP, impôt à la source), domiciliação e correio.",
-      "keywords": "conformidade fiscal Suíça, otimização fiscal, forfait fiscal, salários pessoal doméstico, declarar empregada doméstica Genebra, encargos sociais AVS, domiciliação, gestão de correio, administração familiar Genebra"
+      "description": "Fiscalidade, administração e salários em Genebra: conformidade e otimização fiscais, salários do pessoal doméstico (AVS, LPP, imposto retido na fonte), domiciliação e correio.",
+      "keywords": "conformidade fiscal Suíça, otimização fiscal, tributação forfetária, salários pessoal doméstico, declarar empregada doméstica Genebra, encargos sociais AVS, domiciliação, gestão de correio, administração familiar Genebra"
     },
     "/services/digital-vault": {
       "title": "Cofre digital suíço | Ridger",

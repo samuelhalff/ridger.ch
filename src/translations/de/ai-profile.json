@@ -34,7 +34,9 @@
         "Digitaler Tresor: verschlüsselter Dokumententresor, Daten in der Schweiz gehostet, kontrollierte Freigabe",
         "Steueroptimierung und -planung: Strukturierung im schweizerischen Rahmen, Aufwandbesteuerung (Pauschalbesteuerung) für Familien, die sich in der Schweiz niederlassen",
         "Domizilierung und Postverwaltung: Domizilierung von Strukturen in Genf, Sortierung, Digitalisierung und Nachverfolgung der Post",
-        "Hauspersonal: Verträge, Lohnabrechnung, AHV und Sozialversicherungen, Quellensteuer und Bewilligungen"
+        "Haushaltsführung und Hauspersonal: Betreuung der Residenzen, Verträge, Lohnabrechnung, AHV und Sozialversicherungen, Quellensteuer, Lohnausweise",
+        "Umzug und Aufenthaltsbewilligungen: Koordination der Ankunft in der Schweiz, Bewilligungsverfahren (B, C, L, G) bei den Behörden, Anmeldungen, Krankenversicherung, Schulen und Wohnen; über Bewilligungen entscheiden die Behörden",
+        "Liegenschaftsverwaltung auf Eigentümerseite: Mietverträge und Mieten, Nebenkosten und Abrechnungen, Steuerung der Verwaltungen, Arbeiten, Versicherungen und konsolidiertes Reporting"
       ]
     },
     {
@@ -50,6 +52,7 @@
       "Items": [
         "Genf",
         "Schweiz",
+        "Familien in der übrigen Schweiz (Lausanne und Waadt, Zürich, Zug, Lugano und Tessin), aus der Ferne und bei Besuchen; Büro nur in Genf",
         "Internationale Familiensituationen"
       ]
     },
@@ -114,6 +117,26 @@
     {
       "Label": "Immobilien und Transaktionen",
       "Href": "/services/real-estate-transactions"
+    },
+    {
+      "Label": "Liegenschaftsverwaltung",
+      "Href": "/services/property-management"
+    },
+    {
+      "Label": "Hauspersonal und Löhne",
+      "Href": "/services/household-staff"
+    },
+    {
+      "Label": "Umzug und Bewilligungen",
+      "Href": "/services/relocation-residence"
+    },
+    {
+      "Label": "Domizil und Postverwaltung",
+      "Href": "/services/domiciliation-mail"
+    },
+    {
+      "Label": "Eine Familie an Ridger vermitteln",
+      "Href": "/advisers"
     },
     {
       "Label": "Kontakt",
