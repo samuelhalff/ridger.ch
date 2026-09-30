@@ -26,6 +26,7 @@ const {
   significantTokens,
   stripAccents,
 } = require("./keywordResearch");
+const titleCase = require("./titleCase");
 
 const LOCALES = ["fr", "en", "de", "es", "pt"];
 
@@ -513,12 +514,18 @@ function checkSeoStructure(article, ctx) {
   if (primary && !containsKeywordLoosely(title, primary, 0.6)) {
     errors.push(`title/H1 does not contain the primary keyword "${primary}"`);
   }
+  if (titleCase.startsWithLowercase(title)) {
+    errors.push(`title/H1 starts with a lowercase letter: "${title}"`);
+  }
   if (/^#\s/m.test(content)) errors.push("content contains an H1 (the page renders the title as H1)");
 
   // <title>
   const seoTitle = String(article.seoTitle || "");
   if (seoTitle.length < L.seoTitleMin || seoTitle.length > L.seoTitleMax) {
     errors.push(`seoTitle length ${seoTitle.length} outside ${L.seoTitleMin}–${L.seoTitleMax} (brand suffix added at render)`);
+  }
+  if (titleCase.startsWithLowercase(seoTitle)) {
+    errors.push(`seoTitle starts with a lowercase letter: "${seoTitle}"`);
   }
   if (primary && seoTitle && !containsKeywordLoosely(seoTitle, primary, 0.6)) {
     errors.push(`seoTitle does not contain the primary keyword "${primary}"`);

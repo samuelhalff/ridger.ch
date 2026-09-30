@@ -98,6 +98,7 @@ const rules = require("./lib/ridgerArticleRules");
 const KEYWORD_RESEARCH_STATE = newResearchState();
 const { writeJsonFilesAtomically } = require("./lib/atomicJsonWrite");
 const translationRepair = require("./lib/translationRepair");
+const { normalizeArticleCasing } = require("./lib/titleCase");
 
 const args = new Set(process.argv.slice(2));
 const PLAN_ONLY = args.has("--plan-only");
@@ -864,7 +865,7 @@ function finalizeFrench(raw, { research, references, item, keywords, today, base
   let content = pick("content").replace(/^#\s+.*\n+/, "");
   content = sanitizeExternalLinks(content, references);
   content = appendReferencesSection(content, references, "fr");
-  return {
+  return normalizeArticleCasing({
     slug: base?.slug || research.slug,
     author: "Ridger",
     image: DEFAULT_IMAGE,
@@ -881,7 +882,7 @@ function finalizeFrench(raw, { research, references, item, keywords, today, base
     imageAlt: pick("imageAlt"),
     keywords: { primary: keywords.fr.primary, secondary: keywords.fr.secondary },
     backlogId: item.id,
-  };
+  }, "fr");
 }
 
 function assembleTranslation(tr, { frArticle, keywords, locale }) {
@@ -891,7 +892,7 @@ function assembleTranslation(tr, { frArticle, keywords, locale }) {
     url: r.url,
   }));
   const body = sanitizeExternalLinks(stripReferencesSection(String(tr?.content || "").replace(/^#\s+.*\n+/, "")), frArticle.references);
-  return {
+  return normalizeArticleCasing({
     slug: frArticle.slug,
     author: frArticle.author,
     image: frArticle.image,
@@ -908,7 +909,7 @@ function assembleTranslation(tr, { frArticle, keywords, locale }) {
     imageAlt: String(tr?.imageAlt || "").trim(),
     keywords: { primary: keywords[locale].primary, secondary: keywords[locale].secondary },
     backlogId: frArticle.backlogId,
-  };
+  }, locale);
 }
 
 /**
@@ -946,7 +947,7 @@ async function translateLocale({ locale, frArticle, keywords, servicePathMaps, a
       context: article.description,
       log,
     });
-    article = fit.article;
+    article = normalizeArticleCasing(fit.article, locale);
 
     const res = validateLocaleArticle(article, { locale, keywords, allowedPaths, frArticle });
     res.warnings.forEach((w) => console.warn(`   ⚠️ ${locale}: ${w}`));
