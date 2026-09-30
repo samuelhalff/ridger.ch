@@ -206,8 +206,11 @@ For bad content to reach the website, ALL of these would need to fail simultaneo
 ### Local Testing Before Commit
 
 ```bash
-# Test AI generation (dry run)
-AZURE_AGENT_ENDPOINT=... AZURE_AGENT_NAME=... node scripts/ai-ressources-update.js --dry-run
+# Test AI generation end to end (draft + translations + validation), writes nothing
+AZURE_OPENAI_ENDPOINT=... AZURE_OPENAI_API_KEY=... node scripts/ai-ressources-update.js --no-write
+
+# Dry run: topic + keyword research + research outline only (no article generation)
+node scripts/ai-ressources-update.js --dry-run
 
 # Validate all resources
 node scripts/check-ressources-links.js --all-locales --remote

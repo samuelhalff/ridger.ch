@@ -5,7 +5,7 @@
  * topic picker & diversity, keyword derivation from autocomplete JSON, hard
  * rules (incl. the 2026 legal-audit rejections), SEO/GEO structure checks,
  * number parity, FAQ extraction, backlog integrity — plus one offline
- * end-to-end dry run through the real orchestrator with a mocked model.
+ * end-to-end generation (--no-write) through the real orchestrator with a mocked model.
  * No network, no Azure.
  */
 
@@ -444,8 +444,8 @@ test("number parity normalises Swiss/English/German separators and ignores link 
 
 // ─── Offline end-to-end ───────────────────────────────────────────────────
 
-test("offline end-to-end dry run through the real orchestrator (mocked model)", () => {
-  const r = spawnSync(process.execPath, ["scripts/ai-ressources-update.js", "--dry-run"], {
+test("offline end-to-end generation through the real orchestrator (mocked model, --no-write)", () => {
+  const r = spawnSync(process.execPath, ["scripts/ai-ressources-update.js", "--no-write"], {
     cwd: ROOT,
     env: {
       ...process.env,

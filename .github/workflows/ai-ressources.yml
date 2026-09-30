@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry run: research + generate + validate, but do not commit/push"
+        description: "Dry run: topic + keyword research + research outline only (no article generation, no commit/push)"
         required: false
         type: boolean
         default: false
@@ -75,7 +75,7 @@ jobs:
         run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: Pipeline unit tests (topic picker, keywords, guardrails)
-        run: node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js scripts/article-guardrails.test.js
+        run: node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js scripts/translation-repair.test.js scripts/article-guardrails.test.js
 
       # Time budget (worst case, see worstCaseBudgets() in
       # scripts/lib/azureClients.js and its test):

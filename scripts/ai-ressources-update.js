@@ -29,12 +29,19 @@
  *                   Up to 2 repair rounds, else the article is discarded.
  *   6. Translate  — per locale with that locale's researched keywords; number
  *                   parity, structure parity and the same checks per locale.
+ *                   Targeted repairs before any full retranslation (see
+ *                   scripts/lib/translationRepair.js): dropped links →
+ *                   link-repair call; title/seoTitle/meta/alt too long →
+ *                   "shorten to ≤ N" call. Retries carry the exact errors,
+ *                   limits and counts; the last attempt uses the draft
+ *                   (stronger) deployment.
  *   7. Write      — append to all 5 ressources.json at the same index (the
  *                   build's key-parity check is index-based) + research log.
  *
  * Usage:
  *   node scripts/ai-ressources-update.js --plan-only     # topic + keyword research only (no Azure)
- *   node scripts/ai-ressources-update.js --dry-run       # full run, prints, writes nothing
+ *   node scripts/ai-ressources-update.js --dry-run       # topic + keywords + research outline; no article generation, writes nothing
+ *   node scripts/ai-ressources-update.js --no-write      # full generation + validation, writes nothing (offline e2e test)
  *   node scripts/ai-ressources-update.js --apply [--translate-existing]
  *
  * Env: see docs/article-pipeline.md.
@@ -90,10 +97,15 @@ const rules = require("./lib/ridgerArticleRules");
 // every request (Google on CI runners) is skipped for the rest of the run.
 const KEYWORD_RESEARCH_STATE = newResearchState();
 const { writeJsonFilesAtomically } = require("./lib/atomicJsonWrite");
+const translationRepair = require("./lib/translationRepair");
 
 const args = new Set(process.argv.slice(2));
 const PLAN_ONLY = args.has("--plan-only");
-const APPLY = args.has("--apply") && !args.has("--dry-run") && !PLAN_ONLY;
+// --dry-run stops after topic + keyword research + research outline (like the
+// switzerlandresidency.ch pipeline): no FR draft, no translations.
+const DRY_RUN = args.has("--dry-run") && !PLAN_ONLY;
+const NO_WRITE = args.has("--no-write");
+const APPLY = args.has("--apply") && !DRY_RUN && !NO_WRITE && !PLAN_ONLY;
 const TRANSLATE_EXISTING = args.has("--translate-existing");
 
 const FORCE_TOPIC = (process.env.FORCE_TOPIC || "").trim();
@@ -219,15 +231,34 @@ async function callDraftModel(prompt, label, ctx = {}) {
   });
 }
 
-async function callTranslateModel(prompt, label, ctx = {}) {
-  if (MOCK) return MOCK.translate({ prompt, ...ctx });
+/**
+ * Translation-step model. `strong` switches to the draft deployment
+ * (AZURE_OPENAI_DRAFT_*, gpt-5.2 in CI) — used for the final attempt after the
+ * main deployment failed. Labels: translate-* / shorten-* / links-*.
+ */
+async function callTranslateModel(prompt, label, ctx = {}, { strong = false } = {}) {
+  if (MOCK) {
+    const kind = label.startsWith("shorten") ? "shorten" : label.startsWith("links") ? "linkRepair" : "translate";
+    if (kind !== "translate" && typeof MOCK[kind] !== "function") return {};
+    return MOCK[kind]({ prompt, label, strong, ...ctx });
+  }
   const a = getAzure();
+  const target = strong
+    ? { endpoint: a.AZURE_OPENAI_DRAFT_ENDPOINT, deployment: a.AZURE_OPENAI_DRAFT_DEPLOYMENT, apiVersion: a.AZURE_OPENAI_DRAFT_API_VERSION }
+    : {};
   return a.azureOpenAIJson(prompt, {
+    ...target,
     maxTokens: a.AZURE_OPENAI_DRAFT_MAX_TOKENS,
     temperature: 0.2,
     debugLabel: label,
     system: "You are a senior native-speaker editor and translator for a Swiss family office. Output ONLY a valid JSON object.",
   });
+}
+
+function strongTranslateDeploymentName() {
+  if (MOCK) return "mock-strong";
+  const a = getAzure();
+  return a.AZURE_OPENAI_DRAFT_DEPLOYMENT;
 }
 
 /**
@@ -416,6 +447,10 @@ function buildRepairPrompt({ article, problems, keywords, servicePathMaps, item,
 
 function buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, problems = [] }) {
   const k = keywords[locale];
+  // The references list is appended by the pipeline: the model only sees and
+  // returns the body, so the counts below are the body's.
+  const frBody = stripReferencesSection(frArticle.content);
+  const expected = translationRepair.expectedLinks(frBody, locale, servicePathMaps);
   const frServiceUrls = {};
   for (const svc of rules.CANONICAL_SERVICES) {
     frServiceUrls[rules.localizedServiceUrl("fr", svc, servicePathMaps)] = rules.localizedServiceUrl(locale, svc, servicePathMaps);
@@ -425,15 +460,23 @@ function buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, pr
     "",
     "HARD REQUIREMENTS:",
     "- Keep EVERY number, amount, percentage, date and legal reference exactly as in the French (digits, not words). Dates stay in ISO format YYYY-MM-DD.",
-    "- Keep the Markdown structure identical: same number of ## and ### headings, same bullets, same number of links, same order. External URLs unchanged.",
+    "- Keep the Markdown structure identical: same number of ## and ### headings, same bullets, same number of links, same order. External URLs unchanged. Every link of the French stays a link, at the same sentence.",
     `- Section headings: "## ${KEY(locale, "facts")}" for "## Points clés" and "## ${KEY(locale, "faq")}" for "## Questions fréquentes"; "### ${rules.REFERENCES_HEADINGS[locale]}" for "### Références".`,
-    "- Question headings stay questions ending with '?'.",
+    "- Question headings stay questions ending with '?'. Do NOT write a references list at the end (it is appended automatically).",
     `- Internal links: replace each French path with its ${locale} equivalent: ${JSON.stringify(frServiceUrls)} ; any /fr/ressources/articles/<slug>/ becomes /${locale}/ressources/articles/<slug>/ (slug unchanged).`,
     `- SEO for this market: primary keyword "${k.primary}" must appear in title, seoTitle, metaDescription and the first sentence; weave the secondary keywords (${k.secondary.map((s) => `"${s}"`).join(", ")}) naturally — at least one question heading must contain one.`,
-    "- seoTitle ≤ 51 characters, no brand. metaDescription 110–160 characters. imageAlt 40–120 characters. title 20–75 characters.",
     "- No prices, no quote tool, no AI assistant, no e-mail address, no guarantees, no US-person structuring. Do not add facts that are not in the French.",
-    "- tags: exactly the same number of tags as the French, translated, lowercase. referenceLabels: exactly one translated label per French reference label, same order (keep the leading domain as is).",
-    problems.length ? `\nYOUR PREVIOUS ATTEMPT WAS REJECTED. Fix these problems:\n${problems.map((p) => `- ${p}`).join("\n")}` : "",
+    `- tags: exactly ${frArticle.tags.length} tags (same number as the French), translated, lowercase. referenceLabels: exactly ${frArticle.references.length} translated labels, one per French reference label, same order (keep the leading domain as is).`,
+    "",
+    translationRepair.requirementsBlock({ frBody, expected, primary: k.primary }),
+    problems.length
+      ? [
+          "",
+          "YOUR PREVIOUS ATTEMPT WAS REJECTED by the automatic validator with these exact errors:",
+          ...problems.map((p) => `- ${p}`),
+          "Fix every one of them while respecting ALL the limits and counts above, and return the corrected FULL output (all fields, full content) — not a diff.",
+        ].join("\n")
+      : "",
     "",
     "FRENCH SOURCE:",
     JSON.stringify(
@@ -445,7 +488,7 @@ function buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, pr
         imageAlt: frArticle.imageAlt,
         tags: frArticle.tags,
         referenceLabels: frArticle.references.map((r) => r.labelKey),
-        content: frArticle.content,
+        content: frBody,
       },
       null,
       2,
@@ -549,12 +592,7 @@ async function buildValidatedReferences(candidates, item) {
   return { references: out, official };
 }
 
-function stripReferencesSection(content) {
-  return String(content || "")
-    .replace(/\n+-{3,}\s*\n+#{2,3}\s+(Références|References|Referenzen|Referencias|Referências)\b[\s\S]*$/i, "")
-    .replace(/\n+#{2,3}\s+(Références|References|Referenzen|Referencias|Referências)\b[\s\S]*$/i, "")
-    .trimEnd();
-}
+const { stripReferencesSection } = translationRepair;
 
 function appendReferencesSection(content, references, locale) {
   const body = stripReferencesSection(content);
@@ -715,43 +753,66 @@ async function researchKeywords({ item, backlog }) {
   return { keywords, raw, trend };
 }
 
+/**
+ * One research round (topic outline + validated official references).
+ * @returns {Promise<{ok:true, research, references, provider} | {ok:false, error:Error, retryHint:string}>}
+ */
+async function researchOnce({ item, keywords, frArticles, today, attempt, retryHint }) {
+  log(`🧭 Research attempt ${attempt}/${MAX_RESEARCH_ATTEMPTS}…`);
+  const existing = sortArticlesNewestFirst(frArticles).map((a) => ({ slug: a.slug, title: a.title }));
+  const { provider, json } = await callResearchModel(
+    buildResearchPrompt({ item, keywords, existing, today, retryHint }),
+    { item, keywords, today, attempt },
+  );
+  const research = json?.research || json;
+  if (!research || !research.title) {
+    return { ok: false, error: new Error("research payload missing title"), retryHint: "La réponse précédente était invalide : renvoie l'objet research complet." };
+  }
+  research.slug = ensureSlug(research.slug, keywords.fr.primary, research.title);
+  const conflict = checkTopicGuardrails(frArticles, {
+    slug: research.slug,
+    title: research.title,
+    description: research.description || "",
+  });
+  if (conflict) {
+    const error = new Error(`research topic rejected: ${conflict}`);
+    console.warn(`   ↳ ${error.message}`);
+    return { ok: false, error, retryHint: `Sujet rejeté (${conflict}). Garde le thème mais prends un angle nettement différent, avec un nouveau titre et un nouveau slug.` };
+  }
+  const { references, official } = await buildValidatedReferences(research.references, item);
+  log(`🔗 References: ${references.length} valid (${official} official) via ${provider}`);
+  if (official < MIN_OFFICIAL_REFERENCES || official !== references.length) {
+    const error = new Error(`not enough verifiable official references (${references.length} valid, ${official} official)`);
+    console.warn(`   ↳ ${error.message}`);
+    return { ok: false, error, retryHint: "Les références précédentes étaient invalides ou non officielles : fournis des URL officielles exactes (admin.ch, fedlex, estv, sem, ch.ch, sites cantonaux)." };
+  }
+  return { ok: true, research, references, provider };
+}
+
+/** Dry run: research outline only (no draft, no translation). */
+async function researchOutline({ item, keywords, frArticles, today }) {
+  let retryHint = "";
+  let lastError = null;
+  for (let attempt = 1; attempt <= MAX_RESEARCH_ATTEMPTS; attempt++) {
+    const r = await researchOnce({ item, keywords, frArticles, today, attempt, retryHint });
+    if (r.ok) return r;
+    lastError = r.error;
+    retryHint = r.retryHint;
+  }
+  throw lastError || new Error("research failed");
+}
+
 async function generateFrench({ item, keywords, frArticles, servicePathMaps, allowedPaths, today }) {
   let retryHint = "";
   let lastError = null;
   for (let attempt = 1; attempt <= MAX_RESEARCH_ATTEMPTS; attempt++) {
-    log(`🧭 Research attempt ${attempt}/${MAX_RESEARCH_ATTEMPTS}…`);
-    const existing = sortArticlesNewestFirst(frArticles).map((a) => ({ slug: a.slug, title: a.title }));
-    const { provider, json } = await callResearchModel(
-      buildResearchPrompt({ item, keywords, existing, today, retryHint }),
-      { item, keywords, today, attempt },
-    );
-    const research = json?.research || json;
-    if (!research || !research.title) {
-      lastError = new Error("research payload missing title");
-      retryHint = "La réponse précédente était invalide : renvoie l'objet research complet.";
+    const r = await researchOnce({ item, keywords, frArticles, today, attempt, retryHint });
+    if (!r.ok) {
+      lastError = r.error;
+      retryHint = r.retryHint;
       continue;
     }
-    research.slug = ensureSlug(research.slug, keywords.fr.primary, research.title);
-    const conflict = checkTopicGuardrails(frArticles, {
-      slug: research.slug,
-      title: research.title,
-      description: research.description || "",
-    });
-    if (conflict) {
-      lastError = new Error(`research topic rejected: ${conflict}`);
-      retryHint = `Sujet rejeté (${conflict}). Garde le thème mais prends un angle nettement différent, avec un nouveau titre et un nouveau slug.`;
-      console.warn(`   ↳ ${lastError.message}`);
-      continue;
-    }
-
-    const { references, official } = await buildValidatedReferences(research.references, item);
-    log(`🔗 References: ${references.length} valid (${official} official) via ${provider}`);
-    if (official < MIN_OFFICIAL_REFERENCES || official !== references.length) {
-      lastError = new Error(`not enough verifiable official references (${references.length} valid, ${official} official)`);
-      retryHint = "Les références précédentes étaient invalides ou non officielles : fournis des URL officielles exactes (admin.ch, fedlex, estv, sem, ch.ch, sites cantonaux).";
-      console.warn(`   ↳ ${lastError.message}`);
-      continue;
-    }
+    const { research, references, provider } = r;
 
     const draft = await callDraftModel(
       buildDraftPrompt({ item, research, references, keywords, servicePathMaps, today }),
@@ -823,58 +884,86 @@ function finalizeFrench(raw, { research, references, item, keywords, today, base
   };
 }
 
+function assembleTranslation(tr, { frArticle, keywords, locale }) {
+  const labels = Array.isArray(tr?.referenceLabels) ? tr.referenceLabels : [];
+  const references = frArticle.references.map((r, i) => ({
+    labelKey: typeof labels[i] === "string" && labels[i].trim() ? labels[i].trim() : r.labelKey,
+    url: r.url,
+  }));
+  const body = sanitizeExternalLinks(stripReferencesSection(String(tr?.content || "").replace(/^#\s+.*\n+/, "")), frArticle.references);
+  return {
+    slug: frArticle.slug,
+    author: frArticle.author,
+    image: frArticle.image,
+    date: frArticle.date,
+    updated: frArticle.updated,
+    references,
+    category: frArticle.category,
+    tags: (Array.isArray(tr?.tags) ? tr.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean),
+    title: String(tr?.title || "").trim(),
+    description: String(tr?.description || "").trim(),
+    content: appendReferencesSection(body, references, locale),
+    seoTitle: String(tr?.seoTitle || "").trim(),
+    metaDescription: String(tr?.metaDescription || "").trim(),
+    imageAlt: String(tr?.imageAlt || "").trim(),
+    keywords: { primary: keywords[locale].primary, secondary: keywords[locale].secondary },
+    backlogId: frArticle.backlogId,
+  };
+}
+
+/**
+ * One locale: translate → targeted link repair → targeted field-length fit →
+ * full validation. On failure the next attempt retranslates with the exact
+ * errors, limits and counts; the final attempt escalates to the draft
+ * deployment. Nothing is relaxed: the result must pass validateLocaleArticle.
+ */
+async function translateLocale({ locale, frArticle, keywords, servicePathMaps, allowedPaths }) {
+  const frBody = stripReferencesSection(frArticle.content);
+  const expected = translationRepair.expectedLinks(frBody, locale, servicePathMaps);
+  const localeName = LOCALE_NAMES[locale];
+  let problems = [];
+  for (let attempt = 1; attempt <= MAX_TRANSLATION_ATTEMPTS; attempt++) {
+    const strong = MAX_TRANSLATION_ATTEMPTS > 1 && attempt === MAX_TRANSLATION_ATTEMPTS;
+    const call = (prompt, label) => callTranslateModel(prompt, label, { locale, frArticle, keywords, servicePathMaps, problems }, { strong });
+    log(`🌍 ${locale}: translation attempt ${attempt}/${MAX_TRANSLATION_ATTEMPTS}${strong ? ` (escalated to ${strongTranslateDeploymentName()})` : ""}`);
+    const tr = await call(buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, problems }), `translate-${locale}`);
+    let article = assembleTranslation(tr, { frArticle, keywords, locale });
+
+    // Links: programmatic parity check, then one targeted repair call.
+    const body = stripReferencesSection(article.content);
+    const fixedLinks = await translationRepair.repairLinks({ locale, localeName, localeBody: body, expected, call, log });
+    if (fixedLinks?.repaired) {
+      article = { ...article, content: appendReferencesSection(sanitizeExternalLinks(fixedLinks.content, frArticle.references), article.references, locale) };
+    }
+
+    // Lengths: small "rewrite to ≤ N characters" call instead of retranslating.
+    const fit = await translationRepair.fitFieldLengths({
+      article,
+      locale,
+      localeName,
+      primary: keywords[locale].primary,
+      call,
+      context: article.description,
+      log,
+    });
+    article = fit.article;
+
+    const res = validateLocaleArticle(article, { locale, keywords, allowedPaths, frArticle });
+    res.warnings.forEach((w) => console.warn(`   ⚠️ ${locale}: ${w}`));
+    if (!res.problems.length) {
+      log(`✅ ${locale} valid`);
+      return article;
+    }
+    problems = res.problems;
+    console.warn(`   ✗ ${locale}: ${problems.length} problem(s)\n     - ${problems.slice(0, 10).join("\n     - ")}`);
+  }
+  throw new Error(`${locale} translation failed validation after ${MAX_TRANSLATION_ATTEMPTS} attempts`);
+}
+
 async function translateAll({ frArticle, keywords, servicePathMaps, allowedPaths }) {
   const out = {};
   for (const locale of TARGET_LOCALES) {
-    let problems = [];
-    let done = null;
-    for (let attempt = 1; attempt <= MAX_TRANSLATION_ATTEMPTS; attempt++) {
-      log(`🌍 ${locale}: translation attempt ${attempt}/${MAX_TRANSLATION_ATTEMPTS}`);
-      const tr = await callTranslateModel(
-        buildTranslatePrompt({ locale, frArticle, keywords, servicePathMaps, problems }),
-        `translate-${locale}`,
-        { locale, frArticle, keywords, servicePathMaps, problems },
-      );
-      const labels = Array.isArray(tr?.referenceLabels) ? tr.referenceLabels : [];
-      const references = frArticle.references.map((r, i) => ({
-        labelKey: typeof labels[i] === "string" && labels[i].trim() ? labels[i].trim() : r.labelKey,
-        url: r.url,
-      }));
-      const content = appendReferencesSection(
-        sanitizeExternalLinks(String(tr?.content || ""), frArticle.references),
-        references,
-        locale,
-      );
-      const article = {
-        slug: frArticle.slug,
-        author: frArticle.author,
-        image: frArticle.image,
-        date: frArticle.date,
-        updated: frArticle.updated,
-        references,
-        category: frArticle.category,
-        tags: (Array.isArray(tr?.tags) ? tr.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean),
-        title: String(tr?.title || "").trim(),
-        description: String(tr?.description || "").trim(),
-        content,
-        seoTitle: String(tr?.seoTitle || "").trim(),
-        metaDescription: String(tr?.metaDescription || "").trim(),
-        imageAlt: String(tr?.imageAlt || "").trim(),
-        keywords: { primary: keywords[locale].primary, secondary: keywords[locale].secondary },
-        backlogId: frArticle.backlogId,
-      };
-      const res = validateLocaleArticle(article, { locale, keywords, allowedPaths, frArticle });
-      res.warnings.forEach((w) => console.warn(`   ⚠️ ${locale}: ${w}`));
-      if (!res.problems.length) {
-        done = article;
-        log(`✅ ${locale} valid`);
-        break;
-      }
-      problems = res.problems;
-      console.warn(`   ✗ ${locale}: ${problems.length} problem(s)\n     - ${problems.slice(0, 10).join("\n     - ")}`);
-    }
-    if (!done) throw new Error(`${locale} translation failed validation after ${MAX_TRANSLATION_ATTEMPTS} attempts`);
-    out[locale] = done;
+    out[locale] = await translateLocale({ locale, frArticle, keywords, servicePathMaps, allowedPaths });
   }
   return out;
 }
@@ -936,6 +1025,7 @@ function writeArticleAtomically({ data, byLocale, researchLog, files = {} }) {
 
 async function main() {
   const today = isoToday();
+  log(`▶️ Mode: ${PLAN_ONLY ? "plan-only (topic + keywords, no Azure)" : DRY_RUN ? "dry-run (topic + keywords + research outline; no article generation, nothing written)" : APPLY ? "apply" : "no-write (full generation, nothing written)"}`);
   const data = {};
   for (const l of LOCALES) data[l] = loadJSON(ressourcesPath(l));
   const frArticles = Array.isArray(data.fr.Articles) ? data.fr.Articles : [];
@@ -964,6 +1054,30 @@ async function main() {
 
   ensureAzureConfigured();
 
+  if (DRY_RUN) {
+    // Same stopping point as the switzerlandresidency.ch pipeline: topic,
+    // keywords and the research outline — no article generation, no writes.
+    log("\n[dry-run] Topic + keyword research done; building the research outline only (no draft, no translations).");
+    const { research, references, provider } = await researchOutline({ item: topic.item, keywords, frArticles, today });
+    log("\n=== DRY RUN — OUTLINE (no article generated, nothing written) ===");
+    log(JSON.stringify({
+      topic: { id: topic.item.id, category: topic.item.category, theme: topic.item.theme, forced: topic.forced },
+      keywords: Object.fromEntries(LOCALES.map((l) => [l, { primary: keywords[l].primary, secondary: keywords[l].secondary }])),
+      provider,
+      slug: research.slug,
+      title: research.title,
+      seoTitle: research.seoTitle,
+      metaDescription: research.metaDescription,
+      directAnswer: research.directAnswer,
+      outline: research.outline,
+      faq: research.faq,
+      recentDevelopments: research.recentDevelopments,
+      references,
+    }, null, 2));
+    log("\n[dry-run] Stopped before article generation — nothing written.");
+    return;
+  }
+
   const { article: frArticle, research, provider } = await generateFrench({
     item: topic.item,
     keywords,
@@ -985,7 +1099,7 @@ async function main() {
   }
 
   if (!APPLY) {
-    log("\n[dry-run] Article generated and validated — not written.");
+    log("\n[no-write] Article generated and validated — not written.");
     log(JSON.stringify({ slug: frArticle.slug, title: frArticle.title, seoTitle: frArticle.seoTitle, metaDescription: frArticle.metaDescription, keywords: frArticle.keywords }, null, 2));
     log(frArticle.content);
     return;
@@ -1025,6 +1139,7 @@ if (require.main === module) {
 
 module.exports = {
   appendReferencesSection,
+  assembleTranslation,
   buildValidatedReferences,
   writeArticleAtomically,
   buildDraftPrompt,

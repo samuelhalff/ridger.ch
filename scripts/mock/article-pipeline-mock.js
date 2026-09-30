@@ -88,6 +88,7 @@ module.exports = {
     };
   },
   draft({ item, research, references, keywords, servicePathMaps, today }) {
+    if (process.env.MOCK_FORBID_GENERATION === "1") throw new Error("mock: article generation called during a dry run");
     const a = buildArticle("fr", {
       keywords,
       references,
@@ -100,6 +101,7 @@ module.exports = {
     return { newArticle: article };
   },
   translate({ locale, frArticle, keywords, servicePathMaps }) {
+    if (process.env.MOCK_FORBID_GENERATION === "1") throw new Error("mock: translation called during a dry run");
     const a = buildArticle(locale, {
       keywords,
       references: frArticle.references,

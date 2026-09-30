@@ -40,6 +40,12 @@ It is a port of ark-fid.ch's `ai-ressources-update.js`, adapted to Ridger's voic
    - **structure parity** (H2/H3/FAQ/key-facts/link counts);
    - not identical to FR;
    - same tag count.
+
+   Every translation prompt states the hard character limits (title ≤ 75, seoTitle ≤ 51 without the brand, meta 110–160) and the required counts of the FR body (H2/H3/FAQ/key facts/external and internal links, every link target). Before a failed attempt is retried, two targeted repairs run (`scripts/lib/translationRepair.js`), neither of which relaxes a rule:
+   - **link parity** is checked programmatically (every FR link target, with the same number of occurrences; internal paths mapped to the locale). If links were dropped, one call gets the missing URLs with their FR sentences and returns the body with the links put back. The result is kept only if parity is then exact and the heading/FAQ structure is unchanged;
+   - **field lengths**: if title/seoTitle/metaDescription/imageAlt are outside the limits, a small "rewrite these fields to ≤ N characters, keep the primary keyword" call runs (max 2 rounds) instead of retranslating the whole article. Only values that fit are accepted.
+
+   A retry sends the exact validator errors and asks for the corrected full output. The last attempt switches to the draft deployment (`AZURE_OPENAI_DRAFT_DEPLOYMENT`, gpt-5.2).
 7. **Write.** The article is appended to all 5 `ressources.json` files at the same index, together with the research-log entry, **all-or-nothing** (`scripts/lib/atomicJsonWrite.js`): every file is serialized, parsed back and re-checked (index alignment, slug exactly once, hard rules, official references), written to a temp file, then swapped in with rollback. On any failure the tree is unchanged. The workflow then gets `has_new`, `slug` and `title`.
 8. **Workflow.** The workflow then runs these steps:
    1. fix internal links;
@@ -123,14 +129,15 @@ Repository **variables** (all optional; defaults in brackets):
 ```
 npm run articles:plan        # topic + live keyword research only, no Azure, writes nothing
 npm run keywords:refresh     # pre-research keywords for all todo items into the backlog (run locally, not on CI; ~1 req/300 ms, 20 min cap; -- --missing-only to resume, -- --id <id> for one)
-npm run articles:dry-run     # full generation + validation, writes nothing (needs Azure env)
+npm run articles:dry-run     # topic + keywords + research outline only; no article generation, writes nothing (needs Azure env for the research call)
+node scripts/ai-ressources-update.js --no-write   # full generation + validation, writes nothing
 npm run articles:generate    # full run, appends to the 5 locales
 npm run validate:article-seo -- --slug <slug>
 npm run test:pipeline        # unit tests + an offline end-to-end run with a mocked model
 ```
 
 Manual run: Actions → **AI Resources Update** → *Run workflow*. The options are:
-- `dry_run`: generate and validate without committing;
+- `dry_run`: stop after topic selection, keyword research and the research outline (title, slug, question plan, validated references). No article is generated, nothing is committed;
 - `topic`: a backlog id such as `impot-fortune-geneve-vaud-calcul-evaluation`, or free text, optionally with `topic_keywords` and `topic_category`;
 - `skip_topic_rotation`.
 
