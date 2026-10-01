@@ -87,6 +87,11 @@ jobs:
       - name: Check malformed internal markdown links (blocking)
         run: node scripts/fix-article-internal-links.js --check
 
+      # Offline and instant (reads repo files only): sitemap, llms.txt and
+      # metadata must cover every service and location page.
+      - name: SEO/GEO source check (blocking)
+        run: npm run seo:check
+
       - name: Validate Turnstile config
         run: |
           if [ -z "${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}" ]; then
@@ -212,22 +217,22 @@ jobs:
           echo "[deploy] shared/.env written via sftp"
 
       # ─── Extract, symlink and cleanup ───
+      # houle's router (current/server.js on the shared site) notices that
+      # ridger's current/.next/BUILD_ID changed and cycles the ridger child.
       - name: Extract, symlink and cleanup releases
+        id: extract
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
           PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
           PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+          BASE="/srv/customer/sites/ridger.ch"
+          BUILD_ID=$(cat dist/.next/BUILD_ID)
 
-          echo "[deploy] Testing SSH connectivity to $HOST:$PORT as $USER"
-          if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
-            echo "[deploy] SSH probe successful"
-          else
-            echo "[deploy] SSH probe failed (this is normal for some server configurations); proceeding with deployment"
-          fi
-
-          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" bash -lc '
+          # No separate ssh "probe" session: it gated nothing and every extra
+          # session counts against the host's exec throttle.
+          if sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=15 "$USER@$HOST" bash -lc '
             set -euo pipefail
             BASE_DIR="/srv/customer/sites/ridger.ch"
             RELEASES_DIR="$BASE_DIR/releases"
@@ -277,6 +282,14 @@ jobs:
               echo "[deploy] Installed restart-server.sh to shared/" >> "$LOG"
             fi
 
+            # Rollback state, read back by CI over SFTP. Written BEFORE the
+            # switch so a switched release always has a recorded predecessor.
+            PREV_REL=$(readlink "$CURRENT_LINK" 2>/dev/null || true)
+            PREV_BUILD_ID=$(cat "$CURRENT_LINK/.next/BUILD_ID" 2>/dev/null || true)
+            NEW_BUILD_ID=$(cat "$REL_DIR/.next/BUILD_ID")
+            printf "TS=%s\nNEW_REL=%s\nNEW_BUILD_ID=%s\nPREV_REL=%s\nPREV_BUILD_ID=%s\n" "$TS" "$REL_DIR" "$NEW_BUILD_ID" "$PREV_REL" "$PREV_BUILD_ID" > "$BASE_DIR/deploy_state" || { echo "[deploy] ERROR: could not write deploy_state" >> "$LOG"; exit 1; }
+            echo "[deploy] Previous release: ${PREV_REL:-none} (${PREV_BUILD_ID:-?})" >> "$LOG"
+
             ln -sfn "$REL_DIR" "$CURRENT_LINK"
             echo "$TS" > "$BASE_DIR/last_release_ts"
             echo "[deploy] Updated current symlink to $REL_DIR" >> "$LOG"
@@ -287,61 +300,186 @@ jobs:
             # Only directories count as releases: a stray file as the last
             # loop item made the loop exit 1 under set -e and failed a live
             # deploy (houle.ai, 2026-09-25..30). Best-effort, never fatal.
+            # Never removes the new or the previous (rollback target) release.
             ls -1t | while read -r rel; do if [ -d "$rel" ]; then echo "$rel"; fi; done | tail -n +$((KEEP+1)) | while read -r rel; do
-              if [ "$rel" != "$TS" ]; then
+              if [ "$rel" != "$TS" ] && [ "$RELEASES_DIR/$rel" != "$PREV_REL" ]; then
                 rm -rf "${RELEASES_DIR:?}/$rel" && echo "[deploy] Cleaned up old release: $rel" >> "$LOG"
               fi
             done || echo "[deploy] WARN: release cleanup incomplete" >> "$LOG"
             echo "[deploy] Cleanup completed, keeping last $KEEP releases" >> "$LOG"
-          '
+          '; then
+            RC=0
+          else
+            RC=$?
+          fi
+          echo "[deploy] extract session exit code: $RC"
 
-      # ─── Wait for router rolling swap (observe-only; see houle router v4) ───
-      - name: Wait for router rolling swap
-        # Warn-only: the release is on disk and the router rolls it in
-        # (sometimes beyond this window after a respawn). Live/latest drift
-        # is watched by the scheduled monitor instead of blocking deploys.
-        continue-on-error: true
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        timeout-minutes: 6
-        run: |
-          BUILD_ID=$(cat dist/.next/BUILD_ID)
-          echo "[deploy] waiting for router to roll to build $BUILD_ID"
-          OK=0
-          for i in $(seq 1 60); do
-            LIVE=$(curl -s --max-time 4 "https://ridger.ch/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
-            if [ "$LIVE" = "$BUILD_ID" ]; then
-              echo "[deploy] build $BUILD_ID live (check $i)"; OK=1; break
-            fi
-            sleep 5
+          # ssh exec exit codes on these hosts are not trustworthy on their
+          # own: read the outcome back over SFTP (what current/ points at now).
+          for attempt in 1 2 3; do
+            rm -f deploy_state disk_build
+            sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" >/dev/null <<SFTP || true
+          get $BASE/deploy_state deploy_state
+          get $BASE/current/.next/BUILD_ID disk_build
+          SFTP
+            [ -s deploy_state ] && [ -s disk_build ] && break
+            echo "[deploy] SFTP read-back attempt $attempt incomplete"
+            [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
           done
-          [ "$OK" -eq 1 ] || { echo "[deploy] router never rolled — check maintenance flag / router logs"; exit 1; }
 
-      # ─── Health check ───
-      - name: Health check and warmup
+          # Both tolerate a missing file: an incomplete read-back must reach
+          # the live gate (and its rollback), not abort this step.
+          DISK_BUILD=$(cat disk_build 2>/dev/null | tr -d '[:space:]' || true)
+          field() { sed -n "s/^$1=//p" deploy_state 2>/dev/null | head -n1 || true; }
+          STATE_BUILD=$(field NEW_BUILD_ID)
+          echo "[deploy] expected build $BUILD_ID; current/ on disk: ${DISK_BUILD:-unreadable}"
+
+          if [ -n "$DISK_BUILD" ] && [ "$DISK_BUILD" != "$BUILD_ID" ]; then
+            echo "::error::Release was not promoted (current/ is $DISK_BUILD, expected $BUILD_ID; ssh exit $RC). Production unchanged."
+            exit 1
+          fi
+          # Unreadable read-back: do not guess, let the live gate decide.
+          [ -n "$DISK_BUILD" ] || echo "::warning::could not read current/ over SFTP; relying on live verification"
+          if [ "$STATE_BUILD" = "$BUILD_ID" ]; then
+            echo "prev_rel=$(field PREV_REL)" >> "$GITHUB_OUTPUT"
+            echo "prev_build_id=$(field PREV_BUILD_ID)" >> "$GITHUB_OUTPUT"
+            echo "[deploy] previous release: $(field PREV_REL) ($(field PREV_BUILD_ID))"
+          else
+            echo "::warning::deploy_state does not match this build; automatic rollback unavailable"
+          fi
+          [ "$RC" -eq 0 ] || echo "::warning::ssh exec returned $RC but current/ holds the new build; continuing to live verification"
+
+      # ─── Gate: the new build is the one answering on ridger.ch ───
+      - name: Verify release is live (ridger.ch)
+        id: verify
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        timeout-minutes: 5
+        timeout-minutes: 8
         run: |
-          CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
-          # A plain 200 is not proof: with ridger.ch behind the shared
-          # Infomaniak front, a routing mistake serves ANOTHER site's 200
-          # (observed 2026-09-18: houle answered for ridger). Only the
-          # deployed BUILD_ID counts as healthy.
           BUILD_ID=$(cat dist/.next/BUILD_ID)
           ORIGIN_BASE="${{ vars.DEPLOY_ORIGIN_BASE }}"
           [ -z "$ORIGIN_BASE" ] && ORIGIN_BASE="https://ridger.ch"
-          ATTEMPTS=40; SLEEP=3; OK=0
-          for i in $(seq 1 $ATTEMPTS); do
-            LIVE=$(curl "${CURL_TIMEOUTS[@]}" -s "$ORIGIN_BASE/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
-            if [ "$LIVE" = "$BUILD_ID" ]; then
-              echo "✅ Health check OK (buildId $BUILD_ID)"
-              OK=1
-              break
-            fi
-            echo "Waiting for server... ($i/$ATTEMPTS, live buildId '${LIVE:-none}')"
-            sleep $SLEEP
-          done
-          [ "$OK" -eq 1 ] || { echo "❌ Health check failed — deployed buildId never answered on $ORIGIN_BASE"; exit 1; }
+          C=(--connect-timeout 5 --max-time 10 -s)
+          build_of() { curl "${C[@]}" "$1/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true; }
+          code_of() { local c; c=$(curl "${C[@]}" -L -o /dev/null -w '%{http_code}' "$1" || true); echo "${c:-000}"; }
 
+          # The router cycles ridger within about a minute of the symlink
+          # switch. A plain 200 is not proof: behind the shared Infomaniak
+          # front a routing slip serves ANOTHER site's 200 (2026-09-18: houle
+          # answered for ridger) and the maintenance page is a 200 too. Only
+          # the deployed BUILD_ID on ridger's own health endpoint counts, plus
+          # /fr/ returning 200, twice in a row.
+          # houle.ai shares the host: its status is logged and reported as a
+          # warning, but it never blocks or rolls back a ridger deploy.
+          PASS_N=0
+          for i in $(seq 1 60); do
+            RB=$(build_of "$ORIGIN_BASE"); RC=$(code_of "$ORIGIN_BASE/fr/"); HC=$(code_of https://houle.ai/fr/)
+            echo "[verify] $i: ridger build=${RB:-none} /fr/=$RC | houle /fr/=$HC"
+            if [ "$RB" = "$BUILD_ID" ] && [ "$RC" = "200" ]; then
+              PASS_N=$((PASS_N + 1))
+              if [ "$PASS_N" -ge 2 ]; then
+                echo "[verify] build $BUILD_ID live on ridger.ch"
+                [ "$HC" = "200" ] || echo "::warning::houle.ai/fr/ returned $HC after the ridger deploy (shared host; not blocking). Check https://houle.ai/api/health/"
+                exit 0
+              fi
+            else
+              PASS_N=0
+            fi
+            sleep 5
+          done
+          [ "$HC" = "200" ] || echo "::warning::houle.ai/fr/ returned $HC during the failed ridger verification (shared host)"
+          echo "::error::Build $BUILD_ID not verified live on ridger.ch"
+          exit 1
+
+      # Same steps as houle.ai: SFTP only (the reliable channel); the router
+      # sees current/.next/BUILD_ID change back and cycles ridger again. The
+      # job always ends red.
+      - name: Roll back to previous release
+        if: failure() && steps.verify.outcome == 'failure'
+        timeout-minutes: 8
+        env:
+          PREV_REL: ${{ steps.extract.outputs.prev_rel }}
+          PREV_BUILD_ID: ${{ steps.extract.outputs.prev_build_id }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+          BASE="/srv/customer/sites/ridger.ch"
+          BUILD_ID=$(cat dist/.next/BUILD_ID)
+          ORIGIN_BASE="${{ vars.DEPLOY_ORIGIN_BASE }}"
+          [ -z "$ORIGIN_BASE" ] && ORIGIN_BASE="https://ridger.ch"
+
+          # The extract step exports the previous release only when its SFTP
+          # read-back worked. If it did not, read deploy_state again now: it
+          # is only trusted when it describes this very build.
+          field() { sed -n "s/^$1=//p" deploy_state 2>/dev/null | head -n1 || true; }
+          if [ -z "$PREV_REL" ] || [ -z "$PREV_BUILD_ID" ]; then
+            for attempt in 1 2 3; do
+              rm -f deploy_state
+              sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" >/dev/null <<SFTP || true
+          get $BASE/deploy_state deploy_state
+          SFTP
+              if [ -s deploy_state ]; then break; fi
+              echo "[rollback] deploy_state read attempt $attempt failed"
+              [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
+            done
+            if [ "$(field NEW_BUILD_ID)" = "$BUILD_ID" ]; then
+              PREV_REL=$(field PREV_REL)
+              PREV_BUILD_ID=$(field PREV_BUILD_ID)
+              echo "[rollback] previous release read from deploy_state: ${PREV_REL:-none} (${PREV_BUILD_ID:-?})"
+            else
+              echo "[rollback] deploy_state unreadable or not about build $BUILD_ID"
+            fi
+          fi
+
+          if ! [[ "$PREV_REL" =~ ^/srv/customer/sites/ridger\.ch/releases/[0-9]{14}$ ]] || [ -z "$PREV_BUILD_ID" ] || [ "$PREV_BUILD_ID" = "$BUILD_ID" ]; then
+            echo "::error::No usable previous release recorded (rel='$PREV_REL' build='$PREV_BUILD_ID'); roll back manually (see docs/deploy-ci.md)"
+            exit 1
+          fi
+
+          # Atomic swap over SFTP (posix-rename of a fresh symlink onto
+          # current), then read current/.next/BUILD_ID back to prove it.
+          DONE=0
+          for attempt in 1 2 3; do
+            rm -f rb_build
+            sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" >/dev/null <<SFTP || true
+          -rm $BASE/current.rollback
+          symlink $PREV_REL $BASE/current.rollback
+          rename $BASE/current.rollback $BASE/current
+          get $BASE/current/.next/BUILD_ID rb_build
+          SFTP
+            if [ "$(cat rb_build 2>/dev/null | tr -d '[:space:]' || true)" = "$PREV_BUILD_ID" ]; then DONE=1; break; fi
+            echo "[rollback] attempt $attempt not confirmed"
+            [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
+          done
+          if [ "$DONE" -ne 1 ]; then
+            echo "::error::ROLLBACK FAILED: current/ could not be pointed back to $PREV_REL; intervene now"
+            exit 1
+          fi
+          echo "[rollback] current -> $PREV_REL ($PREV_BUILD_ID) on disk; waiting for the router to cycle"
+
+          C=(--connect-timeout 5 --max-time 10 -s)
+          for i in $(seq 1 48); do
+            RB=$(curl "${C[@]}" "$ORIGIN_BASE/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+            RC=$(curl "${C[@]}" -L -o /dev/null -w '%{http_code}' "$ORIGIN_BASE/fr/" || true)
+            HC=$(curl "${C[@]}" -L -o /dev/null -w '%{http_code}' https://houle.ai/fr/ || true)
+            echo "[rollback] $i: ridger build=${RB:-none} /fr/=${RC:-000} | houle /fr/=${HC:-000}"
+            if [ "$RB" = "$PREV_BUILD_ID" ] && [ "$RC" = "200" ]; then
+              [ "$HC" = "200" ] || echo "::warning::houle.ai/fr/ returned ${HC:-000} after the ridger rollback (shared host)"
+              echo "::error::Deploy of $BUILD_ID failed verification; rolled back to $PREV_BUILD_ID (ridger.ch answering)"
+              exit 1
+            fi
+            sleep 5
+          done
+          echo "::error::Rolled back on disk to $PREV_BUILD_ID but ridger.ch did not recover within 4 min; check https://houle.ai/router-status.log"
+          exit 1
+
+      - name: Warm up caches (non-blocking)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/" "/de/" "/es/" "/pt/"; do
             curl "${CURL_TIMEOUTS[@]}" -fsSL "https://ridger.ch$path" >/dev/null 2>&1 || true

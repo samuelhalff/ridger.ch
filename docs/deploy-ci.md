@@ -1,6 +1,6 @@
 # Deploy / CI matrix (houle.ai · ridger.ch · ark-fid.ch · switzerlandresidency.ch)
 
-Same file in all three Node repos (houle-ai-website, ridger.ch, ark-fid.ch). Last reviewed 2026-09-30.
+Same file in all three Node repos (houle-ai-website, ridger.ch, ark-fid.ch). Last reviewed 2026-10-01.
 
 ## Hosts
 
@@ -19,21 +19,27 @@ Same file in all three Node repos (houle-ai-website, ridger.ch, ark-fid.ch). Las
 | --- | --- | --- | --- | --- |
 | Triggers | push main (app/src/public/scripts/config paths), PR build-only, dispatch | same | same | push main, dispatch, daily 05:15 cron |
 | Build | Node 20, `next build` standalone → `prepare-artifact.sh` (ships router) | Node 20, standalone + `tenant-entry.js` | Node 20, standalone | Node 20, static export |
-| Gates before deploy | markdown-link check (blocking); typecheck **non-blocking** | article guardrails, markdown links, Turnstile key present; `next build` type-checks | same as ridger | lint, typecheck, tests, deploy-script tests, content validator |
+| Gates before deploy (all blocking) | typecheck, structured-data test, markdown-link check | article guardrails, markdown links, `seo:check` (offline source check), Turnstile key present; `next build` type-checks | article guardrails, markdown links, Turnstile key present; `next build` type-checks | lint, typecheck, tests, deploy-script tests, content validator |
 | Transport | rsync ×3 retry, `--partial --checksum` | same | same | FTPS, sha256 manifest, incremental |
-| Env/secrets to server | GitHub secrets → `shared/.env` over **SFTP** | same (SFTP) | GitHub secrets → `shared/.env` over **ssh exec** | build-time vars only |
+| Env/secrets to server | GitHub secrets → `shared/.env` over **SFTP** (whole file) | same (SFTP, whole file) | GitHub secrets merged into `shared/.env` over **SFTP** (fetch, merge, upload, read back; see below) | build-time vars only |
 | Activation | one ssh exec: extract to `releases/.staging-TS`, atomic `mv`, `ln -sfn current`; router notices BUILD_ID and cycles houle | same script; router cycles ridger | same script + HTTPS kill endpoint → supervisor respawn (ssh restart script as fallback) | per-file tmp + rename |
 | Atomicity | release dir + symlink swap | same | same | per file (not whole-site) |
-| Post-deploy gate | **blocking**: houle `/api/health` buildId = new build, houle.ai `/` 200, ridger.ch `/` 200 + health JSON, 2 consecutive passes, 8 min | **blocking**: ridger health buildId = new build (5 min) | **blocking**: buildId = new build, then `/fr/` 200 | **blocking** smoke: 3 locales 200, protected paths 403, redirects |
-| Outcome read-back | SFTP reads `current/.next/BUILD_ID` + `deploy_state` (ssh exit codes are not trusted) | ssh exit code | ssh exit code | FTPS |
-| Rollback | **automatic**: on failed gate, SFTP atomic swap `current` → previous release (from `deploy_state`), read back, then job fails | manual | manual | manual (redeploy previous commit) |
-| Retention | 4 releases (previous never pruned) | 3 | 4 | n/a |
+| Post-deploy gate | **blocking**: houle `/api/health` buildId = new build, houle.ai `/` 200, ridger.ch `/` 200 + health JSON, 2 consecutive passes, 8 min | **blocking**: ridger `/api/health` buildId = new build and `/fr/` 200, 2 consecutive passes, 8 min. houle.ai `/fr/` is logged on every check and raised as a **warning only** | **blocking**: restart step waits for buildId = new build, then buildId = new build and `/fr/` 200, 2 consecutive passes, 5 min | **blocking** smoke: 3 locales 200, protected paths 403, redirects |
+| Outcome read-back | SFTP reads `current/.next/BUILD_ID` + `deploy_state` (ssh exit codes are not trusted) | same | same | FTPS |
+| Rollback | **automatic**: on failed gate, SFTP atomic swap `current` → previous release (from `deploy_state`), read back, wait for the router to cycle, then job fails | same steps (waits for ridger's previous buildId) | **automatic**, same swap; then kill endpoint → supervisor respawn into the previous release (managed restart over ssh as fallback); also runs when the restart step fails | manual (redeploy previous commit) |
+| Retention | 4 releases (previous never pruned) | 3 (previous never pruned) | 4 (previous never pruned) | n/a |
 | Concurrency | `production-deploy`, not cancellable; PRs own cancellable group | same | same | `deploy-production`, not cancellable |
-| Timeouts | job 30 min; verify 8, rollback 8 | job 30 min; health 5 | job 30 min; restart 3, health 5 | job 15 min |
+| Timeouts | job 30 min; verify 8, rollback 8 | job 30 min; verify 8, rollback 8 | job 30 min; restart 3, verify 5, rollback 12 | job 15 min |
 
-## Manual rollback (houle.ai / ridger.ch)
+## Automatic rollback (houle.ai · ridger.ch · ark-fid.ch)
 
-Only SFTP is dependable on 57-105000 (ssh exec can drop output and exit codes). With the creds from `houle-ai-website/.env.deploy`:
+The extract script writes `<site>/deploy_state` (new and previous release dir + BUILD_ID) before it switches `current`. CI then reads `deploy_state` and `current/.next/BUILD_ID` back over SFTP: a release that was not promoted fails the job with production unchanged, whatever the ssh exit code said. After the switch the live gate must see the new BUILD_ID on the site's own `/api/health/`. If it does not, the rollback step points `current` back to the previous release over SFTP (fresh symlink + atomic rename), reads the BUILD_ID back, waits for the previous build to answer and ends the job red. A red job with "rolled back to …" means the site is on the previous release; "ROLLBACK FAILED" or "did not recover" means someone has to look now.
+
+The previous release is never pruned. If the extract step's read-back failed, the rollback step fetches `deploy_state` again and uses it when it describes the build being deployed. No automatic rollback is possible when no previous release is recorded for that build (first deploy, or SFTP down for the whole run): the step says so and the manual steps below apply.
+
+## Manual rollback
+
+Only SFTP is dependable on these hosts (ssh exec can drop output and exit codes). houle.ai and ridger.ch: creds in `houle-ai-website/.env.deploy`. ark-fid.ch: creds in `ark-fid.ch/.env`, base `/srv/customer/sites/ark-fid.ch`.
 
 ```
 sftp> ls -l /srv/customer/sites/houle.ai/releases           # pick the previous TS
@@ -42,18 +48,28 @@ sftp> rename /srv/customer/sites/houle.ai/current.rollback /srv/customer/sites/h
 sftp> get /srv/customer/sites/houle.ai/current/.next/BUILD_ID /tmp/current_build_id
 ```
 
-The `rename` is atomic (posix-rename). The router cycles the tenant within about a minute; check `https://houle.ai/api/health/` (buildId) and `/router-status.log`. The same steps work for ridger.ch under `/srv/customer/sites/ridger.ch`. Re-running the last green deploy (`gh run rerun <id>`) also works.
+The `rename` is atomic (posix-rename). The router cycles the tenant within about a minute; check `https://houle.ai/api/health/` (buildId) and `/router-status.log`. The same steps work for ridger.ch under `/srv/customer/sites/ridger.ch`. On ark-fid.ch there is no router: after the swap, restart the process with `curl -X POST https://ark-fid.ch/api/kill/ -H "Authorization: Bearer $RESTART_SECRET_TOKEN"` (the supervisor loop respawns from `current/`), then check `https://ark-fid.ch/api/health/`. Re-running the last green deploy (`gh run rerun <id>`) also works.
+
+## Env sync on ark-fid.ch
+
+ark's `shared/.env` also holds keys CI does not own (restart token, IndexNow, Odoo, …), so it is merged, not replaced: CI fetches the file over SFTP, updates the keys it owns, appends missing ones, leaves every other line alone, uploads the result beside the target (`0600`), renames it over `shared/.env` and reads it back byte for byte. The previous content stays in `shared/.env.prev` (`0600`). If the current file cannot be read, the step fails before the release switch instead of overwriting. The log lists changed and added key names, never values; nothing is written when nothing changed. The former ssh-exec loop silently skipped the last key of the list (`FORMSPARK_ACTION_URL`, payload without a trailing newline); the SFTP merge syncs it like the others.
 
 ## Incident 2026-09-25 → 30: houle "Extract" step red while releases went live
 
 The cleanup loop `ls -1t | tail -n +5 | while …; [ -d "$rel" ] && … rm …; done` ran under `set -euo pipefail`. A stray file (`releases/router-status.log`, written by router v5 on 2026-09-20) became the oldest entry once the older release dirs were pruned. Its failed `[ -d ]` test was the loop's last status, so the pipeline returned 1 after the symlink had already switched. `deploy.extract.log` shows "Cleaned up old release" with no "Cleanup completed" line on every red run. The verify steps were skipped as a result. They had also never worked for houle: houle's `/api/health` did not expose `buildId`, so the continue-on-error "router swap" wait spent 5 min on every green run. Fixed: the loop only counts directories and is best-effort in all three repos, houle's health exposes `buildId`, and houle's job is gated on live verification with rollback.
 
+## Applied 2026-10-01
+
+- houle: `typecheck` and `test:structured-data` are blocking gates.
+- ark: `shared/.env` is synced over SFTP (merge, see above).
+- ridger/ark: SFTP read-back of `current/.next/BUILD_ID`, blocking live gate and automatic rollback; the ssh "probe" session is gone.
+- ridger: houle.ai status is logged during the gate and raised as a warning (never blocking).
+- ridger: `seo:check` follows Ridger's real routes and is a blocking gate (offline, instant).
+- all three: a failed SFTP read-back no longer aborts the extract step before the live gate.
+
 ## Recommendations (not applied)
 
-- houle: make `typecheck` blocking and run `test:guardrails` like ridger/ark, once the typecheck is green on a fresh checkout.
-- ark: sync `shared/.env` over SFTP instead of ssh exec (silent-failure class seen on 57-105000).
-- ridger/ark: adopt houle's SFTP read-back of `current/.next/BUILD_ID` and automatic rollback. ridger's rollback would reuse houle's steps as they are.
-- ridger/ark: drop the ssh "probe" session. It never gates anything and adds to the host's exec-session throttle.
-- ridger: add a non-blocking houle.ai smoke check after deploy (shared router host).
+- ridger (and houle): `shared/.env` is uploaded with the runner's default mode (`0644` on the host). Add a `chmod 600` to the SFTP batch, as ark does.
+- Monitor Maintenance (ark, ridger, houle): it dispatches a redeploy whenever Infomaniak's maintenance page shows. During a host maintenance window (2026-10-01 05:57 UTC, both hosts) those runs fail at upload because ssh is down, and the sites come back on their own. Consider alerting instead, or waiting a few minutes before dispatching.
 - switzerlandresidency: pin actions to v6/v5 like the others; consider a per-deploy snapshot for whole-site rollback.
 - Router code (`current/server.js`) only takes effect when the router process itself restarts (panel restart or crash). Deploying a router change needs a planned restart.

@@ -2,44 +2,40 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const locales = ["fr", "en"];
-const serviceNamespaces = [
-  "accounting",
-  "taxes",
-  "payroll",
-  "domiciliation",
-  "incorporation",
-  "odoo",
-  "outsourcing",
-  "corporate",
-  "family-office",
-  "mna",
-];
 
-const requiredMetadataTitles = {
-  fr: {
-    "/": "Fiduciaire à Genève : PME, fiscalité, Odoo | Ridger",
-    "/services": "Services fiduciaires à Genève | Ridger",
-    "/services/accounting": "Comptabilité à Genève pour PME suisses | Ridger",
-    "/services/taxes": "Fiscalité PME et entrepreneurs à Genève | Ridger",
-    "/services/payroll": "Externalisation des salaires en Suisse | Ridger",
-    "/services/domiciliation": "Domiciliation d’entreprise à Genève | Ridger",
-    "/services/incorporation": "Création de SA ou Sàrl à Genève | Ridger",
-    "/services/odoo": "Fiduciaire Odoo à Genève | Ridger",
-    "/services/family-office": "Family office administratif en Suisse | Ridger",
-  },
-  en: {
-    "/": "Accounting Firm in Geneva: SME, Tax, Odoo | Ridger",
-    "/services": "Accounting, Tax & Payroll in Geneva | Ridger",
-    "/services/accounting": "Accounting in Switzerland for Geneva SMEs | Ridger",
-    "/services/taxes": "Tax Advice in Geneva for Companies | Ridger",
-    "/services/payroll": "Swiss Payroll Outsourcing & ANOBAG | Ridger",
-    "/services/domiciliation": "Business Domiciliation in Geneva | Ridger",
-    "/services/incorporation": "Company Incorporation in Geneva, SA or Sàrl | Ridger",
-    "/services/odoo": "Odoo Accounting Firm in Geneva | Ridger",
-    "/services/family-office": "Administrative Family Office in Switzerland | Ridger",
-  },
-};
+// Everything below is derived from the repo, so the check follows Ridger's
+// real routes instead of a hard-coded list (the previous version still
+// expected Ark Fiduciaire pages such as /services/accounting).
+const locales = fs
+  .readdirSync(path.join(root, "src/translations"))
+  .filter((name) => fs.statSync(path.join(root, "src/translations", name)).isDirectory())
+  .sort();
+
+// One directory per service page under app/[locale]/services.
+const serviceSlugs = fs
+  .readdirSync(path.join(root, "app/[locale]/services"))
+  .filter((name) => fs.statSync(path.join(root, "app/[locale]/services", name)).isDirectory())
+  .sort();
+
+// Location landing pages: /family-office/<city>.
+const cities = JSON.parse(fs.readFileSync(path.join(root, "src/lib/locations.json"), "utf8"));
+
+const staticRoutes = [
+  "/",
+  "/ai-profile",
+  "/approach",
+  "/platform",
+  "/services",
+  "/ressources",
+  "/contact",
+  "/advisers",
+  "/legal/terms",
+  "/legal/privacy",
+  "/legal/cookies",
+];
+const serviceRoutes = serviceSlugs.map((slug) => `/services/${slug}`);
+const cityRoutes = cities.map((city) => `/family-office/${city}`);
+const requiredRoutes = [...staticRoutes, ...serviceRoutes, ...cityRoutes];
 
 const failures = [];
 const warnings = [];
@@ -100,31 +96,34 @@ function checkRobots() {
 
 function checkSitemapSource() {
   const sitemap = read("app/sitemap.xml/route.ts");
-  [
-    '"/ai-profile"',
-    '"/services/accounting"',
-    '"/services/odoo"',
-    '"/services/family-office"',
-  ].forEach((needle) => {
-    if (!sitemap.includes(needle)) {
-      addFailure(`sitemap source is missing ${needle}`);
+  [...staticRoutes, ...serviceRoutes].forEach((route) => {
+    if (!sitemap.includes(`"${route}"`)) {
+      addFailure(`sitemap source is missing "${route}"`);
     }
   });
+  // Location pages are generated, not listed: the source must import the
+  // city list and map it to /family-office/<city>.
+  if (!/from\s+["'][^"']*locations\.json["']/.test(sitemap) || !sitemap.includes("`/family-office/${")) {
+    addFailure("sitemap source must build /family-office/<city> routes from src/lib/locations.json");
+  }
+  if ((sitemap.match(/\blocationPaths\b/g) || []).length < 2) {
+    addFailure("sitemap source builds locationPaths but never uses them");
+  }
 }
 
 function checkLlms() {
-  if (!exists("public/llms.txt")) {
-    addFailure("public/llms.txt is missing");
+  // llms.txt is served by a route handler, not a static file.
+  const rel = "app/llms.txt/route.ts";
+  if (!exists(rel)) {
+    addFailure(`${rel} is missing`);
     return;
   }
-  const llms = read("public/llms.txt");
-  ["/fr/ai-profile/", "/en/ai-profile/", "/fr/services/comptabilite/", "/en/services/odoo/"].forEach(
-    (needle) => {
-      if (!llms.includes(needle)) addFailure(`llms.txt is missing ${needle}`);
-    },
-  );
-  if (/discretionary asset management/i.test(llms) === false) {
-    addFailure("llms.txt must clarify discretionary asset management limitation");
+  const llms = read(rel);
+  ["/fr/ai-profile/", ...serviceRoutes.map((route) => `/en${route}/`)].forEach((needle) => {
+    if (!llms.includes(needle)) addFailure(`llms.txt is missing ${needle}`);
+  });
+  if (!/does not manage assets/i.test(llms)) {
+    addFailure("llms.txt must state that Ridger does not manage assets");
   }
 }
 
@@ -132,25 +131,33 @@ function checkAiProfileRoutes() {
   if (!exists("app/[locale]/ai-profile/page.tsx")) {
     addFailure("localized AI profile route is missing");
   }
-  if (!exists("src/translations/fr/ai-profile.json")) {
-    addFailure("French AI profile content is missing");
-  }
-  if (!exists("src/translations/en/ai-profile.json")) {
-    addFailure("English AI profile content is missing");
+  for (const locale of locales) {
+    if (!exists(`src/translations/${locale}/ai-profile.json`)) {
+      addFailure(`${locale} AI profile content is missing`);
+    }
   }
 }
 
 function checkMetadata() {
   for (const locale of locales) {
     const metadata = JSON.parse(read(`src/translations/${locale}/metadata.json`));
+    const pages = metadata.pages || {};
     const titles = new Map();
-    for (const [route, expectedTitle] of Object.entries(requiredMetadataTitles[locale])) {
-      const actualTitle = metadata.pages?.[route]?.title;
-      if (actualTitle !== expectedTitle) {
-        addFailure(`${locale} metadata title for ${route} is "${actualTitle}", expected "${expectedTitle}"`);
-      }
+    for (const route of requiredRoutes) {
+      const page = pages[route];
+      if (!page || !page.title) addFailure(`${locale} metadata title missing for ${route}`);
+      else if (!/Ridger/.test(page.title)) addFailure(`${locale} metadata title for ${route} must name Ridger`);
+      if (!page || !page.description) addFailure(`${locale} metadata description missing for ${route}`);
     }
-    for (const [route, page] of Object.entries(metadata.pages || {})) {
+    for (const [route, page] of Object.entries(pages)) {
+      // A metadata entry for a service or city page that does not exist is a
+      // leftover from another site.
+      if (/^\/services\/./.test(route) && !serviceRoutes.includes(route)) {
+        addFailure(`${locale} metadata has ${route} but app/[locale]/services has no such page`);
+      }
+      if (/^\/family-office\/./.test(route) && !cityRoutes.includes(route)) {
+        addFailure(`${locale} metadata has ${route} but src/lib/locations.json has no such city`);
+      }
       if (!page.title) addWarning(`${locale} metadata title missing for ${route}`);
       if (!page.description) addWarning(`${locale} metadata description missing for ${route}`);
       if (page.title) {
@@ -167,15 +174,20 @@ function checkMetadata() {
 
 function checkDuplicateServiceParagraphs() {
   for (const locale of locales) {
-    for (const ns of serviceNamespaces) {
-      const json = JSON.parse(read(`src/translations/${locale}/${ns}.json`));
+    for (const slug of serviceSlugs) {
+      const rel = `src/translations/${locale}/${slug}.json`;
+      if (!exists(rel)) {
+        addFailure(`${rel} is missing (service page without content)`);
+        continue;
+      }
+      const json = JSON.parse(read(rel));
       const counts = new Map();
       for (const paragraph of normalizedParagraphs(json)) {
         counts.set(paragraph, (counts.get(paragraph) || 0) + 1);
       }
       const duplicates = [...counts.entries()].filter(([, count]) => count > 1);
       if (duplicates.length > 0) {
-        addFailure(`${locale}/${ns}.json contains ${duplicates.length} repeated long paragraph(s)`);
+        addFailure(`${locale}/${slug}.json contains ${duplicates.length} repeated long paragraph(s)`);
       }
     }
   }
