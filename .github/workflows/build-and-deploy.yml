@@ -210,11 +210,24 @@ jobs:
           # SFTP, not ssh-exec: exec channels on this host have failed silently
           # (ContainerSSH wedge, 2026-09-18), leaving secrets out of the runtime
           # env while the step looked green. SFTP is a distinct channel.
-          sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" <<'SFTP'
+          # The file holds secrets: 0600 locally (the mode a first upload is
+          # created with) and an explicit chmod on the host, as ark-fid.ch does.
+          # Only the `ls -l` line (mode, owner, size, date, path) is logged.
+          chmod 600 env_sync_file
+          sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" > env_sync_out <<'SFTP'
           put env_sync_file /srv/customer/sites/ridger.ch/shared/.env
+          chmod 600 /srv/customer/sites/ridger.ch/shared/.env
+          ls -l /srv/customer/sites/ridger.ch/shared/.env
           SFTP
           rm -f env_sync_file
+          MODE_LINE=$(grep -E '^-[rwxsStT-]{9}.*\.env$' env_sync_out | tail -1 || true)
+          rm -f env_sync_out
           echo "[deploy] shared/.env written via sftp"
+          echo "[deploy] shared/.env mode: ${MODE_LINE:-unknown}"
+          case "$MODE_LINE" in
+            -rw-------*) ;;
+            *) echo "::warning::shared/.env mode on the host is not confirmed as 0600" ;;
+          esac
 
       # ─── Extract, symlink and cleanup ───
       # houle's router (current/server.js on the shared site) notices that

@@ -3,31 +3,98 @@ name: Monitor Maintenance
 on:
   schedule:
     - cron: '*/3 * * * *'
+  workflow_dispatch:
+
+# A run can now wait ~10 min before deciding; never let two of them overlap
+# (scheduled runs that pile up behind a waiting one are replaced, not queued).
+concurrency:
+  group: monitor-maintenance
+  cancel-in-progress: false
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       actions: write
       contents: read
     steps:
       - name: Check website
+        env:
+          SITE_URL: https://ridger.ch
+          GH_API: https://api.github.com/repos/${{ github.repository }}/actions/workflows/build-and-deploy.yml
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
+          SSH_PORT: ${{ secrets.DEPLOY_SSH_PORT }}
         run: |
-          # Check if build-and-deploy workflow is currently running
-          RUNNING=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${{ github.repository }}/actions/workflows/build-and-deploy.yml/runs | jq -r '.workflow_runs[] | select(.status == "in_progress") | .id' | head -1)
-          
+          RECHECKS=5        # 5 x 120 s = ~10 min before a redeploy is considered
+          RECHECK_SLEEP=120
+
+          # A queued deploy counts too: this job may itself have waited ~10 min.
+          deploy_running() {
+            curl -s --max-time 30 -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$GH_API/runs" \
+              | jq -r '.workflow_runs[] | select(.status == "in_progress" or .status == "queued") | .id' | head -1
+          }
+
+          # Infomaniak's maintenance page is the only "down" signal (unchanged).
+          in_maintenance() {
+            curl -s --max-time 30 "$SITE_URL" | grep -q "/images/infomaniak.svg"
+          }
+
+          # A redeploy needs ssh/SFTP. During a host maintenance window the
+          # port is closed: the redeploy would fail at upload and the site
+          # comes back by itself. The host is a secret: never echo it.
+          ssh_reachable() {
+            [ -n "$SSH_HOST" ] || return 1
+            local port="${SSH_PORT:-22}" try
+            for try in 1 2 3; do
+              if command -v nc >/dev/null 2>&1; then
+                nc -z -w 10 "$SSH_HOST" "$port" >/dev/null 2>&1 && return 0
+              else
+                # shellcheck disable=SC2016
+                timeout 10 bash -c 'exec 3<>"/dev/tcp/$0/$1"' "$SSH_HOST" "$port" >/dev/null 2>&1 && return 0
+              fi
+              [ "$try" -lt 3 ] && sleep 5
+            done
+            return 1
+          }
+
+          RUNNING=$(deploy_running || true)
           if [ -n "$RUNNING" ]; then
             echo "Deploy already running (ID: $RUNNING), skipping"
-          else
-            HTML=$(curl -s https://ridger.ch)
-            if echo "$HTML" | grep -q "/images/infomaniak.svg"; then
-              echo "Maintenance detected and no deploy running, triggering redeploy"
-              curl -X POST \
-                -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                -H "Accept: application/vnd.github.v3+json" \
-                https://api.github.com/repos/${{ github.repository }}/actions/workflows/build-and-deploy.yml/dispatches \
-                -d '{"ref":"main"}'
-            else
-              echo "Website is up"
-            fi
+            exit 0
           fi
+
+          if ! in_maintenance; then
+            echo "Website is up"
+            exit 0
+          fi
+
+          echo "Maintenance page detected; re-checking $RECHECKS times, ${RECHECK_SLEEP}s apart, before acting"
+          for i in $(seq 1 "$RECHECKS"); do
+            sleep "$RECHECK_SLEEP"
+            if ! in_maintenance; then
+              echo "::notice title=Maintenance page cleared::$SITE_URL recovered by itself after re-check $i/$RECHECKS; no redeploy"
+              exit 0
+            fi
+            echo "Re-check $i/$RECHECKS: maintenance page still shown"
+          done
+
+          RUNNING=$(deploy_running || true)
+          if [ -n "$RUNNING" ]; then
+            echo "Deploy already running (ID: $RUNNING), skipping"
+            exit 0
+          fi
+
+          if ! ssh_reachable; then
+            echo "::warning title=Site in maintenance, host unreachable::$SITE_URL still shows the maintenance page and the deploy host's ssh/SFTP port is not reachable (host maintenance window?). No redeploy dispatched; the next run checks again."
+            exit 0
+          fi
+
+          echo "Still in maintenance, ssh/SFTP port reachable and no deploy running, triggering redeploy"
+          # --fail: a rejected dispatch must turn this run red, not pass silently.
+          curl -sS --fail -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "$GH_API/dispatches" \
+            -d '{"ref":"main"}'

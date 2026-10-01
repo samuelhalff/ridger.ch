@@ -21,7 +21,7 @@ Same file in all three Node repos (houle-ai-website, ridger.ch, ark-fid.ch). Las
 | Build | Node 20, `next build` standalone → `prepare-artifact.sh` (ships router) | Node 20, standalone + `tenant-entry.js` | Node 20, standalone | Node 20, static export |
 | Gates before deploy (all blocking) | typecheck, structured-data test, markdown-link check | article guardrails, markdown links, `seo:check` (offline source check), Turnstile key present; `next build` type-checks | article guardrails, markdown links, Turnstile key present; `next build` type-checks | lint, typecheck, tests, deploy-script tests, content validator |
 | Transport | rsync ×3 retry, `--partial --checksum` | same | same | FTPS, sha256 manifest, incremental |
-| Env/secrets to server | GitHub secrets → `shared/.env` over **SFTP** (whole file) | same (SFTP, whole file) | GitHub secrets merged into `shared/.env` over **SFTP** (fetch, merge, upload, read back; see below) | build-time vars only |
+| Env/secrets to server | GitHub secrets → `shared/.env` over **SFTP** (whole file, `chmod 600`, mode logged) | same (SFTP, whole file, `chmod 600`, mode logged) | GitHub secrets merged into `shared/.env` over **SFTP** (fetch, merge, upload, read back; see below) | build-time vars only |
 | Activation | one ssh exec: extract to `releases/.staging-TS`, atomic `mv`, `ln -sfn current`; router notices BUILD_ID and cycles houle | same script; router cycles ridger | same script + HTTPS kill endpoint → supervisor respawn (ssh restart script as fallback) | per-file tmp + rename |
 | Atomicity | release dir + symlink swap | same | same | per file (not whole-site) |
 | Post-deploy gate | **blocking**: houle `/api/health` buildId = new build, houle.ai `/` 200, ridger.ch `/` 200 + health JSON, 2 consecutive passes, 8 min | **blocking**: ridger `/api/health` buildId = new build and `/fr/` 200, 2 consecutive passes, 8 min. houle.ai `/fr/` is logged on every check and raised as a **warning only** | **blocking**: restart step waits for buildId = new build, then buildId = new build and `/fr/` 200, 2 consecutive passes, 5 min | **blocking** smoke: 3 locales 200, protected paths 403, redirects |
@@ -54,6 +54,16 @@ The `rename` is atomic (posix-rename). The router cycles the tenant within about
 
 ark's `shared/.env` also holds keys CI does not own (restart token, IndexNow, Odoo, …), so it is merged, not replaced: CI fetches the file over SFTP, updates the keys it owns, appends missing ones, leaves every other line alone, uploads the result beside the target (`0600`), renames it over `shared/.env` and reads it back byte for byte. The previous content stays in `shared/.env.prev` (`0600`). If the current file cannot be read, the step fails before the release switch instead of overwriting. The log lists changed and added key names, never values; nothing is written when nothing changed. The former ssh-exec loop silently skipped the last key of the list (`FORMSPARK_ACTION_URL`, payload without a trailing newline); the SFTP merge syncs it like the others.
 
+## Monitor Maintenance (houle.ai · ridger.ch · ark-fid.ch)
+
+`monitor-maintenance.yml` runs on a schedule (and on manual dispatch) and looks for Infomaniak's maintenance page on the site root. A normal run is two HTTP requests. When the page shows and no deploy is queued or in progress, the job re-checks 5 times, 120 s apart (about 10 min):
+
+- the page clears: notice annotation, no redeploy (the site came back by itself);
+- still shown and the deploy host's ssh/SFTP port answers (`nc -z`, 3 tries): a redeploy is dispatched, unless a deploy is queued or running by then (a rejected dispatch fails the run);
+- still shown and the port is closed (host maintenance window): **warning annotation, no redeploy**; the next run checks again.
+
+Runs share the concurrency group `monitor-maintenance`, so a waiting run is never doubled. The host and port come from the deploy secrets and are never printed.
+
 ## Incident 2026-09-25 → 30: houle "Extract" step red while releases went live
 
 The cleanup loop `ls -1t | tail -n +5 | while …; [ -d "$rel" ] && … rm …; done` ran under `set -euo pipefail`. A stray file (`releases/router-status.log`, written by router v5 on 2026-09-20) became the oldest entry once the older release dirs were pruned. Its failed `[ -d ]` test was the loop's last status, so the pipeline returned 1 after the symlink had already switched. `deploy.extract.log` shows "Cleaned up old release" with no "Cleanup completed" line on every red run. The verify steps were skipped as a result. They had also never worked for houle: houle's `/api/health` did not expose `buildId`, so the continue-on-error "router swap" wait spent 5 min on every green run. Fixed: the loop only counts directories and is best-effort in all three repos, houle's health exposes `buildId`, and houle's job is gated on live verification with rollback.
@@ -66,10 +76,11 @@ The cleanup loop `ls -1t | tail -n +5 | while …; [ -d "$rel" ] && … rm …; 
 - ridger: houle.ai status is logged during the gate and raised as a warning (never blocking).
 - ridger: `seo:check` follows Ridger's real routes and is a blocking gate (offline, instant).
 - all three: a failed SFTP read-back no longer aborts the extract step before the live gate.
+- ridger/houle: `shared/.env` is `chmod 600` in the SFTP upload (was `0644` on ridger); the step logs the `ls -l` line and warns when the mode is not confirmed.
+- all three: Monitor Maintenance waits about 10 min and only redeploys when the site is still down and ssh/SFTP is reachable (see above). The host maintenance window of 2026-10-01 05:57 UTC had produced failed redeploys on both hosts.
+- switzerlandresidency: `actions/checkout` and `actions/setup-node` on v6, like the other repos.
 
 ## Recommendations (not applied)
 
-- ridger (and houle): `shared/.env` is uploaded with the runner's default mode (`0644` on the host). Add a `chmod 600` to the SFTP batch, as ark does.
-- Monitor Maintenance (ark, ridger, houle): it dispatches a redeploy whenever Infomaniak's maintenance page shows. During a host maintenance window (2026-10-01 05:57 UTC, both hosts) those runs fail at upload because ssh is down, and the sites come back on their own. Consider alerting instead, or waiting a few minutes before dispatching.
-- switzerlandresidency: pin actions to v6/v5 like the others; consider a per-deploy snapshot for whole-site rollback.
+- switzerlandresidency: consider a per-deploy snapshot for whole-site rollback.
 - Router code (`current/server.js`) only takes effect when the router process itself restarts (panel restart or crash). Deploying a router change needs a planned restart.
