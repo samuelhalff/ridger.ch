@@ -118,6 +118,11 @@ const TRANSLATE_EXISTING = args.has("--translate-existing");
 // --refresh=<slug>[,<slug>]: local-only transactional refresh of EXISTING
 // articles (see runRefresh). Combined with --apply it writes; with --dry-run,
 // --no-write or neither, it generates and validates but writes nothing.
+// --upgrade-legacy (or REFRESH_UPGRADE_LEGACY=1): legacy articles without
+// pipeline fields get seoTitle / metaDescription / imageAlt / keywords and the
+// pipeline structure generated, so they pass the same gate as a new article.
+// Used by the autonomous refresh (scripts/refresh-next-article.js).
+const UPGRADE_LEGACY = args.has("--upgrade-legacy") || process.env.REFRESH_UPGRADE_LEGACY === "1";
 const REFRESH_SLUGS = (process.argv.slice(2).find((a) => a.startsWith("--refresh=")) || "")
   .slice("--refresh=".length)
   .split(",")
@@ -1119,9 +1124,11 @@ async function runRefresh() {
     servicePathMaps,
     serviceFor: (slug, article) => refreshServiceFor(slug, article, backlog),
     localeNames: LOCALE_NAMES,
-    promptBlocks: { voice: VOICE_PROMPT, hardRules: HARD_RULES_PROMPT, facts: VERIFIED_FACTS },
-    minWords: parseInt(process.env.REFRESH_MIN_WORDS || "600", 10),
+    promptBlocks: { voice: VOICE_PROMPT, hardRules: HARD_RULES_PROMPT, facts: VERIFIED_FACTS, keywordUsage: KEYWORD_USAGE_PROMPT },
+    // SEO_MIN_WORDS / SEO_MAX_WORDS (as for new articles) win over the 600 default.
+    minWords: UPGRADE_LEGACY || process.env.SEO_MIN_WORDS ? MIN_WORDS : parseInt(process.env.REFRESH_MIN_WORDS || "600", 10),
     maxWords: MAX_WORDS,
+    upgradeLegacy: UPGRADE_LEGACY,
     maxTranslationAttempts: MAX_TRANSLATION_ATTEMPTS,
     apply: APPLY,
     deps,

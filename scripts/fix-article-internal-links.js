@@ -4,9 +4,14 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..", "src", "translations");
 
 function parseArgs(argv) {
+  const eq = argv.find((a) => a.startsWith("--slug="));
+  const i = argv.indexOf("--slug");
   return {
     apply: argv.includes("--apply"),
     check: argv.includes("--check") || argv.includes("--ci"),
+    // --slug <slug>: touch only that article (the autonomous refresh must never
+    // modify unrelated articles).
+    slug: eq ? eq.slice("--slug=".length) : i !== -1 ? argv[i + 1] || "" : "",
   };
 }
 
@@ -72,11 +77,12 @@ function fixMalformedInternalMarkdownLinks(text) {
   return out === before ? text : out;
 }
 
-function fixRessourcesJson(json) {
+function fixRessourcesJson(json, { slug = "" } = {}) {
   if (!json || !Array.isArray(json.Articles)) return { json, changes: 0 };
   let changes = 0;
 
   for (const article of json.Articles) {
+    if (slug && article.slug !== slug) continue;
     for (const key of ["title", "description", "content"]) {
       if (typeof article[key] !== "string") continue;
       const fixed = fixMalformedInternalMarkdownLinks(article[key]);
@@ -91,7 +97,11 @@ function fixRessourcesJson(json) {
 }
 
 function main() {
-  const { apply, check } = parseArgs(process.argv.slice(2));
+  const { apply, check, slug } = parseArgs(process.argv.slice(2));
+  if (process.argv.slice(2).some((a) => a === "--slug" || a.startsWith("--slug=")) && !slug) {
+    console.error("--slug needs a value.");
+    process.exit(2);
+  }
   if (apply && check) {
     console.error("Use either --apply or --check, not both.");
     process.exit(2);
@@ -105,7 +115,7 @@ function main() {
     const filePath = path.join(ROOT, locale, "ressources.json");
     if (!fs.existsSync(filePath)) continue;
     const json = loadJson(filePath);
-    const { json: fixedJson, changes } = fixRessourcesJson(json);
+    const { json: fixedJson, changes } = fixRessourcesJson(json, { slug });
     if (changes > 0) {
       totalChanges += changes;
       changedFiles.push(`src/translations/${locale}/ressources.json`);
@@ -132,4 +142,6 @@ function main() {
   if (check) process.exit(1);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { fixMalformedInternalMarkdownLinks, fixRessourcesJson, parseArgs };

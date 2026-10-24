@@ -7,8 +7,8 @@ name: AI Resources Update (every 3 days)
 # weekly, Tuesdays at 05:00 UTC, so there is no longer a fixed one-day offset
 # between the two sites; on days where both fall on the same date, ark starts
 # about 1h40 after this run. The job's concurrency group is per repository.
-# Refreshing existing articles is NOT part of this workflow: it is a local-only
-# mode (scripts/ai-ressources-update.js --refresh=<slug>), see docs/article-pipeline.md.
+# Refreshing existing articles is NOT part of this workflow: it runs from
+# ai-ressources-refresh.yml (queue in data/refresh-queue.json), see docs/article-pipeline.md.
 # Pause: set the repository variable AI_RESSOURCES_PAUSED=true (manual runs
 # still work), or disable the workflow in the Actions tab.
 
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     # Budget: install ~3 + generation ≤ 40 + gate (validators, npm test,
     # build) ≤ 20 + push incl. up to 3 re-gates ≤ 50 + live wait ≤ 30.
-    timeout-minutes: 150
+    timeout-minutes: 175
     permissions:
       contents: write # GITHUB_TOKEN fallback push (only used in "Commit and push")
       actions: write # dispatch build-and-deploy when pushing with GITHUB_TOKEN
@@ -143,6 +143,17 @@ jobs:
         env:
           SLUG: ${{ steps.gen.outputs.slug }}
         run: bash scripts/article-gate.sh
+
+      # Ridger and houle deploy to the same Infomaniak host with per-repo
+      # concurrency groups: wait (best effort, max 20 min) for a running houle
+      # deploy before the push (a PAT push triggers the deploy). Warns and goes on if the token cannot read the houle repo.
+      - name: Wait for a running houle deploy (shared host)
+        if: steps.gen.outputs.has_new == 'true' && !inputs.dry_run
+        continue-on-error: true
+        timeout-minutes: 25
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+        run: bash scripts/wait-for-houle-deploy.sh
 
       # The gate above validated the tree on top of the checked-out main. If
       # main moved, the rebased tree is a different tree: the FULL gate is run

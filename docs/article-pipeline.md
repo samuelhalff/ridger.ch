@@ -138,7 +138,7 @@ npm run test:pipeline        # unit tests + an offline end-to-end run with a moc
 
 ### Refreshing existing articles (local only)
 
-`node scripts/ai-ressources-update.js --refresh=<slug>[,<slug>] [--apply]` re-checks existing articles against fresh official references and rewrites them in all 5 locales as one transaction (`scripts/lib/articleRefresh.js`). It is never run by the workflow.
+`node scripts/ai-ressources-update.js --refresh=<slug>[,<slug>] [--apply]` re-checks existing articles against fresh official references and rewrites them in all 5 locales as one transaction (`scripts/lib/articleRefresh.js`). The manual mode is never run by `ai-ressources.yml`; the autonomous queue below is (with `--upgrade-legacy`, which also generates the pipeline fields for legacy articles).
 
 - **Dry run by default.** Without `--apply` (or with `--dry-run` / `--no-write`) it generates and validates everything but writes nothing. With `--apply`, the 5 `ressources.json` files are swapped in atomically, only if every article and every locale passed; any failure leaves the tree untouched.
 - **Merged fields:** `title`, `description`, `content`, `references`, `tags` (FR), and the translated `title`, `description`, `content`, `tags` and reference labels per locale. Everything else is preserved (slug, date, category, author, image, `backlogId`, `seoTitle`, `metaDescription`, `imageAlt`, `keywords`, unknown fields). Pipeline-generated articles (with `keywords`) keep their title, because it is keyword-bound, and must still pass the full SEO/GEO structure check.
@@ -146,6 +146,19 @@ npm run test:pipeline        # unit tests + an offline end-to-end run with a moc
 - **Prompt rules:** no invented facts, figures or anecdotes; unverifiable statements are removed or softened; the "Sources officielles consultées le <date>" line is updated; a `## Notre rôle` section with one internal link to the article's service page is kept or added; same hard rules as new articles (no prices, quote tool, AI assistant). References are re-researched, HTTP-validated and official-only.
 - **Validation per locale:** hard rules, official-only references, VAT rates, no H1 or bare URL, service link and all internal links resolve, dated line with today's date, word range (FR: at least 80 % of the previous length), and for translations number and structure parity with the FR.
 - Review `git diff src/translations/*/ressources.json` and run `npm run validate:latest-article`, `validate-article-translations` and `npm test` before committing. `validate-latest-article-guardrails.js` fails when the latest article has `updated` earlier than `date`.
+
+#### Autonomous refresh (queue)
+
+`.github/workflows/ai-ressources-refresh.yml` (cron `20 4 4,18 * *` + manual run, same concurrency group as the article workflow) refreshes one article per run with no human step. Every run ends in a committed, terminal queue state (`data/refresh-queue.json`: `{queue, done, failed, attempts}`). Script: `scripts/refresh-next-article.js`.
+
+1. **Pick** (`--pick --commit`): head of `queue`, or (empty queue) the single oldest article by `updated ?? date` older than 12 months that is not in `done`/`failed`; none: nothing to do. The attempt is counted in `attempts` and pushed as a queue-only claim commit; a slug already attempted twice goes to `failed` instead.
+2. **Refresh** (own `timeout-minutes: 25`): `ai-ressources-update.js --refresh=<slug> --apply --upgrade-legacy`. Writes the result to `.refresh-run.json`; never touches the queue. The legacy articles (no `keywords`, `seoTitle`, `metaDescription`, `imageAlt`, no pipeline structure) get those fields generated in FR and in every locale, plus the standard structure (direct-answer lead, Points clés, question H2s, Notre rôle, dated line, FAQ), so they pass the same gate as a new article. Word range comes from `SEO_MIN_WORDS` / `SEO_MAX_WORDS`.
+3. **Fix internal links** for that slug only (`fix-article-internal-links.js --apply --slug`).
+4. **Validate refreshed article** (`validate-refreshed-article.js --slug`, blocking): standard SEO/GEO + hard-rule validation in 5 locales, word range, real translation, at least 3 unique https official references, localized and resolving internal links, slug/date/category/backlogId unchanged vs `HEAD`, `updated` = today, no outdated VAT rate, no other article changed.
+5. **Validation gate** (`scripts/article-gate.sh`: validators, `npm test`, build).
+6. **Finalize** (`if: always()`, `--finalize --commit`): all steps `success` gives `done` and keeps the translations; any other outcome (failure, cancelled, timeout, skipped) runs `git checkout` on the 5 `ressources.json`, marks the slug `failed` with the step name and a short message and never re-queues it. Commit (translations + queue, or queue only) and push with a bounded fetch/rebase/push loop (3 attempts). After a rebase on the success path the slug validator and the gate run again; if they fail, or the rebase conflicts, the run is downgraded to a queue-only `failed` commit. If the push finally fails the step exits non-zero; the claim already counted the attempt, so the slug is tried at most twice.
+
+Append slugs to `queue` to schedule more. Ridger rules apply as everywhere: no prices, no quote tool, no AI agent.
 
 Manual run: Actions → **AI Resources Update** → *Run workflow*. The options are:
 - `dry_run`: stop after topic selection, keyword research and the research outline (title, slug, question plan, validated references). No article is generated, nothing is committed;

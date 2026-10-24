@@ -40,7 +40,7 @@
     "test:unit": "node --test src/lib/lead-session.test.ts src/lib/agent/request-validation.test.ts",
     "test:hygiene": "node --import ./scripts/lib/register-ts.mjs --test scripts/ridger-hygiene.test.js",
     "test:guardrails": "node --test scripts/article-guardrails.test.js",
-    "test:pipeline": "node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js scripts/translation-repair.test.js scripts/lib/titleCase.test.js scripts/lib/articleRefresh.test.js",
+    "test:pipeline": "node --test scripts/article-pipeline.test.js scripts/article-pipeline-hardening.test.js scripts/translation-repair.test.js scripts/lib/titleCase.test.js scripts/lib/articleRefresh.test.js scripts/refresh-next-article.test.js",
     "test:redirects": "node --import ./scripts/lib/register-ts.mjs --test scripts/redirect-destinations.test.js",
     "keywords:refresh": "node scripts/refresh-keywords.js",
     "articles:plan": "node scripts/ai-ressources-update.js --plan-only",

@@ -1,0 +1,214 @@
+name: AI Resources Refresh (twice a month)
+
+# Refreshes ONE existing article per run (all 5 locales, transactional) from
+# data/refresh-queue.json; when the queue is empty it auto-fills with the
+# oldest article last updated more than 12 months ago, else it does nothing.
+# Script: scripts/refresh-next-article.js (--pick, --refresh, --finalize) -> scripts/ai-ressources-update.js --refresh=<slug> --apply --upgrade-legacy
+# Docs: docs/article-pipeline.md
+#
+# Shares the concurrency group with ai-ressources.yml (both rewrite
+# src/translations/*/ressources.json, never at the same time).
+# Pause: set the repository variable AI_RESSOURCES_PAUSED=true (manual runs
+# still work), or disable the workflow in the Actions tab.
+
+on:
+  schedule:
+    - cron: "20 4 4,18 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ai-ressources-update
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  refresh:
+    if: github.event_name == 'workflow_dispatch' || vars.AI_RESSOURCES_PAUSED != 'true'
+    runs-on: ubuntu-latest
+    # install ~3 + pick 5 + refresh 25 + links/validate 10 + gate 20 + finalize incl. re-gates 50 + houle deploy wait 20 + live wait 30.
+    timeout-minutes: 180
+    permissions:
+      contents: write # GITHUB_TOKEN fallback push (only used in "Commit and push")
+      actions: write # dispatch build-and-deploy when pushing with GITHUB_TOKEN
+    env:
+      HAS_PAT: ${{ secrets.PAT_TOKEN != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Pipeline unit tests (incl. refresh queue)
+        run: npm run test:pipeline
+
+      - name: Configure git
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          mkdir -p .refresh-logs
+
+      # Takes the head of the queue (or the single oldest stale article), counts
+      # the attempt (max 2 per slug) and pushes that claim (queue only, [skip ci]);
+      # if the claim cannot be pushed the step fails BEFORE any model call, so the
+      # cap holds even if a later step is killed. A capped slug marked failed with
+      # nothing left to pick is pushed the same way. Output: refresh_status
+      # picked | none. Nothing to do -> every later step is skipped.
+      - name: Pick next article
+        id: pick
+        timeout-minutes: 5
+        env:
+          PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+        run: node scripts/refresh-next-article.js --pick --commit
+
+      # Own timeout, shorter than the job's: a hung model call fails THIS step
+      # and the always() finalize step below still records and commits it.
+      - name: Refresh next article
+        id: refresh
+        if: steps.pick.outputs.refresh_status == 'picked'
+        timeout-minutes: 25
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: ${{ vars.AZURE_OPENAI_API_VERSION || '2025-01-01-preview' }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DEPLOYMENT || 'gpt-4.1' }}
+          AZURE_OPENAI_DRAFT_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DRAFT_DEPLOYMENT || 'gpt-5.2' }}
+          AZURE_OPENAI_DRAFT_API_VERSION: ${{ vars.AZURE_OPENAI_DRAFT_API_VERSION || '2025-01-01-preview' }}
+          AZURE_OPENAI_DRAFT_MAX_TOKENS: "8192"
+          AZURE_OPENAI_RESEARCH_ENDPOINT: ${{ secrets.AZURE_OPENAI_RESEARCH_ENDPOINT }}
+          AZURE_OPENAI_RESEARCH_API_KEY: ${{ secrets.AZURE_OPENAI_RESEARCH_API_KEY }}
+          AZURE_OPENAI_RESEARCH_API_VERSION: ${{ vars.AZURE_OPENAI_RESEARCH_API_VERSION || '2024-05-01-preview' }}
+          AZURE_OPENAI_RESEARCH_DEPLOYMENT: ${{ vars.AZURE_OPENAI_RESEARCH_DEPLOYMENT }}
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_NAME: ${{ vars.AZURE_AGENT_NAME || 'web-deep-search:6' }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
+          AZURE_AGENT_FORCE_RESPONSES: "1"
+          AZURE_AGENT_FALLBACK_TO_OPENAI: "1"
+          AZURE_AGENT_RESPONSES_RETRIES: "2"
+          AZURE_AGENT_RESPONSES_BACKOFF_MS: "20000"
+          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS: "60000"
+          AZURE_AGENT_RESPONSES_TIMEOUT_MS: "180000"
+          AZURE_AGENT_RESPONSES_COOLDOWN_MS: "15000"
+          AZURE_AGENT_CALL_BUDGET_MS: "600000"
+          AZURE_AGENT_FALLBACK_RESERVE_MS: "900000"
+          AZURE_OPENAI_RETRIES: "3"
+          AZURE_OPENAI_TIMEOUT_MS: "240000"
+          AI_PIPELINE_DEADLINE_MS: "1980000"
+          REQUIRE_TRANSLATIONS: "1"
+          SEO_MIN_WORDS: "1100"
+          SEO_MAX_WORDS: "1900"
+        run: |
+          set -o pipefail
+          timeout -k 30s 24m node scripts/refresh-next-article.js --refresh 2>&1 | tee .refresh-logs/refresh.log
+
+      # Only the refreshed slug is touched (--slug); unrelated articles never change.
+      - name: Fix internal links
+        id: fix
+        if: steps.refresh.outcome == 'success'
+        timeout-minutes: 5
+        env:
+          SLUG: ${{ steps.pick.outputs.refresh_slug }}
+        run: |
+          set -o pipefail
+          node scripts/fix-article-internal-links.js --apply --slug "$SLUG" 2>&1 | tee .refresh-logs/fix.log
+
+      # Blocking, slug-targeted: word range, real translations, references,
+      # localized links, slug/date/category unchanged vs HEAD, updated == today,
+      # no other article changed.
+      - name: Validate refreshed article
+        id: validate
+        if: steps.fix.outcome == 'success'
+        timeout-minutes: 5
+        env:
+          SLUG: ${{ steps.pick.outputs.refresh_slug }}
+          SEO_MIN_WORDS: "1100"
+          SEO_MAX_WORDS: "1900"
+        run: |
+          set -o pipefail
+          node scripts/validate-refreshed-article.js --slug "$SLUG" 2>&1 | tee .refresh-logs/validate.log
+
+      # Same gate as ai-ressources.yml (SEO structure, latest-article
+      # guardrails, reference policy, facts, translations, links, npm test, build).
+      - name: Validation gate
+        id: gate
+        if: steps.validate.outcome == 'success'
+        timeout-minutes: 20
+        env:
+          SLUG: ${{ steps.pick.outputs.refresh_slug }}
+        run: |
+          set -o pipefail
+          bash scripts/article-gate.sh 2>&1 | tee .refresh-logs/gate.log
+
+      # Ridger and houle deploy to the same Infomaniak host with per-repo
+      # concurrency groups: wait (best effort, max 20 min) for a running houle
+      # deploy before the push / deploy dispatch. Warns and goes on if the token cannot read the houle repo.
+      - name: Wait for a running houle deploy (shared host)
+        if: steps.gate.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 25
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+        run: bash scripts/wait-for-houle-deploy.sh
+
+      # ALWAYS runs once a slug was picked, whatever happened before (failure,
+      # timeout, cancel). All steps succeeded -> slug done, translations kept.
+      # Otherwise translations are restored (git checkout), the slug is marked
+      # failed with the step name and a short message and is never re-queued.
+      # Commits (translations + queue, or queue only) and pushes with a bounded
+      # fetch/rebase/push loop; after a rebase the slug validator and the gate
+      # run again, and a failure there downgrades the run to a queue-only
+      # "failed" commit. A push that finally fails exits non-zero.
+      - name: Finalize (commit queue state)
+        id: finalize
+        if: always() && steps.pick.outputs.refresh_status == 'picked'
+        timeout-minutes: 50
+        env:
+          PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+          OUTCOME_REFRESH: ${{ steps.refresh.outcome }}
+          OUTCOME_FIX: ${{ steps.fix.outcome }}
+          OUTCOME_VALIDATE: ${{ steps.validate.outcome }}
+          OUTCOME_GATE: ${{ steps.gate.outcome }}
+          SEO_MIN_WORDS: "1100"
+          SEO_MAX_WORDS: "1900"
+        run: node scripts/refresh-next-article.js --finalize --commit
+
+      - name: Dispatch build-and-deploy (GITHUB_TOKEN pushes do not trigger workflows)
+        if: steps.finalize.outputs.pushed == 'true' && steps.finalize.outputs.final_status == 'done' && env.HAS_PAT != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run build-and-deploy.yml --ref main
+
+      - name: Wait for the article to be live, then ping sitemaps + IndexNow
+        if: steps.finalize.outputs.pushed == 'true' && steps.finalize.outputs.final_status == 'done'
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          SLUG: ${{ steps.pick.outputs.refresh_slug }}
+        run: |
+          set -uo pipefail
+          URL="https://ridger.ch/fr/ressources/articles/${SLUG}/"
+          for i in $(seq 1 50); do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 20 "$URL" || echo 000)
+            echo "[$i] $URL -> $CODE"
+            [ "$CODE" = "200" ] && break
+            sleep 30
+          done
+          node scripts/ping-sitemaps.js || true
+          BODY=$(node -e 'const s=process.env.SLUG;console.log(JSON.stringify({urls:["fr","en","de","es","pt"].map(l=>`https://ridger.ch/${l}/ressources/articles/${s}/`)}))')
+          for i in 1 2 3; do
+            STATUS=$(curl -s -o /tmp/indexnow.json -w "%{http_code}" -X POST "https://ridger.ch/api/indexnow/" \
+              -H "Content-Type: application/json" -d "$BODY") || STATUS=000
+            echo "IndexNow status: $STATUS"; cat /tmp/indexnow.json || true
+            [ "$STATUS" = "200" ] && exit 0
+            sleep $((i * 10))
+          done
+          exit 1

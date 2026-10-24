@@ -287,8 +287,10 @@ test("workflow: least privilege, no persisted credentials, token only in the pus
   const tokenSteps = job.steps.filter((s) => /PAT_TOKEN|github\.token|GITHUB_TOKEN/.test(JSON.stringify({ env: s.env, with: s.with, run: s.run })));
   assert.deepEqual(
     tokenSteps.map((s) => s.name).sort(),
-    ["Commit and push", "Dispatch build-and-deploy (GITHUB_TOKEN pushes do not trigger workflows)"].sort(),
+    ["Commit and push", "Dispatch build-and-deploy (GITHUB_TOKEN pushes do not trigger workflows)", "Wait for a running houle deploy (shared host)"].sort(),
   );
+  const names = job.steps.map((s) => s.name);
+  assert.ok(names.indexOf("Wait for a running houle deploy (shared host)") < names.indexOf("Commit and push"), "houle deploy wait precedes the push");
   const push = step(/^Commit and push$/);
   assert.match(push.env.PUSH_TOKEN, /secrets\.PAT_TOKEN \|\| github\.token/);
   assert.doesNotMatch(push.run, /remote set-url|git config[^\n]*extraheader/, "token never written to .git/config");

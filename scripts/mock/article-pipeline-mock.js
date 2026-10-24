@@ -77,6 +77,8 @@ function buildArticle(locale, { keywords, references, serviceUrl, today }) {
 }
 
 module.exports = {
+  buildArticle,
+  natural,
   research({ item, keywords, today }) {
     const k = keywords.fr;
     return {

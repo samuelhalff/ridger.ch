@@ -34,11 +34,28 @@ const MIRRORED_FIELDS = ["date", "updated", "category", "author", "image", "back
 // Regenerated per locale by the translation step.
 const TRANSLATED_FIELDS = ["title", "description", "content", "tags"];
 
+// Pipeline fields a legacy (hand-written) article lacks. With `upgradeLegacy`
+// the refresh GENERATES them (FR and every locale) so the refreshed article
+// passes the same gate as a newly generated one.
+const UPGRADE_FIELDS = ["seoTitle", "metaDescription", "imageAlt", "keywords"];
+
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function toIsoDate(value) {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return String(value);
+}
+
+/** {primary, secondary[]} from model output, or null when unusable. */
+function normalizeKeywords(k) {
+  if (!k || typeof k !== "object") return null;
+  const primary = String(k.primary || "").trim();
+  const secondary = [];
+  for (const s of Array.isArray(k.secondary) ? k.secondary : []) {
+    const v = String(s || "").trim();
+    if (v && !secondary.includes(v) && v !== primary) secondary.push(v);
+  }
+  return primary ? { primary, secondary } : null;
 }
 
 /** Sets `updated`, never touches `date`. Mutates and returns the article. */
@@ -107,7 +124,7 @@ function buildRefreshResearchPrompt(article, { today, allowedDomainsPrompt = "" 
  */
 function buildRefreshPrompt(
   article,
-  { today, serviceUrl, references, voice = "", hardRules = "", facts = [], minWords = 600, maxWords = 1900, lockTitle = false } = {},
+  { today, serviceUrl, references, voice = "", hardRules = "", facts = [], keywordUsage = "", minWords = 600, maxWords = 1900, lockTitle = false, upgrade = false } = {},
 ) {
   const iso = toIsoDate(today);
   return [
@@ -122,16 +139,33 @@ function buildRefreshPrompt(
     `Date du jour : ${iso}. Garde le slug et le sujet. Vérifie chaque fait, chiffre, date et référence juridique contre les RÉFÉRENCES fournies et corrige ce qui est dépassé (années, taux, seuils, projets devenus droit en vigueur ou abandonnés).`,
     "- Si un fait ne peut pas être vérifié avec les références fournies, retire-le ou formule-le avec prudence (« en principe », « selon la page officielle »). Ne le remplace jamais par un fait de mémoire.",
     "- AUCUNE INVENTION : pas de fait, chiffre, date, nom, statistique, anecdote, cas de famille, témoignage ni exemple présenté comme réel qui ne figure pas déjà dans l'article ou dans les références. En cas de doute, reste qualitatif ou supprime.",
-    "- Ne rallonge pas par remplissage et ne gonfle pas le ton : très sobre, sans superlatif ni promesse. Conserve le plan existant (sections et ordre) sauf si une section est inexacte.",
+    upgrade
+      ? "- Pas de remplissage, pas de superlatif ni de promesse : très sobre. Cet article ancien est remis à la structure standard (voir plus bas) : réorganise-le et développe-le uniquement avec des explications générales sûres et des faits tirés des RÉFÉRENCES fournies ou déjà présents dans l'article."
+      : "- Ne rallonge pas par remplissage et ne gonfle pas le ton : très sobre, sans superlatif ni promesse. Conserve le plan existant (sections et ordre) sauf si une section est inexacte.",
     "- Ridger coordonne et supervise ; il ne gère pas d'actifs, ne conseille pas en placement et ne donne pas d'avis juridique. Aucun prix, aucun outil de devis, aucun assistant IA.",
     lockTitle ? `- Titre : conserve EXACTEMENT « ${article.title} » (il est lié au mot-clé principal).` : "- Titre : conserve-le sauf si une année ou une mention est dépassée.",
     "",
     "=== STRUCTURE À RESPECTER (champ content, Markdown) ===",
     `1. Une section \`## Notre rôle\` (ou titre équivalent, non interrogatif) qui explique sobrement ce que Ridger coordonne sur ce sujet, avec UN lien interne vers ${serviceUrl} dont l'ancre décrit le service (3 à 8 mots, jamais « ici » / « en savoir plus »). Si la section existe, garde-la ; sinon ajoute-la avant la ligne de vérification.`,
     `2. Une phrase datée mise à jour : « Sources officielles consultées le ${iso}. » (la date ISO ${iso} exactement), suivie d'un rappel que la page officielle fait foi. Remplace toute ancienne date de vérification.`,
-    "3. Conserve « Points clés » et « Questions fréquentes » s'ils existent, avec le même nombre d'éléments sauf correction nécessaire.",
+    upgrade
+      ? ""
+      : "3. Conserve « Points clés » et « Questions fréquentes » s'ils existent, avec le même nombre d'éléments sauf correction nécessaire.",
     "4. Liens Markdown vers une référence fournie autorisés (URL exacte, ancre descriptive) ; aucun autre lien externe, aucune URL nue. Ne rédige PAS la liste des références : elle est régénérée automatiquement. Pas de H1 (#).",
     `Longueur : ${minWords} à ${maxWords} mots. Chiffres en chiffres.`,
+    ...(upgrade
+      ? [
+          "",
+          "=== MISE À LA STRUCTURE STANDARD (article ancien sans champs SEO) : OBLIGATOIRE, contrôlé automatiquement ===",
+          "A. Ouvre par un paragraphe de 2 à 3 phrases qui répond directement à la question du titre et contient le mot-clé principal sous sa forme naturelle. Aucun titre avant.",
+          "B. Juste après : `## Points clés` avec 3 à 5 puces factuelles (chacune adossée à une référence fournie).",
+          "C. Ensuite 4 à 6 sections `## <question ?>` (au moins 3 H2 en forme de question ; au moins 2 reprennent naturellement un mot-clé secondaire), puis `## Notre rôle`, la phrase datée, et pour finir `## Questions fréquentes` avec 4 à 6 questions `### … ?` (réponses de 2 à 4 phrases).",
+          "D. Le titre (20 à 75 caractères) contient le mot-clé principal sous sa forme naturelle (majuscule initiale, accents, sigles en capitales) ; il peut être reformulé mais le sujet reste identique.",
+          "E. Champs à produire en plus dans l'objet article : `seoTitle` (20 à 51 caractères, contient le mot-clé principal, SANS la marque « Ridger »), `metaDescription` (110 à 160 caractères, contient le mot-clé principal), `imageAlt` (10 à 125 caractères, description factuelle de l'illustration), `keywords` : { `primary`: mot-clé principal, `secondary`: 5 à 8 expressions secondaires }.",
+          "F. Mots-clés : écris-les sous leur forme naturelle et grammaticale (jamais en gras, jamais entre guillemets, jamais de phrase sur les recherches ou les mots-clés).",
+          keywordUsage,
+        ]
+      : []),
     "",
     "=== RÉFÉRENCES OFFICIELLES (ne pas modifier) ===",
     JSON.stringify(references, null, 2),
@@ -150,13 +184,15 @@ function buildRefreshPrompt(
     ),
     "",
     "Réponds STRICTEMENT par un objet JSON :",
-    '{ "article": { "title": "...", "description": "...", "tags": ["..."], "content": "<Markdown sans liste de références>" }, "changeSummary": ["faits corrigés ou retirés, en une ligne chacun"] }',
+    upgrade
+      ? '{ "article": { "title": "...", "description": "...", "tags": ["..."], "seoTitle": "...", "metaDescription": "...", "imageAlt": "...", "keywords": { "primary": "...", "secondary": ["..."] }, "content": "<Markdown sans liste de références>" }, "changeSummary": ["faits corrigés ou retirés, en une ligne chacun"] }'
+      : '{ "article": { "title": "...", "description": "...", "tags": ["..."], "content": "<Markdown sans liste de références>" }, "changeSummary": ["faits corrigés ou retirés, en une ligne chacun"] }',
   ]
     .filter((l, i, arr) => l !== "" || (arr[i - 1] !== "" && i > 0))
     .join("\n");
 }
 
-function buildRefreshTranslatePrompt({ locale, localeName, frArticle, expected, serviceUrls = {}, today, problems = [], lockTitle = false }) {
+function buildRefreshTranslatePrompt({ locale, localeName, frArticle, expected, serviceUrls = {}, today, problems = [], lockTitle = false, upgrade = false }) {
   const frBody = stripReferencesSection(frArticle.content);
   const c = translationRepair.requiredCounts(frBody);
   const urls = [...new Set(expected.map((e) => e.url))];
@@ -173,6 +209,9 @@ function buildRefreshTranslatePrompt({ locale, localeName, frArticle, expected, 
     "- Standard casing of the target language (capital at sentence start, proper nouns, acronyms); never an all-lowercase title. Do not write a references list (it is appended automatically).",
     "- No prices, no quote tool, no AI assistant, no e-mail address, no guarantees. Do not add facts that are not in the French.",
     lockTitle ? "- title: keep the title field EXACTLY as given in the source (it is locked)." : "",
+    upgrade
+      ? `- SEO fields (checked automatically): title 20-75 characters containing the natural ${localeName} form of the primary keyword; seoTitle 20-51 characters containing it, without the brand "Ridger"; metaDescription 110-160 characters containing it; imageAlt 10-125 characters; keywords: { primary: natural ${localeName} form (accents, capitals, acronyms in caps), secondary: exactly ${(frArticle.keywords?.secondary || []).length} natural ${localeName} phrases, same order as the French }. Never bold or quote keywords, never talk about searches or keywords.`
+      : "",
     `- tags: exactly ${frArticle.tags.length} translated lowercase tags (same number as the French). referenceLabels: exactly ${frArticle.references.length} translated labels, one per French reference label, same order (keep the leading domain as is).`,
     problems.length
       ? [
@@ -189,6 +228,9 @@ function buildRefreshTranslatePrompt({ locale, localeName, frArticle, expected, 
         title: frArticle.title,
         description: frArticle.description,
         tags: frArticle.tags,
+        ...(upgrade
+          ? { seoTitle: frArticle.seoTitle, metaDescription: frArticle.metaDescription, imageAlt: frArticle.imageAlt, keywords: frArticle.keywords }
+          : {}),
         referenceLabels: frArticle.references.map((r) => r.labelKey),
         content: frBody,
       },
@@ -197,7 +239,11 @@ function buildRefreshTranslatePrompt({ locale, localeName, frArticle, expected, 
     ),
     "",
     "Output STRICT JSON:",
-    JSON.stringify({ title: "", description: "", tags: ["…"], referenceLabels: ["…"], content: "<full Markdown>" }),
+    JSON.stringify(
+      upgrade
+        ? { title: "", description: "", tags: ["…"], seoTitle: "", metaDescription: "", imageAlt: "", keywords: { primary: "", secondary: ["…"] }, referenceLabels: ["…"], content: "<full Markdown>" }
+        : { title: "", description: "", tags: ["…"], referenceLabels: ["…"], content: "<full Markdown>" },
+    ),
   ]
     .filter((l) => l !== "")
     .join("\n");
@@ -221,8 +267,15 @@ function normalizeTags(tags) {
  * field (including unknown ones). Does NOT set `updated` (the caller does that
  * once the whole refresh has succeeded). A keyword-bound title is locked.
  */
-function mergeRefreshedArticle(existing, generated) {
+function mergeRefreshedArticle(existing, generated, { upgrade = false } = {}) {
   const merged = { ...existing };
+  if (upgrade) {
+    for (const f of ["seoTitle", "metaDescription", "imageAlt"]) {
+      if (typeof generated?.[f] === "string" && generated[f].trim()) merged[f] = generated[f].trim();
+    }
+    const kw = normalizeKeywords(generated?.keywords);
+    if (kw) merged.keywords = kw;
+  }
   const lockTitle = isPipelineShaped(existing);
   for (const field of GENERATED_FIELDS) {
     const value = generated?.[field];
@@ -245,12 +298,17 @@ function mergeRefreshedArticle(existing, generated) {
  * field the translation does not own (seoTitle, metaDescription, imageAlt,
  * keywords, unknown fields); mirrors the FR-owned fields.
  */
-function buildLocalizedArticle(frArticle, existingLocal, translation, references) {
+function buildLocalizedArticle(frArticle, existingLocal, translation, references, { upgrade = false } = {}) {
   const base = existingLocal ? { ...existingLocal } : { ...frArticle };
-  const lockTitle = isPipelineShaped(frArticle) && existingLocal && existingLocal.title;
+  const lockTitle = !upgrade && isPipelineShaped(frArticle) && existingLocal && existingLocal.title;
   for (const field of TRANSLATED_FIELDS) {
     if (field === "title" && lockTitle) continue;
     if (translation[field] !== undefined) base[field] = translation[field];
+  }
+  if (upgrade) {
+    for (const field of UPGRADE_FIELDS) {
+      if (translation[field] !== undefined) base[field] = translation[field];
+    }
   }
   for (const field of MIRRORED_FIELDS) {
     if (frArticle[field] !== undefined) base[field] = frArticle[field];
@@ -313,6 +371,10 @@ function validateRefreshedArticle(article, ctx) {
   }
 
   if (pipelineShaped) {
+    const kw = article.keywords;
+    if (!kw || !kw.primary || !Array.isArray(kw.secondary) || kw.secondary.length < 3) {
+      problems.push("keywords must be { primary, secondary[>=3] }");
+    }
     const seo = rules.checkSeoStructure(article, {
       locale,
       keywords: article.keywords || {},
@@ -334,6 +396,9 @@ function validateRefreshedArticle(article, ctx) {
       problems.push(`tags must have exactly ${frArticle.tags.length} entries`);
     }
     if ((article.references || []).length !== (frArticle.references || []).length) problems.push("references count differs from FR");
+    if (pipelineShaped && (article.keywords?.secondary || []).length !== (frArticle.keywords?.secondary || []).length) {
+      problems.push(`keywords.secondary must have exactly ${(frArticle.keywords?.secondary || []).length} entries`);
+    }
   }
   return problems;
 }
@@ -405,6 +470,7 @@ async function refreshArticles({
   maxDraftAttempts = 2,
   maxTranslationAttempts = 3,
   apply = false,
+  upgradeLegacy = false,
   deps,
   log = console.log,
   writeOptions = {},
@@ -443,6 +509,10 @@ async function refreshArticles({
     const service = serviceFor(slug, existing);
     if (!rules.CANONICAL_SERVICES.includes(service)) throw new Error(`refresh: ${slug}: unknown service ${service}`);
     const pipelineShaped = isPipelineShaped(existing);
+    // Legacy article + upgradeLegacy: the refresh generates the pipeline
+    // fields, so the result is validated like a newly generated article.
+    const upgrade = upgradeLegacy && !pipelineShaped;
+    const shaped = pipelineShaped || upgrade;
     const wordsBefore = countWords(existing.content);
     const minW = Math.max(minWords, Math.floor(wordsBefore * 0.8));
     const allowed = (locale) =>
@@ -462,7 +532,7 @@ async function refreshArticles({
     for (let attempt = 1; attempt <= maxDraftAttempts && !frCandidate; attempt++) {
       log(`[refresh] ${slug}: draft ${attempt}/${maxDraftAttempts}`);
       let prompt = buildRefreshPrompt(existing, {
-        today: iso, serviceUrl: frServiceUrl, references, minWords: minW, maxWords, lockTitle: pipelineShaped, ...promptBlocks,
+        today: iso, serviceUrl: frServiceUrl, references, minWords: minW, maxWords, lockTitle: pipelineShaped, upgrade, ...promptBlocks,
       });
       if (problems.length) {
         prompt += `\n\nTA TENTATIVE PRÉCÉDENTE A ÉTÉ REJETÉE par le validateur automatique :\n${problems.map((p) => `- ${p}`).join("\n")}\nCorrige TOUT et renvoie l'objet JSON complet.`;
@@ -473,13 +543,13 @@ async function refreshArticles({
         throw new Error(`refresh: ${slug}: draft payload missing article.content`);
       }
       const body = sanitizeExternalLinks(stripReferencesSection(stripLeadingH1(generated.content)), references);
-      const merged = mergeRefreshedArticle(existing, {
-        ...generated,
-        references,
-        content: appendReferencesSection(body, references, "fr"),
-      });
+      const merged = mergeRefreshedArticle(
+        existing,
+        { ...generated, references, content: appendReferencesSection(body, references, "fr") },
+        { upgrade },
+      );
       const found = validateRefreshedArticle(merged, {
-        locale: "fr", today: iso, allowedPaths: allowed("fr"), serviceUrl: frServiceUrl, minWords: minW, maxWords, pipelineShaped,
+        locale: "fr", today: iso, allowedPaths: allowed("fr"), serviceUrl: frServiceUrl, minWords: minW, maxWords, pipelineShaped: shaped,
       });
       if (merged.slug !== existing.slug) found.push("slug changed");
       if (found.length) {
@@ -508,7 +578,7 @@ async function refreshArticles({
       for (let attempt = 1; attempt <= maxTranslationAttempts && !entry; attempt++) {
         log(`[refresh] ${slug}: translate ${locale} ${attempt}/${maxTranslationAttempts}`);
         const prompt = buildRefreshTranslatePrompt({
-          locale, localeName: localeNames[locale] || locale, frArticle: frCandidate, expected, serviceUrls, today: iso, problems: tProblems, lockTitle: pipelineShaped,
+          locale, localeName: localeNames[locale] || locale, frArticle: frCandidate, expected, serviceUrls, today: iso, problems: tProblems, lockTitle: pipelineShaped, upgrade,
         });
         const tr = await deps.translate(prompt, { locale, frArticle: frCandidate, attempt, maxAttempts: maxTranslationAttempts, problems: tProblems });
         const labels = Array.isArray(tr?.referenceLabels) ? tr.referenceLabels : [];
@@ -525,11 +595,20 @@ async function refreshArticles({
             description: String(tr?.description || "").trim(),
             tags: normalizeTags(tr?.tags),
             content: appendReferencesSection(localeBody, localeRefs, locale),
+            ...(upgrade
+              ? {
+                  seoTitle: String(tr?.seoTitle || "").trim(),
+                  metaDescription: String(tr?.metaDescription || "").trim(),
+                  imageAlt: String(tr?.imageAlt || "").trim(),
+                  keywords: normalizeKeywords(tr?.keywords) || { primary: "", secondary: [] },
+                }
+              : {}),
           },
           localeRefs,
+          { upgrade },
         );
         const found = validateRefreshedArticle(candidate, {
-          locale, today: iso, allowedPaths: allowed(locale), serviceUrl: localeServiceUrl, frArticle: frCandidate, pipelineShaped,
+          locale, today: iso, allowedPaths: allowed(locale), serviceUrl: localeServiceUrl, frArticle: frCandidate, pipelineShaped: shaped,
         });
         if (found.length) {
           tProblems = found;
@@ -576,6 +655,7 @@ module.exports = {
   GENERATED_FIELDS,
   MIRRORED_FIELDS,
   TRANSLATED_FIELDS,
+  UPGRADE_FIELDS,
   appendReferencesSection,
   buildLocalizedArticle,
   buildRefreshPrompt,
@@ -585,6 +665,7 @@ module.exports = {
   isPipelineShaped,
   markUpdated,
   mergeRefreshedArticle,
+  normalizeKeywords,
   refreshArticles,
   sanitizeExternalLinks,
   validateRefreshedArticle,

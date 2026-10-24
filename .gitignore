@@ -38,3 +38,7 @@ quick-deploy.tar.gz
 .server_pid*
 scripts/seo-suggest-latest.json
 tmp/
+
+# autonomous refresh working files
+.refresh-run.json
+.refresh-logs/
