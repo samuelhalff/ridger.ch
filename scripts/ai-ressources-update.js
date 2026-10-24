@@ -43,6 +43,7 @@
  *   node scripts/ai-ressources-update.js --dry-run       # topic + keywords + research outline; no article generation, writes nothing
  *   node scripts/ai-ressources-update.js --no-write      # full generation + validation, writes nothing (offline e2e test)
  *   node scripts/ai-ressources-update.js --apply [--translate-existing]
+ *   node scripts/ai-ressources-update.js --refresh=<slug>[,<slug>] [--apply]   # local-only: refresh existing articles (dry run unless --apply)
  *
  * Env: see docs/article-pipeline.md.
  */
@@ -99,6 +100,12 @@ const KEYWORD_RESEARCH_STATE = newResearchState();
 const { writeJsonFilesAtomically } = require("./lib/atomicJsonWrite");
 const translationRepair = require("./lib/translationRepair");
 const { normalizeArticleCasing } = require("./lib/titleCase");
+const {
+  appendReferencesSection,
+  buildRefreshResearchPrompt,
+  refreshArticles,
+  sanitizeExternalLinks,
+} = require("./lib/articleRefresh");
 
 const args = new Set(process.argv.slice(2));
 const PLAN_ONLY = args.has("--plan-only");
@@ -108,6 +115,14 @@ const DRY_RUN = args.has("--dry-run") && !PLAN_ONLY;
 const NO_WRITE = args.has("--no-write");
 const APPLY = args.has("--apply") && !DRY_RUN && !NO_WRITE && !PLAN_ONLY;
 const TRANSLATE_EXISTING = args.has("--translate-existing");
+// --refresh=<slug>[,<slug>]: local-only transactional refresh of EXISTING
+// articles (see runRefresh). Combined with --apply it writes; with --dry-run,
+// --no-write or neither, it generates and validates but writes nothing.
+const REFRESH_SLUGS = (process.argv.slice(2).find((a) => a.startsWith("--refresh=")) || "")
+  .slice("--refresh=".length)
+  .split(",")
+  .map((x) => x.trim())
+  .filter(Boolean);
 
 const FORCE_TOPIC = (process.env.FORCE_TOPIC || "").trim();
 const FORCE_TOPIC_KEYWORDS = (process.env.FORCE_TOPIC_KEYWORDS || "")
@@ -621,24 +636,8 @@ async function buildValidatedReferences(candidates, item) {
 
 const { stripReferencesSection } = translationRepair;
 
-function appendReferencesSection(content, references, locale) {
-  const body = stripReferencesSection(content);
-  const list = references.map((r) => `- [${r.labelKey}](${r.url})`).join("\n");
-  return `${body}\n\n---\n### ${rules.REFERENCES_HEADINGS[locale]}\n${list}\n`;
-}
-
-/**
- * Only validated reference URLs may be linked; any other external link is
- * reduced to its anchor text. Internal links are left for the validator.
- */
-function sanitizeExternalLinks(content, references) {
-  const allowed = new Set(references.map((r) => r.url));
-  return String(content || "")
-    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (m, label, url) => (allowed.has(url) ? m : label))
-    // bare / autolinked URLs are never kept in the body
-    .replace(/(?<!\]\()<?https?:\/\/[^\s)>\]]+>?/g, "")
-    .replace(/[ \t]{2,}/g, " ");
-}
+// appendReferencesSection / sanitizeExternalLinks live in lib/articleRefresh.js
+// (shared with the refresh mode); re-exported below.
 
 // ─────────────────────────────────────────────────────────────────────────
 // Validation helpers
@@ -1047,10 +1046,102 @@ function writeArticleAtomically({ data, byLocale, researchLog, files = {} }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────
+// Refresh mode (local-only, never run by the workflow)
+// ─────────────────────────────────────────────────────────────────────────
+
+// Service page linked from each refreshed article's "Notre rôle" section.
+// Slugs not listed fall back to the backlog item's service, then the category.
+const REFRESH_SERVICES = {
+  "quand-famille-besoin-family-office-suisse": "/services/family-office-coordination",
+  "multi-family-office-vs-banque-privee-differences": "/services/family-office-coordination",
+  "choisir-banques-depositaires-suisse-criteres": "/services/investment-oversight",
+  "reporting-consolide-patrimoine-multi-banques": "/services/consolidated-reporting",
+  "family-offices-suisse-panorama-liste-comment-choisir": "/services/family-office-coordination",
+};
+const CATEGORY_SERVICES = {
+  reporting: "/services/consolidated-reporting",
+  fiscalite: "/services/tax-administration",
+  gouvernance: "/services/governance-succession",
+  patrimoine: "/services/investment-oversight",
+  "emploi-domestique": "/services/household-staff",
+  "travaux-intendance": "/services/property-management",
+};
+
+function refreshServiceFor(slug, article, backlog) {
+  const item = (backlog?.items || []).find((i) => i.id === article.backlogId);
+  return REFRESH_SERVICES[slug] || item?.service || CATEGORY_SERVICES[article.category] || "/services/family-office-coordination";
+}
+
+/**
+ * Transactional refresh of existing FR articles + their 4 translations: all 5
+ * locale files in memory, FR draft + 4 translations validated, atomic write of
+ * all 5 only with --apply and only if everything succeeded.
+ * `updated` is set after full success; slug/date/category/backlogId, SEO fields
+ * and unknown fields are preserved (scripts/lib/articleRefresh.js).
+ */
+async function runRefresh() {
+  const today = isoToday();
+  const backlog = (() => {
+    try {
+      return loadBacklog(ROOT);
+    } catch {
+      return null;
+    }
+  })();
+  const servicePathMaps = rules.loadServicePathMaps(ROOT);
+  if (!MOCK) ensureAzureConfigured();
+  const deps = {
+    research: async (article) => {
+      if (MOCK) return MOCK.refreshResearch({ article, today });
+      const { json } = await callResearchModel(buildRefreshResearchPrompt(article, { today }), { article, today });
+      const candidates = [...(Array.isArray(json?.references) ? json.references : []), ...(article.references || [])];
+      const { references, official } = await buildValidatedReferences(candidates, { officialSources: [] });
+      if (official < MIN_OFFICIAL_REFERENCES || official !== references.length) {
+        throw new Error(`refresh: ${article.slug}: not enough verifiable official references (${references.length} valid, ${official} official)`);
+      }
+      return references;
+    },
+    draft: async (prompt, ctx) => {
+      if (MOCK) return MOCK.refreshDraft({ prompt, ...ctx });
+      return callDraftModel(prompt, "refresh-fr", ctx);
+    },
+    translate: async (prompt, ctx) => {
+      if (MOCK) return MOCK.refreshTranslate({ prompt, ...ctx });
+      const strong = ctx.maxAttempts > 1 && ctx.attempt === ctx.maxAttempts;
+      return callTranslateModel(prompt, `translate-${ctx.locale}`, ctx, { strong });
+    },
+  };
+  const { results, written } = await refreshArticles({
+    slugs: REFRESH_SLUGS,
+    today,
+    translationsDir: TRANSLATIONS_DIR,
+    locales: LOCALES,
+    servicePathMaps,
+    serviceFor: (slug, article) => refreshServiceFor(slug, article, backlog),
+    localeNames: LOCALE_NAMES,
+    promptBlocks: { voice: VOICE_PROMPT, hardRules: HARD_RULES_PROMPT, facts: VERIFIED_FACTS },
+    minWords: parseInt(process.env.REFRESH_MIN_WORDS || "600", 10),
+    maxWords: MAX_WORDS,
+    maxTranslationAttempts: MAX_TRANSLATION_ATTEMPTS,
+    apply: APPLY,
+    deps,
+    log,
+  });
+  for (const r of results) {
+    log(`\n${r.slug} (${r.service}): ${r.wordsBefore} -> ${r.wordsAfter} words`);
+    for (const line of r.changeSummary) log(`  - ${line}`);
+  }
+  log(written
+    ? "\nWritten. Review `git diff src/translations/*/ressources.json`, run the validators, then commit."
+    : "\nNothing written (re-run with --apply to write).");
+}
+
+// ─────────────────────────────────────────────────────────────────────────
 // Main
 // ─────────────────────────────────────────────────────────────────────────
 
 async function main() {
+  if (REFRESH_SLUGS.length) return runRefresh();
   const today = isoToday();
   log(`▶️ Mode: ${PLAN_ONLY ? "plan-only (topic + keywords, no Azure)" : DRY_RUN ? "dry-run (topic + keywords + research outline; no article generation, nothing written)" : APPLY ? "apply" : "no-write (full generation, nothing written)"}`);
   const data = {};
@@ -1165,6 +1256,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  REFRESH_SERVICES,
   appendReferencesSection,
   assembleTranslation,
   buildValidatedReferences,

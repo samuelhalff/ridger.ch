@@ -13,6 +13,7 @@ import ServicesMobile from "@/src/components/navigation/ServicesMobile";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
 import { cn } from "@/src/lib/utils";
 import { trackEvent } from "@/src/lib/analytics";
 import type { NavData } from "@/src/components/navigation/types";
@@ -175,7 +176,7 @@ const MobileMenu = ({
             {/* Contact: final entry in the private-banking register — a quiet
                 bronze link over a mono email line, separated by a hairline. */}
             <div className="mt-5 border-t border-border pt-6">
-              <Link
+              <TrackedLink cta="nav_mobile_contact"
                 href={`${localePrefix}/contact/`}
                 onClick={handleLinkClick}
                 prefetch={false}
@@ -183,7 +184,7 @@ const MobileMenu = ({
                 className="flex items-center px-2 py-2 text-md font-bold text-accent transition-opacity hover:opacity-80"
               >
                 <span>{navData.labels.contact}</span>
-              </Link>
+              </TrackedLink>
               <a
                 href="mailto:contact@ridger.ch"
                 onClick={() =>

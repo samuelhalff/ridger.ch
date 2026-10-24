@@ -38,6 +38,18 @@
       "Body": "La organización de su llegada a Suiza: coordinación de los trámites de permiso (B, C, G, L), inscripción ante las autoridades, colegios, bancos y seguros. Orquestamos las formalidades con las autoridades y, si es necesario, con sus abogados — sin sustituir el asesoramiento jurídico."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Varios bancos, un abogado, un notario y un asesor fiscal trabajan para la familia sin hablar entre sí; cada uno pide los mismos documentos.",
+        "WhatWeDo": "Un único interlocutor que lleva el calendario, hace circular la información adecuada y prepara las decisiones, sin sustituir a los asesores existentes."
+      },
+      {
+        "Situation": "La siguiente generación quiere entender cómo está organizado el patrimonio antes de asumir su responsabilidad.",
+        "WhatWeDo": "Un mapa de las estructuras, los mandatos y los roles, y después un ritmo de reuniones familiares que preparamos y documentamos."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Su tiempo, preservado",
     "Body": "Usted mantiene el control de las decisiones. Nosotros asumimos la coordinación, los seguimientos y la circulación de la información entre sus asesores."

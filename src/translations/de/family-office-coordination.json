@@ -38,6 +38,18 @@
       "Body": "Die Organisation Ihrer Ankunft in der Schweiz: Koordination der Bewilligungsverfahren (B, C, G, L), Anmeldung bei den Behörden, Schulen, Banken und Versicherungen. Wir orchestrieren die Formalitäten mit den Behörden und bei Bedarf Ihren Anwälten — ohne die Rechtsberatung zu ersetzen."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Mehrere Banken, ein Anwalt, ein Notar und ein Steuerberater arbeiten für die Familie, ohne miteinander zu sprechen; jeder verlangt dieselben Unterlagen.",
+        "WhatWeDo": "Ein zentraler Ansprechpartner, der den Kalender führt, die richtigen Informationen weitergibt und Entscheidungen vorbereitet, ohne die bestehenden Berater zu ersetzen."
+      },
+      {
+        "Situation": "Die nächste Generation möchte verstehen, wie das Vermögen organisiert ist, bevor sie Verantwortung dafür übernimmt.",
+        "WhatWeDo": "Eine Übersicht der Strukturen, Mandate und Rollen, danach ein Rhythmus von Familientreffen, die wir vorbereiten und dokumentieren."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Ihre Zeit bewahrt",
     "Body": "Sie behalten die Kontrolle über die Entscheidungen. Wir übernehmen die Koordination, die Nachfassungen und den Informationsfluss zwischen Ihren Beratern."

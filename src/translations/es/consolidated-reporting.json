@@ -26,6 +26,18 @@
       "Body": "Identificación y lectura de las comisiones explícitas e implícitas, para una comprensión completa del coste de sus relaciones bancarias."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "El patrimonio está repartido entre varios depositarios y activos no bancarios; ningún extracto ofrece la visión de conjunto ni el coste real.",
+        "WhatWeDo": "Una consolidación independiente de los bancos, con rentabilidad y costes claros, actualizada cada mes, cada trimestre o a petición."
+      },
+      {
+        "Situation": "Un comité de inversión familiar se reúne cada trimestre sin un documento común.",
+        "WhatWeDo": "Un informe único preparado antes de cada reunión, con las preguntas que plantear a los gestores."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Un reporting a su ritmo",
     "Body": "Mensual, trimestral o a petición, su reporting se estructura según sus prioridades y se comparte de forma segura con las personas que usted designe."

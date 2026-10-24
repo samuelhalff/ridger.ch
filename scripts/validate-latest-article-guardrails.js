@@ -72,6 +72,16 @@ if (
   );
 }
 
+// `updated` (set by the refresh mode) can never precede the publication date.
+if (latest.updated !== undefined) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(latest.updated))) {
+    fail(`Latest article has an invalid updated date "${latest.updated}" (expected YYYY-MM-DD) (${latest.slug})`);
+  }
+  if (latest.date && String(latest.updated) < String(latest.date)) {
+    fail(`Latest article updated (${latest.updated}) is before its date (${latest.date}) (${latest.slug})`);
+  }
+}
+
 const latestWords = countWords(latest.content || "");
 if (latestWords < 700) {
   fail(

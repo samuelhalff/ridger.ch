@@ -38,6 +38,18 @@
       "Body": "Organising your arrival in Switzerland: coordination of permit formalities (B, C, G, L), registration with the authorities, schools, banks and insurers. We orchestrate the process with the authorities and, where needed, your lawyers — without replacing legal advice."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Several banks, a lawyer, a notary and a tax adviser work for the family without talking to each other; each asks for the same documents.",
+        "WhatWeDo": "A single point of contact who keeps the calendar, circulates the right information and prepares decisions, without replacing the existing advisers."
+      },
+      {
+        "Situation": "The next generation wants to understand how the wealth is organised before taking on responsibility for it.",
+        "WhatWeDo": "A map of structures, mandates and roles, then a rhythm of family meetings that we prepare and document."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Your time protected",
     "Body": "You keep control of decisions. We take on the coordination, the follow-ups and the flow of information among your advisors."

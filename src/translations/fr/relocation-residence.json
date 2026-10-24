@@ -35,6 +35,18 @@
       "Body": "Coordination de votre situation fiscale à l'arrivée avec vos conseillers fiscaux, y compris l'examen de l'imposition d'après la dépense (forfait fiscal) lorsque les conditions légales sont réunies."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Une famille s'installe à Genève et doit régler permis, assurance maladie, écoles et logement.",
+        "WhatWeDo": "Un calendrier d'arrivée et les démarches coordonnées avec les autorités et les avocats."
+      },
+      {
+        "Situation": "Un membre de la famille arrive seul pour une mission et le reste de la famille suivra plus tard.",
+        "WhatWeDo": "Deux phases planifiées, avec les permis de chacun suivis séparément et les prestataires coordonnés en vue du regroupement."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Une arrivée sereine",
     "Body": "Chaque démarche arrive au bon moment, sans doublon ni oubli. Vous vous consacrez à votre installation ; nous tenons le fil avec les autorités et vos conseillers."

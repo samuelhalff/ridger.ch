@@ -26,6 +26,18 @@
       "Body": "Identification and reading of explicit and implicit fees, for a full understanding of what your banking relationships cost."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Wealth sits with several custodians plus non-bank assets; no statement gives the overall picture or the true cost.",
+        "WhatWeDo": "A bank-independent consolidation with performance and fees made legible, updated monthly, quarterly or on request."
+      },
+      {
+        "Situation": "A family investment committee meets every quarter without a common pack.",
+        "WhatWeDo": "A single report prepared before each meeting, with the questions to put to the managers."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Reporting on your rhythm",
     "Body": "Monthly, quarterly or on demand, your reporting is structured around your priorities and shared securely with the people you designate."

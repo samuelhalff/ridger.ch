@@ -59,7 +59,7 @@ const ROOT = process.cwd();
 const TRANSLATIONS = path.join(ROOT, "src", "translations");
 const FR_PATH = path.join(TRANSLATIONS, "fr", "ressources.json");
 
-if (!fs.existsSync(FR_PATH)) {
+if (require.main === module && !fs.existsSync(FR_PATH)) {
   console.error(`Canonical FR file not found: ${FR_PATH}`);
   process.exit(2);
 }
@@ -127,7 +127,7 @@ async function azureChatJson(prompt) {
   }
   const body = {
     messages: [
-      { role: "system", content: "You are a professional translator. Output ONLY a JSON object with keys title, description, content." },
+      { role: "system", content: "You are a professional translator. Output ONLY a JSON object with keys title, description, content (plus seoTitle, metaDescription, imageAlt and tags when they are present in the input)." },
       { role: "user", content: prompt },
     ],
     temperature: 0.2,
@@ -181,7 +181,14 @@ async function azureChatJson(prompt) {
   }
 }
 
+// Fields the translation step owns. SEO fields and tags are only translated
+// when the FR article has them (pipeline-generated articles do).
+const OPTIONAL_TRANSLATED = ["seoTitle", "metaDescription", "imageAlt"];
+
 function buildTranslatePrompt(locale, frArticle) {
+  const source = { slug: frArticle.slug, title: frArticle.title, description: frArticle.description, content: frArticle.content };
+  for (const f of OPTIONAL_TRANSLATED) if (frArticle[f]) source[f] = frArticle[f];
+  if (frArticle.seoTitle && Array.isArray(frArticle.tags)) source.tags = frArticle.tags;
   return [
     "Tu es un traducteur professionnel. Traduis le contenu français vers la langue cible.",
     "Contraintes:",
@@ -190,12 +197,52 @@ function buildTranslatePrompt(locale, frArticle) {
     // lowercase entire articles. Be explicit about standard casing instead.
     "- Casse standard de la langue cible : majuscule en début de phrase, aux noms propres, marques et acronymes. Ne mets JAMAIS un titre ou un texte entièrement en minuscules ; évite seulement le Title Case à l'anglaise dans les langues qui ne l'utilisent pas.",
     "- Préserve la structure markdown.",
+    "- N'ajoute, ne retire et ne modifie aucun fait, chiffre ou date.",
     "- Réponds UNIQUEMENT avec un objet JSON (aucun texte additionnel).",
     "Langue cible: " + locale,
     "Entrée FR:",
-    JSON.stringify({ slug: frArticle.slug, title: frArticle.title, description: frArticle.description, content: frArticle.content }, null, 2),
-    "Format sortie: { \"title\": \"...\", \"description\": \"...\", \"content\": \"...\" }"
+    JSON.stringify(source, null, 2),
+    "Format sortie: { \"title\": \"...\", \"description\": \"...\", \"content\": \"...\" }" +
+      (frArticle.seoTitle ? " + seoTitle, metaDescription, imageAlt et tags (même nombre qu'en français) traduits quand ils figurent en entrée" : ""),
   ].join("\n");
+}
+
+class MissingSeoTranslationError extends Error {
+  constructor(slug, field) {
+    super(`missing translated ${field} for ${slug} (no model value, no prior localized value)`);
+    this.name = "MissingSeoTranslationError";
+  }
+}
+
+/**
+ * Locale entry from the FR article + the model output. Everything the FR
+ * article owns (date, updated, category, author, image, backlogId, unknown
+ * fields) is carried over; SEO fields are translated when the model returned
+ * them, else the locale's existing value is kept, else it throws (never copies FR); keywords
+ * keep the locale's own research (never overwritten with the FR ones).
+ */
+function buildLocalizedEntry(frA, locA, tr) {
+  const merged = {
+    ...frA,
+    title: tr && tr.title ? String(tr.title) : frA.title,
+    description: tr && tr.description ? String(tr.description) : frA.description,
+    content: tr && tr.content ? String(tr.content) : frA.content,
+  };
+  for (const f of OPTIONAL_TRANSLATED) {
+    if (frA[f] === undefined) continue;
+    const value = tr && tr[f] ? String(tr[f]) : locA && locA[f];
+    if (!value) {
+      // Never ship French SEO text in a non-FR locale.
+      throw new MissingSeoTranslationError(frA.slug, f);
+    }
+    merged[f] = value;
+  }
+  if (Array.isArray(frA.tags)) {
+    const trTags = tr && Array.isArray(tr.tags) ? tr.tags.map((t) => String(t).toLowerCase().trim()).filter(Boolean) : [];
+    merged.tags = trTags.length === frA.tags.length ? trTags : (locA && Array.isArray(locA.tags) && locA.tags.length === frA.tags.length ? locA.tags : frA.tags);
+  }
+  if (locA && locA.keywords) merged.keywords = locA.keywords;
+  return merged;
 }
 
 function needsTranslation(frA, locA) {
@@ -213,6 +260,7 @@ async function main() {
   if (!frArticles.length) throw new Error('FR Articles list is empty.');
 
   let processed = 0, updated = 0;
+  const failed = [];
 
   for (const locale of LOCALES) {
     const targetPath = path.join(TRANSLATIONS, locale, 'ressources.json');
@@ -237,18 +285,20 @@ async function main() {
     const tr = await azureChatJson(prompt);
       const title = (tr && tr.title) ? String(tr.title) : frA.title;
       const description = (tr && tr.description) ? String(tr.description) : frA.description;
-      const content = (tr && tr.content) ? String(tr.content) : frA.content;
 
       if (hasUnnecessaryCaps(title) || hasUnnecessaryCaps(description)) {
         console.warn(`[WARN] ${locale}:${frA.slug} possible unnecessary capitals in title/description.`);
       }
 
-      const merged = {
-        ...frA, // preserve slug, author, date, image
-        title,
-        description,
-        content
-      };
+      let merged;
+      try {
+        merged = buildLocalizedEntry(frA, locA, tr);
+      } catch (e) {
+        if (!(e instanceof MissingSeoTranslationError)) throw e;
+        failed.push(`${locale}:${frA.slug} ${e.message}`);
+        console.error(`[FAILED] ${locale}:${frA.slug} ${e.message}; not written.`);
+        continue;
+      }
 
       // Translate reference labels too (URLs untouched). Falls back to the
       // French labels on any error rather than blocking the article.
@@ -281,6 +331,14 @@ async function main() {
 
   if (DRY) console.log(`\nDry-run complete. Articles needing translation (or identical to FR) scanned: ${processed}.`);
   else console.log(`\nDone. Articles updated: ${updated}.`);
+  if (failed.length) {
+    console.error(`\n${failed.length} article(s) failed (missing SEO translation):\n- ${failed.join("\n- ")}`);
+    process.exitCode = 1;
+  }
 }
 
-main().catch(err => { console.error(err.message || err); process.exit(1); });
+if (require.main === module) {
+  main().catch(err => { console.error(err.message || err); process.exit(1); });
+}
+
+module.exports = { buildLocalizedEntry, buildTranslatePrompt, MissingSeoTranslationError };

@@ -253,7 +253,7 @@ Add dedicated FAQ components to each service page:
 - **Phone**: +41 22 700 70 20
 - **Email**: info@ark-fid.ch
 - **Website**: https://ark-fid.ch
-- **Google Maps CID**: 14946625157719331801
+- **Google Maps**: no Ridger listing; the contact map embeds by address query and nothing links to the shared Ark profile
 
 ### Supported Languages
 

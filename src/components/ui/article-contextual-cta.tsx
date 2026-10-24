@@ -3,8 +3,7 @@ import { CtaBanner } from "@/src/components/ui/surface";
 
 /**
  * Contextual call-to-action banner injected within blog articles.
- * Encourages readers to take action (contact, download, quote)
- * based on the article topic — acting as a lead magnet touchpoint.
+ * Encourages readers to get in touch or read the matching service page.
  */
 const ArticleContextualCTA = ({
   locale,
@@ -27,7 +26,6 @@ const ArticleContextualCTA = ({
   const localePrefix = locale ? `/${locale}` : "/fr";
 
   const resolvedPrimaryHref = primaryHref || `${localePrefix}/contact/`;
-  const resolvedSecondaryHref = secondaryHref || `${localePrefix}/contact/`;
 
   return (
     <CtaBanner
@@ -40,15 +38,15 @@ const ArticleContextualCTA = ({
       primary={{
         href: resolvedPrimaryHref,
         label: primaryText,
-        cta: "article_contextual",
+        cta: "article_mid_contact",
         locale: activeLocale,
       }}
       secondary={
-        secondaryText
+        secondaryText && secondaryHref
           ? {
-              href: resolvedSecondaryHref,
+              href: secondaryHref,
               label: secondaryText,
-              cta: "article_contextual",
+              cta: "article_mid_service",
               locale: activeLocale,
             }
           : undefined

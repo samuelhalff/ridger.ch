@@ -35,6 +35,18 @@
       "Body": "Für wenige Stunden pro Woche kann der Genfer Chèque service genügen. Wir helfen Ihnen, den passenden Weg zu wählen, und übernehmen komplexere Situationen."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Die Familie beschäftigt Hauspersonal in mehreren Residenzen, mit uneinheitlichen Verträgen und Versicherungen.",
+        "WhatWeDo": "Verträge, die in Abstimmung mit Ihren Anwälten vorbereitet werden, danach Sozialversicherungen, Monatslöhne, Quellensteuer und Lohnausweise an einer Stelle betreut."
+      },
+      {
+        "Situation": "Eine Familienholding und das Family Office beschäftigen einige Mitarbeitende; niemand möchte eine interne Personalabteilung.",
+        "WhatWeDo": "Monatliche Lohnabrechnung, jährliche Lohnausweise und ein zentraler Ansprechpartner für Fragen der Mitarbeitenden."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Ein gut geführter Haushalt",
     "Body": "Sie wählen die Menschen aus und setzen die Prioritäten im Haus. Wir sorgen für die administrative Ordnung, die Fristen und die tägliche Koordination."

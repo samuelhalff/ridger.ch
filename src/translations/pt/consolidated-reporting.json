@@ -26,6 +26,18 @@
       "Body": "Levantamento e leitura dos custos explícitos e implícitos, para uma compreensão completa do custo das suas relações bancárias."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "O património está repartido por vários depositários e ativos não bancários; nenhum extrato dá a visão de conjunto nem o custo real.",
+        "WhatWeDo": "Uma consolidação independente dos bancos, com desempenho e custos legíveis, atualizada todos os meses, todos os trimestres ou a pedido."
+      },
+      {
+        "Situation": "Um comité de investimento familiar reúne-se todos os trimestres sem um documento comum.",
+        "WhatWeDo": "Um relatório único preparado antes de cada reunião, com as perguntas a colocar aos gestores."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Um reporting ao seu ritmo",
     "Body": "Mensal, trimestral ou a pedido, o seu reporting é estruturado de acordo com as suas prioridades e partilhado de forma segura com as pessoas que designar."

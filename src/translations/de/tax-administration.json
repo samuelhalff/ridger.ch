@@ -38,6 +38,18 @@
       "Body": "Die Lohnabrechnung all Ihrer Arbeitgeberrollen: Hauspersonal, Mitarbeitende Ihrer Strukturen und Ihres Family Office — Verträge, Löhne nach Swissdec, Sozialversicherungen, Quellensteuer und Bewilligungen."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Die Steuererklärungen mehrerer Familienmitglieder und ihrer Strukturen, Akontozahlungen und Bankbescheinigungen: Die Fristen überschneiden sich, und Unterlagen fehlen.",
+        "WhatWeDo": "Ein einziger Steuerkalender, im Voraus zusammengetragene und an die beauftragten Spezialisten weitergegebene Unterlagen, überwachte Zahlungen."
+      },
+      {
+        "Situation": "Die Familie erwägt die Besteuerung nach dem Aufwand und möchte vor dem Entscheid verstehen, was sie bedeutet.",
+        "WhatWeDo": "Abstimmung mit dem Steuerberater, Aufbereitung der von der Verwaltung verlangten Angaben, Begleitung des Dossiers über die Zeit."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Eine beherrschte Administration",
     "Body": "Sie behalten die Kontrolle und den Gesamtüberblick; wir übernehmen die administrative Ausführung und die Koordination mit Ihren Steuerberatern."

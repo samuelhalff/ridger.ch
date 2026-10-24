@@ -35,6 +35,18 @@
       "Body": "For a few hours a week, Geneva's chèque service scheme may be enough. We help you choose the right route and take over the more complex situations."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "The family employs household staff across several residences, with inconsistent contracts and insurance.",
+        "WhatWeDo": "Contracts prepared in coordination with your lawyers, then social insurance, monthly salaries, withholding tax and salary certificates followed in one place."
+      },
+      {
+        "Situation": "A family holding and the family office employ a few staff; nobody wants an in-house HR department.",
+        "WhatWeDo": "Monthly payroll, annual salary certificates and a single contact for employee questions."
+      }
+    ]
+  },
   "Closing": {
     "Title": "A well-run home",
     "Body": "You choose the people and set the priorities for the house. We look after the administrative regularity, the deadlines and the day-to-day coordination."

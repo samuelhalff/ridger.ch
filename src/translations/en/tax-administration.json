@@ -38,6 +38,18 @@
       "Body": "Payroll for all your employer roles: household staff, employees of your structures and of your family office — contracts, Swissdec payroll, social insurance, source tax and permits."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "The returns of several family members and their structures, instalments and bank certificates: deadlines overlap and documents go missing.",
+        "WhatWeDo": "A single tax calendar, documents gathered in advance and passed to the appointed specialists, payments monitored."
+      },
+      {
+        "Situation": "The family is considering lump-sum taxation and wants to understand what it entails before deciding.",
+        "WhatWeDo": "Coordination with the tax adviser, preparation of the information the administration requires, follow-up of the file over time."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Administration under control",
     "Body": "You keep control and the overview; we take on the administrative execution and the coordination with your tax advisors."

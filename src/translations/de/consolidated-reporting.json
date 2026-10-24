@@ -26,6 +26,18 @@
       "Body": "Erfassung und Lesart der expliziten und impliziten Kosten für ein vollständiges Verständnis dessen, was Ihre Bankbeziehungen kosten."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Das Vermögen liegt bei mehreren Depotbanken und in Anlagen ausserhalb der Banken; kein Auszug zeigt das Gesamtbild oder die tatsächlichen Kosten.",
+        "WhatWeDo": "Eine bankenunabhängige Konsolidierung, mit gut lesbarer Performance und lesbaren Kosten, monatlich, vierteljährlich oder auf Anfrage aktualisiert."
+      },
+      {
+        "Situation": "Ein Anlageausschuss der Familie trifft sich jedes Quartal ohne gemeinsame Unterlage.",
+        "WhatWeDo": "Ein einziger Bericht, der vor jeder Sitzung erstellt wird, mit den Fragen an die Verwalter."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Ein Reporting in Ihrem Rhythmus",
     "Body": "Monatlich, quartalsweise oder auf Anfrage: Ihr Reporting wird nach Ihren Prioritäten strukturiert und sicher mit den von Ihnen benannten Personen geteilt."

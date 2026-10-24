@@ -5,14 +5,13 @@ import GoogleMapClient from "./GoogleMapClient";
  * GoogleMap component
  * - Responsive container with aspect ratio
  * - Dark mode border treatment
- * - Accepts coordinates & placeId for future extensibility
+ * - Embeds by address query: Ridger must not be tied to any Google Business
+ *   Profile (the shared building address belongs to Ark's listing).
  */
 export interface GoogleMapProps {
   title?: string;
-  latitude?: number;
-  longitude?: number;
-  /** Google Place CID or place_id if you later want to deep link */
-  cid?: string;
+  /** Address text used for the embed and the "open" link. */
+  address?: string;
   className?: string;
   height?: number; // explicit px height override
   /** Delay loading the iframe until user consents */
@@ -25,17 +24,12 @@ export interface GoogleMapProps {
   };
 }
 
-const DEFAULT_LAT = 46.2021556;
-const DEFAULT_LNG = 6.1399595;
-// Ridger Google CID (place ID 0x478c65f758b086cb:0xcf6d1463ecc713d9)
-export const ARK_GOOGLE_CID = "14946625157719331801";
+export const RIDGER_MAP_ADDRESS = "26 Boulevard Georges-Favon, 1204 Genève, Suisse";
 
 // Server component wrapper (no hooks here)
 export const GoogleMap = async ({
   title = "Ridger",
-  latitude = DEFAULT_LAT,
-  longitude = DEFAULT_LNG,
-  cid = ARK_GOOGLE_CID,
+  address = RIDGER_MAP_ADDRESS,
   className = "",
   height,
   privacyMode = false,
@@ -45,9 +39,7 @@ export const GoogleMap = async ({
   return (
     <GoogleMapClient
       title={title}
-      latitude={latitude}
-      longitude={longitude}
-      cid={cid}
+      address={address}
       className={className}
       height={height}
       privacyMode={privacyMode}

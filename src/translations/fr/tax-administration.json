@@ -38,6 +38,18 @@
       "Body": "La paie de tous vos employeurs : personnel de maison, collaborateurs de vos structures et de votre family office — contrats, salaires Swissdec, assurances sociales, impôt à la source et permis."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Les déclarations de plusieurs membres de la famille et de leurs structures, les acomptes et les attestations bancaires : les échéances se croisent et les pièces manquent.",
+        "WhatWeDo": "Un calendrier fiscal unique, les pièces réunies à l'avance et transmises aux spécialistes mandatés, les paiements suivis."
+      },
+      {
+        "Situation": "La famille envisage l'imposition d'après la dépense et veut comprendre ce qu'elle implique avant de décider.",
+        "WhatWeDo": "Coordination avec le conseiller fiscal, préparation des informations demandées par l'administration, suivi du dossier dans la durée."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Une administration maîtrisée",
     "Body": "Vous gardez le contrôle et la vue d'ensemble ; nous prenons en charge l'exécution administrative et la coordination avec vos conseillers fiscaux."

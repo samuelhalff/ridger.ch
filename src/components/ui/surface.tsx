@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/src/lib/utils";
 import { Button } from "@/src/components/ui/button";
 import TrackedLink from "@/src/components/ui/tracked-link";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 
 type ActionCardVariant = "contrast" | "warm" | "plain" | "whatsapp";
 type CtaBannerVariant = "contrast" | "warm";
@@ -39,6 +40,9 @@ type ActionCardProps = {
   description?: ReactNode;
   href?: string;
   external?: boolean;
+  /** With `placement`, clicks report `contact_channel_click`. */
+  channel?: string;
+  placement?: string;
   ariaLabel?: string;
   variant?: ActionCardVariant;
   className?: string;
@@ -50,6 +54,8 @@ export function ActionCard({
   description,
   href,
   external,
+  channel,
+  placement,
   ariaLabel,
   variant = "warm",
   className,
@@ -87,6 +93,24 @@ export function ActionCard({
     actionCardClasses[variant],
     className,
   );
+
+  if (href && channel && placement) {
+    return (
+      <ContactChannelLink
+        data-surface="action-card"
+        data-variant={variant}
+        href={href}
+        channel={channel}
+        placement={placement}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        aria-label={ariaLabel}
+        className={classes}
+      >
+        {content}
+      </ContactChannelLink>
+    );
+  }
 
   if (href) {
     return (
@@ -137,6 +161,10 @@ type CtaAction = {
   locale?: string;
   /** GA4 cta_click name; omit to leave the link untracked. */
   cta?: string;
+  /** Reports `contact_channel_click {channel, placement: cta}` instead. */
+  channel?: string;
+  /** Open in a new tab (external URLs such as WhatsApp). */
+  external?: boolean;
 };
 
 type CtaBannerProps = {
@@ -217,9 +245,13 @@ export function CtaBanner({
               >
                 <TrackedLink
                   cta={primary.cta}
+                  channel={primary.channel}
                   href={primary.href}
                   locale={primary.locale}
                   prefetch={false}
+                  {...(primary.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                 >
                   <span>{primary.label}</span>
                 </TrackedLink>
@@ -234,9 +266,13 @@ export function CtaBanner({
               >
                 <TrackedLink
                   cta={secondary.cta}
+                  channel={secondary.channel}
                   href={secondary.href}
                   locale={secondary.locale}
                   prefetch={false}
+                  {...(secondary.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                 >
                   <span>{secondary.label}</span>
                 </TrackedLink>

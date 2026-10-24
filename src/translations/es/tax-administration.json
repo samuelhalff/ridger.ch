@@ -38,6 +38,18 @@
       "Body": "La nómina de todos sus empleadores: personal doméstico, colaboradores de sus estructuras y de su family office — contratos, salarios Swissdec, seguros sociales, impuesto en la fuente (impôt à la source) y permisos."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Las declaraciones de varios miembros de la familia y de sus estructuras, los pagos a cuenta y los certificados bancarios: los plazos se cruzan y faltan documentos.",
+        "WhatWeDo": "Un calendario fiscal único, documentos reunidos con antelación y entregados a los especialistas designados, pagos supervisados."
+      },
+      {
+        "Situation": "La familia estudia la tributación según el gasto y quiere entender qué implica antes de decidir.",
+        "WhatWeDo": "Coordinación con el asesor fiscal, preparación de la información que solicita la administración, seguimiento del expediente a lo largo del tiempo."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Una administración bajo control",
     "Body": "Usted mantiene el control y la visión de conjunto; nosotros asumimos la ejecución administrativa y la coordinación con sus asesores fiscales."

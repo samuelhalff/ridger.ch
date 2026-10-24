@@ -1,6 +1,7 @@
 import { Separator } from "@/src/components/ui/separator";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import Link from "next/link";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 import Image from "next/image";
 import CookieSettingsLink from "@/src/components/CookieSettingsLink";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
@@ -159,26 +160,32 @@ const Footer = async ({ locale }: { locale?: string }) => {
             <span itemProp="addressCountry">CH</span>
           </p>
           <p>
-            <a
+            <ContactChannelLink
+              channel="email"
+              placement="footer"
               href="mailto:contact@ridger.ch"
               className="text-[#b6542b] hover:underline dark:text-[#f2b294]"
               itemProp="email"
             >
               contact@ridger.ch
-            </a>
+            </ContactChannelLink>
           </p>
           <p>
-            <a
+            <ContactChannelLink
+              channel="phone"
+              placement="footer"
               href="tel:+41225125050"
               className="text-[#b6542b] hover:underline dark:text-[#f2b294]"
               itemProp="telephone"
               aria-label="Call Ridger at +41 22 512 50 50"
             >
               +41 22 512 50 50
-            </a>
+            </ContactChannelLink>
           </p>
           <p>
-            <a
+            <ContactChannelLink
+              channel="whatsapp"
+              placement="footer"
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -187,11 +194,11 @@ const Footer = async ({ locale }: { locale?: string }) => {
             >
               <WhatsAppIcon className="size-4 text-[#1f9d55]" />
               <span>{tContact("WhatsApp.Badge") as string}</span>
-            </a>
+            </ContactChannelLink>
           </p>
           <p>
             <a
-              href="https://maps.google.com/?cid=14946625157719331801"
+              href="https://www.google.com/maps/search/?api=1&query=26+Boulevard+Georges-Favon%2C+1204+Gen%C3%A8ve%2C+Suisse"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#b6542b] hover:underline dark:text-[#f2b294]"

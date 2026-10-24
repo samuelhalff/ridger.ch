@@ -26,6 +26,18 @@
       "Body": "Recensement et lecture des frais explicites et implicites, pour une compréhension complète du coût de vos relations bancaires."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Le patrimoine est réparti entre plusieurs dépositaires et des actifs non bancaires ; aucun relevé ne donne la vue d'ensemble ni le coût réel.",
+        "WhatWeDo": "Une consolidation indépendante des banques, performance et frais rendus lisibles, mise à jour chaque mois, chaque trimestre ou à la demande."
+      },
+      {
+        "Situation": "Un comité d'investissement familial se réunit chaque trimestre sans support commun.",
+        "WhatWeDo": "Un rapport unique préparé avant chaque séance, avec les questions à poser aux gérants."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Un reporting à votre rythme",
     "Body": "Mensuel, trimestriel ou à la demande, votre reporting est structuré selon vos priorités et partagé de façon sécurisée avec les personnes que vous désignez."

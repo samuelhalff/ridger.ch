@@ -40,13 +40,12 @@
     "Title": "Nous contacter",
     "Description": "Nos experts sont là pour vous aider à comprendre les détails et implications pour votre situation. Obtenez des conseils personnalisés adaptés à votre situation.",
     "ButtonText": "Contacter notre équipe",
-    "SecondaryButtonText": "Prendre rendez-vous"
+    "WhatsAppButtonText": "Écrire sur WhatsApp"
   },
   "ContextualCTA": {
     "Title": "Besoin d'aide sur ce sujet ?",
-    "Description": "Nos experts sont à votre disposition pour un accompagnement personnalisé. Premier échange gratuit et sans engagement.",
+    "Description": "Nos experts sont à votre disposition pour un accompagnement personnalisé.",
     "PrimaryCTA": "Contactez-nous",
-    "SecondaryCTA": "Prendre rendez-vous",
     "Categories": {
       "family-office": {
         "Title": "Coordonner votre family office",

@@ -136,6 +136,17 @@ npm run validate:article-seo -- --slug <slug>
 npm run test:pipeline        # unit tests + an offline end-to-end run with a mocked model
 ```
 
+### Refreshing existing articles (local only)
+
+`node scripts/ai-ressources-update.js --refresh=<slug>[,<slug>] [--apply]` re-checks existing articles against fresh official references and rewrites them in all 5 locales as one transaction (`scripts/lib/articleRefresh.js`). It is never run by the workflow.
+
+- **Dry run by default.** Without `--apply` (or with `--dry-run` / `--no-write`) it generates and validates everything but writes nothing. With `--apply`, the 5 `ressources.json` files are swapped in atomically, only if every article and every locale passed; any failure leaves the tree untouched.
+- **Merged fields:** `title`, `description`, `content`, `references`, `tags` (FR), and the translated `title`, `description`, `content`, `tags` and reference labels per locale. Everything else is preserved (slug, date, category, author, image, `backlogId`, `seoTitle`, `metaDescription`, `imageAlt`, `keywords`, unknown fields). Pipeline-generated articles (with `keywords`) keep their title, because it is keyword-bound, and must still pass the full SEO/GEO structure check.
+- **`updated`** is set to today (all 5 locales) only after the last check passed; `date` is never touched, and an article dated in the future is refused.
+- **Prompt rules:** no invented facts, figures or anecdotes; unverifiable statements are removed or softened; the "Sources officielles consultées le <date>" line is updated; a `## Notre rôle` section with one internal link to the article's service page is kept or added; same hard rules as new articles (no prices, quote tool, AI assistant). References are re-researched, HTTP-validated and official-only.
+- **Validation per locale:** hard rules, official-only references, VAT rates, no H1 or bare URL, service link and all internal links resolve, dated line with today's date, word range (FR: at least 80 % of the previous length), and for translations number and structure parity with the FR.
+- Review `git diff src/translations/*/ressources.json` and run `npm run validate:latest-article`, `validate-article-translations` and `npm test` before committing. `validate-latest-article-guardrails.js` fails when the latest article has `updated` earlier than `date`.
+
 Manual run: Actions → **AI Resources Update** → *Run workflow*. The options are:
 - `dry_run`: stop after topic selection, keyword research and the research outline (title, slug, question plan, validated references). No article is generated, nothing is committed;
 - `topic`: a backlog id such as `impot-fortune-geneve-vaud-calcul-evaluation`, or free text, optionally with `topic_keywords` and `topic_category`;

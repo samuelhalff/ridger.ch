@@ -35,6 +35,18 @@
       "Body": "Coordenação da sua situação fiscal à chegada com os seus consultores fiscais, incluindo a análise da tributação segundo a despesa (forfait fiscal) quando as condições legais estão reunidas."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Uma família instala-se em Genebra e tem de tratar de autorizações de residência, seguro de saúde, escolas e alojamento.",
+        "WhatWeDo": "Um calendário de chegada e diligências coordenadas com as autoridades e os advogados."
+      },
+      {
+        "Situation": "Um membro da família chega sozinho para uma missão e o resto da família seguirá mais tarde.",
+        "WhatWeDo": "Duas fases planeadas, com as autorizações de cada pessoa acompanhadas em separado e os prestadores coordenados com vista ao reagrupamento."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Uma chegada serena",
     "Body": "Cada diligência chega no momento certo, sem duplicações nem esquecimentos. Dedica-se à sua instalação; nós mantemos o fio com as autoridades e os seus consultores."

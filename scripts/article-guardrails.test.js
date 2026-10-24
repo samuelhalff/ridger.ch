@@ -3,6 +3,11 @@
 const assert = require("node:assert/strict");
 const test = require("node:test");
 
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
+const { spawnSync } = require("node:child_process");
+
 const {
   findAllTimeNearDuplicate,
 } = require("./lib/articleTopicGuardrails");
@@ -109,4 +114,87 @@ test("all-time gate still catches weak-title duplicates with high topic similari
       "Optimiser les charges sociales en Suisse romande : cotisations AVS et LPP, allocations familiales, erreurs fréquentes des PME et indépendants.",
   };
   assert.ok(findAllTimeNearDuplicate([chargesA], chargesB));
+});
+
+// ─── validate-latest-article-guardrails.js: `updated` must not precede `date` ──
+
+function runLatestValidator(latestExtra) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "ridger-latest-"));
+  fs.mkdirSync(path.join(dir, "src", "translations", "fr"), { recursive: true });
+  const filler = Array.from({ length: 760 }, (_, i) => `mot${i % 40}`).join(" ");
+  const article = (slug, title, date, extra = {}) => ({
+    slug,
+    title,
+    description: `Description ${slug}`,
+    date,
+    category: "reporting",
+    tags: ["a", "b", "c"],
+    content: filler,
+    ...extra,
+  });
+  const data = {
+    Articles: [
+      article("ancien-sujet-gouvernance", "Gouvernance familiale et assemblées annuelles", "2026-01-10"),
+      article("dernier-article-reporting", "Reporting consolidé des comptes bancaires multiples", "2026-07-03", latestExtra),
+    ],
+  };
+  fs.writeFileSync(path.join(dir, "src", "translations", "fr", "ressources.json"), JSON.stringify(data));
+  const r = spawnSync(process.execPath, [path.join(__dirname, "validate-latest-article-guardrails.js")], { cwd: dir, encoding: "utf8" });
+  fs.rmSync(dir, { recursive: true, force: true });
+  return r;
+}
+
+test("latest-article validator: updated before date fails", () => {
+  const r = runLatestValidator({ updated: "2026-07-02" });
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /updated \(2026-07-02\) is before its date \(2026-07-03\)/);
+});
+
+test("latest-article validator: malformed updated fails", () => {
+  const r = runLatestValidator({ updated: "yesterday" });
+  assert.notEqual(r.status, 0);
+  assert.match(r.stderr, /invalid updated date/);
+});
+
+test("latest-article validator: updated on/after date, or absent, passes", () => {
+  assert.equal(runLatestValidator({ updated: "2026-07-03" }).status, 0);
+  assert.equal(runLatestValidator({ updated: "2026-10-24" }).status, 0);
+  assert.equal(runLatestValidator({}).status, 0);
+});
+
+// ─── translate-articles.js carries updated / SEO fields / keywords ───────────
+
+test("translate-articles keeps updated, backlogId, keywords and translates SEO fields", () => {
+  const { buildLocalizedEntry, buildTranslatePrompt } = require("./translate-articles");
+  const fr = {
+    slug: "s", author: "Ridger", image: "i.avif", date: "2026-01-01", updated: "2026-10-24", category: "reporting", backlogId: "b-1",
+    title: "Titre", seoTitle: "Titre seo", metaDescription: "Méta", imageAlt: "Alt", description: "Desc", content: "Contenu",
+    tags: ["un", "deux", "trois"], keywords: { primary: "fr", secondary: ["a"] }, references: [{ labelKey: "l", url: "https://x.admin.ch" }], topicId: "t",
+  };
+  const local = { keywords: { primary: "en", secondary: ["b"] }, seoTitle: "Old seo", metaDescription: "Old meta", imageAlt: "Old alt", tags: ["one", "two", "three"] };
+  const tr = { title: "Title", description: "Description", content: "Content", seoTitle: "Seo title", metaDescription: "Meta", imageAlt: "Alt text", tags: ["One", "Two", "Three"] };
+  const out = buildLocalizedEntry(fr, local, tr);
+  assert.equal(out.updated, "2026-10-24");
+  assert.equal(out.backlogId, "b-1");
+  assert.equal(out.topicId, "t");
+  assert.deepEqual(out.keywords, { primary: "en", secondary: ["b"] });
+  assert.equal(out.seoTitle, "Seo title");
+  assert.equal(out.metaDescription, "Meta");
+  assert.equal(out.imageAlt, "Alt text");
+  assert.deepEqual(out.tags, ["one", "two", "three"]);
+  // model omits SEO fields: keep the locale's, never silently ship French
+  const kept = buildLocalizedEntry(fr, local, { title: "T", description: "D", content: "C" });
+  assert.equal(kept.seoTitle, "Old seo");
+  assert.deepEqual(kept.tags, ["one", "two", "three"]);
+  assert.match(buildTranslatePrompt("en", fr), /seoTitle/);
+  // model omits a SEO value and there is no prior localized one: fail, never copy French
+  const { MissingSeoTranslationError } = require("./translate-articles");
+  assert.throws(
+    () => buildLocalizedEntry(fr, { tags: ["one", "two", "three"] }, { title: "T", description: "D", content: "C" }),
+    MissingSeoTranslationError,
+  );
+  assert.throws(
+    () => buildLocalizedEntry(fr, null, { title: "T", description: "D", content: "C", seoTitle: "S", metaDescription: "M" }),
+    /imageAlt/,
+  );
 });

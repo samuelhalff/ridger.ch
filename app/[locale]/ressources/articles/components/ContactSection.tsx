@@ -1,6 +1,7 @@
 import React from "react";
 import { CtaBanner } from "@/src/components/ui/surface";
 import { ChatCircleText as MessageCircleIcon } from "@phosphor-icons/react/dist/ssr";
+import { WHATSAPP_URL } from "@/src/lib/whatsapp";
 // Server-provided texts via ArticleContent props; no client translation needed
 
 const ContactSection = ({
@@ -10,14 +11,17 @@ const ContactSection = ({
   description,
   buttonText,
   secondaryButtonText,
+  placement = "article_end",
 }: {
   locale?: string;
   eyebrow?: string;
   title: string;
   description: string;
   buttonText: string;
-  /** Optional "Get instant quote" CTA displayed next to the primary contact button */
+  /** Optional WhatsApp CTA displayed next to the primary contact button */
   secondaryButtonText?: string;
+  /** Analytics placement: `<placement>_contact` (form) and `<placement>` (WhatsApp) */
+  placement?: string;
 }) => {
   const localePrefix = locale ? `/${locale}` : "/fr";
 
@@ -36,14 +40,17 @@ const ContactSection = ({
       primary={{
         href: `${localePrefix}/contact/`,
         label: buttonText,
+        cta: `${placement}_contact`,
         locale,
       }}
       secondary={
         secondaryButtonText
           ? {
-              href: `${localePrefix}/contact/`,
+              href: WHATSAPP_URL,
               label: secondaryButtonText,
-              locale,
+              cta: placement,
+              channel: "whatsapp",
+              external: true,
             }
           : undefined
       }

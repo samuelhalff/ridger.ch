@@ -370,9 +370,10 @@ export default async function RessourcesPage(
           (tRessources("Contact.ButtonText") as string) || "Contact Our Team"
         }
         secondaryButtonText={
-          (tRessources("Contact.SecondaryButtonText") as string) ||
-          "Get an instant quote"
+          (tRessources("Contact.WhatsAppButtonText") as string) ||
+          "Message us on WhatsApp"
         }
+        placement="ressources_index"
       />
     </main>
   );

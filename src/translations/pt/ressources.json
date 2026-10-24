@@ -40,13 +40,12 @@
     "Title": "Entrar em contato",
     "Description": "Nossos especialistas podem ajudá-lo a entender os detalhes e implicações para a sua situação. Obtenha consultoria personalizada adaptada às suas necessidades.",
     "ButtonText": "Contactar nossa equipe",
-    "SecondaryButtonText": "Agendar uma chamada"
+    "WhatsAppButtonText": "Escrever pelo WhatsApp"
   },
   "ContextualCTA": {
     "Title": "Precisa de ajuda com este assunto?",
-    "Description": "Nossos especialistas estão disponíveis para um acompanhamento personalizado. Primeira consulta gratuita e sem compromisso.",
+    "Description": "Nossos especialistas estão disponíveis para um acompanhamento personalizado.",
     "PrimaryCTA": "Contacte-nos",
-    "SecondaryCTA": "Agendar uma chamada",
     "Categories": {
       "family-office": {
         "Title": "Coordenar o seu family office",

@@ -35,6 +35,18 @@
       "Body": "Coordination of your tax position on arrival with your tax advisers, including a review of lump-sum taxation (forfait fiscal) where the legal conditions are met."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "A family is moving to Geneva and must arrange permits, health insurance, schools and housing.",
+        "WhatWeDo": "An arrival calendar and formalities coordinated with the authorities and lawyers."
+      },
+      {
+        "Situation": "One family member arrives alone for an assignment and the rest of the family will follow later.",
+        "WhatWeDo": "Two planned phases, with each person's permit followed separately and providers coordinated ahead of the family regrouping."
+      }
+    ]
+  },
   "Closing": {
     "Title": "A calm arrival",
     "Body": "Each step comes at the right time, with nothing duplicated or forgotten. You focus on settling in; we keep the thread with the authorities and your advisers."

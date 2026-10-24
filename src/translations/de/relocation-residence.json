@@ -35,6 +35,18 @@
       "Body": "Koordination Ihrer steuerlichen Situation bei der Ankunft mit Ihren Steuerberatern, einschliesslich der Prüfung der Aufwandbesteuerung (Pauschalbesteuerung), sofern die gesetzlichen Voraussetzungen erfüllt sind."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Eine Familie zieht nach Genf und muss Aufenthaltsbewilligung, Krankenversicherung, Schulen und Wohnung regeln.",
+        "WhatWeDo": "Ein Ankunftskalender und mit Behörden und Anwälten abgestimmte Schritte."
+      },
+      {
+        "Situation": "Ein Familienmitglied kommt allein für einen Einsatz, der Rest der Familie folgt später.",
+        "WhatWeDo": "Zwei geplante Phasen, mit getrennt verfolgten Bewilligungen jeder Person und koordinierten Dienstleistern im Hinblick auf den Nachzug."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Eine ruhige Ankunft",
     "Body": "Jeder Schritt erfolgt zur richtigen Zeit, ohne Doppelspurigkeiten oder Versäumnisse. Sie konzentrieren sich auf Ihr neues Zuhause; wir halten den Faden mit den Behörden und Ihren Beratern."

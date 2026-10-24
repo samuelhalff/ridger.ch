@@ -19,6 +19,7 @@ import PageHero from "@/src/components/site/page-hero";
 import Reveal from "@/src/components/motion/reveal";
 import services from "@/app/[locale]/home/components/services-items";
 import { ActionCard } from "@/src/components/ui/surface";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 
 const BOOKING_URL =
   "https://outlook.office.com/bookwithme/user/a21b46e2d9a540cca4c290a48c40119e@ridger.ch/meetingtype/GHNs6ESvEUWN2gUat7rePg2?anonymous&ismsaljsauthenabled&ep=mlink";
@@ -80,14 +81,8 @@ export default async function ContactPage(
       latitude: 46.2021556,
       longitude: 6.1399595,
     },
-    hasMap: "https://maps.google.com/?cid=14946625157719331801",
-    identifier: "14946625157719331801",
     telephone: "+41225125050",
-    sameAs: [
-      "https://www.google.com/maps/place/Ark+Fiduciaire+SA/",
-      "https://maps.google.com/?cid=14946625157719331801",
-      WHATSAPP_URL,
-    ],
+    sameAs: [WHATSAPP_URL],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -257,6 +252,8 @@ export default async function ContactPage(
             <ActionCard
               href={BOOKING_URL}
               external
+              channel="booking"
+              placement="contact_page"
               variant="contrast"
               icon={<CalendarIcon className="size-5" />}
               title={strings.bookingButton}
@@ -266,6 +263,8 @@ export default async function ContactPage(
               href={WHATSAPP_URL}
               aria-label={`${strings.whatsapp.cta} ${WHATSAPP_NUMBER}`}
               external
+              channel="whatsapp"
+              placement="contact_page"
               variant="whatsapp"
               icon={<WhatsAppIcon className="size-5" />}
               title={strings.whatsapp.badge}
@@ -277,13 +276,15 @@ export default async function ContactPage(
               icon={<PhoneIcon className="size-5" />}
               title={strings.callLabel}
               description={
-                <a
+                <ContactChannelLink
+                  channel="phone"
+                  placement="contact_page"
                   href="tel:+41225125050"
                   className="transition-colors hover:text-foreground"
                   aria-label={`${strings.callLabel} +41 22 512 50 50`}
                 >
                   +41 22 512 50 50
-                </a>
+                </ContactChannelLink>
               }
             />
           </div>

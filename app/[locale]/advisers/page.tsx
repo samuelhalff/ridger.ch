@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import ContactForm from "@/src/components/ui/contact-form";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { Button } from "@/src/components/ui/button";
+import TrackedAnchor from "@/src/components/ui/tracked-anchor";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { buildContactFormStrings } from "@/src/lib/contactFormStrings";
@@ -113,14 +114,14 @@ export default async function AdvisersPage(props: {
             {description}
           </p>
           <div className="mt-10">
-            <a href="#introduce">
+            <TrackedAnchor href="#introduce" cta="advisers_hero_contact">
               <Button
                 size="lg"
                 className="btn-main-cta rounded-full bg-foreground px-6 text-base text-background transition-colors hover:text-white"
               >
                 <span>{t("Hero.CTA") as string}</span>
               </Button>
-            </a>
+            </TrackedAnchor>
           </div>
           {intro.length > 0 ? (
             <div className="mt-14 max-w-3xl space-y-6">

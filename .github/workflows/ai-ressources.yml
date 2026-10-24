@@ -3,8 +3,12 @@ name: AI Resources Update (every 3 days)
 # One SEO/GEO article per run, in all 5 locales, or nothing.
 # Docs: docs/article-pipeline.md
 #
-# Schedule: 03:20 UTC on days 2, 5, 8, … — one day after ark-fid.ch's run
-# (days 1, 4, 7, … at 00:00) so the two sites never share Azure quota windows.
+# Schedule: 03:20 UTC on days 2, 5, 8, … (unchanged). ark-fid.ch now runs
+# weekly, Tuesdays at 05:00 UTC, so there is no longer a fixed one-day offset
+# between the two sites; on days where both fall on the same date, ark starts
+# about 1h40 after this run. The job's concurrency group is per repository.
+# Refreshing existing articles is NOT part of this workflow: it is a local-only
+# mode (scripts/ai-ressources-update.js --refresh=<slug>), see docs/article-pipeline.md.
 # Pause: set the repository variable AI_RESSOURCES_PAUSED=true (manual runs
 # still work), or disable the workflow in the Actions tab.
 

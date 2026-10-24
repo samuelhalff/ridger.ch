@@ -38,6 +38,18 @@
       "Body": "A organização da sua chegada à Suíça: coordenação dos procedimentos de autorização de residência (autorizações B, C, G e L), inscrição junto das autoridades, escolas, bancos e seguros. Orquestramos as formalidades com as autoridades e, se necessário, com os seus advogados — sem nos substituirmos ao aconselhamento jurídico."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Vários bancos, um advogado, um notário e um consultor fiscal trabalham para a família sem falar entre si; cada um pede os mesmos documentos.",
+        "WhatWeDo": "Um único interlocutor que mantém o calendário, faz circular a informação certa e prepara as decisões, sem substituir os consultores existentes."
+      },
+      {
+        "Situation": "A geração seguinte quer compreender como o património está organizado antes de assumir a responsabilidade por ele.",
+        "WhatWeDo": "Um mapa das estruturas, dos mandatos e dos papéis, e depois um ritmo de reuniões de família que preparamos e documentamos."
+      }
+    ]
+  },
   "Closing": {
     "Title": "O seu tempo preservado",
     "Body": "Mantém o controlo sobre as decisões. Assumimos a coordenação, os follow-ups e a circulação da informação entre os seus consultores."

@@ -35,6 +35,18 @@
       "Body": "Pour un engagement de quelques heures, le chèque service genevois peut suffire. Nous vous aidons à choisir la voie adaptée et reprenons les situations plus complexes."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "La famille emploie du personnel de maison dans plusieurs résidences, avec des contrats et des assurances disparates.",
+        "WhatWeDo": "Des contrats préparés en coordination avec vos avocats, puis assurances sociales, salaires mensuels, impôt à la source et certificats de salaire suivis au même endroit."
+      },
+      {
+        "Situation": "Une holding familiale et le family office emploient quelques collaborateurs ; personne ne souhaite un service RH interne.",
+        "WhatWeDo": "Paie mensuelle, certificats de salaire annuels et un interlocuteur unique pour les questions des employés."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Un foyer bien tenu",
     "Body": "Vous choisissez les personnes et fixez les priorités de la maison. Nous assurons la régularité administrative, les échéances et la coordination au quotidien."

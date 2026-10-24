@@ -454,7 +454,7 @@ export default async function ArticlePage(props: Params) {
 
         {/* Mid-article contextual CTA — lead magnet touchpoint.
             Category-specific copy + a link to the matching service page;
-            falls back to the generic contact/quote pair. */}
+            shows the contact button alone when the category has no service page. */}
         {articleSecondHalf &&
           (() => {
             const ctaCategory = article.category || "";
@@ -478,17 +478,13 @@ export default async function ArticlePage(props: Params) {
                 }
                 description={
                   (tRessources("ContextualCTA.Description") as string) ||
-                  "Our experts are available for personalised guidance. First consultation free, no commitment."
+                  "Our team is available to discuss your situation."
                 }
                 primaryText={
                   (tRessources("ContextualCTA.PrimaryCTA") as string) ||
                   "Contact us"
                 }
-                secondaryText={
-                  (servicePath && serviceCtaLabel) ||
-                  (tRessources("ContextualCTA.SecondaryCTA") as string) ||
-                  "Contact us"
-                }
+                secondaryText={(servicePath && serviceCtaLabel) || undefined}
                 secondaryHref={
                   servicePath && serviceCtaLabel
                     ? buildInternalUrl(servicePath, locale)
@@ -565,8 +561,8 @@ export default async function ArticlePage(props: Params) {
           (tRessources("Contact.ButtonText") as string) || "Contact Our Team"
         }
         secondaryButtonText={
-          (tRessources("Contact.SecondaryButtonText") as string) ||
-          "Get an instant quote"
+          (tRessources("Contact.WhatsAppButtonText") as string) ||
+          "Message us on WhatsApp"
         }
       />
     </main>

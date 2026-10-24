@@ -35,6 +35,18 @@
       "Body": "Coordinación de su situación fiscal a la llegada con sus asesores fiscales, incluido el análisis de la tributación según el gasto (forfait fiscal) cuando se cumplen las condiciones legales."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Una familia se instala en Ginebra y debe gestionar permisos, seguro médico, colegios y vivienda.",
+        "WhatWeDo": "Un calendario de llegada y trámites coordinados con las autoridades y los abogados."
+      },
+      {
+        "Situation": "Un miembro de la familia llega solo por una misión y el resto de la familia lo hará más adelante.",
+        "WhatWeDo": "Dos fases planificadas, con los permisos de cada persona seguidos por separado y los proveedores coordinados con vistas a la reagrupación."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Una llegada serena",
     "Body": "Cada trámite llega en su momento, sin duplicidades ni olvidos. Usted se dedica a instalarse; nosotros mantenemos el hilo con las autoridades y sus asesores."

@@ -38,6 +38,18 @@
       "Body": "O processamento salarial de todos os seus empregadores: pessoal doméstico, colaboradores das suas estruturas e do seu family office — contratos, salários Swissdec, seguros sociais, imposto retido na fonte e autorizações de residência."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "As declarações de vários membros da família e das suas estruturas, os pagamentos por conta e as certidões bancárias: os prazos cruzam-se e faltam documentos.",
+        "WhatWeDo": "Um calendário fiscal único, documentos reunidos com antecedência e entregues aos especialistas mandatados, pagamentos acompanhados."
+      },
+      {
+        "Situation": "A família pondera a tributação pela despesa e quer perceber o que implica antes de decidir.",
+        "WhatWeDo": "Coordenação com o consultor fiscal, preparação das informações pedidas pela administração, acompanhamento do processo ao longo do tempo."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Uma administração dominada",
     "Body": "Mantém o controlo e a visão de conjunto; assumimos a execução administrativa e a coordenação com os seus consultores fiscais."

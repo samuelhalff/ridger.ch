@@ -1,22 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import { ARK_GOOGLE_CID, GoogleMapProps } from "./GoogleMap";
+import { RIDGER_MAP_ADDRESS, GoogleMapProps } from "./GoogleMap";
 
 interface ClientProps extends GoogleMapProps {}
 
 const GoogleMapClient: React.FC<ClientProps> = ({
   title = "Ridger",
-  latitude = 46.2021556,
-  longitude = 6.1399595,
-  cid = ARK_GOOGLE_CID,
+  address = RIDGER_MAP_ADDRESS,
   className = "",
   height,
   privacyMode = true,
   labels = {},
 }) => {
   const [consented, setConsented] = useState(!privacyMode);
-  const cidHex = BigInt(cid).toString(16);
-  const mapSrc = `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2760.410640687776!2d${longitude}!3d${latitude}!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65f758b086cb%3A0x${cidHex}!2sRidger!5e0!3m2!1sfr!2sch!4v${Date.now()}`;
+  const query = encodeURIComponent(address);
+  const mapSrc = `https://www.google.com/maps?q=${query}&hl=fr&z=16&output=embed`;
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${query}`;
   const {
     loadMap = "Afficher la carte interactive",
     openInGoogle = "Ouvrir dans Google Maps",
@@ -53,7 +52,7 @@ const GoogleMapClient: React.FC<ClientProps> = ({
               {loadMap}
             </button>
             <a
-              href={`https://maps.google.com/?cid=${cid}`}
+              href={mapsHref}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-brand-hover underline dark:text-brand"
@@ -68,7 +67,7 @@ const GoogleMapClient: React.FC<ClientProps> = ({
           {title}
         </span>
         <a
-          href={`https://maps.google.com/?cid=${cid}`}
+          href={mapsHref}
           target="_blank"
           rel="noopener noreferrer"
           className="text-brand-hover hover:underline dark:text-brand"

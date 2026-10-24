@@ -35,6 +35,18 @@
       "Body": "Para unas pocas horas semanales, el dispositivo cantonal ginebrino (chèque service) puede bastar. Le ayudamos a elegir la vía adecuada y nos ocupamos de las situaciones más complejas."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "La familia emplea personal doméstico en varias residencias, con contratos y seguros dispares.",
+        "WhatWeDo": "Contratos preparados en coordinación con sus abogados y, después, seguros sociales, salarios mensuales, impuesto en origen y certificados de salario gestionados en un mismo lugar."
+      },
+      {
+        "Situation": "Una holding familiar y el family office emplean a algunos colaboradores; nadie quiere un departamento de recursos humanos interno.",
+        "WhatWeDo": "Nómina mensual, certificados de salario anuales y un único interlocutor para las preguntas de los empleados."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Un hogar bien atendido",
     "Body": "Usted elige a las personas y fija las prioridades de la casa. Nosotros nos ocupamos del rigor administrativo, los plazos y la coordinación diaria."

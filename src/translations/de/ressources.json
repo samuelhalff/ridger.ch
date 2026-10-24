@@ -40,13 +40,12 @@
     "Title": "Kontakt aufnehmen",
     "Description": "Unsere Experten helfen Ihnen, die Details und Auswirkungen für Ihre Situation zu verstehen. Erhalten Sie persönliche Beratung, die auf Ihre Bedürfnisse zugeschnitten ist.",
     "ButtonText": "Unser Team kontaktieren",
-    "SecondaryButtonText": "Termin vereinbaren"
+    "WhatsAppButtonText": "Per WhatsApp schreiben"
   },
   "ContextualCTA": {
     "Title": "Brauchen Sie Hilfe zu diesem Thema?",
-    "Description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung. Erstes Gespräch kostenlos und unverbindlich.",
+    "Description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung.",
     "PrimaryCTA": "Kontaktieren Sie uns",
-    "SecondaryCTA": "Termin vereinbaren",
     "Categories": {
       "family-office": {
         "Title": "Ihr Family Office koordinieren",

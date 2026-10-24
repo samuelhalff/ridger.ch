@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/src/components/ui/button";
+import TrackedLink from "@/src/components/ui/tracked-link";
+import ServiceTypicalSituations from "@/src/components/ui/service-typical-situations";
+import { servicePillarArticle } from "@/src/lib/servicePillarArticle";
+import { getArticle, isGenuineTranslation } from "@/src/lib/articles";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
-import { localizePath } from "@/src/lib/paths";
+import { buildInternalUrl, localizePath } from "@/src/lib/paths";
 import { tidyTitle, splitTitle } from "@/src/lib/typography";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { arkEntityIds } from "@/src/lib/structuredData";
@@ -74,6 +78,22 @@ const ServiceDetail = async ({
         }
       : null;
 
+  // Reference article for this service, if it exists in the active locale.
+  const pillarSlug = servicePillarArticle[basePath];
+  const pillarArticle =
+    pillarSlug && isGenuineTranslation(currentLocale, pillarSlug)
+      ? getArticle(currentLocale, pillarSlug)
+      : undefined;
+  const tShared = pillarArticle
+    ? await getTranslations(currentLocale, "services")
+    : null;
+  const pillarLabelRaw = tShared?.("ServiceRelated.PillarLabel");
+  const pillarLabel =
+    typeof pillarLabelRaw === "string" &&
+    pillarLabelRaw !== "ServiceRelated.PillarLabel"
+      ? pillarLabelRaw
+      : "";
+
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -144,7 +164,8 @@ const ServiceDetail = async ({
               {heroDescription}
             </p>
             <div className="mt-10">
-              <Link
+              <TrackedLink
+                cta={`service_hero_contact:${namespace}`}
                 href={`${localePrefix}/contact/`}
                 locale={locale}
                 prefetch={false}
@@ -155,7 +176,7 @@ const ServiceDetail = async ({
                 >
                   <span>{cta}</span>
                 </Button>
-              </Link>
+              </TrackedLink>
             </div>
           </div>
           <div className="relative min-h-[320px] w-full overflow-hidden rounded-[28px] bg-muted/30 shadow-sm sm:min-h-[420px] lg:min-h-[520px]">
@@ -213,6 +234,33 @@ const ServiceDetail = async ({
             </div>
           ) : null}
 
+          <ServiceTypicalSituations locale={currentLocale} ns={namespace} />
+
+          {pillarArticle && pillarLabel ? (
+            <aside className="mt-12 max-w-3xl rounded-2xl bg-surface-warm p-6 shadow-sm">
+              <p className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-brand-hover">
+                {pillarLabel}
+              </p>
+              <h2 className="mt-2 text-lg font-semibold tracking-tight text-foreground">
+                <Link
+                  href={buildInternalUrl(
+                    `/ressources/articles/${pillarArticle.slug}`,
+                    currentLocale,
+                  )}
+                  prefetch={false}
+                  className="underline-offset-4 hover:underline"
+                >
+                  {tidyTitle(pillarArticle.title)}
+                </Link>
+              </h2>
+              {pillarArticle.description ? (
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  {pillarArticle.description}
+                </p>
+              ) : null}
+            </aside>
+          ) : null}
+
           {closingTitle || closingBody ? (
             <div className="mt-14 max-w-3xl space-y-4">
               {closingTitle ? (
@@ -254,7 +302,8 @@ const ServiceDetail = async ({
           ) : null}
 
           <div className="mt-12">
-            <Link
+            <TrackedLink
+              cta={`service_bottom_contact:${namespace}`}
               href={`${localePrefix}/contact/`}
               locale={locale}
               prefetch={false}
@@ -265,7 +314,7 @@ const ServiceDetail = async ({
               >
                 <span>{cta}</span>
               </Button>
-            </Link>
+            </TrackedLink>
           </div>
         </div>
       </section>

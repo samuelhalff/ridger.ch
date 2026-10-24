@@ -38,6 +38,18 @@
       "Body": "L'organisation de votre arrivée en Suisse : coordination des démarches de permis (B, C, G, L), inscription auprès des autorités, écoles, banques et assurances. Nous orchestrons les formalités avec les autorités et, au besoin, vos avocats — sans nous substituer au conseil juridique."
     }
   ],
+  "TypicalSituations": {
+    "Cases": [
+      {
+        "Situation": "Plusieurs banques, un avocat, un notaire et un fiscaliste travaillent pour la famille sans se parler ; chacun demande les mêmes documents.",
+        "WhatWeDo": "Un interlocuteur unique qui tient le calendrier, fait circuler l'information juste et prépare les décisions, sans se substituer aux conseillers en place."
+      },
+      {
+        "Situation": "La génération suivante souhaite comprendre l'organisation du patrimoine avant d'en reprendre la responsabilité.",
+        "WhatWeDo": "Une cartographie des structures, des mandats et des rôles, puis un rythme de réunions familiales que nous préparons et documentons."
+      }
+    ]
+  },
   "Closing": {
     "Title": "Votre temps préservé",
     "Body": "Vous gardez la main sur les décisions. Nous prenons en charge la coordination, les relances et la circulation de l'information entre vos conseillers."
