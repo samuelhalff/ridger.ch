@@ -1,23 +1,18 @@
 import type { ResourceCategoryId } from "./resourceCategories";
 
-// Article category -> service page that should receive the mid-article CTA
-// traffic. Categories without their own service page point to the closest one.
+// Article category -> ridger service page that receives the mid-article CTA
+// traffic. Categories without a close service match (e.g. "general") have no
+// entry and fall back to the generic contact pair.
 export const categoryServicePath: Partial<Record<ResourceCategoryId, string>> =
   {
-    odoo: "/services/odoo",
-    accounting: "/services/accounting",
-    tax: "/services/taxes",
-    payroll: "/services/payroll",
-    audit: "/services/accounting",
-    corporate: "/services/corporate",
-    domiciliation: "/services/domiciliation",
-    outsourcing: "/services/outsourcing",
-    ma: "/services/mergers-acquisitions",
-    "family-office": "/services/family-office",
-    incorporation: "/services/incorporation",
-    immigration: "/services/immigration",
-    finance: "/services/accounting",
-    regulatory: "/services/corporate",
+    "family-office": "/services/family-office-coordination",
+    reporting: "/services/consolidated-reporting",
+    fiscalite: "/services/tax-administration",
+    patrimoine: "/services/investment-oversight",
+    gouvernance: "/services/governance-succession",
+    "emploi-domestique": "/services/household-staff",
+    "vie-pratique": "/services/relocation-residence",
+    "travaux-intendance": "/services/property-management",
   };
 
 export const getCategoryServicePath = (

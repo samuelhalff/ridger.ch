@@ -46,7 +46,41 @@
     "Title": "Need help with this topic?",
     "Description": "Our experts are available for personalised guidance. First consultation free, no commitment.",
     "PrimaryCTA": "Contact us",
-    "SecondaryCTA": "Book a call"
+    "SecondaryCTA": "Book a call",
+    "Categories": {
+      "family-office": {
+        "Title": "Coordinating your family office",
+        "ServiceCTA": "See family office coordination"
+      },
+      "reporting": {
+        "Title": "A clear view of your wealth",
+        "ServiceCTA": "See consolidated reporting"
+      },
+      "fiscalite": {
+        "Title": "Tax and administration for your family",
+        "ServiceCTA": "See tax and administration"
+      },
+      "patrimoine": {
+        "Title": "Overseeing your investments",
+        "ServiceCTA": "See investment oversight"
+      },
+      "gouvernance": {
+        "Title": "Governing and preparing succession",
+        "ServiceCTA": "See governance and succession"
+      },
+      "emploi-domestique": {
+        "Title": "Household staff, properly employed",
+        "ServiceCTA": "See household staff"
+      },
+      "vie-pratique": {
+        "Title": "Settling your family in Geneva",
+        "ServiceCTA": "See relocation and residence permits"
+      },
+      "travaux-intendance": {
+        "Title": "Managing your properties and works",
+        "ServiceCTA": "See property management"
+      }
+    }
   },
   "ReadingTime": "Reading time",
   "Minutes": "min",

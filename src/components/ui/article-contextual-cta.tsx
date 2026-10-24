@@ -40,6 +40,7 @@ const ArticleContextualCTA = ({
       primary={{
         href: resolvedPrimaryHref,
         label: primaryText,
+        cta: "article_contextual",
         locale: activeLocale,
       }}
       secondary={
@@ -47,6 +48,7 @@ const ArticleContextualCTA = ({
           ? {
               href: resolvedSecondaryHref,
               label: secondaryText,
+              cta: "article_contextual",
               locale: activeLocale,
             }
           : undefined

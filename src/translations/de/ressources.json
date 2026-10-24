@@ -46,7 +46,41 @@
     "Title": "Brauchen Sie Hilfe zu diesem Thema?",
     "Description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung. Erstes Gespräch kostenlos und unverbindlich.",
     "PrimaryCTA": "Kontaktieren Sie uns",
-    "SecondaryCTA": "Termin vereinbaren"
+    "SecondaryCTA": "Termin vereinbaren",
+    "Categories": {
+      "family-office": {
+        "Title": "Ihr Family Office koordinieren",
+        "ServiceCTA": "Family-Office-Koordination ansehen"
+      },
+      "reporting": {
+        "Title": "Ein klarer Blick auf Ihr Vermögen",
+        "ServiceCTA": "Konsolidiertes Reporting ansehen"
+      },
+      "fiscalite": {
+        "Title": "Steuern und Verwaltung für Ihre Familie",
+        "ServiceCTA": "Steuern und Verwaltung ansehen"
+      },
+      "patrimoine": {
+        "Title": "Ihre Investitionen im Blick behalten",
+        "ServiceCTA": "Investment-Überwachung ansehen"
+      },
+      "gouvernance": {
+        "Title": "Governance und Nachfolge gestalten",
+        "ServiceCTA": "Governance und Nachfolge ansehen"
+      },
+      "emploi-domestique": {
+        "Title": "Hauspersonal korrekt angestellt",
+        "ServiceCTA": "Hauspersonal ansehen"
+      },
+      "vie-pratique": {
+        "Title": "Ihre Familie in Genf einrichten",
+        "ServiceCTA": "Relocation und Aufenthalt ansehen"
+      },
+      "travaux-intendance": {
+        "Title": "Ihre Liegenschaften und Arbeiten verwalten",
+        "ServiceCTA": "Immobilienverwaltung ansehen"
+      }
+    }
   },
   "ReadingTime": "Lesezeit",
   "Minutes": "Min",

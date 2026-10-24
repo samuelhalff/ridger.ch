@@ -14,6 +14,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/src/lib/utils";
+import { trackEvent } from "@/src/lib/analytics";
 import type { NavData } from "@/src/components/navigation/types";
 import { List, X } from "@phosphor-icons/react";
 
@@ -185,6 +186,12 @@ const MobileMenu = ({
               </Link>
               <a
                 href="mailto:contact@ridger.ch"
+                onClick={() =>
+                  trackEvent("contact_channel_click", {
+                    channel: "email",
+                    placement: "mobile_menu",
+                  })
+                }
                 className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
               >
                 contact@ridger.ch

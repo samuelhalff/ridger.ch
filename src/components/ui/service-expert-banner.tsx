@@ -26,11 +26,13 @@ const ServiceExpertBanner = async ({ locale }: { locale: string }) => {
       primary={{
         href: `${localePrefix}/contact/`,
         label: primary,
+        cta: "service_expert_banner",
         locale: activeLocale,
       }}
       secondary={{
         href: `${localePrefix}/contact/`,
         label: secondary,
+        cta: "service_expert_banner",
         locale: activeLocale,
       }}
     />

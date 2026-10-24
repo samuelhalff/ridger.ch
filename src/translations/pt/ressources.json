@@ -46,7 +46,41 @@
     "Title": "Precisa de ajuda com este assunto?",
     "Description": "Nossos especialistas estão disponíveis para um acompanhamento personalizado. Primeira consulta gratuita e sem compromisso.",
     "PrimaryCTA": "Contacte-nos",
-    "SecondaryCTA": "Agendar uma chamada"
+    "SecondaryCTA": "Agendar uma chamada",
+    "Categories": {
+      "family-office": {
+        "Title": "Coordenar o seu family office",
+        "ServiceCTA": "Ver coordenação de family office"
+      },
+      "reporting": {
+        "Title": "Uma visão clara do seu património",
+        "ServiceCTA": "Ver reporting consolidado"
+      },
+      "fiscalite": {
+        "Title": "Fiscalidade e administração da sua família",
+        "ServiceCTA": "Ver fiscalidade e administração"
+      },
+      "patrimoine": {
+        "Title": "Acompanhar os seus investimentos",
+        "ServiceCTA": "Ver acompanhamento de investimentos"
+      },
+      "gouvernance": {
+        "Title": "Governança e preparação da sucessão",
+        "ServiceCTA": "Ver governança e sucessão"
+      },
+      "emploi-domestique": {
+        "Title": "Pessoal doméstico em conformidade",
+        "ServiceCTA": "Ver pessoal doméstico"
+      },
+      "vie-pratique": {
+        "Title": "Instalar a sua família em Genebra",
+        "ServiceCTA": "Ver relocalização e residência"
+      },
+      "travaux-intendance": {
+        "Title": "Gerir os seus imóveis e obras",
+        "ServiceCTA": "Ver gestão imobiliária"
+      }
+    }
   },
   "ReadingTime": "Tempo de leitura",
   "Minutes": "min",

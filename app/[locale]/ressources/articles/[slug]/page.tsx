@@ -487,7 +487,7 @@ export default async function ArticlePage(props: Params) {
                 secondaryText={
                   (servicePath && serviceCtaLabel) ||
                   (tRessources("ContextualCTA.SecondaryCTA") as string) ||
-                  "Instant quote"
+                  "Contact us"
                 }
                 secondaryHref={
                   servicePath && serviceCtaLabel

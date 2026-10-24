@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { cn } from "@/src/lib/utils";
 import { Button } from "@/src/components/ui/button";
+import TrackedLink from "@/src/components/ui/tracked-link";
 
 type ActionCardVariant = "contrast" | "warm" | "plain" | "whatsapp";
 type CtaBannerVariant = "contrast" | "warm";
@@ -134,6 +135,8 @@ type CtaAction = {
   label: string;
   href: string;
   locale?: string;
+  /** GA4 cta_click name; omit to leave the link untracked. */
+  cta?: string;
 };
 
 type CtaBannerProps = {
@@ -212,13 +215,14 @@ export function CtaBanner({
                     : "btn-main-cta !bg-foreground !text-background hover:!text-white",
                 )}
               >
-                <Link
+                <TrackedLink
+                  cta={primary.cta}
                   href={primary.href}
                   locale={primary.locale}
                   prefetch={false}
                 >
                   <span>{primary.label}</span>
-                </Link>
+                </TrackedLink>
               </Button>
             ) : null}
             {secondary ? (
@@ -228,13 +232,14 @@ export function CtaBanner({
                 variant="secondary"
                 className="btn-secondary-cta w-full rounded-full sm:w-auto sm:min-w-[14rem]"
               >
-                <Link
+                <TrackedLink
+                  cta={secondary.cta}
                   href={secondary.href}
                   locale={secondary.locale}
                   prefetch={false}
                 >
                   <span>{secondary.label}</span>
-                </Link>
+                </TrackedLink>
               </Button>
             ) : null}
           </div>

@@ -57,11 +57,13 @@ const ServiceContactForm = async ({
       primary={{
         href: `${localePrefix}/contact/`,
         label: primary,
+        cta: "service_banner",
         locale: activeLocale,
       }}
       secondary={{
         href: `${localePrefix}/contact/`,
         label: secondary,
+        cta: "service_banner",
         locale: activeLocale,
       }}
     />

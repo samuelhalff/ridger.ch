@@ -46,7 +46,41 @@
     "Title": "Besoin d'aide sur ce sujet ?",
     "Description": "Nos experts sont à votre disposition pour un accompagnement personnalisé. Premier échange gratuit et sans engagement.",
     "PrimaryCTA": "Contactez-nous",
-    "SecondaryCTA": "Prendre rendez-vous"
+    "SecondaryCTA": "Prendre rendez-vous",
+    "Categories": {
+      "family-office": {
+        "Title": "Coordonner votre family office",
+        "ServiceCTA": "Voir la coordination family office"
+      },
+      "reporting": {
+        "Title": "Un reporting clair de votre patrimoine",
+        "ServiceCTA": "Voir le reporting consolidé"
+      },
+      "fiscalite": {
+        "Title": "Fiscalité et administration de votre famille",
+        "ServiceCTA": "Voir fiscalité et administration"
+      },
+      "patrimoine": {
+        "Title": "Surveiller vos investissements",
+        "ServiceCTA": "Voir la surveillance des investissements"
+      },
+      "gouvernance": {
+        "Title": "Gouverner et préparer la succession",
+        "ServiceCTA": "Voir gouvernance et succession"
+      },
+      "emploi-domestique": {
+        "Title": "Un personnel de maison en règle",
+        "ServiceCTA": "Voir le personnel de maison"
+      },
+      "vie-pratique": {
+        "Title": "Installer votre famille à Genève",
+        "ServiceCTA": "Voir relocation et permis de séjour"
+      },
+      "travaux-intendance": {
+        "Title": "Gérer vos biens et vos travaux",
+        "ServiceCTA": "Voir la gérance immobilière"
+      }
+    }
   },
   "ReadingTime": "Temps de lecture",
   "Minutes": "min",
