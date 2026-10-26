@@ -141,7 +141,7 @@
             "Title": "Web analytics and how you found us",
             "Content": [
                 "We measure the use of our website with Google Analytics 4 and Google Consent Mode. What is collected depends on your region and your choice in the cookie banner: in Switzerland analytics run unless you refuse, in the EU, the EEA and the UK nothing is stored before you accept. The cookies used and how to refuse are described in our cookies policy.",
-                "When you send a request through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. We never record full addresses or other URL parameters.",
+                "When you send a request through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. For this attribution we never keep full addresses or other URL parameters.",
                 "This information stays in your browser's memory during the visit (and, if you accepted cookies, in session storage, which is cleared when you close the tab). It is only sent to us with your request and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries.",
                 "Refusing cookies does not prevent you from contacting us."
             ]
@@ -285,7 +285,7 @@
         "Measurement": {
             "Title": "How we measure visits",
             "Content": [
-                "We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner.",
+                "We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner. Like any Google Analytics setup, each measurement includes the address of the page viewed, with campaign parameters such as utm_source or gclid when they are in the link you followed.",
                 "Switzerland: analytics cookies (_ga, _ga_*) are used unless you click \"Refuse\". Advertising signals (advertising cookies, ad user data and ad personalisation) stay off until you click \"Accept\".",
                 "European Union, EEA and United Kingdom: no analytics or advertising cookies are set until you click \"Accept\". Until then the tag only sends cookieless measurement pings (for example a page view or a form sent), without an identifier that recognises you from one visit to the next. Google receives the technical data contained in any web request, such as your IP address and browser type, and uses these pings for aggregated statistics.",
                 "Other countries: analytics and advertising signals are on by default. You can turn them off with \"Refuse\".",

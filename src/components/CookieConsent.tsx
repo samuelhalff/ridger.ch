@@ -7,6 +7,7 @@ import { CookieIcon } from "@/src/components/icons/CookieIcon";
 import { cn } from "@/src/lib/utils";
 import {
   CONSENT_KEY,
+  normaliseStoredConsent,
   readStoredConsentValue,
   updateConsentMode,
   type StoredConsent,
@@ -90,8 +91,26 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
       setConsentState(stored);
     }
     const handler = () => setConsentState(null);
+    // Choice made in another tab: apply it here too (Consent Mode, banner,
+    // and listeners such as GTM loading and attribution storage).
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== CONSENT_KEY) return;
+      const value = getStoredConsent();
+      if (!value) return;
+      setConsentState(value);
+      updateConsentMode(normaliseStoredConsent(value) ?? "refused");
+      try {
+        window.dispatchEvent(
+          new CustomEvent("cookie-consent-changed", { detail: value }),
+        );
+      } catch {}
+    };
     window.addEventListener("open-cookie-settings", handler);
-    return () => window.removeEventListener("open-cookie-settings", handler);
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener("open-cookie-settings", handler);
+      window.removeEventListener("storage", onStorage);
+    };
   }, []);
   // Minimal focus trap when the dialog is open
   useEffect(() => {
