@@ -1,11 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Script from "next/script";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CookieIcon } from "@/src/components/icons/CookieIcon";
 import { cn } from "@/src/lib/utils";
+import {
+  CONSENT_KEY,
+  readStoredConsentValue,
+  updateConsentMode,
+  type StoredConsent,
+} from "@/src/lib/consent-mode";
 
 type Props = {
   nonce?: string;
@@ -22,31 +27,10 @@ type Props = {
   };
 };
 
-type ConsentValue = "accepted" | "minimal" | "declined";
+type ConsentValue = StoredConsent;
 
-const CONSENT_KEY = "cookieConsent"; // values: "accepted" | "minimal" | "declined"
 function getStoredConsent(): ConsentValue | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const v = localStorage.getItem(CONSENT_KEY);
-    if (v === "accepted" || v === "declined" || v === "minimal")
-      return v as ConsentValue;
-    return null;
-  } catch (e) {
-    // localStorage unavailable (private browsing, etc.)
-    // Fallback: check cookie
-    try {
-      const cookieMatch = document.cookie.match(
-        new RegExp(`(?:^|; )${CONSENT_KEY}=([^;]*)`),
-      );
-      if (cookieMatch) {
-        const val = cookieMatch[1];
-        if (val === "accepted" || val === "declined" || val === "minimal")
-          return val as ConsentValue;
-      }
-    } catch {}
-    return null;
-  }
+  return readStoredConsentValue();
 }
 
 function setConsent(value: ConsentValue) {
@@ -64,7 +48,7 @@ function setConsent(value: ConsentValue) {
   }
 }
 
-export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
+export default function CookieConsent({ locale = "fr", labels }: Props) {
   const [consent, setConsentState] = useState<ConsentValue | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const manageBtnRef = useRef<HTMLButtonElement | null>(null);
@@ -140,59 +124,6 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [consent]);
 
-  const measurementId = useMemo(
-    () =>
-      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
-      process.env.NEXT_PUBLIC_GA_ID ||
-      "",
-    [],
-  );
-
-  const applyGtagConsent = useCallback(
-    (level: ConsentValue | null) => {
-      if (
-        typeof window === "undefined" ||
-        !measurementId ||
-        typeof (window as any).gtag !== "function"
-      ) {
-        return;
-      }
-      const gtag = (window as any).gtag as (...args: any[]) => void;
-      if (level === "accepted") {
-        gtag("consent", "update", {
-          ad_storage: "granted",
-          analytics_storage: "granted",
-          functionality_storage: "granted",
-          personalization_storage: "granted",
-        });
-        gtag("config", measurementId, {
-          anonymize_ip: true,
-          allow_google_signals: true,
-          allow_ad_personalization_signals: true,
-        });
-      } else if (level === "minimal") {
-        gtag("consent", "update", {
-          ad_storage: "denied",
-          analytics_storage: "denied",
-          functionality_storage: "granted",
-          personalization_storage: "denied",
-        });
-        gtag("config", measurementId, {
-          anonymize_ip: true,
-          allow_google_signals: false,
-          allow_ad_personalization_signals: false,
-        });
-      }
-    },
-    [measurementId],
-  );
-
-  useEffect(() => {
-    if (consent === "accepted" || consent === "minimal") {
-      applyGtagConsent(consent);
-    }
-  }, [consent, applyGtagConsent]);
-
   const accept = () => {
     setConsent("accepted");
     setConsentState("accepted");
@@ -201,7 +132,7 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
         new CustomEvent("cookie-consent-changed", { detail: "accepted" }),
       );
     } catch {}
-    applyGtagConsent("accepted");
+    updateConsentMode("accepted");
     // Return focus to manage button for a11y
     setTimeout(() => focusWithoutScroll(manageBtnRef.current), 0);
   };
@@ -213,13 +144,12 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
         new CustomEvent("cookie-consent-changed", { detail: "minimal" }),
       );
     } catch {}
-    applyGtagConsent("minimal");
+    updateConsentMode("refused");
     setTimeout(() => focusWithoutScroll(manageBtnRef.current), 0);
   };
 
   const legalCookiesHref = `/${locale}/legal/cookies`;
-  const minimalLabel =
-    labels.Minimal || labels.Decline || "Essential + analytics";
+  const minimalLabel = labels.Minimal || labels.Decline || "Refuse";
   const fullLabel = labels.Full || labels.Accept || "Full consent";
 
   return (
@@ -248,41 +178,9 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
         </button>
       )}
 
-      {/* Load GA only when consent is accepted/minimal and measurement ID is configured */}
-      {measurementId && (consent === "accepted" || consent === "minimal") ? (
-        <>
-          <Script
-            nonce={nonce}
-            id="ga4-src"
-            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-            strategy="afterInteractive"
-            suppressHydrationWarning
-          />
-          <Script
-            id="ga4-init"
-            nonce={nonce}
-            strategy="afterInteractive"
-            suppressHydrationWarning
-          >
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);} 
-              gtag('js', new Date());
-              gtag('consent', 'default', { 
-                ad_storage: 'denied', 
-                analytics_storage: 'denied',
-                functionality_storage: 'granted',
-                personalization_storage: 'denied'
-              });
-              gtag('config', '${measurementId}', { 
-                anonymize_ip: true,
-                allow_google_signals: false,
-                allow_ad_personalization_signals: false
-              });
-            `}
-          </Script>
-        </>
-      ) : null}
+      {/* GA4 itself is loaded for every visitor by the consent bootstrap in
+          app/layout.tsx (Consent Mode v2 with regional defaults). This
+          component only stores the choice and sends consent updates. */}
 
       {/* Banner */}
       {consent === null && (

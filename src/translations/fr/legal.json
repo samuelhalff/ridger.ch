@@ -132,9 +132,19 @@
                     "Données d'utilisation (pages visitées, temps passé, sources de référence)",
                     "Cookies et technologies de suivi similaires",
                     "Soumissions de formulaires de contact et communications",
-                    "Contenu du formulaire de contact et messages WhatsApp, avec vos informations de contact (email, nom, société, téléphone) enregistrés dans notre système de suivi (Microsoft 365/SharePoint) pour répondre à votre demande"
+                    "Contenu du formulaire de contact et messages WhatsApp, avec vos informations de contact (email, nom, société, téléphone) enregistrés dans notre système de suivi (Microsoft 365/SharePoint) pour répondre à votre demande",
+                    "La façon dont vous avez trouvé notre site (première page visitée, domaine d'origine, paramètres de campagne et pages consultées pendant la visite), transmise uniquement avec votre demande"
                 ]
             }
+        },
+        "WebAnalytics": {
+            "Title": "Mesure d'audience et provenance des demandes",
+            "Content": [
+                "Nous mesurons l'utilisation de notre site avec Google Analytics 4 et le mode de consentement de Google. Ce qui est collecté dépend de votre région et de votre choix dans le bandeau cookies : en Suisse, la mesure est active sauf si vous la refusez ; dans l'UE, l'EEE et au Royaume-Uni, rien n'est enregistré avant votre accord. Les cookies utilisés et la manière de les refuser sont décrits dans notre politique cookies.",
+                "Lorsque vous envoyez une demande par notre formulaire de contact, nous y ajoutons la façon dont vous êtes arrivé sur notre site : la première page visitée, le site d'origine (domaine uniquement), les paramètres de campagne (utm_source, utm_medium, utm_campaign, utm_term, utm_content), l'identifiant de clic Google Ads (gclid) s'il existe et jusqu'à 20 pages consultées pendant la visite. Nous n'enregistrons jamais d'adresses complètes ni d'autres paramètres d'URL.",
+                "Ces informations restent dans la mémoire de votre navigateur pendant la visite (et, si vous avez accepté les cookies, dans le stockage de session, effacé à la fermeture de l'onglet). Elles ne nous sont transmises qu'avec votre demande et sont conservées avec elle. Nous les utilisons, sur la base de notre intérêt légitime, pour comprendre quels canaux nous amènent des demandes.",
+                "Refuser les cookies ne vous empêche pas de nous contacter."
+            ]
         },
         "LegalBasis": {
             "Title": "Base Légale pour le Traitement",
@@ -269,7 +279,18 @@
             "Title": "Introduction",
             "Content": [
                 "Cette Politique des Cookies explique comment Ridger utilise les cookies et technologies de suivi similaires sur notre site web. Elle fournit des informations sur ce que sont les cookies, comment nous les utilisons et vos choix concernant leur utilisation.",
-                "En utilisant notre site web, vous consentez à l'utilisation de cookies conformément à cette politique et à notre Politique de Confidentialité."
+                "Selon l'endroit où vous vous trouvez, certaines de ces technologies sont actives par défaut et d'autres uniquement avec votre accord. La section ci-dessous explique ce qui s'applique à vous et comment refuser ou modifier votre choix."
+            ]
+        },
+        "Measurement": {
+            "Title": "Comment nous mesurons les visites",
+            "Content": [
+                "Nous utilisons Google Analytics 4 (Google Ireland Limited et Google LLC) avec le mode de consentement de Google (Consent Mode). La balise Google se charge à chaque visite. Ce qu'elle peut enregistrer dépend de l'endroit où vous vous trouvez, estimé par Google à partir de votre adresse IP, et de votre choix dans le bandeau cookies.",
+                "Suisse : les cookies de mesure d'audience (_ga, _ga_*) sont utilisés sauf si vous cliquez sur « Refuser ». Les signaux publicitaires (cookies publicitaires, données utilisateur et personnalisation des annonces) restent désactivés tant que vous n'avez pas cliqué sur « Accepter ».",
+                "Union européenne, EEE et Royaume-Uni : aucun cookie de mesure ou publicitaire n'est déposé avant que vous cliquiez sur « Accepter ». En attendant, la balise envoie uniquement des signaux de mesure sans cookie (par exemple une page vue ou un formulaire envoyé), sans identifiant permettant de vous reconnaître d'une visite à l'autre. Google reçoit les données techniques contenues dans toute requête web, comme votre adresse IP et le type de navigateur, et utilise ces signaux pour des statistiques agrégées.",
+                "Autres pays : la mesure d'audience et les signaux publicitaires sont actifs par défaut. Vous pouvez les désactiver avec « Refuser ».",
+                "Nous n'utilisons pas d'autres outils de mesure ou de publicité.",
+                "Votre choix est enregistré dans votre navigateur (cookie et stockage local « cookieConsent », 12 mois). « Refuser » désactive les cookies et signaux de mesure et publicitaires ; la balise n'envoie alors que les signaux sans cookie décrits ci-dessus. Vous pouvez modifier votre choix à tout moment avec le bouton cookies en bas de page."
             ]
         },
         "WhatAreCookies": {
@@ -297,7 +318,7 @@
             },
             "Analytics": {
                 "Title": "2. Cookies d'Analyse",
-                "Description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant et rapportant des informations de manière anonyme.",
+                "Description": "Ces cookies nous aident à comprendre comment les visiteurs utilisent notre site (pages consultées, durée de visite, sources de trafic). Les résultats nous sont présentés sous forme agrégée.",
                 "Purpose": "Objectif :",
                 "Items": [
                     "Analyse du trafic du site web",
@@ -320,7 +341,7 @@
             },
             "Marketing": {
                 "Title": "4. Cookies Marketing",
-                "Description": "Ces cookies suivent les visiteurs à travers les sites web pour afficher des publicités pertinentes et engageantes.",
+                "Description": "Les signaux publicitaires de Google mesurent l'efficacité des annonces. La section « Comment nous mesurons les visites » ci-dessus précise où ils s'appliquent par défaut et où ils nécessitent votre accord.",
                 "Purpose": "Objectif :",
                 "Items": [
                     "Publicité ciblée",
@@ -328,7 +349,7 @@
                     "Campagnes de reciblage",
                     "Intégration des réseaux sociaux"
                 ],
-                "Providers": "Fournisseurs : Google Ads, LinkedIn, Facebook"
+                "Providers": "Fournisseur : Google (signaux publicitaires)"
             }
         },
         "ThirdParty": {
@@ -371,10 +392,10 @@
             "Title": "Gestion des Cookies",
             "ConsentBanner": {
                 "Title": "Bannière de Consentement des Cookies",
-                "Description": "Lorsque vous visitez notre site web pour la première fois, vous verrez une bannière de consentement des cookies avec deux options :",
+                "Description": "Le bandeau cookies propose deux choix :",
                 "Options": [
-                    "\"Tout\" - Accepter tous les cookies incluant l'analyse, la publicité et la personnalisation",
-                    "\"Essentiel\" - Accepter uniquement les cookies fonctionnels essentiels, refuser l'analyse et la publicité"
+                    "« Accepter » : les cookies et signaux de mesure et publicitaires sont autorisés.",
+                    "« Refuser » : les cookies et signaux de mesure et publicitaires sont désactivés. Google Analytics n'envoie alors que des signaux sans cookie."
                 ],
                 "ChangePreferences": "Vous pouvez modifier vos préférences à tout moment en utilisant le bouton de paramètres des cookies qui apparaît sur le site web."
             },

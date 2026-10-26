@@ -3,6 +3,7 @@
 import { FC, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/src/lib/utils";
 import { getGaClientId, trackEvent } from "@/src/lib/analytics";
+import { currentPageUrl, getAttributionPayload } from "@/src/lib/attribution";
 import { Card, CardContent } from "@/src/components/ui/card";
 import {
   Form,
@@ -142,6 +143,8 @@ interface ContactFormProps {
       consent: string;
       submit: string;
       sending: string;
+      /** One-line notice about the attribution sent with the message. */
+      attributionNotice?: string;
     };
     placeholders: {
       name: string;
@@ -221,6 +224,7 @@ const ContactForm: FC<ContactFormProps> = ({
       router.push(redirectPath);
     };
     try {
+      const attribution = getAttributionPayload();
       const res = await fetch("/api/contact/", {
         method: "POST",
         headers: {
@@ -230,9 +234,10 @@ const ContactForm: FC<ContactFormProps> = ({
         body: JSON.stringify({
           ...data,
           formType,
-          pageUrl: window.location.href,
-          referrer: document.referrer || "",
+          pageUrl: currentPageUrl(),
+          referrer: attribution.referrer,
           gaClientId: getGaClientId() || "",
+          attribution,
           turnstileToken,
         }),
       });
@@ -615,6 +620,11 @@ const ContactForm: FC<ContactFormProps> = ({
                     </FormItem>
                   )}
                 />
+                {strings.labels.attributionNotice ? (
+                  <p className="text-xs text-muted-foreground">
+                    {strings.labels.attributionNotice}
+                  </p>
+                ) : null}
                 <Button
                   type="submit"
                   name="submit"

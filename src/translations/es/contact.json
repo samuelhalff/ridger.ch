@@ -68,7 +68,8 @@
     "Submit": "Solicitar una entrevista confidencial",
     "Sending": "Enviando",
     "Success": "Mensaje enviado. Le responderemos en un día hábil.",
-    "Error": "No se pudo enviar el mensaje. Inténtelo de nuevo."
+    "Error": "No se pudo enviar el mensaje. Inténtelo de nuevo.",
+    "AttributionNotice": "Junto con su mensaje enviamos también cómo llegó a nuestro sitio (sitio de origen, campaña, páginas vistas durante esta visita). Más detalles en nuestra política de privacidad."
   },
   "Errors": {
     "Required": "Este campo es obligatorio",

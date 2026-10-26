@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { runWithTimeout } from "@/src/lib/agent/resilience";
+import {
+  attributionSchema,
+  flattenAttribution,
+} from "@/src/lib/attribution-schema";
 
 export const runtime = "nodejs";
 export const revalidate = 0;
@@ -34,6 +38,7 @@ const contactSchema = z.object({
     .optional()
     .or(z.literal("")),
   turnstileToken: z.string().trim().max(2048).optional().or(z.literal("")),
+  attribution: attributionSchema,
 });
 
 const verifyTurnstile = async (token: string): Promise<boolean> => {
@@ -54,7 +59,7 @@ const verifyTurnstile = async (token: string): Promise<boolean> => {
   }
 };
 
-const submitFormspark = async (payload: z.infer<typeof contactSchema>) => {
+const submitFormspark = async (payload: Record<string, unknown>) => {
   if (!FORMSPARK_ACTION_URL) {
     if (process.env.NODE_ENV === "production") {
       // Never swallow leads on a prod misconfiguration.
@@ -134,8 +139,10 @@ export async function POST(request: Request) {
   }
 
   try {
-    // Attribution gaClientId is for analytics matching only — never disclose to Formspark
-    await submitFormspark({ ...payload, gaClientId: undefined });
+    // Attribution gaClientId is for analytics matching only — never disclose to Formspark.
+    // First-party attribution (pathnames/origins only) goes in flat, readable fields.
+    const { attribution, gaClientId: _gaClientId, turnstileToken: _token, ...fields } = payload;
+    await submitFormspark({ ...fields, ...flattenAttribution(attribution) });
 
     return NextResponse.json(
       { ok: true },

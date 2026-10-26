@@ -68,7 +68,8 @@
     "Submit": "Demander un entretien confidentiel",
     "Sending": "Envoi en cours",
     "Success": "Message envoyé. Nous vous répondons sous un jour ouvré.",
-    "Error": "Échec de l'envoi du message. Veuillez réessayer."
+    "Error": "Échec de l'envoi du message. Veuillez réessayer.",
+    "AttributionNotice": "Avec votre message, nous transmettons aussi la façon dont vous avez trouvé notre site (site d'origine, campagne, pages consultées pendant cette visite). Détails dans notre politique de confidentialité."
   },
   "Errors": {
     "Required": "Ce champ est obligatoire",

@@ -53,7 +53,7 @@ export default async function CookiesPage(
         </p>
         <p className="text-xs dark:text-white">
           {r("Cookies.LastUpdated", "Last updated")}:{" "}
-          {formatDate("2025-08-25", locale)}
+          {formatDate("2026-10-26", locale)}
         </p>
         <Separator className="mt-6" />
       </div>
@@ -77,6 +77,18 @@ export default async function CookiesPage(
                 "By using our website, you consent to the use of cookies in accordance with this policy and our Privacy Policy."
               )}
             </p>
+          </div>
+        </section>
+
+        {/* How we measure visits (Consent Mode, regional defaults) */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">
+            {r("Cookies.Measurement.Title", "How we measure visits")}
+          </h2>
+          <div className="space-y-4">
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <p key={i}>{r(`Cookies.Measurement.Content.${i}`, "")}</p>
+            ))}
           </div>
         </section>
 

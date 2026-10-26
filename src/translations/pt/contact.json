@@ -68,7 +68,8 @@
     "Submit": "Solicitar uma entrevista confidencial",
     "Sending": "A enviar",
     "Success": "Mensagem enviada. Respondemos no prazo de um dia útil.",
-    "Error": "Falha no envio da mensagem. Tente novamente."
+    "Error": "Falha no envio da mensagem. Tente novamente.",
+    "AttributionNotice": "Junto com sua mensagem, enviamos também como você chegou ao nosso site (site de origem, campanha, páginas vistas durante esta visita). Detalhes na nossa política de privacidade."
   },
   "Errors": {
     "Required": "Este campo é obrigatório",

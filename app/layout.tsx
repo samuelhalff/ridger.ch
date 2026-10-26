@@ -7,6 +7,11 @@ import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import { CookieConsent } from "@/src/components/ClientOnlyDynamic";
 import ConsentAnalytics from "@/src/components/ConsentAnalytics";
+import AttributionTracker from "@/src/components/AttributionTracker";
+import {
+  buildConsentBootstrap,
+  isValidMeasurementId,
+} from "@/src/lib/consent-mode";
 import WhatsAppLink from "@/src/components/ui/whatsapp-link";
 import {
   WHATSAPP_BADGE_FALLBACK,
@@ -68,9 +73,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // ✅ read nonce and UA headers from the middleware
+  // ✅ read nonce from the middleware
   const nonce = (await headers()).get("x-nonce") || undefined;
-  const gaId = process.env.NEXT_PUBLIC_GA_ID || "";
+  const configuredGaId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID;
+  // No measurement id configured (local dev): no Google tag at all.
+  const gaId = isValidMeasurementId(configuredGaId) ? configuredGaId : null;
   const currentLocale = await getCurrentLocale();
 
   const tCookie = await getTranslations(currentLocale, "cookie");
@@ -96,6 +104,14 @@ export default async function RootLayout({
       lang={currentLocale}
     >
       <head>
+        {/* Consent Mode v2 bootstrap: regional defaults + stored choice, then
+            gtag.js. Must run before any other gtag call. */}
+        {gaId ? (
+          <script
+            nonce={nonce}
+            dangerouslySetInnerHTML={{ __html: buildConsentBootstrap(gaId) }}
+          />
+        ) : null}
         <link rel="preload" href="/fonts/InstrumentSans-vf-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <meta httpEquiv="Accept-CH" content="Sec-CH-Prefers-Color-Scheme" />
@@ -154,9 +170,10 @@ export default async function RootLayout({
                 labels={cookieLabels}
               />
 
+              <AttributionTracker />
+
               <Defer rootMargin="0px" idle={200} placeholder={null}>
                 <ConsentAnalytics
-                  gaId={gaId}
                   gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
                   nonce={nonce}
                 />

@@ -119,6 +119,7 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
       consent: (t("Form.Consent") as string) || "I consent to being contacted",
       submit: (t("Form.Submit") as string) || "Submit",
       sending: (t("Form.Sending") as string) || "Sending...",
+      attributionNotice: t("Form.AttributionNotice") as string,
     },
     placeholders: {
       name: (t("Form.Placeholders.Name") as string) || "Your name",

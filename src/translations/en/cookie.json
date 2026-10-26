@@ -1,8 +1,8 @@
 {
-    "Title": "We use cookies",
-    "Text": "We collect essential anonymous data to improve your experience. Choose 'Essential' for minimal tracking or 'All' for full analytics.",
-    "Accept": "All",
-    "Decline": "Essential",
+    "Title": "Cookies and measurement",
+    "Text": "We use Google Analytics to measure visits. In Switzerland it runs unless you refuse. In the EU, the EEA and the UK nothing is stored until you accept. Accepting also allows advertising measurement.",
+    "Accept": "Accept",
+    "Decline": "Refuse",
     "LearnMore": "Learn more about cookies on this website",
     "Manage": "Manage cookies"
 }

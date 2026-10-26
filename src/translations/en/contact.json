@@ -68,7 +68,8 @@
     "Submit": "Request a confidential consultation",
     "Sending": "Sending",
     "Success": "Message sent. We will reply within one business day.",
-    "Error": "Failed to send message. Please try again."
+    "Error": "Failed to send message. Please try again.",
+    "AttributionNotice": "With your message we also send how you found our site (referring site, campaign, pages viewed during this visit). Details in our privacy policy."
   },
   "Contact": {
     "CompanyName": "Ridger",

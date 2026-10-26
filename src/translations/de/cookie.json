@@ -1,8 +1,8 @@
 {
-    "Title": "Wir verwenden Cookies",
-    "Text": "Wir sammeln wesentliche anonyme Daten, um Ihr Erlebnis zu verbessern. Wählen Sie 'Essenziell' für minimales Tracking oder 'Alle' für vollständige Analysen.",
-    "Accept": "Alle",
-    "Decline": "Essenziell",
+    "Title": "Cookies und Reichweitenmessung",
+    "Text": "Wir messen Besuche mit Google Analytics. In der Schweiz ist die Messung aktiv, solange Sie nicht ablehnen. In der EU, im EWR und im Vereinigten Königreich wird erst nach Ihrer Zustimmung etwas gespeichert. Mit „Akzeptieren“ erlauben Sie auch die Werbemessung.",
+    "Accept": "Akzeptieren",
+    "Decline": "Ablehnen",
     "LearnMore": "Erfahren Sie mehr über Cookies auf dieser Website",
     "Manage": "Cookie-Einstellungen"
 }

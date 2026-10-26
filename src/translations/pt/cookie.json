@@ -1,8 +1,8 @@
 {
-    "Title": "Utilizamos cookies",
-    "Text": "Recolhemos dados anónimos essenciais para melhorar a sua experiência. Escolha «Essencial» para um seguimento mínimo ou «Tudo» para uma análise completa.",
-    "Accept": "Tudo",
-    "Decline": "Essencial",
+    "Title": "Cookies e medição",
+    "Text": "Usamos o Google Analytics para medir as visitas. Na Suíça, a medição está ativa, a menos que você a recuse. Na UE, no EEE e no Reino Unido, nada é armazenado até você aceitar. Ao aceitar, você também autoriza a medição publicitária.",
+    "Accept": "Aceitar",
+    "Decline": "Recusar",
     "LearnMore": "Saber mais sobre os cookies deste sítio",
     "Manage": "Configurar os cookies"
 }

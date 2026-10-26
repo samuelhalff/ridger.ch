@@ -50,7 +50,7 @@ export default async function PrivacyPage(
         </p>
         <p className="text-xs dark:text-white mb-2">
           {r("Privacy.LastUpdated", "Last updated")}:{" "}
-          {formatDate("2026-02-09", locale)}
+          {formatDate("2026-10-26", locale)}
         </p>
         <Separator className="mt-6" />
       </div>
@@ -195,8 +195,26 @@ export default async function PrivacyPage(
                     "AI assistant chat content and lead details (email, name, optional company and phone) saved in our lead management system (Microsoft 365/SharePoint) to follow up on your request"
                   )}
                 </li>
+                <li>
+                  {r(
+                    "Privacy.DataCollection.WebsiteData.Items.5",
+                    "How you found our website (first page visited, referring domain, campaign parameters and pages viewed during the visit), sent with your request"
+                  )}
+                </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* Web analytics and lead attribution */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">
+            {r("Privacy.WebAnalytics.Title", "Web analytics and how you found us")}
+          </h2>
+          <div className="space-y-4">
+            {[0, 1, 2, 3].map((i) => (
+              <p key={i}>{r(`Privacy.WebAnalytics.Content.${i}`, "")}</p>
+            ))}
           </div>
         </section>
 

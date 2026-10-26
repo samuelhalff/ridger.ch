@@ -68,7 +68,8 @@
     "Submit": "Vertrauliches Gespräch anfragen",
     "Sending": "Wird gesendet",
     "Success": "Nachricht gesendet. Wir antworten Ihnen innerhalb eines Werktags.",
-    "Error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    "Error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "AttributionNotice": "Mit Ihrer Nachricht übermitteln wir auch, wie Sie auf unsere Website gekommen sind (verweisende Website, Kampagne, während dieses Besuchs angesehene Seiten). Details in unserer Datenschutzerklärung."
   },
   "Errors": {
     "Required": "Dieses Feld ist erforderlich",

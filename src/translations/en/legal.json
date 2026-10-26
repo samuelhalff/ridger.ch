@@ -13,7 +13,7 @@
         "Services": {
             "Title": "Our Services",
             "Content": {
-                "0": "Ridger, a brand of Ark Fiduciaire SA, provides multi-family office services: consolidated reporting, investment oversight, coordination, governance and succession support, tax and administrative coordination, and a digital vault. Execution, custody and asset management remain with the client\u2019s regulated banks and asset managers. Ridger does not manage assets and does not provide investment advice.",
+                "0": "Ridger, a brand of Ark Fiduciaire SA, provides multi-family office services: consolidated reporting, investment oversight, coordination, governance and succession support, tax and administrative coordination, and a digital vault. Execution, custody and asset management remain with the client’s regulated banks and asset managers. Ridger does not manage assets and does not provide investment advice.",
                 "1": "All services are provided in accordance with Swiss law and professional standards of the Swiss Expert Association for Audit, Tax and Fiduciary (EXPERTsuisse)."
             }
         },
@@ -132,9 +132,19 @@
                     "Usage data (pages visited, time spent, referral sources)",
                     "Cookies and similar tracking technologies",
                     "Contact form submissions and communications",
-                    "Contact form submissions and WhatsApp messages, with lead details (email, name, optional company and phone) saved in our lead management system (Microsoft 365/SharePoint) to follow up on your request"
+                    "Contact form submissions and WhatsApp messages, with lead details (email, name, optional company and phone) saved in our lead management system (Microsoft 365/SharePoint) to follow up on your request",
+                    "How you found our website (first page visited, referring domain, campaign parameters and pages viewed during the visit), sent only with your request"
                 ]
             }
+        },
+        "WebAnalytics": {
+            "Title": "Web analytics and how you found us",
+            "Content": [
+                "We measure the use of our website with Google Analytics 4 and Google Consent Mode. What is collected depends on your region and your choice in the cookie banner: in Switzerland analytics run unless you refuse, in the EU, the EEA and the UK nothing is stored before you accept. The cookies used and how to refuse are described in our cookies policy.",
+                "When you send a request through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. We never record full addresses or other URL parameters.",
+                "This information stays in your browser's memory during the visit (and, if you accepted cookies, in session storage, which is cleared when you close the tab). It is only sent to us with your request and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries.",
+                "Refusing cookies does not prevent you from contacting us."
+            ]
         },
         "LegalBasis": {
             "Title": "Legal Basis for Processing",
@@ -269,7 +279,18 @@
             "Title": "Introduction",
             "Content": [
                 "This Cookies Policy explains how Ridger uses cookies and similar tracking technologies on our website. It provides information about what cookies are, how we use them, and your choices regarding their use.",
-                "By using our website, you consent to the use of cookies in accordance with this policy and our Privacy Policy."
+                "Depending on where you are, some of these technologies run by default and others only with your consent. The section below explains what applies to you and how to refuse or change your choice."
+            ]
+        },
+        "Measurement": {
+            "Title": "How we measure visits",
+            "Content": [
+                "We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner.",
+                "Switzerland: analytics cookies (_ga, _ga_*) are used unless you click \"Refuse\". Advertising signals (advertising cookies, ad user data and ad personalisation) stay off until you click \"Accept\".",
+                "European Union, EEA and United Kingdom: no analytics or advertising cookies are set until you click \"Accept\". Until then the tag only sends cookieless measurement pings (for example a page view or a form sent), without an identifier that recognises you from one visit to the next. Google receives the technical data contained in any web request, such as your IP address and browser type, and uses these pings for aggregated statistics.",
+                "Other countries: analytics and advertising signals are on by default. You can turn them off with \"Refuse\".",
+                "We do not use other analytics or advertising tools.",
+                "Your choice is saved in your browser (cookie and local storage entry \"cookieConsent\", 12 months). \"Refuse\" turns off analytics and advertising cookies and signals; the tag then only sends the cookieless pings described above. You can change your choice at any time with the cookie button at the bottom of the page."
             ]
         },
         "WhatAreCookies": {
@@ -297,7 +318,7 @@
             },
             "Analytics": {
                 "Title": "2. Analytics cookies",
-                "Description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+                "Description": "These cookies help us understand how visitors use our website (pages viewed, visit duration, traffic sources). The results are reported to us in aggregated form.",
                 "Purpose": "Purpose:",
                 "Items": [
                     "Website traffic analysis",
@@ -320,7 +341,7 @@
             },
             "Marketing": {
                 "Title": "4. Marketing cookies",
-                "Description": "These cookies track visitors across websites to display relevant and engaging advertisements.",
+                "Description": "Google advertising signals measure the effectiveness of advertising. Where they apply by default and where they need your consent is explained in \"How we measure visits\" above.",
                 "Purpose": "Purpose:",
                 "Items": [
                     "Targeted advertising",
@@ -328,7 +349,7 @@
                     "Retargeting campaigns",
                     "Social media integration"
                 ],
-                "Providers": "Providers: Google Ads, LinkedIn, Facebook"
+                "Providers": "Provider: Google (advertising signals)"
             }
         },
         "ThirdParty": {
@@ -371,10 +392,10 @@
             "Title": "Managing cookies",
             "ConsentBanner": {
                 "Title": "Cookie consent banner",
-                "Description": "When you first visit our website, you'll see a cookie consent banner with two options:",
+                "Description": "The cookie banner offers two choices:",
                 "Options": [
-                    "\"All\" - Accept all cookies including analytics, advertising, and personalization",
-                    "\"Essential\" - Accept only essential functional cookies, declining analytics and advertising"
+                    "\"Accept\": analytics and advertising cookies and signals are allowed.",
+                    "\"Refuse\": analytics and advertising cookies and signals are turned off. Google Analytics then only sends cookieless pings."
                 ],
                 "ChangePreferences": "You can change your preferences at any time using the cookie settings button that appears on the website."
             },

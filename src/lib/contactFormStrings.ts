@@ -22,6 +22,7 @@ export async function buildContactFormStrings(
       consent: s("Form.Consent", "I consent to being contacted"),
       submit: s("Form.Submit", "Submit"),
       sending: s("Form.Sending", "Sending..."),
+      attributionNotice: s("Form.AttributionNotice", ""),
     },
     placeholders: {
       name: s("Form.Placeholders.Name", "Your name"),
