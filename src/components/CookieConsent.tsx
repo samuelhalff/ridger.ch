@@ -167,7 +167,7 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
     setTimeout(() => focusWithoutScroll(manageBtnRef.current), 0);
   };
 
-  const legalCookiesHref = `/${locale}/legal/cookies`;
+  const legalCookiesHref = `/${locale}/legal/cookies/`;
   const minimalLabel = labels.Minimal || labels.Decline || "Refuse";
   const fullLabel = labels.Full || labels.Accept || "Full consent";
 

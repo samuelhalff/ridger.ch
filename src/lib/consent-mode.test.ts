@@ -5,12 +5,19 @@ import vm from "node:vm";
 import {
   EEA_UK_REGIONS,
   buildConsentBootstrap,
+  pickStoredConsent,
   normaliseStoredConsent,
+  gaClientIdFromCookies,
 } from "./consent-mode.ts";
 
 type Run = { calls: unknown[][]; scripts: { src: string; nonce?: string }[] };
 
-function runBootstrap(opts: { stored?: string; cookie?: string; nonce?: string }): Run {
+function runBootstrap(opts: {
+  stored?: string;
+  cookie?: string;
+  nonce?: string;
+  cookiesEnabled?: boolean;
+}): Run {
   const dataLayer: unknown[] = [];
   const scripts: { src: string; nonce?: string }[] = [];
   const head = {
@@ -25,6 +32,7 @@ function runBootstrap(opts: { stored?: string; cookie?: string; nonce?: string }
       currentScript: opts.nonce ? { nonce: opts.nonce } : null,
       createElement: () => ({ src: "", async: false }),
     },
+    navigator: { cookieEnabled: opts.cookiesEnabled !== false },
     Date,
     encodeURIComponent,
   };
@@ -77,7 +85,7 @@ test("bootstrap sets regional defaults before js/config", () => {
 });
 
 test("bootstrap applies a stored acceptance as an update without region", () => {
-  const { calls } = runBootstrap({ stored: "accepted" });
+  const { calls } = runBootstrap({ cookie: "cookieConsent=accepted" });
   const update = calls.find((c) => c[0] === "consent" && c[1] === "update");
   assert.ok(update);
   const state = update[2] as Record<string, unknown>;
@@ -93,7 +101,7 @@ test("bootstrap applies a stored acceptance as an update without region", () => 
 
 for (const legacy of ["minimal", "declined"]) {
   test(`bootstrap treats legacy "${legacy}" as refused (all denied)`, () => {
-    const { calls } = runBootstrap({ stored: legacy });
+    const { calls } = runBootstrap({ cookie: `cookieConsent=${legacy}` });
     const update = calls.find((c) => c[0] === "consent" && c[1] === "update");
     assert.ok(update);
     const state = update[2] as Record<string, unknown>;
@@ -103,7 +111,7 @@ for (const legacy of ["minimal", "declined"]) {
   });
 }
 
-test("bootstrap falls back to the consent cookie and forwards the nonce", () => {
+test("bootstrap reads the consent cookie and forwards the nonce", () => {
   const { calls, scripts } = runBootstrap({
     cookie: "foo=1; cookieConsent=accepted",
     nonce: "abc123",
@@ -123,4 +131,37 @@ test("normaliseStoredConsent maps old and new values", () => {
   assert.equal(normaliseStoredConsent("declined"), "refused");
   assert.equal(normaliseStoredConsent("other"), null);
   assert.equal(normaliseStoredConsent(null), null);
+});
+
+test("GA client id is read unless the visitor refused", () => {
+  const cookies = "foo=1; _ga=GA1.1.1194917214.1689149133; _ga_ABC=GS1.1.x";
+  assert.equal(gaClientIdFromCookies(cookies, "accepted"), "1194917214.1689149133");
+  // Undecided: present only where the regional default granted storage.
+  assert.equal(gaClientIdFromCookies(cookies, null), "1194917214.1689149133");
+  assert.equal(gaClientIdFromCookies(cookies, "refused"), undefined);
+  assert.equal(gaClientIdFromCookies("foo=1", null), undefined);
+  assert.equal(gaClientIdFromCookies("_ga=GA1.1.abc.def", null), undefined);
+  assert.equal(gaClientIdFromCookies("_ga_ABC=GS1.1.1.2", null), undefined);
+});
+
+test("cookie is authoritative; localStorage only counts without cookies", () => {
+  // Invalid local value never hides a valid cookie (e.g. a refusal).
+  assert.equal(pickStoredConsent("garbage", "minimal", true), "minimal");
+  assert.equal(pickStoredConsent("accepted", "declined", true), "declined");
+  // Cookie expired (12 months) while localStorage remains: undecided again.
+  assert.equal(pickStoredConsent("accepted", null, true), null);
+  // Cookies blocked: the localStorage entry is the only store.
+  assert.equal(pickStoredConsent("declined", null, false), "declined");
+  assert.equal(pickStoredConsent("garbage", null, false), null);
+});
+
+test("bootstrap follows the same storage rule", () => {
+  const refused = runBootstrap({ stored: "garbage", cookie: "cookieConsent=minimal" });
+  const update = refused.calls.find((c) => c[0] === "consent" && c[1] === "update");
+  assert.equal((update?.[2] as Record<string, unknown>).analytics_storage, "denied");
+  const expired = runBootstrap({ stored: "accepted" });
+  assert.equal(expired.calls.some((c) => c[0] === "consent" && c[1] === "update"), false);
+  const noCookies = runBootstrap({ stored: "accepted", cookiesEnabled: false });
+  const local = noCookies.calls.find((c) => c[0] === "consent" && c[1] === "update");
+  assert.equal((local?.[2] as Record<string, unknown>).analytics_storage, "granted");
 });

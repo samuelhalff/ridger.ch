@@ -139,10 +139,16 @@ export async function POST(request: Request) {
   }
 
   try {
-    // Attribution gaClientId is for analytics matching only — never disclose to Formspark.
-    // First-party attribution (pathnames/origins only) goes in flat, readable fields.
-    const { attribution, gaClientId: _gaClientId, turnstileToken: _token, ...fields } = payload;
-    await submitFormspark({ ...fields, ...flattenAttribution(attribution) });
+    // Formspark is ridger's only lead store, so it receives the GA client id
+    // (present only when the visitor did not refuse analytics) to join a lead
+    // back to GA acquisition data. First-party attribution (pathnames/origins
+    // only) goes in flat, readable fields.
+    const { attribution, gaClientId, turnstileToken: _token, ...fields } = payload;
+    await submitFormspark({
+      ...fields,
+      ...(gaClientId ? { gaClientId } : {}),
+      ...flattenAttribution(attribution),
+    });
 
     return NextResponse.json(
       { ok: true },

@@ -143,7 +143,7 @@
                 "Medimos el uso de nuestro sitio con Google Analytics 4 y el modo de consentimiento de Google. Lo que se recoge depende de su región y de su elección en el aviso de cookies: en Suiza la medición está activa salvo que la rechace; en la UE, el EEE y el Reino Unido no se guarda nada antes de que acepte. Las cookies usadas y cómo rechazarlas se describen en nuestra política de cookies.",
                 "Cuando envía una solicitud mediante nuestro formulario de contacto, añadimos cómo llegó a nuestro sitio: la primera página visitada, el sitio de origen (solo el dominio), los parámetros de campaña (utm_source, utm_medium, utm_campaign, utm_term, utm_content), el identificador de clic de Google Ads (gclid) si existe y hasta 20 páginas vistas durante la visita. Para esta atribución nunca guardamos direcciones completas ni otros parámetros de URL.",
                 "Esta información permanece en la memoria de su navegador durante la visita (y, si aceptó las cookies, en el almacenamiento de sesión, que se borra al cerrar la pestaña). Solo se nos envía con su solicitud y se conserva junto a ella. La usamos, sobre la base de nuestro interés legítimo, para entender qué canales nos traen solicitudes.",
-                "Rechazar las cookies no le impide contactarnos."
+                "Salvo que haya rechazado la analítica, añadimos también el identificador de Google Analytics guardado en su navegador a la solicitud que nos envía, para relacionarla con nuestras estadísticas de visitas. Rechazarla no le impide contactarnos."
             ]
         },
         "LegalBasis": {

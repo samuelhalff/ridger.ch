@@ -143,7 +143,7 @@
                 "Wir messen die Nutzung unserer Website mit Google Analytics 4 und dem Google-Einwilligungsmodus. Was erfasst wird, hängt von Ihrer Region und Ihrer Wahl im Cookie-Banner ab: In der Schweiz ist die Messung aktiv, solange Sie nicht ablehnen; in der EU, im EWR und im Vereinigten Königreich wird vor Ihrer Zustimmung nichts gespeichert. Die verwendeten Cookies und wie Sie ablehnen, beschreibt unsere Cookie-Richtlinie.",
                 "Wenn Sie über unser Kontaktformular eine Anfrage senden, fügen wir hinzu, wie Sie auf unsere Website gekommen sind: die erste besuchte Seite, die verweisende Website (nur Domain), Kampagnenparameter (utm_source, utm_medium, utm_campaign, utm_term, utm_content), die Google-Ads-Klickkennung (gclid), falls vorhanden, und bis zu 20 während des Besuchs angesehene Seiten. Für diese Zuordnung speichern wir nie vollständige Adressen oder andere URL-Parameter.",
                 "Diese Angaben bleiben während des Besuchs im Speicher Ihres Browsers (und, wenn Sie Cookies akzeptiert haben, im Sitzungsspeicher, der beim Schließen des Tabs gelöscht wird). Sie werden nur mit Ihrer Anfrage an uns übermittelt und mit ihr aufbewahrt. Wir nutzen sie auf Grundlage unseres berechtigten Interesses, um zu verstehen, über welche Kanäle Anfragen zu uns kommen.",
-                "Wenn Sie Cookies ablehnen, können Sie uns trotzdem kontaktieren."
+                "Außer wenn Sie die Analyse abgelehnt haben, fügen wir einer Anfrage, die Sie uns senden, auch die in Ihrem Browser gespeicherte Google-Analytics-Kennung hinzu, um sie mit unseren Besuchsstatistiken zu verknüpfen. Eine Ablehnung hindert Sie nicht daran, uns zu kontaktieren."
             ]
         },
         "LegalBasis": {

@@ -50,28 +50,52 @@ export function normaliseStoredConsent(value: unknown): ConsentChoice | null {
   return null;
 }
 
-/** Raw stored value: localStorage first, then the mirror cookie. */
+function isStoredConsent(value: unknown): value is StoredConsent {
+  return value === "accepted" || value === "minimal" || value === "declined";
+}
+
+/**
+ * Picks the stored choice from the cookie and the localStorage mirror.
+ * The cookie carries the 12-month expiry stated in the cookies policy, so it
+ * wins; the localStorage entry only counts where the browser cannot store
+ * cookies at all. An expired cookie therefore means "undecided" again, and an
+ * invalid localStorage value never hides a valid cookie (e.g. a refusal).
+ */
+export function pickStoredConsent(
+  localValue: string | null,
+  cookieValue: string | null,
+  cookiesEnabled: boolean
+): StoredConsent | null {
+  if (isStoredConsent(cookieValue)) return cookieValue;
+  if (!cookiesEnabled && isStoredConsent(localValue)) return localValue;
+  return null;
+}
+
+/** Raw stored value (see pickStoredConsent). */
 export function readStoredConsentValue(): StoredConsent | null {
   if (typeof window === "undefined") return null;
-  let value: string | null = null;
+  let localValue: string | null = null;
+  let cookieValue: string | null = null;
+  let cookiesEnabled = true;
   try {
-    value = window.localStorage.getItem(CONSENT_KEY);
+    localValue = window.localStorage.getItem(CONSENT_KEY);
   } catch {
-    value = null;
+    localValue = null;
   }
-  if (!value) {
-    try {
-      const match = document.cookie.match(
-        new RegExp(`(?:^|; )${CONSENT_KEY}=([^;]*)`),
-      );
-      value = match ? match[1] : null;
-    } catch {
-      value = null;
-    }
+  try {
+    const match = document.cookie.match(
+      new RegExp(`(?:^|; )${CONSENT_KEY}=([^;]*)`),
+    );
+    cookieValue = match ? match[1] : null;
+  } catch {
+    cookieValue = null;
   }
-  return value === "accepted" || value === "minimal" || value === "declined"
-    ? value
-    : null;
+  try {
+    cookiesEnabled = navigator.cookieEnabled !== false;
+  } catch {
+    cookiesEnabled = true;
+  }
+  return pickStoredConsent(localValue, cookieValue, cookiesEnabled);
 }
 
 export function readConsentChoice(): ConsentChoice | null {
@@ -88,6 +112,33 @@ export function updateConsentMode(choice: ConsentChoice) {
   } catch {
     // Analytics must never surface errors to users.
   }
+}
+
+/**
+ * GA client id ("<a>.<b>") from a `document.cookie` string ("_ga=GA1.1.<a>.<b>").
+ * Used to join a lead sent by the visitor back to GA acquisition data.
+ *
+ * Returned whenever a valid _ga cookie exists and the stored choice is not a
+ * refusal. Undecided visitors only carry a _ga cookie where the regional
+ * default grants analytics storage (Switzerland, rest of world); EEA/UK
+ * defaults deny it, so no cookie is set there before "accept". A refusal
+ * always wins, even over a leftover cookie from an earlier "accept".
+ */
+export function gaClientIdFromCookies(
+  cookies: string,
+  choice: ConsentChoice | null
+): string | undefined {
+  if (choice === "refused") return undefined;
+  const raw = cookies
+    .split(";")
+    .map((entry) => entry.trim())
+    .find((entry) => entry.startsWith("_ga="))
+    ?.slice("_ga=".length);
+  if (!raw) return undefined;
+  const parts = raw.split(".");
+  if (parts.length < 4) return undefined;
+  const clientId = parts.slice(-2).join(".");
+  return /^\d+\.\d+$/.test(clientId) ? clientId : undefined;
 }
 
 const MEASUREMENT_ID_PATTERN = /^G-[A-Z0-9]{4,20}$/;
@@ -119,9 +170,14 @@ export function buildConsentBootstrap(measurementId: string): string {
     `gtag('consent','default',${JSON.stringify({ ...ch, region: ["CH"] })});`,
     `gtag('consent','default',${JSON.stringify(granted)});`,
     "gtag('set','ads_data_redaction',true);",
-    "var c=null;",
-    `try{c=window.localStorage.getItem(${key});}catch(e){}`,
-    `if(!c){try{var m=document.cookie.match(/(?:^|; )${CONSENT_KEY}=([^;]*)/);if(m)c=m[1];}catch(e){}}`,
+    // Same rule as pickStoredConsent: the cookie wins, localStorage only
+    // counts where cookies cannot be stored.
+    "var c=null,l=null,ce=true;",
+    "function ok(v){return v==='accepted'||v==='minimal'||v==='declined';}",
+    `try{l=window.localStorage.getItem(${key});}catch(e){}`,
+    `try{var m=document.cookie.match(/(?:^|; )${CONSENT_KEY}=([^;]*)/);if(m)c=m[1];}catch(e){}`,
+    "try{ce=navigator.cookieEnabled!==false;}catch(e){}",
+    "if(!ok(c)){c=(!ce&&ok(l))?l:null;}",
     `if(c==='accepted'){gtag('consent','update',${JSON.stringify(granted)});}`,
     `else if(c==='minimal'||c==='declined'){gtag('consent','update',${JSON.stringify(denied)});}`,
     "gtag('js',new Date());",
