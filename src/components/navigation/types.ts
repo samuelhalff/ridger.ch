@@ -2,6 +2,7 @@ export type NavData = {
   labels: {
     home: string;
     services: string;
+    allServices: string;
     approach: string;
     platform: string;
     ressources: string;
