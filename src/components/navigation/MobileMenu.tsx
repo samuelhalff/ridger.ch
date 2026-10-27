@@ -9,7 +9,10 @@ import {
 import LangSwitchMobile from "@/src/components/navigation/LangSwitchMobile";
 import { Suspense } from "react";
 import ThemeToggleMobile from "@/src/components/navigation/ThemeToggleMobile";
-import ServicesMobile from "@/src/components/navigation/ServicesMobile";
+import ServicesMobile, {
+  normalizePath,
+} from "@/src/components/navigation/ServicesMobile";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -33,6 +36,9 @@ const MobileMenuToggleIcon = ({
   )
 );
 
+const rowClass =
+  "flex min-h-11 items-center border-b px-2 py-3 text-md font-bold transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-[current=page]:text-accent";
+
 const MobileMenu = ({
   locale,
   navData,
@@ -46,6 +52,8 @@ const MobileMenu = ({
     setOpen(false);
   };
   const localePrefix = locale ? `/${locale}` : "/fr";
+  const pathname = normalizePath(usePathname() || "");
+  const isCurrent = (href: string) => normalizePath(href) === pathname;
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -118,72 +126,76 @@ const MobileMenu = ({
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
           style={{ paddingBottom: "max(1.5rem, env(safe-area-inset-bottom))" }}
         >
-          <nav className="flex flex-col gap-3 px-4 mt-3 pb-10 pt-2">
-            <ThemeToggleMobile />
-            <Suspense fallback={null}>
-              <LangSwitchMobile onLocaleChange={handleLinkClick} />
-            </Suspense>
-            <div>
-              <Link
-                href={`${localePrefix}/`}
-                onClick={handleLinkClick}
-                prefetch={false}
+          <nav className="flex flex-col px-4 mt-3 pb-10 pt-2">
+            <ul className="flex flex-col border-t">
+              <li>
+                <Link
+                  href={`${localePrefix}/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  locale={locale}
+                  aria-current={isCurrent(`${localePrefix}/`) ? "page" : undefined}
+                  className={rowClass}
+                >
+                  {navData.labels.home}
+                </Link>
+              </li>
+              <ServicesMobile
                 locale={locale}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent transition-colors font-bold"
-              >
-                <span>{navData.labels.home}</span>
-              </Link>
-            </div>
-            <ServicesMobile
-              locale={locale}
-              onLinkClick={handleLinkClick}
-              services={navData.services}
-              label={navData.labels.services}
-            />
-            <div>
-              <Link
-                href={`${localePrefix}/approach/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                locale={locale}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent transition-colors font-bold"
-              >
-                <span>{navData.labels.approach}</span>
-              </Link>
-            </div>
-            <div>
-              <Link
-                href={`${localePrefix}/platform/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                locale={locale}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent transition-colors font-bold"
-              >
-                <span>{navData.labels.platform}</span>
-              </Link>
-            </div>
-            <div>
-              <Link
-                href={`${localePrefix}/ressources/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                locale={locale}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent transition-colors font-bold"
-              >
-                <span>{navData.labels.ressources}</span>
-              </Link>
-            </div>
-            {/* Contact: final entry in the private-banking register — a quiet
-                bronze link over a mono email line, separated by a hairline. */}
-            <div className="mt-5 border-t border-border pt-6">
-              <TrackedLink cta="nav_mobile_contact"
+                onLinkClick={handleLinkClick}
+                services={navData.services}
+                label={navData.labels.services}
+                allLabel={navData.labels.allServices}
+              />
+              <li>
+                <Link
+                  href={`${localePrefix}/approach/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  locale={locale}
+                  aria-current={isCurrent(`${localePrefix}/approach/`) ? "page" : undefined}
+                  className={rowClass}
+                >
+                  {navData.labels.approach}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${localePrefix}/platform/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  locale={locale}
+                  aria-current={isCurrent(`${localePrefix}/platform/`) ? "page" : undefined}
+                  className={rowClass}
+                >
+                  {navData.labels.platform}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${localePrefix}/ressources/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  locale={locale}
+                  aria-current={isCurrent(`${localePrefix}/ressources/`) ? "page" : undefined}
+                  className={rowClass}
+                >
+                  {navData.labels.ressources}
+                </Link>
+              </li>
+            </ul>
+            {/* Contact: final entry — a quiet accent link over the email address. */}
+            <div className="mt-6">
+              <TrackedLink
+                cta="nav_mobile_contact"
                 href={`${localePrefix}/contact/`}
                 onClick={handleLinkClick}
                 prefetch={false}
                 locale={locale}
-                className="flex items-center px-2 py-2 text-md font-bold text-accent transition-opacity hover:opacity-80"
+                aria-current={isCurrent(`${localePrefix}/contact/`) ? "page" : undefined}
+                className="flex min-h-11 items-center px-2 py-2 text-md font-bold text-accent transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                <span>{navData.labels.contact}</span>
+                {navData.labels.contact}
               </TrackedLink>
               <a
                 href="mailto:contact@ridger.ch"
@@ -193,10 +205,16 @@ const MobileMenu = ({
                     placement: "mobile_menu",
                   })
                 }
-                className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+                className="flex min-h-11 items-center px-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 contact@ridger.ch
               </a>
+            </div>
+            <div className="mt-6 flex flex-col gap-3 border-t pt-4">
+              <ThemeToggleMobile />
+              <Suspense fallback={null}>
+                <LangSwitchMobile onLocaleChange={handleLinkClick} />
+              </Suspense>
             </div>
             {/* Footer is server-rendered in layout; omit here to keep client bundle light */}
           </nav>
