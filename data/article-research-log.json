@@ -204,6 +204,220 @@
           "source": "https://www.bsv.admin.ch/bsv/fr/home/assurances-sociales/bv.html"
         }
       ]
+    },
+    {
+      "date": "2026-11-05",
+      "slug": "deduction-des-dons-impots-geneve-plafonds-institutions-justificatifs",
+      "backlogId": "deduire-dons-impots-geneve-federal",
+      "forced": false,
+      "researchProvider": "openai:gpt-4.1",
+      "demand": {
+        "deduire-dons-impots-geneve-federal": 6,
+        "creer-single-family-office-suisse-etapes": 10,
+        "creer-fondation-utilite-publique-geneve": 16.5
+      },
+      "trend": {
+        "available": true,
+        "checked": 20,
+        "matches": []
+      },
+      "keywords": {
+        "fr": {
+          "primary": "déduction des dons",
+          "secondary": [
+            "deduction don impot geneve",
+            "déduction des dons impots",
+            "dons déductibles des impôts genève",
+            "déduction dons impôts genève france",
+            "défiscalisation des dons",
+            "défiscalisation des dons aux associations"
+          ],
+          "questions": [
+            "comment déclarer des dons aux impots",
+            "comment déclarer des dons",
+            "comment déduire des impôts les dons aux associations",
+            "comment fonctionne la défiscalisation des dons",
+            "déduction des dons comment ca marche"
+          ],
+          "markets": [
+            "fr-CH",
+            "fr-FR"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 97,
+            "uniqueCandidates": 36,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 97,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "en": {
+          "primary": "tax deductible donations switzerland",
+          "secondary": [
+            "tax deductible donations switzerland tax deductible",
+            "charitable donations tax relief ireland",
+            "charitable donations tax relief self employed",
+            "donation receipt switzerland template",
+            "charitable donations tax relief limited companies",
+            "charitable donations tax relief sole trader"
+          ],
+          "questions": [
+            "what is tax deductible donations",
+            "is a donation to an overseas charity tax deductible",
+            "tax deductible donations switzerland what is it",
+            "are foreign charitable donations tax deductible",
+            "why are some donations not tax deductible",
+            "tax deductible donations switzerland what is the tax rate",
+            "tax deductible donations switzerland how to",
+            "tax deductible donations switzerland when traveling"
+          ],
+          "markets": [
+            "en-GB",
+            "en-US"
+          ],
+          "stats": {
+            "queries": 26,
+            "suggestions": 133,
+            "uniqueCandidates": 41,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 26,
+                "suggestions": 133,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "de": {
+          "primary": "spenden steuerabzug",
+          "secondary": [
+            "steuerabzug spenden schweiz",
+            "steuerabzug spenden kanton zürich",
+            "steuerabzug spenden ohne beleg",
+            "spenden von steuern abziehen schweiz",
+            "spenden steuerabzug schweiz steuererklärung",
+            "spenden steuern abziehen ohne beleg schweiz"
+          ],
+          "questions": [
+            "kann man spenden von den steuern abziehen schweiz",
+            "spenden steuerabzug wann auszahlung",
+            "spenden steuerabzug warum nicht",
+            "spenden steuerabzug was ist das",
+            "spenden steuerabzug wie hoch"
+          ],
+          "markets": [
+            "de-CH",
+            "de-DE"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 103,
+            "uniqueCandidates": 41,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 103,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "es": {
+          "primary": "certificado de donación",
+          "secondary": [
+            "deduccion fiscal por donaciones ong",
+            "deduccion fiscal donaciones",
+            "donaciones deducibles suizas",
+            "certificado de donación de sangre",
+            "certificado de donación para descuento tributario",
+            "certificado de donación cruz roja"
+          ],
+          "questions": [
+            "donaciones deducibles suiza por qué es importante"
+          ],
+          "markets": [
+            "es-ES"
+          ],
+          "stats": {
+            "queries": 15,
+            "suggestions": 22,
+            "uniqueCandidates": 15,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 15,
+                "suggestions": 22,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "pt": {
+          "primary": "doações dedutíveis suíça",
+          "secondary": [
+            "doações dedutíveis suíça irpf",
+            "doações dedutíveis suíças",
+            "recibo de doação de imóvel",
+            "recibo de doação simples word",
+            "recibo de doação em dinheiro para pessoa física",
+            "dedução fiscal doações portugal"
+          ],
+          "questions": [
+            "doações dedutíveis suíça como funciona",
+            "doações dedutíveis suíça o que é necessário",
+            "doações dedutíveis suíça quando termina"
+          ],
+          "markets": [
+            "pt-PT",
+            "pt-BR"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 59,
+            "uniqueCandidates": 29,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 59,
+                "failed": 0
+              }
+            ]
+          }
+        }
+      },
+      "recentDevelopments": [
+        {
+          "date": "2026-01-01",
+          "status": "en vigueur",
+          "summary": "Confirmation du maintien du plafond de 20 % du revenu net imposable pour la déduction des dons à l'impôt fédéral direct et à Genève.",
+          "source": "https://www.estv.admin.ch/estv/fr/home/direkte-bundessteuer/direkte-bundessteuer/abzug-fuer-gespendete-gelder.html"
+        },
+        {
+          "date": "2025-12-15",
+          "status": "en vigueur",
+          "summary": "Mise à jour du guide officiel de déclaration fiscale genevois précisant les modalités de déclaration et de conservation des justificatifs de dons.",
+          "source": "https://www.ge.ch/document/impot-revenu-personnes-physiques-guide-declaration/telecharger"
+        }
+      ]
     }
   ]
 }
