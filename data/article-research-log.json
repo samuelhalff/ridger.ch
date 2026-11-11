@@ -418,6 +418,219 @@
           "source": "https://www.ge.ch/document/impot-revenu-personnes-physiques-guide-declaration/telecharger"
         }
       ]
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "assurer-collection-art-suisse-valeur-agreee-expertise-mise-a-jour",
+      "backlogId": "assurer-collection-art-suisse",
+      "forced": false,
+      "researchProvider": "openai:gpt-4.1",
+      "demand": {
+        "creer-single-family-office-suisse-etapes": 7.5,
+        "assurer-collection-art-suisse": 16,
+        "permis-personnel-maison-ue-pays-tiers": 15
+      },
+      "trend": {
+        "available": true,
+        "checked": 20,
+        "matches": []
+      },
+      "keywords": {
+        "fr": {
+          "primary": "valeur agréée",
+          "secondary": [
+            "assurance oeuvres d'art",
+            "assurance oeuvres d'art exposition",
+            "assurance oeuvre d art particulier",
+            "assurance collection art nouveau",
+            "valeur agréée assurance",
+            "valeur agréée définition assurance"
+          ],
+          "questions": [
+            "assurance œuvres d'art comment ca marche",
+            "assurance œuvres d'art comment faire",
+            "assurance œuvres d'art pourquoi ce nom"
+          ],
+          "markets": [
+            "fr-CH",
+            "fr-FR"
+          ],
+          "stats": {
+            "queries": 28,
+            "suggestions": 144,
+            "uniqueCandidates": 28,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 28,
+                "suggestions": 144,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "en": {
+          "primary": "fine art insurance switzerland",
+          "secondary": [
+            "fine art insurance switzerland insurance",
+            "art collection insurance uk",
+            "agreed value artinya",
+            "art collector insurance",
+            "art gallery insurance supplemental application",
+            "agreed value artificial intelligence"
+          ],
+          "questions": [
+            "fine art insurance switzerland what is it",
+            "what is agreed value",
+            "does agreed value depreciate",
+            "fine art insurance switzerland when did it start",
+            "fine art insurance switzerland how many employees",
+            "fine art insurance switzerland when to use",
+            "fine art insurance switzerland why is it so expensive",
+            "fine art insurance switzerland how does it work"
+          ],
+          "markets": [
+            "en-GB",
+            "en-US"
+          ],
+          "stats": {
+            "queries": 26,
+            "suggestions": 87,
+            "uniqueCandidates": 33,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 26,
+                "suggestions": 87,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "de": {
+          "primary": "kunstversicherung",
+          "secondary": [
+            "uniqa kunstversicherung schweiz",
+            "kunstversicherung schweiz",
+            "kunstversicherung vergleich",
+            "kunstversicherung österreich",
+            "kunstversicherung allianz",
+            "kunstversicherung uniqa"
+          ],
+          "questions": [
+            "kunstversicherung was ist das",
+            "kunstversicherung was ist zu beachten",
+            "kunstversicherung wie lange",
+            "kunstversicherung wie lange gültig",
+            "kunstversicherung wann auszahlung"
+          ],
+          "markets": [
+            "de-CH",
+            "de-DE"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 94,
+            "uniqueCandidates": 24,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 94,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "es": {
+          "primary": "seguro obras de arte",
+          "secondary": [
+            "seguro obras de arte mapfre",
+            "seguro de obras de arte clavo a clavo",
+            "seguro obras de arte suiza en español",
+            "valor convenido de un auto",
+            "valor convenido y valor comercial",
+            "seguro para obras de artes"
+          ],
+          "questions": [
+            "seguro obras de arte cómo funciona",
+            "seguro obras de arte cuándo es"
+          ],
+          "markets": [
+            "es-ES"
+          ],
+          "stats": {
+            "queries": 15,
+            "suggestions": 43,
+            "uniqueCandidates": 25,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 15,
+                "suggestions": 43,
+                "failed": 0
+              }
+            ]
+          }
+        },
+        "pt": {
+          "primary": "seguro obras de arte",
+          "secondary": [
+            "seguro obras de arte mapfre",
+            "seguro de obras de arte clavo a clavo",
+            "seguro coleção de artesanato",
+            "valor acordado o que significa",
+            "valor acordado entre as partes",
+            "seguro para obras de artes"
+          ],
+          "questions": [
+            "seguro obras de arte como funciona",
+            "seguro obras de arte quando é",
+            "seguro obras de arte porque demora tanto"
+          ],
+          "markets": [
+            "pt-PT",
+            "pt-BR"
+          ],
+          "stats": {
+            "queries": 30,
+            "suggestions": 103,
+            "uniqueCandidates": 37,
+            "source": "autocomplete:google",
+            "provider": "google",
+            "attempts": [
+              {
+                "provider": "google",
+                "requests": 30,
+                "suggestions": 103,
+                "failed": 0
+              }
+            ]
+          }
+        }
+      },
+      "recentDevelopments": [
+        {
+          "date": "2026-06-01",
+          "status": "en vigueur",
+          "summary": "Mise à jour des recommandations du BAK sur la conservation et le transport des œuvres d’art, incluant les exigences minimales pour la couverture d’assurance lors d’expositions temporaires.",
+          "source": "https://www.bak.admin.ch/bak/fr/home/actualites/faq.html"
+        },
+        {
+          "date": "2025-12-15",
+          "status": "en vigueur",
+          "summary": "Rappel des principes de la valeur agréée dans les contrats d’assurance selon le Code des obligations suisse.",
+          "source": "https://www.fedlex.admin.ch/eli/cc/24/719_735_717/fr"
+        }
+      ]
     }
   ]
 }
