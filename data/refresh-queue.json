@@ -1,6 +1,5 @@
 {
   "queue": [
-    "quand-famille-besoin-family-office-suisse",
     "multi-family-office-vs-banque-privee-differences",
     "choisir-banques-depositaires-suisse-criteres",
     "family-offices-suisse-panorama-liste-comment-choisir"
@@ -11,9 +10,11 @@
       "slug": "reporting-consolide-patrimoine-multi-banques",
       "date": "2026-11-04",
       "reason": "Refresh next article: failure - refresh exited with code 1"
+    },
+    {
+      "slug": "quand-famille-besoin-family-office-suisse",
+      "date": "2026-11-18",
+      "reason": "Refresh next article: failure - refresh exited with code 1"
     }
-  ],
-  "attempts": {
-    "quand-famille-besoin-family-office-suisse": 1
-  }
+  ]
 }
