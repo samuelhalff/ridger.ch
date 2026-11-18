@@ -12,5 +12,8 @@
       "date": "2026-11-04",
       "reason": "Refresh next article: failure - refresh exited with code 1"
     }
-  ]
+  ],
+  "attempts": {
+    "quand-famille-besoin-family-office-suisse": 1
+  }
 }
