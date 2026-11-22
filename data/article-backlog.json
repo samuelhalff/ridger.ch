@@ -12180,6 +12180,10 @@
     "echanger-permis-conduire-etranger-geneve": {
       "theme": "relocation",
       "audience": "accessible"
+    },
+    "caisse-maladie-changer-franchise-modele-avant-30-novembre-menage": {
+      "theme": "insurance",
+      "audience": "accessible"
     }
   }
 }

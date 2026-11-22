@@ -26,6 +26,8 @@ const asJson = flag("--json");
 // Without it the whole corpus is scanned exactly as before.
 const onlySlug = value("--slug", "");
 
+const BODY_LINK_ONLY_DOMAINS = ["guide-assurance.ch"];
+
 function normalizeUrl(raw) {
   if (typeof raw !== "string") return "";
   return raw
@@ -53,6 +55,11 @@ function recordUrl(violations, context, rawUrl) {
     violations.push({ ...context, url, domain: null, reason: "invalid-url" });
     return;
   }
+
+  // The owner's independent insurance information site may be linked from the body of an
+  // article (never cited as a reference or file source).
+  const host = parsed.hostname.toLowerCase().replace(/^www\./, "");
+  if (context.type === "article-content" && BODY_LINK_ONLY_DOMAINS.includes(host)) return;
 
   if (isBlockedDomain(url)) {
     violations.push({
