@@ -81,11 +81,12 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
   };
   const faq = await loadFaq(activeLocale);
 
-  const faqEntries: FAQEntry[] = Array.from({ length: 12 })
+  // Questions 1..5, the ones the FAQ section shows (6..10 are on /services).
+  const faqEntries: FAQEntry[] = Array.from({ length: 5 })
     .map((_, i) => i + 1)
     .filter((i) => faq[`Question${i}`] && faq[`Answer${i}`])
     .map((i) => ({ question: faq[`Question${i}`], answer: faq[`Answer${i}`] }));
-  const faqJsonLd = buildFAQPage(faqEntries, 8);
+  const faqJsonLd = buildFAQPage(faqEntries);
 
   const howSteps = Array.isArray(homeT("How.Steps") as unknown)
     ? (homeT("How.Steps") as unknown as HowStep[])
@@ -253,14 +254,9 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
         </Defer>
       </section>
       <section id="faq">
-        <Defer
-          rootMargin="300px"
-          idle={200}
-          maxDelay={1200}
-          placeholder={<div className="h-40 w-full rounded-lg bg-muted/40" />}
-        >
-          <FAQ />
-        </Defer>
+        {/* Server-rendered (no <Defer>): the questions must be in the HTML,
+            like the FAQPage JSON-LD built from the same entries. */}
+        <FAQ />
       </section>
       <section id="contact" className="px-5 py-10 sm:px-8">
         <Defer

@@ -4,7 +4,8 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Service from "@/app/[locale]/home/components/services";
 import StructuredData from "@/src/components/seo/StructuredData";
-import { buildBreadcrumbList, buildFAQPage } from "@/src/lib/structuredData";
+import { buildBreadcrumbList } from "@/src/lib/structuredData";
+import { FaqSection } from "@/src/components/site/page-faq";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import Defer from "@/src/components/Defer";
@@ -65,12 +66,12 @@ export default async function ServicesPage(
   }
   const faq = faqModule.default;
 
-  // Build FAQ entries 6..12 to avoid duplicating the home page set (1..5)
-  const faqEntries = Array.from({ length: 12 })
+  // FAQ entries 6..10 (the home page shows 1..5), visible and as FAQPage
+  // JSON-LD from the same entries (FaqSection).
+  const faqEntries = Array.from({ length: 10 })
     .map((_, i) => i + 1)
     .filter((i) => i >= 6 && faq[`Question${i}`] && faq[`Answer${i}`])
     .map((i) => ({ question: faq[`Question${i}`], answer: faq[`Answer${i}`] }));
-  const faqJsonLd = buildFAQPage(faqEntries, 5);
 
   // BreadcrumbList for /services with absolute URL
   const baseUrl = "https://ridger.ch";
@@ -125,7 +126,7 @@ export default async function ServicesPage(
       className="mx-auto w-full max-w-[1240px] px-5 pb-12 pt-10 sm:px-8 md:pt-14"
       role="main"
     >
-      <StructuredData nonce={nonce} data={[breadcrumbJsonLd, faqJsonLd]} />
+      <StructuredData nonce={nonce} data={breadcrumbJsonLd} />
       <header>
         <h1 className="mb-4 max-w-[14ch] text-balance text-5xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
           {(tHome("Services.Title") as string) || "Services"}
@@ -197,6 +198,7 @@ export default async function ServicesPage(
           </a>
         </p>
       </div>
+      <FaqSection title={faq.Title || "FAQ"} entries={faqEntries} nonce={nonce} />
       <Defer rootMargin="0px" idle={200} placeholder={null}>
         <ContactForm
           strings={contactStrings}

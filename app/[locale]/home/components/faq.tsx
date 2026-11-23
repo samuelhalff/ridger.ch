@@ -4,7 +4,9 @@ import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
 import { Plus as PlusIcon } from "@phosphor-icons/react/dist/ssr";
 
-const faq = Array.from({ length: 16 }).map((_, i) => ({
+// Questions 1..5 (6..10 are shown on /services), same set as the FAQPage
+// JSON-LD of the home page.
+const faq = Array.from({ length: 5 }).map((_, i) => ({
   questionKey: `Question${i + 1}`,
   answerKey: `Answer${i + 1}`,
 }));
@@ -14,7 +16,6 @@ export default async function FAQ() {
   const t = await getTranslations(locale, "faq");
   const title = (t("Title") as string) || "FAQ";
   const subtitle = (t("Subtitle") as string) || "";
-  const lastUpdated = new Date();
 
   const items = faq
     .map(({ questionKey, answerKey }) => {
@@ -40,17 +41,6 @@ export default async function FAQ() {
           description={subtitle}
         />
       </Reveal>
-      <p className="mt-2 text-center text-sm text-muted-foreground">
-        <span>{(t("LastUpdated") as string) || "dernière mise à jour"}</span>{" "}
-        <span suppressHydrationWarning>
-          {new Intl.DateTimeFormat(undefined, {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-          }).format(lastUpdated)}
-        </span>
-      </p>
-
       {/* Use CSS columns; add explicit columnGap to ensure spacing even if async CSS is delayed */}
       <div
         className="mt-8 columns-1 md:columns-2"
