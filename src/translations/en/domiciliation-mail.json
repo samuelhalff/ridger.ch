@@ -1,14 +1,18 @@
 {
   "Hero": {
-    "Title": "Domiciliation and mail — a Geneva address, mail under control",
-    "Description": "A correspondence address in Switzerland for family members who are often abroad, and a mail management service in Geneva that lets no deadline slip.",
+    "Title": "Domiciliation and mail: your address in Geneva, your mail taken care of",
+    "Description": "We domicile you with us in Geneva, give the address to everyone who writes to you, then receive, handle and forward your mail, so there is nothing left for you to follow up.",
     "CTA": "Request a confidential consultation"
   },
   "Intro": [
-    "When a family lives across several countries, Swiss mail becomes a sensitive point: tax assessments, letters from the authorities, invoices, statements. A letter opened too late can cost a deadline.",
-    "We receive, scan and share your mail securely, and follow up on what it requires. A correspondence address remains a postal address: it does not establish your domicile or your tax residence, which depend on your actual circumstances."
+    "We domicile you with us in Geneva and notify all your correspondents of your new correspondence address: banks, insurers, the tax administration and other authorities, pension and social security funds, suppliers, subscriptions. From then on the mail comes to us. We receive, sort, scan and handle it, forward it to you and follow up on what it requires, without you having to chase anyone.",
+    "When a family lives across several countries, Swiss mail becomes a sensitive point: tax assessments, letters from the authorities, invoices, statements. A letter opened too late can cost a deadline. A correspondence address remains a postal address: it does not establish your domicile or your tax residence, which depend on your actual circumstances."
   ],
   "Pillars": [
+    {
+      "Title": "Change of address with your correspondents",
+      "Body": "We notify your banks and insurers, the tax administration and other authorities, your pension and social security funds, your suppliers and your subscriptions of your correspondence address in Geneva. Following up on the change is our job, not yours."
+    },
     {
       "Title": "Correspondence address",
       "Body": "A c/o address in Geneva to receive mail for each family member, separate from your legal domicile and revocable at any time."
@@ -19,7 +23,7 @@
     },
     {
       "Title": "Deadlines and replies",
-      "Body": "Spotting deadlines — tax notices, letters from the authorities, invoices — and coordinating replies with you and your advisers."
+      "Body": "Spotting deadlines (tax notices, letters from the authorities, invoices) and coordinating replies with you and your advisers."
     },
     {
       "Title": "Company domiciliation",
@@ -38,6 +42,10 @@
   "Faq": {
     "Title": "Frequently asked questions",
     "Questions": [
+      {
+        "Question": "Do you notify our correspondents of our new address yourselves?",
+        "Answer": "Yes. We notify your banks and insurers, the tax administration and other authorities, your pension and social security funds, your suppliers and your subscriptions. The mail then comes to us, and we sort it, handle it and forward it to you. There is nothing left for you to follow up."
+      },
       {
         "Question": "Do you offer company domiciliation in Geneva?",
         "Answer": "Yes, for the family's holding or management companies. Where the rules require it, a company must have real substance and take its management decisions there, and we take this into account with your advisers."

@@ -1,14 +1,18 @@
 {
   "Hero": {
-    "Title": "Domiciliación y correo — una dirección en Ginebra, un correo bajo control",
-    "Description": "Una domiciliación en Ginebra para los miembros de su familia que suelen estar en el extranjero, y una gestión del correo que no deja pasar ningún plazo.",
+    "Title": "Domiciliación y correo: su dirección en Ginebra, su correo en buenas manos",
+    "Description": "Le domiciliamos en Ginebra, comunicamos esta dirección a todos sus interlocutores y después recibimos, tratamos y le reenviamos su correo, sin que usted tenga que hacer ningún seguimiento.",
     "CTA": "Solicitar una entrevista confidencial"
   },
   "Intro": [
-    "Cuando una familia vive entre varios países, el correo suizo se vuelve un punto delicado: liquidaciones fiscales, cartas de las autoridades, facturas, extractos. Una carta abierta demasiado tarde puede costar un plazo.",
-    "Recibimos, escaneamos y compartimos su correo de forma segura, y damos seguimiento a lo que exige. Una dirección de correspondencia sigue siendo una dirección postal: no fija su domicilio ni su residencia fiscal, que dependen de su situación real."
+    "Le domiciliamos en nuestras oficinas de Ginebra y comunicamos su nueva dirección de correspondencia a todos sus interlocutores: bancos, aseguradoras, administración fiscal y demás autoridades, cajas de pensiones y de seguridad social, proveedores, suscripciones. A partir de ahí, el correo llega a nosotros. Lo recibimos, lo clasificamos, lo digitalizamos y lo tratamos, se lo reenviamos y damos seguimiento a lo que exige, sin que usted tenga que reclamar nada a nadie.",
+    "Cuando una familia vive entre varios países, el correo suizo se vuelve un punto delicado: liquidaciones fiscales, cartas de las autoridades, facturas, extractos. Una carta abierta demasiado tarde puede costar un plazo. Una dirección de correspondencia sigue siendo una dirección postal: no fija su domicilio ni su residencia fiscal, que dependen de su situación real."
   ],
   "Pillars": [
+    {
+      "Title": "Cambio de dirección ante sus interlocutores",
+      "Body": "Comunicamos su dirección de correspondencia en Ginebra a sus bancos y aseguradoras, a la administración fiscal y demás autoridades, a sus cajas de pensiones y de seguridad social, a sus proveedores y a sus suscripciones. El seguimiento de este cambio corre de nuestra cuenta."
+    },
     {
       "Title": "Dirección de correspondencia",
       "Body": "Una dirección c/o en Ginebra para recibir el correo de cada miembro de la familia, distinta del domicilio legal y revocable en cualquier momento."
@@ -19,7 +23,7 @@
     },
     {
       "Title": "Plazos y respuestas",
-      "Body": "Detección de plazos — notificaciones fiscales, cartas de las autoridades, facturas — y coordinación de las respuestas con usted y sus asesores."
+      "Body": "Detección de plazos (notificaciones fiscales, cartas de las autoridades, facturas) y coordinación de las respuestas con usted y sus asesores."
     },
     {
       "Title": "Domiciliación de sociedades",
@@ -38,6 +42,10 @@
   "Faq": {
     "Title": "Preguntas frecuentes",
     "Questions": [
+      {
+        "Question": "¿Se encargan ustedes de comunicar nuestra nueva dirección a nuestros interlocutores?",
+        "Answer": "Sí. La comunicamos a sus bancos y aseguradoras, a la administración fiscal y demás autoridades, a sus cajas de pensiones y de seguridad social, a sus proveedores y a sus suscripciones. Después el correo llega a nosotros; lo clasificamos, lo tratamos y se lo reenviamos. Usted no tiene que hacer ningún seguimiento."
+      },
       {
         "Question": "¿Ofrecen la domiciliación de sociedades en Ginebra?",
         "Answer": "Sí, para las sociedades holding o de gestión de la familia. Cuando la normativa lo exige, una sociedad debe disponer de sustancia real y tomar allí sus decisiones de gestión, y lo tenemos en cuenta junto con sus asesores."

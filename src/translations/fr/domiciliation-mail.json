@@ -1,14 +1,18 @@
 {
   "Hero": {
-    "Title": "Domiciliation et courrier — une adresse à Genève, un courrier maîtrisé",
-    "Description": "Une adresse de correspondance à Genève pour les membres de votre famille souvent à l'étranger, et une gestion du courrier qui ne laisse passer aucune échéance.",
+    "Title": "Domiciliation et courrier : votre adresse à Genève, votre courrier pris en charge",
+    "Description": "Nous vous domicilions à Genève, annonçons cette adresse à tous vos correspondants, puis recevons, traitons et vous transmettons votre courrier : vous n'avez rien à suivre de votre côté.",
     "CTA": "Demander un entretien confidentiel"
   },
   "Intro": [
-    "Lorsque la famille vit entre plusieurs pays, le courrier suisse devient un point sensible : avis de taxation, lettres des autorités, factures, relevés. Un pli ouvert trop tard peut coûter un délai.",
-    "Nous recevons, numérisons et partageons votre courrier en toute sécurité, et nous suivons ce qu'il appelle. Une adresse de correspondance reste une adresse postale : elle ne fixe ni votre domicile ni votre résidence fiscale, qui dépendent de votre situation réelle."
+    "Nous vous domicilions chez nous, à Genève, et annonçons votre nouvelle adresse de correspondance à tous vos correspondants : banques, assureurs, administration fiscale et autres autorités, caisses de pension et d'assurances sociales, fournisseurs, abonnements. Le courrier arrive ensuite chez nous. Nous le recevons, le trions, le numérisons et le traitons, puis vous le transmettons et suivons ce qu'il appelle, sans que vous ayez à relancer qui que ce soit.",
+    "Lorsque la famille vit entre plusieurs pays, le courrier suisse devient un point sensible : avis de taxation, lettres des autorités, factures, relevés. Un pli ouvert trop tard peut coûter un délai. Une adresse de correspondance reste une adresse postale : elle ne fixe ni votre domicile ni votre résidence fiscale, qui dépendent de votre situation réelle."
   ],
   "Pillars": [
+    {
+      "Title": "Changement d'adresse auprès de vos correspondants",
+      "Body": "Nous annonçons votre adresse de correspondance à Genève à vos banques et assureurs, à l'administration fiscale et aux autres autorités, à vos caisses de pension et d'assurances sociales, à vos fournisseurs et à vos abonnements. Le suivi de ce changement nous revient, pas à vous."
+    },
     {
       "Title": "Adresse de correspondance",
       "Body": "Une adresse c/o à Genève pour recevoir les plis de chaque membre de la famille, distincte du domicile légal et révocable à tout moment."
@@ -19,7 +23,7 @@
     },
     {
       "Title": "Échéances et réponses",
-      "Body": "Repérage des délais — avis d'impôt, courriers des autorités, factures — et coordination des réponses avec vous et vos conseillers."
+      "Body": "Repérage des délais (avis d'impôt, courriers des autorités, factures) et coordination des réponses avec vous et vos conseillers."
     },
     {
       "Title": "Domiciliation de sociétés",
@@ -38,6 +42,10 @@
   "Faq": {
     "Title": "Questions fréquentes",
     "Questions": [
+      {
+        "Question": "Annoncez-vous vous-mêmes notre nouvelle adresse à nos correspondants ?",
+        "Answer": "Oui. Nous l'annonçons à vos banques et assureurs, à l'administration fiscale et aux autres autorités, à vos caisses de pension et d'assurances sociales, à vos fournisseurs et à vos abonnements. Le courrier arrive ensuite chez nous ; nous le trions, le traitons et vous le transmettons. Vous n'avez rien à suivre de votre côté."
+      },
       {
         "Question": "Proposez-vous la domiciliation de sociétés à Genève ?",
         "Answer": "Oui, pour les sociétés holding ou de gestion de la famille. Lorsque la réglementation l'exige, une société doit disposer d'une substance réelle et y prendre ses décisions de gestion, et nous en tenons compte avec vos conseillers."

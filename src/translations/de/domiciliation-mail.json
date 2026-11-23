@@ -1,14 +1,18 @@
 {
   "Hero": {
-    "Title": "Domizil und Postverwaltung — eine Adresse in Genf, Post unter Kontrolle",
-    "Description": "Eine Korrespondenzadresse in Genf für Familienmitglieder, die oft im Ausland sind, und eine Postverwaltung, die keine Frist verstreichen lässt.",
+    "Title": "Domizil und Postverwaltung: Ihre Adresse in Genf, Ihre Post in guten Händen",
+    "Description": "Wir domizilieren Sie bei uns in Genf, teilen die Adresse all Ihren Korrespondenzpartnern mit, nehmen Ihre Post entgegen, bearbeiten sie und leiten sie weiter. Sie müssen nichts nachverfolgen.",
     "CTA": "Vertrauliches Gespräch anfragen"
   },
   "Intro": [
-    "Lebt eine Familie in mehreren Ländern, wird die Schweizer Post zu einem heiklen Punkt: Steuerveranlagungen, Behördenschreiben, Rechnungen, Auszüge. Ein zu spät geöffneter Brief kann eine Frist kosten.",
-    "Wir nehmen Ihre Post entgegen, scannen sie und stellen sie sicher bereit, und wir verfolgen, was sie verlangt. Eine Korrespondenzadresse bleibt eine Postadresse: Sie begründet weder Ihren Wohnsitz noch Ihre steuerliche Ansässigkeit, die von Ihren tatsächlichen Verhältnissen abhängen."
+    "Wir domizilieren Sie bei uns in Genf und teilen Ihre neue Korrespondenzadresse all Ihren Korrespondenzpartnern mit: Banken, Versicherern, der Steuerverwaltung und anderen Behörden, Pensionskassen und Sozialversicherungen, Lieferanten, Abonnements. Danach geht die Post bei uns ein. Wir nehmen sie entgegen, sortieren, digitalisieren und bearbeiten sie, leiten sie an Sie weiter und verfolgen, was sie verlangt, ohne dass Sie bei jemandem nachfassen müssen.",
+    "Lebt eine Familie in mehreren Ländern, wird die Schweizer Post zu einem heiklen Punkt: Steuerveranlagungen, Behördenschreiben, Rechnungen, Auszüge. Ein zu spät geöffneter Brief kann eine Frist kosten. Eine Korrespondenzadresse bleibt eine Postadresse: Sie begründet weder Ihren Wohnsitz noch Ihre steuerliche Ansässigkeit, die von Ihren tatsächlichen Verhältnissen abhängen."
   ],
   "Pillars": [
+    {
+      "Title": "Adressänderung bei Ihren Korrespondenzpartnern",
+      "Body": "Wir teilen Ihre Korrespondenzadresse in Genf Ihren Banken und Versicherern, der Steuerverwaltung und anderen Behörden, Ihren Pensionskassen und Sozialversicherungen, Ihren Lieferanten und Abonnements mit. Die Nachverfolgung dieser Änderung übernehmen wir."
+    },
     {
       "Title": "Korrespondenzadresse",
       "Body": "Eine c/o-Adresse in Genf für die Post jedes Familienmitglieds, getrennt vom rechtlichen Wohnsitz und jederzeit widerrufbar."
@@ -19,7 +23,7 @@
     },
     {
       "Title": "Fristen und Antworten",
-      "Body": "Erkennen von Fristen — Steuerbescheide, Behördenschreiben, Rechnungen — und Koordination der Antworten mit Ihnen und Ihren Beratern."
+      "Body": "Erkennen von Fristen (Steuerbescheide, Behördenschreiben, Rechnungen) und Koordination der Antworten mit Ihnen und Ihren Beratern."
     },
     {
       "Title": "Domizil für Gesellschaften",
@@ -38,6 +42,10 @@
   "Faq": {
     "Title": "Häufige Fragen",
     "Questions": [
+      {
+        "Question": "Teilen Sie unsere neue Adresse unseren Korrespondenzpartnern selbst mit?",
+        "Answer": "Ja. Wir teilen sie Ihren Banken und Versicherern, der Steuerverwaltung und anderen Behörden, Ihren Pensionskassen und Sozialversicherungen, Ihren Lieferanten und Abonnements mit. Die Post geht danach bei uns ein; wir sortieren und bearbeiten sie und leiten sie an Sie weiter. Sie selbst müssen nichts nachverfolgen."
+      },
       {
         "Question": "Bieten Sie die Domizilierung von Gesellschaften in Genf an?",
         "Answer": "Ja, für die Holding- oder Verwaltungsgesellschaften der Familie. Wo die Vorschriften es verlangen, muss eine Gesellschaft über echte Substanz verfügen und dort ihre Verwaltungsentscheide treffen, und wir berücksichtigen das gemeinsam mit Ihren Beratern."
