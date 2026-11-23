@@ -54,5 +54,26 @@
     "Title": "Uma administração dominada",
     "Body": "Mantém o controlo e a visão de conjunto; assumimos a execução administrativa e a coordenação com os seus consultores fiscais."
   },
-  "Perimeter": "A coordenação fiscal e administrativa exerce-se em articulação com os seus consultores fiscais e jurídicos. A Ridger fornece a coordenação, o reporting e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A coordenação fiscal e administrativa exerce-se em articulação com os seus consultores fiscais e jurídicos. A Ridger fornece a coordenação, o reporting e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "A Ridger trata das nossas declarações de impostos?",
+        "Answer": "Coordenamos as declarações e as obrigações fiscais dos membros da família e das suas estruturas, em articulação com os seus consultores fiscais. Mantemos um calendário fiscal único, reunimos os documentos com antecedência e entregamo-los aos especialistas mandatados."
+      },
+      {
+        "Question": "Podem acompanhar-nos para a tributação segundo a despesa (forfait fiscal)?",
+        "Answer": "Sim, para as famílias que se instalam na Suíça, quando as condições legais estão reunidas. Coordenamos o processo com o seu consultor fiscal e as autoridades cantonais, preparamos as informações pedidas pela administração e acompanhamos o processo a longo prazo."
+      },
+      {
+        "Question": "Gerem os pagamentos e a tesouraria da família?",
+        "Answer": "Sim. Administramos os pagamentos e acompanhamos a tesouraria dos membros da família e das suas estruturas, com controlos e rastreabilidade em cada etapa."
+      },
+      {
+        "Question": "Podem encarregar-se do processamento salarial dos nossos colaboradores?",
+        "Answer": "Sim, para todos os seus empregadores, seja o pessoal doméstico ou os colaboradores das suas estruturas e do seu family office. Isto inclui os contratos, os salários Swissdec, os seguros sociais, o imposto retido na fonte e as autorizações."
+      }
+    ]
+  }
 }

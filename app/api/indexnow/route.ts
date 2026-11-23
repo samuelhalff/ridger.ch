@@ -12,8 +12,8 @@ export async function POST(req: Request) {
     if (!parsed.success) {
       return NextResponse.json({ error: 'invalid_urls' }, { status: 400 });
     }
-    await submitToIndexNow(parsed.urls);
-    return NextResponse.json({ ok: true });
+    const ok = await submitToIndexNow(parsed.urls);
+    return NextResponse.json({ ok }, { status: ok ? 200 : 502 });
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || 'IndexNow error' }, { status: 500 });
   }

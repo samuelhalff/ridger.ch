@@ -38,5 +38,26 @@
     "Title": "Properties looked after over time",
     "Body": "You decide the direction of your real estate. We provide its administration, coherence and memory, long after the signing."
   },
-  "Perimeter": "Operational rental management remains with your managing agents where they hold a mandate, and legal and tax matters with your lawyers, notaries and tax advisers. Ridger provides administration, supervision, coordination and reporting. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Operational rental management remains with your managing agents where they hold a mandate, and legal and tax matters with your lawyers, notaries and tax advisers. Ridger provides administration, supervision, coordination and reporting. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What does owner-side property management cover?",
+        "Answer": "The administration of your residences and rental properties in Geneva and across Switzerland, from the owner's side: leases and rent, service charges and statements, works, insurance, accounting and reporting. The service covers your real estate, and Ridger does not manage your financial assets."
+      },
+      {
+        "Question": "Do you work with our current managing agent?",
+        "Answer": "Yes. Where a managing agent holds a mandate, it keeps day-to-day rental management. We frame its mandate, track its services and review its accounts in your interest as owner."
+      },
+      {
+        "Question": "Do you look after the insurance on our buildings?",
+        "Answer": "Yes. We follow building and owner's liability insurance, renewals and claims, with your brokers and insurers."
+      },
+      {
+        "Question": "Do you prepare property data for our tax returns?",
+        "Answer": "Yes. We prepare the property data, including imputed rental value, for your tax returns, which are handled with your tax advisers."
+      }
+    ]
+  }
 }

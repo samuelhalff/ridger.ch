@@ -9,7 +9,9 @@ next-standalone.tar.gz
 !app/llms.txt/
 !app/llms.txt/route.ts
 !public/robots.txt
-!public/ebd95385d7154f45ba37d076b4efd008.txt
+!public/0b2df53c19495486d5f3e5b686bbc8ea.txt
+!app/llms-full.txt/
+!app/llms-full.txt/route.ts
 .env*
 !.env.example
 .env.backup

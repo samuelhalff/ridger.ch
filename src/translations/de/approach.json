@@ -34,5 +34,26 @@
     }
   ],
   "ArkNote": "Ridger stützt sich auf eine etablierte Genfer Treuhandgruppe, ein Garant für Sorgfalt und Kontinuität:",
-  "CTA": "Vertrauliches Gespräch anfragen"
+  "CTA": "Vertrauliches Gespräch anfragen",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Ist Ridger unabhängig von den Banken?",
+        "Answer": "Ja. Ridger ist weder Bank noch Vermögensverwalter, gehört keinem Bankinstitut und vertreibt keine Finanzprodukte. Wir haben keine Transaktion auszulösen."
+      },
+      {
+        "Question": "Wie beginnt ein Mandat mit Ridger?",
+        "Answer": "Mit einer Prüfung Ihrer bestehenden Organisation: Bankbeziehungen, Mandate, Strukturen und Berater. Danach richten wir die Konsolidierung Ihres Vermögens ein, dann einen Überwachungs- und Koordinationsrhythmus, der zu Ihren Prioritäten passt."
+      },
+      {
+        "Question": "Arbeiten Sie mit unseren unabhängigen Vermögensverwaltern zusammen?",
+        "Answer": "Ja. Ihre Verwalter behalten die Verwaltung Ihrer Vermögenswerte, und Ridger beaufsichtigt und koordiniert ihre Tätigkeit und nimmt sie in die Verantwortung, ohne jemals an ihrer Stelle zu verwalten."
+      },
+      {
+        "Question": "Innerhalb welcher Frist antwortet Ridger?",
+        "Answer": "Wir antworten innerhalb eines Werktags. Ihr einziger Ansprechpartner kennt Ihre Dossiers und bewahrt das Gedächtnis Ihrer Entscheidungen über die Zeit."
+      }
+    ]
+  }
 }

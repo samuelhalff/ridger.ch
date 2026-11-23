@@ -88,5 +88,26 @@
   "MapDisclaimer": "La carte est fournie par Google Maps. Chargez-la seulement si vous acceptez un éventuel transfert de données (voir notre politique de confidentialité).",
   "MapLoadButton": "Afficher la carte interactive",
   "MapOpenExternal": "Ouvrir dans Google Maps",
-  "MapPrivacyPlaceholder": "Pour des raisons de confidentialité, la carte n'est pas chargée automatiquement."
+  "MapPrivacyPlaceholder": "Pour des raisons de confidentialité, la carte n'est pas chargée automatiquement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Comment contacter Ridger ?",
+        "Answer": "Vous pouvez nous écrire par le formulaire de contact ou à contact@ridger.ch, nous appeler au +41 22 512 50 50, réserver un appel ou nous écrire sur WhatsApp pour les questions rapides."
+      },
+      {
+        "Question": "Dans quel délai recevrons-nous une réponse ?",
+        "Answer": "Nous répondons dans un délai d'un jour ouvré, avec la plus stricte discrétion."
+      },
+      {
+        "Question": "Comment se déroule un premier entretien ?",
+        "Answer": "C'est un échange confidentiel et sans engagement, à Genève ou à distance, pour comprendre votre situation et vos priorités."
+      },
+      {
+        "Question": "Où se trouve le bureau de Ridger ?",
+        "Answer": "Notre bureau est au 26 boulevard Georges-Favon, 1204 Genève. Nous accompagnons aussi des familles ailleurs en Suisse, à distance, et organisons des rencontres en personne lorsque c'est utile."
+      }
+    ]
+  }
 }

@@ -34,5 +34,26 @@
     "Title": "Transactions in hand",
     "Body": "From the first opportunity to signing, we coordinate each party and keep the whole coherent, discreetly and over the long term."
   },
-  "Perimeter": "Custody, operational rental management and asset management remain with your property managers, agents and regulated institutions. Ridger provides supervision, administration, coordination and negotiation support. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Custody, operational rental management and asset management remain with your property managers, agents and regulated institutions. Ridger provides supervision, administration, coordination and negotiation support. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Can Ridger help us buy a property?",
+        "Answer": "Yes. We identify and assess acquisition opportunities that match your family's wishes, then coordinate the transaction with notaries, banks and experts, following the due diligence and supporting the negotiation of terms."
+      },
+      {
+        "Question": "Do you also assist with selling a property?",
+        "Answer": "Yes. We coordinate sales as well as acquisitions, with every party involved, through to signing."
+      },
+      {
+        "Question": "Do you oversee properties held through real estate companies?",
+        "Answer": "Yes. We follow properties held directly or through real estate companies, oversee rental management and report regularly on income, costs and the condition of your portfolio."
+      },
+      {
+        "Question": "Does Ridger replace our managing agent?",
+        "Answer": "No. Day-to-day rental management stays with your managing agents. We act as their single point of contact: we frame their mandates, track their services and review their accounts in your interest."
+      }
+    ]
+  }
 }

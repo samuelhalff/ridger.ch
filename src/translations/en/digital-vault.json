@@ -30,5 +30,26 @@
     "Title": "A lasting document estate",
     "Body": "Digital-first workflows that save time, without ever compromising on security or discretion."
   },
-  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What is Ridger's digital vault?",
+        "Answer": "It is an encrypted document space that brings together the family's documents, such as deeds, contracts, statements and decisions, in structured folders. You can find each document when you need it instead of searching through emails, folders and advisers."
+      },
+      {
+        "Question": "Where are our documents hosted?",
+        "Answer": "In Switzerland. The vault is encrypted and hosted in Switzerland, in line with your data residency and confidentiality requirements."
+      },
+      {
+        "Question": "Can we share documents with our advisers?",
+        "Answer": "Yes, selectively. You decide who sees what, and you keep a record of every access."
+      },
+      {
+        "Question": "Can the mail we receive be filed in the vault?",
+        "Answer": "Yes. When Ridger receives your mail, it is sorted, scanned and then shared securely in your digital vault."
+      }
+    ]
+  }
 }

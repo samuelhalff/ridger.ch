@@ -57,5 +57,30 @@
     "Body": "Pour le déménagement et les démarches de résidence proprement dits, notre site partenaire du groupe, Switzerland Residency, détaille chaque étape.",
     "LinkLabel": "Switzerland Residency",
     "LinkHref": "https://switzerlandresidency.ch/"
+  },
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Ridger peut-il obtenir un permis de séjour pour notre famille ?",
+        "Answer": "Les permis sont accordés par les autorités cantonales et fédérales, qui en décident seules. Nous coordonnons les demandes auprès de l'office cantonal des migrations, l'OCPM à Genève, préparons des dossiers complets et suivons chaque démarche, et les questions de droit des étrangers sont traitées avec vos avocats."
+      },
+      {
+        "Question": "Quels permis de séjour pouvez-vous coordonner ?",
+        "Answer": "Les permis B, C ou L selon votre situation, et le statut de frontalier (G) lorsqu'il s'applique, dans le cadre fixé par le SEM."
+      },
+      {
+        "Question": "Que faut-il organiser en arrivant en Suisse ?",
+        "Answer": "L'annonce d'arrivée, le titre de séjour, l'assurance-maladie obligatoire (LAMal) dans le délai légal, l'école, le logement et la situation fiscale. Ces démarches dépendent les unes des autres, et nous les organisons dans le bon ordre pour toute la famille."
+      },
+      {
+        "Question": "Le forfait fiscal peut-il être examiné à notre arrivée ?",
+        "Answer": "Oui. Nous coordonnons votre situation fiscale à l'arrivée avec vos conseillers fiscaux, y compris l'examen de l'imposition d'après la dépense (forfait fiscal) lorsque les conditions légales sont réunies."
+      },
+      {
+        "Question": "Accompagnez-vous les installations hors de Genève ?",
+        "Answer": "Oui. Nous coordonnons l'installation de familles à Genève, dans le canton de Vaud ou ailleurs en Suisse, avec les autorités du canton concerné."
+      }
+    ]
   }
 }

@@ -88,5 +88,26 @@
   "MapDisclaimer": "Die Karte wird von Google Maps bereitgestellt. Laden Sie sie nur, wenn Sie einer möglichen Datenübermittlung zustimmen (siehe unsere Datenschutzerklärung).",
   "MapLoadButton": "Interaktive Karte anzeigen",
   "MapOpenExternal": "In Google Maps öffnen",
-  "MapPrivacyPlaceholder": "Aus Datenschutzgründen wird die Karte nicht automatisch geladen."
+  "MapPrivacyPlaceholder": "Aus Datenschutzgründen wird die Karte nicht automatisch geladen.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Wie kann man Ridger kontaktieren?",
+        "Answer": "Sie können uns über das Kontaktformular oder an contact@ridger.ch schreiben, uns unter +41 22 512 50 50 anrufen, einen Anruf buchen oder uns für kurze Fragen auf WhatsApp schreiben."
+      },
+      {
+        "Question": "Innerhalb welcher Frist erhalten wir eine Antwort?",
+        "Answer": "Wir antworten innerhalb eines Werktags, mit grösster Diskretion."
+      },
+      {
+        "Question": "Wie läuft ein erstes Gespräch ab?",
+        "Answer": "Es ist ein vertraulicher und unverbindlicher Austausch, in Genf oder aus der Ferne, um Ihre Situation und Ihre Prioritäten zu verstehen."
+      },
+      {
+        "Question": "Wo befindet sich das Büro von Ridger?",
+        "Answer": "Unser Büro befindet sich am 26 boulevard Georges-Favon, 1204 Genf. Wir begleiten auch Familien andernorts in der Schweiz aus der Ferne und organisieren persönliche Treffen, wenn es sinnvoll ist."
+      }
+    ]
+  }
 }

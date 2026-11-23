@@ -38,5 +38,26 @@
     "Title": "Um património acompanhado no tempo",
     "Body": "Decide a orientação do seu património imobiliário. Nós asseguramos a sua administração, a sua coerência e a sua memória, muito depois da assinatura."
   },
-  "Perimeter": "A gestão operacional do arrendamento permanece assegurada pelas suas administrações de imóveis quando mandatadas, e as questões jurídicas e fiscais pelos seus advogados, notários e consultores fiscais. A Ridger assegura a administração, a supervisão, a coordenação e o reporting. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A gestão operacional do arrendamento permanece assegurada pelas suas administrações de imóveis quando mandatadas, e as questões jurídicas e fiscais pelos seus advogados, notários e consultores fiscais. A Ridger assegura a administração, a supervisão, a coordenação e o reporting. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "O que cobre a gestão imobiliária do lado do proprietário?",
+        "Answer": "A administração das suas residências e imóveis de rendimento em Genebra e na Suíça, do ponto de vista do proprietário: contratos e rendas, encargos e acertos de contas, obras, seguros, contabilidade e reporting. Este serviço incide sobre os seus bens imóveis, e a Ridger não gere os seus ativos financeiros."
+      },
+      {
+        "Question": "Trabalham com a nossa administração de imóveis atual?",
+        "Answer": "Sim. Quando há uma administração de imóveis mandatada, esta mantém a gestão operacional dos arrendamentos. Enquadramos o seu mandato, acompanhamos as suas prestações e controlamos as suas contas no seu interesse de proprietário."
+      },
+      {
+        "Question": "Acompanham os seguros dos nossos edifícios?",
+        "Answer": "Sim. Acompanhamos os seguros do edifício e de responsabilidade civil do proprietário, os respetivos vencimentos e os sinistros, com os seus corretores e seguradoras."
+      },
+      {
+        "Question": "Preparam os dados imobiliários para as nossas declarações de impostos?",
+        "Answer": "Sim. Preparamos os dados imobiliários, incluindo o valor locativo, para as suas declarações, que são tratadas com os seus consultores fiscais."
+      }
+    ]
+  }
 }

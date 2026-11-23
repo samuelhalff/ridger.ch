@@ -57,5 +57,30 @@
     "Body": "For the move and the residence formalities themselves, Switzerland Residency, our sister site within the group, walks through each step.",
     "LinkLabel": "Switzerland Residency",
     "LinkHref": "https://switzerlandresidency.ch/"
+  },
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Can Ridger obtain a residence permit for our family?",
+        "Answer": "Permits are granted by the cantonal and federal authorities, which alone decide. We coordinate applications with the cantonal migration office, the OCPM in Geneva, prepare complete files and follow every step, while immigration law questions are handled with your lawyers."
+      },
+      {
+        "Question": "Which residence permits can you coordinate?",
+        "Answer": "B, C or L permits depending on your situation, and cross-border (G) status where it applies, within the framework set by the SEM."
+      },
+      {
+        "Question": "What needs to be arranged when moving to Switzerland?",
+        "Answer": "Registering your arrival, the residence permit, compulsory health insurance (LAMal) within the legal deadline, school, housing and your tax position. These steps depend on one another, and we organise them in the right order for the whole family."
+      },
+      {
+        "Question": "Can lump-sum taxation be reviewed when we arrive?",
+        "Answer": "Yes. We coordinate your tax position on arrival with your tax advisers, including a review of lump-sum taxation (forfait fiscal) where the legal conditions are met."
+      },
+      {
+        "Question": "Do you handle moves outside Geneva?",
+        "Answer": "Yes. We coordinate the relocation of families to Geneva, Vaud or elsewhere in Switzerland, with the authorities of the canton concerned."
+      }
+    ]
   }
 }

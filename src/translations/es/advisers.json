@@ -79,5 +79,26 @@
     "Title": "Presentarnos una familia",
     "Subtitle": "Bastan unas líneas. Le responderemos con rapidez y total confidencialidad.",
     "MessagePlaceholder": "p. ej., una breve descripción anonimizada de la situación"
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Cómo puede un abogado o un banquero presentar una familia a Ridger?",
+        "Answer": "Todo empieza con un primer intercambio: usted nos describe la situación, sin nombres si lo prefiere, y le decimos con franqueza si podemos ser útiles. Después nos reunimos con la familia, con usted o sin usted, según lo que más le convenga."
+      },
+      {
+        "Question": "¿Ridger compite con nuestro mandato?",
+        "Answer": "No. Ridger no gestiona activos ni presta asesoramiento jurídico, y usted conserva su mandato y su relación con la familia. Coordinamos a los asesores, consolidamos el patrimonio en un reporting único y seguimos la administración."
+      },
+      {
+        "Question": "¿Ridger interviene en la estructuración de un patrimonio o de un family office?",
+        "Answer": "Sí, en coordinación con el abogado, que se encarga de la estructuración jurídica. Ridger reúne una información patrimonial actualizada, sigue las decisiones adoptadas con la familia y coordina la puesta en marcha con los demás asesores."
+      },
+      {
+        "Question": "¿Cómo se respeta el secreto profesional?",
+        "Answer": "Un primer intercambio puede hacerse sin ningún nombre, y no se transmite nada sin el acuerdo de la familia. Los documentos se conservan en una caja fuerte digital alojada en Suiza y solo se comparten con las personas que los necesitan."
+      }
+    ]
   }
 }

@@ -1,9 +1,9 @@
 name: IndexNow Reindex
 
+# Manual full resubmission of the core pages. Each deploy already sends the
+# URLs whose sitemap lastmod changed (build-and-deploy.yml, IndexNow step).
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   reindex:

@@ -42,5 +42,26 @@
     "Title": "Überwachung, nicht Verwaltung",
     "Body": "Unsere Aufgabe ist es, zu beobachten, zu vergleichen und zu dokumentieren. Sie behalten die Wahl Ihrer Verwalter und Ihrer Entscheidungen, mit vollständiger und unparteiischer Information."
   },
-  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Verwaltet Ridger unsere Anlagen?",
+        "Answer": "Nein. Entscheidungen und Ausführung bleiben bei Ihren regulierten Banken und Vermögensverwaltern, und Ridger erbringt keine Anlageberatung. Wir überwachen deren Mandate, vergleichen ihre Ergebnisse und berichten Ihnen darüber."
+      },
+      {
+        "Question": "Wie vergleichen Sie mehrere Vermögensverwalter?",
+        "Answer": "Wir verfolgen Performance, Kosten und Risiko jeder Beziehung auf gemeinsamer Grundlage und ordnen die Ergebnisse anhand passender Referenzindizes ein. Die Auswertungen vergleichen die Verwalter untereinander und im Zeitverlauf."
+      },
+      {
+        "Question": "Prüfen Sie, ob unsere Vermögensverwalter ihr Mandat einhalten?",
+        "Answer": "Ja. Wir kontrollieren, ob die mit jedem Verwalter vereinbarten Mandate und die Anlagepolitik eingehalten werden, koordinieren dann ihre Tätigkeit und nehmen sie in die Verantwortung."
+      },
+      {
+        "Question": "Können Sie die Kosten mit unseren Banken und Vermögensverwaltern verhandeln?",
+        "Answer": "Ja. Wir verhandeln Konditionen und Kosten mit den Banken und Verwaltern in Ihrem Interesse, denn wir haben kein Produkt zu platzieren."
+      }
+    ]
+  }
 }

@@ -187,7 +187,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run build-and-deploy.yml --ref main
 
-      - name: Wait for the article to be live, then ping sitemaps + IndexNow
+      - name: Wait for the article to be live, then IndexNow
         if: steps.finalize.outputs.pushed == 'true' && steps.finalize.outputs.final_status == 'done'
         continue-on-error: true
         timeout-minutes: 30
@@ -202,7 +202,6 @@ jobs:
             [ "$CODE" = "200" ] && break
             sleep 30
           done
-          node scripts/ping-sitemaps.js || true
           BODY=$(node -e 'const s=process.env.SLUG;console.log(JSON.stringify({urls:["fr","en","de","es","pt"].map(l=>`https://ridger.ch/${l}/ressources/articles/${s}/`)}))')
           for i in 1 2 3; do
             STATUS=$(curl -s -o /tmp/indexnow.json -w "%{http_code}" -X POST "https://ridger.ch/api/indexnow/" \

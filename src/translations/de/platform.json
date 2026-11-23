@@ -116,5 +116,26 @@
       { "label": "Identifizierte und zurückerstattete Retrozessionen", "value": "CHF 12'400" }
     ],
     "feesTotal": "Vollständige Kostentransparenz — CHF 248'900 eingespart seit 2024"
+  },
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Was lässt sich auf der Ridger-Plattform verfolgen?",
+        "Answer": "Die Plattform führt Ihre Wertschriften, Ihre Immobilien, Ihre Dokumente und Ihr Reporting in einer konsolidierten Sicht zusammen, die aktuell gehalten wird und jederzeit lesbar ist. Dort finden Sie Ihr konsolidiertes Vermögen, Ihre Positionen pro Bank und Ihre Berichte."
+      },
+      {
+        "Question": "Wo werden die Daten der Plattform gehostet?",
+        "Answer": "In der Schweiz. Die Dokumente werden in einem verschlüsselten Tresor aufbewahrt, und Ihre Daten werden nur mit den von Ihnen bezeichneten Personen geteilt."
+      },
+      {
+        "Question": "Dient die Plattform dazu, unsere Anlagen zu verwalten?",
+        "Answer": "Nein. Sie dient dazu, Ihr Vermögen zu verfolgen und zu konsolidieren. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung, und die Verwaltung bleibt bei Ihren regulierten Banken und Vermögensverwaltern."
+      },
+      {
+        "Question": "Sind die Bankkosten auf der Plattform sichtbar?",
+        "Answer": "Ja. Das Reporting macht die expliziten und impliziten Kosten Ihrer Bankbeziehungen lesbar, damit Sie verstehen, was Ihr Vermögen kostet."
+      }
+    ]
   }
 }

@@ -42,5 +42,26 @@
     "Title": "Surveillance, non gestion",
     "Body": "Notre rôle est d'observer, de comparer et de documenter. Vous conservez le choix de vos gérants et de vos décisions, avec une information complète et impartiale."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Ridger gère-t-il nos placements ?",
+        "Answer": "Non. Les décisions et l'exécution restent chez vos banques et gérants régulés, et Ridger ne fournit pas de conseil en placement. Nous suivons leurs mandats, comparons leurs résultats et vous en rendons compte."
+      },
+      {
+        "Question": "Comment comparez-vous plusieurs gérants ?",
+        "Answer": "Nous suivons la performance, les frais et le risque de chaque relation sur une base commune, et mettons les résultats en perspective avec des indices de référence pertinents. Les revues comparent les gérants entre eux et dans le temps."
+      },
+      {
+        "Question": "Vérifiez-vous que nos gérants respectent leur mandat ?",
+        "Answer": "Oui. Nous contrôlons le respect des mandats et de la politique d'investissement convenue avec chaque gérant, puis nous coordonnons leur activité et les tenons responsables."
+      },
+      {
+        "Question": "Pouvez-vous négocier les frais avec nos banques et nos gérants ?",
+        "Answer": "Oui. Nous négocions les conditions et les frais avec les banques et les gérants dans votre intérêt, puisque nous n'avons aucun produit à placer."
+      }
+    ]
+  }
 }

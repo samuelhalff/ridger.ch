@@ -42,5 +42,26 @@
     "Title": "Ein Reporting in Ihrem Rhythmus",
     "Body": "Monatlich, quartalsweise oder auf Anfrage: Ihr Reporting wird nach Ihren Prioritäten strukturiert und sicher mit den von Ihnen benannten Personen geteilt."
   },
-  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Was ist ein konsolidiertes Vermögensreporting?",
+        "Answer": "Es ist eine einzige Sicht auf Ihr gesamtes Vermögen. Sie führt Ihre Bankkonten, Depotstellen, Immobilien, Private-Equity-Beteiligungen und Sammlerwerte in Ihrer Referenzwährung zusammen. Das Reporting ist unabhängig von jeder Bank, und die Zahlen werden mit den offiziellen Auszügen jeder Gegenpartei abgeglichen."
+      },
+      {
+        "Question": "Wie wird die Performance unseres Vermögens gemessen?",
+        "Answer": "Wir berechnen eine zeitgewichtete Performance (TWR) und vergleichen sie mit Referenzindizes. Der Bericht zeigt ausserdem, was zum Ergebnis beigetragen hat."
+      },
+      {
+        "Question": "Zeigt das Reporting auch die Bankkosten?",
+        "Answer": "Ja. Wir erfassen die expliziten und impliziten Kosten Ihrer Bankbeziehungen, damit Sie wissen, was Ihr Vermögen tatsächlich kostet."
+      },
+      {
+        "Question": "Wie oft erhalten wir das Reporting?",
+        "Answer": "Monatlich, vierteljährlich oder auf Abruf, je nach Ihren Prioritäten. Es wird sicher mit den von Ihnen bezeichneten Personen geteilt und kann vor jeder Sitzung Ihres Familien-Anlageausschusses vorbereitet werden."
+      }
+    ]
+  }
 }

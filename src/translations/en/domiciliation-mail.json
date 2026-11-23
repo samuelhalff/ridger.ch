@@ -34,5 +34,26 @@
     "Title": "Nothing goes missing",
     "Body": "Wherever you are, you know what has arrived, what needs action and what has been dealt with. We keep it all in order, discreetly."
   },
-  "Perimeter": "A correspondence address does not create a civil domicile or a tax residence. Legal and tax questions about domicile and company substance are handled with your lawyers and tax advisers. Ridger provides mail receipt, mail management and administrative coordination. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "A correspondence address does not create a civil domicile or a tax residence. Legal and tax questions about domicile and company substance are handled with your lawyers and tax advisers. Ridger provides mail receipt, mail management and administrative coordination. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Do you offer company domiciliation in Geneva?",
+        "Answer": "Yes, for the family's holding or management companies. Where the rules require it, a company must have real substance and take its management decisions there, and we take this into account with your advisers."
+      },
+      {
+        "Question": "Does a correspondence address in Geneva change our domicile?",
+        "Answer": "No. A correspondence address remains a postal address: it creates neither a civil domicile nor a tax residence, which depend on your actual circumstances. It stays separate from your legal domicile and can be revoked at any time."
+      },
+      {
+        "Question": "How is our mail handled?",
+        "Answer": "We receive, sort and scan it, then share it securely through your digital vault. Originals are kept or forwarded as you instruct."
+      },
+      {
+        "Question": "Who keeps track of deadlines in the mail?",
+        "Answer": "We spot the deadlines, such as tax notices, letters from the authorities or invoices, and coordinate the replies with you and your advisers."
+      }
+    ]
+  }
 }

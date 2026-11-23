@@ -57,5 +57,30 @@
     "Body": "Für den Umzug und die Formalitäten rund um den Wohnsitz beschreibt Switzerland Residency, unsere Partnerseite innerhalb der Gruppe, jeden Schritt im Detail.",
     "LinkLabel": "Switzerland Residency",
     "LinkHref": "https://switzerlandresidency.ch/"
+  },
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Kann Ridger eine Aufenthaltsbewilligung für unsere Familie erwirken?",
+        "Answer": "Die Bewilligungen werden von den kantonalen und eidgenössischen Behörden erteilt, die allein darüber entscheiden. Wir koordinieren die Gesuche beim kantonalen Migrationsamt, in Genf beim OCPM, bereiten vollständige Dossiers vor und begleiten jeden Schritt. Ausländerrechtliche Fragen werden mit Ihren Anwälten behandelt."
+      },
+      {
+        "Question": "Welche Aufenthaltsbewilligungen können Sie koordinieren?",
+        "Answer": "Die Bewilligungen B, C oder L je nach Ihrer Situation sowie den Grenzgängerstatus (G), wenn er zutrifft, im Rahmen der Vorgaben des SEM."
+      },
+      {
+        "Question": "Was muss bei der Ankunft in der Schweiz organisiert werden?",
+        "Answer": "Die Anmeldung der Ankunft, die Aufenthaltsbewilligung, die obligatorische Krankenversicherung (KVG) innerhalb der gesetzlichen Frist, Schule, Wohnung und die steuerliche Situation. Diese Schritte hängen voneinander ab, und wir organisieren sie für die ganze Familie in der richtigen Reihenfolge."
+      },
+      {
+        "Question": "Kann die Aufwandbesteuerung bei unserer Ankunft geprüft werden?",
+        "Answer": "Ja. Wir koordinieren Ihre steuerliche Situation bei der Ankunft mit Ihren Steuerberatern, einschliesslich der Prüfung der Aufwandbesteuerung (Pauschalbesteuerung), sofern die gesetzlichen Voraussetzungen erfüllt sind."
+      },
+      {
+        "Question": "Begleiten Sie auch Umzüge ausserhalb von Genf?",
+        "Answer": "Ja. Wir koordinieren die Niederlassung von Familien in Genf, im Kanton Waadt oder anderswo in der Schweiz, mit den Behörden des betreffenden Kantons."
+      }
+    ]
   }
 }

@@ -35,6 +35,27 @@
       "Closing": {
         "Title": "Sprechen wir über Ihre Situation",
         "Body": "Ein erstes vertrauliches Gespräch, in unserem Büro oder per Videocall, um Ihre Bedürfnisse zu verstehen und zu sehen, wie wir helfen können."
+      },
+      "Faq": {
+        "Title": "Häufige Fragen",
+        "Questions": [
+          {
+            "Question": "Wo befindet sich Ihr Family Office in Genf?",
+            "Answer": "Unser Büro befindet sich am 26 boulevard Georges-Favon, 1204 Genf. Wir empfangen dort die Familien für die Momente, die zählen, etwa das erste Gespräch, die jährliche Vermögensüberprüfung oder Familienentscheide."
+          },
+          {
+            "Question": "Was ist ein Multi Family Office?",
+            "Answer": "Ein Multi Family Office wie Ridger bündelt Infrastruktur, Werkzeuge und Fachwissen für mehrere Familien. Ridger führt Ihr Vermögen in einer einzigen Sicht zusammen und koordiniert Ihre Berater, ohne Ihre Vermögenswerte zu verwalten."
+          },
+          {
+            "Question": "Arbeiten Sie mit unseren bisherigen Genfer Beratern zusammen?",
+            "Answer": "Ja: Privatbanken, unabhängige Vermögensverwalter, Anwälte und Notare. Wir bereiten auch die Unterlagen vor, die die kantonale Steuerverwaltung erwartet, und verfolgen die Fristen mit Ihrem Steuerberater."
+          },
+          {
+            "Question": "In welchen Sprachen arbeiten Sie?",
+            "Answer": "Auf Französisch, Englisch, Deutsch, Spanisch und Portugiesisch. Wir koordinieren Berater in der Schweiz wie im Ausland."
+          }
+        ]
       }
     },
     "lausanne": {
@@ -64,6 +85,27 @@
       "Closing": {
         "Title": "Ein erstes Gespräch, unverbindlich",
         "Body": "Per Videocall oder in Genf: ein vertrauliches Gespräch über Ihre Situation und Ihre Prioritäten."
+      },
+      "Faq": {
+        "Title": "Häufige Fragen",
+        "Questions": [
+          {
+            "Question": "Hat Ridger ein Büro in Lausanne?",
+            "Answer": "Nein. Unser Büro ist in Genf, nicht weit von Lausanne entfernt. Wir begleiten Waadtländer Familien aus der Ferne und organisieren ein persönliches Treffen, wenn es sinnvoll ist, insbesondere in unserem Büro in Genf."
+          },
+          {
+            "Question": "Wie läuft die Begleitung einer Waadtländer Familie ab?",
+            "Answer": "Digitale Plattform, konsolidiertes Reporting und Videokonferenzen prägen den Alltag. Sie verfolgen Ihr Vermögen jederzeit online, und wir bleiben über Ihren bevorzugten Kanal erreichbar."
+          },
+          {
+            "Question": "Arbeiten Sie mit unseren Waadtländer Beratern zusammen?",
+            "Answer": "Ja. Wir arbeiten mit Ihren bisherigen Banken, Ihrem Notar, Ihrem Anwalt und Ihrer Treuhandgesellschaft, stellen die Unterlagen für die Administration cantonale des impôts (ACI) zusammen und verfolgen den Kalender mit Ihrem Steuerberater."
+          },
+          {
+            "Question": "Wer kümmert sich im Kanton Waadt um Steuern und Nachlässe?",
+            "Answer": "Ihre Steuerberater und Ihr Notar, denn die Vermögens- und Erbschaftsbesteuerung unterscheidet sich von Kanton zu Kanton. Wir sorgen dafür, dass sie über vollständige und aktuelle Informationen verfügen."
+          }
+        ]
       }
     },
     "zurich": {
@@ -93,6 +135,27 @@
       "Closing": {
         "Title": "Lernen wir uns kennen",
         "Body": "Ein erstes vertrauliches Gespräch per Videocall, um Ihre Situation zu verstehen und zu sehen, ob wir helfen können."
+      },
+      "Faq": {
+        "Title": "Häufige Fragen",
+        "Questions": [
+          {
+            "Question": "Hat Ridger ein Büro in Zürich?",
+            "Answer": "Nein. Wir arbeiten von Genf aus mit Familien, die anderswo in der Schweiz leben, aus der Ferne, und ein persönliches Treffen kann organisiert werden, wenn es sinnvoll ist, etwa für eine Jahresüberprüfung oder einen Familienentscheid."
+          },
+          {
+            "Question": "Können Sie auf Deutsch arbeiten?",
+            "Answer": "Ja. Wir arbeiten auf Deutsch, Französisch, Englisch, Spanisch und Portugiesisch, und jedes Familienmitglied kann sich in der Sprache austauschen, die ihm am vertrautesten ist."
+          },
+          {
+            "Question": "Arbeiten Sie mit unseren Zürcher Beratern zusammen?",
+            "Answer": "Ja. Wir binden Ihre bisherigen Banken, Verwalter, Anwälte und Treuhänder ein, statt sie zu ersetzen, bereiten die Unterlagen für das Kantonale Steueramt Zürich vor und koordinieren die Fristen mit Ihrem Steuerberater."
+          },
+          {
+            "Question": "Bieten Sie die Domizilierung in Zürich an?",
+            "Answer": "Nein, wir haben kein Büro in Zürich. Die Domizilierung von Strukturen und die Postverwaltung laufen über Genf, mit Sortierung, Digitalisierung und Nachverfolgung der Post."
+          }
+        ]
       }
     },
     "zug": {
@@ -122,6 +185,27 @@
       "Closing": {
         "Title": "Ein erstes vertrauliches Gespräch",
         "Body": "Per Videocall, um über Ihr Vermögen, Ihre Berater und Ihre Erwartungen an ein Family Office zu sprechen."
+      },
+      "Faq": {
+        "Title": "Häufige Fragen",
+        "Questions": [
+          {
+            "Question": "Hat Ridger ein Büro in Zug?",
+            "Answer": "Nein. Unser Büro ist in Genf, und in Zug haben wir keinen Standort. Wir begleiten Zuger Familien aus der Ferne, und persönliche Treffen können organisiert werden, wenn es sinnvoll ist."
+          },
+          {
+            "Question": "Können Sie sowohl unser Privatvermögen als auch unsere Familiengesellschaft betreuen?",
+            "Answer": "Ja. Umfasst das Vermögen eine Gesellschaft oder eine Holding, behalten wir beide Seiten, privat und unternehmerisch, klar im Blick und koordinieren Ihre Treuhandgesellschaft, Ihre Anwälte und Ihre Banken."
+          },
+          {
+            "Question": "Wie läuft die Koordination mit der Zuger Steuerverwaltung ab?",
+            "Answer": "Wir bereiten die benötigten Unterlagen für die Steuerverwaltung des Kantons Zug vor und verfolgen die Fristen mit Ihrem Steuerberater, der für alle Steuerfragen Ihr Ansprechpartner bleibt."
+          },
+          {
+            "Question": "Verwaltet Ridger das Vermögen der Familie?",
+            "Answer": "Nein. Unsere Aufgabe ist es, Informationen zusammenzuführen, die Berater zu koordinieren und die Administration zu verfolgen, ohne jemals Ihre Vermögenswerte zu verwalten."
+          }
+        ]
       }
     },
     "lugano": {
@@ -151,6 +235,27 @@
       "Closing": {
         "Title": "Sprechen wir über Ihre Situation",
         "Body": "Ein erstes vertrauliches Gespräch per Videocall, in der Sprache Ihrer Wahl unter denen, die wir sprechen."
+      },
+      "Faq": {
+        "Title": "Häufige Fragen",
+        "Questions": [
+          {
+            "Question": "Hat Ridger ein Büro im Tessin?",
+            "Answer": "Nein. Von Genf aus begleiten wir Familien in Lugano und der Region mit einer digitalen Plattform und Videokonferenzen, und persönliche Treffen können organisiert werden, wenn es sinnvoll ist."
+          },
+          {
+            "Question": "Arbeiten Sie auf Italienisch?",
+            "Answer": "Nein. Wir arbeiten auf Französisch, Englisch, Deutsch, Spanisch und Portugiesisch und stützen uns für den Austausch auf Italienisch auf Ihre Tessiner Berater."
+          },
+          {
+            "Question": "Was machen Sie mit Dokumenten, die auf Italienisch verfasst sind?",
+            "Answer": "Wir nehmen sie in Ihr Reporting und Ihren digitalen Tresor auf. Ihre lokalen Berater bleiben Ihre Ansprechpartner für den Austausch in dieser Sprache."
+          },
+          {
+            "Question": "Verwaltet Ridger das Vermögen von Tessiner Familien?",
+            "Answer": "Ridger verwaltet keine Vermögenswerte. Wir konsolidieren Ihr Vermögen online, koordinieren Ihre Banken, Anwälte, Notare und Treuhänder und stellen die benötigten Unterlagen für die Divisione delle contribuzioni zusammen."
+          }
+        ]
       }
     }
   }

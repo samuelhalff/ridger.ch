@@ -391,12 +391,13 @@ export default async function ArticlePage(props: Params) {
           {ressources.By} {article.author}
         </p>
         <p>
-          {ressources.Published} {formatDateDeterministic(article.date, locale)}
+          {ressources.Published}{" "}
+          <time dateTime={article.date}>{formatDateDeterministic(article.date, locale)}</time>
         </p>
-        {article.updated && (
+        {article.updated && article.updated !== article.date && (
           <p>
-            {ressources.LastUpdated}:{" "}
-            {formatDateDeterministic(article.updated, locale)}
+            {ressources.LastUpdated}{" "}
+            <time dateTime={article.updated}>{formatDateDeterministic(article.updated, locale)}</time>
           </p>
         )}
         {reading && (

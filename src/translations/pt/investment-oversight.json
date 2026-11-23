@@ -42,5 +42,26 @@
     "Title": "Supervisão, não gestão",
     "Body": "O nosso papel é observar, comparar e documentar. Mantém a escolha dos seus gestores e das suas decisões, com uma informação completa e imparcial."
   },
-  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "A Ridger gere os nossos investimentos?",
+        "Answer": "Não. As decisões e a execução permanecem junto dos seus bancos e gestores regulados, e a Ridger não presta aconselhamento de investimento. Acompanhamos os seus mandatos, comparamos os resultados e prestamos-lhe contas."
+      },
+      {
+        "Question": "Como comparam vários gestores?",
+        "Answer": "Acompanhamos o desempenho, os custos e o risco de cada relação numa base comum e colocamos os resultados em perspetiva com índices de referência pertinentes. As revisões comparam os gestores entre si e ao longo do tempo."
+      },
+      {
+        "Question": "Verificam se os nossos gestores respeitam o mandato?",
+        "Answer": "Sim. Controlamos o cumprimento dos mandatos e da política de investimento acordada com cada gestor, e depois coordenamos a sua atividade e pedimos-lhes contas."
+      },
+      {
+        "Question": "Podem negociar os custos com os nossos bancos e gestores?",
+        "Answer": "Sim. Negociamos as condições e os custos com os bancos e os gestores no seu interesse, porque não temos nenhum produto para colocar."
+      }
+    ]
+  }
 }

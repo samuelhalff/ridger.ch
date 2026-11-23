@@ -1,4 +1,6 @@
+import PageFaq from "@/src/components/site/page-faq";
 import { Metadata } from "next";
+import { headers } from "next/headers";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import { getTranslations, getTranslationsRecord, type Locale } from "@/src/lib/i18n";
 import DashboardMockup, {
@@ -19,6 +21,7 @@ export default async function PlatformPage(props: {
   const params = await props.params;
   const locale = (params?.locale as Locale) || ("fr" as Locale);
   const t = await getTranslations(locale, "platform");
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const strings = getTranslationsRecord(locale, "platform") as unknown as PlatformStrings;
 
   return (
@@ -39,6 +42,7 @@ export default async function PlatformPage(props: {
       </header>
 
       <DashboardMockup strings={strings} />
+      <PageFaq locale={locale} ns="platform" nonce={nonce} />
     </div>
   );
 }

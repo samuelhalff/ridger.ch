@@ -1,20 +1,23 @@
 name: Lighthouse CI (production)
 
+# Runs against the live site after each successful deploy. SEO checks and
+# the LCP/CLS budgets are errors (the run turns red); performance, accessibility
+# and best-practice scores are warnings. Budgets: lighthouserc.mobile.json.
 on:
   workflow_dispatch:
-  push:
+  workflow_run:
+    workflows: ["Build and Deploy (SSH)"]
+    types: [completed]
     branches: [main]
-    paths:
-      - "app/**"
-      - "src/**"
-      - "public/**"
-      - "next.config.js"
-      - "lighthouserc.*.json"
+
+permissions:
+  contents: read
 
 jobs:
   lhci:
-    if: false # Disabled - Lighthouse CI no longer needed
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -23,30 +26,12 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20.x"
-          cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --no-fund
-
-      - name: Build (standalone)
-        env:
-          BUILD_SOURCEMAPS: "false"
-          NODE_OPTIONS: --max_old_space_size=2048
-        run: npm run build
-
-      - name: Run Lighthouse (mobile)
-        run: npx --yes @lhci/cli collect --config=lighthouserc.mobile.json
-
-      - name: Upload Lighthouse (mobile)
-        run: npx --yes @lhci/cli upload --target=temporary-public-storage
-
-      - name: Run Lighthouse (desktop)
-        run: npx --yes @lhci/cli collect --config=lighthouserc.desktop.json
-
-      - name: Upload Lighthouse (desktop)
-        run: npx --yes @lhci/cli upload --target=temporary-public-storage
+      - name: Lighthouse (mobile, with assertions)
+        run: npx --yes @lhci/cli@0.15.1 autorun --config=lighthouserc.mobile.json
 
       - name: Upload LHCI artifacts
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: lhci-results

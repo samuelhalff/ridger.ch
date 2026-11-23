@@ -30,5 +30,26 @@
     "Title": "Un patrimoine documentaire durable",
     "Body": "Des flux de travail numériques qui font gagner du temps, sans jamais transiger sur la sécurité ni la discrétion."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Qu'est-ce que le coffre-fort numérique de Ridger ?",
+        "Answer": "C'est un espace documentaire chiffré qui réunit les documents de la famille, comme les actes, les contrats, les relevés et les décisions, dans des dossiers structurés. Vous retrouvez chaque pièce au moment voulu, au lieu de la chercher entre courriels, dossiers et intervenants."
+      },
+      {
+        "Question": "Où sont hébergés nos documents ?",
+        "Answer": "En Suisse. Le coffre est chiffré et hébergé en Suisse, en accord avec vos exigences de résidence des données et de confidentialité."
+      },
+      {
+        "Question": "Pouvons-nous partager des documents avec nos conseillers ?",
+        "Answer": "Oui, de façon sélective. Vous décidez qui voit quoi, et vous gardez la trace de chaque accès."
+      },
+      {
+        "Question": "Le courrier que nous recevons peut-il être classé dans le coffre ?",
+        "Answer": "Oui. Lorsque Ridger reçoit votre courrier, il est trié, numérisé puis partagé de façon sécurisée dans votre coffre-fort numérique."
+      }
+    ]
+  }
 }

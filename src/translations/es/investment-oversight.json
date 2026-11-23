@@ -42,5 +42,26 @@
     "Title": "Supervisión, no gestión",
     "Body": "Nuestra función es observar, comparar y documentar. Usted conserva la elección de sus gestores y de sus decisiones, con una información completa e imparcial."
   },
-  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Ridger gestiona nuestras inversiones?",
+        "Answer": "No. Las decisiones y la ejecución siguen a cargo de sus bancos y gestores regulados, y Ridger no presta asesoramiento de inversión. Realizamos el seguimiento de sus mandatos, comparamos sus resultados y le informamos de ellos."
+      },
+      {
+        "Question": "¿Cómo comparan a varios gestores?",
+        "Answer": "Seguimos la rentabilidad, las comisiones y el riesgo de cada relación sobre una base común, y situamos los resultados frente a índices de referencia pertinentes. Las revisiones comparan a los gestores entre sí y a lo largo del tiempo."
+      },
+      {
+        "Question": "¿Comprueban que nuestros gestores respetan su mandato?",
+        "Answer": "Sí. Controlamos el cumplimiento de los mandatos y de la política de inversión acordada con cada gestor, y después coordinamos su actividad y les pedimos cuentas."
+      },
+      {
+        "Question": "¿Pueden negociar las comisiones con nuestros bancos y gestores?",
+        "Answer": "Sí. Negociamos las condiciones y las comisiones con los bancos y los gestores en su interés, porque no tenemos ningún producto que colocar."
+      }
+    ]
+  }
 }

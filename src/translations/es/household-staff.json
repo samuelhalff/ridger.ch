@@ -51,5 +51,26 @@
     "Title": "Un hogar bien atendido",
     "Body": "Usted elige a las personas y fija las prioridades de la casa. Nosotros nos ocupamos del rigor administrativo, los plazos y la coordinación diaria."
   },
-  "Perimeter": "Las condiciones de trabajo se rigen por el marco legal y el contrato tipo aplicables; las cuestiones de derecho laboral se tratan con sus abogados. Ridger asegura la administración, las nóminas y la coordinación de su personal doméstico. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "Las condiciones de trabajo se rigen por el marco legal y el contrato tipo aplicables; las cuestiones de derecho laboral se tratan con sus abogados. Ridger asegura la administración, las nóminas y la coordinación de su personal doméstico. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Cuáles son las obligaciones de un empleador de personal doméstico en Ginebra?",
+        "Answer": "Contratar a una gobernanta, una niñera, un chófer o un jardinero convierte su hogar en empleador. En Ginebra, esto implica un contrato basado en el contrato tipo de trabajo para el servicio doméstico (CTT-EDom), seguros sociales desde el primer salario y declaraciones cada mes."
+      },
+      {
+        "Question": "¿Gestionan los salarios de nuestro personal doméstico?",
+        "Answer": "Sí. Cada mes calculamos y abonamos los salarios, elaboramos las nóminas y las liquidaciones de cotizaciones, y seguimos las vacaciones y las ausencias. También retenemos el impuesto en la fuente cuando el personal está sujeto a él y elaboramos los certificados de salario anuales."
+      },
+      {
+        "Question": "¿Pueden ayudarnos a contratar personal doméstico?",
+        "Answer": "Sí. Coordinamos la contratación con agencias o con sus propios contactos y preparamos contratos escritos basados en el CTT-EDom, revisados cuando sea necesario por sus abogados."
+      },
+      {
+        "Question": "¿Basta el chèque service para unas pocas horas de trabajo?",
+        "Answer": "Sí, para una contratación de unas pocas horas, el chèque service ginebrino puede ser la fórmula adecuada. Le ayudamos a comprobar si encaja con su hogar y nos hacemos cargo de las situaciones más complejas."
+      }
+    ]
+  }
 }

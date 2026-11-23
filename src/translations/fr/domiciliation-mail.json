@@ -34,5 +34,26 @@
     "Title": "Rien ne se perd",
     "Body": "Où que vous soyez, vous savez ce qui est arrivé, ce qui demande une action et ce qui a été traité. Nous gardons l'ensemble en ordre, discrètement."
   },
-  "Perimeter": "Une adresse de correspondance ne crée ni domicile civil ni résidence fiscale. Les questions juridiques et fiscales liées au domicile et à la substance des sociétés sont traitées avec vos avocats et conseillers fiscaux. Ridger assure la réception et la gestion du courrier ainsi que la coordination administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "Une adresse de correspondance ne crée ni domicile civil ni résidence fiscale. Les questions juridiques et fiscales liées au domicile et à la substance des sociétés sont traitées avec vos avocats et conseillers fiscaux. Ridger assure la réception et la gestion du courrier ainsi que la coordination administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Proposez-vous la domiciliation de sociétés à Genève ?",
+        "Answer": "Oui, pour les sociétés holding ou de gestion de la famille. Lorsque la réglementation l'exige, une société doit disposer d'une substance réelle et y prendre ses décisions de gestion, et nous en tenons compte avec vos conseillers."
+      },
+      {
+        "Question": "Une adresse de correspondance à Genève change-t-elle notre domicile ?",
+        "Answer": "Non. Une adresse de correspondance reste une adresse postale : elle ne crée ni domicile civil ni résidence fiscale, qui dépendent de votre situation réelle. Elle reste distincte de votre domicile légal et révocable à tout moment."
+      },
+      {
+        "Question": "Comment notre courrier est-il traité ?",
+        "Answer": "Nous le recevons, le trions et le numérisons, puis le partageons de façon sécurisée dans votre coffre-fort numérique. Les originaux sont conservés ou réexpédiés selon vos consignes."
+      },
+      {
+        "Question": "Qui suit les délais contenus dans le courrier ?",
+        "Answer": "Nous repérons les délais, comme les avis d'impôt, les courriers des autorités ou les factures, et coordonnons les réponses avec vous et vos conseillers."
+      }
+    ]
+  }
 }

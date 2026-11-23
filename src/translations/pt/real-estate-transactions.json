@@ -34,5 +34,26 @@
     "Title": "Transações dominadas",
     "Body": "Da primeira oportunidade à assinatura, coordenamos cada interveniente e velamos pela coerência do conjunto, discretamente e ao longo do tempo."
   },
-  "Perimeter": "A custódia, a gestão operacional do arrendamento e a gestão dos ativos permanecem asseguradas pelas suas administrações de imóveis, gestores e estabelecimentos regulados. A Ridger assegura a supervisão, a administração, a coordenação e o apoio à negociação. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A custódia, a gestão operacional do arrendamento e a gestão dos ativos permanecem asseguradas pelas suas administrações de imóveis, gestores e estabelecimentos regulados. A Ridger assegura a supervisão, a administração, a coordenação e o apoio à negociação. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "A Ridger pode ajudar-nos a comprar um imóvel?",
+        "Answer": "Sim. Identificamos e avaliamos oportunidades de aquisição alinhadas com os desejos da sua família e coordenamos depois a transação com os notários, os bancos e os peritos, acompanhando a due diligence e apoiando a negociação das condições."
+      },
+      {
+        "Question": "Acompanham também a venda de um imóvel?",
+        "Answer": "Sim. Coordenamos as alienações como as aquisições, com cada interveniente, até à assinatura."
+      },
+      {
+        "Question": "Acompanham imóveis detidos através de sociedades imobiliárias?",
+        "Answer": "Sim. Acompanhamos os imóveis detidos diretamente ou através de sociedades imobiliárias, supervisionamos a gestão de arrendamentos e prestamos contas regularmente das receitas, dos encargos e do estado do seu parque imobiliário."
+      },
+      {
+        "Question": "A Ridger substitui a nossa administração de imóveis?",
+        "Answer": "Não. A gestão operacional dos arrendamentos continua a cargo das suas administrações de imóveis. Somos o seu interlocutor único: enquadramos os mandatos, acompanhamos as prestações e controlamos as contas no seu interesse."
+      }
+    ]
+  }
 }

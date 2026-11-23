@@ -54,5 +54,26 @@
     "Title": "Una administración bajo control",
     "Body": "Usted mantiene el control y la visión de conjunto; nosotros asumimos la ejecución administrativa y la coordinación con sus asesores fiscales."
   },
-  "Perimeter": "La coordinación fiscal y administrativa se ejerce en relación con sus asesores fiscales y jurídicos. Ridger aporta la coordinación, el reporting y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La coordinación fiscal y administrativa se ejerce en relación con sus asesores fiscales y jurídicos. Ridger aporta la coordinación, el reporting y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Ridger se ocupa de nuestras declaraciones de impuestos?",
+        "Answer": "Coordinamos las declaraciones y las obligaciones fiscales de los miembros de la familia y de sus estructuras, junto con sus asesores fiscales. Llevamos un calendario fiscal único, reunimos los documentos con antelación y los entregamos a los especialistas designados."
+      },
+      {
+        "Question": "¿Pueden acompañarnos hacia la tributación según el gasto (forfait fiscal)?",
+        "Answer": "Sí, para las familias que se instalan en Suiza, cuando se cumplen las condiciones legales. Coordinamos el expediente con su asesor fiscal y las autoridades cantonales, preparamos la información que solicita la administración y seguimos el expediente a largo plazo."
+      },
+      {
+        "Question": "¿Gestionan los pagos y la tesorería de la familia?",
+        "Answer": "Sí. Administramos los pagos y seguimos la tesorería de los miembros de la familia y de sus estructuras, con controles y trazabilidad en cada etapa."
+      },
+      {
+        "Question": "¿Pueden encargarse de la nómina de nuestros empleados?",
+        "Answer": "Sí, para todos sus empleadores, ya se trate del personal doméstico o de los colaboradores de sus estructuras y de su family office. Esto incluye los contratos, los salarios Swissdec, los seguros sociales, el impuesto en la fuente y los permisos."
+      }
+    ]
+  }
 }

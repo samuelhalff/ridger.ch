@@ -34,5 +34,26 @@
     }
   ],
   "ArkNote": "Ridger s'appuie sur un groupe fiduciaire genevois établi, gage de rigueur et de continuité :",
-  "CTA": "Demander un entretien confidentiel"
+  "CTA": "Demander un entretien confidentiel",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Ridger est-il indépendant des banques ?",
+        "Answer": "Oui. Ridger n'est ni une banque ni un gérant, n'appartient à aucun établissement bancaire et ne distribue aucun produit financier. Nous n'avons aucune transaction à provoquer."
+      },
+      {
+        "Question": "Comment commence un mandat avec Ridger ?",
+        "Answer": "Par un audit de votre organisation existante : relations bancaires, mandats, structures et conseillers. Nous mettons ensuite en place la consolidation de votre patrimoine, puis un rythme de surveillance et de coordination adapté à vos priorités."
+      },
+      {
+        "Question": "Travaillez-vous avec nos gérants indépendants ?",
+        "Answer": "Oui. Vos gérants conservent la gestion de vos avoirs, et Ridger supervise et coordonne leur activité et les tient responsables, sans jamais gérer à leur place."
+      },
+      {
+        "Question": "Dans quel délai Ridger répond-il ?",
+        "Answer": "Nous répondons dans un délai d'un jour ouvré. Votre interlocuteur unique connaît vos dossiers et garde la mémoire de vos décisions dans la durée."
+      }
+    ]
+  }
 }

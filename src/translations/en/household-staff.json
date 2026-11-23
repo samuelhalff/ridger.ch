@@ -51,5 +51,26 @@
     "Title": "A well-run home",
     "Body": "You choose the people and set the priorities for the house. We look after the administrative regularity, the deadlines and the day-to-day coordination."
   },
-  "Perimeter": "Working conditions follow the applicable legal framework and standard contract; employment law questions are handled with your lawyers. Ridger provides administration, payroll and coordination for your household staff. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Working conditions follow the applicable legal framework and standard contract; employment law questions are handled with your lawyers. Ridger provides administration, payroll and coordination for your household staff. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What are the obligations of a household staff employer in Geneva?",
+        "Answer": "Hiring a housekeeper, a nanny, a driver or a gardener makes your household an employer. In Geneva this means a contract based on the standard employment contract for domestic work (CTT-EDom), social insurance from the first salary and filings every month."
+      },
+      {
+        "Question": "Do you handle payroll for our household staff?",
+        "Answer": "Yes. Every month we calculate and pay salaries, issue payslips and contribution statements, and track holidays and absences. We also deduct withholding tax for staff who are subject to it and prepare the annual salary certificates."
+      },
+      {
+        "Question": "Can you help us hire household staff?",
+        "Answer": "Yes. We coordinate recruitment through agencies or your own contacts and prepare written contracts based on the CTT-EDom, reviewed by your lawyers where needed."
+      },
+      {
+        "Question": "Is the chèque service enough for a few hours of work?",
+        "Answer": "Yes, for a few hours of work the Geneva chèque service can be the right choice. We help you check whether it fits your household, and we take over the more complex situations."
+      }
+    ]
+  }
 }

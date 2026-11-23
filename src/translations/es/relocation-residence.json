@@ -57,5 +57,30 @@
     "Body": "Para la mudanza y los trámites de residencia propiamente dichos, Switzerland Residency, el sitio hermano de nuestro grupo, detalla cada etapa.",
     "LinkLabel": "Switzerland Residency",
     "LinkHref": "https://switzerlandresidency.ch/"
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Puede Ridger conseguir un permiso de residencia para nuestra familia?",
+        "Answer": "Los permisos los conceden las autoridades cantonales y federales, que deciden por sí solas. Coordinamos las solicitudes ante la oficina cantonal de migración, la OCPM en Ginebra, preparamos expedientes completos y seguimos cada trámite, y las cuestiones de derecho de extranjería se tratan con sus abogados."
+      },
+      {
+        "Question": "¿Qué permisos de residencia pueden coordinar?",
+        "Answer": "Los permisos B, C o L según su situación, y el estatuto de trabajador fronterizo (G) cuando corresponde, en el marco fijado por la Secretaría de Estado de Migración (SEM)."
+      },
+      {
+        "Question": "¿Qué hay que organizar al llegar a Suiza?",
+        "Answer": "El aviso de llegada, el permiso de residencia, el seguro de enfermedad obligatorio (LAMal) dentro del plazo legal, el colegio, la vivienda y la situación fiscal. Estos trámites dependen unos de otros, y los organizamos en el orden adecuado para toda la familia."
+      },
+      {
+        "Question": "¿Puede examinarse el forfait fiscal a nuestra llegada?",
+        "Answer": "Sí. Coordinamos su situación fiscal a la llegada con sus asesores fiscales, incluido el análisis de la tributación según el gasto (forfait fiscal) cuando se cumplen las condiciones legales."
+      },
+      {
+        "Question": "¿Acompañan también las instalaciones fuera de Ginebra?",
+        "Answer": "Sí. Coordinamos la instalación de familias en Ginebra, en el cantón de Vaud o en otro lugar de Suiza, con las autoridades del cantón correspondiente."
+      }
+    ]
   }
 }

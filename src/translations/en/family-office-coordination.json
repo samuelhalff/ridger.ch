@@ -54,5 +54,26 @@
     "Title": "Your time protected",
     "Body": "You keep control of decisions. We take on the coordination, the follow-ups and the flow of information among your advisors."
   },
-  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What is an outsourced family office?",
+        "Answer": "It gives you the organisation of a single family office without having to set one up. Ridger becomes the family's single point of contact and coordinates its bankers, lawyers, notaries, tax advisers and insurers."
+      },
+      {
+        "Question": "Do we need to change advisers to work with Ridger?",
+        "Answer": "No. We start from the network your family has already built and work within it, without replacing the advisers in place."
+      },
+      {
+        "Question": "Does Ridger also look after our residences and special requests?",
+        "Answer": "Yes. We run the day-to-day management of your residences, in Switzerland and abroad, and for established families we take on certain special requests, such as travel, staff, exceptional purchases or special projects."
+      },
+      {
+        "Question": "Can you help us set up a single family office?",
+        "Answer": "Yes. We help plan and coordinate its set-up with your lawyers and advisers, who handle the legal structuring."
+      }
+    ]
+  }
 }

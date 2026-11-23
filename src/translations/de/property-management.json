@@ -38,5 +38,26 @@
     "Title": "Immobilien langfristig betreut",
     "Body": "Sie bestimmen die Ausrichtung Ihres Immobilienvermögens. Wir sorgen für dessen Verwaltung, Kohärenz und Gedächtnis, lange nach der Unterzeichnung."
   },
-  "Perimeter": "Die operative Mietverwaltung verbleibt bei Ihren Liegenschaftsverwaltungen, wo sie mandatiert sind, rechtliche und steuerliche Fragen bei Ihren Anwälten, Notaren und Steuerberatern. Ridger erbringt Verwaltung, Aufsicht, Koordination und Reporting. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Die operative Mietverwaltung verbleibt bei Ihren Liegenschaftsverwaltungen, wo sie mandatiert sind, rechtliche und steuerliche Fragen bei Ihren Anwälten, Notaren und Steuerberatern. Ridger erbringt Verwaltung, Aufsicht, Koordination und Reporting. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Was umfasst die Liegenschaftsverwaltung auf der Seite des Eigentümers?",
+        "Answer": "Die Verwaltung Ihrer Residenzen und Renditeobjekte in Genf und in der Schweiz, aus Sicht des Eigentümers: Mietverträge und Mieten, Nebenkosten und Abrechnungen, Arbeiten, Versicherungen, Buchhaltung und Reporting. Dieser Service betrifft Ihre Immobilien, und Ridger verwaltet keine Finanzanlagen."
+      },
+      {
+        "Question": "Arbeiten Sie mit unserer bisherigen Liegenschaftsverwaltung zusammen?",
+        "Answer": "Ja. Wo eine Liegenschaftsverwaltung mandatiert ist, behält sie die operative Mietverwaltung. Wir legen ihr Mandat fest, verfolgen ihre Leistungen und prüfen ihre Abrechnungen in Ihrem Interesse als Eigentümer."
+      },
+      {
+        "Question": "Überwachen Sie die Versicherungen unserer Gebäude?",
+        "Answer": "Ja. Wir überwachen die Gebäudeversicherungen und die Haftpflichtversicherung des Eigentümers, ihre Fälligkeiten und die Schadenfälle, gemeinsam mit Ihren Brokern und Versicherern."
+      },
+      {
+        "Question": "Bereiten Sie die Immobiliendaten für unsere Steuererklärungen vor?",
+        "Answer": "Ja. Wir bereiten die Immobiliendaten, darunter den Eigenmietwert, für Ihre Steuererklärungen vor, die mit Ihren Steuerberatern bearbeitet werden."
+      }
+    ]
+  }
 }

@@ -3,7 +3,6 @@ import { Providers } from "@/src/components/providers";
 import { Metadata, Viewport } from "next";
 import { buildOrganizationGraph } from "@/src/lib/structuredData";
 import { headers } from "next/headers";
-import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import { CookieConsent } from "@/src/components/ClientOnlyDynamic";
 import ConsentAnalytics from "@/src/components/ConsentAnalytics";
@@ -172,12 +171,13 @@ export default async function RootLayout({
 
               <AttributionTracker />
 
-              <Defer rootMargin="0px" idle={200} placeholder={null}>
-                <ConsentAnalytics
-                  gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
-                  nonce={nonce}
-                />
-              </Defer>
+              {/* No <Defer> here: it only mounted GTM once the bottom of the page
+                  was reached, so short visits were not measured. ConsentAnalytics
+                  already waits for the load event, then idle time. */}
+              <ConsentAnalytics
+                gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
+                nonce={nonce}
+              />
             </div>
           </ErrorBoundary>
         </Providers>

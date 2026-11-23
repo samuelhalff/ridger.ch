@@ -42,5 +42,26 @@
     "Title": "Um reporting ao seu ritmo",
     "Body": "Mensal, trimestral ou a pedido, o seu reporting é estruturado de acordo com as suas prioridades e partilhado de forma segura com as pessoas que designar."
   },
-  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "O que é um reporting patrimonial consolidado?",
+        "Answer": "É uma visão única de todo o seu património, que reúne as suas contas bancárias, os seus depositários, o seu imobiliário, as suas participações em private equity e os seus ativos de coleção na sua moeda de referência. Este reporting é independente de qualquer banco, e os números são cruzados com os extratos oficiais de cada contraparte."
+      },
+      {
+        "Question": "Como é medido o desempenho do nosso património?",
+        "Answer": "Calculamos um desempenho ponderado pelo tempo (TWR) e comparamo-lo com índices de referência. O relatório mostra também o que contribuiu para o resultado."
+      },
+      {
+        "Question": "O reporting mostra os custos bancários?",
+        "Answer": "Sim. Registamos os custos explícitos e implícitos das suas relações bancárias, para que saiba quanto custa realmente o seu património."
+      },
+      {
+        "Question": "Com que frequência recebemos o reporting?",
+        "Answer": "Todos os meses, todos os trimestres ou a pedido, consoante as suas prioridades. É partilhado de forma segura com as pessoas que designar e pode ser preparado antes de cada reunião do seu comité de investimento familiar."
+      }
+    ]
+  }
 }

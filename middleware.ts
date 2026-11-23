@@ -59,8 +59,10 @@ export function middleware(request: NextRequest) {
         .slice(0, 32)
     : "";
   const host = request.headers.get("host") || "";
+  // Query strings (utm_*, ?articles=…) are not noindexed by header: the page
+  // carries index + a clean canonical, and a header saying the opposite only
+  // confuses crawlers.
   const shouldNoIndex =
-    request.nextUrl.search.length > 0 ||
     pathname.includes("/opengraph-image") ||
     pathname.includes("/twitter-image");
 
@@ -259,8 +261,9 @@ export function middleware(request: NextRequest) {
   const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
   // Preserve query parameters (e.g. ?utm_source=..., ?articles=43)
   redirectUrl.search = request.nextUrl.search;
-  // Use 308 permanent redirect for SEO - tells search engines not to index non-locale URLs
-  const response = NextResponse.redirect(redirectUrl, 308);
+  // Temporary (307): the target depends on Accept-Language, so it must not be
+  // cached as a permanent redirect by crawlers or browsers.
+  const response = NextResponse.redirect(redirectUrl, 307);
   response.headers.set("x-pathname", pathname);
   response.headers.set("Vary", "Accept-Language");
   applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });

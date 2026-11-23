@@ -16,7 +16,7 @@
   "pages": {
     "/": {
       "title": "Multi-family office in Geneva | Ridger",
-      "description": "Multi-family office in Switzerland, based in Geneva: consolidated reporting, coordination of your advisors, an outsourced family office. No asset management.",
+      "description": "Multi-family office in Switzerland, based in Geneva: consolidated reporting, coordination of your advisors, outsourced family office. No asset management.",
       "keywords": "family office geneva, multi-family office switzerland, consolidated reporting, family office coordination, outsourced family office, single family office setup"
     },
     "/approach": {
@@ -36,7 +36,7 @@
     },
     "/platform": {
       "title": "The platform | Ridger",
-      "description": "Discover the Ridger platform: a single, secure space to follow the securities, real estate, documents and reporting of your wealth. Illustration — sample data.",
+      "description": "The Ridger platform: a single, secure space to follow the securities, real estate, documents and reporting of your wealth. Illustration with sample data.",
       "keywords": "family office platform, wealth reporting, digital vault, wealth monitoring"
     },
     "/ressources": {
@@ -61,7 +61,7 @@
     },
     "/services/family-office-coordination": {
       "title": "Family office coordination | Ridger",
-      "description": "Coordination in Geneva: a single point of contact for your advisors and providers, relocation and permits (B, C, G), and the stewardship of your residences.",
+      "description": "Coordination in Geneva: a single point of contact for your advisors, relocation and permits (B, C, G), and the stewardship of your residences.",
       "keywords": "family office coordination geneva, single point of contact, relocation geneva, B C G permits, moving to switzerland, immigration formalities, household management, provider coordination"
     },
     "/services/governance-succession": {
@@ -71,7 +71,7 @@
     },
     "/services/tax-administration": {
       "title": "Tax and administration | Ridger",
-      "description": "Tax, administration and payroll in Geneva: Swiss tax compliance and optimisation, household-staff payroll (AVS, LPP, source tax), domiciliation and mail management.",
+      "description": "Tax, administration and payroll in Geneva: Swiss tax compliance and optimisation, household-staff payroll (AVS, source tax), domiciliation and mail.",
       "keywords": "swiss tax compliance, tax optimisation, lump-sum taxation, household staff payroll, declare domestic employee geneva, AVS social charges, domiciliation, mail management, family administration"
     },
     "/services/digital-vault": {
@@ -81,7 +81,7 @@
     },
     "/services/real-estate-transactions": {
       "title": "Real estate and transactions | Ridger",
-      "description": "Real estate in Geneva: management and administration of your properties, rental management, renovation and works coordination, opportunity sourcing and transactions with notaries and banks.",
+      "description": "Real estate in Geneva: property administration, rental oversight, works coordination, opportunity sourcing and transactions with notaries and banks.",
       "keywords": "property management geneva, rental property management, renovation works coordination, contractor coordination, managing agents, real estate transactions, property administration"
     },
     "/services/property-management": {

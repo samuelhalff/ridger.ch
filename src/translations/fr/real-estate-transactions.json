@@ -34,5 +34,26 @@
     "Title": "Des transactions maîtrisées",
     "Body": "De la première opportunité à la signature, nous coordonnons chaque intervenant et veillons à la cohérence de l'ensemble, discrètement et dans la durée."
   },
-  "Perimeter": "La conservation, la gestion locative opérationnelle et la gestion des actifs restent assurées par vos régies, gérants et établissements régulés. Ridger assure la supervision, l'administration, la coordination et l'appui à la négociation. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "La conservation, la gestion locative opérationnelle et la gestion des actifs restent assurées par vos régies, gérants et établissements régulés. Ridger assure la supervision, l'administration, la coordination et l'appui à la négociation. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Ridger peut-il nous aider à acheter un bien immobilier ?",
+        "Answer": "Oui. Nous identifions et évaluons des opportunités d'acquisition alignées sur les souhaits de votre famille, puis coordonnons la transaction avec les notaires, les banques et les experts, en suivant la due diligence et en appuyant la négociation des conditions."
+      },
+      {
+        "Question": "Accompagnez-vous aussi la vente d'un bien ?",
+        "Answer": "Oui. Nous coordonnons les cessions comme les acquisitions, avec chaque intervenant, jusqu'à la signature."
+      },
+      {
+        "Question": "Suivez-vous des biens détenus via des sociétés immobilières ?",
+        "Answer": "Oui. Nous suivons les biens détenus en direct ou via des sociétés immobilières, supervisons la gestion locative et rendons compte régulièrement des revenus, des charges et de l'état de votre parc."
+      },
+      {
+        "Question": "Ridger remplace-t-il notre régie ?",
+        "Answer": "Non. La gestion locative opérationnelle reste assurée par vos régies. Nous sommes leur interlocuteur unique : nous cadrons les mandats, suivons les prestations et contrôlons les comptes dans votre intérêt."
+      }
+    ]
+  }
 }

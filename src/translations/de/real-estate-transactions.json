@@ -34,5 +34,26 @@
     "Title": "Beherrschte Transaktionen",
     "Body": "Von der ersten Gelegenheit bis zur Unterzeichnung koordinieren wir jeden Beteiligten und wachen über die Kohärenz des Ganzen, diskret und über die Zeit."
   },
-  "Perimeter": "Verwahrung, operative Mietverwaltung und Vermögensverwaltung verbleiben bei Ihren Liegenschaftsverwaltungen, Verwaltern und regulierten Instituten. Ridger erbringt Aufsicht, Verwaltung, Koordination und Verhandlungsunterstützung. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Verwahrung, operative Mietverwaltung und Vermögensverwaltung verbleiben bei Ihren Liegenschaftsverwaltungen, Verwaltern und regulierten Instituten. Ridger erbringt Aufsicht, Verwaltung, Koordination und Verhandlungsunterstützung. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Kann Ridger uns beim Kauf einer Immobilie helfen?",
+        "Answer": "Ja. Wir finden und bewerten Erwerbsgelegenheiten, die zu den Wünschen Ihrer Familie passen, und koordinieren dann die Transaktion mit Notaren, Banken und Experten. Wir begleiten die Due Diligence und unterstützen die Verhandlung der Konditionen."
+      },
+      {
+        "Question": "Begleiten Sie auch den Verkauf einer Immobilie?",
+        "Answer": "Ja. Wir koordinieren Veräusserungen wie Erwerbe, mit allen Beteiligten, bis zur Unterzeichnung."
+      },
+      {
+        "Question": "Überwachen Sie Immobilien, die über Immobiliengesellschaften gehalten werden?",
+        "Answer": "Ja. Wir überwachen Immobilien, die direkt oder über Immobiliengesellschaften gehalten werden, beaufsichtigen die Mietverwaltung und berichten regelmässig über Erträge, Kosten und den Zustand Ihres Bestands."
+      },
+      {
+        "Question": "Ersetzt Ridger unsere Liegenschaftsverwaltung?",
+        "Answer": "Nein. Die operative Mietverwaltung bleibt bei Ihren Liegenschaftsverwaltungen. Wir sind ihr einziger Ansprechpartner: Wir legen die Mandate fest, verfolgen die Leistungen und prüfen die Abrechnungen in Ihrem Interesse."
+      }
+    ]
+  }
 }

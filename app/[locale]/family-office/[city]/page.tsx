@@ -1,3 +1,4 @@
+import PageFaq from "@/src/components/site/page-faq";
 import { Metadata } from "next";
 import Link from "next/link";
 import { headers } from "next/headers";
@@ -241,6 +242,7 @@ export default async function LocationPage(props: {
           </nav>
         </div>
       </section>
+      <PageFaq locale={locale} ns="locations" at={`Cities.${city}.Faq`} nonce={nonce} />
     </div>
   );
 }

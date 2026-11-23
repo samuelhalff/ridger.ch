@@ -34,5 +34,26 @@
     "Title": "Una transmisión serena",
     "Body": "Un marco claro reduce las tensiones y protege la unidad familiar. Nosotros aseguramos su coordinación, con discreción y a largo plazo."
   },
-  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Para qué sirve una carta familiar?",
+        "Answer": "Una carta familiar fija los principios, los roles y los modos de decisión de la familia. Acompañamos su redacción y, después, su puesta en práctica a lo largo de los consejos de familia."
+      },
+      {
+        "Question": "¿Cómo interviene Ridger en la planificación sucesoria?",
+        "Answer": "Coordinamos la planificación sucesoria con sus abogados y notarios, en el marco del derecho civil suizo, hasta la aplicación de las disposiciones acordadas. Ridger organiza y sigue el trabajo, y los actos siguen siendo cosa de sus abogados y notarios."
+      },
+      {
+        "Question": "¿Puede Ridger ser trustee de nuestro trust o de nuestra fundación?",
+        "Answer": "No. Las estructuras de trust y de fundación las ponen en marcha socios suizos consolidados, y Ridger las coordina como punto de contacto, sin actuar jamás como trustee."
+      },
+      {
+        "Question": "¿Cómo preparan a la nueva generación?",
+        "Answer": "Acompañamos a la nueva generación para que asuma las responsabilidades de forma progresiva. También preparamos y dirigimos consejos de familia, con intercambios estructurados y documentados."
+      }
+    ]
+  }
 }

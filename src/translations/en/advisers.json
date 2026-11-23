@@ -79,5 +79,26 @@
     "Title": "Introduce a family",
     "Subtitle": "A few lines are enough. We will come back to you quickly and in confidence.",
     "MessagePlaceholder": "e.g. a short, anonymised description of the situation"
+  },
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "How can a lawyer or banker introduce a family to Ridger?",
+        "Answer": "It starts with a first conversation: you describe the situation, without names if you prefer, and we tell you honestly whether we can help. We then meet the family, with or without you, whichever suits them best."
+      },
+      {
+        "Question": "Does Ridger compete with our mandate?",
+        "Answer": "No. Ridger does not manage assets or give legal advice, and you keep your mandate and your relationship with the family. We coordinate the advisers, consolidate the family's wealth in a single report and follow the administration."
+      },
+      {
+        "Question": "Is Ridger involved in structuring a family's wealth or a family office?",
+        "Answer": "Yes, in coordination with the lawyer, who handles the legal structuring. Ridger brings together up-to-date wealth information, follows the decisions taken with the family and coordinates the set-up with the other advisers."
+      },
+      {
+        "Question": "How is professional secrecy respected?",
+        "Answer": "A first conversation can take place without any names, and nothing is passed on without the family's consent. Documents are kept in a digital vault hosted in Switzerland and shared only with the people who need them."
+      }
+    ]
   }
 }

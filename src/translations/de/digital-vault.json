@@ -30,5 +30,26 @@
     "Title": "Ein beständiges Dokumentenvermögen",
     "Body": "Digitale Arbeitsabläufe, die Zeit sparen, ohne jemals Kompromisse bei Sicherheit oder Diskretion einzugehen."
   },
-  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Was ist der digitale Tresor von Ridger?",
+        "Answer": "Es ist ein verschlüsselter Dokumentenraum, der die Familiendokumente wie Urkunden, Verträge, Auszüge und Beschlüsse in strukturierten Dossiers vereint. Sie finden jedes Dokument, wenn Sie es brauchen, statt es zwischen E-Mails, Ordnern und Beteiligten zu suchen."
+      },
+      {
+        "Question": "Wo werden unsere Dokumente gehostet?",
+        "Answer": "In der Schweiz. Der Tresor ist verschlüsselt und in der Schweiz gehostet, in Übereinstimmung mit Ihren Anforderungen an Datenstandort und Vertraulichkeit."
+      },
+      {
+        "Question": "Können wir Dokumente mit unseren Beratern teilen?",
+        "Answer": "Ja, gezielt. Sie entscheiden, wer was sieht, und behalten den Überblick über jeden Zugriff."
+      },
+      {
+        "Question": "Kann die bei uns eingehende Post im Tresor abgelegt werden?",
+        "Answer": "Ja. Wenn Ridger Ihre Post entgegennimmt, wird sie sortiert, digitalisiert und anschliessend sicher in Ihrem digitalen Tresor bereitgestellt."
+      }
+    ]
+  }
 }

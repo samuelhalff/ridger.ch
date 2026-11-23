@@ -88,5 +88,26 @@
   "MapDisclaimer": "El mapa lo proporciona Google Maps. Cárguelo únicamente si acepta una posible transferencia de datos (véase nuestra política de privacidad).",
   "MapLoadButton": "Mostrar el mapa interactivo",
   "MapOpenExternal": "Abrir en Google Maps",
-  "MapPrivacyPlaceholder": "Por motivos de privacidad, el mapa no se carga automáticamente."
+  "MapPrivacyPlaceholder": "Por motivos de privacidad, el mapa no se carga automáticamente.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Cómo contactar con Ridger?",
+        "Answer": "Puede escribirnos por el formulario de contacto o a contact@ridger.ch, llamarnos al +41 22 512 50 50, reservar una llamada o escribirnos por WhatsApp para las preguntas rápidas."
+      },
+      {
+        "Question": "¿En qué plazo recibiremos una respuesta?",
+        "Answer": "Respondemos en un plazo de un día hábil, con la más estricta discreción."
+      },
+      {
+        "Question": "¿Cómo transcurre una primera reunión?",
+        "Answer": "Es un intercambio confidencial y sin compromiso, en Ginebra o a distancia, para entender su situación y sus prioridades."
+      },
+      {
+        "Question": "¿Dónde está la oficina de Ridger?",
+        "Answer": "Nuestra oficina está en el 26 boulevard Georges-Favon, 1204 Ginebra. También acompañamos a familias en otros lugares de Suiza, a distancia, y organizamos encuentros en persona cuando es útil."
+      }
+    ]
+  }
 }

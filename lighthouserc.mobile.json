@@ -1,13 +1,11 @@
 {
     "ci": {
         "collect": {
-            "numberOfRuns": 1,
+            "numberOfRuns": 3,
             "url": [
-                "https://ark-fid.ch/en/",
-                "https://ark-fid.ch/fr/",
-                "https://ark-fid.ch/de/",
-                "https://ark-fid.ch/es/",
-                "https://ark-fid.ch/pt/"
+                "https://ridger.ch/fr/",
+                "https://ridger.ch/en/",
+                "https://ridger.ch/fr/services/reporting-consolide/"
             ],
             "settings": {
                 "formFactor": "mobile",
@@ -22,6 +20,65 @@
         },
         "upload": {
             "target": "temporary-public-storage"
+        },
+        "assert": {
+            "assertions": {
+                "categories:seo": [
+                    "error",
+                    {
+                        "minScore": 0.95,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "categories:accessibility": [
+                    "warn",
+                    {
+                        "minScore": 0.9,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "categories:best-practices": [
+                    "warn",
+                    {
+                        "minScore": 0.9,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "categories:performance": [
+                    "warn",
+                    {
+                        "minScore": 0.8,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "largest-contentful-paint": [
+                    "error",
+                    {
+                        "maxNumericValue": 4000,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "cumulative-layout-shift": [
+                    "error",
+                    {
+                        "maxNumericValue": 0.1,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "total-blocking-time": [
+                    "warn",
+                    {
+                        "maxNumericValue": 300,
+                        "aggregationMethod": "median-run"
+                    }
+                ],
+                "meta-description": "error",
+                "document-title": "error",
+                "canonical": "error",
+                "hreflang": "error",
+                "is-crawlable": "error",
+                "robots-txt": "error"
+            }
         }
     }
 }

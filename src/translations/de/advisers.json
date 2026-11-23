@@ -79,5 +79,26 @@
     "Title": "Eine Familie vorstellen",
     "Subtitle": "Ein paar Zeilen genügen. Wir melden uns rasch und vertraulich bei Ihnen.",
     "MessagePlaceholder": "z. B. eine kurze, anonymisierte Beschreibung der Situation"
+  },
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Wie kann ein Anwalt oder Banker eine Familie an Ridger vermitteln?",
+        "Answer": "Alles beginnt mit einem ersten Gespräch: Sie schildern uns die Situation, auf Wunsch ohne Namen, und wir sagen Ihnen offen, ob wir nützlich sein können. Danach treffen wir die Familie, mit oder ohne Sie, je nachdem, was ihr am besten entspricht."
+      },
+      {
+        "Question": "Konkurriert Ridger mit unserem Mandat?",
+        "Answer": "Nein. Ridger verwaltet keine Vermögenswerte und erbringt keine Rechtsberatung, und Sie behalten Ihr Mandat und Ihre Beziehung zur Familie. Wir koordinieren die Berater, konsolidieren das Vermögen in einem einzigen Reporting und verfolgen die Administration."
+      },
+      {
+        "Question": "Wirkt Ridger bei der Strukturierung eines Vermögens oder eines Family Office mit?",
+        "Answer": "Ja, in Abstimmung mit dem Anwalt, der die rechtliche Strukturierung übernimmt. Ridger führt aktuelle Vermögensinformationen zusammen, verfolgt die mit der Familie getroffenen Entscheidungen und koordiniert die Umsetzung mit den anderen Beratern."
+      },
+      {
+        "Question": "Wie wird das Berufsgeheimnis gewahrt?",
+        "Answer": "Ein erstes Gespräch kann ganz ohne Namen stattfinden, und ohne Zustimmung der Familie wird nichts weitergegeben. Die Dokumente liegen in einem in der Schweiz gehosteten digitalen Tresor und werden nur mit den Personen geteilt, die sie brauchen."
+      }
+    ]
   }
 }

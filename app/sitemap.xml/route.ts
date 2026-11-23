@@ -9,7 +9,7 @@ const BASE = "https://ridger.ch";
 const canonicalLocale: Locale = "fr";
 // Bump manually when static-page content changes meaningfully; a build-time
 // date would falsely mark every static URL as modified on each deploy.
-const STATIC_LASTMOD = "2026-09-30";
+const STATIC_LASTMOD = "2026-11-23";
 
 function getPlaceholderLocales(): Set<string> {
   const raw = process.env.PLACEHOLDER_LOCALES || "";
@@ -106,33 +106,7 @@ export async function GET() {
       // Add trailing slash to match trailingSlash: true in next.config.js
       const loc = `${BASE}/${locale}${localized}/`;
       const lastmod = pObj.date || STATIC_LASTMOD;
-      // derive changefreq/priority
-      const isHome = p === "/";
-      const isArticle = p.startsWith("/ressources/articles/");
-      const isResources = p.startsWith("/ressources") && !isArticle;
-      const isService =
-        p.startsWith("/services") || p.startsWith("/family-office/");
-      const isLegal = p.startsWith("/legal/");
-      const changefreq =
-        isHome || isArticle
-          ? "weekly"
-          : isService || isResources
-          ? "monthly"
-          : isLegal
-          ? "yearly"
-          : "monthly";
-      const priority = isHome
-        ? "1.0"
-        : isArticle
-        ? "0.8"
-        : isService
-        ? "0.7"
-        : isResources
-        ? "0.6"
-        : isLegal
-        ? "0.3"
-        : "0.5";
-
+      // No changefreq/priority: Google ignores both; loc + lastmod + alternates only.
       // build alternates block
       const alternates = [
         ...pathLocales.map((alt) => {
@@ -166,8 +140,6 @@ export async function GET() {
       return `  <url>
     <loc>${escapeXml(loc)}</loc>
     <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
 ${alternates}
   </url>`;
     });

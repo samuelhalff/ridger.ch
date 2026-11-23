@@ -54,5 +54,26 @@
     "Title": "Su tiempo, preservado",
     "Body": "Usted mantiene el control de las decisiones. Nosotros asumimos la coordinación, los seguimientos y la circulación de la información entre sus asesores."
   },
-  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Qué es un family office externalizado?",
+        "Answer": "Es la organización de un single family office, sin tener que crearlo. Ridger se convierte en el punto de contacto único de la familia y coordina a sus banqueros, abogados, notarios, asesores fiscales y aseguradores."
+      },
+      {
+        "Question": "¿Hay que cambiar de asesores para trabajar con Ridger?",
+        "Answer": "No. Partimos del ecosistema que su familia ya ha construido y lo integramos, sin sustituir a los asesores existentes."
+      },
+      {
+        "Question": "¿Ridger se ocupa también de nuestras residencias y de peticiones particulares?",
+        "Answer": "Sí. Nos encargamos de la administración cotidiana de sus residencias, en Suiza y en el extranjero, y asumimos para las familias establecidas determinadas peticiones particulares, como viajes, personal, compras excepcionales o proyectos especiales."
+      },
+      {
+        "Question": "¿Pueden ayudarnos a crear un single family office?",
+        "Answer": "Sí. Ayudamos a planificar su puesta en marcha y a coordinarla con sus abogados y asesores, que se encargan de la estructuración jurídica."
+      }
+    ]
+  }
 }

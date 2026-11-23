@@ -29,8 +29,8 @@ export async function POST() {
   const urls = locales.flatMap((loc) => paths.map((p) => `${base}${buildInternalUrl(p, loc)}`));
 
   try {
-    await submitToIndexNow(urls);
-    return NextResponse.json({ ok: true, count: urls.length });
+    const ok = await submitToIndexNow(urls);
+    return NextResponse.json({ ok, count: urls.length }, { status: ok ? 200 : 502 });
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || 'Search indexing error' }, { status: 500 });
   }

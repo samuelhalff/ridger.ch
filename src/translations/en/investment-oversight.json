@@ -42,5 +42,26 @@
     "Title": "Oversight, not management",
     "Body": "Our role is to observe, compare and document. You retain the choice of your managers and your decisions, with complete and impartial information."
   },
-  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Does Ridger manage our investments?",
+        "Answer": "No. Decisions and execution stay with your regulated banks and managers, and Ridger does not provide investment advice. We monitor their mandates, compare their results and report back to you."
+      },
+      {
+        "Question": "How do you compare several managers?",
+        "Answer": "We track the performance, fees and risk of each relationship on a common basis and set the results against relevant benchmarks. The reviews compare managers with one another and over time."
+      },
+      {
+        "Question": "Do you check that our managers stay within their mandate?",
+        "Answer": "Yes. We check compliance with each mandate and with the investment policy agreed with each manager, then coordinate their work and hold them accountable."
+      },
+      {
+        "Question": "Can you negotiate fees with our banks and managers?",
+        "Answer": "Yes. We negotiate terms and fees with banks and managers in your interest, since we have no products to sell."
+      }
+    ]
+  }
 }

@@ -30,5 +30,26 @@
     "Title": "Um património documental duradouro",
     "Body": "Fluxos de trabalho digitais que poupam tempo, sem nunca transigir na segurança nem na discrição."
   },
-  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "O que é o cofre digital da Ridger?",
+        "Answer": "É um espaço documental cifrado que reúne os documentos da família, como escrituras, contratos, extratos e decisões, em dossiês estruturados. Encontra cada documento no momento certo, em vez de o procurar entre e-mails, pastas e intervenientes."
+      },
+      {
+        "Question": "Onde estão alojados os nossos documentos?",
+        "Answer": "Na Suíça. O cofre está cifrado e alojado na Suíça, em conformidade com as suas exigências de residência dos dados e de confidencialidade."
+      },
+      {
+        "Question": "Podemos partilhar documentos com os nossos consultores?",
+        "Answer": "Sim, de forma seletiva. Decide quem vê o quê e guarda o registo de cada acesso."
+      },
+      {
+        "Question": "O correio que recebemos pode ser arquivado no cofre?",
+        "Answer": "Sim. Quando a Ridger recebe o seu correio, este é triado, digitalizado e depois partilhado de forma segura no seu cofre digital."
+      }
+    ]
+  }
 }

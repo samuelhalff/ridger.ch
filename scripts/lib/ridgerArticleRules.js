@@ -557,7 +557,8 @@ function extractFaq(content) {
       continue;
     }
     if (!inFaq) continue;
-    if (/^##\s/.test(trimmed) || /^---+$/.test(trimmed)) {
+    // The references list ("### Références") often follows the FAQ: it ends it.
+    if (/^##\s/.test(trimmed) || /^---+$/.test(trimmed) || /^###\s+(références|references|referenzen|referencias|referências)\s*$/i.test(trimmed)) {
       flush();
       break;
     }

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Locale, locales } from "./i18n";
 import { localizePath } from "./paths";
 import { hreflangFor } from "./hreflang";
+import { ogImageFor } from "./public-pages";
 import fs from 'fs';
 import { join as pathJoin } from 'path';
 
@@ -57,6 +58,15 @@ async function loadMetadataConfig(locale: Locale): Promise<MetadataConfig> {
   return resolved;
 }
 
+/** Text kept within max characters, cut at the last word with an ellipsis. */
+export function fitAtWord(text: string, max: number): string {
+  const t = text.trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  const space = cut.lastIndexOf(" ");
+  return `${(space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[\s,;:.\u202f-]+$/, "")}…`;
+}
+
 const withTrailingSlash = (value: string) =>
   value.endsWith("/") ? value : `${value}/`;
 
@@ -105,13 +115,20 @@ export async function getPageMetadata(
   
   // Handle dynamic pages (like articles)
   if (normalizedPath.startsWith("/ressources/articles/") && customData?.articleTitle) {
-    title = config.dynamic.articles.titleTemplate.replace(
-      "{articleTitle}",
-      customData.articleSeoTitle || customData.articleTitle,
-    );
-    description = customData.articleMetaDescription
-      ? customData.articleMetaDescription
-      : config.dynamic.articles.descriptionTemplate.replace("{articleDescription}", customData.articleDescription || "");
+    // Google shows about 60 / 155 characters: the branded template is used
+    // only when it fits, then the bare title, then the title cut at a word.
+    const bareTitle = customData.articleSeoTitle || customData.articleTitle;
+    const templatedTitle = config.dynamic.articles.titleTemplate.replace("{articleTitle}", bareTitle);
+    title = templatedTitle.length <= 60 ? templatedTitle : fitAtWord(bareTitle, 60);
+    const articleDescription = customData.articleDescription || "";
+    const templatedDescription = config.dynamic.articles.descriptionTemplate.replace("{articleDescription}", articleDescription);
+    const meta = customData.articleMetaDescription || "";
+    description =
+      meta && meta.length <= 155
+        ? meta
+        : templatedDescription.length <= 155
+        ? templatedDescription
+        : fitAtWord(meta || articleDescription, 155);
   }
   const isArticle = normalizedPath.startsWith("/ressources/articles/") && !!customData?.articleTitle;
   
@@ -147,6 +164,13 @@ export async function getPageMetadata(
       ogImage = ogLocaleImage;
     }
   } catch {}
+  // Per-page share image (FR/EN pages, built at build time by
+  // app/assets/og-pages); the per-language image above stays the fallback.
+  let pageOgImage: string | null = null;
+  try {
+    pageOgImage = ogImageFor(locale, normalizedPath);
+  } catch {}
+  if (pageOgImage) ogImage = pageOgImage;
 
   const metadata: Metadata = {
     metadataBase: new URL('https://ridger.ch'),
@@ -187,7 +211,7 @@ export async function getPageMetadata(
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: (isArticle && (customData?.articleImageAlt || customData?.articleTitle)) || "Ridger",
+          alt: (isArticle && (customData?.articleImageAlt || customData?.articleTitle)) || (pageOgImage ? title : "Ridger"),
         },
       ],
     },

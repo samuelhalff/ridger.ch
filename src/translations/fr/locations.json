@@ -35,6 +35,27 @@
       "Closing": {
         "Title": "Parlons de votre situation",
         "Body": "Un premier entretien confidentiel, à notre bureau ou en visioconférence, pour comprendre vos besoins et voir comment nous pouvons vous aider."
+      },
+      "Faq": {
+        "Title": "Questions fréquentes",
+        "Questions": [
+          {
+            "Question": "Où se trouve votre family office à Genève ?",
+            "Answer": "Notre bureau est au 26 boulevard Georges-Favon, 1204 Genève. Nous y recevons les familles pour les moments qui comptent, comme le premier entretien, la revue annuelle du patrimoine ou les décisions de famille."
+          },
+          {
+            "Question": "Qu'est-ce qu'un multi-family office ?",
+            "Answer": "Un multi-family office comme Ridger met en commun l'infrastructure, les outils et l'expertise entre plusieurs familles. Ridger réunit votre patrimoine dans une vue unique et coordonne vos conseillers, sans gérer vos actifs."
+          },
+          {
+            "Question": "Travaillez-vous avec nos conseillers genevois actuels ?",
+            "Answer": "Oui : banques privées, gérants indépendants, avocats et notaires. Nous préparons aussi les pièces attendues par l'Administration fiscale cantonale et suivons les échéances avec votre conseiller fiscal."
+          },
+          {
+            "Question": "Dans quelles langues travaillez-vous ?",
+            "Answer": "En français, en anglais, en allemand, en espagnol et en portugais. Nous coordonnons des conseillers situés en Suisse comme à l'étranger."
+          }
+        ]
       }
     },
     "lausanne": {
@@ -64,6 +85,27 @@
       "Closing": {
         "Title": "Un premier échange, sans engagement",
         "Body": "En visioconférence ou à Genève, un entretien confidentiel pour faire le point sur votre situation et vos priorités."
+      },
+      "Faq": {
+        "Title": "Questions fréquentes",
+        "Questions": [
+          {
+            "Question": "Ridger a-t-il un bureau à Lausanne ?",
+            "Answer": "Non. Notre bureau est à Genève, à une courte distance de Lausanne. Nous accompagnons les familles vaudoises à distance et organisons une rencontre en personne lorsque c'est utile, notamment à notre bureau de Genève."
+          },
+          {
+            "Question": "Comment se passe l'accompagnement d'une famille vaudoise ?",
+            "Answer": "Plateforme digitale, reporting consolidé et rendez-vous en visioconférence forment le quotidien. Vous suivez votre patrimoine en ligne, à tout moment, et nous restons joignables par votre canal préféré."
+          },
+          {
+            "Question": "Travaillez-vous avec nos conseillers vaudois ?",
+            "Answer": "Oui. Nous travaillons avec vos banques, votre notaire, votre avocat et votre fiduciaire actuels, rassemblons les pièces utiles pour l'Administration cantonale des impôts (ACI) et suivons le calendrier avec votre conseiller fiscal."
+          },
+          {
+            "Question": "Qui traite la fiscalité et les successions dans le canton de Vaud ?",
+            "Answer": "Vos conseillers fiscaux et votre notaire, car l'imposition de la fortune et des successions varie d'un canton à l'autre. Nous veillons à ce qu'ils disposent d'une information complète et à jour."
+          }
+        ]
       }
     },
     "zurich": {
@@ -93,6 +135,27 @@
       "Closing": {
         "Title": "Faisons connaissance",
         "Body": "Un premier entretien confidentiel en visioconférence, pour comprendre votre situation et voir si nous pouvons vous aider."
+      },
+      "Faq": {
+        "Title": "Questions fréquentes",
+        "Questions": [
+          {
+            "Question": "Ridger a-t-il un bureau à Zurich ?",
+            "Answer": "Non. Nous travaillons depuis Genève avec des familles installées ailleurs en Suisse, à distance, et un rendez-vous en personne peut être organisé lorsque c'est utile, par exemple pour une revue annuelle ou une décision de famille."
+          },
+          {
+            "Question": "Pouvez-vous travailler en allemand ?",
+            "Answer": "Oui. Nous travaillons en allemand, en français, en anglais, en espagnol et en portugais, et chaque membre de la famille peut échanger dans la langue qui lui est la plus naturelle."
+          },
+          {
+            "Question": "Travaillez-vous avec nos conseillers zurichois ?",
+            "Answer": "Oui. Nous intégrons vos banques, gérants, avocats et fiduciaires actuels plutôt que de les remplacer, préparons les pièces attendues par le Kantonales Steueramt Zürich et coordonnons les échéances avec votre conseiller fiscal."
+          },
+          {
+            "Question": "Proposez-vous la domiciliation à Zurich ?",
+            "Answer": "Non, nous n'avons pas de bureau à Zurich. La domiciliation de structures et la gestion du courrier se font à Genève, avec le tri, la numérisation et le suivi du courrier."
+          }
+        ]
       }
     },
     "zug": {
@@ -122,6 +185,27 @@
       "Closing": {
         "Title": "Un premier entretien confidentiel",
         "Body": "En visioconférence, pour faire le point sur votre patrimoine, vos conseillers et ce que vous attendez d'un family office."
+      },
+      "Faq": {
+        "Title": "Questions fréquentes",
+        "Questions": [
+          {
+            "Question": "Ridger a-t-il un bureau à Zoug ?",
+            "Answer": "Non. Notre bureau est à Genève et nous n'avons pas d'implantation à Zoug. Nous accompagnons les familles zougoises à distance, et des rencontres en personne peuvent être organisées lorsque c'est utile."
+          },
+          {
+            "Question": "Pouvez-vous suivre à la fois notre patrimoine privé et notre société familiale ?",
+            "Answer": "Oui. Lorsque le patrimoine comprend une société ou une holding, nous gardons une lecture claire des deux côtés, privé et entreprise, et coordonnons votre fiduciaire, vos avocats et vos banques."
+          },
+          {
+            "Question": "Comment se passe la coordination avec l'administration fiscale zougoise ?",
+            "Answer": "Nous préparons les pièces utiles pour la Steuerverwaltung des Kantons Zug et suivons les échéances avec votre conseiller fiscal, qui reste votre interlocuteur pour toute question de fiscalité."
+          },
+          {
+            "Question": "Ridger gère-t-il les actifs de la famille ?",
+            "Answer": "Non. Notre rôle est de réunir l'information, de coordonner les conseillers et de suivre l'administration, sans jamais gérer vos actifs."
+          }
+        ]
       }
     },
     "lugano": {
@@ -151,6 +235,27 @@
       "Closing": {
         "Title": "Parlons de votre situation",
         "Body": "Un premier entretien confidentiel en visioconférence, dans la langue de votre choix parmi celles que nous pratiquons."
+      },
+      "Faq": {
+        "Title": "Questions fréquentes",
+        "Questions": [
+          {
+            "Question": "Ridger a-t-il un bureau au Tessin ?",
+            "Answer": "Non. Depuis Genève, nous accompagnons des familles de Lugano et de la région avec une plateforme digitale et des échanges en visioconférence, et des rencontres en personne peuvent être organisées lorsque c'est utile."
+          },
+          {
+            "Question": "Travaillez-vous en italien ?",
+            "Answer": "Non. Nous travaillons en français, en anglais, en allemand, en espagnol et en portugais, et nous nous appuyons sur vos conseillers tessinois pour les échanges en italien."
+          },
+          {
+            "Question": "Que faites-vous des documents rédigés en italien ?",
+            "Answer": "Nous les intégrons dans votre reporting et votre coffre numérique. Vos conseillers locaux restent vos interlocuteurs pour les échanges dans cette langue."
+          },
+          {
+            "Question": "Ridger gère-t-il le patrimoine des familles tessinoises ?",
+            "Answer": "Ridger ne gère pas d'actifs. Nous consolidons votre patrimoine en ligne, coordonnons vos banques, avocats, notaires et fiduciaires, et rassemblons les pièces utiles pour la Divisione delle contribuzioni."
+          }
+        ]
       }
     }
   }

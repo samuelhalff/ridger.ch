@@ -34,5 +34,26 @@
     "Title": "Nada se perde",
     "Body": "Onde quer que esteja, sabe o que chegou, o que exige uma ação e o que foi tratado. Mantemos tudo em ordem, com discrição."
   },
-  "Perimeter": "Uma morada de correspondência não cria domicílio civil nem residência fiscal. As questões jurídicas e fiscais relativas ao domicílio e à substância das sociedades são tratadas com os seus advogados e consultores fiscais. A Ridger assegura a receção e a gestão do correio, bem como a coordenação administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "Uma morada de correspondência não cria domicílio civil nem residência fiscal. As questões jurídicas e fiscais relativas ao domicílio e à substância das sociedades são tratadas com os seus advogados e consultores fiscais. A Ridger assegura a receção e a gestão do correio, bem como a coordenação administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "Propõem a domiciliação de sociedades em Genebra?",
+        "Answer": "Sim, para as sociedades holding ou de gestão da família. Quando a regulamentação o exige, uma sociedade deve dispor de substância real e tomar aí as suas decisões de gestão, e tomamos isso em conta com os seus consultores."
+      },
+      {
+        "Question": "Uma morada de correspondência em Genebra altera o nosso domicílio?",
+        "Answer": "Não. Uma morada de correspondência continua a ser uma morada postal: não cria nem domicílio civil nem residência fiscal, que dependem da sua situação real. Continua distinta do seu domicílio legal e é revogável a qualquer momento."
+      },
+      {
+        "Question": "Como é tratado o nosso correio?",
+        "Answer": "Recebemo-lo, trio-mo-lo e digitalizamo-lo, e depois partilhamo-lo de forma segura no seu cofre digital. Os originais são conservados ou reencaminhados segundo as suas instruções."
+      },
+      {
+        "Question": "Quem acompanha os prazos que constam do correio?",
+        "Answer": "Identificamos os prazos, como os avisos de imposto, as cartas das autoridades ou as faturas, e coordenamos as respostas consigo e com os seus consultores."
+      }
+    ]
+  }
 }

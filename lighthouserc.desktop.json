@@ -3,11 +3,11 @@
         "collect": {
             "numberOfRuns": 1,
             "url": [
-                "https://ark-fid.ch/en/",
-                "https://ark-fid.ch/fr/",
-                "https://ark-fid.ch/de/",
-                "https://ark-fid.ch/es/",
-                "https://ark-fid.ch/pt/"
+                "https://ridger.ch/en/",
+                "https://ridger.ch/fr/",
+                "https://ridger.ch/de/",
+                "https://ridger.ch/es/",
+                "https://ridger.ch/pt/"
             ],
             "settings": {
                 "preset": "desktop"

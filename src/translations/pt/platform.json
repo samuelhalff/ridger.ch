@@ -116,5 +116,26 @@
       { "label": "Retrocessões identificadas e restituídas", "value": "CHF 12'400" }
     ],
     "feesTotal": "Transparência total dos custos — CHF 248'900 poupados desde 2024"
+  },
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "O que se pode acompanhar na plataforma da Ridger?",
+        "Answer": "A plataforma reúne os seus valores mobiliários, o seu imobiliário, os seus documentos e o seu reporting numa visão consolidada, mantida atualizada e legível a qualquer momento. Aí encontra o seu património consolidado, as suas posições por banco e os seus relatórios."
+      },
+      {
+        "Question": "Onde são alojados os dados da plataforma?",
+        "Answer": "Na Suíça. Os documentos são conservados num cofre cifrado, e os seus dados só são partilhados com as pessoas que designar."
+      },
+      {
+        "Question": "A plataforma serve para gerir os nossos investimentos?",
+        "Answer": "Não. Serve para acompanhar e consolidar o seu património. A Ridger não gere ativos nem presta aconselhamento de investimento, e a gestão continua junto dos seus bancos e gestores regulados."
+      },
+      {
+        "Question": "Os custos bancários são visíveis na plataforma?",
+        "Answer": "Sim. O reporting torna legíveis os custos explícitos e implícitos das suas relações bancárias, para que perceba quanto custa o seu património."
+      }
+    ]
   }
 }

@@ -34,5 +34,26 @@
     "Title": "Nada se pierde",
     "Body": "Esté donde esté, sabe qué ha llegado, qué requiere una acción y qué se ha resuelto. Mantenemos el conjunto en orden, con discreción."
   },
-  "Perimeter": "Una dirección de correspondencia no crea domicilio civil ni residencia fiscal. Las cuestiones jurídicas y fiscales relativas al domicilio y a la sustancia de las sociedades se tratan con sus abogados y asesores fiscales. Ridger asegura la recepción y la gestión del correo, así como la coordinación administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "Una dirección de correspondencia no crea domicilio civil ni residencia fiscal. Las cuestiones jurídicas y fiscales relativas al domicilio y a la sustancia de las sociedades se tratan con sus abogados y asesores fiscales. Ridger asegura la recepción y la gestión del correo, así como la coordinación administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Ofrecen la domiciliación de sociedades en Ginebra?",
+        "Answer": "Sí, para las sociedades holding o de gestión de la familia. Cuando la normativa lo exige, una sociedad debe disponer de sustancia real y tomar allí sus decisiones de gestión, y lo tenemos en cuenta junto con sus asesores."
+      },
+      {
+        "Question": "¿Una dirección de correspondencia en Ginebra cambia nuestro domicilio?",
+        "Answer": "No. Una dirección de correspondencia sigue siendo una dirección postal: no crea ni domicilio civil ni residencia fiscal, que dependen de su situación real. Sigue siendo distinta de su domicilio legal y revocable en cualquier momento."
+      },
+      {
+        "Question": "¿Cómo se trata nuestro correo?",
+        "Answer": "Lo recibimos, lo clasificamos y lo digitalizamos, y después lo ponemos a su disposición de forma segura en su caja fuerte digital. Los originales se conservan o se reenvían según sus instrucciones."
+      },
+      {
+        "Question": "¿Quién sigue los plazos que figuran en el correo?",
+        "Answer": "Identificamos los plazos, como los avisos de impuestos, las cartas de las autoridades o las facturas, y coordinamos las respuestas con usted y sus asesores."
+      }
+    ]
+  }
 }

@@ -42,5 +42,26 @@
     "Title": "Un reporting à votre rythme",
     "Body": "Mensuel, trimestriel ou à la demande, votre reporting est structuré selon vos priorités et partagé de façon sécurisée avec les personnes que vous désignez."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Qu'est-ce qu'un reporting patrimonial consolidé ?",
+        "Answer": "C'est une vue unique de l'ensemble de votre patrimoine, qui réunit vos comptes bancaires, vos dépositaires, votre immobilier, vos participations en private equity et vos actifs de collection, en devise de référence. Ce reporting est indépendant de toute banque, et les chiffres sont recoupés avec les relevés officiels de chaque contrepartie."
+      },
+      {
+        "Question": "Comment la performance de notre patrimoine est-elle mesurée ?",
+        "Answer": "Nous calculons une performance pondérée par le temps (TWR) et la comparons à des indices de référence. Le rapport montre aussi ce qui a contribué au résultat."
+      },
+      {
+        "Question": "Le reporting fait-il apparaître les frais bancaires ?",
+        "Answer": "Oui. Nous recensons les frais explicites et implicites de vos relations bancaires, pour que vous sachiez ce que coûte réellement votre patrimoine."
+      },
+      {
+        "Question": "À quelle fréquence recevons-nous le reporting ?",
+        "Answer": "Chaque mois, chaque trimestre ou à la demande, selon vos priorités. Il est partagé de façon sécurisée avec les personnes que vous désignez, et peut être préparé avant chaque séance de votre comité d'investissement familial."
+      }
+    ]
+  }
 }

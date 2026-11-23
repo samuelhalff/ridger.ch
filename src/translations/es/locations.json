@@ -35,6 +35,27 @@
       "Closing": {
         "Title": "Hablemos de su situación",
         "Body": "Una primera reunión confidencial, en nuestra oficina o por videollamada, para entender sus necesidades y ver cómo podemos ayudarle."
+      },
+      "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Questions": [
+          {
+            "Question": "¿Dónde está su family office en Ginebra?",
+            "Answer": "Nuestra oficina está en el 26 boulevard Georges-Favon, 1204 Ginebra. Allí recibimos a las familias en los momentos que importan, como la primera reunión, la revisión anual del patrimonio o las decisiones de familia."
+          },
+          {
+            "Question": "¿Qué es un multi-family office?",
+            "Answer": "Un multi-family office como Ridger pone en común la infraestructura, las herramientas y la experiencia entre varias familias. Ridger reúne su patrimonio en una visión única y coordina a sus asesores, sin gestionar sus activos."
+          },
+          {
+            "Question": "¿Trabajan con nuestros asesores ginebrinos actuales?",
+            "Answer": "Sí: bancos privados, gestores independientes, abogados y notarios. También preparamos los documentos que espera la administración fiscal cantonal y seguimos los plazos con su asesor fiscal."
+          },
+          {
+            "Question": "¿En qué idiomas trabajan?",
+            "Answer": "En francés, inglés, alemán, español y portugués. Coordinamos asesores situados en Suiza y en el extranjero."
+          }
+        ]
       }
     },
     "lausanne": {
@@ -64,6 +85,27 @@
       "Closing": {
         "Title": "Una primera conversación, sin compromiso",
         "Body": "Por videollamada o en Ginebra, una reunión confidencial para hacer balance de su situación y sus prioridades."
+      },
+      "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Questions": [
+          {
+            "Question": "¿Ridger tiene una oficina en Lausana?",
+            "Answer": "No. Nuestra oficina está en Ginebra, a poca distancia de Lausana. Acompañamos a las familias vaudoises a distancia y organizamos un encuentro en persona cuando es útil, en particular en nuestra oficina de Ginebra."
+          },
+          {
+            "Question": "¿Cómo es el acompañamiento de una familia vaudoise?",
+            "Answer": "Plataforma digital, reporting consolidado y reuniones por videoconferencia forman el día a día. Usted sigue su patrimonio en línea, en cualquier momento, y seguimos localizables por su canal preferido."
+          },
+          {
+            "Question": "¿Trabajan con nuestros asesores vaudois?",
+            "Answer": "Sí. Trabajamos con sus bancos, su notario, su abogado y su fiduciaria actuales, reunimos los documentos útiles para la Administration cantonale des impôts (ACI) y seguimos el calendario con su asesor fiscal."
+          },
+          {
+            "Question": "¿Quién trata la fiscalidad y las sucesiones en el cantón de Vaud?",
+            "Answer": "Sus asesores fiscales y su notario, porque la tributación del patrimonio y de las sucesiones varía de un cantón a otro. Procuramos que dispongan de información completa y actualizada."
+          }
+        ]
       }
     },
     "zurich": {
@@ -93,6 +135,27 @@
       "Closing": {
         "Title": "Conozcámonos",
         "Body": "Una primera videollamada confidencial para entender su situación y ver si podemos ayudarle."
+      },
+      "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Questions": [
+          {
+            "Question": "¿Ridger tiene una oficina en Zúrich?",
+            "Answer": "No. Trabajamos desde Ginebra con familias establecidas en otros lugares de Suiza, a distancia, y puede organizarse una reunión en persona cuando es útil, por ejemplo para una revisión anual o una decisión de familia."
+          },
+          {
+            "Question": "¿Pueden trabajar en alemán?",
+            "Answer": "Sí. Trabajamos en alemán, francés, inglés, español y portugués, y cada miembro de la familia puede comunicarse en el idioma que le resulte más natural."
+          },
+          {
+            "Question": "¿Trabajan con nuestros asesores zuriqueses?",
+            "Answer": "Sí. Integramos sus bancos, gestores, abogados y fiduciarias actuales en lugar de sustituirlos, preparamos los documentos que requiere el Kantonales Steueramt Zürich y coordinamos los plazos con su asesor fiscal."
+          },
+          {
+            "Question": "¿Ofrecen la domiciliación en Zúrich?",
+            "Answer": "No, no tenemos oficina en Zúrich. La domiciliación de estructuras y la gestión del correo se hacen en Ginebra, con la clasificación, la digitalización y el seguimiento del correo."
+          }
+        ]
       }
     },
     "zug": {
@@ -122,6 +185,27 @@
       "Closing": {
         "Title": "Una primera reunión confidencial",
         "Body": "Por videollamada, para hablar de su patrimonio, de sus asesores y de lo que espera de un family office."
+      },
+      "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Questions": [
+          {
+            "Question": "¿Ridger tiene una oficina en Zug?",
+            "Answer": "No. Nuestra oficina está en Ginebra y no tenemos sede en Zug. Acompañamos a las familias de Zug a distancia, y pueden organizarse encuentros en persona cuando es útil."
+          },
+          {
+            "Question": "¿Pueden seguir a la vez nuestro patrimonio privado y nuestra sociedad familiar?",
+            "Answer": "Sí. Cuando el patrimonio incluye una sociedad o una holding, mantenemos una lectura clara de ambos lados, el privado y el empresarial, y coordinamos a su fiduciaria, sus abogados y sus bancos."
+          },
+          {
+            "Question": "¿Cómo se coordina el trabajo con la administración fiscal de Zug?",
+            "Answer": "Preparamos los documentos útiles para la Steuerverwaltung des Kantons Zug y seguimos los plazos con su asesor fiscal, que sigue siendo su interlocutor para cualquier cuestión fiscal."
+          },
+          {
+            "Question": "¿Ridger gestiona los activos de la familia?",
+            "Answer": "No. Nuestro papel es reunir la información, coordinar a los asesores y seguir la administración, sin gestionar jamás sus activos."
+          }
+        ]
       }
     },
     "lugano": {
@@ -151,6 +235,27 @@
       "Closing": {
         "Title": "Hablemos de su situación",
         "Body": "Una primera videollamada confidencial, en el idioma que prefiera entre los que utilizamos."
+      },
+      "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Questions": [
+          {
+            "Question": "¿Ridger tiene una oficina en el Tesino?",
+            "Answer": "No. Desde Ginebra acompañamos a familias de Lugano y de la región con una plataforma digital e intercambios por videoconferencia, y pueden organizarse encuentros en persona cuando es útil."
+          },
+          {
+            "Question": "¿Trabajan en italiano?",
+            "Answer": "No. Trabajamos en francés, inglés, alemán, español y portugués, y nos apoyamos en sus asesores tesineses para los intercambios en italiano."
+          },
+          {
+            "Question": "¿Qué hacen con los documentos redactados en italiano?",
+            "Answer": "Los integramos en su reporting y en su caja fuerte digital. Sus asesores locales siguen siendo sus interlocutores para los intercambios en ese idioma."
+          },
+          {
+            "Question": "¿Ridger gestiona el patrimonio de las familias tesinesas?",
+            "Answer": "Ridger no gestiona activos. Consolidamos su patrimonio en línea, coordinamos a sus bancos, abogados, notarios y fiduciarias, y reunimos los documentos útiles para la Divisione delle contribuzioni."
+          }
+        ]
       }
     }
   }

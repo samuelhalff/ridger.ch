@@ -54,5 +54,26 @@
     "Title": "Une administration maîtrisée",
     "Body": "Vous gardez le contrôle et la vue d'ensemble ; nous prenons en charge l'exécution administrative et la coordination avec vos conseillers fiscaux."
   },
-  "Perimeter": "La coordination fiscale et administrative s'exerce en lien avec vos conseillers fiscaux et juridiques. Ridger fournit la coordination, le reporting et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "La coordination fiscale et administrative s'exerce en lien avec vos conseillers fiscaux et juridiques. Ridger fournit la coordination, le reporting et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Ridger s'occupe-t-il de nos déclarations d'impôt ?",
+        "Answer": "Nous coordonnons les déclarations et obligations fiscales des membres de la famille et de leurs structures, en lien avec vos conseillers fiscaux. Nous tenons un calendrier fiscal unique, réunissons les pièces à l'avance et les transmettons aux spécialistes mandatés."
+      },
+      {
+        "Question": "Pouvez-vous nous accompagner vers l'imposition d'après la dépense (forfait fiscal) ?",
+        "Answer": "Oui, pour les familles qui s'installent en Suisse, lorsque les conditions légales sont réunies. Nous coordonnons le dossier avec votre conseiller fiscal et les autorités cantonales, préparons les informations demandées par l'administration et suivons le dossier dans la durée."
+      },
+      {
+        "Question": "Gérez-vous les paiements et la trésorerie de la famille ?",
+        "Answer": "Oui. Nous administrons les paiements et suivons la trésorerie des membres de la famille et de leurs structures, avec des contrôles et une traçabilité à chaque étape."
+      },
+      {
+        "Question": "Pouvez-vous prendre en charge la paie de nos employés ?",
+        "Answer": "Oui, pour tous vos employeurs, qu'il s'agisse du personnel de maison ou des collaborateurs de vos structures et de votre family office. Cela comprend les contrats, les salaires Swissdec, les assurances sociales, l'impôt à la source et les permis."
+      }
+    ]
+  }
 }

@@ -34,5 +34,26 @@
     "Title": "Eine gelassene Nachfolge",
     "Body": "Ein klarer Rahmen mindert Spannungen und schützt die Einheit der Familie. Wir sorgen für dessen Koordination, diskret und über die Zeit."
   },
-  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Wozu dient eine Familiencharta?",
+        "Answer": "Eine Familiencharta legt die Grundsätze, die Rollen und die Entscheidungswege der Familie fest. Wir begleiten ihre Ausarbeitung und danach ihre Umsetzung im Lauf der Familienräte."
+      },
+      {
+        "Question": "Wie wirkt Ridger bei der Nachlassplanung mit?",
+        "Answer": "Wir koordinieren die Nachlassplanung mit Ihren Anwälten und Notaren im Rahmen des schweizerischen Zivilrechts, bis die beschlossenen Regelungen umgesetzt sind. Ridger organisiert und verfolgt die Arbeit, die Urkunden bleiben Sache Ihrer Anwälte und Notare."
+      },
+      {
+        "Question": "Kann Ridger Trustee unseres Trusts oder unserer Stiftung sein?",
+        "Answer": "Nein. Trust- und Stiftungsstrukturen werden von etablierten Schweizer Partnern umgesetzt, und Ridger koordiniert sie als Anlaufstelle, ohne jemals als Trustee zu handeln."
+      },
+      {
+        "Question": "Wie bereiten Sie die nächste Generation vor?",
+        "Answer": "Wir begleiten die nächste Generation, damit sie schrittweise Verantwortung übernimmt. Ausserdem bereiten wir Familienräte vor und leiten sie, mit strukturiertem und dokumentiertem Austausch."
+      }
+    ]
+  }
 }

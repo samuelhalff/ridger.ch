@@ -116,5 +116,26 @@
       { "label": "Rétrocessions identifiées et restituées", "value": "CHF 12'400" }
     ],
     "feesTotal": "Transparence totale des frais — CHF 248'900 économisés depuis 2024"
+  },
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Que peut-on suivre sur la plateforme Ridger ?",
+        "Answer": "La plateforme réunit vos titres, votre immobilier, vos documents et votre reporting dans une vue consolidée, tenue à jour et lisible à tout moment. Vous y retrouvez votre fortune consolidée, vos positions par banque et vos rapports."
+      },
+      {
+        "Question": "Où sont hébergées les données de la plateforme ?",
+        "Answer": "En Suisse. Les documents sont conservés dans un coffre-fort chiffré, et vos données ne sont partagées qu'avec les personnes que vous désignez."
+      },
+      {
+        "Question": "La plateforme sert-elle à gérer nos placements ?",
+        "Answer": "Non. Elle sert à suivre et à consolider votre patrimoine. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement, et la gestion reste chez vos banques et gérants régulés."
+      },
+      {
+        "Question": "Les frais bancaires sont-ils visibles sur la plateforme ?",
+        "Answer": "Oui. Le reporting rend lisibles les frais explicites et implicites de vos relations bancaires, pour que vous compreniez ce que coûte votre patrimoine."
+      }
+    ]
   }
 }

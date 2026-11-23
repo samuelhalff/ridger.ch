@@ -131,11 +131,6 @@ export const arkOrganization = {
     latitude: 46.2021556,
     longitude: 6.1399595,
   },
-  openingHours: {
-    opens: "09:00",
-    closes: "17:30",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  },
   // Ridger's own profiles only — never Ark's Maps/UID identifiers, so Google
   // keeps the two brands as distinct entities (affiliation is expressed via
   // parentOrganization below, not sameAs equivalence).
@@ -434,12 +429,8 @@ export function buildOrganizationGraph(locale: string = "fr") {
           latitude: arkOrganization.geo.latitude,
           longitude: arkOrganization.geo.longitude,
         },
-        openingHoursSpecification: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: arkOrganization.openingHours.dayOfWeek,
-          opens: arkOrganization.openingHours.opens,
-          closes: arkOrganization.openingHours.closes,
-        },
+        // No openingHoursSpecification: families are received by appointment
+        // and the site publishes no opening hours.
         areaServed: [
           { "@id": arkEntityIds.areaGeneva },
           { "@type": "Country", name: "Switzerland" },
@@ -549,15 +540,17 @@ export function buildArticleSchema(cfg: ArticleSchemaConfig) {
     "@type": cfg.schemaType || "Article",
     headline: cfg.headline,
     ...(cfg.description ? { description: cfg.description } : {}),
-    ...(cfg.author
-      ? {
+    // A named person with a page is the author; otherwise the firm,
+    // referenced by @id (the texts are not signed by a person).
+    ...(cfg.author && cfg.authorUrl && !/^ridger$/i.test(cfg.author)
+      ? { author: { "@type": "Person", name: cfg.author, url: cfg.authorUrl } }
+      : {
           author: {
-            "@type": cfg.authorUrl ? "Person" : "Organization",
-            name: cfg.author,
-            ...(cfg.authorUrl ? { url: cfg.authorUrl } : {}),
+            "@type": "Organization",
+            "@id": `${arkOrganization.url}/#organization`,
+            name: arkOrganization.name,
           },
-        }
-      : {}),
+        }),
     publisher: {
       "@type": "Organization",
       "@id": `${arkOrganization.url}/#organization`,

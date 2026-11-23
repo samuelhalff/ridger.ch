@@ -54,5 +54,26 @@
     "Title": "Administration under control",
     "Body": "You keep control and the overview; we take on the administrative execution and the coordination with your tax advisors."
   },
-  "Perimeter": "Tax and administrative coordination is carried out with your tax and legal advisors. Ridger provides coordination, reporting and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Tax and administrative coordination is carried out with your tax and legal advisors. Ridger provides coordination, reporting and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Does Ridger take care of our tax returns?",
+        "Answer": "We coordinate the tax returns and obligations of family members and their structures, working with your tax advisers. We keep a single tax calendar, gather the documents in advance and pass them to the specialists you have appointed."
+      },
+      {
+        "Question": "Can you help us apply for lump-sum taxation (forfait fiscal)?",
+        "Answer": "Yes, for families moving to Switzerland, where the legal conditions are met. We coordinate the file with your tax adviser and the cantonal authorities, prepare the information the tax office asks for and follow the file over time."
+      },
+      {
+        "Question": "Do you handle the family's payments and cash management?",
+        "Answer": "Yes. We administer payments and monitor cash for family members and their structures, with controls and a clear audit trail."
+      },
+      {
+        "Question": "Can you run payroll for our employees?",
+        "Answer": "Yes, for every employer in the family, whether for household staff or for the employees of your structures and your family office. This covers contracts, Swissdec payroll, social insurance, withholding tax and permits."
+      }
+    ]
+  }
 }

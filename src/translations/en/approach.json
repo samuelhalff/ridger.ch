@@ -34,5 +34,26 @@
     }
   ],
   "ArkNote": "Ridger is backed by an established Geneva fiduciary group, a mark of rigour and continuity:",
-  "CTA": "Request a confidential consultation"
+  "CTA": "Request a confidential consultation",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "Is Ridger independent of the banks?",
+        "Answer": "Yes. Ridger is neither a bank nor an asset manager, belongs to no bank and distributes no financial products. We have no transaction to prompt."
+      },
+      {
+        "Question": "How does a mandate with Ridger begin?",
+        "Answer": "With an audit of your existing setup: banking relationships, mandates, structures and advisers. We then put in place the consolidation of your wealth, followed by a rhythm of oversight and coordination suited to your priorities."
+      },
+      {
+        "Question": "Do you work with our independent asset managers?",
+        "Answer": "Yes. Your managers keep the management of your assets, and Ridger supervises and coordinates their work and holds them accountable, without ever managing in their place."
+      },
+      {
+        "Question": "How quickly does Ridger reply?",
+        "Answer": "We reply within one business day. Your single point of contact knows your files and keeps the memory of your decisions over time."
+      }
+    ]
+  }
 }

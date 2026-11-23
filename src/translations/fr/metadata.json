@@ -16,7 +16,7 @@
   "pages": {
     "/": {
       "title": "Multi family office à Genève | Ridger",
-      "description": "Multi-family office en Suisse, basé à Genève : reporting consolidé, coordination de vos conseillers, family office externalisé. Ridger ne gère pas d'actifs.",
+      "description": "Multi-family office en Suisse, basé à Genève : reporting consolidé, coordination des conseillers, family office externalisé. Ridger ne gère pas d'actifs.",
       "keywords": "family office genève, multi family office suisse, reporting consolidé, coordination family office, family office externalisé, création single family office"
     },
     "/approach": {
@@ -36,7 +36,7 @@
     },
     "/platform": {
       "title": "La plateforme | Ridger",
-      "description": "Découvrez la plateforme Ridger : un espace unique et sécurisé pour suivre titres, immobilier, documents et reporting de votre patrimoine. Illustration — données fictives.",
+      "description": "La plateforme Ridger : un espace sécurisé pour suivre titres, immobilier, documents et reporting de votre patrimoine. Illustration, données fictives.",
       "keywords": "plateforme family office, reporting patrimonial, coffre-fort numérique, suivi de fortune"
     },
     "/ressources": {
@@ -51,17 +51,17 @@
     },
     "/services/consolidated-reporting": {
       "title": "Reporting consolidé indépendant | Ridger",
-      "description": "Reporting consolidé indépendant à Genève : banques, dépositaires, immobilier et private equity dans une vue unique, avec transparence sur performance et frais.",
+      "description": "Reporting consolidé indépendant à Genève : banques, dépositaires, immobilier et private equity dans une vue unique, performance et frais transparents.",
       "keywords": "reporting consolidé, consolidation patrimoniale, reporting indépendant, performance TWR, transparence des frais"
     },
     "/services/investment-oversight": {
       "title": "Surveillance des investissements | Ridger",
-      "description": "Surveillance des investissements à Genève : suivi des mandats et gérants, revues de performance, frais et risque, préparation du comité d'investissement familial.",
+      "description": "Surveillance des investissements à Genève : suivi des gérants, revues de performance, frais et risque, préparation du comité d'investissement familial.",
       "keywords": "surveillance investissements, contrôle des gérants, revue de performance, comité d'investissement familial"
     },
     "/services/family-office-coordination": {
       "title": "Coordination family office | Ridger",
-      "description": "Coordination à Genève : un interlocuteur unique pour vos conseillers et prestataires, la relocation et les permis (B, C, G), et l'intendance de vos résidences.",
+      "description": "Coordination à Genève : un interlocuteur unique pour vos conseillers, la relocation et les permis (B, C, G), et l'intendance de vos résidences.",
       "keywords": "coordination family office genève, interlocuteur unique, relocation genève, permis B C G, s'installer en suisse, démarches OCPM, frontalier, intendance de maisons, coordination prestataires"
     },
     "/services/governance-succession": {
@@ -71,7 +71,7 @@
     },
     "/services/tax-administration": {
       "title": "Fiscalité et administration | Ridger",
-      "description": "Fiscalité, administration et paie à Genève : conformité et optimisation fiscales, paie du personnel de maison (AVS, LPP, impôt à la source), domiciliation et gestion du courrier.",
+      "description": "Fiscalité, administration et paie à Genève : conformité et optimisation fiscales, paie du personnel de maison, domiciliation et gestion du courrier.",
       "keywords": "conformité fiscale suisse, optimisation fiscale, forfait fiscal, paie personnel de maison, déclarer employé de maison genève, charges sociales AVS, domiciliation, gestion du courrier, administration familiale genève"
     },
     "/services/digital-vault": {
@@ -81,7 +81,7 @@
     },
     "/services/real-estate-transactions": {
       "title": "Immobilier et transactions | Ridger",
-      "description": "Immobilier à Genève : gestion et administration de vos biens, gérance locative, coordination des travaux et rénovations, repérage d'opportunités et transactions avec notaires et banques.",
+      "description": "Immobilier à Genève : administration de vos biens, supervision de la gérance, travaux, repérage d'opportunités et transactions avec notaires et banques.",
       "keywords": "gestion immobilière genève, gérance bien locatif, coordination travaux rénovation genève, coordination prestataires, régies, transactions immobilières, administration de biens"
     },
     "/services/property-management": {
@@ -116,7 +116,7 @@
     },
     "/family-office/zurich": {
       "title": "Family office pour Zurich | Ridger",
-      "description": "Basé à Genève, Ridger accompagne des familles de Zurich à distance, avec des rencontres en personne si utile : reporting consolidé et coordination des conseillers.",
+      "description": "Basé à Genève, Ridger accompagne des familles de Zurich à distance et en personne si utile : reporting consolidé et coordination des conseillers.",
       "keywords": "family office Zurich, multi-family office Suisse, reporting consolidé, coordination des conseillers, familles zurichoises"
     },
     "/family-office/zug": {
@@ -131,7 +131,7 @@
     },
     "/legal/privacy": {
       "title": "Politique de confidentialité | Ridger",
-      "description": "Politique de confidentialité de Ridger, marque de Ark Fiduciaire SA. Comment nous protégeons et traitons vos données selon les exigences suisses et européennes.",
+      "description": "Politique de confidentialité de Ridger, marque de Ark Fiduciaire SA. Comment nous protégeons et traitons vos données selon le droit suisse et européen.",
       "keywords": "politique confidentialité, protection données, données personnelles, ark fiduciaire"
     },
     "/legal/terms": {

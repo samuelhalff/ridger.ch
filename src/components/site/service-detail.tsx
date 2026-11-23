@@ -1,3 +1,4 @@
+import PageFaq from "@/src/components/site/page-faq";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/src/components/ui/button";
@@ -318,6 +319,8 @@ const ServiceDetail = async ({
           </div>
         </div>
       </section>
+
+      <PageFaq locale={currentLocale} ns={namespace} nonce={nonce} />
     </div>
   );
 };

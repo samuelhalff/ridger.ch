@@ -88,5 +88,26 @@
   "MapDisclaimer": "The map is provided by Google Maps. Load it only if you agree to possible data transfer (see our privacy policy).",
   "MapLoadButton": "Display interactive map",
   "MapOpenExternal": "Open in Google Maps",
-  "MapPrivacyPlaceholder": "For privacy reasons, the map is not loaded automatically."
+  "MapPrivacyPlaceholder": "For privacy reasons, the map is not loaded automatically.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "How can we contact Ridger?",
+        "Answer": "You can write to us through the contact form or at contact@ridger.ch, call us on +41 22 512 50 50, book a call, or message us on WhatsApp for quick questions."
+      },
+      {
+        "Question": "How quickly will we get a reply?",
+        "Answer": "We reply within one business day, with the strictest discretion."
+      },
+      {
+        "Question": "What happens in a first meeting?",
+        "Answer": "It is a confidential, no-obligation conversation, in Geneva or remotely, to understand your situation and priorities."
+      },
+      {
+        "Question": "Where is Ridger's office?",
+        "Answer": "Our office is at 26 Boulevard Georges Favon, 1204 Geneva. We also work with families elsewhere in Switzerland remotely, and arrange in-person meetings when useful."
+      }
+    ]
+  }
 }

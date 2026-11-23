@@ -42,5 +42,26 @@
     "Title": "Reporting on your rhythm",
     "Body": "Monthly, quarterly or on demand, your reporting is structured around your priorities and shared securely with the people you designate."
   },
-  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What is consolidated wealth reporting?",
+        "Answer": "It is a single view of all your wealth, bringing together your bank accounts, custodians, real estate, private equity holdings and collectibles in one reference currency. The reporting is independent of any bank, and the figures are cross-checked against the official statements of each counterparty."
+      },
+      {
+        "Question": "How is the performance of our wealth measured?",
+        "Answer": "We calculate time-weighted returns (TWR) and compare them with benchmark indices. The report also shows what contributed to the result."
+      },
+      {
+        "Question": "Does the reporting show bank fees?",
+        "Answer": "Yes. We identify the explicit and implicit fees across your banking relationships, so you know what your wealth actually costs."
+      },
+      {
+        "Question": "How often do we receive the reporting?",
+        "Answer": "Monthly, quarterly or on request, depending on your priorities. It is shared securely with the people you designate, and it can be prepared ahead of each meeting of your family investment committee."
+      }
+    ]
+  }
 }

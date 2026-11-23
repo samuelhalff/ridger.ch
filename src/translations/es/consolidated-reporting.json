@@ -42,5 +42,26 @@
     "Title": "Un reporting a su ritmo",
     "Body": "Mensual, trimestral o a petición, su reporting se estructura según sus prioridades y se comparte de forma segura con las personas que usted designe."
   },
-  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Qué es un reporting patrimonial consolidado?",
+        "Answer": "Es una visión única de todo su patrimonio, que reúne sus cuentas bancarias, sus depositarios, sus inmuebles, sus participaciones en private equity y sus activos de colección en su divisa de referencia. Este reporting es independiente de cualquier banco, y las cifras se contrastan con los extractos oficiales de cada contraparte."
+      },
+      {
+        "Question": "¿Cómo se mide la rentabilidad de nuestro patrimonio?",
+        "Answer": "Calculamos una rentabilidad ponderada por el tiempo (TWR) y la comparamos con índices de referencia. El informe muestra también qué ha contribuido al resultado."
+      },
+      {
+        "Question": "¿El reporting muestra las comisiones bancarias?",
+        "Answer": "Sí. Recopilamos las comisiones explícitas e implícitas de sus relaciones bancarias, para que sepa cuánto cuesta realmente su patrimonio."
+      },
+      {
+        "Question": "¿Con qué frecuencia recibiremos el reporting?",
+        "Answer": "Cada mes, cada trimestre o a petición, según sus prioridades. Se comparte de forma segura con las personas que usted designe y puede prepararse antes de cada reunión de su comité de inversiones familiar."
+      }
+    ]
+  }
 }

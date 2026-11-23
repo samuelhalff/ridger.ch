@@ -54,5 +54,26 @@
     "Title": "O seu tempo preservado",
     "Body": "Mantém o controlo sobre as decisões. Assumimos a coordenação, os follow-ups e a circulação da informação entre os seus consultores."
   },
-  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "O que é um family office externalizado?",
+        "Answer": "É a organização de um single family office, sem ter de o criar. A Ridger torna-se o ponto de contacto único da família e coordena os seus banqueiros, advogados, notários, consultores fiscais e seguradores."
+      },
+      {
+        "Question": "É preciso mudar de consultores para trabalhar com a Ridger?",
+        "Answer": "Não. Partimos do ecossistema que a sua família já construiu e integramo-lo, sem substituir os consultores existentes."
+      },
+      {
+        "Question": "A Ridger trata também das nossas residências e de pedidos particulares?",
+        "Answer": "Sim. Asseguramos a intendência das suas residências, na Suíça e no estrangeiro, e tratamos, para as famílias estabelecidas, de certos pedidos particulares, como viagens, pessoal, compras excecionais ou projetos especiais."
+      },
+      {
+        "Question": "Podem ajudar-nos a criar um single family office?",
+        "Answer": "Sim. Ajudamos a planear e a coordenar a sua criação com os seus advogados e consultores, que asseguram a estruturação jurídica."
+      }
+    ]
+  }
 }

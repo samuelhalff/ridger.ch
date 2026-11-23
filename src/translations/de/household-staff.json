@@ -51,5 +51,26 @@
     "Title": "Ein gut geführter Haushalt",
     "Body": "Sie wählen die Menschen aus und setzen die Prioritäten im Haus. Wir sorgen für die administrative Ordnung, die Fristen und die tägliche Koordination."
   },
-  "Perimeter": "Die Arbeitsbedingungen richten sich nach dem geltenden Recht und dem anwendbaren Normalarbeitsvertrag; arbeitsrechtliche Fragen werden mit Ihren Anwälten behandelt. Ridger erbringt Administration, Lohnabrechnung und Koordination für Ihr Hauspersonal. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Die Arbeitsbedingungen richten sich nach dem geltenden Recht und dem anwendbaren Normalarbeitsvertrag; arbeitsrechtliche Fragen werden mit Ihren Anwälten behandelt. Ridger erbringt Administration, Lohnabrechnung und Koordination für Ihr Hauspersonal. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Welche Pflichten hat ein Arbeitgeber von Hauspersonal in Genf?",
+        "Answer": "Wer eine Haushälterin, eine Nanny, einen Chauffeur oder einen Gärtner anstellt, wird mit seinem Haushalt zum Arbeitgeber. In Genf bedeutet das einen Vertrag auf Grundlage des Normalarbeitsvertrags für die Hauswirtschaft (CTT-EDom), Sozialversicherungen ab dem ersten Lohn und monatliche Meldungen."
+      },
+      {
+        "Question": "Übernehmen Sie die Löhne unseres Hauspersonals?",
+        "Answer": "Ja. Jeden Monat berechnen und zahlen wir die Löhne, erstellen die Lohnabrechnungen und Beitragsabrechnungen und verfolgen Ferien und Absenzen. Wir behalten auch die Quellensteuer zurück, wenn das Personal ihr untersteht, und stellen die jährlichen Lohnausweise aus."
+      },
+      {
+        "Question": "Können Sie uns bei der Rekrutierung von Hauspersonal helfen?",
+        "Answer": "Ja. Wir koordinieren die Rekrutierung mit Agenturen oder Ihren eigenen Kontakten und bereiten schriftliche Verträge auf Grundlage des CTT-EDom vor, bei Bedarf von Ihren Anwälten gegengelesen."
+      },
+      {
+        "Question": "Genügt der Chèque service für ein paar Arbeitsstunden?",
+        "Answer": "Ja, für eine Anstellung von wenigen Stunden kann der Genfer Chèque service die richtige Wahl sein. Wir helfen Ihnen zu prüfen, ob er zu Ihrem Haushalt passt, und übernehmen die komplexeren Situationen."
+      }
+    ]
+  }
 }

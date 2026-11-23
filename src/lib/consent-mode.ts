@@ -150,7 +150,8 @@ export function isValidMeasurementId(id: string | undefined | null): id is strin
 /**
  * Inline script for the root layout. Runs before any gtag 'js'/'config' or
  * event: regional defaults (most specific region wins, no region = rest of
- * world), then the stored choice as an update, then gtag.js is injected.
+ * world), then the stored choice as an update, then gtag.js is injected
+ * after the load event, in idle time.
  */
 export function buildConsentBootstrap(measurementId: string): string {
   if (!isValidMeasurementId(measurementId)) {
@@ -182,10 +183,17 @@ export function buildConsentBootstrap(measurementId: string): string {
     `else if(c==='minimal'||c==='declined'){gtag('consent','update',${JSON.stringify(denied)});}`,
     "gtag('js',new Date());",
     `gtag('config',${id});`,
-    "var s=document.createElement('script');s.async=true;",
+    // gtag.js itself waits for the load event, then idle time (3 s at most):
+    // the consent defaults and the js/config calls above are already queued
+    // in dataLayer and are read when the library arrives. The nonce is read
+    // now, document.currentScript is gone once this script has run.
+    "var cs=document.currentScript,nn=cs&&cs.nonce;",
+    "function ld(){var s=document.createElement('script');s.async=true;",
     `s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(${id});`,
-    "var cs=document.currentScript;if(cs&&cs.nonce)s.nonce=cs.nonce;",
-    "(document.head||document.documentElement).appendChild(s);",
+    "if(nn)s.nonce=nn;",
+    "(document.head||document.documentElement).appendChild(s);}",
+    "function idle(){if(typeof window.requestIdleCallback==='function'){window.requestIdleCallback(ld,{timeout:3000});}else{setTimeout(ld,1);}}",
+    "if(document.readyState==='complete'){idle();}else{window.addEventListener('load',idle,{once:true});}",
     "})();",
   ].join("");
 }

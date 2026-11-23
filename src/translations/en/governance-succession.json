@@ -34,5 +34,26 @@
     "Title": "A composed transition",
     "Body": "A clear framework reduces tension and protects family unity. We coordinate it, discreetly and over the long term."
   },
-  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice."
+  "Perimeter": "Execution, custody and asset management remain with your chosen regulated banks and asset managers. Ridger provides consolidation, reporting, coordination and administrative oversight. Ridger does not manage assets and does not provide investment advice.",
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What is a family charter for?",
+        "Answer": "A family charter sets out the family's principles, roles and decision-making rules. We help draft it, then put it into practice through family councils."
+      },
+      {
+        "Question": "How is Ridger involved in succession planning?",
+        "Answer": "We coordinate succession planning with your lawyers and notaries under Swiss civil law, through to the implementation of the chosen arrangements. Ridger organises and follows the work, while deeds and legal documents remain with your lawyers and notaries."
+      },
+      {
+        "Question": "Can Ridger act as trustee of our trust or foundation?",
+        "Answer": "No. Trust and foundation structures are put in place by established Swiss partners, and Ridger coordinates them as point of contact, never as trustee."
+      },
+      {
+        "Question": "How do you prepare the next generation?",
+        "Answer": "We support the next generation so that responsibilities pass to them gradually. We also prepare and run family councils, with structured and documented discussions."
+      }
+    ]
+  }
 }

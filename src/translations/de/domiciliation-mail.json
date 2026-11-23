@@ -34,5 +34,26 @@
     "Title": "Nichts geht verloren",
     "Body": "Wo immer Sie sind, wissen Sie, was eingetroffen ist, was eine Handlung erfordert und was erledigt wurde. Wir halten alles in Ordnung, diskret."
   },
-  "Perimeter": "Eine Korrespondenzadresse begründet weder einen zivilrechtlichen Wohnsitz noch eine steuerliche Ansässigkeit. Rechtliche und steuerliche Fragen zu Wohnsitz und Substanz von Gesellschaften werden mit Ihren Anwälten und Steuerberatern behandelt. Ridger erbringt Postempfang, Postverwaltung und administrative Koordination. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Eine Korrespondenzadresse begründet weder einen zivilrechtlichen Wohnsitz noch eine steuerliche Ansässigkeit. Rechtliche und steuerliche Fragen zu Wohnsitz und Substanz von Gesellschaften werden mit Ihren Anwälten und Steuerberatern behandelt. Ridger erbringt Postempfang, Postverwaltung und administrative Koordination. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Bieten Sie die Domizilierung von Gesellschaften in Genf an?",
+        "Answer": "Ja, für die Holding- oder Verwaltungsgesellschaften der Familie. Wo die Vorschriften es verlangen, muss eine Gesellschaft über echte Substanz verfügen und dort ihre Verwaltungsentscheide treffen, und wir berücksichtigen das gemeinsam mit Ihren Beratern."
+      },
+      {
+        "Question": "Ändert eine Korrespondenzadresse in Genf unseren Wohnsitz?",
+        "Answer": "Nein. Eine Korrespondenzadresse bleibt eine Postadresse: Sie begründet weder einen zivilrechtlichen Wohnsitz noch eine steuerliche Ansässigkeit, die von Ihrer tatsächlichen Situation abhängen. Sie bleibt von Ihrem rechtlichen Wohnsitz getrennt und ist jederzeit widerrufbar."
+      },
+      {
+        "Question": "Wie wird unsere Post bearbeitet?",
+        "Answer": "Wir nehmen sie entgegen, sortieren und digitalisieren sie und stellen sie dann sicher in Ihrem digitalen Tresor bereit. Die Originale werden nach Ihren Anweisungen aufbewahrt oder weitergeleitet."
+      },
+      {
+        "Question": "Wer verfolgt die Fristen, die in der Post enthalten sind?",
+        "Answer": "Wir erkennen die Fristen, etwa bei Steuerbescheiden, Behördenschreiben oder Rechnungen, und koordinieren die Antworten mit Ihnen und Ihren Beratern."
+      }
+    ]
+  }
 }

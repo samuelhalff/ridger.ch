@@ -54,5 +54,26 @@
     "Title": "Votre temps préservé",
     "Body": "Vous gardez la main sur les décisions. Nous prenons en charge la coordination, les relances et la circulation de l'information entre vos conseillers."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Qu'est-ce qu'un family office externalisé ?",
+        "Answer": "C'est l'organisation d'un single family office, sans avoir à en créer un. Ridger devient le point de contact unique de la famille et coordonne ses banquiers, avocats, notaires, conseillers fiscaux et assureurs."
+      },
+      {
+        "Question": "Faut-il changer de conseillers pour travailler avec Ridger ?",
+        "Answer": "Non. Nous partons de l'écosystème que votre famille a déjà construit et l'intégrons, sans remplacer les conseillers en place."
+      },
+      {
+        "Question": "Ridger s'occupe-t-il aussi de nos résidences et de demandes particulières ?",
+        "Answer": "Oui. Nous assurons l'intendance de vos résidences, en Suisse comme à l'étranger, et prenons en charge pour les familles établies certaines demandes particulières, comme des voyages, du personnel, des achats exceptionnels ou des projets spéciaux."
+      },
+      {
+        "Question": "Pouvez-vous nous aider à créer un single family office ?",
+        "Answer": "Oui. Nous aidons à planifier et à coordonner sa mise en place avec vos avocats et conseillers, qui en assurent la structuration juridique."
+      }
+    ]
+  }
 }

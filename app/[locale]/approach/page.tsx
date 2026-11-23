@@ -1,3 +1,4 @@
+import PageFaq from "@/src/components/site/page-faq";
 import { Metadata } from "next";
 import Link from "next/link";
 import { headers } from "next/headers";
@@ -127,6 +128,7 @@ export default async function ApproachPage(props: {
           </Button>
         </Link>
       </div>
+      <PageFaq locale={locale} ns="approach" nonce={nonce} />
     </div>
   );
 }

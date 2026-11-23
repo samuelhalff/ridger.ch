@@ -116,5 +116,26 @@
       { "label": "Retrocessions identified and returned", "value": "CHF 12'400" }
     ],
     "feesTotal": "Full fee transparency — CHF 248'900 saved since 2024"
+  },
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Questions": [
+      {
+        "Question": "What can we follow on the Ridger platform?",
+        "Answer": "The platform brings your securities, real estate, documents and reporting together in a consolidated view, kept current and readable at any moment. You see your consolidated wealth, your positions by bank and your reports."
+      },
+      {
+        "Question": "Where is the platform's data hosted?",
+        "Answer": "In Switzerland. Documents are kept in an encrypted vault, and your data is shared only with the people you designate."
+      },
+      {
+        "Question": "Is the platform used to manage our investments?",
+        "Answer": "No. It is used to follow and consolidate your wealth. Ridger does not manage assets or provide investment advice, and management stays with your regulated banks and managers."
+      },
+      {
+        "Question": "Can we see bank fees on the platform?",
+        "Answer": "Yes. The reporting makes the explicit and implicit fees of your banking relationships legible, so you understand what your wealth costs."
+      }
+    ]
   }
 }

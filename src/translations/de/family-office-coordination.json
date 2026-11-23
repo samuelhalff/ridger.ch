@@ -54,5 +54,26 @@
     "Title": "Ihre Zeit bewahrt",
     "Body": "Sie behalten die Kontrolle über die Entscheidungen. Wir übernehmen die Koordination, die Nachfassungen und den Informationsfluss zwischen Ihren Beratern."
   },
-  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Ausführung, Verwahrung und Verwaltung der Vermögenswerte verbleiben bei den regulierten Banken und Vermögensverwaltern Ihrer Wahl. Ridger erbringt Konsolidierung, Reporting, Koordination und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Was ist ein ausgelagertes Family Office?",
+        "Answer": "Es ist die Organisation eines Single Family Office, ohne dass Sie eines aufbauen müssen. Ridger wird zum einzigen Ansprechpartner der Familie und koordiniert ihre Banker, Anwälte, Notare, Steuerberater und Versicherer."
+      },
+      {
+        "Question": "Müssen wir für die Zusammenarbeit mit Ridger unsere Berater wechseln?",
+        "Answer": "Nein. Wir gehen vom Ökosystem aus, das Ihre Familie bereits aufgebaut hat, und binden es ein, ohne die bestehenden Berater zu ersetzen."
+      },
+      {
+        "Question": "Kümmert sich Ridger auch um unsere Residenzen und besondere Anliegen?",
+        "Answer": "Ja. Wir übernehmen die Haushaltsführung Ihrer Residenzen in der Schweiz und im Ausland und kümmern uns für etablierte Familien um bestimmte besondere Anliegen, etwa Reisen, Personal, ausserordentliche Anschaffungen oder Sonderprojekte."
+      },
+      {
+        "Question": "Können Sie uns beim Aufbau eines Single Family Office helfen?",
+        "Answer": "Ja. Wir helfen, den Aufbau zu planen und mit Ihren Anwälten und Beratern zu koordinieren, die für die rechtliche Strukturierung zuständig sind."
+      }
+    ]
+  }
 }

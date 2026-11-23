@@ -34,5 +34,26 @@
     "Title": "Une transmission sereine",
     "Body": "Un cadre clair réduit les tensions et protège l'unité familiale. Nous en assurons la coordination, discrètement et dans la durée."
   },
-  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "L'exécution, la conservation et la gestion des actifs restent assurées par les banques et gérants régulés de votre choix. Ridger fournit la consolidation, le reporting, la coordination et la supervision administrative. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "À quoi sert une charte familiale ?",
+        "Answer": "Une charte familiale fixe les principes, les rôles et les modes de décision de la famille. Nous accompagnons sa rédaction, puis sa mise en vie au fil des conseils de famille."
+      },
+      {
+        "Question": "Comment Ridger intervient-il dans la planification successorale ?",
+        "Answer": "Nous coordonnons la planification successorale avec vos avocats et notaires, dans le cadre du droit civil suisse, jusqu'à la mise en œuvre des dispositions retenues. Ridger organise et suit le travail, et les actes restent l'affaire de vos avocats et notaires."
+      },
+      {
+        "Question": "Ridger peut-il être trustee de notre trust ou de notre fondation ?",
+        "Answer": "Non. Les structures de trust et de fondation sont mises en œuvre par des partenaires suisses établis, et Ridger les coordonne en tant que point de contact, sans jamais agir comme trustee."
+      },
+      {
+        "Question": "Comment préparez-vous la génération suivante ?",
+        "Answer": "Nous accompagnons la génération suivante pour qu'elle reprenne les responsabilités progressivement. Nous préparons et animons aussi des conseils de famille, avec des échanges structurés et documentés."
+      }
+    ]
+  }
 }

@@ -54,5 +54,26 @@
     "Title": "Eine beherrschte Administration",
     "Body": "Sie behalten die Kontrolle und den Gesamtüberblick; wir übernehmen die administrative Ausführung und die Koordination mit Ihren Steuerberatern."
   },
-  "Perimeter": "Die steuerliche und administrative Koordination erfolgt in Zusammenarbeit mit Ihren Steuer- und Rechtsberatern. Ridger erbringt Koordination, Reporting und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung."
+  "Perimeter": "Die steuerliche und administrative Koordination erfolgt in Zusammenarbeit mit Ihren Steuer- und Rechtsberatern. Ridger erbringt Koordination, Reporting und administrative Aufsicht. Ridger verwaltet keine Vermögenswerte und erbringt keine Anlageberatung.",
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Questions": [
+      {
+        "Question": "Kümmert sich Ridger um unsere Steuererklärungen?",
+        "Answer": "Wir koordinieren die Steuererklärungen und steuerlichen Pflichten der Familienmitglieder und ihrer Strukturen, gemeinsam mit Ihren Steuerberatern. Wir führen einen einzigen Steuerkalender, stellen die Unterlagen im Voraus zusammen und übergeben sie den beauftragten Spezialisten."
+      },
+      {
+        "Question": "Können Sie uns bei der Aufwandbesteuerung (Pauschalbesteuerung) begleiten?",
+        "Answer": "Ja, für Familien, die sich in der Schweiz niederlassen, sofern die gesetzlichen Voraussetzungen erfüllt sind. Wir koordinieren das Dossier mit Ihrem Steuerberater und den kantonalen Behörden, bereiten die von der Verwaltung verlangten Angaben vor und begleiten das Dossier langfristig."
+      },
+      {
+        "Question": "Verwalten Sie die Zahlungen und die Liquidität der Familie?",
+        "Answer": "Ja. Wir wickeln die Zahlungen ab und überwachen die Liquidität der Familienmitglieder und ihrer Strukturen, mit Kontrollen und Nachvollziehbarkeit in jedem Schritt."
+      },
+      {
+        "Question": "Können Sie die Lohnabrechnung für unsere Angestellten übernehmen?",
+        "Answer": "Ja, für alle Ihre Arbeitgeberrollen, ob Hauspersonal oder Mitarbeitende Ihrer Strukturen und Ihres Family Office. Dazu gehören Verträge, Löhne nach Swissdec, Sozialversicherungen, Quellensteuer und Bewilligungen."
+      }
+    ]
+  }
 }

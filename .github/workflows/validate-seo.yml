@@ -6,7 +6,8 @@ on:
       - 'app/**'
       - 'src/**'
       - 'scripts/validate-seo.js'
-      - 'scripts/ping-sitemaps.js'
+      - 'public/robots.txt'
+      - 'next.config.js'
 
 jobs:
   check:
@@ -22,10 +23,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Validate SEO (non-blocking)
-        continue-on-error: true
+      - name: Validate SEO (blocking)
         run: node scripts/validate-seo.js
-
-      - name: Ping sitemap (non-blocking)
-        continue-on-error: true
-        run: node scripts/ping-sitemaps.js --url https://ridger.ch --path /sitemap.xml

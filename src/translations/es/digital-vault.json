@@ -30,5 +30,26 @@
     "Title": "Un patrimonio documental duradero",
     "Body": "Flujos de trabajo digitales que ahorran tiempo, sin transigir jamás en seguridad ni discreción."
   },
-  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La ejecución, la custodia y la gestión de los activos siguen a cargo de los bancos y gestores regulados que usted elija. Ridger aporta la consolidación, el reporting, la coordinación y la supervisión administrativa. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Qué es la caja fuerte digital de Ridger?",
+        "Answer": "Es un espacio documental cifrado que reúne los documentos de la familia, como escrituras, contratos, extractos y decisiones, en carpetas estructuradas. Usted encuentra cada documento en el momento oportuno, en lugar de buscarlo entre correos, carpetas e intervinientes."
+      },
+      {
+        "Question": "¿Dónde se alojan nuestros documentos?",
+        "Answer": "En Suiza. La caja fuerte está cifrada y alojada en Suiza, de acuerdo con sus exigencias de residencia de los datos y de confidencialidad."
+      },
+      {
+        "Question": "¿Podemos compartir documentos con nuestros asesores?",
+        "Answer": "Sí, de forma selectiva. Usted decide quién ve qué, y conserva el registro de cada acceso."
+      },
+      {
+        "Question": "¿El correo que recibimos puede archivarse en la caja fuerte?",
+        "Answer": "Sí. Cuando Ridger recibe su correo, se clasifica, se digitaliza y se pone a su disposición de forma segura en su caja fuerte digital."
+      }
+    ]
+  }
 }

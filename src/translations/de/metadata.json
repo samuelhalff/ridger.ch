@@ -16,12 +16,12 @@
   "pages": {
     "/": {
       "title": "Family Office in Genf | Ridger",
-      "description": "Multi-Family-Office in der Schweiz, Sitz in Genf: konsolidiertes Reporting, Koordination Ihrer Berater, ausgelagertes Family Office – ohne Vermögensverwaltung.",
+      "description": "Multi-Family-Office mit Sitz in Genf: konsolidiertes Reporting, Koordination Ihrer Berater, ausgelagertes Family Office. Keine Vermögensverwaltung.",
       "keywords": "Family Office Genf, Multi Family Office Schweiz, Vermögensberichterstattung, Family Office Koordination, ausgelagertes Family Office, Single Family Office gründen"
     },
     "/approach": {
       "title": "Unser Ansatz | Ridger",
-      "description": "Unabhängigkeit, Kostentransparenz und Schweizer Diskretion. Entdecken Sie die Methode eines Family Office, das Ihre Interessen koordiniert und konsolidiert.",
+      "description": "Unabhängigkeit, Kostentransparenz und Schweizer Diskretion. Die Methode eines Family Office, das Ihre Interessen koordiniert und konsolidiert.",
       "keywords": "unabhängiges Family Office Genf, Family Office Ansatz, Kostentransparenz, Schweizer Diskretion"
     },
     "/contact": {
@@ -46,12 +46,12 @@
     },
     "/services/consolidated-reporting": {
       "title": "Unabhängiges konsolidiertes Reporting | Ridger",
-      "description": "Unabhängiges konsolidiertes Reporting in Genf: Banken, Depotstellen, Immobilien und Private Equity in einer Sicht, mit Transparenz über Performance und Kosten.",
+      "description": "Konsolidiertes Reporting in Genf: Banken, Depotstellen, Immobilien und Private Equity in einer Sicht, mit Transparenz über Performance und Kosten.",
       "keywords": "konsolidiertes Reporting, Vermögenskonsolidierung, unabhängiges Reporting, Performance TWR, Kostentransparenz"
     },
     "/services/investment-oversight": {
       "title": "Anlageüberwachung | Ridger",
-      "description": "Anlageüberwachung in Genf: Überwachung der Mandate und Vermögensverwalter, Auswertung von Performance, Kosten und Risiko, Vorbereitung des Anlageausschusses.",
+      "description": "Anlageüberwachung in Genf: Überwachung von Mandaten und Verwaltern, Auswertung von Performance, Kosten und Risiko, Vorbereitung des Anlageausschusses.",
       "keywords": "Anlageüberwachung, Kontrolle der Vermögensverwalter, Performance-Auswertung, Familien-Anlageausschuss"
     },
     "/services/family-office-coordination": {
@@ -66,7 +66,7 @@
     },
     "/services/tax-administration": {
       "title": "Steuern und Administration | Ridger",
-      "description": "Steuern, Administration und Lohn in Genf: Steuer-Compliance und -Optimierung, Lohn für Hauspersonal (AHV, BVG, Quellensteuer), Domizilierung und Postverwaltung.",
+      "description": "Steuern, Administration und Lohn in Genf: Steuer-Compliance und -Optimierung, Lohn für Hauspersonal (AHV, BVG, Quellensteuer), Domizilierung und Post.",
       "keywords": "Steuer-Compliance Schweiz, Steueroptimierung, Pauschalbesteuerung, Lohn Hauspersonal, Hauspersonal anmelden Genf, Sozialabgaben AHV, Domizilierung, Postverwaltung, Familienadministration Genf"
     },
     "/services/digital-vault": {
@@ -126,7 +126,7 @@
     },
     "/legal/privacy": {
       "title": "Datenschutzerklärung | Ridger",
-      "description": "Datenschutzerklärung von Ridger, Marke der Ark Fiduciaire SA. Wie wir Ihre Daten nach schweizerischen und europäischen Anforderungen schützen und verarbeiten.",
+      "description": "Datenschutzerklärung von Ridger, Marke der Ark Fiduciaire SA. Wie wir Ihre Daten nach schweizerischen und europäischen Vorgaben schützen und verarbeiten.",
       "keywords": "Datenschutzerklärung, Datenschutz, personenbezogene Daten, Ark Fiduciaire"
     },
     "/legal/terms": {
@@ -141,7 +141,7 @@
     },
     "/ai-profile": {
       "title": "Ridger-Profil für KI-Assistenten",
-      "description": "Faktisches Profil von Ridger: Identität, Adresse in Genf, Family-Office-Leistungen, betreute Regionen, Zugehörigkeiten und Grenzen (keine Vermögensverwaltung).",
+      "description": "Faktisches Profil von Ridger: Identität, Adresse in Genf, Family-Office-Leistungen, betreute Regionen, Zugehörigkeiten und Grenzen (keine Verwaltung).",
       "keywords": "Ridger, Family Office Genf, KI-Assistenten, konsolidiertes Reporting, Multi Family Office"
     },
     "/platform": {

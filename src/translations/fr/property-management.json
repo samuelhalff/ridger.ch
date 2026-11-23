@@ -38,5 +38,26 @@
     "Title": "Un parc suivi dans la durée",
     "Body": "Vous décidez des orientations de votre patrimoine immobilier. Nous en assurons l'administration, la cohérence et la mémoire, bien après la signature."
   },
-  "Perimeter": "La gestion locative opérationnelle reste assurée par vos régies lorsqu'elles sont mandatées, et les questions juridiques et fiscales par vos avocats, notaires et conseillers fiscaux. Ridger assure l'administration, la supervision, la coordination et le reporting. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "La gestion locative opérationnelle reste assurée par vos régies lorsqu'elles sont mandatées, et les questions juridiques et fiscales par vos avocats, notaires et conseillers fiscaux. Ridger assure l'administration, la supervision, la coordination et le reporting. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Que couvre la gérance immobilière côté propriétaire ?",
+        "Answer": "L'administration de vos résidences et biens locatifs à Genève et en Suisse, du point de vue du propriétaire : baux et loyers, charges et décomptes, travaux, assurances, comptabilité et reporting. Ce service porte sur vos biens immobiliers, et Ridger ne gère pas vos actifs financiers."
+      },
+      {
+        "Question": "Travaillez-vous avec notre régie actuelle ?",
+        "Answer": "Oui. Lorsqu'une régie est mandatée, elle garde la gestion locative opérationnelle. Nous cadrons son mandat, suivons ses prestations et contrôlons ses comptes dans votre intérêt de propriétaire."
+      },
+      {
+        "Question": "Suivez-vous les assurances de nos immeubles ?",
+        "Answer": "Oui. Nous suivons les assurances bâtiment et responsabilité civile du propriétaire, leurs échéances et les sinistres, avec vos courtiers et assureurs."
+      },
+      {
+        "Question": "Préparez-vous les données immobilières pour nos déclarations d'impôt ?",
+        "Answer": "Oui. Nous préparons les données immobilières, dont la valeur locative, pour vos déclarations, qui sont traitées avec vos conseillers fiscaux."
+      }
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 {
   "default": {
     "title": "Ridger | Family office en Ginebra",
-    "description": "Multi family office digital en Ginebra: reporting consolidado, supervisión de inversiones, coordinación y supervisión administrativa. Sin gestión de activos.",
+    "description": "Multi family office en Ginebra: reporting consolidado, seguimiento de inversiones, coordinación y supervisión administrativa. Sin gestión de activos.",
     "keywords": "family office suiza, family office ginebra, multi family office, reporting consolidado, gobernanza familiar",
     "topics": [
       "family office ginebra",
@@ -16,7 +16,7 @@
   "pages": {
     "/": {
       "title": "Multi family office en Ginebra | Ridger",
-      "description": "Multi-family office en Suiza con sede en Ginebra: reporting consolidado, coordinación de sus asesores y family office externalizado. No gestionamos activos.",
+      "description": "Multi-family office con sede en Ginebra: reporting consolidado, coordinación de sus asesores y family office externalizado. Sin gestión de activos.",
       "keywords": "family office ginebra, multi family office suiza, reporting consolidado, coordinación family office, family office externalizado, crear un single family office"
     },
     "/approach": {
@@ -61,7 +61,7 @@
     },
     "/services/family-office-coordination": {
       "title": "Coordinación family office | Ridger",
-      "description": "Coordinación en Ginebra: un interlocutor único para sus asesores y proveedores, la reubicación y los permisos (B, C, G), y la administración de sus residencias.",
+      "description": "Coordinación en Ginebra: un interlocutor único para sus asesores y proveedores, reubicación y permisos (B, C, G) y administración de sus residencias.",
       "keywords": "coordinación family office ginebra, interlocutor único, reubicación ginebra, permiso B C G, mudarse a suiza, trámites OCPM, trabajador fronterizo, administración de residencias, coordinación de proveedores"
     },
     "/services/governance-succession": {
@@ -71,7 +71,7 @@
     },
     "/services/tax-administration": {
       "title": "Fiscalidad y administración | Ridger",
-      "description": "Fiscalidad y administración en Ginebra: cumplimiento y optimización fiscal, nómina del personal doméstico (AVS, LPP, impuesto en la fuente) y domiciliación.",
+      "description": "Fiscalidad y administración en Ginebra: cumplimiento y optimización fiscal, nómina del personal doméstico (AVS, LPP, impuesto en la fuente), domiciliación.",
       "keywords": "cumplimiento fiscal suiza, optimización fiscal, tributación a tanto alzado, nómina personal doméstico, declarar empleada de hogar ginebra, cotizaciones sociales AVS, domiciliación, gestión de correspondencia, administración familiar ginebra"
     },
     "/services/digital-vault": {
@@ -81,12 +81,12 @@
     },
     "/services/real-estate-transactions": {
       "title": "Inmobiliario y transacciones | Ridger",
-      "description": "Inmobiliario en Ginebra: gestión y administración de bienes, arrendamientos, coordinación de obras, detección de oportunidades y transacciones con notarios y bancos.",
+      "description": "Inmobiliario en Ginebra: gestión y administración de bienes, arrendamientos, coordinación de obras, detección de oportunidades y transacciones.",
       "keywords": "gestión inmobiliaria ginebra, gestión de arrendamientos, coordinación obras reforma ginebra, coordinación de proveedores, administradoras de fincas, transacciones inmobiliarias, administración de bienes"
     },
     "/services/property-management": {
       "title": "Administración de propiedades en Ginebra | Ridger",
-      "description": "Administración de propiedades en Ginebra del lado del propietario: contratos y alquileres, gastos, administradoras de fincas, obras y reporting consolidado.",
+      "description": "Administración de propiedades en Ginebra del lado del propietario: contratos y alquileres, gastos, administradoras de fincas, obras y reporting.",
       "keywords": "administración de propiedades ginebra, gestión inmobiliaria suiza, administradoras de fincas, liquidación de gastos, inmuebles en alquiler"
     },
     "/services/household-staff": {
@@ -106,7 +106,7 @@
     },
     "/family-office/geneva": {
       "title": "Family office en Ginebra | Ridger",
-      "description": "Multi-family office en Suiza con sede en Ginebra: reporting consolidado, coordinación de sus asesores y reuniones en nuestra oficina. Sin gestión de activos.",
+      "description": "Multi-family office con sede en Ginebra: reporting consolidado, coordinación de sus asesores y reuniones en nuestra oficina. Sin gestión de activos.",
       "keywords": "family office en Ginebra, multi-family office Suiza, reporting consolidado, coordinación de asesores, patrimonio familiar"
     },
     "/family-office/lausanne": {
@@ -116,7 +116,7 @@
     },
     "/family-office/zurich": {
       "title": "Family office en Zúrich | Ridger",
-      "description": "Con sede en Ginebra, Ridger acompaña a familias de Zúrich a distancia, con reuniones en persona si conviene: reporting consolidado y coordinación de sus asesores.",
+      "description": "Con sede en Ginebra, Ridger acompaña a familias de Zúrich a distancia, con reuniones en persona si conviene: reporting y coordinación de asesores.",
       "keywords": "family office en Zúrich, multi-family office Suiza, reporting consolidado, coordinación de asesores, familias en Zúrich"
     },
     "/family-office/zug": {
@@ -146,7 +146,7 @@
     },
     "/ai-profile": {
       "title": "Perfil de Ridger para asistentes de IA",
-      "description": "Perfil factual de Ridger: identidad, dirección en Ginebra, servicios family office, regiones atendidas, afiliaciones y limitaciones (sin gestión de activos).",
+      "description": "Perfil factual de Ridger: identidad, dirección en Ginebra, servicios family office, regiones atendidas, afiliaciones y límites (sin gestión de activos).",
       "keywords": "Ridger, family office ginebra, asistentes de IA, reporting consolidado, multi family office"
     }
   },

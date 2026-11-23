@@ -35,6 +35,27 @@
       "Closing": {
         "Title": "Let's talk about your situation",
         "Body": "A first confidential meeting, at our office or by video call, to understand your needs and see how we can help."
+      },
+      "Faq": {
+        "Title": "Frequently asked questions",
+        "Questions": [
+          {
+            "Question": "Where is your family office in Geneva?",
+            "Answer": "Our office is at 26 Boulevard Georges Favon, 1204 Geneva. We welcome families there for the moments that matter, such as the first meeting, the annual wealth review or family decisions."
+          },
+          {
+            "Question": "What is a multi-family office?",
+            "Answer": "A multi-family office such as Ridger shares its infrastructure, tools and expertise across several families. Ridger brings your wealth together in a single view and coordinates your advisers, without managing your assets."
+          },
+          {
+            "Question": "Do you work with our current Geneva advisers?",
+            "Answer": "Yes: private banks, independent asset managers, lawyers and notaries. We also prepare the documents expected by the Administration fiscale cantonale and track deadlines with your tax adviser."
+          },
+          {
+            "Question": "Which languages do you work in?",
+            "Answer": "French, English, German, Spanish and Portuguese. We coordinate advisers based in Switzerland and abroad."
+          }
+        ]
       }
     },
     "lausanne": {
@@ -64,6 +85,27 @@
       "Closing": {
         "Title": "A first conversation, with no commitment",
         "Body": "By video call or in Geneva, a confidential meeting to review your situation and your priorities."
+      },
+      "Faq": {
+        "Title": "Frequently asked questions",
+        "Questions": [
+          {
+            "Question": "Does Ridger have an office in Lausanne?",
+            "Answer": "No. Our office is in Geneva, a short distance from Lausanne. We support families in Vaud remotely and arrange an in-person meeting when useful, including at our Geneva office."
+          },
+          {
+            "Question": "How does Ridger work with a family in Vaud?",
+            "Answer": "A digital platform, consolidated reporting and video calls make up the day-to-day. You follow your wealth online, at any time, and we stay reachable through the channel you prefer."
+          },
+          {
+            "Question": "Do you work with our advisers in Vaud?",
+            "Answer": "Yes. We work with your current banks, notary, lawyer and fiduciary, gather the documents needed by the Administration cantonale des impôts (ACI) and follow the calendar with your tax adviser."
+          },
+          {
+            "Question": "Who handles tax and inheritance matters in Vaud?",
+            "Answer": "Your tax advisers and notary, because the taxation of wealth and inheritance differs from one canton to another. We make sure they have complete, up-to-date information."
+          }
+        ]
       }
     },
     "zurich": {
@@ -93,6 +135,27 @@
       "Closing": {
         "Title": "Let's get acquainted",
         "Body": "A first confidential video call to understand your situation and see whether we can help."
+      },
+      "Faq": {
+        "Title": "Frequently asked questions",
+        "Questions": [
+          {
+            "Question": "Does Ridger have an office in Zurich?",
+            "Answer": "No. We work from Geneva with families living elsewhere in Switzerland, remotely, and an in-person meeting can be arranged when useful, for example for an annual review or a family decision."
+          },
+          {
+            "Question": "Can you work in German?",
+            "Answer": "Yes. We work in German, French, English, Spanish and Portuguese, and each family member can speak with us in the language that comes most naturally."
+          },
+          {
+            "Question": "Do you work with our Zurich advisers?",
+            "Answer": "Yes. We bring in your current banks, asset managers, lawyers and fiduciaries rather than replacing them, prepare the documents expected by the Kantonales Steueramt Zürich and coordinate deadlines with your tax adviser."
+          },
+          {
+            "Question": "Do you offer domiciliation in Zurich?",
+            "Answer": "No, we have no office in Zurich. Domiciliation of structures and mail management take place in Geneva, including sorting, scanning and follow-up of mail."
+          }
+        ]
       }
     },
     "zug": {
@@ -122,6 +185,27 @@
       "Closing": {
         "Title": "A first confidential meeting",
         "Body": "By video call, to review your wealth, your advisers and what you expect from a family office."
+      },
+      "Faq": {
+        "Title": "Frequently asked questions",
+        "Questions": [
+          {
+            "Question": "Does Ridger have an office in Zug?",
+            "Answer": "No. Our office is in Geneva and we have no presence in Zug. We support families in Zug remotely, and in-person meetings can be arranged when useful."
+          },
+          {
+            "Question": "Can you follow both our private wealth and our family company?",
+            "Answer": "Yes. When the family's wealth includes an operating company or a holding, we keep both sides, private and corporate, easy to read, and coordinate your fiduciary, lawyers and banks."
+          },
+          {
+            "Question": "How do you coordinate with the Zug tax administration?",
+            "Answer": "We prepare the documents needed by the Steuerverwaltung des Kantons Zug and follow deadlines with your tax adviser, who remains your contact for any tax question."
+          },
+          {
+            "Question": "Does Ridger manage the family's assets?",
+            "Answer": "No. Our role is to bring the information together, coordinate the advisers and oversee the administration, without ever managing your assets."
+          }
+        ]
       }
     },
     "lugano": {
@@ -151,6 +235,27 @@
       "Closing": {
         "Title": "Let's talk about your situation",
         "Body": "A first confidential video call, in whichever of our working languages suits you best."
+      },
+      "Faq": {
+        "Title": "Frequently asked questions",
+        "Questions": [
+          {
+            "Question": "Does Ridger have an office in Ticino?",
+            "Answer": "No. From Geneva, we support families in Lugano and the surrounding region with a digital platform and video calls, and in-person meetings can be arranged when useful."
+          },
+          {
+            "Question": "Do you work in Italian?",
+            "Answer": "No. We work in French, English, German, Spanish and Portuguese, and rely on your advisers in Ticino for exchanges in Italian."
+          },
+          {
+            "Question": "What do you do with documents written in Italian?",
+            "Answer": "We bring them into your reporting and digital vault. Your local advisers remain your contacts for exchanges in that language."
+          },
+          {
+            "Question": "Does Ridger manage the wealth of families in Ticino?",
+            "Answer": "Ridger does not manage assets. We consolidate your wealth online, coordinate your banks, lawyers, notaries and fiduciaries, and gather the documents needed by the Divisione delle contribuzioni."
+          }
+        ]
       }
     }
   }

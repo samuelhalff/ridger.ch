@@ -1,3 +1,4 @@
+import PageFaq from "@/src/components/site/page-faq";
 import { Metadata } from "next";
 import Link from "next/link";
 import { headers } from "next/headers";
@@ -240,6 +241,7 @@ export default async function AdvisersPage(props: {
           />
         </div>
       </section>
+      <PageFaq locale={locale} ns="advisers" nonce={nonce} />
     </div>
   );
 }

@@ -17,18 +17,34 @@ function runBootstrap(opts: {
   cookie?: string;
   nonce?: string;
   cookiesEnabled?: boolean;
-}): Run {
+  /** Document state when the bootstrap runs; "complete" by default. */
+  readyState?: string;
+  /** Leaves the load listener and idle callbacks pending (see deferral test). */
+  hold?: boolean;
+}): Run & { fireLoad: () => void; flushIdle: () => void; idleOptions: unknown[] } {
+  const loadListeners: (() => void)[] = [];
+  const idleQueue: (() => void)[] = [];
+  const idleOptions: unknown[] = [];
   const dataLayer: unknown[] = [];
   const scripts: { src: string; nonce?: string }[] = [];
   const head = {
     appendChild: (el: { src: string; nonce?: string }) => scripts.push(el),
   };
   const sandbox = {
-    window: {} as Record<string, unknown>,
+    window: {
+      addEventListener: (type: string, fn: () => void) => {
+        if (type === "load") loadListeners.push(fn);
+      },
+      requestIdleCallback: (fn: () => void, options: unknown) => {
+        idleOptions.push(options);
+        idleQueue.push(fn);
+      },
+    } as Record<string, unknown>,
     document: {
       cookie: opts.cookie || "",
       head,
       documentElement: head,
+      readyState: opts.readyState ?? "complete",
       currentScript: opts.nonce ? { nonce: opts.nonce } : null,
       createElement: () => ({ src: "", async: false }),
     },
@@ -41,12 +57,21 @@ function runBootstrap(opts: {
     getItem: () => (opts.stored === undefined ? null : opts.stored),
   };
   vm.runInNewContext(buildConsentBootstrap("G-TEST1234"), sandbox);
+  const fireLoad = () => loadListeners.splice(0).forEach((fn) => fn());
+  const flushIdle = () => idleQueue.splice(0).forEach((fn) => fn());
+  if (!opts.hold) {
+    fireLoad();
+    flushIdle();
+  }
   // Normalise objects created inside the vm realm.
   return {
     calls: JSON.parse(
       JSON.stringify(dataLayer.map((entry) => Array.from(entry as ArrayLike<unknown>))),
     ),
     scripts,
+    fireLoad,
+    flushIdle,
+    idleOptions,
   };
 }
 
@@ -82,6 +107,21 @@ test("bootstrap sets regional defaults before js/config", () => {
     scripts[0].src,
     "https://www.googletagmanager.com/gtag/js?id=G-TEST1234",
   );
+});
+
+test("bootstrap queues consent and config at once but loads gtag.js after load, in idle time", () => {
+  const run = runBootstrap({ readyState: "loading", hold: true, nonce: "abc" });
+  const commands = run.calls.map((c) => `${c[0]}:${c[1]}`);
+  assert.deepEqual(commands.slice(0, 3), ["consent:default", "consent:default", "consent:default"]);
+  assert.ok(commands.includes("config:G-TEST1234"));
+  assert.equal(run.scripts.length, 0, "no script before the load event");
+  run.fireLoad();
+  assert.equal(run.scripts.length, 0, "no script before idle time");
+  assert.deepEqual(JSON.parse(JSON.stringify(run.idleOptions)), [{ timeout: 3000 }]);
+  run.flushIdle();
+  assert.equal(run.scripts.length, 1);
+  assert.equal(run.scripts[0].src, "https://www.googletagmanager.com/gtag/js?id=G-TEST1234");
+  assert.equal(run.scripts[0].nonce, "abc", "nonce captured before the deferral");
 });
 
 test("bootstrap applies a stored acceptance as an update without region", () => {

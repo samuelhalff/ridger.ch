@@ -51,5 +51,26 @@
     "Title": "Un foyer bien tenu",
     "Body": "Vous choisissez les personnes et fixez les priorités de la maison. Nous assurons la régularité administrative, les échéances et la coordination au quotidien."
   },
-  "Perimeter": "Les conditions de travail découlent du cadre légal et du contrat-type applicables ; les questions de droit du travail sont traitées avec vos avocats. Ridger assure l'administration, la paie et la coordination de votre personnel de maison. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement."
+  "Perimeter": "Les conditions de travail découlent du cadre légal et du contrat-type applicables ; les questions de droit du travail sont traitées avec vos avocats. Ridger assure l'administration, la paie et la coordination de votre personnel de maison. Ridger ne gère pas d'actifs et ne fournit pas de conseil en placement.",
+  "Faq": {
+    "Title": "Questions fréquentes",
+    "Questions": [
+      {
+        "Question": "Quelles sont les obligations d'un employeur de personnel de maison à Genève ?",
+        "Answer": "Engager une gouvernante, une nounou, un chauffeur ou un jardinier fait de votre foyer un employeur. À Genève, cela implique un contrat fondé sur le contrat-type de travail de l'économie domestique (CTT-EDom), des assurances sociales dès le premier salaire et des déclarations chaque mois."
+      },
+      {
+        "Question": "Gérez-vous les salaires de notre personnel de maison ?",
+        "Answer": "Oui. Chaque mois, nous calculons et versons les salaires, établissons les fiches de salaire et les décomptes de cotisations, et suivons les vacances et les absences. Nous retenons aussi l'impôt à la source lorsque le personnel y est soumis et établissons les certificats de salaire annuels."
+      },
+      {
+        "Question": "Pouvez-vous nous aider à recruter du personnel de maison ?",
+        "Answer": "Oui. Nous coordonnons le recrutement avec des agences ou vos propres contacts, et préparons des contrats écrits fondés sur le CTT-EDom, relus au besoin par vos avocats."
+      },
+      {
+        "Question": "Le chèque service suffit-il pour quelques heures de travail ?",
+        "Answer": "Oui, pour un engagement de quelques heures, le chèque service genevois peut convenir. Nous vous aidons à voir si c'est la bonne formule pour votre foyer et nous reprenons les situations plus complexes."
+      }
+    ]
+  }
 }

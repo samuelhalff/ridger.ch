@@ -34,5 +34,26 @@
     "Title": "Uma transmissão serena",
     "Body": "Um quadro claro reduz as tensões e protege a unidade familiar. Asseguramos a sua coordenação, discretamente e ao longo do tempo."
   },
-  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento."
+  "Perimeter": "A execução, a custódia e a gestão dos ativos permanecem asseguradas pelos bancos e gestores regulados da sua escolha. A Ridger fornece a consolidação, o reporting, a coordenação e a supervisão administrativa. A Ridger não gere ativos e não presta aconselhamento de investimento.",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "Para que serve uma carta familiar?",
+        "Answer": "Uma carta familiar fixa os princípios, os papéis e os modos de decisão da família. Acompanhamos a sua redação e, depois, a sua aplicação ao longo dos conselhos de família."
+      },
+      {
+        "Question": "Como intervém a Ridger no planeamento sucessório?",
+        "Answer": "Coordenamos o planeamento sucessório com os seus advogados e notários, no quadro do direito civil suíço, até à execução das disposições acordadas. A Ridger organiza e acompanha o trabalho, e os atos continuam a ser assunto dos seus advogados e notários."
+      },
+      {
+        "Question": "A Ridger pode ser trustee do nosso trust ou da nossa fundação?",
+        "Answer": "Não. As estruturas de trust e de fundação são postas em prática por parceiros suíços estabelecidos, e a Ridger coordena-as como ponto de contacto, sem nunca atuar como trustee."
+      },
+      {
+        "Question": "Como preparam a nova geração?",
+        "Answer": "Acompanhamos a nova geração para que assuma as responsabilidades de forma gradual. Preparamos e conduzimos também conselhos de família, com trocas estruturadas e documentadas."
+      }
+    ]
+  }
 }

@@ -1,35 +1,30 @@
-User-agent: GPTBot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /*/opengraph-image
-Disallow: /*/opengraph-image/
-Disallow: /*/twitter-image
-Disallow: /*/twitter-image/
-
-User-agent: OAI-SearchBot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /*/opengraph-image
-Disallow: /*/opengraph-image/
-Disallow: /*/twitter-image
-Disallow: /*/twitter-image/
-
 User-agent: *
 Allow: /
-
 Disallow: /api/
 Disallow: /admin/
-Disallow: /_next/
 Disallow: /private/
 Disallow: /*/opengraph-image
-Disallow: /*/opengraph-image/
 Disallow: /*/twitter-image
-Disallow: /*/twitter-image/
+
+# Search and AI crawlers, named one by one so each can be changed on its own.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: MistralAI-User
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*/opengraph-image
+Disallow: /*/twitter-image
 
 Sitemap: https://ridger.ch/sitemap.xml

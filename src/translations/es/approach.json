@@ -34,5 +34,26 @@
     }
   ],
   "ArkNote": "Ridger se apoya en un grupo fiduciario ginebrino consolidado, garantía de rigor y continuidad:",
-  "CTA": "Solicitar una entrevista confidencial"
+  "CTA": "Solicitar una entrevista confidencial",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Ridger es independiente de los bancos?",
+        "Answer": "Sí. Ridger no es ni un banco ni un gestor, no pertenece a ninguna entidad bancaria y no distribuye ningún producto financiero. No tenemos ninguna transacción que provocar."
+      },
+      {
+        "Question": "¿Cómo empieza un mandato con Ridger?",
+        "Answer": "Con una auditoría de su organización existente: relaciones bancarias, mandatos, estructuras y asesores. Después ponemos en marcha la consolidación de su patrimonio y un ritmo de seguimiento y coordinación adaptado a sus prioridades."
+      },
+      {
+        "Question": "¿Trabajan con nuestros gestores independientes?",
+        "Answer": "Sí. Sus gestores conservan la gestión de sus activos, y Ridger supervisa y coordina su actividad y les pide cuentas, sin gestionar nunca en su lugar."
+      },
+      {
+        "Question": "¿En qué plazo responde Ridger?",
+        "Answer": "Respondemos en un plazo de un día hábil. Su interlocutor único conoce sus expedientes y conserva la memoria de sus decisiones a lo largo del tiempo."
+      }
+    ]
+  }
 }

@@ -41,9 +41,15 @@ export function parseIndexNowUrls(
   return { success: true, urls: [...out] };
 }
 
-export async function submitToIndexNow(urls: string[]) {
-  const hostDomain = INDEXNOW_HOST;
-  const sitemapUrl = `https://${hostDomain}/sitemap.xml`;
+const INDEXNOW_KEY = "0b2df53c19495486d5f3e5b686bbc8ea"; // served at https://ridger.ch/0b2df53c19495486d5f3e5b686bbc8ea.txt
+const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
+
+/**
+ * Sends URLs to IndexNow through api.indexnow.org, which shares them with
+ * Bing, Yandex and the other participants. True only on 200/202: a 4xx
+ * (bad key, wrong host, too many requests) is a failure.
+ */
+export async function submitToIndexNow(urls: string[]): Promise<boolean> {
   // Defense in depth: never submit an off-host URL even if a caller skipped
   // parseIndexNowUrls.
   urls = urls.filter((u) => {
@@ -53,93 +59,26 @@ export async function submitToIndexNow(urls: string[]) {
       return false;
     }
   });
-  const indexNowKey = "e57f7dcbb1864357b0e1f44d443c63f2"; // Hosted at https://ridger.ch/e57f7dcbb1864357b0e1f44d443c63f2.txt
-
-  console.log(
-    "[Search Indexing] Notifying search engines about",
-    urls.length,
-    "updated URLs"
-  );
-
-  // Use IndexNow for Yandex, sitemap ping for Bing (since IndexNow 403s for Bing)
-  const searchEngines = [
-    {
-      name: "Bing",
-      method: "sitemap",
-      url: `https://www.bing.com/webmaster/ping.aspx?sitemap=${encodeURIComponent(
-        sitemapUrl
-      )}`,
-    },
-    {
-      name: "Yandex",
-      method: "indexnow",
-      url: "https://yandex.com/indexnow",
-    },
-  ];
-
-  const results = await Promise.allSettled(
-    searchEngines.map(async (engine) => {
-      try {
-        let response: Response;
-        if (engine.method === "sitemap") {
-          response = await fetch(engine.url, {
-            method: "GET",
-            cache: "no-store",
-            signal: AbortSignal.timeout(10000),
-          });
-        } else if (engine.method === "indexnow") {
-          response = await fetch(engine.url, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json; charset=utf-8",
-            },
-            body: JSON.stringify({
-              host: hostDomain,
-              key: indexNowKey,
-              urlList: urls,
-            }),
-            signal: AbortSignal.timeout(10000),
-          });
-        } else {
-          throw new Error(`Unknown method: ${engine.method}`);
-        }
-
-        if (
-          response.ok ||
-          response.status === 202 ||
-          (engine.name === "Bing" && response.status === 410)
-        ) {
-          console.log(
-            `[Search Indexing] ✓ ${engine.name} notified successfully`
-          );
-          return { engine: engine.name, success: true };
-        } else {
-          console.warn(
-            `[Search Indexing] ⚠ ${engine.name} returned ${response.status}`
-          );
-          return {
-            engine: engine.name,
-            success: false,
-            status: response.status,
-          };
-        }
-      } catch (error) {
-        console.warn(
-          `[Search Indexing] ⚠ ${engine.name} notification failed:`,
-          error
-        );
-        return { engine: engine.name, success: false, error };
-      }
-    })
-  );
-
-  const successful = results.filter(
-    (r) => r.status === "fulfilled" && r.value.success
-  ).length;
-  console.log(
-    `[Search Indexing] ✓ Completed: ${successful}/${searchEngines.length} search engines notified`
-  );
-
-  // Return true if at least one succeeded
-  return successful > 0;
+  if (!urls.length) return false;
+  try {
+    const response = await fetch(INDEXNOW_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify({
+        host: INDEXNOW_HOST,
+        key: INDEXNOW_KEY,
+        keyLocation: `https://${INDEXNOW_HOST}/${INDEXNOW_KEY}.txt`,
+        urlList: urls,
+      }),
+      cache: "no-store",
+      signal: AbortSignal.timeout(10000),
+    });
+    const ok = response.status === 200 || response.status === 202;
+    if (ok) console.log(`[IndexNow] ${urls.length} URL(s) accepted (${response.status})`);
+    else console.warn(`[IndexNow] api.indexnow.org returned ${response.status}`);
+    return ok;
+  } catch (error) {
+    console.warn("[IndexNow] submission failed:", error);
+    return false;
+  }
 }

@@ -16,12 +16,12 @@
   "pages": {
     "/": {
       "title": "Multi family office em Genebra | Ridger",
-      "description": "Multi-family office na Suíça, sediado em Genebra: reporting consolidado, coordenação dos seus consultores e family office externalizado. Sem gestão de ativos.",
+      "description": "Multi-family office sediado em Genebra: reporting consolidado, coordenação dos seus consultores e family office externalizado, sem gestão de ativos.",
       "keywords": "family office Genebra, multi family office Suíça, gestão patrimonial consolidada, coordenação family office, family office externalizado, criar um single family office"
     },
     "/approach": {
       "title": "A nossa abordagem | Ridger",
-      "description": "Independência, transparência sobre os custos e discrição suíça. Conheça o método de um family office que coordena, consolida e supervisiona os seus interesses.",
+      "description": "Independência, transparência sobre os custos e discrição suíça. O método de um family office que coordena, consolida e supervisiona os seus interesses.",
       "keywords": "family office independente Genebra, abordagem family office, transparência de custos, discrição suíça"
     },
     "/contact": {
@@ -36,7 +36,7 @@
     },
     "/platform": {
       "title": "A plataforma | Ridger",
-      "description": "Conheça a plataforma Ridger: um espaço único e seguro para acompanhar títulos, imobiliário, documentos e reporting do seu património. Ilustração — dados fictícios.",
+      "description": "Conheça a plataforma Ridger: um espaço único e seguro para acompanhar títulos, imobiliário, documentos e reporting. Ilustração com dados fictícios.",
       "keywords": "plataforma family office, reporting patrimonial, cofre digital, acompanhamento de património"
     },
     "/ressources": {
@@ -51,17 +51,17 @@
     },
     "/services/consolidated-reporting": {
       "title": "Reporting consolidado independente | Ridger",
-      "description": "Reporting consolidado independente em Genebra: bancos, depositários, imobiliário e private equity numa visão única, com transparência de desempenho e custos.",
+      "description": "Reporting consolidado em Genebra: bancos, depositários, imobiliário e private equity numa visão única, com transparência sobre desempenho e custos.",
       "keywords": "reporting consolidado, consolidação patrimonial, reporting independente, desempenho TWR, transparência de custos"
     },
     "/services/investment-oversight": {
       "title": "Supervisão dos investimentos | Ridger",
-      "description": "Supervisão dos investimentos em Genebra: acompanhamento de mandatos e gestores, revisões de desempenho, custos e risco, preparação do comité de investimento familiar.",
+      "description": "Supervisão dos investimentos em Genebra: acompanhamento de mandatos e gestores, revisões de desempenho, custos e risco, preparação do comité.",
       "keywords": "supervisão de investimentos, controlo dos gestores, revisão de desempenho, comité de investimento familiar"
     },
     "/services/family-office-coordination": {
       "title": "Coordenação family office | Ridger",
-      "description": "Coordenação em Genebra: um interlocutor único para os seus consultores e prestadores, a relocalização e as autorizações (B, C, G) e a intendência das suas residências.",
+      "description": "Coordenação em Genebra: interlocutor único para consultores e prestadores, relocalização e autorizações (B, C, G) e intendência das suas residências.",
       "keywords": "coordenação family office Genebra, interlocutor único, mudança para Genebra, autorização B, C ou G, viver na Suíça, procedimentos OCPM, trabalhador fronteiriço, intendência de residências, coordenação de prestadores"
     },
     "/services/governance-succession": {
@@ -71,7 +71,7 @@
     },
     "/services/tax-administration": {
       "title": "Fiscalidade e administração | Ridger",
-      "description": "Fiscalidade, administração e salários em Genebra: conformidade e otimização fiscais, salários do pessoal doméstico (AVS, LPP, imposto retido na fonte), domiciliação e correio.",
+      "description": "Fiscalidade, administração e salários em Genebra: conformidade e otimização fiscais, salários do pessoal doméstico (AVS, LPP), domiciliação e correio.",
       "keywords": "conformidade fiscal Suíça, otimização fiscal, tributação forfetária, salários pessoal doméstico, declarar empregada doméstica Genebra, encargos sociais AVS, domiciliação, gestão de correio, administração familiar Genebra"
     },
     "/services/digital-vault": {
@@ -81,7 +81,7 @@
     },
     "/services/real-estate-transactions": {
       "title": "Imobiliário e transações | Ridger",
-      "description": "Imobiliário em Genebra: gestão e administração dos seus bens, gestão do arrendamento, coordenação de obras e renovações, identificação de oportunidades e transações.",
+      "description": "Imobiliário em Genebra: gestão e administração dos seus bens, arrendamentos, coordenação de obras, identificação de oportunidades e transações.",
       "keywords": "gestão imobiliária Genebra, gestão de arrendamento, coordenação de obras renovação Genebra, coordenação de prestadores, administrações de imóveis, transações imobiliárias, administração de bens"
     },
     "/services/property-management": {
@@ -116,7 +116,7 @@
     },
     "/family-office/zurich": {
       "title": "Family office em Zurique | Ridger",
-      "description": "Sediada em Genebra, a Ridger acompanha famílias de Zurique à distância, com reuniões presenciais se útil: reporting consolidado e coordenação dos consultores.",
+      "description": "Sediada em Genebra, a Ridger acompanha famílias de Zurique à distância, com reuniões presenciais se útil: reporting e coordenação de consultores.",
       "keywords": "family office em Zurique, multi-family office Suíça, reporting consolidado, coordenação de consultores, famílias em Zurique"
     },
     "/family-office/zug": {

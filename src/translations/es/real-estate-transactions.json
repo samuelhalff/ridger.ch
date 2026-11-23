@@ -34,5 +34,26 @@
     "Title": "Transacciones bajo control",
     "Body": "Desde la primera oportunidad hasta la firma, coordinamos a cada interviniente y velamos por la coherencia del conjunto, con discreción y a largo plazo."
   },
-  "Perimeter": "La custodia, la gestión operativa de arrendamientos y la gestión de los activos siguen a cargo de sus administradoras de fincas, gestores y entidades reguladas. Ridger asegura la supervisión, la administración, la coordinación y el apoyo en la negociación. Ridger no gestiona activos ni presta asesoramiento en materia de inversión."
+  "Perimeter": "La custodia, la gestión operativa de arrendamientos y la gestión de los activos siguen a cargo de sus administradoras de fincas, gestores y entidades reguladas. Ridger asegura la supervisión, la administración, la coordinación y el apoyo en la negociación. Ridger no gestiona activos ni presta asesoramiento en materia de inversión.",
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Questions": [
+      {
+        "Question": "¿Puede Ridger ayudarnos a comprar un inmueble?",
+        "Answer": "Sí. Identificamos y evaluamos oportunidades de adquisición alineadas con los deseos de su familia y después coordinamos la transacción con los notarios, los bancos y los expertos, siguiendo la due diligence y apoyando la negociación de las condiciones."
+      },
+      {
+        "Question": "¿Acompañan también la venta de un inmueble?",
+        "Answer": "Sí. Coordinamos las enajenaciones igual que las adquisiciones, con cada interviniente, hasta la firma."
+      },
+      {
+        "Question": "¿Siguen inmuebles que se tienen a través de sociedades inmobiliarias?",
+        "Answer": "Sí. Seguimos los inmuebles que se tienen directamente o a través de sociedades inmobiliarias, supervisamos la gestión de los alquileres e informamos con regularidad de los ingresos, los gastos y el estado de su cartera."
+      },
+      {
+        "Question": "¿Ridger sustituye a nuestra administradora de fincas?",
+        "Answer": "No. La gestión operativa de los alquileres sigue a cargo de sus administradoras de fincas. Somos su interlocutor único: encuadramos los mandatos, seguimos las prestaciones y controlamos las cuentas en su interés."
+      }
+    ]
+  }
 }

@@ -131,6 +131,10 @@ const baseConfig = {
   // Let middleware own URL canonicalization so slashless requests do not hit
   // a framework-level redirect before locale normalization/noindex headers apply.
   skipTrailingSlashRedirect: true,
+  // Metadata (title, description, canonical, hreflang) goes in <head> for
+  // every client instead of being streamed into <body>: crawlers that do not
+  // run JavaScript (GPTBot, ClaudeBot, PerplexityBot) and Googlebot read it there.
+  htmlLimitedBots: /.*/,
   // Disable source maps on CI by default. Enable explicitly with BUILD_SOURCEMAPS=true
   productionBrowserSourceMaps: process.env.BUILD_SOURCEMAPS === "true",
   experimental: {
@@ -215,17 +219,15 @@ const baseConfig = {
           },
         ],
       },
-      // Cache public assets (images, svgs, css, js) with long TTL
+      // Public assets: file names carry no hash, so no "immutable" (a replaced
+      // file must reach visitors). Indexable: the JSON-LD logo and the share
+      // images are meant to be found.
       {
         source: "/assets/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow, noimageindex",
+            value: "public, max-age=2592000, stale-while-revalidate=86400",
           },
         ],
       },

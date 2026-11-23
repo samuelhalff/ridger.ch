@@ -34,5 +34,26 @@
     }
   ],
   "ArkNote": "A Ridger apoia-se num grupo fiduciário genebrino estabelecido, garantia de rigor e de continuidade:",
-  "CTA": "Solicitar uma entrevista confidencial"
+  "CTA": "Solicitar uma entrevista confidencial",
+  "Faq": {
+    "Title": "Perguntas frequentes",
+    "Questions": [
+      {
+        "Question": "A Ridger é independente dos bancos?",
+        "Answer": "Sim. A Ridger não é nem um banco nem um gestor, não pertence a nenhuma instituição bancária e não distribui nenhum produto financeiro. Não temos nenhuma transação a provocar."
+      },
+      {
+        "Question": "Como começa um mandato com a Ridger?",
+        "Answer": "Por uma auditoria da sua organização existente: relações bancárias, mandatos, estruturas e consultores. Depois pomos em prática a consolidação do seu património e um ritmo de acompanhamento e coordenação adaptado às suas prioridades."
+      },
+      {
+        "Question": "Trabalham com os nossos gestores independentes?",
+        "Answer": "Sim. Os seus gestores mantêm a gestão dos seus ativos, e a Ridger supervisiona e coordena a sua atividade e pede-lhes contas, sem nunca gerir em seu lugar."
+      },
+      {
+        "Question": "Em que prazo responde a Ridger?",
+        "Answer": "Respondemos no prazo de um dia útil. O seu interlocutor único conhece os seus processos e mantém a memória das suas decisões ao longo do tempo."
+      }
+    ]
+  }
 }

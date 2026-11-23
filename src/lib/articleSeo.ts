@@ -46,7 +46,8 @@ export function extractArticleFaq(content: string | undefined): FAQEntry[] {
       continue;
     }
     if (!inFaq) continue;
-    if (/^##\s/.test(trimmed) || /^---+$/.test(trimmed)) {
+    // The references list ("### Références") often follows the FAQ: it ends it.
+    if (/^##\s/.test(trimmed) || /^---+$/.test(trimmed) || /^###\s+(références|references|referenzen|referencias|referências)\s*$/i.test(trimmed)) {
       flush();
       break;
     }
@@ -59,7 +60,9 @@ export function extractArticleFaq(content: string | undefined): FAQEntry[] {
     if (current && trimmed) current.answer.push(trimmed);
   }
   flush();
-  return entries;
+  // Only real questions: a heading that does not end with "?" (for example
+  // "### Références" right after the FAQ) is a section title, not an entry.
+  return entries.filter((e) => /[?？]\s*$/.test(e.question));
 }
 
 /**
