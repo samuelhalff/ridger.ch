@@ -310,23 +310,6 @@ const Footer = async ({ locale }: { locale?: string }) => {
             </a>
           </span>
           <br />
-          <span className="text-xs">
-            {tFooter("OtherSites")}{" "}
-            <a
-              href={`https://ark-fid.ch/${currentLocale}/`}
-              className="hover:text-foreground hover:underline"
-            >
-              Ark Fiduciaire
-            </a>
-            <span aria-hidden="true"> · </span>
-            <a
-              href={`https://houle.ai/${currentLocale}/`}
-              className="hover:text-foreground hover:underline"
-            >
-              houle.ai
-            </a>
-          </span>
-          <br />
           <a
             href={`https://houle.ai/${currentLocale}/`}
             className="mt-2 inline-flex items-center gap-1.5 text-xs hover:text-foreground"
