@@ -2,7 +2,7 @@ import { Plus as PlusIcon } from "@phosphor-icons/react/dist/ssr";
 import SectionHeading from "@/src/components/site/section-heading";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { getPageFaq } from "@/src/lib/page-faq";
-import { buildFAQPage } from "@/src/lib/structuredData";
+import { buildFAQPage, type FAQEntry } from "@/src/lib/structuredData";
 import { tidyTitle } from "@/src/lib/typography";
 
 /**
@@ -12,12 +12,18 @@ import { tidyTitle } from "@/src/lib/typography";
 export default function PageFaq({ locale, ns, at, nonce }: { locale: string; ns: string; at?: string; nonce?: string }) {
   const faq = getPageFaq(locale, ns, at);
   if (!faq) return null;
+  return <FaqSection title={faq.title} entries={faq.entries} nonce={nonce} />;
+}
+
+/** The visible questions and the FAQPage JSON-LD, from the same entries. */
+export function FaqSection({ title, description, entries, nonce }: { title: string; description?: string; entries: FAQEntry[]; nonce?: string }) {
+  if (!entries.length) return null;
   return (
     <section id="faq" className="mx-auto mb-10 w-full max-w-[1240px] px-5 py-8 sm:px-8 xs:py-16">
-      <StructuredData nonce={nonce} data={buildFAQPage(faq.entries)} />
-      <SectionHeading eyebrow="FAQ" title={tidyTitle(faq.title)} className="max-w-4xl" />
+      <StructuredData nonce={nonce} data={buildFAQPage(entries)} />
+      <SectionHeading eyebrow="FAQ" title={tidyTitle(title)} description={description} className="max-w-4xl" />
       <div className="mx-auto mt-8 max-w-4xl space-y-4">
-        {faq.entries.map(({ question, answer }) => (
+        {entries.map(({ question, answer }) => (
           <details
             key={question}
             className="group rounded-[22px] bg-surface-warm px-5 py-4 shadow-sm transition-shadow open:shadow-md dark:bg-card"
