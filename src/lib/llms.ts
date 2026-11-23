@@ -117,6 +117,11 @@ export function llmsTxt(): string {
     "",
     `- [Full text of the public pages](${SITE_URL}/llms-full.txt): every public page of ridger.ch in French and English, in Markdown, in a single file.`,
     "",
+    "## Related sites",
+    "",
+    "- [Ark Fiduciaire](https://ark-fid.ch/en/): fiduciary firm in Geneva (accounting, tax, payroll, corporate services) and the company that operates Ridger (Ark Fiduciaire SA).",
+    "- [houle.ai](https://houle.ai/en/): AI consulting firm in Geneva (West Bay SA) that built this website.",
+    "",
     DESCRIBE,
     "",
   ].join("\n");

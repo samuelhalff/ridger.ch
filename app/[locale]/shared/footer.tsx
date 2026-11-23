@@ -309,6 +309,48 @@ const Footer = async ({ locale }: { locale?: string }) => {
               SO-FIT
             </a>
           </span>
+          <br />
+          <span className="text-xs">
+            {tFooter("OtherSites")}{" "}
+            <a
+              href={`https://ark-fid.ch/${currentLocale}/`}
+              className="hover:text-foreground hover:underline"
+            >
+              Ark Fiduciaire
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a
+              href={`https://houle.ai/${currentLocale}/`}
+              className="hover:text-foreground hover:underline"
+            >
+              houle.ai
+            </a>
+          </span>
+          <br />
+          <a
+            href={`https://houle.ai/${currentLocale}/`}
+            className="mt-2 inline-flex items-center gap-1.5 text-xs hover:text-foreground"
+          >
+            <span>{tFooter("MadeBy")}</span>
+            <Image
+              className="h-3.5 w-auto dark:hidden"
+              src="/assets/houle-logo.svg"
+              width={60}
+              height={14}
+              alt="houle.ai"
+              loading="lazy"
+              decoding="async"
+            />
+            <Image
+              className="hidden h-3.5 w-auto dark:block"
+              src="/assets/houle-logo-dark.svg"
+              width={60}
+              height={14}
+              alt="houle.ai"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
         </span>
       </div>
     </footer>
