@@ -63,9 +63,12 @@ const useTurnstile = () => {
         "error-callback": () => setToken(""),
       });
     };
-    if (window.turnstile) {
-      renderWidget();
-    } else {
+    const load = () => {
+      if (cancelled) return;
+      if (window.turnstile) {
+        renderWidget();
+        return;
+      }
       const existing = document.querySelector(`script[src="${TURNSTILE_SRC}"]`);
       const script = (existing as HTMLScriptElement) || document.createElement("script");
       if (!existing) {
@@ -74,9 +77,32 @@ const useTurnstile = () => {
         document.head.appendChild(script);
       }
       script.addEventListener("load", renderWidget);
+    };
+    // The script is fetched when the form nears the viewport or receives
+    // focus, not at first paint.
+    const form = containerRef.current.closest("form") || containerRef.current;
+    let observer: IntersectionObserver | null = null;
+    const start = () => {
+      observer?.disconnect();
+      form.removeEventListener("focusin", start);
+      load();
+    };
+    form.addEventListener("focusin", start);
+    if (typeof IntersectionObserver === "function") {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) start();
+        },
+        { rootMargin: "400px 0px" },
+      );
+      observer.observe(form);
+    } else {
+      start();
     }
     return () => {
       cancelled = true;
+      observer?.disconnect();
+      form.removeEventListener("focusin", start);
     };
   }, []);
 

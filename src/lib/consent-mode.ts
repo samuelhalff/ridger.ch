@@ -183,17 +183,23 @@ export function buildConsentBootstrap(measurementId: string): string {
     `else if(c==='minimal'||c==='declined'){gtag('consent','update',${JSON.stringify(denied)});}`,
     "gtag('js',new Date());",
     `gtag('config',${id});`,
-    // gtag.js itself waits for the load event, then idle time (3 s at most):
-    // the consent defaults and the js/config calls above are already queued
-    // in dataLayer and are read when the library arrives. The nonce is read
+    // gtag.js is not fetched at first paint. The consent defaults and the
+    // js/config calls above are already queued in dataLayer and are read when
+    // the library arrives. It loads on the first interaction after the load
+    // event, or after 6 s if the visitor does nothing, so landing page,
+    // referrer and UTM are still recorded for short visits. The nonce is read
     // now, document.currentScript is gone once this script has run.
-    "var cs=document.currentScript,nn=cs&&cs.nonce;",
+    "var cs=document.currentScript,nn=cs&&cs.nonce,done=false;",
     "function ld(){var s=document.createElement('script');s.async=true;",
     `s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(${id});`,
     "if(nn)s.nonce=nn;",
     "(document.head||document.documentElement).appendChild(s);}",
-    "function idle(){if(typeof window.requestIdleCallback==='function'){window.requestIdleCallback(ld,{timeout:3000});}else{setTimeout(ld,1);}}",
-    "if(document.readyState==='complete'){idle();}else{window.addEventListener('load',idle,{once:true});}",
+    "var ev=['pointerdown','keydown','touchstart','scroll'];",
+    "function go(){if(done)return;done=true;",
+    "for(var i=0;i<ev.length;i++){window.removeEventListener(ev[i],go);}",
+    "if(typeof window.requestIdleCallback==='function'){window.requestIdleCallback(ld,{timeout:1000});}else{window.setTimeout(ld,1);}}",
+    "function arm(){for(var i=0;i<ev.length;i++){window.addEventListener(ev[i],go,{once:true,passive:true});}window.setTimeout(go,6000);}",
+    "if(document.readyState==='complete'){arm();}else{window.addEventListener('load',arm,{once:true});}",
     "})();",
   ].join("");
 }

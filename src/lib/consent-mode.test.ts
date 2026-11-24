@@ -21,9 +21,11 @@ function runBootstrap(opts: {
   readyState?: string;
   /** Leaves the load listener and idle callbacks pending (see deferral test). */
   hold?: boolean;
-}): Run & { fireLoad: () => void; flushIdle: () => void; idleOptions: unknown[] } {
+}): Run & { fireLoad: () => void; flushIdle: () => void; interact: () => void; fireTimers: () => void; idleOptions: unknown[] } {
   const loadListeners: (() => void)[] = [];
   const idleQueue: (() => void)[] = [];
+  const interactionListeners: (() => void)[] = [];
+  const timers: (() => void)[] = [];
   const idleOptions: unknown[] = [];
   const dataLayer: unknown[] = [];
   const scripts: { src: string; nonce?: string }[] = [];
@@ -34,6 +36,12 @@ function runBootstrap(opts: {
     window: {
       addEventListener: (type: string, fn: () => void) => {
         if (type === "load") loadListeners.push(fn);
+        else interactionListeners.push(fn);
+      },
+      removeEventListener: () => {},
+      setTimeout: (fn: () => void) => {
+        timers.push(fn);
+        return timers.length;
       },
       requestIdleCallback: (fn: () => void, options: unknown) => {
         idleOptions.push(options);
@@ -59,8 +67,11 @@ function runBootstrap(opts: {
   vm.runInNewContext(buildConsentBootstrap("G-TEST1234"), sandbox);
   const fireLoad = () => loadListeners.splice(0).forEach((fn) => fn());
   const flushIdle = () => idleQueue.splice(0).forEach((fn) => fn());
+  const interact = () => interactionListeners.slice().forEach((fn) => fn());
+  const fireTimers = () => timers.splice(0).forEach((fn) => fn());
   if (!opts.hold) {
     fireLoad();
+    interact();
     flushIdle();
   }
   // Normalise objects created inside the vm realm.
@@ -71,6 +82,8 @@ function runBootstrap(opts: {
     scripts,
     fireLoad,
     flushIdle,
+    interact,
+    fireTimers,
     idleOptions,
   };
 }
@@ -109,19 +122,29 @@ test("bootstrap sets regional defaults before js/config", () => {
   );
 });
 
-test("bootstrap queues consent and config at once but loads gtag.js after load, in idle time", () => {
+test("bootstrap queues consent and config at once but loads gtag.js after load, on first interaction", () => {
   const run = runBootstrap({ readyState: "loading", hold: true, nonce: "abc" });
   const commands = run.calls.map((c) => `${c[0]}:${c[1]}`);
   assert.deepEqual(commands.slice(0, 3), ["consent:default", "consent:default", "consent:default"]);
   assert.ok(commands.includes("config:G-TEST1234"));
   assert.equal(run.scripts.length, 0, "no script before the load event");
   run.fireLoad();
-  assert.equal(run.scripts.length, 0, "no script before idle time");
-  assert.deepEqual(JSON.parse(JSON.stringify(run.idleOptions)), [{ timeout: 3000 }]);
+  assert.equal(run.scripts.length, 0, "no script before an interaction");
+  run.interact();
+  run.interact();
+  assert.deepEqual(JSON.parse(JSON.stringify(run.idleOptions)), [{ timeout: 1000 }]);
   run.flushIdle();
   assert.equal(run.scripts.length, 1);
   assert.equal(run.scripts[0].src, "https://www.googletagmanager.com/gtag/js?id=G-TEST1234");
   assert.equal(run.scripts[0].nonce, "abc", "nonce captured before the deferral");
+});
+
+test("bootstrap loads gtag.js after 6 s when the visitor does nothing", () => {
+  const run = runBootstrap({ readyState: "loading", hold: true });
+  run.fireLoad();
+  run.fireTimers();
+  run.flushIdle();
+  assert.equal(run.scripts.length, 1);
 });
 
 test("bootstrap applies a stored acceptance as an update without region", () => {
