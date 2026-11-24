@@ -55,16 +55,16 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
   const manageBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
   const hideManageButton = /(^|\/)agent(\/|$)/.test(pathname || "");
+  // 44px hit area (button) around a 36px neutral disc (span), bottom-left so it
+  // never sits on the WhatsApp/chat bubbles or the sticky CTA.
   const cookieButtonPositionClasses =
-    "fixed right-4 bottom-[var(--floating-whatsapp-bottom)] z-40 sm:right-6";
+    "fixed left-3 bottom-[var(--floating-whatsapp-bottom)] z-40 sm:left-5";
   const cookieButtonLayoutClasses =
-    "flex size-12 items-center justify-center rounded-full";
-  const cookieButtonColorClasses =
-    "bg-brand text-foreground shadow-md transition-all duration-200";
-  const cookieButtonHoverClasses =
-    "hover:bg-brand-hover hover:text-white";
+    "group flex size-11 items-center justify-center rounded-full";
   const cookieButtonFocusClasses =
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+  const cookieDiscClasses =
+    "flex size-9 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors duration-200 group-hover:text-foreground";
 
   const focusWithoutScroll = (el: HTMLElement | null) => {
     if (!el) return;
@@ -187,13 +187,13 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
           className={cn(
             cookieButtonPositionClasses,
             cookieButtonLayoutClasses,
-            cookieButtonColorClasses,
-            cookieButtonHoverClasses,
             cookieButtonFocusClasses,
           )}
           aria-label={labels.Manage}
         >
-          <CookieIcon className="size-6" />
+          <span className={cookieDiscClasses} aria-hidden="true">
+            <CookieIcon className="size-5" />
+          </span>
           <span className="sr-only">{labels.Manage}</span>
         </button>
       )}
