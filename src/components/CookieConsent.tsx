@@ -122,13 +122,14 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
     );
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
-    // Focus the first element but avoid scrolling the page to the bottom.
-    focusWithoutScroll(first ?? null);
+    // Focus the panel itself (not the first link, which would show a focus
+    // ring on load) and avoid scrolling the page to the bottom.
+    focusWithoutScroll(root);
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key !== "Tab") return;
       if (focusable.length === 0) return;
       if (e.shiftKey) {
-        if (document.activeElement === first) {
+        if (document.activeElement === first || document.activeElement === root) {
           focusWithoutScroll(last ?? null);
           e.preventDefault();
         }
@@ -211,7 +212,8 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
         >
           <div
             ref={dialogRef}
-            className="mx-auto mb-4 max-w-4xl rounded-lg bg-background p-4 shadow-lg"
+            tabIndex={-1}
+            className="mx-auto mb-4 max-w-4xl rounded-lg border-t border-border bg-card p-4 shadow-lg focus:outline-none"
           >
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div className="text-sm leading-relaxed">
